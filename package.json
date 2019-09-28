@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "vuepress dev docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "dependencies": {
     "vuepress-plugin-container": "^2.0.2"
