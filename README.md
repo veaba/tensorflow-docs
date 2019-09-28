@@ -1,7 +1,35 @@
 # tensorflow-docs
-python 版本的API文档
+python 的 RC 2.0 版本 中文API文档
 
 > 预计半年到一年的时间
+
+RC 1.5 API https://www.tensorflow.org/versions/r1.15/api_docs/python/tf  1.5
+
+基于 2.0：https://www.tensorflow.org/versions/r2.0/api_docs/python/tf 2.0
+
+找不到官网的markdown文件在哪~~ 喵
+
+3000+ 个文件要翻译，噗。。。
+
+想要机器翻译来完成，实在是整个文档太过于庞大了。
+
+步骤如下，方法一：
+1、先找到官方md文件
+2、通过百度API 把MD文件翻译为中文
+
+
+方法二(优先)：
+1、通过Python 爬虫拉取文档HTML
+    - 解析code
+    - 
+2、HTML 转markdown
+3、markdown 通过百度API翻译为中文mk
+
+http://www.bejson.com/convert/html2markdown/ 可以通过html 转markdown
+
+## 特点
+
+- 有view source on Github 的按钮
 
 ## 使用
 
