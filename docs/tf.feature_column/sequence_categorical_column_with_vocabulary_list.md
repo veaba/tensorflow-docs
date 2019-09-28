@@ -1,0 +1,1 @@
+# sequence_categorical_column_with_vocabulary_list

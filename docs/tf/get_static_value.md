@@ -1,0 +1,1 @@
+# get_static_value

@@ -1,0 +1,1 @@
+# resource_variables_enabled

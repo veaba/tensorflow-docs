@@ -1,0 +1,1 @@
+# assert_variables_initialized

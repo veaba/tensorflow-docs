@@ -1,0 +1,1 @@
+# bidirectional_dynamic_rnn

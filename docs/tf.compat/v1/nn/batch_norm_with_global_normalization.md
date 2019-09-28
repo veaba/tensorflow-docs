@@ -1,0 +1,1 @@
+# batch_norm_with_global_normalization

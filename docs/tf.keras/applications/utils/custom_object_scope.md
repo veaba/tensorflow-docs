@@ -1,0 +1,1 @@
+# custom_object_scope

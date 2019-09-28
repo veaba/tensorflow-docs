@@ -1,0 +1,1 @@
+# disable_v2_tensorshape
