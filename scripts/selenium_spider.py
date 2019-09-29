@@ -15,19 +15,23 @@ def md5(content):
     return m.hexdigest()
 
 
-def go_webdriver():
+def go_webdriver(url):
     driver= webdriver.Chrome()
-    driver.get("https://www.tensorflow.org")
+    driver.get(url)
+    # driver.get("https://www.tensorflow.org")
     label= driver.find_element_by_class_name("markdown-body")
+    # todo 怎么去分割
     body= label.text
     # 分割为数组
     label_list = body.split("\n")
     for txt in label_list:
         print(txt)
         data =baidu_api_translate(txt)
-        if ('error_code' in data) and data['error_code']=="52003":
+        # 报错拦截
+        if ('error_code' in data):
             print(data)
             break
+        # 成功返回
         else:
             print("\n")
             print(data)
@@ -49,4 +53,4 @@ def baidu_api_translate(content):
 
 
 
-go_webdriver()
+go_webdriver("https://www.tensorflow.org")

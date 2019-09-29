@@ -52,6 +52,14 @@ http://www.bejson.com/convert/html2markdown/ 可以通过html 转markdown
 - images标签
 - 表格
 - a标签
+- code
+- pre标签
+- ul 标签
+- h1
+- h2
+- h3
+- h4
+- h5
 
 ## 使用
 
