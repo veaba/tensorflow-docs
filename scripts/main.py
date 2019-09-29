@@ -1,5 +1,5 @@
 # python 创建文件夹/文件
-from scripts.category import *
+from category import *
 import os
 import re
 
