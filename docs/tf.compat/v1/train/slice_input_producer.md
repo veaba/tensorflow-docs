@@ -1,1 +1,0 @@
-# slice_input_producer

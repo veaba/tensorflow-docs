@@ -1,1 +1,0 @@
-# numpy_input_fn

@@ -1,1 +1,0 @@
-# assert_equal_graph_def

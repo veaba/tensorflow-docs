@@ -22,9 +22,11 @@ https://github.com/zalandoresearch/fashion-mnist
 
 ## 机器翻译
 
-### 方法一：找不到
+### 方法一：找到了
 1. 先找到官方md文件
 2. 通过百度API 把MD文件翻译为中文
+3. 官方文档在这里:https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf/data
+
 
 
 ### 方法二：胎死腹中，谷歌的反爬虫实在是太厉害了，我不知道怎么突破。爬不过页面

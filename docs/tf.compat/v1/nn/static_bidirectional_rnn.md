@@ -1,1 +1,0 @@
-# static_bidirectional_rnn

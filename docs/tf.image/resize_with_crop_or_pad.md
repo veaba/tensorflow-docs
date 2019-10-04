@@ -1,1 +1,0 @@
-# resize_with_crop_or_pad

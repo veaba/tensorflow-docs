@@ -1,1 +1,0 @@
-# OpLogProto.IdToStringEntry

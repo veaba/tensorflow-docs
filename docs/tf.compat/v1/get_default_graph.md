@@ -1,1 +1,0 @@
-# get_default_graph

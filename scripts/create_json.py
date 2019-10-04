@@ -1,6 +1,7 @@
 # 创建sidebar文件目录的python脚本
 from category import *
 
+
 def create_json():
     with open('a.js', "w") as f:
         print("写入成功")

@@ -1,1 +1,0 @@
-# make_stop_at_checkpoint_step_hook

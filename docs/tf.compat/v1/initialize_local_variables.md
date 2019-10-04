@@ -1,1 +1,0 @@
-# initialize_local_variables

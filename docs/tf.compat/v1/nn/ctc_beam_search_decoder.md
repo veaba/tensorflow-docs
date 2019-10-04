@@ -1,1 +1,0 @@
-# ctc_beam_search_decoder

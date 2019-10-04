@@ -1,1 +1,0 @@
-# multiply_no_nan

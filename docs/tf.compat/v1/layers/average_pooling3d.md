@@ -1,1 +1,0 @@
-# average_pooling3d

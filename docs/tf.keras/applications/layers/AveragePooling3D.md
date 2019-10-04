@@ -1,1 +1,0 @@
-# AveragePooling3D

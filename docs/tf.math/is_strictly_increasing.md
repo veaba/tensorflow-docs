@@ -1,1 +1,0 @@
-# is_strictly_increasing

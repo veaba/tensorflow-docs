@@ -1,1 +1,0 @@
-# is_keras_tensor

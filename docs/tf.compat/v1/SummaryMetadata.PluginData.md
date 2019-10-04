@@ -1,1 +1,0 @@
-# SummaryMetadata.PluginData

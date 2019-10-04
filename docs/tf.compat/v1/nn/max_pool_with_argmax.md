@@ -1,1 +1,0 @@
-# max_pool_with_argmax

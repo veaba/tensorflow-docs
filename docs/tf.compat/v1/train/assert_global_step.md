@@ -1,1 +1,0 @@
-# assert_global_step

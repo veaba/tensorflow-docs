@@ -1,1 +1,0 @@
-# decode_and_crop_jpeg

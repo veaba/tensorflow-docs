@@ -1,1 +1,0 @@
-# get_global_step

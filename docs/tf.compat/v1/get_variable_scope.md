@@ -1,1 +1,0 @@
-# get_variable_scope

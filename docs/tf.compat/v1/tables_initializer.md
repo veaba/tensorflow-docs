@@ -1,1 +1,0 @@
-# tables_initializer

@@ -1,1 +1,0 @@
-# get_root_dir_with_all_resources

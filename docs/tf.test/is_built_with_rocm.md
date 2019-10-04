@@ -1,1 +1,0 @@
-# is_built_with_rocm

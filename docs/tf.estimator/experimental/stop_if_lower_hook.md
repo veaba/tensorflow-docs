@@ -1,1 +1,0 @@
-# stop_if_lower_hook

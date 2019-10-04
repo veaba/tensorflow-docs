@@ -1,1 +1,0 @@
-# local_response_normalization

@@ -1,1 +1,0 @@
-# GlobalMaxPool1D

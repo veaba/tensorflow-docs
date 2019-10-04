@@ -1,1 +1,0 @@
-# strided_slice

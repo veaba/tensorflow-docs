@@ -1,1 +1,0 @@
-# sparse_softmax_cross_entropy

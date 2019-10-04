@@ -1,1 +1,0 @@
-# LocallyConnected2D

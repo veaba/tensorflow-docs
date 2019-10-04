@@ -1,1 +1,0 @@
-# sigmoid_cross_entropy

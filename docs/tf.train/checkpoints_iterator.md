@@ -1,1 +1,0 @@
-# checkpoints_iterator

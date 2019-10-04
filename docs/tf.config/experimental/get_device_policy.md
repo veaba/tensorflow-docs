@@ -1,1 +1,0 @@
-# get_device_policy

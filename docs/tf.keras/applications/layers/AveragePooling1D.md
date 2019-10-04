@@ -1,1 +1,0 @@
-# AveragePooling1D

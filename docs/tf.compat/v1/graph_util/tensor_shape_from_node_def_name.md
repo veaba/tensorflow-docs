@@ -1,1 +1,0 @@
-# tensor_shape_from_node_def_name

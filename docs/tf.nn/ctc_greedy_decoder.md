@@ -1,1 +1,0 @@
-# ctc_greedy_decoder

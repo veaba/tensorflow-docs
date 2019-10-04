@@ -1,1 +1,0 @@
-# broadcast_static_shape

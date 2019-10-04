@@ -1,1 +1,0 @@
-# softmax_cross_entropy

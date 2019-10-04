@@ -1,1 +1,0 @@
-# bytes_produced_stats

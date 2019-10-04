@@ -1,1 +1,0 @@
-# replica_device_setter

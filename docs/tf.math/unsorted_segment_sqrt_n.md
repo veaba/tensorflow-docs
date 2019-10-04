@@ -1,1 +1,0 @@
-# unsorted_segment_sqrt_n

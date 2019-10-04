@@ -1,5 +1,6 @@
 # -- coding: utf-8 --
 #  爬虫工具 >scrapy runspider spider.py
+# 由于google 反爬虫太过于牛逼，这个方式被放弃
 import scrapy
 import requests
 class Spider(scrapy.Spider):

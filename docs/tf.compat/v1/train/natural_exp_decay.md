@@ -1,1 +1,0 @@
-# natural_exp_decay

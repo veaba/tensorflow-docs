@@ -1,1 +1,0 @@
-# nondifferentiable_batch_function

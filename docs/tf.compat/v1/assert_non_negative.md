@@ -1,1 +1,0 @@
-# assert_non_negative

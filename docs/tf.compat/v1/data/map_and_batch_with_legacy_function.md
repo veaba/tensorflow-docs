@@ -1,1 +1,0 @@
-# map_and_batch_with_legacy_function

@@ -1,1 +1,0 @@
-# LinearOperatorCirculant3D

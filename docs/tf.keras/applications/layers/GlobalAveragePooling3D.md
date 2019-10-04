@@ -1,1 +1,0 @@
-# GlobalAveragePooling3D

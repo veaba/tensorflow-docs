@@ -1,1 +1,0 @@
-# quantized_avg_pool

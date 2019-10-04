@@ -1,1 +1,0 @@
-# image_data_format

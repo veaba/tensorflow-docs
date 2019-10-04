@@ -1,1 +1,0 @@
-# NumpyArrayIterator

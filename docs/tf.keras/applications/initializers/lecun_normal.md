@@ -1,1 +1,0 @@
-# lecun_normal

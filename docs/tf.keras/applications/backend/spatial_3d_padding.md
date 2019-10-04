@@ -1,1 +1,0 @@
-# spatial_3d_padding

@@ -1,1 +1,0 @@
-# assert_proper_iterable

@@ -1,1 +1,0 @@
-# crop_and_resize
