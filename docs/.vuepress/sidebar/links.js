@@ -8,7 +8,12 @@
  ***********************/
 module.exports = {
 	tfLinks: [
-		"tf/Overview",
+		// "tf/Overview",
+		{
+			title:"Overview",
+			type:"group",
+			link:"/tf/Overview"
+		},
 		"tf/AggregationMethod",
 		"tf/argsort",
 		"tf/batch_to_space",
@@ -315,7 +320,7 @@ module.exports = {
 		{
 			type: "group",
 			title: "experimental",
-			// link: "/tf.autograph/experimental",
+			link: "/tf.autograph/experimental",
 			children: [
 				"/tf.autograph/experimental/Overview",
 				"/tf.autograph/experimental/do_not_convert",

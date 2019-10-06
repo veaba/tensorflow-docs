@@ -1,6 +1,11 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题
 
+## 网页展示图
+![](images/web-ui.png)
+
+
+
 - 预计半年到一年的时间
 - 2019年9月29日15:31:42 今天 中途有人告诉我API 有中文版的，呃呃呃？都做到这程度了，继续下去呗，反正也没人看咯。
 
@@ -47,6 +52,7 @@ http://www.bejson.com/convert/html2markdown/ 可以通过html 转markdown
 6. 需要安装chromeDriver，目前是在windows平台完成
 7. TODO Image、Table
 8. TODO 需要多线程处理这个异步请求！
+9. 完成了文件的爬取，但此时是英文
 
 ### 特点（TODO）
 

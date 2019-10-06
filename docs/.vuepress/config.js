@@ -8,7 +8,7 @@ module.exports = {
 	locales: {
 		'/': {
 			lang: 'zh-CN',
-			title: 'Tensorflow中文API文档 rc1.15 API',
+			title: 'Tensorflow中文API文档 rc2.0 API',
 			description: 'Google Tensorflow Python CN API Docs'
 		},
 		'/en/': {
@@ -18,8 +18,8 @@ module.exports = {
 		}
 	},
 	themeConfig: {
-		repo:"veaba/mongodb-docs",
-		logo:"/images/logo.png",
+		repo:"veaba/tensorflow-docs",
+		logo:"/images/tensorflow_logo.svg",
 		locales:{
 			//主站是中文版
 			'/':{
