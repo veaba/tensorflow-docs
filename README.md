@@ -25,6 +25,35 @@ https://github.com/zalandoresearch/fashion-mnist
 
 想要机器翻译来完成，实在是整个文档太过于庞大了。
 
+## 工作进度
+
+|模块|英文迁移|中文|
+|---|---|---|
+|tf|√||
+|tf.audio|√||
+|tf.autograph|√||
+|tf.bitwise|||
+|tf.compat|||
+|tf.config|||
+|tf.data|||
+|tf.debugging|||
+|tf.distribute|||
+|tf.dtypes|||
+|tf.errors|||
+|tf.estimator|||
+|tf.experimental|||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
 ## 机器翻译
 
 ### 方法一：找到了1.14的
@@ -91,7 +120,17 @@ cnpm run build
 
 
 ## scripts 是脚本目录
-- 创建文件夹以及文件
+
+|文件|用途|
+|---|---|
+|[category.py](scripts/category.py)|目录|
+|[check_empty_file.py](scripts/check_empty_file.py)|用途检查文件docs的文件是否为空不被写入|
+|[config.py](scripts/config.py)|百度翻译秘钥，不上传到仓库|
+|[create_file.py](scripts/create_file.py)|创建docs 的文件|
+|[create_json.py](scripts/create_json.py)|创建sidebar文件的脚本|
+|[spider.py](scripts/spider.py)|爬虫，暂无用到|
+|[spider_tensorflow_docs.py](scripts/spider_tensorflow_docs.py) |核心文件，爬取google 的tensorflow rc 2.0 API 文档。速度很慢，需要优化，跑完这个项目的文件，耗费24小时吧|
+|[test.py](scripts/test.py)|测试文件|
 
 ## 基于vuepress 搭建
 
@@ -99,3 +138,11 @@ cnpm run build
 - 内容尚未填充
 
 
+## 技巧
+
+### 基于vscode 正则替换
+
+需要将category.py 的结构转为vuepress使用，但写个函数考虑成本比较多，所以需要手动替换文本
+
+    查找："tf(.*?)"
+    替换：{title:$0,type:"group",link:$0}
