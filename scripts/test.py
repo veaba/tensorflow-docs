@@ -1,4 +1,4 @@
-import re
+# import re
 # def list_to_str(str_list,code=""):
 #     if isinstance(str_list, list):
 #         return code.join(str_list)
@@ -23,10 +23,16 @@ import re
 
 # tell()
 
-a="All Symbols"
-b=re.sub(r' ','_',a)
-print(b)
+# a="All Symbols"
+# b=re.sub(r' ','_',a)
+# print(b)
 
-c="tf.train.FeatureLists.FeatureListEntry"
+# c="tf.train.FeatureLists.FeatureListEntry"
 
-print(re.sub(r'[.]','/',c))
+# print(re.sub(r'[.]','/',c))
+
+a=0
+if a:
+    print("不存在")
+elif  not a:
+    print("hah")
