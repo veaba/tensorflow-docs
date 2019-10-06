@@ -22,7 +22,7 @@ https://github.com/zalandoresearch/fashion-mnist
 
 ## 机器翻译
 
-### 方法一：找到了
+### 方法一：找到了1.14的
 1. 先找到官方md文件
 2. 通过百度API 把MD文件翻译为中文
 3. 官方文档在这里:https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf/data
@@ -43,9 +43,10 @@ http://www.bejson.com/convert/html2markdown/ 可以通过html 转markdown
 2. 爬取tensorflow API 文档
 3. 定制爬取规则后，通过百度API 去翻译文档（现已成功）
 4. 目前套餐是免费的1s（无限量使用）
-5. demo见（scripts/selenium_sider.py）
+5. demo见（scripts/spider_tensorflow_docs.py）
 6. 需要安装chromeDriver，目前是在windows平台完成
-7. todo （问题是，没办法知道它是href 还是 image还是h系列标签，这个需要处理）
+7. TODO Image、Table
+8. TODO 需要多线程处理这个异步请求！
 
 ### 特点（TODO）
 

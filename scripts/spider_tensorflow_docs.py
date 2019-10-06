@@ -151,9 +151,9 @@ def baidu_api_translate(content):
         trans_result = result['trans_result']
         [obj] = trans_result or [{'dst': ''}]
         # {'src': 'Public API for tf.audio namespace.', 'dst': 'tf.audio命名空间的公共api。'}
-        print("result:", result)
-        print("trans_result:", trans_result)
-        print("obj:", obj)
+        # print("result:", result)
+        # print("trans_result:", trans_result)
+        # print("obj:", obj)
         return obj['dst']
     else:
         return ""
@@ -168,11 +168,16 @@ def baidu_api_translate(content):
 def parent_path(parent, key_name):
     no_docs_path = re.sub(r'(../docs/)', '', parent)
     tf_path = re.sub(r"[.]", "/", no_docs_path)
-    url_path = url + tf_path + key_name
-    page_url = re.sub(r"/Overview", "", url_path)
+    url_path = url + tf_path + re.sub(r"[.]", "/", key_name)
+    page_url_re = re.sub(r"/Overview", "", url_path)
+    page_url = re.sub(r"/All Symbols", "", page_url_re)
+    file_path_re = parent + key_name
+    file_path=re.sub(r' ','_',file_path_re)
+    print("url:",url)
+    print("tf_path:",tf_path)
+    print("key_name:",key_name)
     print("爬取的页面：", page_url)
-    print("写入的文件路径：", parent + key_name)
-    file_path = parent + key_name
+    print("写入的文件路径：", file_path)
     go_webdriver(page_url, file_path + '.md')
 
 
@@ -190,7 +195,7 @@ def handle(array, parent):
                 parent_path(parent + key_name + "/", file_name)
             else:
                 handle(item_list, parent + key_name + "/")
-        if type(obj) == str:
+        elif type(obj) == str:
             parent_path(parent, obj)
 
 
