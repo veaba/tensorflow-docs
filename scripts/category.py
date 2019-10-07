@@ -1,3 +1,55 @@
+# /* 有问题
+#                   {
+#                         "data": [
+#                             "Overview",
+#                             "Dataset",
+#                             "FixedLengthRecordDataset",
+#                             "get_output_classes",
+#                             "get_output_shapes",
+#                             "get_output_types",
+#                             "Iterator",
+#                             "make_initializable_iterator",
+#                             "make_one_shot_iterator",
+#                             "TextLineDataset",
+#                             "TFRecordDataset",
+#                             {"experimental":[
+#                             "Overview",
+#                             "choose_from_datasets",
+#                             "Counter",
+#                             "CsvDataset",
+#                             "make_batched_features_dataset",
+#                             "make_csv_dataset",
+#                             "map_and_batch_with_legacy_function",
+#                             "RaggedTensorStructure",
+#                             "RandomDataset",
+#                             "sample_from_datasets",
+#                             "SparseTensorStructure",
+#                             "SqlDataset",
+#                             "StatsAggregator",
+#                             "TensorArrayStructure",
+#                             "TensorStructure",
+#                             ]},
+                       
+#                         ]
+#                     },
+#                     {"debugging": ["Overview", "assert_shapes"]},
+#                     {
+#                         "distribute": [
+#                             "Overview",
+#                             "get_loss_reduction",
+#                             "MirroredStrategy",
+#                             "OneDeviceStrategy",
+#                             "Strategy",
+#                             "StrategyExtended",
+#                             {"cluster_resolver":["Overview"]},
+#                             {"experimental":["Overview"]},
+#                             "CentralStorageStrategy",
+#                             "MultiWorkerMirroredStrategy",
+#                             "ParameterServerStrategy",
+#                             "TPUStrategy",
+
+
+# */
 category = [
     {
         "tf": [
@@ -574,15 +626,18 @@ category = [
                     "WholeFileReader",
                     "wrap_function",
                     "zeros_like",
-                    {"app": ["Overview", "run"]},
+                    {"app": [
+                        "Overview", 
+                        "run"]},
                     {"audio": ["Overview"]},
                     {
                         "autograph": [
                             "Overview",
                             "to_code",
                             "to_graph",
-                            "experimental",
-                            "Overview",
+                            {"experimental":[
+                                "Overview"
+                            ]},
                         ]
                     },
                     {"bitwise": ["Overview"]},
@@ -590,12 +645,9 @@ category = [
                     {
                         "config": [
                             "Overview",
-                            "experimental",
-                            "Overview",
-                            "optimizer",
-                            "Overview",
-                            "threading",
-                            "Overview",
+                            {"experimental":["Overview"]},
+                            {"optimizer":["Overview"]},
+                            {"optimizer":["Overview"]},
                         ]
                     },
                     {
@@ -611,7 +663,7 @@ category = [
                             "make_one_shot_iterator",
                             "TextLineDataset",
                             "TFRecordDataset",
-                            "experimental",
+                            {"experimental":[
                             "Overview",
                             "choose_from_datasets",
                             "Counter",
@@ -627,6 +679,8 @@ category = [
                             "StatsAggregator",
                             "TensorArrayStructure",
                             "TensorStructure",
+                            ]},
+                       
                         ]
                     },
                     {"debugging": ["Overview", "assert_shapes"]},
@@ -638,10 +692,8 @@ category = [
                             "OneDeviceStrategy",
                             "Strategy",
                             "StrategyExtended",
-                            "cluster_resolver",
-                            "Overview",
-                            "experimental",
-                            "Overview",
+                            {"cluster_resolver":["Overview"]},
+                            {"experimental":["Overview"]},
                             "CentralStorageStrategy",
                             "MultiWorkerMirroredStrategy",
                             "ParameterServerStrategy",
