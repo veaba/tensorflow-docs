@@ -50,7 +50,6 @@ const {
 	tfVersionLinks,
 	tfXlaLinks,
 	allSymbolsLinks
-	
 } = require('./links');
 module.exports = {
 	'/': [
@@ -98,5 +97,6 @@ module.exports = {
 		{'title': 'tf.train', 'collapsabel': false, 'children': tfTrainLinks},
 		{'title': 'tf.version', 'collapsabel': false, 'children': tfVersionLinks},
 		{'title': 'tf.xla', 'collapsabel': false, 'children': tfXlaLinks},
-		{'title': 'All Symbols', 'collapsabel': false, 'children': allSymbolsLinks}]
+		allSymbolsLinks
+	]
 };

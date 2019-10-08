@@ -3256,7 +3256,11 @@ category = [
     {
         "tf.tpu": [
             "Overview",
-            {"experimental": ["Overview", "DeviceAssignment", "initialize_tpu_system"]},
+            {"experimental": [
+                "Overview",
+                "DeviceAssignment",
+                "initialize_tpu_system"
+            ]},
         ]
     },
     {

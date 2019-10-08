@@ -2,8 +2,8 @@
 home: true
 heroImage: /hero.png
 actionText: Get Started →
-actionLink: /guide/
-footer: MIT Licensed | Copyright © 2018-present Evan You
+actionLink: /tf/Overview/
+footer: MIT Licensed | Copyright © 2019-present Veaba
 ---
 
 <div style="text-align: center">

@@ -11,11 +11,11 @@ module.exports = {
 			title: 'Tensorflow中文API文档 rc2.0 API',
 			description: 'Google Tensorflow Python CN API Docs'
 		},
-		'/en/': {
-			lang: 'en-US',
-			title: 'Documentation',
-			description: 'Vue 驱动的静态网站生成器'
-		}
+		// '/en/': {
+		// 	lang: 'en-US',
+		// 	title: 'Documentation',
+		// 	description: 'Vue 驱动的静态网站生成器'
+		// }
 	},
 	themeConfig: {
 		repo:"veaba/tensorflow-docs",
@@ -29,14 +29,14 @@ module.exports = {
 				nav: require('./nav/zh'),
 				sidebar: require('./sidebar/zh')
 			},
-			//英文版
-			'/en/':{
-				label:"English",
-				selectText:"Languages",
-				editLinkText:"Edit this page on Github",
-				nav: require('./nav/en'),
-				sidebar: require('./sidebar/en')
-			}
+			// //英文版
+			// '/en/':{
+			// 	label:"English",
+			// 	selectText:"Languages",
+			// 	editLinkText:"Edit this page on Github",
+			// 	nav: require('./nav/en'),
+			// 	sidebar: require('./sidebar/en')
+			// }
 		},
 	},
 	// 修改内部webpack的配置

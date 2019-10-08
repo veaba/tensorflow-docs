@@ -222,8 +222,8 @@ function resolveItem(item, pages, base, groupDepth = 1) {
 			title: item[1]
 		});
 	} else {
-		// 默认超过三层警告,此处调整为4层
-		if (groupDepth > 4) {
+		// 默认超过六层警告,此处调整为6层
+		if (groupDepth > 6) {
 			console.error(
 				'[vuepress] detected a too deep nested sidebar group.'
 			);
