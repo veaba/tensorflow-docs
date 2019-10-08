@@ -16,13 +16,19 @@ module.exports = {
 	tfLinks,tfAudioLinks,tfAutographLinks,
 	tfBitwiseLinks,
 	tfCompatLinks,
-	tfConfigLinks: [],
-	tfDataLinks: [],
-	tfDebuggingLinks: [],
-	tfDistributeLinks: [],
-	tfDtypesLinks: [],
+	tfConfigLinks,
+	tfDataLinks,
+	tfDebuggingLinks,
+	tfDistributeLinks,
+	tfDtypesLinks,
+	tfErrorsLinks: [
+	
+		
+		
+		
+		
+	],
 	tfEstimatorLinks: [],
-	tfErrorsLinks: [],
 	tfExperimentalLinks: [],
 	tfFeatureColumnLinks: [],
 	tfGraphUtilLinks: [],

@@ -29,7 +29,7 @@
 #                             "TensorArrayStructure",
 #                             "TensorStructure",
 #                             ]},
-                       
+
 #                         ]
 #                     },
 #                     {"debugging": ["Overview", "assert_shapes"]},
@@ -50,6 +50,10 @@
 
 
 # */
+
+# todo v2部分也有问题
+# todo write_graph`
+# todo estimator.CosineDecayRestarts. p 2379
 category = [
     {
         "tf": [
@@ -627,7 +631,7 @@ category = [
                     "wrap_function",
                     "zeros_like",
                     {"app": [
-                        "Overview", 
+                        "Overview",
                         "run"]},
                     {"audio": ["Overview"]},
                     {
@@ -635,7 +639,7 @@ category = [
                             "Overview",
                             "to_code",
                             "to_graph",
-                            {"experimental":[
+                            {"experimental": [
                                 "Overview"
                             ]},
                         ]
@@ -645,9 +649,9 @@ category = [
                     {
                         "config": [
                             "Overview",
-                            {"experimental":["Overview"]},
-                            {"optimizer":["Overview"]},
-                            {"optimizer":["Overview"]},
+                            {"experimental": ["Overview"]},
+                            {"optimizer": ["Overview"]},
+                            {"optimizer": ["Overview"]},
                         ]
                     },
                     {
@@ -663,24 +667,24 @@ category = [
                             "make_one_shot_iterator",
                             "TextLineDataset",
                             "TFRecordDataset",
-                            {"experimental":[
-                            "Overview",
-                            "choose_from_datasets",
-                            "Counter",
-                            "CsvDataset",
-                            "make_batched_features_dataset",
-                            "make_csv_dataset",
-                            "map_and_batch_with_legacy_function",
-                            "RaggedTensorStructure",
-                            "RandomDataset",
-                            "sample_from_datasets",
-                            "SparseTensorStructure",
-                            "SqlDataset",
-                            "StatsAggregator",
-                            "TensorArrayStructure",
-                            "TensorStructure",
+                            {"experimental": [
+                                "Overview",
+                                "choose_from_datasets",
+                                "Counter",
+                                "CsvDataset",
+                                "make_batched_features_dataset",
+                                "make_csv_dataset",
+                                "map_and_batch_with_legacy_function",
+                                "RaggedTensorStructure",
+                                "RandomDataset",
+                                "sample_from_datasets",
+                                "SparseTensorStructure",
+                                "SqlDataset",
+                                "StatsAggregator",
+                                "TensorArrayStructure",
+                                "TensorStructure",
                             ]},
-                       
+
                         ]
                     },
                     {"debugging": ["Overview", "assert_shapes"]},
@@ -692,8 +696,8 @@ category = [
                             "OneDeviceStrategy",
                             "Strategy",
                             "StrategyExtended",
-                            {"cluster_resolver":["Overview"]},
-                            {"experimental":["Overview"]},
+                            {"cluster_resolver": ["Overview"]},
+                            {"experimental": ["Overview"]},
                             "CentralStorageStrategy",
                             "MultiWorkerMirroredStrategy",
                             "ParameterServerStrategy",
@@ -1512,17 +1516,20 @@ category = [
                     },
                     {"data": ["Overview", {"experimental": ["Overview"]}]},
                     {"debugging": ["Overview"]},
-                    "distribute",
-                    "Overview",
-                    "cluster_resolver",
-                    "Overview",
-                    "experimental",
-                    "Overview",
-                    "dtypes",
-                    "Overview",
-                    "errors",
-                    "Overview",
-                    {"estimator": [["Overview"], {"experimental": ["Overview"]}]},
+                    {"distribute": [
+                        "Overview",
+                        {"cluster_resolver": ["Overview"]},
+                        {"experimental": ["Overview"]}
+                    ]},
+                    {"dtypes": [
+                        "Overview",
+                    ]},
+                    {"errors": [
+                        "Overview",
+                    ]},
+
+                    {"estimator": ["Overview"]},
+                    {"experimental": ["Overview"]},
                     {"feature_column": ["Overview"]},
                     {"graph_util": ["Overview"]},
                     {"image": ["Overview"]},
@@ -2045,7 +2052,7 @@ category = [
             "TFRecordWriter",
             "VarLenFeature",
             "write_file",
-            "write_graph`",
+            "write_graph",
             {
                 "gfile": [
                     "Overview",
@@ -2370,7 +2377,7 @@ category = [
             },
             {"estimator": ["Overview", "model_to_estimator"]},
             {
-                "estimator": [
+                "experimental": [
                     "Overview",
                     "CosineDecay",
                     "CosineDecayRestarts",
