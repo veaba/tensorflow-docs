@@ -1,31 +1,48 @@
-name: Node CI
-
-on: [push]
-
+name: GitHub Actions Build and Deploy Demo
+on:
+  push:
+    branches:
+      - master
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
       uses: veaba/tensorflow-docs@master
-      # run: |
-      #   npm install
-      #   npm run build --if-present
-      #   npm test
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: docs/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run build
+# name: Node CI
+
+# on: [push]
+
+# jobs:
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         node-version: [12.x]
+
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#     - name: npm install, build, and test
+#       uses: veaba/tensorflow-docs@master
+#       run: |
+#         npm install
+#         npm run build --if-present
+#         npm test
+#       env:
+#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        # BRANCH: gh-pages
+        # FOLDER: docs/.vuepress/dist
 
