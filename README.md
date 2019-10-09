@@ -13,7 +13,9 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 ## API 计费标准
 
 ### 百度翻译API
+
 |版本|计费|耗时|
+|---|---|---|
 |普通版本|免费|47个小时，1次/s|
 |高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
 |企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
@@ -22,7 +24,7 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 ## todo 以下内容需要手动调整，之前是目录写错
 
 
-![](images/wait_update.png)
+![](scripts/images/wait_update.png)
 
 ## 网页展示图
 ![](images/web-ui.png)
@@ -54,28 +56,49 @@ https://github.com/zalandoresearch/fashion-mnist
 |tf|√||
 |tf.audio|√||
 |tf.autograph|√||
-|tf.bitwise|||
-|tf.compat|||
-|tf.config|||
-|tf.data|||
-|tf.debugging|||
-|tf.distribute|||
-|tf.dtypes|||
-|tf.errors|||
-|tf.estimator|||
-|tf.experimental|||
+|tf.bitwise|√||
+|tf.compat|√||
+|tf.config|√||
+|tf.data|√||
+|tf.debugging|√||
+|tf.distribute|√||
+|tf.dtypes|√||
+|tf.errors|√||
+|tf.estimator|√||
+|tf.experimental|√||
+|tf.feature_column|√||
+|tf.graph_util|√||
+|tf.image|√||
+|tf.initializers|√||
+|tf.io|√||
+|tf.keras|√||
+|tf.linalg|√||
+|tf.lite|√||
+|tf.lookup|√||
+|tf.losses|√||
+|tf.math|√||
+|tf.metrics|√||
+|tf.nest|√||
+|tf.nn|√||
+|tf.optimizers|√||
+|tf.quantization|√||
+|tf.queue|√||
+|tf.ragged|√||
+|tf.random|√||
+|tf.raw_ops|√||
+|tf.sets|v||
+|tf.signal|√||
+|tf.sparse|√||
+|tf.strings|√||
+|tf.summary|√||
+|tf.sysconfig|√||
+|tf.test|√||
+|tf.tpu|√||
+|tf.train|√||
+|tf.version|√||
+|tf.xla|√||
 ||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+
 ## 机器翻译
 
 ### 方法一：找到了1.14的
