@@ -1,6 +1,7 @@
-## Class AggregationMethod
+## AggregationMethod 类
 
-A class listing aggregation methods used to combine gradients.
+列出用于组合渐变的聚合方法的类。
+
 ### Aliases:
 - Class `tf.compat.v1.AggregationMethod`
 - Class `tf.compat.v2.AggregationMethod`
