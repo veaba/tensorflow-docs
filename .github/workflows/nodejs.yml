@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/setup-node@v1
 
     - name: Build and Deploy
       uses: veaba/tensorflow-docs@master
@@ -16,6 +16,7 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: docs/.vuepress/dist
+        BUILD_SCRIPT: npm install && npm run build
 # name: Node CI
 
 # on: [push]
