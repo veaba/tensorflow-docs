@@ -65,3 +65,9 @@ label1.find_elements_by_xpath(
 ### 成功爬取
 
 ![](images/argsort.png)
+
+
+## todo 以下内容需要手动调整，之前是目录写错
+
+
+![](images/wait_update.png)
