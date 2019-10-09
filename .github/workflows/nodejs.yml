@@ -18,9 +18,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test
+      uses: veaba/tensorflow-docs@master
+      # run: |
+      #   npm install
+      #   npm run build --if-present
+      #   npm test
       env:
-        CI: true
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs/.vuepress/dist
+        BUILD_SCRIPT: npm install && npm run build
+
