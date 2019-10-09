@@ -1,9 +1,31 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题
 
+
+## 统计
+
+|类别|统计|
+|tensorflow文档文件个数（含丢弃）|2767|
+|tensorflow文档总行数|169618|
+|tensorflow 总字符数|9487919|
+|||
+
+## API 计费标准
+
+### 百度翻译API
+|版本|计费|耗时|
+|普通版本|免费|47个小时，1次/s|
+|高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
+|企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
+||||
+
+## todo 以下内容需要手动调整，之前是目录写错
+
+
+![](images/wait_update.png)
+
 ## 网页展示图
 ![](images/web-ui.png)
-
 
 
 - 预计半年到一年的时间
@@ -131,6 +153,8 @@ cnpm run build
 |[spider.py](scripts/spider.py)|爬虫，暂无用到|
 |[spider_tensorflow_docs.py](scripts/spider_tensorflow_docs.py) |核心文件，爬取google 的tensorflow rc 2.0 API 文档。速度很慢，需要优化，跑完这个项目的文件，耗费24小时吧|
 |[test.py](scripts/test.py)|测试文件|
+|[line_to_line.py](scripts/line_to_line.py)|TODO 读行准备去跑API，需要解析md文件|
+|[total.py](scripts/total.py)|统计脚本|
 
 ## 基于vuepress 搭建
 

@@ -660,8 +660,8 @@ module.exports = {
 							]
 						},
 						{
-							title: "optimizer", type: "group", link: "", children: [
-								{title: "Overview", type: "group", link: "/tf.compat/v1/optimizer/Overview"}
+							title: "threading", type: "group", link: "", children: [
+								{title: "Overview", type: "group", link: "/tf.compat/v1/threading/Overview"}
 							]
 						},
 					],
@@ -675,11 +675,7 @@ module.exports = {
 						{title: "get_output_shapes", type: "group", link: "/tf.compat/v1/data/get_output_shapes"},
 						{title: "get_output_types", type: "group", link: "/tf.compat/v1/data/get_output_types"},
 						{title: "Iterator", type: "group", link: "/tf.compat/v1/data/Iterator"},
-						{
-							title: "make_initializable_iterator",
-							type: "group",
-							link: "/tf.compat/v1/data/make_initializable_iterator"
-						},
+						{title: "make_initializable_iterator", type: "group", link: "/tf.compat/v1/data/make_initializable_iterator"},
 						{title: "make_one_shot_iterator", type: "group", link: "/tf.compat/v1/data/make_one_shot_iterator"},
 						{title: "TextLineDataset", type: "group", link: "/tf.compat/v1/data/TextLineDataset"},
 						{title: "TFRecordDataset", type: "group", link: "/tf.compat/v1/data/TFRecordDataset"},
@@ -689,17 +685,9 @@ module.exports = {
 								{title: "choose_from_datasets", type: "group", link: "/tf.compat/v1/data/choose_from_datasets"},
 								{title: "Counter", type: "group", link: "/tf.compat/v1/data/Counter"},
 								{title: "CsvDataset", type: "group", link: "/tf.compat/v1/data/CsvDataset"},
-								{
-									title: "make_batched_features_dataset",
-									type: "group",
-									link: "/tf.compat/v1/data/make_batched_features_dataset"
-								},
+								{title: "make_batched_features_dataset", type: "group", link: "/tf.compat/v1/data/make_batched_features_dataset"},
 								{title: "make_csv_dataset", type: "group", link: "/tf.compat/v1/data/make_csv_dataset"},
-								{
-									title: "map_and_batch_with_legacy_function",
-									type: "group",
-									link: "/tf.compat/v1/data/map_and_batch_with_legacy_function"
-								},
+								{title: "map_and_batch_with_legacy_function", type: "group", link: "/tf.compat/v1/data/map_and_batch_with_legacy_function"},
 								{title: "RaggedTensorStructure", type: "group", link: "/tf.compat/v1/data/RaggedTensorStructure"},
 								{title: "RandomDataset", type: "group", link: "/tf.compat/v1/data/RandomDataset"},
 								{title: "sample_from_datasets", type: "group", link: "/tf.compat/v1/data/sample_from_datasets"},
@@ -728,20 +716,14 @@ module.exports = {
 						{title: "Strategy", type: "group", link: "/tf.compat/v1/distribute/Strategy"},
 						{title: "StrategyExtended", type: "group", link: "/tf.compat/v1/distribute/StrategyExtended"},
 						{title: "CentralStorageStrategy", type: "group", link: "/tf.compat/v1/distribute/CentralStorageStrategy"},
-						{
-							title: "MultiWorkerMirroredStrategy",
-							type: "group",
-							link: "/tf.compat/v1/distribute/MultiWorkerMirroredStrategy"
-						},
+						{title: "MultiWorkerMirroredStrategy", type: "group", link: "/tf.compat/v1/distribute/MultiWorkerMirroredStrategy"},
 						{title: "ParameterServerStrategy", type: "group", link: "/tf.compat/v1/distribute/ParameterServerStrategy"},
 						{title: "TPUStrategy", type: "group", link: "/tf.compat/v1/distribute/TPUStrategy"},
-						{
-							title: "cluster_resolver", type: "group", link: "", children: [
+						{title: "cluster_resolver", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/distribute//cluster_resolverOverview"}
 							]
 						},
-						{
-							title: "experimental", type: "group", link: "", children: [
+						{title: "experimental", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/distribute/experimental/Overview"}
 							]
 						},
@@ -780,21 +762,9 @@ module.exports = {
 				{
 					title: "errors", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/errors/Overview"},
-						{
-							title: "error_code_from_exception_type",
-							type: "group",
-							link: "/tf.compat/v1/errors/error_code_from_exception_type"
-						},
-						{
-							title: "exception_type_from_error_code",
-							type: "group",
-							link: "/tf.compat/v1/errors/exception_type_from_error_code"
-						},
-						{
-							title: "raise_exception_on_not_ok_status",
-							type: "group",
-							link: "/tf.compat/v1/errors/raise_exception_on_not_ok_status"
-						},
+						{title: "error_code_from_exception_type", type: "group", link: "/tf.compat/v1/errors/error_code_from_exception_type"},
+						{title: "exception_type_from_error_code", type: "group", link: "/tf.compat/v1/errors/exception_type_from_error_code"},
+						{title: "raise_exception_on_not_ok_status", type: "group", link: "/tf.compat/v1/errors/raise_exception_on_not_ok_status"},
 					]
 				},
 				{
