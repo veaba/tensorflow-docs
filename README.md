@@ -1,7 +1,11 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题
 
+## 疑惑&难点
 
+- 如何去替换文本
+    - 将内容写入到mongod，然后去替换再写出来
+    
 ## 统计
 
 |类别|统计|
@@ -9,6 +13,8 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 |tensorflow文档总行数|169618|
 |tensorflow 总字符数|9487919|
 |||
+
+
 
 ## API 计费标准
 
@@ -21,10 +27,6 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 |企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
 ||||
 
-## todo 以下内容需要手动调整，之前是目录写错
-
-
-![](scripts/images/wait_update.png)
 
 ## 网页展示图
 ![](images/web-ui.png)
@@ -98,6 +100,8 @@ https://github.com/zalandoresearch/fashion-mnist
 |tf.version|√||
 |tf.xla|√||
 ||||
+
+
 
 ## 机器翻译
 

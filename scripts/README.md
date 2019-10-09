@@ -29,13 +29,13 @@ driver.get("http://www.baidu.com")
 
 
 
-```python
+```txt
 
 html.find_elements_by_css_selector('*') # 全部
 
 label.get_attribute('leve;') # h2
  
- print(node.get_attribute('level')=="h1")
+print(node.get_attribute('level')=="h1")
 
 label.tag_name 
 
@@ -65,9 +65,3 @@ label1.find_elements_by_xpath(
 ### 成功爬取
 
 ![](images/argsort.png)
-
-
-## todo 以下内容需要手动调整，之前是目录写错
-
-
-![](images/wait_update.png)

@@ -49,8 +49,8 @@ def baidu_api_translate(content):
 def read_line():
     with open("../docs/All_Symbols.md", "r") as f:
         for line in f.readlines():
-            t = baidu_api_translate(line)
-            print(t)
+            if len(line) > 1:
+                print(line)
 
 
 read_line()
