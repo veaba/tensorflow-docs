@@ -25,7 +25,7 @@ def md5(content):
 async def baidu_api_translate(content):
     print(time.time(),content)
     if len(content) > 0:
-        await asyncio.sleep(1/50)
+        await asyncio.sleep(1)
         baidu_api_url = "https://fanyi-api.baidu.com/api/trans/vip/translate"
         res = requests.post(
             baidu_api_url,
