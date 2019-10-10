@@ -90,12 +90,22 @@ def match_mode(line):
 all_lines_en={
 
 }
+
+# 清空文件
+def clear_file(path):
+    with open(path,'w',encoding="utf-8") as f:
+        f.write('')
+
 def read_line(path):
     with open(path, "r",encoding="utf-8") as f:
         for line in f.readlines():
             if len(line) > 1:
                 if not match_mode(line):
                     all_lines_en[line]=""
+    clear_file('i18n.py')
+    with open('i18n.py','a',encoding="utf-8") as f:
+        for line in all_lines_en.keys():
+            f.write(line)
 
 # 翻译写入到原文件
 def re_write_line(path):
@@ -124,7 +134,7 @@ def re_write_line(path):
     # 复写文件
     with open(path,'a',encoding='utf8') as f:
         for line in wait_save_list:
-            f.write(line)
+            f.write(line+'\n')
     # values_10= list(all_lines_en.values())[:10]
     # keys_10= list(all_lines_en.keys())[:10]
     # print("keys_10:",keys_10)
@@ -180,8 +190,8 @@ def handle(array, parent,task=None):
 
 def hello():
     handle(category, "../docs/")
-    total_str()
-    handle(category, "../docs/",task=1)
+    # total_str()
+    # handle(category, "../docs/",task=1)
 
 
 hello()
