@@ -43,10 +43,6 @@ async def baidu_api_translate(content):
         else:
             trans_result = result['trans_result']
             [obj] = trans_result or [{'dst': ''}]
-            # {'src': 'Public API for tf.audio namespace.', 'dst': 'tf.audio命名空间的公共api。'}
-            # print("result:", result)
-            # print("trans_result:", trans_result)
-            # print("obj:", obj)
             return obj['dst']
     else:
         return ""
@@ -120,14 +116,17 @@ def re_write_line(path):
             print("all_lines_en[line]:",line_str)
         else:
              wait_save_list.append(line)
+    # 清空文件         
+    with open(path,'w',encoding='utf8') as f:
+        f.write('')
     # 复写文件
     with open(path,'a',encoding='utf8') as f:
         for line in wait_save_list:
             f.write(line)
-    values_10= list(all_lines_en.values())[:10]
-    keys_10= list(all_lines_en.keys())[:10]
-    print("keys_10:",keys_10)
-    print("values_10:",values_10)
+    # values_10= list(all_lines_en.values())[:10]
+    # keys_10= list(all_lines_en.keys())[:10]
+    # print("keys_10:",keys_10)
+    # print("values_10:",values_10)
 
 # 总行数5459
 # 总字数250053万字
@@ -138,18 +137,17 @@ TOTAL={
 
 
 def total_str():
-    mask=0
+    # mask=0
     loop=asyncio.get_event_loop()
     for item in all_lines_en:
         TOTAL['STRING_COUNT']+=len(item)
-        mask+=1
+        # mask+=1
         all_lines_en[item]=loop.run_until_complete(baidu_api_translate(item))
-        if mask>10:
-            break
+        # if mask>10:
+        #     break
     print(TOTAL)
     print("keys:",list(all_lines_en.keys())[:10])
     print("value：",list(all_lines_en.values())[:10])
-    return all_lines_en
 
 
 def parent_path(parent, key_name,task):
@@ -181,7 +179,6 @@ def handle(array, parent,task=None):
 def hello():
     handle(category, "../docs/")
     total_str()
-    print("有值吗：",list(all_lines_en.values())[:10])
     handle(category, "../docs/",task=1)
 
 
