@@ -5,7 +5,7 @@ import asyncio
 from config import appid
 from config import key
 from category import *
-
+import time
 
 
 url = "https://www.tensorflow.org/api_docs/python/"
@@ -22,6 +22,7 @@ def md5(content):
 
 
 async def baidu_api_translate(content):
+    print(time.time())
     if len(content) > 0:
         await asyncio.sleep(1)
         baidu_api_url = "https://fanyi-api.baidu.com/api/trans/vip/translate"
@@ -108,12 +109,13 @@ def re_write_line(path):
 
     for line in temp_save_list:
         if line in all_lines_en:
-            line_str=line.replace(line,all_lines_en[line])
-            wait_save_list.append(line_str)
-            #  这里发生了什么,此时的all_lines_en 竟然没有数据
-            print("line:",line)
-            print("line_str:",line_str)
-            print("all_lines_en[line]:",line_str)
+            if len(all_lines_en[line]):
+                line_str=line.replace(line,all_lines_en[line])
+                wait_save_list.append(line_str+'\n')
+                #  这里发生了什么,此时的all_lines_en 竟然没有数据
+                print("line:",line)
+                print("line_str:",line_str)
+                print("all_lines_en[line]:",line_str)
         else:
              wait_save_list.append(line)
     # 清空文件         
@@ -137,14 +139,14 @@ TOTAL={
 
 
 def total_str():
-    # mask=0
+    mask=0
     loop=asyncio.get_event_loop()
     for item in all_lines_en:
         TOTAL['STRING_COUNT']+=len(item)
-        # mask+=1
+        mask+=1
         all_lines_en[item]=loop.run_until_complete(baidu_api_translate(item))
-        # if mask>10:
-        #     break
+        if mask>10:
+            break
     print(TOTAL)
     print("keys:",list(all_lines_en.keys())[:10])
     print("value：",list(all_lines_en.values())[:10])
