@@ -5,6 +5,7 @@ import asyncio
 from config import appid
 from config import key
 from category import *
+from i18n_dict import i18n_dict
 import time
 
 
@@ -22,9 +23,9 @@ def md5(content):
 
 
 async def baidu_api_translate(content):
-    print(time.time())
+    print(time.time(),content)
     if len(content) > 0:
-        await asyncio.sleep(1/10)
+        await asyncio.sleep(1/50)
         baidu_api_url = "https://fanyi-api.baidu.com/api/trans/vip/translate"
         res = requests.post(
             baidu_api_url,
@@ -106,7 +107,7 @@ def create_i18n_dict_file(path):
                     all_lines_en[line]=""
     clear_file('i18n_dict.py')
     with open('i18n_dict.py','a',encoding="utf-8") as f:
-        f.write('i18n={\n',)
+        f.write('i18n_dict={\n',)
         # loop=asyncio.get_event_loop()loop.run_until_complete(baidu_api_translate(line))
         for line in all_lines_en.keys():
             new_line=line.replace('\n','').replace("'","\\'")
@@ -136,12 +137,28 @@ def handle(array, parent,task=None):
             parent_path(parent, obj,task)
     
 
+# 将空的对象转为翻译对象
+def i18n_translate(array):
+    time_start= time.time()
+    new_dict={}
+    loop=asyncio.get_event_loop()
+    for item in array:
+        try:
+            new_dict[item]=loop.run_until_complete(baidu_api_translate(item))
+        except Exception as e:
+            print(e)    
+    print(new_dict)
+    time_end=time.time()
+    print('翻译 create_i18n_dict_file 所消耗时间：',time_end-time_start)
+
+
 def create_i18n_py():
     time_start= time.time()
     handle(category, "../docs/")
     time_end=time.time()
     print('创建 create_i18n_dict_file 所消耗时间：',time_end-time_start)
 
-    
 
-create_i18n_py()
+
+i18n_translate(i18n_dict)
+# create_i18n_py()

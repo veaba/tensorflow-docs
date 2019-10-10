@@ -74,6 +74,9 @@
 ### 然后替换文本
 ### 再一次w模式写入到源文件
 
-from i18n import *
+from i18n_dict import i18n_dict
 
-print(i18n)
+
+for item in i18n_dict:
+    print("key:",item)
+    print("---:",i18n_dict[item])
