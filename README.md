@@ -1,6 +1,13 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本、百度翻译API
 
+
+### TODO
+- 增加丢弃的模块标注或者移除
+- 发现tf目录文档重复，需要重爬这个目录 2019年10月11日16:29:15
+- 现在进入对比源文档阶段1%
+
+
 ## 关于本项目
 - 基于python+vuepress搭建 Google Tensorflow 最新版本 2.0 API 中文文档
 - 直接copy 自己用过的vuepress theme
@@ -25,12 +32,15 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 
 ## 工作进度
 
+### 官方文档实际上还没有完成翻译，所以我被坑了
+
+- https://tensorflow.google.cn/api_docs/python/tf/batch_to_space 排版错误
+- 
+
 ### 新增分支
 - 新增dev分支，保留原始docs en 文档，用来生成中文文档
 - 新增tag origin-bookmark ，保留原始文档
 
-### 后续工作TODO
-- 增加丢弃的模块标注或者移除
 
 
 ### 项目起初一些废话
@@ -204,8 +214,9 @@ key="xxxx"
 - 第二步：生成预置文件。多次执行`create_file.py`预生成markdown文件，因为目录需要递归，需要这边是手动执行多次（tensorflow文档目前最多有六层的结构）来生成空文件
 
     - 警告：请不要在翻译好的文件执行这一步，因为会预生成空文件覆盖源文件
+    - 警告：爬虫脚本`spider_tensorflow_docs.py` 还不是完善，不能万能，对于字符："`"字符还是有点小问题，需要手动调整脚本了和手动翻译了
 
-- 第三步：填充文档内容。根据第一步的`category.py`的目录，利用自动化测试软件selenium 工具配合chrome driver方案爬取tensorflow的API 文档
+- 第三步：爬取文档内容。根据第一步的`category.py`的目录，利用自动化测试软件selenium 工具配合chrome driver方案爬取tensorflow的API 文档，见`spider_tensorflow_docs.py`
 
     - 这一步是写递归函数，将`category.py` 的路径拼成为url地址，然后根据url去爬取页面
     - 再把HTML 文档标签的关键信息，写函数拼凑成为mardown格式文件，写到docs目录
@@ -238,6 +249,8 @@ key="xxxx"
 
 - 第八步：发布
     - 因为文件太多，vuepress 生成2.5k个文件确实很慢，起码两个小时才能build完成
+
+
 
 ### 目录
 

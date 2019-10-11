@@ -17,8 +17,8 @@ Returns the indices of a tensor that give its sorted order along an axis.
 
 #### Usage:
 
-```
- import tensorflow as tf
+```python
+import tensorflow as tf
 a = [1, 10, 26.9, 2.8, 166.32, 62.3]
 b = tf.argsort(a,axis=-1,direction='ASCENDING',stable=False,name=None)
 c = tf.keras.backend.eval(b)
@@ -41,7 +41,7 @@ Returns the indices of a tensor that give its sorted order along an axis.
 - `tf.compat.v1.argsort`
 - `tf.compat.v2.argsort`
 
-```
+```python
  tf.argsort(
     values,
     axis=-1,
@@ -54,7 +54,7 @@ Returns the indices of a tensor that give its sorted order along an axis.
 
 #### Usage:
 
-```
+```python
  import tensorflow as tf
 a = [1, 10, 26.9, 2.8, 166.32, 62.3]
 b = tf.argsort(a,axis=-1,direction='ASCENDING',stable=False,name=None)
