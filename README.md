@@ -186,7 +186,7 @@ cnpm run build
 |[spider.py](scripts/spider.py)|爬虫，暂无用到|
 |[spider_tensorflow_docs.py](scripts/spider_tensorflow_docs.py) |核心文件，爬取google 的tensorflow rc 2.0 API 文档。速度很慢，需要优化，跑完这个项目的文件，耗费24小时吧|
 |[test.py](scripts/test.py)|测试文件|
-|[line_to_line.py](scripts/line_to_line.py)|TODO 读行准备去跑API，需要解析md文件|
+|[line_to_line.py](scripts/create_zh_docs.py)|TODO 读行准备去跑API，需要解析md文件|
 |[total.py](scripts/total.py)|统计脚本|
 
 ## 基于vuepress 搭建
