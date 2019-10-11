@@ -1,7 +1,10 @@
 # 计算翻译的字符总量以及行数
 import re
-from category import category
+# from category import category
 from i18n import i18n
+
+
+# from utils import handle
 
 def read_line(str_count=0, line_count=0):
     with open("../docs/All_Symbols.md", "r") as f:
@@ -20,7 +23,7 @@ COUNTS = {
     "FILES": 0,  # 文件个数
     "LINES": 0,  # 行数
     "STRINGS": 0,  # 总字符数
-    "I18N":0,# 需要翻译的字符
+    "I18N": 0,  # 需要翻译的字符
 }
 
 
@@ -40,30 +43,13 @@ def parent_path(parent, key_name):
                 COUNTS["STRINGS"] += len(line)
 
 
-def handle(array, parent):
-    if type(array) != list:
-        print("end")
-        return ''
-    for obj in array:
-        if type(obj) == dict:
-            key_name = "".join(obj.keys())
-            values = obj.values()
-            [item_list] = values or [[]]
-            if len(item_list) == 1:
-                [file_name] = item_list
-                parent_path(parent + key_name + "/", file_name)
-            else:
-                handle(item_list, parent + key_name + "/")
-        elif type(obj) == str:
-            parent_path(parent, obj)
-
-
-# handle(category, "../docs/")
+# handle(category, "../docs/",parent_path)
 
 # 计算需要翻译的字符长度
 def total_i18n():
     for key in i18n:
-        COUNTS['I18N']+=len(key)
+        COUNTS['I18N'] += len(key)
+
 
 total_i18n()
 print("文件个数：", COUNTS["FILES"])

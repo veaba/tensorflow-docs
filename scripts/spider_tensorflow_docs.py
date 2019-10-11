@@ -3,26 +3,16 @@
 # 目前先用于爬取文件，后续再翻译写入
 # 问题：如何处理python 的异步编程
 from selenium import webdriver
-import requests
-import hashlib
-from category import *
-from config import appid
-from config import key
+from category import category
+from utils import handle
+# from scripts import utils
 import re
 
 # url="https://www.tensorflow.org/api_docs/python/"
 # tensorf_markdown="https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf"
+
+
 url = "https://www.tensorflow.org/api_docs/python/"
-appid = appid  # TODO
-salt = "tensorflow"
-key = key  # TODO
-
-
-def md5(content):
-    m = hashlib.md5()
-    sign = appid + content + salt + key
-    m.update(sign.encode("utf-8"))
-    return m.hexdigest()
 
 
 # list 转字符
@@ -30,8 +20,7 @@ def list_to_str(str_list, code=""):
     if isinstance(str_list, list):
         return code.join(str_list)
     else:
-        # 啥？
-        return EOFError
+        return ''
 
 
 # 判断是否可以写入，存在内容不写入
@@ -54,7 +43,6 @@ def node_level(driver, contents=None, file_markdown_path=""):
             if len(node.text) > 0:
                 # ##################### h1-h6标签
                 if node.get_attribute("level") == "h1":
-                    # contents.append("# " + baidu_api_translate(node.text) + "\n")
                     contents.append("# " + node.text + "\n")
                 elif node.get_attribute("level") == "h2":
                     contents.append("## " + node.text + "\n")
@@ -131,34 +119,6 @@ def go_webdriver(url_path, file_path):
     node_level(driver, file_markdown_path=file_path)
 
 
-# 语音列表：http://fanyi-api.baidu.com/api/trans/product/apidoc#languageList
-# 异步的方法
-def baidu_api_translate(content):
-    if len(content) > 0:
-        baidu_api_url = "https://fanyi-api.baidu.com/api/trans/vip/translate"
-        res = requests.post(
-            baidu_api_url,
-            data={
-                "q": content,
-                "from": "en",
-                "to": "zh",
-                "appid": appid,
-                "salt": salt,
-                "sign": md5(content),
-            },
-        )
-        result = res.json()
-        trans_result = result['trans_result']
-        [obj] = trans_result or [{'dst': ''}]
-        # {'src': 'Public API for tf.audio namespace.', 'dst': 'tf.audio命名空间的公共api。'}
-        # print("result:", result)
-        # print("trans_result:", trans_result)
-        # print("obj:", obj)
-        return obj['dst']
-    else:
-        return ""
-
-
 # https://www.tensorflow.org/api_docs/python/tf/AggregationMethod
 # https://www.tensorflow.org/api_docs/python/tf
 # https://www.tensorflow.org/api_docs/python/tf/argsort
@@ -172,31 +132,13 @@ def parent_path(parent, key_name):
     page_url_re = re.sub(r"/Overview", "", url_path)
     page_url = re.sub(r"/All Symbols", "", page_url_re)
     file_path_re = parent + key_name
-    file_path=re.sub(r' ','_',file_path_re)
-    print("url:",url)
-    print("tf_path:",tf_path)
-    print("key_name:",key_name)
+    file_path = re.sub(r' ', '_', file_path_re)
+    print("url:", url)
+    print("tf_path:", tf_path)
+    print("key_name:", key_name)
     print("爬取的页面：", page_url)
     print("写入的文件路径：", file_path)
     go_webdriver(page_url, file_path + '.md')
 
 
-def handle(array, parent):
-    if type(array) != list:
-        print("end")
-        return
-    for obj in array:
-        if type(obj) == dict:
-            key_name = "".join(obj.keys())
-            values = obj.values()
-            [item_list] = values or [[]]
-            if len(item_list) == 1:
-                [file_name] = item_list
-                parent_path(parent + key_name + "/", file_name)
-            else:
-                handle(item_list, parent + key_name + "/")
-        elif type(obj) == str:
-            parent_path(parent, obj)
-
-
-handle(category, "../docs/")
+handle(category, "../docs/", parent_path)

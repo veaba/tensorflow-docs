@@ -1,5 +1,5 @@
 # 创建sidebar文件目录的python脚本
-from category import *
+from category import category
 
 
 def create_json():
@@ -22,7 +22,7 @@ def create_json():
             })
     print(list1)
 
-    with open("a.js", "w") as  f:
+    with open("a.js", "w") as f:
         f.write(str(list1))
 
 

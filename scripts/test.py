@@ -49,7 +49,7 @@
 #     file_list=[]
 #     with open("test.md",'r') as f:
 #         file_list=f.readlines()
-        
+
 #     print(file_list)
 #     new_file_list=[]
 #     for line in file_list:
@@ -58,8 +58,8 @@
 #             line_str=new_line.replace(new_line,b[new_line])
 #             new_file_list.append(line_str+'\n')
 #         else:
-#             new_file_list.append(line)   
-   
+#             new_file_list.append(line)
+
 #     with open('test.md','a',encoding='utf8') as f:
 #         f.write('\n')
 #         for line in new_file_list:
@@ -68,15 +68,16 @@
 # write_line()
 
 # print(list(b.values())[1:3])
-## 步骤
-### 把文本读出来
-### 存到list 里面去
-### 然后替换文本
-### 再一次w模式写入到源文件
 
-from i18n_dict import i18n_dict
+# from i18n_dict import i18n_dict
+#
+# for item in i18n_dict:
+#     print("key:", item)
+#     print("---:", i18n_dict[item])
 
 
-for item in i18n_dict:
-    print("key:",item)
-    print("---:",i18n_dict[item])
+# ###############################3
+from category import category
+from utils import clear_dir_file_content
+
+clear_dir_file_content('../docs/',category[0])

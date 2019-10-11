@@ -1,6 +1,6 @@
 # python 根据category.py 的json 去创建文件夹/文件，需要多点几下
 
-from category import *
+from category import category
 import os
 import re
 
@@ -12,7 +12,7 @@ def create_file(path_name, file_name):
 
 
 # 根据目录去生成文件路径和文件
-def handle(array, n=0, parent_path="../docs/"):
+def create_dir(array, n=0, parent_path="../docs/"):
     if type(array) != list:
         print("入参Array 非list，循环结束")
         return
@@ -31,7 +31,7 @@ def handle(array, n=0, parent_path="../docs/"):
                     [file_name] = item_list
                     create_file(parent_path + key_name + "/", file_name)
                 else:
-                    handle(item_list, n, parent_path + key_name + "/")
+                    create_dir(item_list, n, parent_path + key_name + "/")
         if type(obj) == str:
             # 含有空格的str，转为"_"
             str_name = re.sub(r' ', '_', obj)
@@ -39,4 +39,4 @@ def handle(array, n=0, parent_path="../docs/"):
     print(n, "个文件/路径")
 
 
-handle(category, 0, "../docs/")
+create_dir(category, 0, "../docs/")
