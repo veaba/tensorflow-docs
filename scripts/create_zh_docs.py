@@ -79,18 +79,17 @@ def re_write_line(path):
     wait_save_list = []
     with open(path, 'r', encoding='utf-8') as f:
         temp_save_list = f.readlines()
-
+      
     # 替换之后的文件
-
     for line in temp_save_list:
-        if line in i18n:
-            if len(i18n[line]):
-                line_str = line.replace(line, i18n[line])
-                wait_save_list.append(line_str + '\n')
-                #  这里发生了什么,此时的i18n 竟然没有数据
-                print("line:", line)
-                print("line_str:", line_str)
-                print("i18n[line]:", line_str)
+        new_line= line.replace('\n','')
+        if new_line in i18n:
+            if len(i18n[new_line]):
+                line_str = line.replace(new_line, i18n[new_line])
+                wait_save_list.append(line_str)
+                # print("line:", line)
+                # print("line_str:", line_str)
+                # print("i18n[line]:", i18n[new_line])
         else:
             wait_save_list.append(line)
     # 清空文件
@@ -100,10 +99,7 @@ def re_write_line(path):
     with open(path, 'a', encoding='utf8') as f:
         for line in wait_save_list:
             f.write(line + '\n')
-    # values_10= list(i18n.values())[:10]
-    # keys_10= list(i18n.keys())[:10]
-    # print("keys_10:",keys_10)
-    # print("values_10:",values_10)
+
 
 
 def parent_path(parent, key_name, task):
