@@ -12,7 +12,7 @@ import re
 # tensorf_markdown="https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf"
 
 
-url = "https://www.tensorflow.org/api_docs/python/"
+url = "https://tensorflow.google.cn/api_docs/python/"
 
 
 # list 转字符
@@ -112,9 +112,9 @@ def node_level(driver, contents=None, file_markdown_path=""):
 
 def go_webdriver(url_path, file_path):
     # 静默运行
-    option = webdriver.ChromeOptions()
-    option.add_argument("headless")
-    driver = webdriver.Chrome(options=option)
+    # option = webdriver.ChromeOptions()
+    # option.add_argument("headless")options=option
+    driver = webdriver.Chrome()
     driver.get(url_path)
     node_level(driver, file_markdown_path=file_path)
 
@@ -141,4 +141,4 @@ def parent_path(parent, key_name):
     go_webdriver(page_url, file_path + '.md')
 
 
-handle(category, "../docs/", parent_path)
+handle(category[0]['tf'], "../docs/", parent_path)

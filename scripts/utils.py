@@ -4,7 +4,7 @@ import hashlib
 import requests
 from config import appid
 from config import key
-
+import time
 salt = "tensorflow"
 
 
@@ -27,14 +27,10 @@ def clear_file(path):
 # parent 重组的文档目录
 # fn 回调函数
 def handle(array, parent, fn, task=None):
-    index = 0
     if type(array) != list:
         print("end")
         return
     for obj in array:
-        index += 1
-        if index > 1:
-            break
         if type(obj) == dict:
             key_name = "".join(obj.keys())
             values = obj.values()
@@ -46,6 +42,7 @@ def handle(array, parent, fn, task=None):
                 handle(item_list, parent + key_name + "/", fn, task)
         elif type(obj) == str:
             fn(parent, obj)
+
 
 # 百度翻译，返回翻译的内容
 async def baidu_api_translate(content):
@@ -78,9 +75,9 @@ async def baidu_api_translate(content):
 
 # 指定目录清空文件内容
 
-def clear_dir_file_content(parent_path,obj):
-    tf="".join(obj.keys())
+def clear_dir_file_content(parent_path, obj):
+    tf = "".join(obj.keys())
     for path in obj[tf]:
-        the_dir_path= parent_path+tf+'/'+path
+        the_dir_path = parent_path + tf + '/' + path
         print(the_dir_path)
-        clear_file(the_dir_path+'.md')
+        clear_file(the_dir_path + '.md')
