@@ -131,13 +131,13 @@ def parent_path(parent, key_name):
     url_path = url + tf_path + re.sub(r"[.]", "/", key_name)
     page_url_re = re.sub(r"/Overview", "", url_path)
     page_url = re.sub(r"/All Symbols", "", page_url_re)
-    file_path_re = parent + key_name
+    file_path_re = parent+'tf/' + key_name
     file_path = re.sub(r' ', '_', file_path_re)
     # print("url:", url)
     # print("tf_path:", tf_path)
     # print("key_name:", key_name)
     print("爬取的页面：", page_url)
-    # print("写入的文件路径：", file_path)
+    print("写入的文件路径：", file_path)
     go_webdriver(page_url, file_path + '.md')
 
 
