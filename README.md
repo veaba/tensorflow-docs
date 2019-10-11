@@ -1,60 +1,14 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题
-
-## 疑惑&难点
-
-- 如何去替换文本
-    - 将内容写入到mongod，然后去替换再写出来
-    
-## 统计
-
-|类别|统计|
-|---|---|
-|tensorflow文档文件个数（含丢弃）|2767|
-|tensorflow文档总行数|169618|
-|tensorflow 总字符数|9487919|
-|||
-
-
-
-## API 计费标准
-
-### 百度翻译API
-
-|版本|计费|耗时|
-|---|---|---|
-|普通版本|免费|47个小时，1次/s|
-|高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
-|企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
-||||
-
-翻译 create_i18n_file 所消耗时间： 2683.6810030937195，将5334行英文转为中文。
-
-
-## 网页展示图
-![](images/web-ui.png)
-
-
-- 预计半年到一年的时间
-- 2019年9月29日15:31:42 今天 中途有人告诉我API 有中文版的，呃呃呃？都做到这程度了，继续下去呗，反正也没人看咯。
-
-RC 1.5 API https://www.tensorflow.org/versions/r1.15/api_docs/python/tf  1.5
-
-基于 2.0：https://www.tensorflow.org/versions/r2.0/api_docs/python/tf 2.0
-
-www.w3cschool.cn 一年前的文档： https://www.w3cschool.cn/tensorflow_python/ 
-
-w3c 也是基于 这个翻译的：https://devdocs.io/tensorflow~python/
-
-https://github.com/zalandoresearch/fashion-mnist
-
-找不到官网的markdown文件在哪~~ 喵
-
-3000+ 个文件要翻译，噗。。。
-
-想要机器翻译来完成，实在是整个文档太过于庞大了。
-
 ## 工作进度
+
+### 新增分支
+- 新增dev分支，保留原始docs en 文档，用来生成中文文档
+- 新增tag origin-bookmark ，保留原始文档
+
+
+### 模块
+
 
 |模块|英文迁移|中文|
 |---|---|---|
@@ -104,6 +58,55 @@ https://github.com/zalandoresearch/fashion-mnist
 |tf.xla|√||
 ||||
 
+
+    
+## 统计
+
+|类别|统计|
+|---|---|
+|tensorflow文档文件个数（含丢弃）|2767|
+|tensorflow文档总行数|169618|
+|tensorflow 总字符数|9487919|
+|||
+
+
+
+## API 计费标准
+
+### 百度翻译API
+
+|版本|计费|耗时|
+|---|---|---|
+|普通版本|免费|47个小时，1次/s|
+|高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
+|企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
+||||
+
+翻译 create_i18n_file 所消耗时间： 2683.6810030937195，将5334行英文转为中文。
+
+
+## 网页展示图
+![](images/web-ui.png)
+
+
+- 预计半年到一年的时间
+- 2019年9月29日15:31:42 今天 中途有人告诉我API 有中文版的，呃呃呃？都做到这程度了，继续下去呗，反正也没人看咯。
+
+RC 1.5 API https://www.tensorflow.org/versions/r1.15/api_docs/python/tf  1.5
+
+基于 2.0：https://www.tensorflow.org/versions/r2.0/api_docs/python/tf 2.0
+
+www.w3cschool.cn 一年前的文档： https://www.w3cschool.cn/tensorflow_python/ 
+
+w3c 也是基于 这个翻译的：https://devdocs.io/tensorflow~python/
+
+https://github.com/zalandoresearch/fashion-mnist
+
+找不到官网的markdown文件在哪~~ 喵
+
+3000+ 个文件要翻译，噗。。。
+
+想要机器翻译来完成，实在是整个文档太过于庞大了。
 
 
 ## 机器翻译
