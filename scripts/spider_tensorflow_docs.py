@@ -12,7 +12,7 @@ import re
 # tensorf_markdown="https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf"
 
 
-url = "https://tensorflow.google.cn/api_docs/python/"
+url = "https://tensorflow.google.cn/api_docs/python/tf/"
 
 
 # list 转字符
@@ -112,9 +112,9 @@ def node_level(driver, contents=None, file_markdown_path=""):
 
 def go_webdriver(url_path, file_path):
     # 静默运行
-    # option = webdriver.ChromeOptions()
-    # option.add_argument("headless")options=option
-    driver = webdriver.Chrome()
+    option = webdriver.ChromeOptions()
+    option.add_argument("headless")
+    driver = webdriver.Chrome(options=option)
     driver.get(url_path)
     node_level(driver, file_markdown_path=file_path)
 
@@ -133,11 +133,11 @@ def parent_path(parent, key_name):
     page_url = re.sub(r"/All Symbols", "", page_url_re)
     file_path_re = parent + key_name
     file_path = re.sub(r' ', '_', file_path_re)
-    print("url:", url)
-    print("tf_path:", tf_path)
-    print("key_name:", key_name)
+    # print("url:", url)
+    # print("tf_path:", tf_path)
+    # print("key_name:", key_name)
     print("爬取的页面：", page_url)
-    print("写入的文件路径：", file_path)
+    # print("写入的文件路径：", file_path)
     go_webdriver(page_url, file_path + '.md')
 
 
