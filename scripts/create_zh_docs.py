@@ -1,7 +1,4 @@
-import requests
-import hashlib
 import re
-import asyncio
 from category import *
 import time
 from i18n import i18n
@@ -133,7 +130,7 @@ def create_zh_docs():
     handle(category, "../docs/", task=1)  # 根据i18 生成中文文档
     time_end=time.time()
 
-    print("批量全文档所消耗时间：",time_end-time_create)
+    print("批量翻译文档所消耗时间：",time_end-time_create)
 
 
 create_zh_docs()
