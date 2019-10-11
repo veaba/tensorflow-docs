@@ -1,14 +1,60 @@
 # tensorflow-docs
-python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题
+python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本、百度翻译API
+
+## 关于本项目
+- 基于python+vuepress搭建 Google Tensorflow 最新版本 2.0 API 中文文档
+- 直接copy 自己用过的vuepress theme
+- 内容可通过脚本一键填充
+- 用到爬虫工具等手段，需要一点python 编程知识
+- 用到机器翻译，本项目用到百度翻译API 作为翻译支撑（因为：free~~哈哈）
+- 完全很方便的可将本项目拓展到i18n项目，只要你想的话可以很快
+    - 写i18n字典，见`/script/i18n.py`
+    - 新起docs目录
+    - 调整`docs/.vupress`里面的配置文件即可
+### 统计
+
+|类别|统计|
+|---|---|
+|tensorflow 文档文件个数（含丢弃）|2767|
+|tensorflow 文档总行数|169618|
+|tensorflow 总字符数|9487919|
+|tensorflow 实际翻译字符长度|235238|
+
+### 网页展示图
+![](images/web-ui.png)
+
 ## 工作进度
 
 ### 新增分支
 - 新增dev分支，保留原始docs en 文档，用来生成中文文档
 - 新增tag origin-bookmark ，保留原始文档
 
+### 后续工作TODO
+- 增加丢弃的模块标注或者移除
 
-### 模块
 
+### 项目起初一些废话
+
+- 预计半年到一年的时间
+- 2019年9月29日15:31:42 今天 中途有人告诉我API 有中文版的，呃呃呃？都做到这程度了，继续下去呗，反正也没人看咯。
+
+RC 1.5 API https://www.tensorflow.org/versions/r1.15/api_docs/python/tf  1.5
+
+基于 2.0：https://www.tensorflow.org/versions/r2.0/api_docs/python/tf 2.0
+
+www.w3cschool.cn 一年前的文档： https://www.w3cschool.cn/tensorflow_python/ 
+
+w3c 也是基于 这个翻译的：https://devdocs.io/tensorflow~python/
+
+https://github.com/zalandoresearch/fashion-mnist
+
+找不到官网的markdown文件在哪~~ 喵
+
+3000+ 个文件要翻译，噗。。。
+
+想要机器翻译来完成，实在是整个文档太过于庞大了。
+
+### 模块划分
 
 |模块|英文迁移|中文|
 |---|---|---|
@@ -56,44 +102,6 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 |tf.train|√||
 |tf.version|√||
 |tf.xla|√||
-||||
-
-
-    
-## 统计
-
-|类别|统计|
-|---|---|
-|tensorflow文档文件个数（含丢弃）|2767|
-|tensorflow文档总行数|169618|
-|tensorflow 总字符数|9487919|
-|||
-
-
-
-## 网页展示图
-![](images/web-ui.png)
-
-
-- 预计半年到一年的时间
-- 2019年9月29日15:31:42 今天 中途有人告诉我API 有中文版的，呃呃呃？都做到这程度了，继续下去呗，反正也没人看咯。
-
-RC 1.5 API https://www.tensorflow.org/versions/r1.15/api_docs/python/tf  1.5
-
-基于 2.0：https://www.tensorflow.org/versions/r2.0/api_docs/python/tf 2.0
-
-www.w3cschool.cn 一年前的文档： https://www.w3cschool.cn/tensorflow_python/ 
-
-w3c 也是基于 这个翻译的：https://devdocs.io/tensorflow~python/
-
-https://github.com/zalandoresearch/fashion-mnist
-
-找不到官网的markdown文件在哪~~ 喵
-
-3000+ 个文件要翻译，噗。。。
-
-想要机器翻译来完成，实在是整个文档太过于庞大了。
-
 
 ## 机器翻译
 
@@ -102,15 +110,11 @@ https://github.com/zalandoresearch/fashion-mnist
 2. 通过百度API 把MD文件翻译为中文
 3. 官方文档在这里:https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf/data
 
-
-
 ### 方法二：胎死腹中，谷歌的反爬虫实在是太厉害了，我不知道怎么突破。爬不过页面
 1. 通过Python 爬虫拉取文档HTML
     - 解析code
 2. HTML 转markdown
 3. markdown 通过百度API翻译为中文mk
-
-http://www.bejson.com/convert/html2markdown/ 可以通过html 转markdown
 
 ### 方法三(目前)：selenium+webdriver+百度API 的方式（自动化测试策略）
 
@@ -121,10 +125,30 @@ http://www.bejson.com/convert/html2markdown/ 可以通过html 转markdown
 5. demo见（scripts/spider_tensorflow_docs.py）
 6. 需要安装chromeDriver，目前是在windows平台完成
 7. TODO Image、Table
-8. TODO 需要多线程处理这个异步请求！
+8. 需要多线程处理这个异步请求！
 9. 完成了文件的爬取，但此时是英文
 
-### 特点（TODO）
+
+
+### 百度翻译API
+
+|版本|计费|耗时|
+|---|---|---|
+|普通版本|免费|47个小时，1次/s|
+|高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
+|企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
+||||
+
+翻译 create_i18n_file 所消耗时间： 2683.6810030937195，将5334行英文转为中文。
+
+### 基于vscode 正则替换
+
+需要将category.py 的结构转为vuepress使用，但写个函数考虑成本比较多，所以需要手动替换文本
+
+    查找："tf(.*?)"
+    替换：{title:$0,type:"group",link:$0}
+
+### 特点
 
 - 有view source on Github 的按钮
 - h标签系列
@@ -159,39 +183,48 @@ cnpm run build
 
 ```
 
-
 ## scripts 脚本目录
 
 > 如果感兴趣的，可以checkout 到dev分支来完整体验这个项目的机器翻译的过程
 
-- 第一步：先爬取tensorflow 的目录，生成`category.py` 对外暴露category 这个变量（核心文件）。
+这个脚本是通过Python来完成，懂和不懂都可以玩下哈~~
+
+提示：这个scripts目录是少一个存储百度翻译的秘钥`config.py`文件，我忽略gitignore了，里面就是这样：
+
+```python
+appid="xxxxx"
+key="xxxx"
+```
+
+- 第一步：收集目录文件。先爬取tensorflow 的目录，生成`category.py` 对外暴露`category` 这个变量（核心文件）。
    
     - 这个过程很耗费时间，并抽离整理全部的文档结构
     - 需要人工手动操作dom操作来录入的，很容易出问题。如果花点时间也是可以自动化爬取的。
 
-- 第二步：多次操作执行`create_file.py`预生成markdown文件，因为目录需要递归，需要这边是手动执行多次（tensorflow文档目前最多有六层的结构）
+- 第二步：生成预置文件。多次执行`create_file.py`预生成markdown文件，因为目录需要递归，需要这边是手动执行多次（tensorflow文档目前最多有六层的结构）来生成空文件
 
-    - 请需要在翻译好的文件执行这一步，因为会预生成空文件覆盖源文件
+    - 警告：请不要在翻译好的文件执行这一步，因为会预生成空文件覆盖源文件
 
-- 第三步：根据第一步的`category.py`的目录，利用自动化测试软件selenium 工具配合chrome driver方案爬取tensorflow的
+- 第三步：填充文档内容。根据第一步的`category.py`的目录，利用自动化测试软件selenium 工具配合chrome driver方案爬取tensorflow的API 文档
 
     - 这一步是写递归函数，将`category.py` 的路径拼成为url地址，然后根据url去爬取页面
     - 再把HTML 文档标签的关键信息，写函数拼凑成为mardown格式文件，写到docs目录
     - 这一步是最慢的，全跑完2500+个markdown文件，耗费了24小时左右，我想这一个步骤是可以优化的
 
-- 第四步：根据category.py 去生成`vuepress` 的links文件，用来组织左侧菜单目录
+- 第四步：制作目录文件。根据`category.py` 去生成`vuepress` 的`links.js`文件，用来组织左侧菜单目录
 
-    - 同样这一步因为目前只是用`vscode`加人工的方式正则替换，同样耗费一天工作量
-    - 需要平凑成为`vuepress` 可用的结构
+    - 这一步因为目前只是用`vscode`加人工的方式正则替换，同样耗费一天工作量
+    - 拼凑成为`vuepress` 可用的结构
 
-- 第五步：去申请百度翻译API[百度翻译API](#百度翻译API)，后续用到
+- 第五步：申请翻译API。去申请百度翻译API [规格看百度翻译API](#百度翻译API) ，后续用到
 
-    - 平台地址：http://api.fanyi.baidu.com/api/trans/product/index
+    - 百度翻译平台地址：http://api.fanyi.baidu.com/api/trans/product/index
+    - 价格比较低廉，毕竟普通版本无限！！免费！！遗憾的是并发只能1次/s
 
-- 第六步：根据`create_i18n_py`筛选，生成空的英文字典以及对应的中文i18n字典文件`i18n.py`
+- 第六步：生成字典文件。根据`create_i18n_py.py`筛选，生成空的英文字典以及对应的中文i18n字典文件`i18n.py`
 
-    - 这个脚本含有两个函数，第一个`create_i18n_py`,创建空字典文件`i18n_dict`，
-    - 第二个函数`i18n_translate`,根据上面生成空字典`i18n_dict`对应的字典key 通过第五步的API 补齐i18n字典的value值
+    - 这个脚本含有两个函数，第一个`create_i18n_py.py`,创建空字典文件`i18n_dict`，
+    - 第二个函数`i18n_translate`,根据上面生成空字典`i18n_dict.py`对应的字典key 通过第五步的API 补齐i18n字典的value值
     - 这里的关键是需要写函数判断避开无需翻译的字段，比如整个项目900W的字符，需要真正翻译的也是就`235238`字符
     - 这里建议选择百度翻译的高级模式，调整下延时，可以节省几倍的时间
 
@@ -222,31 +255,3 @@ cnpm run build
 |[create_i18n.py](scripts/create_i18n.py)|创建英文字典、第二步通过百度API翻译之后的文档添加到i18n，并手动调整|
 |[total.py](scripts/total.py)|统计脚本|
 
-
-## 基于vuepress 搭建
-
-- 直接copy 自己用过的vuepress theme
-- 内容尚未填充
-
-
-## 技巧
-
-### 基于vscode 正则替换
-
-需要将category.py 的结构转为vuepress使用，但写个函数考虑成本比较多，所以需要手动替换文本
-
-    查找："tf(.*?)"
-    替换：{title:$0,type:"group",link:$0}
-
-## API 计费标准
-
-### 百度翻译API
-
-|版本|计费|耗时|
-|---|---|---|
-|普通版本|免费|47个小时，1次/s|
-|高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
-|企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
-||||
-
-翻译 create_i18n_file 所消耗时间： 2683.6810030937195，将5334行英文转为中文。

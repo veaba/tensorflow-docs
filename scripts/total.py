@@ -1,6 +1,6 @@
 # 计算翻译的字符总量以及行数
 import re
-from category import *
+from category import category
 from i18n import i18n
 
 def read_line(str_count=0, line_count=0):
