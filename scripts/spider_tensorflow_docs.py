@@ -35,6 +35,10 @@ def can_write(file_path):
 
 # 去解析node节点,返回markdown
 def node_level(driver, contents=None, file_markdown_path=""):
+
+    if not can_write(file_markdown_path):
+        print("已存在文件，将忽略跳过")
+        return
     if contents is None:
         contents = []
     html = driver.find_elements_by_css_selector(".devsite-article-body>*")
@@ -75,7 +79,29 @@ def node_level(driver, contents=None, file_markdown_path=""):
                         # todo ###################### p todo
                         print("p标签异常：", err)
                         if len(node.text):
-                            contents.append("\n" + node.text + "\n")
+                            p_texts=[]
+                            # TODO p标签下没有加点
+                            try:
+                                codes_node = node.find_elements_by_css_selector("code")
+                                for code in codes_node:
+                                    p_texts.append(code.text.replace(r'[[+ ]]','\\1 $0'))
+                            except Exception as e2:
+                                print("p code：", e2)
+                            print('哈哈:',p_texts)    
+                            if len(p_texts)>0:    
+                                p_text_str = list_to_str(p_texts, "|")  # 转为字符 xxx|oo
+                                p_pattern_str = re.compile(r'(' + p_text_str + ')')
+                                # p_pattern_str = re.compile(r'(' + p_text_str + ')')
+                                print('p_text_str:',p_text_str)
+                                print('p_texts:',p_texts)
+                                print('p_pattern_str:',p_pattern_str)
+                                print('node.text:',node.text)
+                                p_node_text = re.sub(p_pattern_str, "`" + "\\1" + "`", node.text)
+                                print("p_node_text:",p_node_text)
+                                contents.append((p_node_text.replace('` `',' ')) + '\n')
+                            else:
+                                print('打印了什么：',node.text)
+                                contents.append(node.text + '\n')
                 # ##################### ul>无序.
                 elif node.tag_name == "ul":
                     li_texts = []
@@ -99,15 +125,13 @@ def node_level(driver, contents=None, file_markdown_path=""):
 
     except Exception as e:
         print("啥错误:", e)
-    print("contents：", contents)
+    # print("contents：", contents)
 
     if can_write(file_markdown_path):
         # 写入文件
         for text in contents:
             with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
                 f.write(text)
-    else:
-        print("已存在文件，忽略")
 
 
 def go_webdriver(url_path, file_path):
@@ -141,4 +165,6 @@ def parent_path(parent, key_name):
     go_webdriver(page_url, file_path + '.md')
 
 
-handle(category[0]['tf'], "../docs/", parent_path)
+# handle(category[0]['tf'], "../docs/", parent_path)
+
+go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/batch_to_space','../docs/tf/batch_to_space.md')

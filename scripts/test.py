@@ -77,7 +77,22 @@
 
 
 # ###############################3
-from category import category
-from utils import clear_dir_file_content
+# from category import category
+# from utils import clear_dir_file_content
 
-clear_dir_file_content('../docs/', category[0])
+# clear_dir_file_content('../docs/', category[0])
+import re
+p_pattern_str=re.compile('(M + 1)')
+# p_pattern_str=re.compile('(M + 1|block_shape + [batch]|[1, ..., M]|crops)')
+node='This operation reshapes the "batch" dimension 0 into M + 1 dimensions of shape block_shape + [batch], interleaves these blocks back into the grid defined by the spatial dimensions [1, ..., M], to obtain a result with the same rank as the input. The spatial dimensions of this intermediate result are then optionally cropped according to crops to produce the output. This is the reverse of SpaceToBatch. See below for a precise description.'
+
+node_text = re.sub(r'("M + 1")', "`" + "\\1" + "`", node)
+# node_text = re.sub(p_pattern_str, "`" + "\\1" + "`", node)
+
+print(node_text)
+
+
+# =================================================================================
+# p_pattern_str=re.compile('(M + 1|block_shape + [batch]|[1, ..., M]|crops)') 的结果
+
+# This` `operation` `reshapes` `the` `"batch"` `dimension` `0` `into` ``M`` `+` ``1`` `dimensions` `of` `shape` `block_shape` `+` `[batch]`,`` `interleaves` `these` `blocks` `back` `into` `the` `grid` `defined` `by` `the` `spatial` `dimensions` `[`1``,`` ``.``.``.``,`` ``M`]`,`` `to` `obtain` `a` `result` `with` `the` `same` `rank` `as` `the` `input`.`` `The` `spatial` `dimensions` `of` `this` `intermediate` `result` `are` `then` `optionally` `cropped` `according` `to` ``crops`` `to` `produce` `the` `output`.`` `This` `is` `the` `reverse` `of` `SpaceToBatch`.`` `See` `below` `for` `a` `precise` `description`.`
