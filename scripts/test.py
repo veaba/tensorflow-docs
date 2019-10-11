@@ -80,4 +80,4 @@
 from category import category
 from utils import clear_dir_file_content
 
-clear_dir_file_content('../docs/',category[0])
+clear_dir_file_content('../docs/', category[0])
