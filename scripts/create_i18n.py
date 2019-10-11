@@ -25,7 +25,7 @@ def md5(content):
 async def baidu_api_translate(content):
     print(time.time(),content)
     if len(content) > 0:
-        await asyncio.sleep(1)
+        await asyncio.sleep(1/10)
         baidu_api_url = "https://fanyi-api.baidu.com/api/trans/vip/translate"
         res = requests.post(
             baidu_api_url,
@@ -146,10 +146,16 @@ def i18n_translate(array):
         try:
             new_dict[item]=loop.run_until_complete(baidu_api_translate(item))
         except Exception as e:
-            print(e)    
-    print(new_dict)
+            print(e)   
+    clear_file('i18n.py')
+    with open('i18n.py','a',encoding="utf-8") as f:
+        f.write('i18n={\n',)
+        for line in new_dict:
+            new_line=line.replace('\n','').replace("'","\\'")
+            f.write("'"+new_line+"':'"+new_dict[line]+"',"+'\n')
+        f.write('}')
     time_end=time.time()
-    print('翻译 create_i18n_dict_file 所消耗时间：',time_end-time_start)
+    print('翻译 create_i18n_file 所消耗时间：',time_end-time_start)
 
 
 def create_i18n_py():
