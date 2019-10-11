@@ -98,7 +98,7 @@ def re_write_line(path):
     # 复写文件
     with open(path, 'a', encoding='utf8') as f:
         for line in wait_save_list:
-            f.write(line + '\n')
+            f.write(line)
 
 
 
@@ -129,7 +129,11 @@ def handle(array, parent, task=None):
 
 
 def create_zh_docs():
+    time_create=time.time()
     handle(category, "../docs/", task=1)  # 根据i18 生成中文文档
+    time_end=time.time()
+
+    print("批量全文档所消耗时间：",time_end-time_create)
 
 
 create_zh_docs()
