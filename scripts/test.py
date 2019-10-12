@@ -85,7 +85,7 @@ clear_dir_file_content('../docs/', category[0])
 
 # p_pattern_str=re.compile('(M + 1)')
 # p_pattern_str=re.compile('(M + 1|block_shape + [batch]|[1, ..., M]|crops)')
-# node = 'This operation reshapes the "batch" dimension 0 into M + 1 dimensions of shape block_shape + [batch], interleaves these blocks back into the grid defined by the spatial dimensions [1, ..., M], to obtain a result with the same rank as the input. The spatial dimensions of this intermediate result are then optionally cropped according to crops to produce the output. This is the reverse of SpaceToBatch. See below for a precise description.A Tensor. Must be one of the following types: int32, int64. 1-D with shape [M], all values must be >= 1. For backwards compatibility with TF 1.0, this parameter may be an int, in which case it is converted to numpy.array([block_shape, block_shape], dtype=numpy.int64).'
+# node = 'This operation reshapes the "batch" dimension 0 into M + 1 dimensions of shape block_shape + [batch], i'
 
 # node_text = re.sub(r'(M \+ 1)|(\[batch\])', "`" + "\\1\\2" + "`", node)
 # node_text = re.sub(p_pattern_str, "`" + "\\1" + "`", node)
@@ -109,7 +109,6 @@ clear_dir_file_content('../docs/', category[0])
 # =================================================================================
 # p_pattern_str=re.compile('(M + 1|block_shape + [batch]|[1, ..., M]|crops)') 的结果
 
-# This` `operation` `reshapes` `the` `"batch"` `dimension` `0` `into` ``M`` `+` ``1`` `dimensions` `of` `shape` `block_shape` `+` `[batch]`,`` `interleaves` `these` `blocks` `back` `into` `the` `grid` `defined` `by` `the` `spatial` `dimensions` `[`1``,`` ``.``.``.``,`` ``M`]`,`` `to` `obtain` `a` `result` `with` `the` `same` `rank` `as` `the` `input`.`` `The` `spatial` `dimensions` `of` `this` `intermediate` `result` `are` `then` `optionally` `cropped` `according` `to` ``crops`` `to` `produce` `the` `output`.`` `This` `is` `the` `reverse` `of` `SpaceToBatch`.`` `See` `below` `for` `a` `precise` `description`.`
 
 # aaa = ['a', 'b', 'c']
 #

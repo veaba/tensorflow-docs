@@ -2,6 +2,7 @@
 # 用于爬取tensorflow2.0文档
 # 目前先用于爬取文件，后续再翻译写入
 # 问题：如何处理python 的异步编程
+import asyncio
 from selenium import webdriver
 from category import category
 from utils import handle, handle_async
@@ -54,10 +55,10 @@ def fn_parse_code(list_str, text):
         flag_str = flag_str + "\\" + str(index + 1)
 
     reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
-    print('code_text_str:', code_text_str)
-    print('list_str:', list_str)
-    print('flag_str:', flag_str)
-    print('text:', text)
+    # print('code_text_str:', code_text_str)
+    # print('list_str:', list_str)
+    # print('flag_str:', flag_str)
+    # print('text:', text)
     return reg_text
 
 
@@ -129,7 +130,6 @@ def node_level(driver, contents=None, file_markdown_path=""):
                                 # p_node_text = re.sub(p_pattern_str, "`" + mask_tag_str + "`", node.text)
                                 contents.append(fn_parse_code(p_texts, node.text) + '\n')
                             else:
-                                print('打印了什么：', node.text)
                                 contents.append(node.text + '\n')
                 # ##################### ul>无序.
                 elif node.tag_name == "ul":
@@ -156,7 +156,7 @@ def node_level(driver, contents=None, file_markdown_path=""):
     except Exception as e:
         print("啥错误:", e)
     # print("contents：", contents)
-
+    print('去解析node节点,返回markdown，写入文件')
     if can_write(file_markdown_path):
         # 写入文件
         for text in contents:
@@ -165,12 +165,16 @@ def node_level(driver, contents=None, file_markdown_path=""):
 
 
 def go_webdriver(url_path, file_path):
+    start_time = time.time()
     # 静默运行
     option = webdriver.ChromeOptions()
     option.add_argument("headless")
     driver = webdriver.Chrome(options=option)
     driver.get(url_path)
-    node_level(driver, file_markdown_path=file_path)
+    # node_level(driver, file_markdown_path=file_path)
+    print('正在 go_webdriver')
+    end_time = time.time()
+    print(url_path+':::爬虫所需时间：', end_time - start_time)
 
 
 # https://www.tensorflow.org/api_docs/python/tf/AggregationMethod
@@ -192,6 +196,8 @@ def parent_path(parent, key_name):
     # print("key_name:", key_name)
     print("爬取的页面：", page_url)
     print("写入的文件路径：", file_path)
+    # loop=asyncio.get_event_loop()
+    # loop.run_until_complete(go_webdriver(page_url, file_path + '.md'))
     go_webdriver(page_url, file_path + '.md')
 
 
@@ -200,7 +206,9 @@ def parent_path(parent, key_name):
 start_time = time.time()
 handle_async(category[0]['tf'], "../docs/", parent_path)
 end_time = time.time()
+#75s 两个
+print('\n====== 总任务时间======：', end_time - start_time)
 
-print('爬虫所需时间：', end_time - start_time)
 
+# 29s 单个
 # go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/batch_to_space','../docs/tf/batch_to_space.md')

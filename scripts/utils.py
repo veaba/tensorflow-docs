@@ -55,6 +55,7 @@ def handle_async(array, parent, fn, task=None):
         print("end")
         return
     pool = ThreadPoolExecutor(30)
+    # loop=asyncio.get_event_loop()
     for obj in array:
         if type(obj) == dict:
             key_name = "".join(obj.keys())
@@ -64,11 +65,13 @@ def handle_async(array, parent, fn, task=None):
                 [file_name] = item_list
                 # fn(parent + key_name + "/", file_name, task)
                 pool.submit(fn, parent + key_name + "/", file_name, task)
+                # loop.run_until_complete(fn(parent + key_name + "/", file_name, task))
             else:
                 handle(item_list, parent + key_name + "/", fn, task)
         elif type(obj) == str:
             # fn(parent, obj)
             pool.submit(fn, parent, obj)
+            # loop.run_until_complete(fn(parent,obj))
 
 
 # 百度翻译，返回翻译的内容
