@@ -162,8 +162,8 @@ def node_level(driver, contents=None, file_markdown_path=""):
         for text in contents:
             with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
                 f.write(text)
-
-
+    # 手动关闭
+    driver.quit()
 def go_webdriver(url_path, file_path):
     start_time = time.time()
     # 静默运行
