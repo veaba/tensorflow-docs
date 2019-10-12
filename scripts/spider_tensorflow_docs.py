@@ -31,7 +31,33 @@ def can_write(file_path):
             return False
         else:
             return True
+# 返回 正则的字段函数
+# list_str 数组
 
+def fn_parse_code(list_str,text):
+    code_text_str=list_to_str(list_str,'|')# 转为字符 xxx|oo
+    reg_list=[]
+    reg_list=['+', '.', '[', ']']
+    # 再次转换
+    for reg in reg_list:
+        code_text_str=code_text_str.replace(reg,"\\"+reg)
+
+    # 编译为正则
+    pattern_str=re.compile(r''+code_text_str+'')
+
+    # 根据list_str,转为\\1\\2
+
+    flag_str=''
+    for index,key in enumerate(list_str):
+        flag_str=flag_str+"\\"+str(index+1)
+    
+    reg_text=re.sub(pattern_str,"`"+flag_str+"`",text)
+
+    print('code_text_str:',code_text_str)
+    print('list_str:',list_str)
+    print('flag_str:',flag_str)
+    print('text:',text)
+    return reg_text
 
 # 去解析node节点,返回markdown
 def node_level(driver, contents=None, file_markdown_path=""):
@@ -84,21 +110,24 @@ def node_level(driver, contents=None, file_markdown_path=""):
                             try:
                                 codes_node = node.find_elements_by_css_selector("code")
                                 for code in codes_node:
-                                    p_texts.append(code.text.replace(r'[[+ ]]','\\1 $0'))
+                                    p_texts.append('('+code.text+')')
                             except Exception as e2:
                                 print("p code：", e2)
                             print('哈哈:',p_texts)    
                             if len(p_texts)>0:    
-                                p_text_str = list_to_str(p_texts, "|")  # 转为字符 xxx|oo
-                                p_pattern_str = re.compile(r'(' + p_text_str + ')')
-                                # p_pattern_str = re.compile(r'(' + p_text_str + ')')
-                                print('p_text_str:',p_text_str)
-                                print('p_texts:',p_texts)
-                                print('p_pattern_str:',p_pattern_str)
-                                print('node.text:',node.text)
-                                p_node_text = re.sub(p_pattern_str, "`" + "\\1" + "`", node.text)
-                                print("p_node_text:",p_node_text)
-                                contents.append((p_node_text.replace('` `',' ')) + '\n')
+                                # p_text_str = list_to_str(p_texts, "|")  # 转为字符 xxx|oo
+                                # reg_p_list=['+', '.', '[', ']']
+                                # # 转换字符 为 'M + 1'=> 'M \+ '
+                                # for reg in reg_p_list:
+                                #     p_text_str=p_text_str.replace(reg,"\\"+reg)
+
+                                # p_pattern_str = re.compile(r'' + p_text_str + '')
+                                # # 根据p_texts长度来转为标记位
+                                # mask_tag_str=''
+                                # for index,key in enumerate(p_texts):
+                                #     mask_tag_str=mask_tag_str+'\\'+str(index+1)
+                                # p_node_text = re.sub(p_pattern_str, "`" + mask_tag_str + "`", node.text)
+                                contents.append(fn_parse_code(p_texts,node.text)+ '\n')
                             else:
                                 print('打印了什么：',node.text)
                                 contents.append(node.text + '\n')
@@ -112,13 +141,14 @@ def node_level(driver, contents=None, file_markdown_path=""):
                             try:
                                 codes_node = li.find_elements_by_css_selector("code")
                                 for code in codes_node:
-                                    li_texts.append(code.text)
+                                    li_texts.append('('+code.text+')')
                             except Exception as e2:
                                 print("code：", e2)
-                            li_text_str = list_to_str(li_texts, "|")  # 转为字符 xxx|oo
-                            pattern_str = re.compile(r'(' + li_text_str + ')')
-                            node_text = re.sub(pattern_str, "`" + "\\1" + "`", li.text)
-                            contents.append('- ' + node_text + '\n')
+                            # li_text_str = list_to_str(li_texts, "|")  # 转为字符 xxx|oo
+                            # pattern_str = re.compile(r'(' + li_text_str + ')')
+                            # node_text = re.sub(pattern_str, "`" + "\\1" + "`", li.text)
+                            # contents.append('- ' + node_text + '\n')
+                            contents.append('- ' + fn_parse_code(li_texts,li.text) + '\n')
                     # 编译后的正则
                     except Exception as e1:
                         print("li:", e1)
@@ -165,6 +195,6 @@ def parent_path(parent, key_name):
     go_webdriver(page_url, file_path + '.md')
 
 
-# handle(category[0]['tf'], "../docs/", parent_path)
+handle(category[0]['tf'], "../docs/", parent_path)
 
-go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/batch_to_space','../docs/tf/batch_to_space.md')
+# go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/batch_to_space','../docs/tf/batch_to_space.md')
