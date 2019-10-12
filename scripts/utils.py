@@ -4,7 +4,9 @@ import hashlib
 import requests
 from config import appid
 from config import key
+from concurrent.futures import ThreadPoolExecutor
 import time
+
 salt = "tensorflow"
 
 
@@ -22,7 +24,7 @@ def clear_file(path):
         f.write('')
 
 
-# 递归遍历目录
+# 递归遍历目录,同步的方式
 # array 数组
 # parent 重组的文档目录
 # fn 回调函数
@@ -42,6 +44,31 @@ def handle(array, parent, fn, task=None):
                 handle(item_list, parent + key_name + "/", fn, task)
         elif type(obj) == str:
             fn(parent, obj)
+
+
+# 递归遍历目录,异步的方式
+# array 数组
+# parent 重组的文档目录
+# fn 回调函数
+def handle_async(array, parent, fn, task=None):
+    if type(array) != list:
+        print("end")
+        return
+    pool = ThreadPoolExecutor(30)
+    for obj in array:
+        if type(obj) == dict:
+            key_name = "".join(obj.keys())
+            values = obj.values()
+            [item_list] = values or [[]]
+            if len(item_list) == 1:
+                [file_name] = item_list
+                # fn(parent + key_name + "/", file_name, task)
+                pool.submit(fn, parent + key_name + "/", file_name, task)
+            else:
+                handle(item_list, parent + key_name + "/", fn, task)
+        elif type(obj) == str:
+            # fn(parent, obj)
+            pool.submit(fn, parent, obj)
 
 
 # 百度翻译，返回翻译的内容
