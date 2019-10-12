@@ -171,7 +171,7 @@ def go_webdriver(url_path, file_path):
     option.add_argument("headless")
     driver = webdriver.Chrome(options=option)
     driver.get(url_path)
-    # node_level(driver, file_markdown_path=file_path)
+    node_level(driver, file_markdown_path=file_path)
     print('正在 go_webdriver')
     end_time = time.time()
     print(url_path+':::爬虫所需时间：', end_time - start_time)
@@ -183,7 +183,7 @@ def go_webdriver(url_path, file_path):
 # go_webdriver("https://www.tensorflow.org/api_docs/python/tf/argsort")
 
 
-async def parent_path(parent, key_name):
+def parent_path(parent, key_name):
     asyncio.sleep(1)
     no_docs_path = re.sub(r'(../docs/)', '', parent)
     tf_path = re.sub(r"[.]", "/", no_docs_path)

@@ -5,6 +5,7 @@ import requests
 from config import appid
 from config import key
 from concurrent.futures import ThreadPoolExecutor
+from multiprocessing.pool import ThreadPool
 import time
 
 salt = "tensorflow"
@@ -55,23 +56,44 @@ def handle_async(array, parent, fn, task=None):
         print("end")
         return
     # pool = ThreadPoolExecutor(30)
-    loop=asyncio.get_event_loop()
-    for obj in array:
+    # loop=asyncio.get_event_loop()
+    # for obj in array:
+    #     if type(obj) == dict:
+    #         key_name = "".join(obj.keys())
+    #         values = obj.values()
+    #         [item_list] = values or [[]]
+    #         if len(item_list) == 1:
+    #             [file_name] = item_list
+    #             # fn(parent + key_name + "/", file_name, task)
+    #             # pool.submit(fn, parent + key_name + "/", file_name, task)
+    #             loop.run_until_complete(fn(parent + key_name + "/", file_name, task))
+    #         else:
+    #             handle(item_list, parent + key_name + "/", fn, task)
+    #     elif type(obj) == str:
+    #         # fn(parent, obj)
+    #         # pool.submit(fn, parent, obj)
+    #         loop.run_until_complete(fn(parent,obj))
+
+    # def
+    def process(obj):
         if type(obj) == dict:
             key_name = "".join(obj.keys())
             values = obj.values()
             [item_list] = values or [[]]
             if len(item_list) == 1:
                 [file_name] = item_list
-                # fn(parent + key_name + "/", file_name, task)
+                fn(parent + key_name + "/", file_name, task)
                 # pool.submit(fn, parent + key_name + "/", file_name, task)
-                loop.run_until_complete(fn(parent + key_name + "/", file_name, task))
+                # loop.run_until_complete(fn(parent + key_name + "/", file_name, task))
             else:
                 handle(item_list, parent + key_name + "/", fn, task)
         elif type(obj) == str:
-            # fn(parent, obj)
+            fn(parent, obj)
             # pool.submit(fn, parent, obj)
-            loop.run_until_complete(fn(parent,obj))
+            # loop.run_until_complete(fn(parent,obj))
+    pool=ThreadPool(processes=20)
+    pool.map(process,(obj for obj in array))
+    pool.close()
 
 
 # 百度翻译，返回翻译的内容
