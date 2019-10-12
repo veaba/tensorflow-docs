@@ -183,7 +183,8 @@ def go_webdriver(url_path, file_path):
 # go_webdriver("https://www.tensorflow.org/api_docs/python/tf/argsort")
 
 
-def parent_path(parent, key_name):
+async def parent_path(parent, key_name):
+    asyncio.sleep(1)
     no_docs_path = re.sub(r'(../docs/)', '', parent)
     tf_path = re.sub(r"[.]", "/", no_docs_path)
     url_path = url + tf_path + re.sub(r"[.]", "/", key_name)
@@ -196,8 +197,6 @@ def parent_path(parent, key_name):
     # print("key_name:", key_name)
     print("爬取的页面：", page_url)
     print("写入的文件路径：", file_path)
-    # loop=asyncio.get_event_loop()
-    # loop.run_until_complete(go_webdriver(page_url, file_path + '.md'))
     go_webdriver(page_url, file_path + '.md')
 
 
