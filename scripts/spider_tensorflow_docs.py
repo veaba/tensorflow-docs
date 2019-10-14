@@ -51,8 +51,8 @@ def fn_parse_code(list_str, text):
     # 根据list_str,转为\\1\\2
 
     flag_str = ''
-    for index, key in enumerate(list_str):
-        flag_str = flag_str + "\\" + str(index + 1)
+    for item in enumerate(list_str):
+        flag_str = flag_str + "\\" + str(item[0] + 1)
 
     reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
     # print('code_text_str:', code_text_str)
