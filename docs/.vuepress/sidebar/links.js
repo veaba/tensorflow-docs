@@ -319,7 +319,7 @@ module.exports = {
 		{
 			type: "group",
 			title: "experimental",
-			link: "/tf.autograph/experimental",
+			link: "",
 			children: [
 				{title: "Overview", type: "group", link: "/tf.autograph/experimental/Overview"},
 				{title: "do_not_convert", type: "group", link: "/tf.autograph/experimental/do_not_convert"},
@@ -401,16 +401,8 @@ module.exports = {
 				{title: "container", type: "group", link: "/tf.compat/v1/container"},
 				{title: "control_flow_v2_enabled", type: "group", link: "/tf.compat/v1/control_flow_v2_enabled"},
 				{title: "convert_to_tensor", type: "group", link: "/tf.compat/v1/convert_to_tensor"},
-				{
-					title: "convert_to_tensor_or_indexed_slices",
-					type: "group",
-					link: "/tf.compat/v1/convert_to_tensor_or_indexed_slices"
-				},
-				{
-					title: "convert_to_tensor_or_sparse_tensor",
-					type: "group",
-					link: "/tf.compat/v1/convert_to_tensor_or_sparse_tensor"
-				},
+				{title: "convert_to_tensor_or_indexed_slices",type: "group",link: "/tf.compat/v1/convert_to_tensor_or_indexed_slices"},
+				{title: "convert_to_tensor_or_sparse_tensor",type: "group",link: "/tf.compat/v1/convert_to_tensor_or_sparse_tensor"},
 				{title: "count_nonzero", type: "group", link: "/tf.compat/v1/count_nonzero"},
 				{title: "count_up_to", type: "group", link: "/tf.compat/v1/count_up_to"},
 				{title: "create_partitioned_variables", type: "group", link: "/tf.compat/v1/create_partitioned_variables"},
@@ -455,11 +447,7 @@ module.exports = {
 				{title: "global_variables_initializer", type: "group", link: "/tf.compat/v1/global_variables_initializer"},
 				{title: "GPUOptions", type: "group", link: "/tf.compat/v1/GPUOptions"},
 				{title: "GPUOptions.Experimental", type: "group", link: "/tf.compat/v1/GPUOptions.Experimental"},
-				{
-					title: "GPUOptions.Experimental.VirtualDevices",
-					type: "group",
-					link: "/tf.compat/v1/GPUOptions.Experimental.VirtualDevices"
-				},
+				{title: "GPUOptions.Experimental.VirtualDevices",type: "group",link: "/tf.compat/v1/GPUOptions.Experimental.VirtualDevices"},
 				{title: "gradients", type: "group", link: "/tf.compat/v1/gradients"},
 				{title: "GraphDef", type: "group", link: "/tf.compat/v1/GraphDef"},
 				{title: "GraphKeys", type: "group", link: "/tf.compat/v1/GraphKeys"},
@@ -480,11 +468,7 @@ module.exports = {
 				{title: "LogMessage", type: "group", link: "/tf.compat/v1/LogMessage"},
 				{title: "make_template", type: "group", link: "/tf.compat/v1/make_template"},
 				{title: "MetaGraphDef", type: "group", link: "/tf.compat/v1/MetaGraphDef"},
-				{
-					title: "MetaGraphDef.CollectionDefEntry",
-					type: "group",
-					link: "/tf.compat/v1/MetaGraphDef.CollectionDefEntry"
-				},
+				{title: "MetaGraphDef.CollectionDefEntry",type: "group",link: "/tf.compat/v1/MetaGraphDef.CollectionDefEntry"},
 				{title: "MetaGraphDef.MetaInfoDef", type: "group", link: "/tf.compat/v1/MetaGraphDef.MetaInfoDef"},
 				{title: "MetaGraphDef.SignatureDefEntry", type: "group", link: "/tf.compat/v1/MetaGraphDef.SignatureDefEntry"},
 				{title: "min_max_variable_partitioner", type: "group", link: "/tf.compat/v1/min_max_variable_partitioner"},
@@ -594,11 +578,7 @@ module.exports = {
 				{title: "transpose", type: "group", link: "/tf.compat/v1/transpose"},
 				{title: "truncated_normal_initializer", type: "group", link: "/tf.compat/v1/truncated_normal_initializer"},
 				{title: "tuple", type: "group", link: "/tf.compat/v1/tuple"},
-				{
-					title: "uniform_unit_scaling_initializer",
-					type: "group",
-					link: "/tf.compat/v1/uniform_unit_scaling_initializer"
-				},
+				{title: "uniform_unit_scaling_initializer",type: "group",link: "/tf.compat/v1/uniform_unit_scaling_initializer",
 				{title: "Variable", type: "group", link: "/tf.compat/v1/Variable"},
 				{title: "VariableAggregation", type: "group", link: "/tf.compat/v1/VariableAggregation"},
 				{title: "VariableScope", type: "group", link: "/tf.compat/v1/VariableScope"},
@@ -614,7 +594,7 @@ module.exports = {
 				{title: "wrap_function", type: "group", link: "/tf.compat/v1/wrap_function"},
 				{title: "zeros_like", type: "group", link: "/tf.compat/v1/zeros_like"},
 				{
-					title: "app", type: "group", link: "/tf.compat/v1/app", children: [
+					title: "app", type: "group", link: "", children: [
 						{title: "run", type: "group", link: "/tf.compat/v1/app/run"},
 						{title: "Overview", type: "group", link: "/tf.compat/v1/app/Overview"}
 					]
@@ -642,12 +622,12 @@ module.exports = {
 					]
 				},
 				{
-					title: "compat", type: "group", link: "compat", children: [
+					title: "compat", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "Overview"}
 					],
 				},
 				{
-					title: "config", type: "group", link: "config", children: [
+					title: "config", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/config/Overview"},
 						{
 							title: "experimental", type: "group", link: "", children: [
@@ -708,7 +688,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "distribute", type: "group", link: "distribute", children: [
+					title: "distribute", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/distribute/Overview"},
 						{title: "get_loss_reduction", type: "group", link: "/tf.compat/v1/distribute/get_loss_reduction"},
 						{title: "MirroredStrategy", type: "group", link: "/tf.compat/v1/distribute/MirroredStrategy"},
@@ -745,11 +725,7 @@ module.exports = {
 						{title: "Multinomial", type: "group", link: "/tf.compat/v1/distributions/Multinomial"},
 						{title: "Normal", type: "group", link: "/tf.compat/v1/distributions/Normal"},
 						{title: "RegisterKL", type: "group", link: "/tf.compat/v1/distributions/RegisterKL"},
-						{
-							title: "ReparameterizationType",
-							type: "group",
-							link: "/tf.compat/v1/distributions/ReparameterizationType"
-						},
+						{title: "ReparameterizationType",type: "group",link: "/tf.compat/v1/distributions/ReparameterizationType"},
 						{title: "StudentT", type: "group", link: "/tf.compat/v1/distributions/StudentT"},
 						{title: "Uniform", type: "group", link: "/tf.compat/v1/distributions/Uniform"},
 					]
@@ -773,48 +749,24 @@ module.exports = {
 						{title: "BaselineClassifier", type: "group", link: "/tf.compat/v1/estimator/BaselineClassifier"},
 						{title: "BaselineEstimator", type: "group", link: "/tf.compat/v1/estimator/BaselineEstimator"},
 						{title: "BaselineRegressor", type: "group", link: "/tf.compat/v1/estimator/BaselineRegressor"},
-						{
-							title: "classifier_parse_example_spec",
-							type: "group",
-							link: "/tf.compat/v1/estimator/classifier_parse_example_spec"
-						},
+						{title: "classifier_parse_example_spec",type: "group",link: "/tf.compat/v1/estimator/classifier_parse_example_spec"},
 						{title: "DNNClassifier", type: "group", link: "/tf.compat/v1/estimator/DNNClassifier"},
 						{title: "DNNEstimator", type: "group", link: "/tf.compat/v1/estimator/DNNEstimator"},
-						{
-							title: "DNNLinearCombinedClassifier",
-							type: "group",
-							link: "/tf.compat/v1/estimator/DNNLinearCombinedClassifier"
-						},
-						{
-							title: "DNNLinearCombinedEstimator",
-							type: "group",
-							link: "/tf.compat/v1/estimator/DNNLinearCombinedEstimator"
-						},
-						{
-							title: "DNNLinearCombinedRegressor",
-							type: "group",
-							link: "/tf.compat/v1/estimator/DNNLinearCombinedRegressor"
-						},
+						{title: "DNNLinearCombinedClassifier",type: "group",link: "/tf.compat/v1/estimator/DNNLinearCombinedClassifier"},
+						{title: "DNNLinearCombinedEstimator",type: "group",link: "/tf.compat/v1/estimator/DNNLinearCombinedEstimator"},
+						{title: "DNNLinearCombinedRegressor",type: "group",link: "/tf.compat/v1/estimator/DNNLinearCombinedRegressor"},
 						{title: "DNNRegressor", type: "group", link: "/tf.compat/v1/estimator/DNNRegressor"},
 						{title: "Estimator", type: "group", link: "/tf.compat/v1/estimator/Estimator"},
 						{title: "LinearClassifier", type: "group", link: "/tf.compat/v1/estimator/LinearClassifier"},
 						{title: "LinearEstimator", type: "group", link: "/tf.compat/v1/estimator/LinearEstimator"},
 						{title: "LinearRegressor", type: "group", link: "/tf.compat/v1/estimator/LinearRegressor"},
-						{
-							title: "regressor_parse_example_spec",
-							type: "group",
-							link: "/tf.compat/v1/estimator/regressor_parse_example_spec"
-						},
+						{title: "regressor_parse_example_spec",type: "group",link: "/tf.compat/v1/estimator/regressor_parse_example_spec"},
 						{
 							title: "experimental", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/experimental/Overview"},
 								{title: "dnn_logit_fn_builder", type: "group", link: "/tf.compat/v1/experimental/dnn_logit_fn_builder"},
 								{title: "KMeans", type: "group", link: "/tf.compat/v1/experimental/KMeans"},
-								{
-									title: "linear_logit_fn_builder",
-									type: "group",
-									link: "/tf.compat/v1/experimental/linear_logit_fn_builder"
-								},
+								{title: "linear_logit_fn_builder",type: "group",link: "/tf.compat/v1/experimental/linear_logit_fn_builder"},
 							]
 						},
 						{
@@ -840,11 +792,7 @@ module.exports = {
 								{
 									title: "experimental", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/tpu/experimental/Overview"},
-										{
-											title: "EmbeddingConfigSpec",
-											type: "group",
-											link: "/tf.compat/v1/tpu/experimental/EmbeddingConfigSpec"
-										},
+										{title: "EmbeddingConfigSpec",type: "group",link: "/tf.compat/v1/tpu/experimental/EmbeddingConfigSpec"},
 									]
 								},
 							]
@@ -886,7 +834,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "flags", type: "group", link: "flags", children: [
+					title: "flags", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/flags/Overview"},
 						{title: "adopt_module_key_flags", type: "group", link: "/tf.compat/v1/flags/adopt_module_key_flags"},
 						{title: "ArgumentParser", type: "group", link: "/tf.compat/v1/flags/ArgumentParser"},
@@ -923,11 +871,7 @@ module.exports = {
 						{title: "EnumParser", type: "group", link: "/tf.compat/v1/flags/EnumParser"},
 						{title: "Error", type: "group", link: "/tf.compat/v1/flags/Error"},
 						{title: "Flag", type: "group", link: "/tf.compat/v1/flags/Flag"},
-						{
-							title: "FlagNameConflictsWithMethodError",
-							type: "group",
-							link: "/tf.compat/v1/flags/FlagNameConflictsWithMethodError"
-						},
+						{title: "FlagNameConflictsWithMethodError",type: "group",link: "/tf.compat/v1/flags/FlagNameConflictsWithMethodError"},
 						{title: "FlagValues", type: "group", link: "/tf.compat/v1/flags/FlagValues"},
 						{title: "flag_dict_to_args", type: "group", link: "/tf.compat/v1/flags/flag_dict_to_args"},
 						{title: "FloatParser", type: "group", link: "/tf.compat/v1/flags/FloatParser"},
@@ -936,37 +880,20 @@ module.exports = {
 						{title: "IntegerParser", type: "group", link: "/tf.compat/v1/flags/IntegerParser"},
 						{title: "ListParser", type: "group", link: "/tf.compat/v1/flags/ListParser"},
 						{title: "ListSerializer", type: "group", link: "/tf.compat/v1/flags/ListSerializer"},
-						{
-							title: "mark_bool_flags_as_mutual_exclusive",
-							type: "group",
-							link: "/tf.compat/v1/flags/mark_bool_flags_as_mutual_exclusive"
-						},
-						{
-							title: "mark_flags_as_mutual_exclusive",
-							type: "group",
-							link: "/tf.compat/v1/flags/mark_flags_as_mutual_exclusive"
-						},
+						{title: "mark_bool_flags_as_mutual_exclusive",type: "group",link: "/tf.compat/v1/flags/mark_bool_flags_as_mutual_exclusive"},
 						{title: "mark_flags_as_required", type: "group", link: "/tf.compat/v1/flags/mark_flags_as_required"},
 						{title: "mark_flag_as_required", type: "group", link: "/tf.compat/v1/flags/mark_flag_as_required"},
 						{title: "MultiEnumClassFlag", type: "group", link: "/tf.compat/v1/flags/MultiEnumClassFlag"},
 						{title: "MultiFlag", type: "group", link: "/tf.compat/v1/flags/MultiFlag"},
 						{title: "multi_flags_validator", type: "group", link: "/tf.compat/v1/flags/multi_flags_validator"},
-						{
-							title: "register_multi_flags_validator",
-							type: "group",
-							link: "/tf.compat/v1/flags/register_multi_flags_validator"
-						},
+						{title: "register_multi_flags_validator",type: "group",link: "/tf.compat/v1/flags/register_multi_flags_validator"},
 						{title: "register_validator", type: "group", link: "/tf.compat/v1/flags/register_validator"},
 						{title: "text_wrap", type: "group", link: "/tf.compat/v1/flags/text_wrap"},
 						{title: "UnparsedFlagAccessError", type: "group", link: "/tf.compat/v1/flags/UnparsedFlagAccessError"},
 						{title: "UnrecognizedFlagError", type: "group", link: "/tf.compat/v1/flags/UnrecognizedFlagError"},
 						{title: "ValidationError", type: "group", link: "/tf.compat/v1/flags/ValidationError"},
 						{title: "validator", type: "group", link: "/tf.compat/v1/flags/validator"},
-						{
-							title: "WhitespaceSeparatedListParser",
-							type: "group",
-							link: "/tf.compat/v1/flags/WhitespaceSeparatedListParser"
-						},
+						{title: "WhitespaceSeparatedListParser",type: "group",link: "/tf.compat/v1/flags/WhitespaceSeparatedListParser"},
 						{
 							title: "tf_decorator", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/flags/tf_decorator/Overview"},
@@ -977,45 +904,21 @@ module.exports = {
 								{
 									title: "tf_stack", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/flags/tf_decorator/tf_stack/Overview"},
-										{
-											title: "convert_stack",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/convert_stack"
+										{title: "convert_stack",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/convert_stack"
 										},
-										{
-											title: "CurrentModuleFilter",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/CurrentModuleFilter"
+										{title: "CurrentModuleFilter",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/CurrentModuleFilter"
 										},
-										{
-											title: "extract_stack",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/extract_stack"
+										{title: "extract_stack",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/extract_stack"
 										},
-										{
-											title: "extract_stack_file_and_line",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/extract_stack_file_and_line"
+										{title: "extract_stack_file_and_line",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/extract_stack_file_and_line"
 										},
-										{
-											title: "FileAndLine",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/FileAndLine"
+										{title: "FileAndLine",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/FileAndLine"
 										},
-										{
-											title: "StackTraceFilter",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/StackTraceFilter"
+										{title: "StackTraceFilter",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/StackTraceFilter"
 										},
-										{
-											title: "StackTraceMapper",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/StackTraceMapper"
+										{title: "StackTraceMapper",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/StackTraceMapper"
 										},
-										{
-											title: "StackTraceTransform",
-											type: "group",
-											link: "/tf.compat/v1/flags/tf_decorator/tf_stack/StackTraceTransform"
+										{title: "StackTraceTransform",type: "group",link: "/tf.compat/v1/flags/tf_decorator/tf_stack/StackTraceTransform"
 										},
 									]
 								},
@@ -1098,7 +1001,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "keras", type: "group", link: "keras", children: [
+					title: "keras", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/keras/Overview"},
 						{
 							title: "activations", type: "group", link: "", children: [
@@ -1106,10 +1009,10 @@ module.exports = {
 							]
 						},
 						{
-							title: "applications", type: "group", link: "applications", children: [
+							title: "applications", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/applications/Overview"},
 								{
-									title: "densenet", type: "group", link: "densenet", children: [
+									title: "densenet", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/keras/applications/densenet/Overview"}
 									]
 								},
@@ -1120,10 +1023,7 @@ module.exports = {
 								},
 								{
 									title: "inception_resnet_v2", type: "group", link: "", children: [
-										{
-											title: "Overview",
-											type: "group",
-											link: "/tf.compat/v1/keras/applications/inception_resnet_v2/Overview"
+										{title: "Overview",type: "group",link: "/tf.compat/v1/keras/applications/inception_resnet_v2/Overview"
 										}
 									]
 								},
@@ -1180,7 +1080,7 @@ module.exports = {
 							]
 						},
 						{
-							title: "backend", type: "group", link: "backend", children: [
+							title: "backend", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/backend/Overview"},
 								{title: "get_session", type: "group", link: "/tf.compat/v1/keras/backend/get_session"},
 								{title: "name_scope", type: "group", link: "/tf.compat/v1/keras/backend/name_scope"},
@@ -1199,7 +1099,7 @@ module.exports = {
 							]
 						},
 						{
-							title: "datasets", type: "group", link: "datasets", children: [
+							title: "datasets", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/datasets/Overview"},
 								{
 									title: "boston_housing", type: "group", link: "", children: [
@@ -1250,7 +1150,7 @@ module.exports = {
 							]
 						},
 						{
-							title: "initializers", type: "group", link: "initializers", children: [
+							title: "initializers", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/initializers/Overview"},
 								{title: "Constant", type: "group", link: "/tf.compat/v1/keras/initializers/Constant"},
 								{title: "glorot_normal", type: "group", link: "/tf.compat/v1/keras/initializers/glorot_normal"},
@@ -1271,7 +1171,7 @@ module.exports = {
 							]
 						},
 						{
-							title: "layers", type: "group", link: "layers", children: [
+							title: "layers", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/layers/Overview"},
 								{title: "BatchNormalization", type: "group", link: "/tf.compat/v1/keras/layers/BatchNormalization"},
 								{title: "CuDNNGRU", type: "group", link: "/tf.compat/v1/keras/layers/CuDNNGRU"},
@@ -1318,34 +1218,34 @@ module.exports = {
 							title: "preprocessing", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/preprocessing/Overview"},
 								{
-									title: "image", type: "group", link: "image", children: [
+									title: "image", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/keras/preprocessing/image/Overview"},
 									]
 								},
 								{
-									title: "sequence", type: "group", link: "sequence", children: [
+									title: "sequence", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/keras/preprocessing/sequence/Overview"},
 									]
 								},
 								{
-									title: "text", type: "group", link: "text", children: [
+									title: "text", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/keras/preprocessing/text/Overview"},
 									]
 								},
 							]
 						},
 						{
-							title: "regularizers", type: "group", link: "regularizers", children: [
+							title: "regularizers", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/regularizers/Overview"}
 							]
 						},
 						{
-							title: "utils", type: "group", link: "utils", children: [
+							title: "utils", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/utils/Overview"}
 							]
 						},
 						{
-							title: "wrappers", type: "group", link: "wrappers", children: [
+							title: "wrappers", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/keras/wrappers/Overview"},
 								{
 									title: "scikit_learn", type: "group", link: "", children: [
@@ -1358,7 +1258,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "layers", type: "group", link: "layers", children: [
+					title: "layers", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/layers/Overview"},
 						{title: "AveragePooling1D", type: "group", link: "/tf.compat/v1/layers/AveragePooling1D"},
 						{title: "AveragePooling2D", type: "group", link: "/tf.compat/v1/layers/AveragePooling2D"},
@@ -1409,7 +1309,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "linalg", type: "group", link: "linalg", children: [
+					title: "linalg", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/linalg/Overview"},
 						{
 							title: "l2_normalize", type: "group", link: "l2_normalize", children: [
@@ -1419,7 +1319,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "lite", type: "group", link: "lite", children: [
+					title: "lite", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/lite/Overview"},
 						{title: "OpHint", type: "group", link: "/tf.compat/v1/lite/OpHint"},
 						{
@@ -1431,7 +1331,7 @@ module.exports = {
 						{title: "TocoConverter", type: "group", link: "/tf.compat/v1/lite/TocoConverter"},
 						{title: "toco_convert", type: "group", link: "/tf.compat/v1/lite/toco_convert"},
 						{
-							title: "constants", type: "group", link: "constants", children: [
+							title: "constants", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/lite/constants/Overview"},
 							]
 						},
@@ -1449,7 +1349,7 @@ module.exports = {
 									link: "/tf.compat/v1/lite/experimental/get_potentially_supported_ops"
 								},
 								{
-									title: "nn", type: "group", link: "nn", children: [
+									title: "nn", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v1/lite/experimental/nn/Overview"},
 										{title: "dynamic_rnn", type: "group", link: "/tf.compat/v1/lite/experimental/nn/dynamic_rnn"},
 										{title: "TFLiteLSTMCell", type: "group", link: "/tf.compat/v1/lite/experimental/nn/TFLiteLSTMCell"},
@@ -1529,7 +1429,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "math", type: "group", link: "math", children: [
+					title: "math", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/math/Overview"},
 						{title: "in_top_k", type: "group", link: "/tf.compat/v1/math/in_top_k"},
 						{title: "log_softmax", type: "group", link: "/tf.compat/v1/math/log_softmax"},
@@ -1603,7 +1503,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "nest", type: "group", link: " ", children: [
+					title: "nest", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/nest/Overview"},
 					]
 				},
@@ -1707,7 +1607,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "profiler", type: "group", link: "profiler", children: [
+					title: "profiler", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/profiler/Overview"},
 						{title: "AdviceProto", type: "group", link: "/tf.compat/v1/profiler/AdviceProto"},
 						{title: "AdviceProto.Checker", type: "group", link: "/tf.compat/v1/profiler/AdviceProto.Checker"},
@@ -1752,7 +1652,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "ragged", type: "group", link: "ragged", children: [
+					title: "ragged", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/ragged/Overview"},
 						{title: "constant_value", type: "group", link: "/tf.compat/v1/ragged/constant_value"},
 						{title: "placeholder", type: "group", link: "/tf.compat/v1/ragged/placeholder"},
@@ -1760,7 +1660,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "random", type: "group", link: "random", children: [
+					title: "random", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/random/Overview"},
 						{title: "stateless_multinomial", type: "group", link: "/tf.compat/v1/random/stateless_multinomial"},
 						{
@@ -1885,7 +1785,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "strings", type: "group", link: "strings", children: [
+					title: "strings", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/strings/Overview"},
 						{title: "length", type: "group", link: "/tf.compat/v1/strings/length"},
 						{title: "split", type: "group", link: "/tf.compat/v1/strings/split"},
@@ -1918,7 +1818,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "test", type: "group", link: "test", children: [
+					title: "test", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/test/Overview"},
 						{title: "assert_equal_graph_def", type: "group", link: "/tf.compat/v1/test/assert_equal_graph_def"},
 						{title: "compute_gradient", type: "group", link: "/tf.compat/v1/test/compute_gradient"},
@@ -1929,7 +1829,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "tpu", type: "group", link: "tpu", children: [
+					title: "tpu", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/tpu/Overview"},
 						{title: "batch_parallel", type: "group", link: "/tf.compat/v1/tpu/batch_parallel"},
 						{title: "bfloat16_scope", type: "group", link: "/tf.compat/v1/tpu/bfloat16_scope"},
@@ -1963,7 +1863,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "train", type: "group", link: "train", children: [
+					title: "train", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/train/Overview"},
 						{title: "AdadeltaOptimizer", type: "group", link: "/tf.compat/v1/train/AdadeltaOptimizer"},
 						{title: "AdagradDAOptimizer", type: "group", link: "/tf.compat/v1/train/AdagradDAOptimizer"},
@@ -2093,10 +1993,10 @@ module.exports = {
 					]
 				},
 				{
-					title: "xla", type: "group", link: "xla", children: [
+					title: "xla", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v1/xla/Overview"},
 						{
-							title: "experimental", type: "group", link: "experimental", children: [
+							title: "experimental", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v1/xla/experimental/Overview"}
 							]
 						},
@@ -2105,10 +2005,10 @@ module.exports = {
 			]
 		},
 		{
-			title: "v2", type: "group", link: "v2", children: [
+			title: "v2", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.compat/v2/Overview"},
 				{
-					title: "audio", type: "group", link: "audio", children: [
+					title: "audio", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/audio/Overview"}
 					]
 				},
@@ -2123,17 +2023,17 @@ module.exports = {
 					]
 				},
 				{
-					title: "bitwise", type: "group", link: "bitwise", children: [
+					title: "bitwise", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/bitwise/Overview"}
 					]
 				},
 				{
-					title: "compat", type: "group", link: "compat", children: [
+					title: "compat", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/compat/Overview"}
 					]
 				},
 				{
-					title: "config", type: "group", link: "config", children: [
+					title: "config", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/config/Overview"},
 						{
 							title: "experimental", type: "group", link: "", children: [
@@ -2153,10 +2053,10 @@ module.exports = {
 					]
 				},
 				{
-					title: "data", type: "group", link: "data", children: [
+					title: "data", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/data/Overview"},
 						{
-							title: "experimental", type: "group", link: "experimental", children: [
+							title: "experimental", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/data/experimental/Overview"}
 							]
 						},
@@ -2228,10 +2128,10 @@ module.exports = {
 					]
 				},
 				{
-					title: "keras", type: "group", link: "keras", children: [
+					title: "keras", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/keras/Overview"},
 						{
-							title: "activations", type: "group", link: "activations", children: [
+							title: "activations", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/keras/activations/Overview"}
 							]
 						},
@@ -2249,10 +2149,7 @@ module.exports = {
 								},
 								{
 									title: "inception_resnet_v2", type: "group", link: "", children: [
-										{
-											title: "Overview",
-											type: "group",
-											link: "/tf.compat/v2/keras/applications/inception_resnet_v2/Overview"
+										{title: "Overview",type: "group",link: "/tf.compat/v2/keras/applications/inception_resnet_v2/Overview"
 										}
 									]
 								},
@@ -2327,7 +2224,7 @@ module.exports = {
 							title: "datasets", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/keras/datasets/Overview"},
 								{
-									title: "boston_housing", type: "group", link: "boston_housing", children: [
+									title: "boston_housing", type: "group", link: "", children: [
 										{title: "Overview", type: "group", link: "/tf.compat/v2/keras/datasets/boston_housing/Overview"}
 									]
 								},
@@ -2365,7 +2262,7 @@ module.exports = {
 							]
 						},
 						{
-							title: "estimator", type: "group", link: "estimator", children: [
+							title: "estimator", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/keras/estimator/Overview"}
 							]
 						},
@@ -2399,17 +2296,13 @@ module.exports = {
 								{title: "Overview", type: "group", link: "/tf.compat/v2/keras/mixed_precision/Overview"},
 								{
 									title: "experimental", type: "group", link: "", children: [
-										{
-											title: "Overview",
-											type: "group",
-											link: "/tf.compat/v2/keras//mixed_precision/experimental/Overview"
-										}
+										{title: "Overview",type: "group",link: "/tf.compat/v2/keras//mixed_precision/experimental/Overview"}
 									]
 								},
 							]
 						},
 						{
-							title: "models", type: "group", link: "models", children: [
+							title: "models", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/keras/models/Overview"}
 							]
 						},
@@ -2466,25 +2359,25 @@ module.exports = {
 					]
 				},
 				{
-					title: "linalg", type: "group", link: "linalg", children: [
+					title: "linalg", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/linalg/Overview"},
 					]
 				},
 				{
-					title: "lite", type: "group", link: "lite", children: [
+					title: "lite", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/lite/Overview"},
 						{
-							title: "experimental", type: "group", link: "experimental", children: [
+							title: "experimental", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/lite/experimental/Overview"}
 							]
 						}
 					]
 				},
 				{
-					title: "lookup", type: "group", link: "lookup", children: [
+					title: "lookup", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/lookup/Overview"},
 						{
-							title: "experimental", type: "group", link: "experimental", children: [
+							title: "experimental", type: "group", link: "", children: [
 								{title: "Overview", type: "group", link: "/tf.compat/v2/lookup/experimental/Overview"},
 							]
 						}
@@ -2591,7 +2484,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "version", type: "group", link: "version", children: [
+					title: "version", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.compat/v2/train/version/Overview"}
 					]
 				},
@@ -2692,7 +2585,7 @@ module.exports = {
 		{title: "TextLineDataset", type: "group", link: "/tf.data/TextLineDataset"},
 		{title: "TFRecordDataset", type: "group", link: "/tf.data/TFRecordDataset"},
 		{
-			title: "experimental", type: "group", link: "experimental", children: [
+			title: "experimental", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.data/experimental/Overview"},
 				{title: "bucket_by_sequence_length", type: "group", link: "/tf.data/experimental/bucket_by_sequence_length"},
 				{title: "bytes_produced_stats", type: "group", link: "/tf.data/experimental/bytes_produced_stats"},
@@ -2824,7 +2717,7 @@ module.exports = {
 			]
 		},
 		{
-			title: "experimental", type: "group", link: "experimental", children: [
+			title: "experimental", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.distribute/experimental/Overview"},
 				{title: "CentralStorageStrategy", type: "group", link: "/tf.distribute/experimental/CentralStorageStrategy"},
 				{title: "CollectiveCommunication", type: "group", link: "/tf.distribute/experimental/CollectiveCommunication"},
@@ -2925,7 +2818,7 @@ module.exports = {
 		{title: "VocabInfo", type: "group", link: "/tf.estimator/VocabInfo"},
 		{title: "WarmStartSettings", type: "group", link: "/tf.estimator/WarmStartSettings"},
 		{
-			title: "experimental", type: "group", link: "experimental", children: [
+			title: "experimental", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.estimator/experimental/Overview"},
 				{
 					title: "build_raw_supervised_input_receiver_fn",
@@ -2950,7 +2843,7 @@ module.exports = {
 			]
 		},
 		{
-			title: "export", type: "group", link: "export", children: [
+			title: "export", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.estimator/export/Overview"},
 				{
 					title: "build_parsing_serving_input_receiver_fn",
@@ -3130,7 +3023,7 @@ module.exports = {
 		{title: "write_file", type: "group", link: "/tf.io/write_file"},
 		{title: "write_graph", type: "group", link: "/tf.io/write_graph"},
 		{
-			title: "gfile", type: "group", link: "gfile", children: [
+			title: "gfile", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.io/gfile/Overview"},
 				{title: "copy", type: "group", link: "/tf.io/gfile/copy"},
 				{title: "exists", type: "group", link: "/tf.io/gfile/exists"},
@@ -3256,14 +3149,14 @@ module.exports = {
 					]
 				},
 				{
-					title: "nasnet", type: "group", link: "nasnet", children: [
+					title: "nasnet", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.keras/applications/nasnet/Overview"},
 						{title: "decode_predictions", type: "group", link: "/tf.keras/applications/nasnet/decode_predictions"},
 						{title: "preprocess_input", type: "group", link: "/tf.keras/applications/nasnet/preprocess_input"},
 					]
 				},
 				{
-					title: "resnet", type: "group", link: "resnet", children: [
+					title: "resnet", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.keras/applications/resnet/Overview"},
 						{title: "decode_predictions", type: "group", link: "/tf.keras/applications/resnet/decode_predictions"},
 						{title: "preprocess_input", type: "group", link: "/tf.keras/applications/resnet/preprocess_input"},
@@ -3296,7 +3189,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "xception", type: "group", link: "xception", children: [
+					title: "xception", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.keras/applications/xception/Overview"},
 						{title: "decode_predictions", type: "group", link: "/tf.keras/applications/xception/decode_predictions"},
 						{title: "preprocess_input", type: "group", link: "/tf.keras/applications/xception/preprocess_input"}
@@ -3305,7 +3198,7 @@ module.exports = {
 			]
 		},
 		{
-			title: "backend", type: "group", link: "backend", children: [
+			title: "backend", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.keras/backend/Overview"},
 				{title: "abs", type: "group", link: "/tf.keras/backend/abs"},
 				{title: "all", type: "group", link: "/tf.keras/backend/all"},
@@ -3462,7 +3355,7 @@ module.exports = {
 		},
 		
 		{
-			title: "callbacks", type: "group", link: "callbacks", children: [
+			title: "callbacks", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.keras/callbacks/Overview"},
 				{title: "BaseLogger", type: "group", link: "/tf.keras/callbacks/BaseLogger"},
 				{title: "Callback", type: "group", link: "/tf.keras/callbacks/Callback"},
@@ -3480,7 +3373,7 @@ module.exports = {
 			]
 		},
 		{
-			title: "constraints", type: "group", link: "constraints", children: [
+			title: "constraints", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.keras/constraints/Overview"},
 				{title: "Constraint", type: "group", link: "/tf.keras/constraints/Constraint"},
 				{title: "deserialize", type: "group", link: "/tf.keras/constraints/deserialize"},
@@ -3555,7 +3448,7 @@ module.exports = {
 			]
 		},
 		{
-			title: "experimental", type: "group", link: "experimental", children: [
+			title: "experimental", type: "group", link: "", children: [
 				{title: "Overview", type: "group", link: "/tf.keras/experimental/Overview"},
 				{title: "CosineDecay", type: "group", link: "/tf.keras/experimental/CosineDecay"},
 				{title: "CosineDecayRestarts", type: "group", link: "/tf.keras/experimental/CosineDecayRestarts"},
@@ -3887,7 +3780,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "sequence", type: "group", link: "sequence", children: [
+					title: "sequence", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.keras/preprocessing/sequence/Overview"},
 						{title: "make_sampling_table", type: "group", link: "/tf.keras/preprocessing/sequence/make_sampling_table"},
 						{title: "pad_sequences", type: "group", link: "/tf.keras/preprocessing/sequence/pad_sequences"},
@@ -3896,7 +3789,7 @@ module.exports = {
 					]
 				},
 				{
-					title: "text", type: "group", link: "text", children: [
+					title: "text", type: "group", link: "", children: [
 						{title: "Overview", type: "group", link: "/tf.keras/preprocessing/text/Overview"},
 						{title: "hashing_trick", type: "group", link: "/tf.keras/preprocessing/text/hashing_trick"},
 						{title: "one_hot", type: "group", link: "/tf.keras/preprocessing/text/one_hot"},

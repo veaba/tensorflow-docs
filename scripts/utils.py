@@ -44,7 +44,7 @@ def handle(array, parent, fn, task=None):
             else:
                 handle(item_list, parent + key_name + "/", fn, task)
         elif type(obj) == str:
-            fn(parent, obj)
+            fn(parent, obj,task)
 
 
 # 递归遍历目录,异步的方式
