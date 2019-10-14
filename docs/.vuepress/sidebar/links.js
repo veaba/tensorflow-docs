@@ -578,7 +578,7 @@ module.exports = {
 				{title: "transpose", type: "group", link: "/tf.compat/v1/transpose"},
 				{title: "truncated_normal_initializer", type: "group", link: "/tf.compat/v1/truncated_normal_initializer"},
 				{title: "tuple", type: "group", link: "/tf.compat/v1/tuple"},
-				{title: "uniform_unit_scaling_initializer",type: "group",link: "/tf.compat/v1/uniform_unit_scaling_initializer",
+				{title: "uniform_unit_scaling_initializer",type: "group",link: "/tf.compat/v1/uniform_unit_scaling_initializer"},
 				{title: "Variable", type: "group", link: "/tf.compat/v1/Variable"},
 				{title: "VariableAggregation", type: "group", link: "/tf.compat/v1/VariableAggregation"},
 				{title: "VariableScope", type: "group", link: "/tf.compat/v1/VariableScope"},
