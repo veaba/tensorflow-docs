@@ -18,16 +18,19 @@ jobs:
       
       - name: Steps:[2] Install dependent
         run: |
-          npm install 
+          # npm install 
           # npm run build
+          export 
         env: 
           CI: true
+          HAHA: hello_world
 
       - name: Steps:[3] Deploy Project
         env:
           ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI}}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./docs/
+          oooo: oooooooo
           # PUBLISH_DIR: ./docs/.vuepress/dist
         run: |
           sudo sh scripts/deploy.sh

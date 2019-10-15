@@ -12,7 +12,7 @@ fi
 # 检查 ACTIONS_DEPLOY_KEY
 
 export 
-if [ -n "${ACTIONS_DEPLOY_KEY}" ];
+if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
     echo "aaa">"aaa"
@@ -30,7 +30,7 @@ else
     exit 1
 fi
 
-if [ -z "${PUBLISH_BRANCH}" ];
+if [ -z "${PUBLISH_BRANCH}" ]; then
     print_error "没有发现：PUBLISH_BRANCH 要发布的分支"
     exit 1
 fi
