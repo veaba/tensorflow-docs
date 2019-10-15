@@ -19,7 +19,7 @@ jobs:
       - name: Steps:[2] Install dependent
         run: |
           npm install 
-          npm run build
+          # npm run build
         env: 
           CI: true
 
