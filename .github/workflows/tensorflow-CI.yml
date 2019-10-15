@@ -27,10 +27,12 @@ jobs:
 
       - name: Steps:[3] Deploy Project
         run: |
-          chmod 771 scripts/deploy.sh && ./scripts/deploy.sh
+          ll -a
+          chmod 771 scripts/deploy.sh
+          bash ./scripts/deploy.sh
           # ./scripts/deploy.sh
           # bash ./scripts/deploy.sh
-          ll -a
+          
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}
           PUBLISH_BRANCH: gh-pages
