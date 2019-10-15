@@ -47,6 +47,7 @@ remote_branch=${PUBLISH_BRANCH}
 echo  "remote_branch:${remote_branch}"
 echo  "PUBLISH_BRANCH:${PUBLISH_BRANCH}"
 echo  "PUBLISH_DIR:${PUBLISH_DIR}"
+echo  "remote_repo:${remote_repo}"
 cd "${PUBLISH_DIR}"
 git init
 git checkout --orphan "${remote_branch}"
@@ -55,9 +56,11 @@ git checkout --orphan "${remote_branch}"
 # 配置git
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+git remote rm origin || true
+git remote add origin "${remote_repo}"
 
 # 更新提交
-git add .
+git add --all
 git commit -m "自动化部署：$(date)"
 
 git remote -v
