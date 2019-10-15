@@ -30,5 +30,6 @@ jobs:
           PUBLISH_DIR: ./docs/
           # PUBLISH_DIR: ./docs/.vuepress/dist
         run: |
+          chmod +x scripts/deploy.sh
           sh scripts/deploy.sh
 
