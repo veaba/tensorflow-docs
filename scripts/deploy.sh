@@ -22,9 +22,13 @@ if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     else
         echo "已存在，则跳过~~~创建:${SSH_DIR}"
     fi 
+    echo "111111"
     ssh-keyscan -t rsa github.com > "${SSH_DIR}/known_hosts"
+    echo "222222"
     echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
+    echo "333333"
     chmod 400 "${SSH_DIR}/id_rsa"
+    echo "444444"
 
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
 else
