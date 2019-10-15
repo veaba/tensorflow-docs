@@ -1,7 +1,4 @@
 #!/bin/bash
-
-set -e
-
 print_error(){
     echo -e "\e[31mERROR: ${1}\e[m"
 }
@@ -15,7 +12,7 @@ fi
 # 检查 ACTIONS_DEPLOY_KEY
 
 export 
-if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
+if [ -n "${ACTIONS_DEPLOY_KEY}" ];
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
     echo "aaa">"aaa"
@@ -33,8 +30,9 @@ else
     exit 1
 fi
 
-if [ -z "${PUBLISH_BRANCH}" ]; then
+if [ -z "${PUBLISH_BRANCH}" ];
     print_error "没有发现：PUBLISH_BRANCH 要发布的分支"
+    exit 1
 fi
 
 remote_branch=${PUBLISH_BRANCH}

@@ -16,12 +16,12 @@ jobs:
         with:
           node-version: ${{matrix.node-version}} 
       
-      # - name: Steps:[2] Install dependent
-      #   run: |
-      #     npm install 
-      #     npm run build
-      #   env: 
-      #     CI: true
+      - name: Steps:[2] Install dependent
+        run: |
+          npm install 
+          npm run build
+        env: 
+          CI: true
 
       - name: Steps:[3] Deploy Project
         env:
@@ -30,8 +30,5 @@ jobs:
           PUBLISH_DIR: ./docs/
           # PUBLISH_DIR: ./docs/.vuepress/dist
         run: |
-          chmod +x scripts/deploy.sh && pwd
-          mkdir test 
-          ls
           sudo sh scripts/deploy.sh
 
