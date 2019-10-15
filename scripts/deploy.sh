@@ -2,7 +2,7 @@
 
 set -e
 
-function print_error(){
+print_error(){
     echo -e "\e[31mERROR: ${1}\e[m"
 }
 
