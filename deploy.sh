@@ -43,25 +43,6 @@ if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     cat "${SSH_DIR}/known_hosts"
     echo "____________________"
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
-
-elif [ -n "${PERSONAL_TOKEN}" ]; then
-
-    print_info "setup with PERSONAL_TOKEN"
-
-    remote_repo="https://x-access-token:${PERSONAL_TOKEN}@github.com/${PUBLISH_REPOSITORY}.git"
-
-elif [ -n "${GITHUB_TOKEN}" ]; then
-
-    print_info "setup with GITHUB_TOKEN"
-    print_error "GITHUB_TOKEN works only private repo, See #9"
-
-    if [ -n "${EXTERNAL_REPOSITORY}" ]; then
-        print_error "can not use GITHUB_TOKEN to deploy to a external repository"
-        exit 1
-    fi
-
-    remote_repo="https://x-access-token:${GITHUB_TOKEN}@github.com/${PUBLISH_REPOSITORY}.git"
-
 else
     print_error "not found ACTIONS_DEPLOY_KEY, PERSONAL_TOKEN, or GITHUB_TOKEN"
     exit 1
@@ -92,10 +73,12 @@ if git clone --depth=1 --single-branch --branch "${remote_branch}" "${remote_rep
     find "${GITHUB_WORKSPACE}/${PUBLISH_DIR}" -maxdepth 1 | \
         tail -n +2 | \
         xargs -I % cp -rf % "${local_dir}/"
+    echo "进来吗？？"
 else
     cd "${PUBLISH_DIR}"
     git init
     git checkout --orphan "${remote_branch}"
+    echo "哈哈哈"
 fi
 
 # push to publishing branch
@@ -106,7 +89,7 @@ git remote add origin "${remote_repo}"
 git add --all
 
 print_info "Allowing empty commits: ${INPUT_EMPTYCOMMITS}"
-COMMIT_MESSAGE="Automated deployment: $(date -u) ${GITHUB_SHA}"
+COMMIT_MESSAGE="【部署成功】: $(date -u) ${GITHUB_SHA}"
 if [[ ${INPUT_EMPTYCOMMITS} == "false" ]]; then
     git commit -m "${COMMIT_MESSAGE}" || skip
 else
