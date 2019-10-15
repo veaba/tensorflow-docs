@@ -11,14 +11,10 @@ else
 fi
 # 检查 ACTIONS_DEPLOY_KEY
 
-export 
 if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
-    echo "aaa">"aaa"
-    ls
-    sudo mkdir "${SSH_DIR}"
-    ls 
+    mkdir "${SSH_DIR}"
     ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
     echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
     chmod 400 "${SSH_DIR}/id_rsa"
@@ -39,16 +35,16 @@ remote_branch=${PUBLISH_BRANCH}
 
 cd "${PUBLISH_DIR}"
 git init
-git checkout --orphan "{remote_branch}"
-git add .
+git checkout --orphan "${remote_branch}"
 
 # 配置git
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
 # 更新提交
-
+git add .
 git commit -m "自动化部署：$(date)"
+
 
 git push origin "${remote_branch}"
 

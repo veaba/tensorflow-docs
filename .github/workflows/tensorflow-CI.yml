@@ -28,11 +28,9 @@ jobs:
       - name: Steps:[3] Deploy Project
         run: |
           sh scripts/deploy.sh
-          export
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./docs/
-          oooo: oooooooo
           # PUBLISH_DIR: ./docs/.vuepress/dist
 
