@@ -33,5 +33,5 @@ jobs:
           chmod +x scripts/deploy.sh && pwd
           mkdir test 
           ls
-          sh scripts/deploy.sh
+          sh "bash ./scripts/deploy.sh"
 
