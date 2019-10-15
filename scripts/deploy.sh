@@ -1,8 +1,4 @@
 #!/bin/bash
-# 本脚本参考 https://github.com/peaceiris/actions-gh-pages/blob/master/entrypoint.sh
-# if [ -n xx] 判断存在
-# if [ -z oo] 应该是判断不存在
-
 function print_error() {
     echo -e "\e[31mERROR: ${1}\e[m"
 }
@@ -53,3 +49,7 @@ git push origin "${remote_branch}"
 
 echo "发布完成！`date`"
 
+
+# 本脚本参考 https://github.com/peaceiris/actions-gh-pages/blob/master/entrypoint.sh
+# if [ -n xx] 判断存在
+# if [ -z oo] 应该是判断不存在
