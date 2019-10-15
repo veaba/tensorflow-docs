@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 print_error(){
     echo -e "\e[31mERROR: ${1}\e[m"
 }
