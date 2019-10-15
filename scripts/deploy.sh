@@ -25,11 +25,10 @@ if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "111111"
     # TODO这里权限不足
     # echo `ssh-keyscan -t rsa github.com` > "${SSH_DIR}/known_hosts"
-    echo "222222"
+    # echo "222222"
     # echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
-    echo "333333"
-    chmod 400 "${SSH_DIR}/id_rsa"
-    echo "444444"
+    # echo "333333"
+    # chmod 400 "${SSH_DIR}/id_rsa"
 
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
 else
