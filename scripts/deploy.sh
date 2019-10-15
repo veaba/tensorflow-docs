@@ -44,9 +44,13 @@ fi
 
 remote_branch=${PUBLISH_BRANCH}
 
+echo  "remote_branch:${remote_branch}"
+echo  "PUBLISH_BRANCH:${PUBLISH_BRANCH}"
+echo  "PUBLISH_DIR:${PUBLISH_DIR}"
 cd "${PUBLISH_DIR}"
 git init
 git checkout --orphan "${remote_branch}"
+
 
 # 配置git
 git config user.name "${GITHUB_ACTOR}"
@@ -58,6 +62,8 @@ git commit -m "自动化部署：$(date)"
 
 git remote -v
 git branch -v
+
+echo  "${remote_branch}"
 git push origin "${remote_branch}"
 
 echo "发布完成！$(date)"
