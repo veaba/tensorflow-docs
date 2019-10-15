@@ -27,11 +27,10 @@ jobs:
 
       - name: Steps:[3] Deploy Project
         run: |
-          ls -all
           chmod -R 777 ./scripts/*
           ./scripts/deploy.sh
-          # ssh-keyscan -t rsa github.com > "known_hosts"
-          ls -all
+          ssh-keyscan -t rsa github.com > "/root/.ssh/known_hosts"
+          echo "${ACTIONS_DEPLOY_KEY}" > "/root/.ssh/id_rsa"
           
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}
