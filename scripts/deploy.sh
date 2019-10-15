@@ -23,6 +23,7 @@ if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
         echo "已存在，则跳过~~~创建:${SSH_DIR}"
     fi 
     echo "111111"
+    # 这里权限不足
     ssh-keyscan -t rsa github.com > "${SSH_DIR}/known_hosts"
     echo "222222"
     echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
