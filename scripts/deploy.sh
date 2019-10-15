@@ -1,7 +1,8 @@
 #!/bin/bash
 
 set -e
-function print_error() {
+
+function print_error(){
     echo -e "\e[31mERROR: ${1}\e[m"
 }
 
@@ -13,7 +14,7 @@ else
 fi
 # 检查 ACTIONS_DEPLOY_KEY
 
-if [ -n "${ACTIONS_DEPLOY_KEY}"]; then
+if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
     mkdir "${SSH_DIR}"
@@ -27,7 +28,7 @@ else
     exit 1
 fi
 
-if [ -z "${PUBLISH_BRANCH}"]; then
+if [ -z "${PUBLISH_BRANCH}" ]; then
     print_error "没有发现：PUBLISH_BRANCH 要发布的分支"
 fi
 
