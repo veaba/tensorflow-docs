@@ -14,6 +14,7 @@ else
 fi
 # 检查 ACTIONS_DEPLOY_KEY
 
+export 
 if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
@@ -27,6 +28,7 @@ if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
 
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
 else
+    ls
     print_error "没有发现：ACTIONS_DEPLOY_KEY 请配置"
     exit 1
 fi
