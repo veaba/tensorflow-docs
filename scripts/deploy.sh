@@ -24,9 +24,9 @@ if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     fi 
     echo "111111"
     # TODO这里权限不足
-    echo `ssh-keyscan -t rsa github.com` > "${SSH_DIR}/known_hosts"
+    # echo `ssh-keyscan -t rsa github.com` > "${SSH_DIR}/known_hosts"
     echo "222222"
-    echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
+    # echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
     echo "333333"
     chmod 400 "${SSH_DIR}/id_rsa"
     echo "444444"
