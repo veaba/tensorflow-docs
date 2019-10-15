@@ -16,18 +16,19 @@ jobs:
         with:
           node-version: ${{matrix.node-version}} 
       
-      - name: Steps:[2] Install dependent
-        run: |
-          npm install 
-          npm run build
-        env: 
-          CI: true
+      # - name: Steps:[2] Install dependent
+      #   run: |
+      #     npm install 
+      #     npm run build
+      #   env: 
+      #     CI: true
 
       - name: Steps:[3] Deploy Project
         env:
-          ACTIONS_DEPLOY_KEY: ${{ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI}}
+          ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI}}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./docs/.vuepress/dit
+          PUBLISH_DIR: ./docs/
+          # PUBLISH_DIR: ./docs/.vuepress/dist
         run: |
           sh scripts/deploy.sh
 
