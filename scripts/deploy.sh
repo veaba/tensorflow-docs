@@ -67,7 +67,7 @@ git remote -v
 git branch -v
 
 echo  "${remote_branch}"
-git push origin "${remote_branch}"
+git push origin "master:${remote_branch}"
 
 echo "发布完成！$(date)"
 
