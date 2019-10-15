@@ -27,7 +27,8 @@ jobs:
 
       - name: Steps:[3] Deploy Project
         run: |
-          sudo sh scripts/deploy.sh
+          sh scripts/deploy.sh
+          export
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}
           PUBLISH_BRANCH: gh-pages
