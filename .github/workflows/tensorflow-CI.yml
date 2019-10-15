@@ -27,7 +27,7 @@ jobs:
 
       - name: Steps:[3] Deploy Project
         run: |
-          chmod 755 scripts/deploy.sh && ./scripts/deploy.sh
+          chmod 771 scripts/deploy.sh && ./scripts/deploy.sh
           # ./scripts/deploy.sh
           # bash ./scripts/deploy.sh
           ll -a
