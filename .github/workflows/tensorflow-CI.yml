@@ -29,7 +29,7 @@ jobs:
         run: |
           ls -all
           chmod -R 777 ./scripts/
-          sudo bash ./scripts/deploy.sh
+          bash ./scripts/deploy.sh
           # ssh-keyscan -t rsa github.com > "known_hosts"
           
         env:
