@@ -27,6 +27,7 @@ jobs:
 
       - name: Steps:[3] Deploy Project
         run: |
+          chmod +x scripts/deploy.sh
           sh scripts/deploy.sh
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}

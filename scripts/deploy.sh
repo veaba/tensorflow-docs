@@ -14,10 +14,10 @@ fi
 if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
-    mkdir "${SSH_DIR}"
-    ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
-    echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
-    chmod 400 "${SSH_DIR}/id_rsa"
+    sudo mkdir "${SSH_DIR}"
+    sudo ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
+    sudo echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
+    sudo chmod 400 "${SSH_DIR}/id_rsa"
 
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
 else
@@ -45,7 +45,8 @@ git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git add .
 git commit -m "自动化部署：$(date)"
 
-
+git remote -v
+git branch -v
 git push origin "${remote_branch}"
 
 echo "发布完成！$(date)"
