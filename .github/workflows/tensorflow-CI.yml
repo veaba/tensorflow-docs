@@ -29,8 +29,9 @@ jobs:
         run: |
           ls -all
           chmod -R 777 ./scripts/*
-          sh ./scripts/deploy.sh
+          ./scripts/deploy.sh
           # ssh-keyscan -t rsa github.com > "known_hosts"
+          ls -all
           
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}
