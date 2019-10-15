@@ -15,8 +15,14 @@ fi
 if [ -n "${ACTIONS_DEPLOY_KEY}" ]; then
     echo "开始安装: ACTIONS_DEPLOY_KEY ..."
     SSH_DIR="/root/.ssh"
+
+    # 如果不存在则创建
+    if [ ! -d "${SSH_DIR}"]; then
     sudo mkdir "${SSH_DIR}"
-    ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
+    else
+        echo "已存在，则跳过~~~创建:${SSH_DIR}"
+    if 
+    sudo ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
     echo "${ACTIONS_DEPLOY_KEY}" >"${SSH_DIR}/id_rsa"
     chmod 400 "${SSH_DIR}/id_rsa"
 
