@@ -1,4 +1,5 @@
 module.exports = {
+	base:'/tensorflow-docs/',
 	title: 'MongoDB 中文文档',
 	author: "veaba",
 	description: '网站描述文档',
