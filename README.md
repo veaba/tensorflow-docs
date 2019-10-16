@@ -1,4 +1,7 @@
-# tensorflow-docs
+# tensorflow-docs衍生项目：pypackjs 项目，基于python版本多线程下打包js项目的研究
+
+这个是基于master分支fae87ea75657c65d53c3f42722b27cc89ffdf259 checkout 出来研究一个python 版本的：pypackjs 项目
+
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本、百度翻译API
 
 
