@@ -22,8 +22,9 @@
 
 - 本来是markdown->HTML->VNODE、但如果markdown->VNODE应该会很少省事
 - 额额额额，我的老天鹅，搞一个模块就要翻写好几个别的依赖模块！！！
-- 现在我要用python重写markdown-it(我感觉这个项目可以做十年了)，进来偷工减料下完成吧！！有点难了
+- 现在我要用python重写markdown-it(我感觉这个项目可以做十年了)，尽量偷工减料下完成吧！！有点难了
 
 ## 参考重点项目
 
-- [markdown](https://github.com/markdown-it/markdown-it) 一款markdown 格式转为HTML
+- [markdown-it](https://github.com/markdown-it/markdown-it) 一款markdown 格式转为HTML
+- [highlight.js](https://github.com/highlightjs/highlight.js) 一款高亮代码
