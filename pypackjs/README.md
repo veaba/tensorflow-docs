@@ -12,9 +12,18 @@
 ||pypackjs-comporess|压缩js文件和格式化文件|主要是正则格式化|
 ||pypackjs-vnode|html转js的vnode||
 ||pypackjs-css|css打包工具||
-|进行中...|pypackjs-markdown|markdown转HTML文件||
+|进行中...|pypackjs-markdown|markdown转HTML文件、或者markdown直接转AST语法树||
 ||pypackjs-url|url路径解析工具||
 ||pypackjs-file|处理文件的依赖||
 ||pypackjs-ts|处理ts||
 ||pypackjs-scss|处理scss文件||
 |||||
+
+
+- 本来是markdown->HTML->VNODE、但如果markdown->VNODE应该会很少省事
+- 额额额额，我的老天鹅，搞一个模块就要翻写好几个别的依赖模块！！！
+- 现在我要用python重写markdown-it(我感觉这个项目可以做十年了)，进来偷工减料下完成吧！！有点难了
+
+## 参考重点项目
+
+- [markdown](https://github.com/markdown-it/markdown-it) 一款markdown 格式转为HTML
