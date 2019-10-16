@@ -1,0 +1,11 @@
+
+Wrapper for Graph.container() using the default graph.
+
+```
+ tf.compat.v1.container(container_name)
+```
+#### Args:
+- `container_name`: The container string to use in the context.
+#### Returns:
+
+A context manager that specifies the default container to use for newly created stateful ops.
