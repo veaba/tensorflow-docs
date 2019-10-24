@@ -13,7 +13,7 @@ import re
 # tensorf_markdown="https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf"
 
 
-url = "https://tensorflow.google.cn/api_docs/python/tf/"
+url = "https://tensorflow.google.cn/api_docs/python/"
 
 
 # list 转字符
@@ -39,7 +39,6 @@ def can_write(file_path):
 
 def fn_parse_code(list_str, text):
     code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
-    reg_list = []
     reg_list = ['+', '.', '[', ']']
     # 再次转换
     for reg in reg_list:
@@ -164,8 +163,10 @@ def node_level(driver, contents=None, file_markdown_path=""):
                 f.write(text)
     # 手动关闭
     driver.quit()
+
+
 def go_webdriver(url_path, file_path):
-    start_time = time.time()
+    start_time1 = time.time()
     # 静默运行
     option = webdriver.ChromeOptions()
     option.add_argument("headless")
@@ -173,8 +174,8 @@ def go_webdriver(url_path, file_path):
     driver.get(url_path)
     node_level(driver, file_markdown_path=file_path)
     print('正在 go_webdriver')
-    end_time = time.time()
-    print(url_path+':::爬虫所需时间：', end_time - start_time)
+    end_time1 = time.time()
+    print(url_path + ':::爬虫所需时间：', end_time1 - start_time1)
 
 
 # https://www.tensorflow.org/api_docs/python/tf/AggregationMethod
@@ -183,31 +184,34 @@ def go_webdriver(url_path, file_path):
 # go_webdriver("https://www.tensorflow.org/api_docs/python/tf/argsort")
 
 
-def parent_path(parent, key_name):
+def parent_path(parent, key_name, task=None):
     asyncio.sleep(1)
     no_docs_path = re.sub(r'(../docs/)', '', parent)
     tf_path = re.sub(r"[.]", "/", no_docs_path)
     url_path = url + tf_path + re.sub(r"[.]", "/", key_name)
     page_url_re = re.sub(r"/Overview", "", url_path)
     page_url = re.sub(r"/All Symbols", "", page_url_re)
-    file_path_re = parent + 'tf/' + key_name
+    file_path_re = parent + key_name
+    # file_path_re = parent + 'tf/' + key_name
     file_path = re.sub(r' ', '_', file_path_re)
     # print("url:", url)
     # print("tf_path:", tf_path)
     # print("key_name:", key_name)
     print("爬取的页面：", page_url)
     print("写入的文件路径：", file_path)
+    # with open('test.yml', 'a') as f:
+    #     f.write(page_url+': "' + file_path + '"\n')
     go_webdriver(page_url, file_path + '.md')
 
 
 # handle(category[0]['tf'], "../docs/", parent_path)
 
 start_time = time.time()
-handle_async(category[0]['tf'], "../docs/", parent_path)
+handle_async(category, "../docs/", parent_path)
+# handle_async(category[0]['tf'], "../docs/", parent_path)
 end_time = time.time()
-#75s 两个
+# 75s 两个
 print('\n====== 总任务时间======：', end_time - start_time)
-
 
 # 29s 单个
 # go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/batch_to_space','../docs/tf/batch_to_space.md')
