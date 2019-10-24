@@ -6,8 +6,11 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 - 增加丢弃的模块标注或者移除
 - 发现tf目录文档重复，需要重爬这个目录 2019年10月11日16:29:15
 - 现在进入对比源文档阶段1%
-
-
+- All_Symbols.md 这个不知道干嘛了！
+    - F:\Github\tensorflow-docs\docs\tf.ragged\Overview.md
+    - F:\Github\tensorflow-docs\docs\tf.compat\v2\ragged\Overview.md
+    - F:\Github\tensorflow-docs\docs\tf.compat\v1\ragged\Overview.md
+    - F:\Github\tensorflow-docs\docs\All_Symbols.md
 ## TODO 额外：尝试迁移前端项目到Python平台
 
 已迁移到新的仓库：[pypackjs](https://github.com/veaba/pypackjs)
@@ -238,6 +241,90 @@ npm install
 cnpm run build
 
 ```
+### 举一反三：
+- 使用线程池，从超过24小时的爬虫任务（爬取2.56k个页面，20个线程）直接降低到只需3.2个小时(194分钟)
+![](images/196m-20pool.png)
+- 优化截断式、嵌套式代码判断时间冗余
+- 过滤无关翻译代码块，从990w+字符 降低到23w字符
+- TODO 优化：因为for 取节点，然后再写入，能不能一边写入一边读节点？
+- TODO 下面代码是一次改造，由于创建webdriver的时间不对，不能不能保存实例，下次直接调用即可
+    1、new 一个实例出来耗时1-10s不等
+    2、a 实例完成工作时候先不销毁，将实例存储到一个数组array里面
+    3、下一个任务，直接从数组array里面拿实例a过来使用，减少重复创建实例的时间
+```python
+# 实际优化的源码,尚未优化
+def go_webdriver(url_path, file_path):
+    if not can_write(file_path):
+        print("已存在文件，将忽略跳过：", file_path)
+        return
+    start_time1 = time.time()
+    # 静默运行,如果把下面这四行一直保持
+    # todo 然后转走driver.get去更换url，速度应该可以继续提升
+    option = webdriver.ChromeOptions()
+    option.add_argument("headless")
+    driver = webdriver.Chrome(options=option)
+    # todo 把这个driver 存储到一个数组里面，保存这个状态，然后下一次再取出来
+    driver.get(url_path)
+
+    node_level(driver, file_markdown_path=file_path)
+    # 在这里，将driver append 到driverQueueList里面去。只需要判断存在则继续调用，而不需要再次建立
+    print('正在 go_webdriver')
+    end_time1 = time.time()
+    print(url_path + ':::爬虫所需时间：', end_time1 - start_time1)
+```
+# 优化前的代码
+```python
+# 存储实例测试
+import time
+instanceList=[]
+
+class A:
+    def __init__(self):
+        instanceList.append(self)
+        time.sleep(1)
+    def go(self,i):
+        # time.sleep(1)
+        print(i,'我被实例化拉！',time.time())
+
+
+start=time.time()
+for i in range(10):
+    a=A()
+    a.go(i)
+instanceList=[] #销毁
+end=time.time()
+print(instanceList)
+print('消耗时间：',end-start) # 消耗时间： 1.0
+```
+
+优化后的代码
+````python
+# 存储实例测试
+import time
+instanceList=[]
+
+class A:
+    def __init__(self):
+        instanceList.append(self)
+        time.sleep(1)
+    def go(self,i):
+        # time.sleep(1)
+        print(i,'我被实例化拉！',time.time())
+
+
+start=time.time()
+for i in range(10):
+    if len(instanceList):
+        instanceList[0].go(i)
+    else:
+        a=A()
+        a.go(i)
+
+instanceList=[] #销毁
+end=time.time()
+print(instanceList)
+print('消耗时间：',end-start) # 消耗时间： 1.0
+````
 
 ## scripts 脚本目录
 

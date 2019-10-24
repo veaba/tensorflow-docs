@@ -2,16 +2,15 @@
 # 用于爬取tensorflow2.0文档
 # 目前先用于爬取文件，后续再翻译写入
 # 问题：如何处理python 的异步编程
+# 第一次改造：超过24小时
+# 第二次改造：2个小时+2.1k文件，20个线程
+# 第三次改造：200个线程
 import asyncio
 from selenium import webdriver
 from category import category
 from utils import handle, handle_async
 import time
 import re
-
-# url="https://www.tensorflow.org/api_docs/python/"
-# tensorf_markdown="https://github.com/tensorflow/docs/tree/r1.14/site/en/api_docs/python/tf"
-
 
 url = "https://tensorflow.google.cn/api_docs/python/"
 
@@ -39,7 +38,7 @@ def can_write(file_path):
 
 def fn_parse_code(list_str, text):
     code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
-    reg_list = ['+', '.', '[', ']']
+    reg_list = ['+', '.', '[', ']','((','))']
     # 再次转换
     for reg in reg_list:
         code_text_str = code_text_str.replace(reg, "\\" + reg)
@@ -54,18 +53,11 @@ def fn_parse_code(list_str, text):
         flag_str = flag_str + "\\" + str(item[0] + 1)
 
     reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
-    # print('code_text_str:', code_text_str)
-    # print('list_str:', list_str)
-    # print('flag_str:', flag_str)
-    # print('text:', text)
     return reg_text
 
 
 # 去解析node节点,返回markdown
 def node_level(driver, contents=None, file_markdown_path=""):
-    if not can_write(file_markdown_path):
-        print("已存在文件，将忽略跳过")
-        return
     if contents is None:
         contents = []
     html = driver.find_elements_by_css_selector(".devsite-article-body>*")
@@ -104,10 +96,9 @@ def node_level(driver, contents=None, file_markdown_path=""):
                         )
                     except Exception as err:
                         # todo ###################### p todo
-                        print("p标签异常：", err)
+                        # print("p标签异常：", err)
                         if len(node.text):
                             p_texts = []
-                            # TODO p标签下没有加点
                             try:
                                 codes_node = node.find_elements_by_css_selector("code")
                                 for code in codes_node:
@@ -115,18 +106,6 @@ def node_level(driver, contents=None, file_markdown_path=""):
                             except Exception as e2:
                                 print("p code：", e2)
                             if len(p_texts) > 0:
-                                # p_text_str = list_to_str(p_texts, "|")  # 转为字符 xxx|oo
-                                # reg_p_list=['+', '.', '[', ']']
-                                # # 转换字符 为 'M + 1'=> 'M \+ '
-                                # for reg in reg_p_list:
-                                #     p_text_str=p_text_str.replace(reg,"\\"+reg)
-
-                                # p_pattern_str = re.compile(r'' + p_text_str + '')
-                                # # 根据p_texts长度来转为标记位
-                                # mask_tag_str=''
-                                # for index,key in enumerate(p_texts):
-                                #     mask_tag_str=mask_tag_str+'\\'+str(index+1)
-                                # p_node_text = re.sub(p_pattern_str, "`" + mask_tag_str + "`", node.text)
                                 contents.append(fn_parse_code(p_texts, node.text) + '\n')
                             else:
                                 contents.append(node.text + '\n')
@@ -143,11 +122,9 @@ def node_level(driver, contents=None, file_markdown_path=""):
                                     li_texts.append('(' + code.text + ')')
                             except Exception as e2:
                                 print("code：", e2)
-                            # li_text_str = list_to_str(li_texts, "|")  # 转为字符 xxx|oo
-                            # pattern_str = re.compile(r'(' + li_text_str + ')')
-                            # node_text = re.sub(pattern_str, "`" + "\\1" + "`", li.text)
-                            # contents.append('- ' + node_text + '\n')
-                            contents.append('- ' + fn_parse_code(li_texts, li.text) + '\n')
+                            print("li_texts:",li_texts)
+                            print("li_text:",li.text)
+                            contents.append('- 22' + fn_parse_code(li_texts, li.text) + '\n')
                     # 编译后的正则
                     except Exception as e1:
                         print("li:", e1)
@@ -156,32 +133,32 @@ def node_level(driver, contents=None, file_markdown_path=""):
         print("啥错误:", e)
     # print("contents：", contents)
     print('去解析node节点,返回markdown，写入文件')
-    if can_write(file_markdown_path):
-        # 写入文件
-        for text in contents:
-            with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
-                f.write(text)
+    # 写入文件
+    for text in contents:
+        with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
+            f.write(text)
     # 手动关闭
     driver.quit()
 
 
 def go_webdriver(url_path, file_path):
+    if not can_write(file_path):
+        print("已存在文件，将忽略跳过：", file_path)
+        return
     start_time1 = time.time()
-    # 静默运行
+    # 静默运行,如果把下面这四行一直保持
+    # todo 然后转走driver.get去更换url，速度应该可以继续提升
     option = webdriver.ChromeOptions()
     option.add_argument("headless")
     driver = webdriver.Chrome(options=option)
+    # todo 把这个driver 存储到一个数组里面，保存这个状态，然后下一次再取出来
     driver.get(url_path)
+
     node_level(driver, file_markdown_path=file_path)
+    # 在这里，将driver append 到driverQueueList里面去。只需要判断存在则继续调用，而不需要再次建立
     print('正在 go_webdriver')
     end_time1 = time.time()
     print(url_path + ':::爬虫所需时间：', end_time1 - start_time1)
-
-
-# https://www.tensorflow.org/api_docs/python/tf/AggregationMethod
-# https://www.tensorflow.org/api_docs/python/tf
-# https://www.tensorflow.org/api_docs/python/tf/argsort
-# go_webdriver("https://www.tensorflow.org/api_docs/python/tf/argsort")
 
 
 def parent_path(parent, key_name, task=None):
@@ -192,26 +169,20 @@ def parent_path(parent, key_name, task=None):
     page_url_re = re.sub(r"/Overview", "", url_path)
     page_url = re.sub(r"/All Symbols", "", page_url_re)
     file_path_re = parent + key_name
-    # file_path_re = parent + 'tf/' + key_name
     file_path = re.sub(r' ', '_', file_path_re)
-    # print("url:", url)
-    # print("tf_path:", tf_path)
-    # print("key_name:", key_name)
     print("爬取的页面：", page_url)
     print("写入的文件路径：", file_path)
-    # with open('test.yml', 'a') as f:
-    #     f.write(page_url+': "' + file_path + '"\n')
     go_webdriver(page_url, file_path + '.md')
 
 
 # handle(category[0]['tf'], "../docs/", parent_path)
 
 start_time = time.time()
-handle_async(category, "../docs/", parent_path)
+# handle_async(category, "../docs/", parent_path)
 # handle_async(category[0]['tf'], "../docs/", parent_path)
 end_time = time.time()
 # 75s 两个
 print('\n====== 总任务时间======：', end_time - start_time)
 
 # 29s 单个
-# go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/batch_to_space','../docs/tf/batch_to_space.md')
+go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged','../docs/tf.compat/v1/ragged/Overview.md')
