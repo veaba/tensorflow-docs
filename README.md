@@ -10,6 +10,8 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 
 ## TODO 额外：尝试迁移前端项目到Python平台
 
+已迁移到新的仓库：[pypackjs](https://github.com/veaba/pypackjs)
+
 > vuepress build 构建本项目需要3个小时，所以想找一种替代方案来完成，之前尝试过python 的线程池 将工作效率提高20倍以上，这或许是一种方式
 
 
