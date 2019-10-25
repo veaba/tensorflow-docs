@@ -18,7 +18,9 @@ import re
 url = "https://tensorflow.google.cn/api_docs/python/"
 
 # 全局存储实例数组，Chrome driver的实例，TODO ，后续需要做重置掉
-DRIVER_INSTANCE_LIST=[]
+DRIVER_INSTANCE_LIST = []
+
+
 # list 转字符
 def list_to_str(str_list, code=""):
     if isinstance(str_list, list):
@@ -41,7 +43,7 @@ def can_write(file_path):
 # list_str 数组
 def fn_parse_code(list_str, text):
     for code in list_str:
-        text=text.replace(code,'`'+code+'`')
+        text = text.replace(code, '`' + code + '`')
     return text
 
 
@@ -121,24 +123,24 @@ def node_level(driver, contents=None, file_markdown_path=""):
     except Exception as e:
         print("啥错误:", e)
     # print("contents：", contents)
-    print('去解析node节点,返回markdown，写入文件')
+    print('===> 去解析node节点,返回markdown，写入文件')
     # 写入文件
     for text in contents:
         with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
             f.write(text)
     # 手动关闭，todo，为了让驱动继续存活，可能不能手动关闭？？
-    driver.quit()
+    # driver.quit()
 
 
 def go_webdriver(url_path, file_path):
     if not can_write(file_path):
-        print("已存在文件，将忽略跳过：", file_path)
+        print("===> 已存在文件，将忽略跳过：", file_path)
         return
     start_time1 = time.time()
     # TODO 下面的判断是通过存储临时实例来减少重复创建实例的时间
     if len(DRIVER_INSTANCE_LIST):
-        DRIVER_INSTANCE_LIST[0].get(url_path) # 提取第一个实例
-        node_level(DRIVER_INSTANCE_LIST[0], file_markdown_path=file_path)
+        DRIVER_INSTANCE_LIST[0].get(url_path)  # 提取第一个实例
+        node_level(DRIVER_INSTANCE_LIST[len(DRIVER_INSTANCE_LIST)-1], file_markdown_path=file_path)
     else:
         # 静默运行,如果把下面这四行一直保持
         # todo 然后转走driver.get去更换url，速度应该可以继续提升
@@ -151,9 +153,8 @@ def go_webdriver(url_path, file_path):
 
         node_level(driver, file_markdown_path=file_path)
         # 在这里，将driver append 到driverQueueList里面去。只需要判断存在则继续调用，而不需要再次建立
-    print('正在 go_webdriver')
     end_time1 = time.time()
-    print(url_path + ':::爬虫所需时间：', end_time1 - start_time1)
+    print('===> 爬虫所需时间：', end_time1 - start_time1)
 
 
 def parent_path(parent, key_name, task=None):
@@ -165,8 +166,8 @@ def parent_path(parent, key_name, task=None):
     page_url = re.sub(r"/All Symbols", "", page_url_re)
     file_path_re = parent + key_name
     file_path = re.sub(r' ', '_', file_path_re)
-    print("爬取的页面：", page_url)
-    print("写入的文件路径：", file_path)
+    print("===> 爬取的页面：", page_url)
+    print("===> 写入的文件路径：", file_path)
     go_webdriver(page_url, file_path + '.md')
 
 
@@ -175,8 +176,8 @@ def parent_path(parent, key_name, task=None):
 start_time = time.time()
 handle_async(category, "../docs/", parent_path)
 # 重置实例
-print('查看打印的实例长度：',len(DRIVER_INSTANCE_LIST))
-DRIVER_INSTANCE_LIST=[]
+print('查看打印的实例长度：', len(DRIVER_INSTANCE_LIST))
+DRIVER_INSTANCE_LIST = []
 # handle_async(category[0]['tf'], "../docs/", parent_path)
 
 
