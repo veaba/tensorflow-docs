@@ -2,6 +2,8 @@
 # 用于爬取tensorflow2.0文档
 # 目前先用于爬取文件，后续再翻译写入
 # 问题：如何处理python 的异步编程
+# 问题：由于反斜杠替换符等于100导致字符串溢出
+# 解决: 先去重li_texts，减少长度
 # 第一次改造：超过24小时
 # 第二次改造：2个小时+2.1k文件，20个线程
 # 第三次改造：200个线程
@@ -35,25 +37,35 @@ def can_write(file_path):
 
 # 返回 正则的字段函数
 # list_str 数组
-
 def fn_parse_code(list_str, text):
-    code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
-    reg_list = ['+', '.', '[', ']','((','))']
-    # 再次转换
-    for reg in reg_list:
-        code_text_str = code_text_str.replace(reg, "\\" + reg)
+    for code in list_str:
+        text=text.replace(code,'`'+code+'`')
+    return text
 
-    # 编译为正则
-    pattern_str = re.compile(r'' + code_text_str + '')
+# def fn_parse_code(list_str, text):
+#     code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
+#     reg_list = ['+', '.', '[', ']', '((', '))']
+#     # 再次转换
+#     for reg in reg_list:
+#         code_text_str = code_text_str.replace(reg, "\\" + reg)
 
-    # 根据list_str,转为\\1\\2
+#     # 编译为正则
+#     pattern_str = re.compile(r'' + code_text_str + '')
 
-    flag_str = ''
-    for item in enumerate(list_str):
-        flag_str = flag_str + "\\" + str(item[0] + 1)
+#     # 根据list_str,转为\\1\\2
 
-    reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
-    return reg_text
+#     flag_str = ''
+#     for item in enumerate(list_str):
+#         flag_str = flag_str + "\\" + str(item[0] + 1)
+
+#     # (\(ddd\))
+#     # flag_str ==>\\1\\2\\3
+#     reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
+#     print("flag_str:", flag_str)
+#     print("1111 pattern_str:", pattern_str)
+#     print("reg_text:", reg_text)
+#     print("text:", text)
+#     return reg_text
 
 
 # 去解析node节点,返回markdown
@@ -122,9 +134,9 @@ def node_level(driver, contents=None, file_markdown_path=""):
                                     li_texts.append('(' + code.text + ')')
                             except Exception as e2:
                                 print("code：", e2)
-                            print("li_texts:",li_texts)
-                            print("li_text:",li.text)
-                            contents.append('- 22' + fn_parse_code(li_texts, li.text) + '\n')
+                            print("li_texts:", li_texts)
+                            print("li_text:", li.text)
+                            contents.append('- ' + fn_parse_code(li_texts, li.text) + '\n')
                     # 编译后的正则
                     except Exception as e1:
                         print("li:", e1)
@@ -180,9 +192,11 @@ def parent_path(parent, key_name, task=None):
 start_time = time.time()
 # handle_async(category, "../docs/", parent_path)
 # handle_async(category[0]['tf'], "../docs/", parent_path)
+
+
+# 29s 单个
+go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged',
+             '../docs/tf.compat/v1/ragged/Overview.md')
 end_time = time.time()
 # 75s 两个
 print('\n====== 总任务时间======：', end_time - start_time)
-
-# 29s 单个
-go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged','../docs/tf.compat/v1/ragged/Overview.md')

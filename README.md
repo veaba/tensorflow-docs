@@ -7,10 +7,43 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 - 发现tf目录文档重复，需要重爬这个目录 2019年10月11日16:29:15
 - 现在进入对比源文档阶段1%
 - All_Symbols.md 这个不知道干嘛了！
+    - 给官方提供一个正则溢出bug：https://bugs.python.org/issue38582，由于使用八进制导致当双斜杠替换符//100 混淆了,但现阶段似乎不准备修复这个问题。
+    - 由于进制混淆的原因，准备限制到99就报错了，而不再支持超过99的双斜杠替换符
     - F:\Github\tensorflow-docs\docs\tf.ragged\Overview.md
     - F:\Github\tensorflow-docs\docs\tf.compat\v2\ragged\Overview.md
     - F:\Github\tensorflow-docs\docs\tf.compat\v1\ragged\Overview.md
     - F:\Github\tensorflow-docs\docs\All_Symbols.md
+
+```python
+# 替换后(过于简介，引起舒适，当初怎么想起一坨坨代码的。。。还第一个发现的python 正则溢出)：
+def fn_parse_code_after(list_str, text):
+    for code in list_str:
+        text=text.replace(code,'`'+code+'`')
+    return text
+
+# 替换前：
+def fn_parse_code_before(list_str, text):
+    code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
+    reg_list = ['+', '.', '[', ']', '((', '))']
+    # 再次转换
+    for reg in reg_list:
+        code_text_str = code_text_str.replace(reg, "\\" + reg)
+
+    # 编译为正则
+    pattern_str = re.compile(r'' + code_text_str + '')
+
+    # 根据list_str,转为\\1\\2
+
+    flag_str = ''
+    for item in enumerate(list_str):
+        flag_str = flag_str + "\\" + str(item[0] + 1)
+
+    # (\(ddd\))
+    # flag_str ==>\\1\\2\\3
+    reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
+    return reg_text
+
+```
 ## TODO 额外：尝试迁移前端项目到Python平台
 
 已迁移到新的仓库：[pypackjs](https://github.com/veaba/pypackjs)
