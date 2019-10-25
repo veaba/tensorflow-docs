@@ -91,7 +91,7 @@ def handle_async(array, parent, fn, task=None):
             fn(parent, obj)
             # pool.submit(fn, parent, obj)
             # loop.run_until_complete(fn(parent,obj))
-    pool=ThreadPool(processes=20)
+    pool=ThreadPool(processes=200)
     pool.map(process,(obj for obj in array))
     pool.close()
 

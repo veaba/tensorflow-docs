@@ -5,8 +5,9 @@
 # 问题：由于反斜杠替换符等于100导致字符串溢出
 # 解决: 先去重li_texts，减少长度
 # 第一次改造：超过24小时
-# 第二次改造：2个小时+2.1k文件，20个线程
-# 第三次改造：200个线程
+# 第二次改造：3.2个小时，20个线程
+# TODO第三次改造：200个线程，优化Python溢出问题，截断式组件多调用函数
+# TODO第四次改造：500个线程，存储实例，再次调用实例，减少创建实例的时间，溢出无关打印，减少IO调用
 import asyncio
 from selenium import webdriver
 from category import category
@@ -16,7 +17,8 @@ import re
 
 url = "https://tensorflow.google.cn/api_docs/python/"
 
-
+# 全局存储实例数组，Chrome driver的实例，TODO ，后续需要做重置掉
+DRIVER_INSTANCE_LIST=[]
 # list 转字符
 def list_to_str(str_list, code=""):
     if isinstance(str_list, list):
@@ -41,31 +43,6 @@ def fn_parse_code(list_str, text):
     for code in list_str:
         text=text.replace(code,'`'+code+'`')
     return text
-
-# def fn_parse_code(list_str, text):
-#     code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
-#     reg_list = ['+', '.', '[', ']', '((', '))']
-#     # 再次转换
-#     for reg in reg_list:
-#         code_text_str = code_text_str.replace(reg, "\\" + reg)
-
-#     # 编译为正则
-#     pattern_str = re.compile(r'' + code_text_str + '')
-
-#     # 根据list_str,转为\\1\\2
-
-#     flag_str = ''
-#     for item in enumerate(list_str):
-#         flag_str = flag_str + "\\" + str(item[0] + 1)
-
-#     # (\(ddd\))
-#     # flag_str ==>\\1\\2\\3
-#     reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
-#     print("flag_str:", flag_str)
-#     print("1111 pattern_str:", pattern_str)
-#     print("reg_text:", reg_text)
-#     print("text:", text)
-#     return reg_text
 
 
 # 去解析node节点,返回markdown
@@ -134,8 +111,8 @@ def node_level(driver, contents=None, file_markdown_path=""):
                                     li_texts.append('(' + code.text + ')')
                             except Exception as e2:
                                 print("code：", e2)
-                            print("li_texts:", li_texts)
-                            print("li_text:", li.text)
+                            # print("li_texts:", li_texts)
+                            # print("li_text:", li.text)
                             contents.append('- ' + fn_parse_code(li_texts, li.text) + '\n')
                     # 编译后的正则
                     except Exception as e1:
@@ -149,7 +126,7 @@ def node_level(driver, contents=None, file_markdown_path=""):
     for text in contents:
         with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
             f.write(text)
-    # 手动关闭
+    # 手动关闭，todo，为了让驱动继续存活，可能不能手动关闭？？
     driver.quit()
 
 
@@ -158,16 +135,22 @@ def go_webdriver(url_path, file_path):
         print("已存在文件，将忽略跳过：", file_path)
         return
     start_time1 = time.time()
-    # 静默运行,如果把下面这四行一直保持
-    # todo 然后转走driver.get去更换url，速度应该可以继续提升
-    option = webdriver.ChromeOptions()
-    option.add_argument("headless")
-    driver = webdriver.Chrome(options=option)
-    # todo 把这个driver 存储到一个数组里面，保存这个状态，然后下一次再取出来
-    driver.get(url_path)
+    # TODO 下面的判断是通过存储临时实例来减少重复创建实例的时间
+    if len(DRIVER_INSTANCE_LIST):
+        DRIVER_INSTANCE_LIST[0].get(url_path) # 提取第一个实例
+        node_level(DRIVER_INSTANCE_LIST[0], file_markdown_path=file_path)
+    else:
+        # 静默运行,如果把下面这四行一直保持
+        # todo 然后转走driver.get去更换url，速度应该可以继续提升
+        option = webdriver.ChromeOptions()
+        option.add_argument("headless")
+        driver = webdriver.Chrome(options=option)
+        # todo 把这个driver 存储到一个数组里面，保存这个状态，然后下一次再取出来
+        DRIVER_INSTANCE_LIST.append(driver)
+        driver.get(url_path)
 
-    node_level(driver, file_markdown_path=file_path)
-    # 在这里，将driver append 到driverQueueList里面去。只需要判断存在则继续调用，而不需要再次建立
+        node_level(driver, file_markdown_path=file_path)
+        # 在这里，将driver append 到driverQueueList里面去。只需要判断存在则继续调用，而不需要再次建立
     print('正在 go_webdriver')
     end_time1 = time.time()
     print(url_path + ':::爬虫所需时间：', end_time1 - start_time1)
@@ -190,13 +173,16 @@ def parent_path(parent, key_name, task=None):
 # handle(category[0]['tf'], "../docs/", parent_path)
 
 start_time = time.time()
-# handle_async(category, "../docs/", parent_path)
+handle_async(category, "../docs/", parent_path)
+# 重置实例
+print('查看打印的实例长度：',len(DRIVER_INSTANCE_LIST))
+DRIVER_INSTANCE_LIST=[]
 # handle_async(category[0]['tf'], "../docs/", parent_path)
 
 
 # 29s 单个
-go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged',
-             '../docs/tf.compat/v1/ragged/Overview.md')
+# go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged',
+#              '../docs/tf.compat/v1/ragged/Overview.md')
 end_time = time.time()
 # 75s 两个
 print('\n====== 总任务时间======：', end_time - start_time)
