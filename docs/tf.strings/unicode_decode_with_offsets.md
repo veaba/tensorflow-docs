@@ -1,0 +1,41 @@
+Decodes each string into a sequence of code points with start offsets.
+### Aliases:
+- tf.compat.v1.strings.unicode_decode_with_offsets
+- tf.compat.v2.strings.unicode_decode_with_offsets
+
+```
+ tf.strings.unicode_decode_with_offsets(
+    input,
+    input_encoding,
+    errors='replace',
+    replacement_char=65533,
+    replace_control_characters=False,
+    name=None
+)
+```
+### Used in the tutorials:
+- Unicode strings
+This op is similar to tf.strings.decode(...), but it also returns the start offset for each character in its respective string. This information can be used to align the characters with the original byte sequence.
+Returns a tuple (codepoints, start_offsets) where:
+- codepoints[i1...iN, j] is the Unicode codepoint for the jth character in input[i1...iN], when decoded using input_encoding.
+- start_offsets[i1...iN, j] is the start byte offset for the jth character in input[i1...iN], when decoded using input_encoding.
+#### Args:
+- input: An N dimensional potentially ragged string tensor with shape [D1...DN]. N must be statically known.
+- input_encoding: String name for the unicode encoding that should be used to decode each string.
+- errors: Specifies the response when an input string can't be converted using the indicated encoding. One of:
+'strict': Raise an exception for any illegal substrings.
+'replace': Replace illegal substrings with replacement_char.
+'ignore': Skip illegal substrings.
+- 'strict': Raise an exception for any illegal substrings.
+- 'replace': Replace illegal substrings with replacement_char.
+- 'ignore': Skip illegal substrings.
+- replacement_char: The replacement codepoint to be used in place of invalid substrings in input when errors='replace'; and in place of C0 control characters in input when replace_control_characters=True.
+- replace_control_characters: Whether to replace the C0 control characters (U+0000 - U+001F) with the replacement_char.
+- name: A name for the operation (optional).
+#### Returns:
+A tuple of N+1 dimensional tensors (codepoints, start_offsets).
+- codepoints is an int32 tensor with shape [D1...DN, (num_chars)].
+- offsets is an int64 tensor with shape [D1...DN, (num_chars)].
+[tf.Tensor](https://tensorflow.google.cn/api_docs/python/tf/Tensor)The returned tensors are s if input is a scalar, or tf.RaggedTensors otherwise.
+
+#### Example:

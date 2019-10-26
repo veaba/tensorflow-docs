@@ -1,0 +1,45 @@
+## Class Concatenate
+Layer that concatenates a list of inputs.
+### Aliases:
+- Class tf.compat.v1.keras.layers.Concatenate
+- Class tf.compat.v2.keras.layers.Concatenate
+### Used in the tutorials:
+- Pix2Pix
+- Image segmentation
+It takes as input a list of tensors, all of the same shape except for the concatenation axis, and returns a single tensor, the concatenation of all inputs.
+#### Arguments:
+- axis: Axis along which to concatenate.
+- **kwargs: standard layer keyword arguments.
+## __init__
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L368-L372)
+
+
+```
+ __init__(
+    axis=-1,
+    **kwargs
+)
+```
+Functional interface to the Concatenate layer.
+### Aliases:
+- tf.compat.v1.keras.layers.concatenate
+- tf.compat.v2.keras.layers.concatenate
+
+```
+ tf.keras.layers.concatenate(
+    inputs,
+    axis=-1,
+    **kwargs
+)
+```
+### Used in the guide:
+- The Keras functional API in TensorFlow
+- Train and evaluate with Keras
+### Used in the tutorials:
+- Pix2Pix
+#### Arguments:
+- inputs: A list of input tensors (at least 2).
+- axis: Concatenation axis.
+- **kwargs: Standard layer keyword arguments.
+#### Returns:
+A tensor, the concatenation of the inputs alongside axis axis.

@@ -1,0 +1,34 @@
+[tf.compat.v1.scatter_update](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/scatter_update)Generalization of  to axis different than 0. (deprecated)
+
+
+```
+ tf.compat.v1.batch_scatter_update(
+    ref,
+    indices,
+    updates,
+    use_locking=True,
+    name=None
+)
+```
+Analogous to batch_gather. This assumes that ref, indices and updates have a series of leading dimensions that are the same for all of them, and the updates are performed on the last dimension of indices. In other words, the dimensions should be the following:
+num_prefix_dims = indices.ndims - 1 batch_dim = num_prefix_dims + 1 updates.shape = indices.shape + var.shape[batch_dim:]
+where
+updates.shape[:num_prefix_dims] == indices.shape[:num_prefix_dims] == var.shape[:num_prefix_dims]
+And the operation performed can be expressed as:
+var[i_1, ..., i_n, indices[i_1, ..., i_n, j]] = updates[i_1, ..., i_n, j]
+[tf.compat.v1.scatter_update](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/scatter_update)When indices is a 1D tensor, this operation is equivalent to .
+
+[tf.reshape](https://tensorflow.google.cn/api_docs/python/tf/reshape)To avoid this operation there would be 2 alternatives: 1) Reshaping the variable by merging the first ndims dimensions. However, this is not possible because  returns a Tensor, which we cannot use tf.compat.v1.scatter_update on. 2) Looping over the first ndims of the variable and using tf.compat.v1.scatter_update on the subtensors that result of slicing the first dimension. This is a valid option for ndims = 1, but less efficient than this implementation.
+
+[tf.compat.v1.scatter_update](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/scatter_update)See also  and tf.compat.v1.scatter_nd_update.
+
+#### Args:
+- ref: Variable to scatter onto.
+- indices: Tensor containing indices as described above.
+- updates: Tensor of updates to apply to ref.
+- use_locking: Boolean indicating whether to lock the writing operation.
+- name: Optional scope name string.
+#### Returns:
+Ref to variable after it has been modified.
+#### Raises:
+- ValueError: If the initial ndims of ref, indices, and updates are not the same.

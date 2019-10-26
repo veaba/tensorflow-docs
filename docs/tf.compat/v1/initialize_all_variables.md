@@ -1,0 +1,7 @@
+[tf.compat.v1.global_variables_initializer](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/global_variables_initializer)See . (deprecated)
+
+
+```
+ tf.compat.v1.initialize_all_variables()
+```
+NOTE The output of this function should be used. If it is not, a warning will be logged. To mark the output as used, call its .mark_used() method.
