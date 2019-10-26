@@ -284,10 +284,17 @@ cnpm run build
 |第四次|异步，存储实例，移除无关打印|引入线程池，调用200个线程，2602个文件，2.3个小时，8322.792520046234s
 |第五次|异步，存储实例，移除无关打印|引入线程池，调用1000个线程，2602个文件，2.2个小时,8020.099550962448
 |第六次|异步，存储实例，移除无关打印|引入线程池，调用8个线程，2602个文件，2.27个小时,8187.604654073715
+|第七次|异步，存储实例，移除无关打印|引入线程池，调用8个线程，100个文件，无递归，152s不等
+|第七次|异步，存储实例，移除无关打印|引入线程池，调用16个线程，100个文件，无递归，104s、111s、116不等
+|第八次|异步，存储实例，移除无关打印|引入线程池，调用20个线程，100个文件，无递归，104s、303s不等
+|第九次|异步，存储实例，移除无关打印|引入线程池，调用30个线程，100个文件，无递归，250s不等
+|第十次|异步，存储实例，移除无关打印|引入线程池，调用50个线程，100个文件，无递归，278s、2974s不等
+|第十一次|异步，存储实例，移除无关打印|引入线程池，调用100个线程，100个文件，无递归，116s不等
 
 ### 举一反三：
 - 使用线程池，从超过24小时的爬虫任务（爬取2.56k个页面，20个线程）直接降低到只需3.2个小时(194分钟)
 ![](images/196m-20pool.png)
+
 - 优化截断式、嵌套式代码判断时间冗余
 - 过滤无关翻译代码块，从990w+字符 降低到23w字符
 - TODO 优化：因为for 取节点，然后再写入，能不能一边写入一边读节点？
@@ -316,6 +323,26 @@ def go_webdriver(url_path, file_path):
     end_time1 = time.time()
     print(url_path + ':::爬虫所需时间：', end_time1 - start_time1)
 ```
+
+- 使用实例存储竟然无法增加时间，
+```python
+ # TODO 下面的判断是通过存储临时实例来减少重复创建实例的时间
+    if len(DRIVER_INSTANCE_LIST):
+        DRIVER_INSTANCE_LIST[len(DRIVER_INSTANCE_LIST)-1].get(url_path)  # 提取第一个实例
+        node_level(DRIVER_INSTANCE_LIST[len(DRIVER_INSTANCE_LIST)-1], file_markdown_path=file_path)
+    else:
+        # 静默运行,如果把下面这四行一直保持
+        # todo 然后转走driver.get去更换url，速度应该可以继续提升
+        option = webdriver.ChromeOptions()
+        option.add_argument("headless")
+        driver = webdriver.Chrome(options=option)
+        # todo 把这个driver 存储到一个数组里面，保存这个状态，然后下一次再取出来
+        DRIVER_INSTANCE_LIST.append(driver)
+        driver.get(url_path)
+        node_level(driver, file_markdown_path=file_path)
+        # 在这里，将driver append 到driverQueueList里面去。只需要判断存在则继续调用，而不需要再次建立
+```
+
 # 优化前的代码
 ```python
 # 存储实例测试

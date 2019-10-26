@@ -4,7 +4,6 @@ import hashlib
 import requests
 from config import appid
 from config import key
-from concurrent.futures import ThreadPoolExecutor
 from multiprocessing.pool import ThreadPool
 import time
 from category import category
@@ -158,12 +157,16 @@ def flag_write(parent, key_name, task=None):
         f.write('"' + page_url + '":' + '"' + file_path + '"' + ',\n')
 
 
+def remove_docs_path(parent):
+    return re.sub(r'(../docs/)', '', parent)
+
+
 # 生成扁平化category_array
 # flag_category(category, '../docs/', flag_write)
 
 #
 def handle_async_flat(obj, fn):
-    pool = ThreadPool(processes=200)
+    pool = ThreadPool(processes=16)
     # pool.map(fn, ((i,99) for i in range(10)))
     pool.map(fn, (key for key in obj))
     pool.close()
