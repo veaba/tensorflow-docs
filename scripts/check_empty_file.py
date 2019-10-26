@@ -6,7 +6,7 @@ from utils import handle
 paths = []
 
 
-def parent_path(parent, key_name):
+def parent_path(parent, key_name,task=None):
     file_path_re = parent + key_name
     file_path = re.sub(r' ', '_', file_path_re)
     # print("文件路径：",file_path+".md")

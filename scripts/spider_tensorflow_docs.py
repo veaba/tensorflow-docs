@@ -11,7 +11,8 @@
 import asyncio
 from selenium import webdriver
 from category import category
-from utils import handle, handle_async
+from category_array import category_array
+from utils import handle, handle_async, handle_async_flat
 import time
 import re
 
@@ -121,7 +122,7 @@ def node_level(driver, contents=None, file_markdown_path=""):
                         print("li:", e1)
 
     except Exception as e:
-        print("啥错误:", e)
+        print("===> 啥错误:", e)
     # print("contents：", contents)
     print('===> 去解析node节点,返回markdown，写入文件')
     # 写入文件
@@ -132,7 +133,11 @@ def node_level(driver, contents=None, file_markdown_path=""):
     # driver.quit()
 
 
-def go_webdriver(url_path, file_path):
+def go_webdriver(url_path, file_path=None):
+    asyncio.sleep(0.1)
+    print(url_path, file_path)
+    file_path=category_array[url_path]+'.md'
+    # return
     if not can_write(file_path):
         print("===> 已存在文件，将忽略跳过：", file_path)
         return
@@ -140,7 +145,7 @@ def go_webdriver(url_path, file_path):
     # TODO 下面的判断是通过存储临时实例来减少重复创建实例的时间
     if len(DRIVER_INSTANCE_LIST):
         DRIVER_INSTANCE_LIST[0].get(url_path)  # 提取第一个实例
-        node_level(DRIVER_INSTANCE_LIST[len(DRIVER_INSTANCE_LIST)-1], file_markdown_path=file_path)
+        node_level(DRIVER_INSTANCE_LIST[len(DRIVER_INSTANCE_LIST) - 1], file_markdown_path=file_path)
     else:
         # 静默运行,如果把下面这四行一直保持
         # todo 然后转走driver.get去更换url，速度应该可以继续提升
@@ -174,12 +179,18 @@ def parent_path(parent, key_name, task=None):
 # handle(category[0]['tf'], "../docs/", parent_path)
 
 start_time = time.time()
-handle_async(category, "../docs/", parent_path)
+# handle_async(category, "../docs/", parent_path)
 # 重置实例
-print('查看打印的实例长度：', len(DRIVER_INSTANCE_LIST))
+print('===> 查看打印的实例长度：', len(DRIVER_INSTANCE_LIST))
 DRIVER_INSTANCE_LIST = []
+
+
 # handle_async(category[0]['tf'], "../docs/", parent_path)
 
+# flat 扁平化处理
+
+
+handle_async_flat(category_array, go_webdriver)
 
 # 29s 单个
 # go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged',
