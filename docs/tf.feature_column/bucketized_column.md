@@ -1,7 +1,7 @@
 Represents discretized dense input.
 ### Aliases:
-- tf.compat.v1.feature_column.bucketized_column
-- tf.compat.v2.feature_column.bucketized_column
+- `tf.compat.v1.feature_column.bucketized_column`
+- `tf.compat.v2.feature_column.bucketized_column`
 
 ```
  tf.feature_column.bucketized_column(
@@ -10,8 +10,8 @@ Represents discretized dense input.
 )
 ```
 ### Used in the tutorials:
-- Classify structured data with feature columns
-Buckets include the left boundary, and exclude the right boundary. Namely, boundaries=[0., 1., 2.] generates buckets (-inf, 0.), [0., 1.), [1., 2.), and [2., +inf).
+- ``C``l``a``s``s``i``f``y`` ``s``t``r``u``c``t``u``r``e``d`` ``d``a``t``a`` ``w``i``t``h`` ``f``e``a``t``u``r``e`` ``c``o``l``u``m``n``s``
+Buckets include the left boundary, and exclude the right boundary. Namely, `boundaries=[0., 1., 2.]` generates buckets `-inf, 0.)`, `[0., 1.)`, `[1., 2.)`, and `[2., +inf)`.
 For example, if the inputs are
 
 ```
@@ -41,7 +41,7 @@ columns = [bucketized_price, ...]
 features = tf.io.parse_example(..., features=make_parse_example_spec(columns))
 dense_tensor = input_layer(features, columns)
 ```
-bucketized_column can also be crossed with another categorical column using crossed_column:
+`bucketized_column` can also be crossed with another categorical column using `crossed_column`:
 
 ```
  price = numeric_column('price')
@@ -54,10 +54,10 @@ features = tf.io.parse_example(..., features=make_parse_example_spec(columns))
 linear_prediction = linear_model(features, columns)
 ```
 #### Args:
-- source_column: A one-dimensional dense column which is generated with numeric_column.
-- boundaries: A sorted list or tuple of floats specifying the boundaries.
+- `source_column`: A one-dimensional dense column which is generated with `numeric_column`.
+- `boundaries`: A sorted list or tuple of floats specifying the `boundaries`.
 #### Returns:
-A BucketizedColumn.
+A `BucketizedColumn`.
 #### Raises:
-- ValueError: If source_column is not a numeric column, or if it is not one-dimensional.
-- ValueError: If boundaries is not a sorted list or tuple.
+- `ValueError`: If `source_column` is not a numeric column, or if it is not one-dimensional.
+- `ValueError`: If `boundaries` is not a sorted list or tuple.

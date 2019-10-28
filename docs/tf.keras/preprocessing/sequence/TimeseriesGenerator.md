@@ -1,10 +1,9 @@
 ## Class TimeseriesGenerator
 Utility class for generating batches of temporal data.
-[Sequence](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)Inherits From: 
-
+Inherits From: `Sequence`
 ### Aliases:
-- Class tf.compat.v1.keras.preprocessing.sequence.TimeseriesGenerator
-- Class tf.compat.v2.keras.preprocessing.sequence.TimeseriesGenerator
+- Class `tf.compat.v1.keras.preprocessing.sequence.TimeseriesGenerator`
+- Class `tf.compat.v2.keras.preprocessing.sequence.TimeseriesGenerator`
 This class takes in a sequence of data-points gathered at equal intervals, along with time series parameters such as stride, length of history, etc., to produce batches for training/validation.
 # Arguments
 
@@ -84,8 +83,7 @@ Initialize self. See help(type(self)) for accurate signature.
  __getitem__(index)
 ```
 ### __iter__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L403-L406)
-
+View source
 
 ```
  __iter__()
@@ -108,8 +106,7 @@ Returns the TimeseriesGenerator configuration as Python dictionary.
  A Python dictionary with the TimeseriesGenerator configuration.
 ```
 ### on_epoch_end
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L398-L401)
-
+View source
 
 ```
  on_epoch_end()
@@ -119,16 +116,4 @@ Method called at the end of every epoch.
 
 ```
  to_json(**kwargs)
-```
-Returns a JSON string containing the timeseries generator configuration. To load a generator from a JSON string, use keras.preprocessing.sequence.timeseries_generator_from_json(json_string).
-# Arguments
-
-```
- **kwargs: Additional keyword arguments
-    to be passed to `json.dumps()`.
-```
-# Returns
-
-```
- A JSON string containing the tokenizer configuration.
 ```

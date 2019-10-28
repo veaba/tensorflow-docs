@@ -1,4 +1,4 @@
-Returns True if resource variables are enabled.
+Returns `True` if resource variables are enabled.
 
 ```
  tf.compat.v1.resource_variables_enabled()

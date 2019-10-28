@@ -1,7 +1,7 @@
 Performs a random brightness shift.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.random_brightness
-- tf.compat.v2.keras.preprocessing.image.random_brightness
+- `tf.compat.v1.keras.preprocessing.image.random_brightness`
+- `tf.compat.v2.keras.preprocessing.image.random_brightness`
 
 ```
  tf.keras.preprocessing.image.random_brightness(

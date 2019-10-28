@@ -1,5 +1,5 @@
 ### Aliases:
-- tf.compat.v2.strings.length
+- `tf.compat.v2.strings.length`
 
 ```
  tf.strings.length(
@@ -9,4 +9,4 @@
 )
 ```
 ### Used in the tutorials:
-- Unicode strings
+- ``U``n``i``c``o``d``e`` ``s``t``r``i``n``g``s``

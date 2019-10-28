@@ -8,8 +8,6 @@ Builds part of a computation outside any current TPU replicate scope.
 )
 ```
 #### Args:
-- computation: A Python function that builds the computation to place on the host.
-- *args: the positional arguments for the computation.
-- **kwargs: the keyword arguments for the computation.
+- `computation`: A Python function that builds the `computation` to place on the host.
 #### Returns:
 The Tensors returned by computation.

@@ -1,9 +1,9 @@
-Defined in generated file: python/ops/gen_array_ops.py
-Scatter updates into an existing tensor according to indices.
+Defined in generated file: `python/ops/gen_array_ops.py`
+Scatter `updates` into an existing tensor according to `indices`.
 ### Aliases:
-- tf.compat.v1.tensor_scatter_nd_update
-- tf.compat.v1.tensor_scatter_update
-- tf.compat.v2.tensor_scatter_nd_update
+- `tf.compat.v1.tensor_scatter_nd_update`
+- `tf.compat.v1.tensor_scatter_update`
+- `tf.compat.v2.tensor_scatter_nd_update`
 
 ```
  tf.tensor_scatter_nd_update(
@@ -13,16 +13,15 @@ Scatter updates into an existing tensor according to indices.
     name=None
 )
 ```
-[tf.scatter_nd](https://tensorflow.google.cn/api_docs/python/tf/scatter_nd)This operation creates a new tensor by applying sparse updates to the passed in tensor. This operation is very similar to , except that the updates are scattered onto an existing tensor (as opposed to a zero-tensor). If the memory for the existing tensor cannot be re-used, a copy is made and updated.
-
-If indices contains duplicates, then their updates are accumulated (summed).
-WARNING: The order in which updates are applied is nondeterministic, so the output will be nondeterministic if indices contains duplicates -- because of some numerical approximation issues, numbers summed in different order may yield different results.
-indices is an integer tensor containing indices into a new tensor of shape shape. The last dimension of indices can be at most the rank of shape:
+This operation creates a new `tensor` by applying sparse `updates` to the passed in `tensor`. This operation is very similar to `tf.scatter_nd`, except that the `updates` are scattered onto an existing `tensor` (as opposed to a zero-`tensor`). If the memory for the existing `tensor` cannot be re-used, a copy is made and updated.
+If `indices` contains duplicates, then their updates are accumulated (summed).
+WARNING: The order in which updates are applied is nondeterministic, so the output will be nondeterministic if `indices` contains duplicates -- because of some numerical approximation issues, numbers summed in different order may yield different results.
+`indices` is an integer tensor containing `indices` into a new tensor of `shape` `shape`. The last dimension of `indices` can be at most the rank of `shape`:
 
 ```
  indices.shape[-1] <= shape.rank
 ```
-The last dimension of indices corresponds to indices into elements (if indices.shape[-1] = shape.rank) or slices (if indices.shape[-1] < shape.rank) along dimension indices.shape[-1] of shape. updates is a tensor with shape
+The last dimension of `indices` corresponds to `indices` into elements (if `indices`.`shape`[-1] = `shape`.rank) or slices (if `indices`.`shape`[-1] < `shape`.rank) along dimension `indices`.`shape`[-1] of `shape`. `updates` is a tensor with `shape`
 
 ```
  indices.shape[:-1] + shape[indices.shape[-1]:]
@@ -67,9 +66,9 @@ The resulting tensor would look like this:
 ```
 Note that on CPU, if an out of bound index is found, an error is returned. On GPU, if an out of bound index is found, the index is ignored.
 #### Args:
-- tensor: A Tensor. Tensor to copy/update.
-- indices: A Tensor. Must be one of the following types: int32, int64. Index tensor.
-- updates: A Tensor. Must have the same type as tensor. Updates to scatter into output.
-- name: A name for the operation (optional).
+- `tensor`: A `Tensor`. `Tensor` to copy/update.
+- `indices`: A `Tensor`. Must be one of the following types: `int32`, `int64`. Index tensor.
+- `updates`: A `Tensor`. Must have the same type as `tensor`. Updates to scatter into output.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as tensor.
+A `Tensor`. Has the same type as `tensor`.

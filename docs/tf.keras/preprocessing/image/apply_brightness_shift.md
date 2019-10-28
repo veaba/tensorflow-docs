@@ -1,7 +1,7 @@
 Performs a brightness shift.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.apply_brightness_shift
-- tf.compat.v2.keras.preprocessing.image.apply_brightness_shift
+- `tf.compat.v1.keras.preprocessing.image.apply_brightness_shift`
+- `tf.compat.v2.keras.preprocessing.image.apply_brightness_shift`
 
 ```
  tf.keras.preprocessing.image.apply_brightness_shift(

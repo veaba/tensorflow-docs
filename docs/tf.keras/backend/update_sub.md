@@ -1,6 +1,7 @@
-Update the value of x by subtracting decrement.
-- tf.compat.v1.keras.backend.update_sub
-- tf.compat.v2.keras.backend.update_sub
+Update the value of `x` by subtracting `decrement`.
+### Aliases:
+- `tf.compat.v1.keras.backend.update_sub`
+- `tf.compat.v2.keras.backend.update_sub`
 
 ```
  tf.keras.backend.update_sub(
@@ -9,7 +10,7 @@ Update the value of x by subtracting decrement.
 )
 ```
 #### Arguments:
-- x: A Variable.
-- decrement: A tensor of same shape as x.
+- `x`: A Variable.
+- `decrement`: A tensor of same shape as `x`.
 #### Returns:
-The variable x updated.
+The variable `x` updated.

@@ -1,11 +1,10 @@
 ## Class TFDecorator
 Base class for all TensorFlow decorators.
 ### Aliases:
-- Class tf.compat.v1.app.flags.tf_decorator.TFDecorator
+- Class `tf.compat.v1.app.flags.tf_decorator.TFDecorator`
 TFDecorator captures and exposes the wrapped target, and provides details about the current decorator.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_decorator.py#L236-L254)
-
+View source
 
 ```
  __init__(
@@ -23,8 +22,7 @@ Initialize self. See help(type(self)) for accurate signature.
 ### decorator_name
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_decorator.py#L259-L260)
-
+View source
 
 ```
  __call__(

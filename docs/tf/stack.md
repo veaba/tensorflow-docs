@@ -1,7 +1,7 @@
-Stacks a list of rank-R tensors into one rank-(R+1) tensor.
+Stacks a list of rank-`R` tensors into one rank-`R+1)` tensor.
 ### Aliases:
-- tf.compat.v1.stack
-- tf.compat.v2.stack
+- `tf.compat.v1.stack`
+- `tf.compat.v2.stack`
 
 ```
  tf.stack(
@@ -11,15 +11,15 @@ Stacks a list of rank-R tensors into one rank-(R+1) tensor.
 )
 ```
 ### Used in the guide:
-- tf.data: Build TensorFlow input pipelines
-- The Keras functional API in TensorFlow
+- ``t``f``.``d``a``t``a``:`` ``B``u``i``l``d`` ``T``e``n``s``o``r``F``l``o``w`` ``i``n``p``u``t`` ``p``i``p``e``l``i``n``e``s``
+- ``T``h``e`` ``K``e``r``a``s`` ``f``u``n``c``t``i``o``n``a``l`` ``A``P``I`` ``i``n`` ``T``e``n``s``o``r``F``l``o``w``
 ### Used in the tutorials:
-- Custom training: walkthrough
-- Load CSV data
-- Pix2Pix
-- Load a pandas.DataFrame
-Packs the list of tensors in values into a tensor with rank one higher than each tensor in values, by packing them along the axis dimension. Given a list of length N of tensors of shape (A, B, C);
-if axis == 0 then the output tensor will have the shape (N, A, B, C). if axis == 1 then the output tensor will have the shape (A, N, B, C). Etc.
+- ``C``u``s``t``o``m`` ``t``r``a``i``n``i``n``g``:`` ``w``a``l``k``t``h``r``o``u``g``h``
+- ``L``o``a``d`` ``C``S``V`` ``d``a``t``a``
+- ``P``i``x``2``P``i``x``
+- ``L``o``a``d`` ``a`` ``p``a``n``d``a``s``.``D``a``t``a``F``r``a``m``e``
+Packs the list of tensors in `values` into a tensor with rank one higher than each tensor in `values`, by packing them along the `axis` dimension. Given a list of length `N` of tensors of shape `A, B, C)`;
+if `axis == 0` then the `output` tensor will have the shape `N, A, B, C)`. if `axis == 1` then the `output` tensor will have the shape `A, N, B, C)`. Etc.
 #### For example:
 
 ```
@@ -35,10 +35,10 @@ This is the opposite of unstack. The numpy equivalent is
  tf.stack([x, y, z]) = np.stack([x, y, z])
 ```
 #### Args:
-- values: A list of Tensor objects with the same shape and type.
-- axis: An int. The axis to stack along. Defaults to the first dimension. Negative values wrap around, so the valid range is [-(R+1), R+1).
-- name: A name for this operation (optional).
+- `values`: A list of `Tensor` objects with the same shape and type.
+- `axis`: An `int`. The `axis` to stack along. Defaults to the first dimension. Negative values wrap around, so the valid range is [-(R+1), R+1).
+- `name`: A `name` for this operation (optional).
 #### Returns:
-- output: A stacked Tensor with the same type as values.
+- `output`: A stacked `Tensor` with the same type as `values`.
 #### Raises:
-- ValueError: If axis is out of the range [-(R+1), R+1).
+- `ValueError`: If `axis` is out of the range [-(R+1), R+1).

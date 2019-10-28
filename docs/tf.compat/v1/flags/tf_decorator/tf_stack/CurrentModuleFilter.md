@@ -1,12 +1,10 @@
 ## Class CurrentModuleFilter
 Filters stack frames from the module where this is used (best effort).
-[StackTraceFilter](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceFilter)Inherits From: 
-
+Inherits From: `StackTraceFilter`
 ### Aliases:
-- Class tf.compat.v1.app.flags.tf_decorator.tf_stack.CurrentModuleFilter
+- Class `tf.compat.v1.app.flags.tf_decorator.tf_stack.CurrentModuleFilter`
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L111-L127)
-
+View source
 
 ```
  __init__()
@@ -14,15 +12,13 @@ Filters stack frames from the module where this is used (best effort).
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### __enter__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L59-L75)
-
+View source
 
 ```
  __enter__()
 ```
 ### __exit__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L77-L79)
-
+View source
 
 ```
  __exit__(
@@ -32,15 +28,13 @@ Initialize self. See help(type(self)) for accurate signature.
 )
 ```
 ### get_filtered_filenames
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L129-L134)
-
+View source
 
 ```
  get_filtered_filenames()
 ```
 ### reset
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L101-L102)
-
+View source
 
 ```
  reset()

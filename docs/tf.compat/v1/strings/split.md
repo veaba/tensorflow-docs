@@ -1,4 +1,4 @@
-Split elements of input based on sep.
+Split elements of `input` based on `sep`.
 
 ```
  tf.compat.v1.strings.split(
@@ -10,7 +10,7 @@ Split elements of input based on sep.
     name=None
 )
 ```
-Let N be the size of input (typically N will be the batch size). Split each element of input based on sep and return a SparseTensor or RaggedTensor containing the split tokens. Empty tokens are ignored.
+Let N be the size of `input` (typically N will be the batch size). Split each element of `input` based on `sep` and return a `SparseTensor` or `RaggedTensor` containing the split tokens. Empty tokens are ignored.
 #### Examples:
 
 ```

@@ -1,27 +1,26 @@
 ## Class Bidirectional
 Bidirectional wrapper for RNNs.
-[Wrapper](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Wrapper)Inherits From: 
-
+Inherits From: `Wrapper`
 ### Aliases:
-- Class tf.compat.v1.keras.layers.Bidirectional
-- Class tf.compat.v2.keras.layers.Bidirectional
+- Class `tf.compat.v1.keras.layers.Bidirectional`
+- Class `tf.compat.v2.keras.layers.Bidirectional`
 ### Used in the guide:
-- Recurrent Neural Networks (RNN) with Keras
+- ``R``e``c``u``r``r``e``n``t`` ``N``e``u``r``a``l`` ``N``e``t``w``o``r``k``s`` ``(``R``N``N``)`` ``w``i``t``h`` ``K``e``r``a``s``
 ### Used in the tutorials:
-- Text classification with an RNN
-- Load text
+- ``T``e``x``t`` ``c``l``a``s``s``i``f``i``c``a``t``i``o``n`` ``w``i``t``h`` ``a``n`` ``R``N``N``
+- ``L``o``a``d`` ``t``e``x``t``
 #### Arguments:
-- layer: Recurrent instance.
-- merge_mode: Mode by which outputs of the forward and backward RNNs will be combined. One of {'sum', 'mul', 'concat', 'ave', None}. If None, the outputs will not be combined, they will be returned as a list.
-- backward_layer: Optional Recurrent instance to be used to handle backwards input processing. If backward_layer is not provided, the layer instance passed as the layer argument will be used to generate the backward layer automatically. Note that the provided backward_layer layer should have properties matching those of the layer argument, in particular it should have the same values for stateful, return_states, return_sequence, etc. In addition, backward_layer and layer should have different go_backwards argument values. A ValueError will be raised if these requirements are not met.
+- `layer`: `Recurrent` instance.
+- `merge_mode`: Mode by which outputs of the forward and backward RNNs will be combined. One of {'sum', 'mul', 'concat', 'ave', None}. If None, the outputs will not be combined, they will be returned as a list.
+- `backward_layer`: Optional `Recurrent` instance to be used to handle backwards input processing. If `backward_layer` is not provided, the `layer` instance passed as the `layer` argument will be used to generate the backward `layer` automatically. Note that the provided `backward_layer` `layer` should have properties matching those of the `layer` argument, in particular it should have the same values for `stateful`, `return_states`, `return_sequence`, etc. In addition, `backward_layer` and `layer` should have different `go_backwards` argument values. A `ValueError` will be raised if these requirements are not met.
 #### Call arguments:
 The call arguments for this layer are the same as those of the wrapped RNN layer.
 #### Raises:
-- ValueError: 1. If layer or backward_layer is not a Layer instance.
-In case of invalid merge_mode argument.
-If backward_layer has mismatched properties compared to layer.
-- In case of invalid merge_mode argument.
-- If backward_layer has mismatched properties compared to layer.
+- `ValueError`: 1. If `layer` or `backward_layer` is not a `Layer` instance.
+In case of invalid `merge_mode` argument.
+If `backward_layer` has mismatched properties compared to `layer`.
+- In case of invalid `merge_mode` argument.
+- If `backward_layer` has mismatched properties compared to `layer`.
 #### Examples:
 
 ```
@@ -44,8 +43,7 @@ model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
  model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/wrappers.py#L393-L453)
-
+View source
 
 ```
  __init__(
@@ -60,8 +58,7 @@ model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
 ### constraints
 ## Methods
 ### reset_states
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/wrappers.py#L676-L678)
-
+View source
 
 ```
  reset_states()

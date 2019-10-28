@@ -1,7 +1,7 @@
 Performs a channel shift.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.apply_channel_shift
-- tf.compat.v2.keras.preprocessing.image.apply_channel_shift
+- `tf.compat.v1.keras.preprocessing.image.apply_channel_shift`
+- `tf.compat.v2.keras.preprocessing.image.apply_channel_shift`
 
 ```
  tf.keras.preprocessing.image.apply_channel_shift(

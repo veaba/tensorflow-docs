@@ -1,12 +1,11 @@
 ## Class Module
 Base neural network module class.
 ### Aliases:
-- Class tf.compat.v1.Module
-- Class tf.compat.v2.Module
+- Class `tf.compat.v1.Module`
+- Class `tf.compat.v2.Module`
 ### Used in the guide:
-- Using the SavedModel format
-[tf.Variable](https://tensorflow.google.cn/api_docs/python/tf/Variable)A module is a named container for s, other tf.Modules and functions which apply to user input. For example a dense layer in a neural network might be implemented as a tf.Module:
-
+- ``U``s``i``n``g`` ``t``h``e`` ``S``a``v``e``d``M``o``d``e``l`` ``f``o``r``m``a``t``
+A module is a named container for `tf.Variable`s, other `tf.Module`s and functions which apply to user input. For example a dense layer in a neural network might be implemented as a `tf.Module`:
 
 ```
   class Dense(tf.Module):
@@ -27,17 +26,14 @@ You can use the Dense layer as you would expect:
 d(tf.ones([100, 64]))
 #==> <tf.Tensor: ...>
 ```
-[tf.Module](https://tensorflow.google.cn/api_docs/python/tf/Module)By subclassing  instead of object any tf.Variable or  instances assigned to object properties can be collected using the variables, trainable_variables or submodules property:
-
+By subclassing `tf.Module` instead of `object` any `tf.Variable` or `tf.Module` instances assigned to `object` properties can be collected using the `variables`, `trainable_variables` or `submodules` property:
 
 ```
  d.variables
 #==> (<tf.Variable 'b:0' ...>, <tf.Variable 'w:0' ...>)
 ```
-[tf.Module](https://tensorflow.google.cn/api_docs/python/tf/Module)Subclasses of  can also take advantage of the _flatten method which can be used to implement tracking of any other types.
-
-[tf.Module](https://tensorflow.google.cn/api_docs/python/tf/Module)All  classes have an associated tf.name_scope which can be used to group operations in TensorBoard and create hierarchies for variable names which can help with debugging. We suggest using the name scope when creating nested submodules/parameters or for forward methods whose graph you might want to inspect in TensorBoard. You can enter the name scope explicitly using with self.name_scope: or you can annotate methods (apart from __init__) with @.with_name_scope.
-
+Subclasses of `tf.Module` can also take advantage of the `_flatten` method which can be used to implement tracking of any other types.
+All `tf.Module` classes have an associated `tf.name_scope` which can be used to group operations in TensorBoard and create hierarchies for variable names which can help with debugging. We suggest using the name scope when creating nested submodules/parameters or for forward methods whose graph you might want to inspect in TensorBoard. You can enter the name scope explicitly using `with self.name_scope:` or you can annotate methods (apart from `__init__`) with `@tf.Module.with_name_scope`.
 
 ```
  class MLP(tf.Module):
@@ -56,8 +52,7 @@ d(tf.ones([100, 64]))
     return x
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/module/module.py#L107-L122)
-
+View source
 
 ```
  __init__(name=None)
@@ -66,10 +61,9 @@ Initialize self. See help(type(self)) for accurate signature.
 ## Properties
 ### name
 Returns the name of this module as passed or determined in the ctor.
-NOTE: This is not the same as the self.name_scope.name which includes parent module names.
+NOTE: This is not the same as the `self.name_scope.name` which includes parent module names.
 ### name_scope
-[tf.name_scope](https://tensorflow.google.cn/api_docs/python/tf/name_scope)Returns a  instance for this class.
-
+Returns a `tf.name_scope` instance for this class.
 ### submodules
 Sequence of all sub-modules.
 Submodules are modules which are properties of this module, or found as properties of modules which are properties of this module (and so on).
@@ -96,8 +90,7 @@ Sequence of variables owned by this module and it's submodules.
 A sequence of variables for the current module (sorted by attribute name) followed by variables from all submodules recursively (breadth first).
 ## Methods
 ### with_name_scope
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/module/module.py#L260-L294)
-
+View source
 
 ```
  @classmethod
@@ -116,8 +109,7 @@ Decorator to automatically enter the module name scope.
       self.w = tf.Variable(tf.random.normal([x.shape[1], 64]))
     return tf.matmul(x, self.w)
 ```
-[tf.Variable](https://tensorflow.google.cn/api_docs/python/tf/Variable)Using the above module would produce s and tf.Tensors whose names included the module name:
-
+Using the above module would produce `tf.Variable`s and `tf.Tensor`s whose names included the module name:
 
 ```
  mod = MyModule()
@@ -127,6 +119,6 @@ mod.w
 # ==> <tf.Variable ...'my_module/w:0'>
 ```
 #### Args:
-- method: The method to wrap.
+- `method`: The `method` to wrap.
 #### Returns:
 The original method wrapped such that it enters the module's name scope.

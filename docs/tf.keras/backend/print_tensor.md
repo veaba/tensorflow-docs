@@ -1,7 +1,7 @@
-Prints message and the tensor value when evaluated.
+Prints `message` and the tensor value when evaluated.
 ### Aliases:
-- tf.compat.v1.keras.backend.print_tensor
-- tf.compat.v2.keras.backend.print_tensor
+- `tf.compat.v1.keras.backend.print_tensor`
+- `tf.compat.v2.keras.backend.print_tensor`
 
 ```
  tf.keras.backend.print_tensor(
@@ -9,7 +9,7 @@ Prints message and the tensor value when evaluated.
     message=''
 )
 ```
-Note that print_tensor returns a new tensor identical to x which should be used in the following code. Otherwise the print operation is not taken into account during evaluation.
+Note that `print_tensor` returns a new tensor identical to `x` which should be used in the following code. Otherwise the print operation is not taken into account during evaluation.
 #### Example:
 
 ```
@@ -17,7 +17,7 @@ Note that print_tensor returns a new tensor identical to x which should be used 
    
 ```
 #### Arguments:
-- x: Tensor to print.
-- message: Message to print jointly with the tensor.
+- `x`: Tensor to print.
+- `message`: Message to print jointly with the tensor.
 #### Returns:
-The same tensor x, unchanged.
+The same tensor `x`, unchanged.

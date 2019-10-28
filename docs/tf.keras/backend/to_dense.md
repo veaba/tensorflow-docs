@@ -1,13 +1,13 @@
 Converts a sparse tensor into a dense tensor and returns it.
 ### Aliases:
-- tf.compat.v1.keras.backend.to_dense
-- tf.compat.v2.keras.backend.to_dense
+- `tf.compat.v1.keras.backend.to_dense`
+- `tf.compat.v2.keras.backend.to_dense`
 
 ```
  tf.keras.backend.to_dense(tensor)
 ```
 #### Arguments:
-- tensor: A tensor instance (potentially sparse).
+- `tensor`: A `tensor` instance (potentially sparse).
 #### Returns:
 A dense tensor.
 #### Examples:

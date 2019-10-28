@@ -1,29 +1,29 @@
 ## Class AdditiveAttention
 Additive attention layer, a.k.a. Bahdanau-style attention.
 ### Aliases:
-- Class tf.compat.v1.keras.layers.AdditiveAttention
-- Class tf.compat.v2.keras.layers.AdditiveAttention
-Inputs are query tensor of shape [batch_size, Tq, dim], value tensor of shape [batch_size, Tv, dim] and key tensor of shape [batch_size, Tv, dim]. The calculation follows the steps:
+- Class `tf.compat.v1.keras.layers.AdditiveAttention`
+- Class `tf.compat.v2.keras.layers.AdditiveAttention`
+Inputs are `query` tensor of shape `[batch_size, Tq, dim]`, `value` tensor of shape `[batch_size, Tv, dim]` and `key` tensor of shape `[batch_size, Tv, dim]`. The calculation follows the steps:
 #### Args:
-- use_scale: If True, will create a variable to scale the attention scores.
-- causal: Boolean. Set to True for decoder self-attention. Adds a mask such that position i cannot attend to positions j > i. This prevents the flow of information from the future towards the past.
+- `use_scale`: If `True`, will create a variable to scale the attention scores.
+- `causal`: Boolean. Set to `True` for decoder self-attent`i`on. Adds a mask such that pos`i`t`i`on `i` cannot attend to pos`i`t`i`ons `j > i`. Th`i`s prevents the flow of `i`nformat`i`on from the future towards the past.
 #### Call Arguments:
-- inputs: List of the following tensors:
-query: Query Tensor of shape [batch_size, Tq, dim].
-value: Value Tensor of shape [batch_size, Tv, dim].
-key: Optional key Tensor of shape [batch_size, Tv, dim]. If not given, will use value for both key and value, which is the most common case.
-- query: Query Tensor of shape [batch_size, Tq, dim].
-- value: Value Tensor of shape [batch_size, Tv, dim].
-- key: Optional key Tensor of shape [batch_size, Tv, dim]. If not given, will use value for both key and value, which is the most common case.
-- mask: List of the following tensors:
-query_mask: A boolean mask Tensor of shape [batch_size, Tq]. If given, the output will be zero at the positions where mask==False.
-value_mask: A boolean mask Tensor of shape [batch_size, Tv]. If given, will apply the mask such that values at positions where mask==False do not contribute to the result.
-- query_mask: A boolean mask Tensor of shape [batch_size, Tq]. If given, the output will be zero at the positions where mask==False.
-- value_mask: A boolean mask Tensor of shape [batch_size, Tv]. If given, will apply the mask such that values at positions where mask==False do not contribute to the result.
+- `inputs`: List of the following tensors:
+query: Query `Tensor` of shape `[batch_size, Tq, dim]`.
+`value`: Value `Tensor` of shape `[batch_size, Tv, dim]`.
+`key`: Optional `key` `Tensor` of shape `[batch_size, Tv, dim]`. If not given, will use `value` for both `key` and `value`, which is the most common case.
+- query: Query `Tensor` of shape `[batch_size, Tq, dim]`.
+- value: Value `Tensor` of shape `[batch_size, Tv, dim]`.
+- `key`: Optional `key` `Tensor` of shape `[batch_size, Tv, dim]`. If not given, will use `value` for both `key` and `value`, which is the most common case.
+- `mask`: List of the following tensors:
+query_`mask`: A boolean `mask` `Tensor` of shape `[batch_size, Tq]`. If given, the output will be zero at the positions where `mask`==False.
+value_`mask`: A boolean `mask` `Tensor` of shape `[batch_size, Tv]`. If given, will apply the `mask` such that values at positions where `mask`==False do not contribute to the result.
+- query_mask: A boolean mask `Tensor` of shape `[batch_size, Tq]`. If given, the output will be zero at the positions where `mask==False`.
+- value_mask: A boolean mask `Tensor` of shape `[batch_size, Tv]`. If given, will apply the mask such that values at positions where `mask==False` do not contribute to the result.
 #### Output shape:
-Attention outputs of shape [batch_size, Tq, dim].
-The meaning of query, value and key depend on the application. In the case of text similarity, for example, query is the sequence embeddings of the first piece of text and value is the sequence embeddings of the second piece of text. key is usually the same tensor as value.
-Here is a code example for using AdditiveAttention in a CNN+Attention network:
+Attention outputs of shape `[batch_size, Tq, dim]`.
+The meaning of `query`, `value` and `key` depend on the application. In the case of text similarity, for example, `query` is the sequence embeddings of the first piece of text and `value` is the sequence embeddings of the second piece of text. `key` is usually the same tensor as `value`.
+Here is a code example for using `AdditiveAttention` in a CNN+Attention network:
 
 ```
  # Variable-length int sequences.
@@ -67,8 +67,7 @@ input_layer = tf.keras.layers.Concatenate()(
 # ...
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/dense_attention.py#L401-L403)
-
+View source
 
 ```
  __init__(

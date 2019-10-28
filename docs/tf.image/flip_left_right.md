@@ -1,19 +1,12 @@
 Flip an image horizontally (left to right).
 ### Aliases:
-- tf.compat.v1.image.flip_left_right
-- tf.compat.v2.image.flip_left_right
+- `tf.compat.v1.image.flip_left_right`
+- `tf.compat.v2.image.flip_left_right`
 
 ```
  tf.image.flip_left_right(image)
 ```
 ### Used in the tutorials:
-- Pix2Pix
-- Image segmentation
-Outputs the contents of image flipped along the width dimension.
-See also reverse().
-#### Args:
-- image: 4-D Tensor of shape [batch, height, width, channels] or 3-D Tensor of shape [height, width, channels].
-#### Returns:
-A tensor of the same type and shape as image.
-#### Raises:
-- ValueError: if the shape of image not supported.
+- ``P``i``x``2``P``i``x``
+- ``I``m``a``g``e`` ``s``e``g``m``e``n``t``a``t``i``o``n``
+Outputs the contents of `image` flipped along the width dimension.

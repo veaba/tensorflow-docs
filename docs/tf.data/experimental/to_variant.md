@@ -1,13 +1,12 @@
 Returns a variant representing the given dataset.
 ### Aliases:
-- tf.compat.v1.data.experimental.to_variant
-- tf.compat.v2.data.experimental.to_variant
+- `tf.compat.v1.data.experimental.to_variant`
+- `tf.compat.v2.data.experimental.to_variant`
 
 ```
  tf.data.experimental.to_variant(dataset)
 ```
 #### Args:
-- dataset: A tf.data.Dataset.
+- `dataset`: A `tf.data.Dataset`.
 #### Returns:
-[tf.variant](https://tensorflow.google.cn/api_docs/python/tf#variant)A scalar  tensor representing the given dataset.
-
+A scalar `tf.variant` tensor representing the given dataset.

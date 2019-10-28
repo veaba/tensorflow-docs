@@ -1,9 +1,9 @@
 ## Class NanLossDuringTrainingError
 Unspecified run-time error.
 ### Aliases:
-- Class tf.compat.v1.estimator.NanLossDuringTrainingError
-- Class tf.compat.v1.train.NanLossDuringTrainingError
-- Class tf.compat.v2.estimator.NanLossDuringTrainingError
+- Class `tf.compat.v1.estimator.NanLossDuringTrainingError`
+- Class `tf.compat.v1.train.NanLossDuringTrainingError`
+- Class `tf.compat.v2.estimator.NanLossDuringTrainingError`
 ## __init__
 
 ```

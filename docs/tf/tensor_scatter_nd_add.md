@@ -1,9 +1,9 @@
-Defined in generated file: python/ops/gen_array_ops.py
-Adds sparse updates to an existing tensor according to indices.
+Defined in generated file: `python/ops/gen_array_ops.py`
+Adds sparse `updates` to an existing tensor according to `indices`.
 ### Aliases:
-- tf.compat.v1.tensor_scatter_add
-- tf.compat.v1.tensor_scatter_nd_add
-- tf.compat.v2.tensor_scatter_nd_add
+- `tf.compat.v1.tensor_scatter_add`
+- `tf.compat.v1.tensor_scatter_nd_add`
+- `tf.compat.v2.tensor_scatter_nd_add`
 
 ```
  tf.tensor_scatter_nd_add(
@@ -13,13 +13,13 @@ Adds sparse updates to an existing tensor according to indices.
     name=None
 )
 ```
-This operation creates a new tensor by adding sparse updates to the passed in tensor. This operation is very similar to tf.scatter_nd_add, except that the updates are added onto an existing tensor (as opposed to a variable). If the memory for the existing tensor cannot be re-used, a copy is made and updated.
-indices is an integer tensor containing indices into a new tensor of shape shape. The last dimension of indices can be at most the rank of shape:
+This operation creates a new `tensor` by adding sparse `updates` to the passed in `tensor`. This operation is very similar to `tf.scatter_nd_add`, except that the `updates` are added onto an existing `tensor` (as opposed to a variable). If the memory for the existing `tensor` cannot be re-used, a copy is made and updated.
+`indices` is an integer tensor containing `indices` into a new tensor of `shape` `shape`. The last dimension of `indices` can be at most the rank of `shape`:
 
 ```
  indices.shape[-1] <= shape.rank
 ```
-The last dimension of indices corresponds to indices into elements (if indices.shape[-1] = shape.rank) or slices (if indices.shape[-1] < shape.rank) along dimension indices.shape[-1] of shape. updates is a tensor with shape
+The last dimension of `indices` corresponds to `indices` into elements (if `indices`.`shape`[-1] = `shape`.rank) or slices (if `indices`.`shape`[-1] < `shape`.rank) along dimension `indices`.`shape`[-1] of `shape`. `updates` is a tensor with `shape`
 
 ```
  indices.shape[:-1] + shape[indices.shape[-1]:]
@@ -64,9 +64,9 @@ The resulting tensor would look like this:
 ```
 Note that on CPU, if an out of bound index is found, an error is returned. On GPU, if an out of bound index is found, the index is ignored.
 #### Args:
-- tensor: A Tensor. Tensor to copy/update.
-- indices: A Tensor. Must be one of the following types: int32, int64. Index tensor.
-- updates: A Tensor. Must have the same type as tensor. Updates to scatter into output.
-- name: A name for the operation (optional).
+- `tensor`: A `Tensor`. `Tensor` to copy/update.
+- `indices`: A `Tensor`. Must be one of the following types: `int32`, `int64`. Index tensor.
+- `updates`: A `Tensor`. Must have the same type as `tensor`. Updates to scatter into output.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as tensor.
+A `Tensor`. Has the same type as `tensor`.

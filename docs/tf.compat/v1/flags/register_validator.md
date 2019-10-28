@@ -1,6 +1,6 @@
 Adds a constraint, which will be enforced during program execution.
 ### Aliases:
-- tf.compat.v1.app.flags.register_validator
+- `tf.compat.v1.app.flags.register_validator`
 
 ```
  tf.compat.v1.flags.register_validator(

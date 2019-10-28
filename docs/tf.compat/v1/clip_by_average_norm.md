@@ -7,13 +7,4 @@ Clips tensor values to a maximum average L2-norm. (deprecated)
     name=None
 )
 ```
-Given a tensor t, and a maximum clip value clip_norm, this operation normalizes t so that its average L2-norm is less than or equal to clip_norm. Specifically, if the average L2-norm is already less than or equal to clip_norm, then t is not modified. If the average L2-norm is greater than clip_norm, then this operation returns a tensor of the same type and shape as t with its values set to:
-t * clip_norm / l2norm_avg(t)
-In this case, the average L2-norm of the output tensor is clip_norm.
-This operation is typically used to clip gradients before applying them with an optimizer.
-#### Args:
-- t: A Tensor.
-- clip_norm: A 0-D (scalar) Tensor > 0. A maximum clipping value.
-- name: A name for the operation (optional).
-#### Returns:
-A clipped Tensor.
+Given a `t`ensor `t`, and a maximum clip value `clip_norm`, `t`his opera`t`ion normalizes `t` so `t`ha`t` i`t`s average L2-norm is less `t`han or equal `t`o `clip_norm`. Specifically, if `t`he average L2-norm is already less `t`han or equal `t`o `clip_norm`, `t`hen `t` is no`t` modified. If `t`he average L2-norm is grea`t`er `t`han `clip_norm`, `t`hen `t`his opera`t`ion re`t`urns a `t`ensor of `t`he same `t`ype and shape as `t` wi`t`h i`t`s values se`t` `t`o:

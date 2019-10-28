@@ -1,7 +1,7 @@
 ## Class FileAndLine
 FileAndLine(file, line)
 ### Aliases:
-- Class tf.compat.v1.app.flags.tf_decorator.tf_stack.FileAndLine
+- Class `tf.compat.v1.app.flags.tf_decorator.tf_stack.FileAndLine`
 ## __new__
 
 ```

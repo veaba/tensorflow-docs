@@ -1,14 +1,14 @@
 Turn a nD tensor into a 2D tensor with same 0th dimension.
 ### Aliases:
-- tf.compat.v1.keras.backend.batch_flatten
-- tf.compat.v2.keras.backend.batch_flatten
+- `tf.compat.v1.keras.backend.batch_flatten`
+- `tf.compat.v2.keras.backend.batch_flatten`
 
 ```
  tf.keras.backend.batch_flatten(x)
 ```
 In other words, it flattens each data samples of a batch.
 #### Arguments:
-- x: A tensor or variable.
+- `x`: A tensor or variable.
 #### Returns:
 A tensor.
 #### Examples:

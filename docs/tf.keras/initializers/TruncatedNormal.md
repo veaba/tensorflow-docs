@@ -1,19 +1,17 @@
 ## Class TruncatedNormal
 Initializer that generates a truncated normal distribution.
-[Initializer](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/Initializer)Inherits From: 
-
+Inherits From: `Initializer`
 ### Aliases:
-- Class tf.compat.v2.initializers.TruncatedNormal
-- Class tf.compat.v2.keras.initializers.TruncatedNormal
-- Class tf.initializers.TruncatedNormal
-These values are similar to values from a random_normal_initializer except that values more than two standard deviations from the mean are discarded and re-drawn. This is the recommended initializer for neural network weights and filters.
+- Class `tf.compat.v2.initializers.TruncatedNormal`
+- Class `tf.compat.v2.keras.initializers.TruncatedNormal`
+- Class `tf.initializers.TruncatedNormal`
+These values are similar to values from a `random_normal_initializer` except that values more than two standard deviations from the mean are discarded and re-drawn. This is the recommended initializer for neural network weights and filters.
 #### Args:
-- mean: a python scalar or a scalar tensor. Mean of the random values to generate.
-- stddev: a python scalar or a scalar tensor. Standard deviation of the random values to generate.
-- seed: A Python integer. Used to create random seeds. See tf.compat.v1.set_random_seed for behavior.
+- `mean`: a python scalar or a scalar tensor. Mean of the random values to generate.
+- `stddev`: a python scalar or a scalar tensor. Standard deviation of the random values to generate.
+- `seed`: A Python integer. Used to create random `seed`s. See `tf.compat.v1.set_random_seed` for behavior.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L324-L328)
-
+View source
 
 ```
  __init__(
@@ -25,8 +23,7 @@ These values are similar to values from a random_normal_initializer except that 
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L330-L343)
-
+View source
 
 ```
  __call__(
@@ -36,13 +33,12 @@ Initialize self. See help(type(self)) for accurate signature.
 ```
 Returns a tensor object initialized as specified by the initializer.
 #### Args:
-- shape: Shape of the tensor.
-- dtype: Optional dtype of the tensor. Only floating point types are supported.
+- `shape`: Shape of the tensor.
+- `dtype`: Optional `dtype` of the tensor. Only floating point types are supported.
 #### Raises:
-- ValueError: If the dtype is not floating point
+- `ValueError`: If the dtype is not floating point
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L69-L89)
-
+View source
 
 ```
  from_config(
@@ -59,12 +55,11 @@ config = initializer.get_config()
 initializer = RandomUniform.from_config(config)
 ```
 #### Args:
-- config: A Python dictionary. It will typically be the output of get_config.
+- `config`: A Python dictionary. It will typically be the output of `get_config`.
 #### Returns:
 An Initializer instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L345-L350)
-
+View source
 
 ```
  get_config()

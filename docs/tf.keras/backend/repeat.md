@@ -1,7 +1,7 @@
 Repeats a 2D tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.repeat
-- tf.compat.v2.keras.backend.repeat
+- `tf.compat.v1.keras.backend.repeat`
+- `tf.compat.v2.keras.backend.repeat`
 
 ```
  tf.keras.backend.repeat(
@@ -9,10 +9,10 @@ Repeats a 2D tensor.
     n
 )
 ```
-if x has shape (samples, dim) and n is 2, the output will have shape (samples, 2, dim).
+if `x` has shape (samples, dim) a`n`d `n` is `2`, the output will have shape `samples, 2, dim)`.
 #### Arguments:
-- x: Tensor or variable.
-- n: Python integer, number of times to repeat.
+- `x`: Tensor or variable.
+- `n`: Pytho`n` i`n`teger, `n`umber of times to repeat.
 #### Returns:
 A tensor.
 #### Example:

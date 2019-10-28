@@ -1,7 +1,7 @@
 Reshapes a tensor to the specified shape.
 ### Aliases:
-- tf.compat.v1.keras.backend.reshape
-- tf.compat.v2.keras.backend.reshape
+- `tf.compat.v1.keras.backend.reshape`
+- `tf.compat.v2.keras.backend.reshape`
 
 ```
  tf.keras.backend.reshape(
@@ -10,8 +10,8 @@ Reshapes a tensor to the specified shape.
 )
 ```
 #### Arguments:
-- x: Tensor or variable.
-- shape: Target shape tuple.
+- `x`: Tensor or variable.
+- `shape`: Target `shape` tuple.
 #### Returns:
 A tensor.
 #### Example:

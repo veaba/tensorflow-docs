@@ -1,7 +1,7 @@
-A transformation that parses Example protos into a dict of tensors.
+A transformation that parses `Example` protos into a `dict` of tensors.
 ### Aliases:
-- tf.compat.v1.data.experimental.parse_example_dataset
-- tf.compat.v2.data.experimental.parse_example_dataset
+- `tf.compat.v1.data.experimental.parse_example_dataset`
+- `tf.compat.v2.data.experimental.parse_example_dataset`
 
 ```
  tf.data.experimental.parse_example_dataset(
@@ -9,14 +9,12 @@ A transformation that parses Example protos into a dict of tensors.
     num_parallel_calls=1
 )
 ```
-Parses a number of serialized Example protos given in serialized. We refer to serialized as a batch with batch_size many entries of individual Example protos.
-[tf.io.parse_example](https://tensorflow.google.cn/api_docs/python/tf/io/parse_example)This op parses serialized examples into a dictionary mapping keys to Tensor and SparseTensor objects. features is a dict from keys to VarLenFeature, SparseFeature, and FixedLenFeature objects. Each VarLenFeature and SparseFeature is mapped to a SparseTensor, and each FixedLenFeature is mapped to a Tensor. See  for more details about feature dictionaries.
-
+Parses a number of `serialized` `Example` protos given in `serialized`. We refer to `serialized` as a batch with `batch_size` many entries of individual `Example` protos.
+This op parses serialized examples into a dictionary mapping keys to `Tensor` and `SparseTensor` objects. `features` is a dict from keys to `VarLenFeature`, `SparseFeature`, and `FixedLenFeature` objects. Each `VarLenFeature` and `SparseFeature` is mapped to a `SparseTensor`, and each `FixedLenFeature` is mapped to a `Tensor`. See `tf.io.parse_example` for more details about feature dictionaries.
 #### Args:
-- features: A dict mapping feature keys to FixedLenFeature, VarLenFeature, and SparseFeature values.
-- num_parallel_calls: (Optional.) A tf.int32 scalar tf.Tensor, representing the number of parsing processes to call in parallel.
+- `features`: A `dict` mapping feature keys to `FixedLenFeature`, `VarLenFeature`, and `SparseFeature` values.
+- `num_parallel_calls`: (Optional.) A `tf.int32` scalar `tf.Tensor`, representing the number of parsing processes to call in parallel.
 #### Returns:
-[tf.data.Dataset.apply](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply)A dataset transformation function, which can be passed to .
-
+A dataset transformation function, which can be passed to `tf.data.Dataset.apply`.
 #### Raises:
-- ValueError: if features argument is None.
+- `ValueError`: if features argument is None.

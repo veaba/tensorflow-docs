@@ -1,7 +1,7 @@
 Instantiates an all-ones variable of the same shape as another tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.ones_like
-- tf.compat.v2.keras.backend.ones_like
+- `tf.compat.v1.keras.backend.ones_like`
+- `tf.compat.v2.keras.backend.ones_like`
 
 ```
  tf.keras.backend.ones_like(
@@ -11,9 +11,9 @@ Instantiates an all-ones variable of the same shape as another tensor.
 )
 ```
 #### Arguments:
-- x: Keras variable or tensor.
-- dtype: String, dtype of returned Keras variable. None uses the dtype of x.
-- name: String, name for the variable to create.
+- `x`: Keras variable or tensor.
+- `dtype`: String, `dtype` of returned Keras variable. None uses the `dtype` of x.
+- `name`: String, `name` for the variable to create.
 #### Returns:
 A Keras variable with the shape of x filled with ones.
 #### Example:

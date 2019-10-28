@@ -1,6 +1,6 @@
 Inserts a placeholder for a sparse tensor that will be always fed.
 ### Aliases:
-- tf.compat.v1.sparse.placeholder
+- `tf.compat.v1.sparse.placeholder`
 
 ```
  tf.compat.v1.sparse_placeholder(
@@ -9,7 +9,7 @@ Inserts a placeholder for a sparse tensor that will be always fed.
     name=None
 )
 ```
-[Tensor.eval()](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval)Important: This sparse tensor will produce an error if evaluated. Its value must be fed using the feed_dict optional argument to Session.run(), , or Operation.run().
+[Tensor.eval()](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval)
 
 #### For example:
 
@@ -35,10 +35,10 @@ with tf.compat.v1.Session() as sess:
 ```
 @compatibility{eager} Placeholders are not compatible with eager execution.
 #### Args:
-- dtype: The type of values elements in the tensor to be fed.
-- shape: The shape of the tensor to be fed (optional). If the shape is not specified, you can feed a sparse tensor of any shape.
-- name: A name for prefixing the operations (optional).
+- `dtype`: The type of `values` elements in the tensor to be fed.
+- `shape`: The `shape` of the tensor to be fed (optional). If the `shape` is not specified, you can feed a sparse tensor of any `shape`.
+- `name`: A `name` for prefixing the operations (optional).
 #### Returns:
-A SparseTensor that may be used as a handle for feeding a value, but not evaluated directly.
+A `SparseTensor` that may be used as a handle for feeding a value, but not evaluated directly.
 #### Raises:
-- RuntimeError: if eager execution is enabled
+- `RuntimeError`: if eager execution is enabled

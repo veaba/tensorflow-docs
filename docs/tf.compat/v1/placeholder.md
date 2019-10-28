@@ -7,7 +7,7 @@ Inserts a placeholder for a tensor that will be always fed.
     name=None
 )
 ```
-[Tensor.eval()](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval)Important: This tensor will produce an error if evaluated. Its value must be fed using the feed_dict optional argument to Session.run(), , or Operation.run().
+[Tensor.eval()](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval)
 
 #### For example:
 
@@ -22,12 +22,12 @@ with tf.compat.v1.Session() as sess:
   print(sess.run(y, feed_dict={x: rand_array}))  # Will succeed.
 ```
 #### Args:
-- dtype: The type of elements in the tensor to be fed.
-- shape: The shape of the tensor to be fed (optional). If the shape is not specified, you can feed a tensor of any shape.
-- name: A name for the operation (optional).
+- `dtype`: The type of elements in the tensor to be fed.
+- `shape`: The `shape` of the tensor to be fed (optional). If the `shape` is not specified, you can feed a tensor of any `shape`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor that may be used as a handle for feeding a value, but not evaluated directly.
+A `Tensor` that may be used as a handle for feeding a value, but not evaluated directly.
 #### Raises:
-- RuntimeError: if eager execution is enabled
+- `RuntimeError`: if eager execution is enabled
 #### Eager Compatibility
 Placeholders are not compatible with eager execution.

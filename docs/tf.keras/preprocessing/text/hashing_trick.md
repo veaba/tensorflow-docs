@@ -1,7 +1,7 @@
 Converts a text to a sequence of indexes in a fixed-size hashing space.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.text.hashing_trick
-- tf.compat.v2.keras.preprocessing.text.hashing_trick
+- `tf.compat.v1.keras.preprocessing.text.hashing_trick`
+- `tf.compat.v2.keras.preprocessing.text.hashing_trick`
 
 ```
  tf.keras.preprocessing.text.hashing_trick(
@@ -34,6 +34,5 @@ split: str. Separator for word splitting.
 ```
  A list of integer word indices (unicity non-guaranteed).
 ```
-0 is a reserved index that won't be assigned to any word.
-[probability](https://en.wikipedia.org/wiki/Birthday_problem#Probability_table)Two or more words may be assigned to the same index, due to possible collisions by the hashing function. The  of a collision is in relation to the dimension of the hashing space and the number of distinct objects.
-
+`0` is a reserved index that won't be assigned to any word.
+Two or more words may be assigned to the same index, due to possible collisions by the hashing function. The probability of a collision is in relation to the dimension of the hashing space and the number of distinct objects.

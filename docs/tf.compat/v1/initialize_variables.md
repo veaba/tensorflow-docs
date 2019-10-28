@@ -1,5 +1,4 @@
-[tf.compat.v1.variables_initializer](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/variables_initializer)See . (deprecated)
-
+See `tf.compat.v1.variables_initializer`. (deprecated)
 
 ```
  tf.compat.v1.initialize_variables(

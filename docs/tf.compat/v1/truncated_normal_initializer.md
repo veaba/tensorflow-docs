@@ -1,18 +1,16 @@
 ## Class truncated_normal_initializer
 Initializer that generates a truncated normal distribution.
-[Initializer](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Initializer)Inherits From: 
-
+Inherits From: `Initializer`
 ### Aliases:
-- Class tf.compat.v1.initializers.truncated_normal
-These values are similar to values from a random_normal_initializer except that values more than two standard deviations from the mean are discarded and re-drawn. This is the recommended initializer for neural network weights and filters.
+- Class `tf.compat.v1.initializers.truncated_normal`
+These values are similar to values from a `random_normal_initializer` except that values more than two standard deviations from the mean are discarded and re-drawn. This is the recommended initializer for neural network weights and filters.
 #### Args:
-- mean: a python scalar or a scalar tensor. Mean of the random values to generate.
-- stddev: a python scalar or a scalar tensor. Standard deviation of the random values to generate.
-- seed: A Python integer. Used to create random seeds. See tf.compat.v1.set_random_seed for behavior.
-- dtype: Default data type, used if no dtype argument is provided when calling the initializer. Only floating point types are supported.
+- `mean`: a python scalar or a scalar tensor. Mean of the random values to generate.
+- `stddev`: a python scalar or a scalar tensor. Standard deviation of the random values to generate.
+- `seed`: A Python integer. Used to create random `seed`s. See `tf.compat.v1.set_random_seed` for behavior.
+- `dtype`: Default data type, used if no `dtype` argument is provided when calling the initializer. Only floating point types are supported.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L356-L363)
-
+View source
 
 ```
  __init__(
@@ -25,8 +23,7 @@ These values are similar to values from a random_normal_initializer except that 
 DEPRECATED FUNCTION ARGUMENTS
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L365-L369)
-
+View source
 
 ```
  __call__(
@@ -37,12 +34,11 @@ DEPRECATED FUNCTION ARGUMENTS
 ```
 Returns a tensor object initialized as specified by the initializer.
 #### Args:
-- shape: Shape of the tensor.
-- dtype: Optional dtype of the tensor. If not provided use the initializer dtype.
-- partition_info: Optional information about the possible partitioning of a tensor.
+- `shape`: Shape of the tensor.
+- `dtype`: Optional `dtype` of the tensor. If not provided use the initializer `dtype`.
+- `partition_info`: Optional information about the possible partitioning of a tensor.
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L78-L97)
-
+View source
 
 ```
  from_config(
@@ -59,12 +55,11 @@ config = initializer.get_config()
 initializer = RandomUniform.from_config(config)
 ```
 #### Args:
-- config: A Python dictionary. It will typically be the output of get_config.
+- `config`: A Python dictionary. It will typically be the output of `get_config`.
 #### Returns:
 An Initializer instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L371-L377)
-
+View source
 
 ```
  get_config()

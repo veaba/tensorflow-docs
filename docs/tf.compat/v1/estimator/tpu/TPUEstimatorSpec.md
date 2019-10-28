@@ -1,13 +1,12 @@
 ## Class TPUEstimatorSpec
-Ops and objects returned from a model_fn and passed to TPUEstimator.
-See EstimatorSpec for mode, predictions, loss, train_op, and export_outputs.
-[tf.estimator.Estimator](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator)For evaluation, eval_metricsis a tuple of metric_fn and tensors, where metric_fn runs on CPU to generate metrics and tensors represents the Tensors transferred from TPU system to CPU host and passed to metric_fn. To be precise, TPU evaluation expects a slightly different signature from the . While EstimatorSpec.eval_metric_ops expects a dict, TPUEstimatorSpec.eval_metrics is a tuple of metric_fn and tensors. The tensors could be a list of Tensors or dict of names to Tensors. The tensors usually specify the model logits, which are transferred back from TPU system to CPU host. All tensors must have be batch-major, i.e., the batch size is the first dimension. Once all tensors are available at CPU host from all shards, they are concatenated (on CPU) and passed as positional arguments to the metric_fn if tensors is list or keyword arguments if tensors is a dict. metric_fn takes the tensors and returns a dict from metric string name to the result of calling a metric function, namely a (metric_tensor, update_op) tuple. See TPUEstimator for MNIST example how to specify the eval_metrics.
+Ops and objects returned from a `model_fn` and passed to `TPUEstimator`.
+See `EstimatorSpec` for `mode`, `predictions`, `loss`, `train_op`, and `export_outputs`.
+[tf.estimator.Estimator](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator)
 
-scaffold_fn is a function running on CPU to generate the Scaffold. This function should not capture any Tensors in model_fn.
-host_call is a tuple of a function and a list or dictionary of tensors to pass to that function and returns a list of Tensors. host_call currently works for train() and evaluate(). The Tensors returned by the function is executed on the CPU on every step, so there is communication overhead when sending tensors from TPU to CPU. To reduce the overhead, try reducing the size of the tensors. The tensors are concatenated along their major (batch) dimension, and so must be >= rank 1. The host_call is useful for writing summaries with tf.contrib.summary.create_file_writer.
+`scaffold_fn` is a function running on CPU to generate the `Scaffold`. This function should not capture any Tensors in `model_fn`.
+`host_call` is a tuple of a `function` and a list or dictionary of `tensors` to pass to that `function` and returns a list of Tensors. `host_call` currently works for train() and evaluate(). The Tensors returned by the `function` is executed on the CPU on every step, so there is communication overhead when sending `tensors` from TPU to CPU. To reduce the overhead, try reducing the size of the `tensors`. The `tensors` are concatenated along their major (batch) dimension, and so must be >= rank 1. The `host_call` is useful for writing summaries with `tf.contrib.summary.create_file_writer`.
 ## __new__
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py)
-
+View source
 
 ```
  @staticmethod
@@ -26,7 +25,7 @@ __new__(
     prediction_hooks=None
 )
 ```
-Creates a validated TPUEstimatorSpec instance.
+Creates a validated `TPUEstimatorSpec` instance.
 ## Properties
 ### mode
 ### predictions
@@ -41,10 +40,9 @@ Creates a validated TPUEstimatorSpec instance.
 ### prediction_hooks
 ## Methods
 ### as_estimator_spec
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py)
-
+View source
 
 ```
  as_estimator_spec()
 ```
-Creates an equivalent EstimatorSpec used by CPU train/eval.
+Creates an equivalent `EstimatorSpec` used by CPU train/eval.

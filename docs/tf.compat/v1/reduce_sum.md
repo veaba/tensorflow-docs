@@ -1,6 +1,6 @@
 Computes the sum of elements across dimensions of a tensor. (deprecated arguments)
 ### Aliases:
-- tf.compat.v1.math.reduce_sum
+- `tf.compat.v1.math.reduce_sum`
 
 ```
  tf.compat.v1.reduce_sum(
@@ -12,8 +12,8 @@ Computes the sum of elements across dimensions of a tensor. (deprecated argument
     keep_dims=None
 )
 ```
-Reduces input_tensor along the dimensions given in axis. Unless keepdims is true, the rank of the tensor is reduced by 1 for each entry in axis. If keepdims is true, the reduced dimensions are retained with length 1.
-If axis is None, all dimensions are reduced, and a tensor with a single element is returned.
+Reduces `input_tensor` along the dimensions given in `axis`. Unless `keepdims` is true, the rank of the tensor is reduced by 1 for each entry in `axis`. If `keepdims` is true, the reduced dimensions are retained with length 1.
+If `axis` is None, all dimensions are reduced, and a tensor with a single element is returned.
 #### For example:
 
 ```
@@ -25,12 +25,12 @@ tf.reduce_sum(x, 1, keepdims=True)  # [[3], [3]]
 tf.reduce_sum(x, [0, 1])  # 6
 ```
 #### Args:
-- input_tensor: The tensor to reduce. Should have numeric type.
-- axis: The dimensions to reduce. If None (the default), reduces all dimensions. Must be in the range [-rank`(input_tensor)`, rank`(input_tensor)`).
-- keepdims: If true, retains reduced dimensions with length 1.
-- name: A name for the operation (optional).
-- reduction_indices: The old (deprecated) name for axis.
-- keep_dims: Deprecated alias for keepdims.
+- `input_tensor`: The tensor to reduce. Should have numeric type.
+- `axis`: The dimensions to reduce. If `None` (the default), reduces all dimensions. Must be in the range [-rank(input_tensor), rank(input_tensor)).
+- `keepdims`: If true, retains reduced dimensions with length 1.
+- `name`: A `name` for the operation (optional).
+- `reduction_indices`: The old (deprecated) name for axis.
+- `keep_dims`: Deprecated alias for `keepdims`.
 #### Returns:
 The reduced tensor, of the same dtype as the input_tensor.
 #### Numpy Compatibility

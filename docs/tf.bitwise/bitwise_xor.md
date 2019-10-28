@@ -1,8 +1,8 @@
-Defined in generated file: python/ops/gen_bitwise_ops.py
-Elementwise computes the bitwise XOR of x and y.
+Defined in generated file: `python/ops/gen_bitwise_ops.py`
+Elementwise computes the bitwise XOR of `x` and `y`.
 ### Aliases:
-- tf.compat.v1.bitwise.bitwise_xor
-- tf.compat.v2.bitwise.bitwise_xor
+- `tf.compat.v1.bitwise.bitwise_xor`
+- `tf.compat.v2.bitwise.bitwise_xor`
 
 ```
  tf.bitwise.bitwise_xor(
@@ -11,7 +11,7 @@ Elementwise computes the bitwise XOR of x and y.
     name=None
 )
 ```
-The result will have those bits set, that are different in x and y. The computation is performed on the underlying representations of x and y.
+The result will have those bits set, that are different in `x` and `y`. The computation is performed on the underl`y`ing representations of `x` and `y`.
 #### For example:
 
 ```
@@ -29,8 +29,8 @@ for dtype in dtype_list:
   tf.assert_equal(tf.cast(res, tf.float32), exp) # TRUE
 ```
 #### Args:
-- x: A Tensor. Must be one of the following types: int8, int16, int32, int64, uint8, uint16, uint32, uint64.
-- y: A Tensor. Must have the same type as x.
-- name: A name for the operation (optional).
+- `x`: A `Tensor`. Must be one of the following types: `int8`, `int16`, `int32`, `int64`, `uint8`, `uint16`, `uint32`, `uint64`.
+- `y`: A `Tensor`. Must have the same t`y`pe as `x`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as x.
+A `Tensor`. Has the same type as `x`.

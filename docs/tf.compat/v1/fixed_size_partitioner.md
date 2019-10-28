@@ -7,7 +7,7 @@ Partitioner to specify a fixed number of shards along given axis.
 )
 ```
 #### Args:
-- num_shards: int, number of shards to partition variable.
-- axis: int, axis to partition on.
+- `num_shards`: `int`, number of shards to partition variable.
+- `axis`: `int`, `axis` to partition on.
 #### Returns:
-A partition function usable as the partitioner argument to variable_scope and get_variable.
+A partition function usable as the `partitioner` argument to `variable_scope` and `get_variable`.

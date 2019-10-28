@@ -1,5 +1,5 @@
 ### Aliases:
-- tf.compat.v2.size
+- `tf.compat.v2.size`
 
 ```
  tf.size(
@@ -9,4 +9,4 @@
 )
 ```
 ### Used in the tutorials:
-- Transformer model for language understanding
+- ``T``r``a``n``s``f``o``r``m``e``r`` ``m``o``d``e``l`` ``f``o``r`` ``l``a``n``g``u``a``g``e`` ``u``n``d``e``r``s``t``a``n``d``i``n``g``

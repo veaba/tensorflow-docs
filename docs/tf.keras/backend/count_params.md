@@ -1,15 +1,15 @@
 Returns the static number of elements in a variable or tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.count_params
-- tf.compat.v2.keras.backend.count_params
+- `tf.compat.v1.keras.backend.count_params`
+- `tf.compat.v2.keras.backend.count_params`
 
 ```
  tf.keras.backend.count_params(x)
 ```
 #### Arguments:
-- x: Variable or tensor.
+- `x`: Variable or tensor.
 #### Returns:
-Integer, the number of scalars in x.
+Integer, the number of scalars in `x`.
 #### Example:
 
 ```

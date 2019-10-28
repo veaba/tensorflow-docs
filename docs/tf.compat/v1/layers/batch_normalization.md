@@ -42,31 +42,30 @@ Sergey Ioffe, Christian Szegedy
   train_op = tf.group([train_op, update_ops])
 ```
 #### Arguments:
-- inputs: Tensor input.
-- axis: An int, the axis that should be normalized (typically the features axis). For instance, after a Convolution2D layer with data_format="channels_first", set axis=1 in BatchNormalization.
-- momentum: Momentum for the moving average.
-- epsilon: Small float added to variance to avoid dividing by zero.
-- center: If True, add offset of beta to normalized tensor. If False, beta is ignored.
-- scale: If True, multiply by gamma. If False, gamma is not used. When the next layer is linear (also e.g. nn.relu), this can be disabled since the scaling can be done by the next layer.
-- beta_initializer: Initializer for the beta weight.
-- gamma_initializer: Initializer for the gamma weight.
-- moving_mean_initializer: Initializer for the moving mean.
-- moving_variance_initializer: Initializer for the moving variance.
-- beta_regularizer: Optional regularizer for the beta weight.
-- gamma_regularizer: Optional regularizer for the gamma weight.
-- beta_constraint: An optional projection function to be applied to the beta weight after being updated by an Optimizer (e.g. used to implement norm constraints or value constraints for layer weights). The function must take as input the unprojected variable and must return the projected variable (which must have the same shape). Constraints are not safe to use when doing asynchronous distributed training.
-- gamma_constraint: An optional projection function to be applied to the gamma weight after being updated by an Optimizer.
-- training: Either a Python boolean, or a TensorFlow boolean scalar tensor (e.g. a placeholder). Whether to return the output in training mode (normalized with statistics of the current batch) or in inference mode (normalized with moving statistics). NOTE: make sure to set this parameter correctly, or else your training/inference will not work properly.
-- trainable: Boolean, if True also add variables to the graph collection GraphKeys.TRAINABLE_VARIABLES (see tf.Variable).
-- name: String, the name of the layer.
-- reuse: Boolean, whether to reuse the weights of a previous layer by the same name.
-- renorm: Whether to use Batch Renormalization (https://arxiv.org/abs/1702.03275). This adds extra variables during training. The inference is the same for either value of this parameter.
-- renorm_clipping: A dictionary that may map keys 'rmax', 'rmin', 'dmax' to scalar Tensors used to clip the renorm correction. The correction (r, d) is used as corrected_value = normalized_value * r + d, with r clipped to [rmin, rmax], and d to [-dmax, dmax]. Missing rmax, rmin, dmax are set to inf, 0, inf, respectively.
-- renorm_momentum: Momentum used to update the moving means and standard deviations with renorm. Unlike momentum, this affects training and should be neither too small (which would add noise) nor too large (which would give stale estimates). Note that momentum is still applied to get the means and variances for inference.
-- fused: if None or True, use a faster, fused implementation if possible. If False, use the system recommended implementation.
-- virtual_batch_size: An int. By default, virtual_batch_size is None, which means batch normalization is performed across the whole batch. When virtual_batch_size is not None, instead perform "Ghost Batch Normalization", which creates virtual sub-batches which are each normalized separately (with shared gamma, beta, and moving statistics). Must divide the actual batch size during execution.
-- adjustment: A function taking the Tensor containing the (dynamic) shape of the input tensor and returning a pair (scale, bias) to apply to the normalized values (before gamma and beta), only during training. For example, if axis==-1, adjustment = lambda shape: ( tf.random.uniform(shape[-1:], 0.93, 1.07), tf.random.uniform(shape[-1:], -0.1, 0.1)) will scale the normalized value by up to 7% up or down, then shift the result by up to 0.1 (with independent scaling and bias for each feature but shared across all examples), and finally apply gamma and/or beta. If None, no adjustment is applied. Cannot be specified if virtual_batch_size is specified.
+- `inputs`: Tensor input.
+- `axis`: An `int`, the `axis` that should be normalized (typically the features `axis`). For instance, after a `Convolution2D` layer with `data_format="channels_first"`, set `axis`=1 in `BatchNormalization`.
+- `momentum`: Momentum for the moving average.
+- `epsilon`: Small float added to variance to avoid dividing by zero.
+- `center`: If True, add offset of `beta` to normalized tensor. If False, `beta` is ignored.
+- `scale`: If True, multiply by `gamma`. If False, `gamma` is not used. When the next layer is linear (also e.g. `nn.relu`), this can be disabled since the scaling can be done by the next layer.
+- `beta_initializer`: Initializer for the beta weight.
+- `gamma_initializer`: Initializer for the gamma weight.
+- `moving_mean_initializer`: Initializer for the moving mean.
+- `moving_variance_initializer`: Initializer for the moving variance.
+- `beta_regularizer`: Optional regularizer for the beta weight.
+- `gamma_regularizer`: Optional regularizer for the gamma weight.
+- `beta_constraint`: An optional projection function to be applied to the `beta` weight after being updated by an `Optimizer` (e.g. used to implement norm constraints or value constraints for layer weights). The function must take as input the unprojected variable and must return the projected variable (which must have the same shape). Constraints are not safe to use when doing asynchronous distributed training.
+- `gamma_constraint`: An optional projection function to be applied to the `gamma` weight after being updated by an `Optimizer`.
+- `training`: Either a Python boolean, or a TensorFlow boolean scalar tensor (e.g. a placeholder). Whether to return the output in `training` mode (normalized with statistics of the current batch) or in inference mode (normalized with moving statistics). NOTE: make sure to set this parameter correctly, or else your `training`/inference will not work properly.
+- `trainable`: Boolean, if `True` also add variables to the graph collection `GraphKeys.TRAINABLE_VARIABLES` (see tf.Variable).
+- `name`: String, the `name` of the layer.
+- `reuse`: Boolean, whether to `reuse` the weights of a previous layer by the same name.
+- `renorm`: Whether to use Batch Renormalization (https://arxiv.org/abs/1702.03275). This adds extra variables during training. The inference is the same for either value of this parameter.
+- `renorm_clipping`: A `d`ictiona`r`y that may map keys '`r`max', '`r`min', '`d`max' to scala`r` `Tensors` use`d` to clip the `r`eno`r`m co`r``r`ection. The co`r``r`ection `r, d)` is use`d` as co`r``r`ecte`d`_value = no`r`malize`d`_value * `r` + `d`, with `r` clippe`d` to [`r`min, `r`max], an`d` `d` to [-`d`max, `d`max]. Missing `r`max, `r`min, `d`max a`r`e set to inf, 0, inf, `r`espectively.
+- `renorm_momentum`: Momentum used to update the moving means and standard deviations with renorm. Unlike `momentum`, this affects training and should be neither too small (which would add noise) nor too large (which would give stale estimates). Note that `momentum` is still applied to get the means and variances for inference.
+- `fused`: if `None` or `True`, use a faster, `fused` implementation if possible. If `False`, use the system recommended implementation.
+- `virtual_batch_size`: An `int`. By default, `virtual_batch_size` is `None`, which means batch normalization is performed across the whole batch. When `virtual_batch_size` is not `None`, instead perform "Ghost Batch Normalization", which creates virtual sub-batches which are each normalized separately (with shared gamma, beta, and moving statistics). Must divide the actual batch size during execution.
 #### Returns:
 Output tensor.
 #### Raises:
-- ValueError: if eager execution is enabled.
+- `ValueError`: if eager execution is enabled.

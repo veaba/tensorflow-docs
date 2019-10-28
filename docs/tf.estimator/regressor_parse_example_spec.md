@@ -1,6 +1,6 @@
 Generates parsing spec for tf.parse_example to be used with regressors.
 ### Aliases:
-- tf.compat.v2.estimator.regressor_parse_example_spec
+- `tf.compat.v2.estimator.regressor_parse_example_spec`
 
 ```
  tf.estimator.regressor_parse_example_spec(
@@ -13,8 +13,8 @@ Generates parsing spec for tf.parse_example to be used with regressors.
 )
 ```
 If users keep data in tf.Example format, they need to call tf.parse_example with a proper feature spec. There are two main things that this utility helps:
-- Users need to combine parsing spec of features with labels and weights (if any) since they are all parsed from same tf.Example instance. This utility combines these specs.
-- It is difficult to map expected label by a regressor such as DNNRegressor to corresponding tf.parse_example spec. This utility encodes it by getting related information from users (key, dtype).
+- ``U``s``e``r``s`` ``n``e``e``d`` ``t``o`` ``c``o``m``b``i``n``e`` ``p``a``r``s``i``n``g`` ``s``p``e``c`` ``o``f`` ``f``e``a``t``u``r``e``s`` ``w``i``t``h`` ``l``a``b``e``l``s`` ``a``n``d`` ``w``e``i``g``h``t``s`` ``(``i``f`` ``a``n``y``)`` ``s``i``n``c``e`` ``t``h``e``y`` ``a``r``e`` ``a``l``l`` ``p``a``r``s``e``d`` ``f``r``o``m`` ``s``a``m``e`` ``t``f``.``E``x``a``m``p``l``e`` ``i``n``s``t``a``n``c``e``.`` ``T``h``i``s`` ``u``t``i``l``i``t``y`` ``c``o``m``b``i``n``e``s`` ``t``h``e``s``e`` ``s``p``e``c``s``.``
+- It is difficult to map expected label by a regressor such as `DNNRegressor` to corresponding tf.parse_example spec. This utility encodes it by getting related information from users (key, dtype).
 Example output of parsing spec:
 
 ```
@@ -69,17 +69,17 @@ def input_fn_train():  # Returns a tuple of features and labels.
 estimator.train(input_fn=input_fn_train)
 ```
 #### Args:
-- feature_columns: An iterable containing all feature columns. All items should be instances of classes derived from _FeatureColumn.
-- label_key: A string identifying the label. It means tf.Example stores labels with this key.
-- label_dtype: A tf.dtype identifies the type of labels. By default it is tf.float32.
-- label_default: used as label if label_key does not exist in given tf.Example. By default default_value is none, which means tf.parse_example will error out if there is any missing label.
-- label_dimension: Number of regression targets per example. This is the size of the last dimension of the labels and logits Tensor objects (typically, these have shape [batch_size, label_dimension]).
-- weight_column: A string or a NumericColumn created by tf.feature_column.numeric_column defining feature column representing weights. It is used to down weight or boost examples during training. It will be multiplied by the loss of the example. If it is a string, it is used as a key to fetch weight tensor from the features. If it is a NumericColumn, raw tensor is fetched by key weight_column.key, then weight_column.normalizer_fn is applied on it to get weight tensor.
+- `feature_columns`: An iterable containing all feature columns. All items should be instances of classes derived from `_FeatureColumn`.
+- `label_key`: A string identifying the label. It means tf.Example stores labels with this key.
+- `label_dtype`: A `tf.dtype` identifies the type of labels. By default it is `tf.float32`.
+- `label_default`: used as label if label_key does not exist in given tf.Example. By default default_value is none, which means `tf.parse_example` will error out if there is any missing label.
+- `label_dimension`: Number of regression targets per example. This is the size of the last dimension of the labels and logits `Tensor` objects (typically, these have shape `[batch_size, label_dimension]`).
+- `weight_column`: A string or a `NumericColumn` created by `tf.feature_column.numeric_column` defining feature column representing weights. It is used to down weight or boost examples during training. It will be multiplied by the loss of the example. If it is a string, it is used as a key to fetch weight tensor from the `features`. If it is a `NumericColumn`, raw tensor is fetched by key `weight_column`.key, then `weight_column`.normalizer_fn is applied on it to get weight tensor.
 #### Returns:
-A dict mapping each feature key to a FixedLenFeature or VarLenFeature value.
+A dict mapping each feature key to a `FixedLenFeature` or `VarLenFeature` value.
 #### Raises:
-- ValueError: If label is used in feature_columns.
-- ValueError: If weight_column is used in feature_columns.
-- ValueError: If any of the given feature_columns is not a _FeatureColumn instance.
-- ValueError: If weight_column is not a NumericColumn instance.
-- ValueError: if label_key is None.
+- `ValueError`: If label is used in `feature_columns`.
+- `ValueError`: If weight_column is used in `feature_columns`.
+- `ValueError`: If any of the given `feature_columns` is not a `_FeatureColumn` instance.
+- `ValueError`: If `weight_column` is not a `NumericColumn` instance.
+- `ValueError`: if label_key is None.

@@ -10,7 +10,6 @@ Log 'msg % args' at level 'level' only first 'n' times.
 ```
 Not threadsafe.
 #### Args:
-- level: The level at which to log.
-- msg: The message to be logged.
-- n: The number of times this should be called before it is logged.
-- *args: The args to be substituted into the msg.
+- `level`: The `level` at which to log.
+- `msg`: The message to be logged.
+- `n`: The `n`umber of times this should be called before it is logged.

@@ -1,10 +1,8 @@
 ## Class WorkerSessionCreator
 Creates a tf.compat.v1.Session for a worker.
-[SessionCreator](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/SessionCreator)Inherits From: 
-
+Inherits From: `SessionCreator`
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L654-L672)
-
+View source
 
 ```
  __init__(
@@ -16,14 +14,13 @@ Creates a tf.compat.v1.Session for a worker.
 ```
 Initializes a worker session creator.
 #### Args:
-- scaffold: A Scaffold used for gathering or building supportive ops. If not specified a default one is created. It's used to finalize the graph.
-- master: String representation of the TensorFlow master to use.
-- config: ConfigProto proto used to configure the session.
-- max_wait_secs: Maximum time to wait for the session to become available.
+- `scaffold`: A `Scaffold` used for gathering or building supportive ops. If not specified a default one is created. It's used to finalize the graph.
+- `master`: `String` representation of the TensorFlow `master` to use.
+- `config`: `ConfigProto` proto used to `config`ure the session.
+- `max_wait_secs`: Maximum time to wait for the session to become available.
 ## Methods
 ### create_session
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L685-L688)
-
+View source
 
 ```
  create_session()

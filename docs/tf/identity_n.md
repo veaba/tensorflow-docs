@@ -1,8 +1,8 @@
-Defined in generated file: python/ops/gen_array_ops.py
+Defined in generated file: `python/ops/gen_array_ops.py`
 Returns a list of tensors with the same shapes and contents as the input
 ### Aliases:
-- tf.compat.v1.identity_n
-- tf.compat.v2.identity_n
+- `tf.compat.v1.identity_n`
+- `tf.compat.v2.identity_n`
 
 ```
  tf.identity_n(
@@ -23,7 +23,7 @@ def ApplyG(op, dy, _):
   return [None, g(dy)]  # Do not backprop to f(x).
 ```
 #### Args:
-- input: A list of Tensor objects.
-- name: A name for the operation (optional).
+- `input`: A list of `Tensor` objects.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A list of Tensor objects. Has the same type as input.
+A list of `Tensor` objects. Has the same type as `input`.

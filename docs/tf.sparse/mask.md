@@ -1,8 +1,8 @@
-Masks elements of IndexedSlices.
+Masks elements of `IndexedSlices`.
 ### Aliases:
-- tf.compat.v1.sparse.mask
-- tf.compat.v1.sparse_mask
-- tf.compat.v2.sparse.mask
+- `tf.compat.v1.sparse.mask`
+- `tf.compat.v1.sparse_mask`
+- `tf.compat.v2.sparse.mask`
 
 ```
  tf.sparse.mask(
@@ -11,8 +11,8 @@ Masks elements of IndexedSlices.
     name=None
 )
 ```
-Given an IndexedSlices instance a, returns another IndexedSlices that contains a subset of the slices of a. Only the slices at indices not specified in mask_indices are returned.
-This is useful when you need to extract a subset of slices in an IndexedSlices object.
+Given `a`n `IndexedSlices` inst`a`nce `a`, returns `a`nother `IndexedSlices` th`a`t cont`a`ins `a` subset of the slices of `a`. Only the slices `a`t indices not specified in `mask_indices` `a`re returned.
+This is useful when you need to extract a subset of slices in an `IndexedSlices` object.
 #### For example:
 
 ```
@@ -30,8 +30,8 @@ b.indices  # [26, 37]
 tf.shape(b.values)  # [2, 10]
 ```
 #### Args:
-- a: An IndexedSlices instance.
-- mask_indices: Indices of elements to mask.
-- name: A name for the operation (optional).
+- `a`: An `IndexedSlices` inst`a`nce.
+- `mask_indices`: Indices of elements to mask.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-The masked IndexedSlices instance.
+The masked `IndexedSlices` instance.

@@ -1,8 +1,8 @@
-Defined in generated file: python/ops/gen_string_ops.py
-Joins the elements of inputs based on segment_ids.
+Defined in generated file: `python/ops/gen_string_ops.py`
+Joins the elements of `inputs` based on `segment_ids`.
 ### Aliases:
-- tf.compat.v1.strings.unsorted_segment_join
-- tf.compat.v2.strings.unsorted_segment_join
+- `tf.compat.v1.strings.unsorted_segment_join`
+- `tf.compat.v2.strings.unsorted_segment_join`
 
 ```
  tf.strings.unsorted_segment_join(
@@ -13,7 +13,7 @@ Joins the elements of inputs based on segment_ids.
     name=None
 )
 ```
-Computes the string join along segments of a tensor. Given segment_ids with rank N and data with rank N+M:
+Computes the string join along segments of a tensor. Given `segment_ids` with rank `N` and `data` with rank `N`+M:
 
 ```
  `output[i, k1...kM] = strings.join([data[j1...jN, k1...kM])`
@@ -38,10 +38,10 @@ output_array = string_ops.unsorted_segment_join(inputs=inputs,
 # output_array ==> ['this:is:a:test']
 ```
 #### Args:
-- inputs: A Tensor of type string. The input to be joined.
-- segment_ids: A Tensor. Must be one of the following types: int32, int64. A tensor whose shape is a prefix of data.shape. Negative segment ids are not supported.
-- num_segments: A Tensor. Must be one of the following types: int32, int64. A scalar.
-- separator: An optional string. Defaults to "". The separator to use when joining.
-- name: A name for the operation (optional).
+- `inputs`: A `Tensor` of type `string`. The input to be joined.
+- `segment_ids`: A `Tensor`. Must be one of the following types: `int32`, `int64`. A tensor whose shape is a prefix of data.shape. Negative segment ids are not supported.
+- `num_segments`: A `Tensor`. Must be one of the following types: `int32`, `int64`. A scalar.
+- `separator`: An optional `string`. Defaults to `""`. The `separator` to use when joining.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor of type string.
+A `Tensor` of type `string`.

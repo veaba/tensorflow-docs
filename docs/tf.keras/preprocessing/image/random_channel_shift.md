@@ -1,7 +1,7 @@
 Performs a random channel shift.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.random_channel_shift
-- tf.compat.v2.keras.preprocessing.image.random_channel_shift
+- `tf.compat.v1.keras.preprocessing.image.random_channel_shift`
+- `tf.compat.v2.keras.preprocessing.image.random_channel_shift`
 
 ```
  tf.keras.preprocessing.image.random_channel_shift(

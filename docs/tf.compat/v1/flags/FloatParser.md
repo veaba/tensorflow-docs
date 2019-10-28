@@ -1,6 +1,7 @@
+## Class FloatParser
 Parser of floating point values.
 ### Aliases:
-- Class tf.compat.v1.app.flags.FloatParser
+- Class `tf.compat.v1.app.flags.FloatParser`
 Parsed value may be bounded to a given upper and lower bound.
 ## __init__
 
@@ -37,6 +38,6 @@ Returns whether the value is outside the bounds or not.
 ```
 See base class.
 ## Class Members
-- number_article = 'a'
-- number_name = 'number'
-- syntactic_help = 'a number'
+- `number_article = 'a'`
+- `number_name = 'number'`
+- `syntactic_help = 'a number'`

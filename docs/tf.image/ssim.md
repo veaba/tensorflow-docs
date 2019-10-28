@@ -1,7 +1,7 @@
 Computes SSIM index between img1 and img2.
 ### Aliases:
-- tf.compat.v1.image.ssim
-- tf.compat.v2.image.ssim
+- `tf.compat.v1.image.ssim`
+- `tf.compat.v2.image.ssim`
 
 ```
  tf.image.ssim(
@@ -16,8 +16,8 @@ Computes SSIM index between img1 and img2.
 ```
 This function is based on the standard SSIM implementation from: Wang, Z., Bovik, A. C., Sheikh, H. R., & Simoncelli, E. P. (2004). Image quality assessment: from error visibility to structural similarity. IEEE transactions on image processing.
 #### Details:
-- 11x11 Gaussian filter of width 1.5 is used.
-- k1 = 0.01, k2 = 0.03 as in the original paper.
+- ``1``1``x``1``1`` ``G``a``u``s``s``i``a``n`` ``f``i``l``t``e``r`` ``o``f`` ``w``i``d``t``h`` ``1``.``5`` ``i``s`` ``u``s``e``d``.``
+- ``k``1`` ``=`` ``0``.``0``1``,`` ``k``2`` ``=`` ``0``.``0``3`` ``a``s`` ``i``n`` ``t``h``e`` ``o``r``i``g``i``n``a``l`` ``p``a``p``e``r``.``
 The image sizes must be at least 11x11 because of the filter size.
 #### Example:
 
@@ -37,12 +37,12 @@ The image sizes must be at least 11x11 because of the filter size.
     # ssim1 and ssim2 both have type tf.float32 and are almost equal.
 ```
 #### Args:
-- img1: First image batch.
-- img2: Second image batch.
-- max_val: The dynamic range of the images (i.e., the difference between the maximum the and minimum allowed values).
-- filter_size: Default value 11 (size of gaussian filter).
-- filter_sigma: Default value 1.5 (width of gaussian filter).
-- k1: Default value 0.01
-- k2: Default value 0.03 (SSIM is less sensitivity to K2 for lower values, so it would be better if we taken the values in range of 0< K2 <0.4).
+- `img1`: First image batch.
+- `img2`: Second image batch.
+- `max_val`: The dynamic range of the images (i.e., the difference between the maximum the and minimum allowed values).
+- `filter_size`: Default value 11 (size of gaussian filter).
+- `filter_sigma`: Default value 1.5 (width of gaussian filter).
+- `k1`: Default value 0.01
+- `k2`: Default value 0.03 (SSIM is less sensitivity to K2 for lower values, so it would be better if we taken the values in range of 0< K2 <0.4).
 #### Returns:
 A tensor containing an SSIM value for each image in batch. Returned SSIM values are in range (-1, 1], when pixel values are non-negative. Returns a tensor with shape: broadcast(img1.shape[:-3], img2.shape[:-3]).

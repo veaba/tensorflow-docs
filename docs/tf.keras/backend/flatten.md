@@ -1,13 +1,13 @@
 Flatten a tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.flatten
-- tf.compat.v2.keras.backend.flatten
+- `tf.compat.v1.keras.backend.flatten`
+- `tf.compat.v2.keras.backend.flatten`
 
 ```
  tf.keras.backend.flatten(x)
 ```
 #### Arguments:
-- x: A tensor or variable.
+- `x`: A tensor or variable.
 #### Returns:
 A tensor, reshaped into 1-D
 #### Example:

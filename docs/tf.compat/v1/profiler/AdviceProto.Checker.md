@@ -2,4 +2,4 @@
 A ProtocolMessage
 ## Properties
 ### reports
-repeated string reports
+`repeated string reports`

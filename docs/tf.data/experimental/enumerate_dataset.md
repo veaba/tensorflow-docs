@@ -1,12 +1,12 @@
 A transformation that enumerates the elements of a dataset. (deprecated)
 ### Aliases:
-- tf.compat.v1.data.experimental.enumerate_dataset
-- tf.compat.v2.data.experimental.enumerate_dataset
+- `tf.compat.v1.data.experimental.enumerate_dataset`
+- `tf.compat.v2.data.experimental.enumerate_dataset`
 
 ```
  tf.data.experimental.enumerate_dataset(start=0)
 ```
-It is similar to python's enumerate. For example:
+It is similar to python's `enumerate`. For example:
 
 ```
  # NOTE: The following examples use `{ ... }` to represent the
@@ -22,7 +22,6 @@ b.apply(tf.data.experimental.enumerate_dataset())
 => { (0, (7, 8)), (1, (9, 10)) }
 ```
 #### Args:
-- start: A tf.int64 scalar tf.Tensor, representing the start value for enumeration.
+- `start`: A `tf.int64` scalar `tf.Tensor`, representing the `start` value for enumeration.
 #### Returns:
-[tf.data.Dataset.apply](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply)A Dataset transformation function, which can be passed to .
-
+A `Dataset` transformation function, which can be passed to `tf.data.Dataset.apply`.

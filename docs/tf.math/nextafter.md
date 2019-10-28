@@ -1,8 +1,8 @@
-Defined in generated file: python/ops/gen_math_ops.py
-Returns the next representable value of x1 in the direction of x2, element-wise.
+Defined in generated file: `python/ops/gen_math_ops.py`
+Returns the next representable value of `x1` in the direction of `x2`, element-wise.
 ### Aliases:
-- tf.compat.v1.math.nextafter
-- tf.compat.v2.math.nextafter
+- `tf.compat.v1.math.nextafter`
+- `tf.compat.v2.math.nextafter`
 
 ```
  tf.math.nextafter(
@@ -14,10 +14,10 @@ Returns the next representable value of x1 in the direction of x2, element-wise.
 This operation returns the same result as the C++ std::nextafter function.
 It can also return a subnormal number.
 #### Args:
-- x1: A Tensor. Must be one of the following types: float64, float32.
-- x2: A Tensor. Must have the same type as x1.
-- name: A name for the operation (optional).
+- `x1`: A `Tensor`. Must be one of the following types: `float64`, `float32`.
+- `x2`: A `Tensor`. Must have the same type as `x1`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as x1.
+A `Tensor`. Has the same type as `x1`.
 #### Cpp Compatibility
 Equivalent to C++ std::nextafter function.

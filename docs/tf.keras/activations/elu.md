@@ -1,7 +1,7 @@
 Exponential linear unit.
 ### Aliases:
-- tf.compat.v1.keras.activations.elu
-- tf.compat.v2.keras.activations.elu
+- `tf.compat.v1.keras.activations.elu`
+- `tf.compat.v2.keras.activations.elu`
 
 ```
  tf.keras.activations.elu(
@@ -10,9 +10,6 @@ Exponential linear unit.
 )
 ```
 #### Arguments:
-- x: Input tensor.
-- alpha: A scalar, slope of negative section.
+- `x`: Input tensor.
+- `alpha`: A scalar, slope of negative section.
 #### Returns:
-The exponential linear activation: x if x > 0 and alpha * (exp`(x)`-1) if x < 0.
-#### Reference:
-- Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs)

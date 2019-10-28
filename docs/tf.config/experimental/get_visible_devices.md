@@ -1,7 +1,7 @@
 Get the list of visible physical devices.
 ### Aliases:
-- tf.compat.v1.config.experimental.get_visible_devices
-- tf.compat.v2.config.experimental.get_visible_devices
+- `tf.compat.v1.config.experimental.get_visible_devices`
+- `tf.compat.v2.config.experimental.get_visible_devices`
 
 ```
  tf.config.experimental.get_visible_devices(device_type=None)
@@ -19,6 +19,6 @@ for device in visible_devices:
   assert device.device_type != 'GPU'
 ```
 #### Args:
-- device_type: (optional) Device types to limit query to.
+- `device_type`: (optional) Device types to limit query to.
 #### Returns:
 List of PhysicalDevice objects

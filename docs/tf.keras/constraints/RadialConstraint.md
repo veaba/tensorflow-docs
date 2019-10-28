@@ -1,13 +1,12 @@
 ## Class RadialConstraint
-Constrains Conv2D kernel weights to be the same for each radius.
-[Constraint](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/Constraint)Inherits From: 
-
+Constrains `Conv2D` kernel weights to be the same for each radius.
+Inherits From: `Constraint`
 ### Aliases:
-- Class tf.compat.v1.keras.constraints.RadialConstraint
-- Class tf.compat.v1.keras.constraints.radial_constraint
-- Class tf.compat.v2.keras.constraints.RadialConstraint
-- Class tf.compat.v2.keras.constraints.radial_constraint
-- Class tf.keras.constraints.radial_constraint
+- Class `tf.compat.v1.keras.constraints.RadialConstraint`
+- Class `tf.compat.v1.keras.constraints.radial_constraint`
+- Class `tf.compat.v2.keras.constraints.RadialConstraint`
+- Class `tf.compat.v2.keras.constraints.radial_constraint`
+- Class `tf.keras.constraints.radial_constraint`
 For example, the desired output for the following 4-by-4 kernel::
 
 ```
@@ -24,19 +23,17 @@ is this::
               [v_11, v_33, v_33, v_11],
               [v_11, v_11, v_11, v_11]]
 ```
-This constraint can be applied to any Conv2D layer version, including Conv2DTranspose and SeparableConv2D, and with either "channels_last" or "channels_first" data format. The method assumes the weight tensor is of shape (rows, cols, input_depth, output_depth).
+This constraint can be applied to any `Conv2D` layer version, including `Conv2D`Transpose and `SeparableConv2D`, and with either `"channels_last"` or `"channels_first"` data format. The method assumes the weight tensor is of shape `rows, cols, input_depth, output_depth)`.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L203-L217)
-
+View source
 
 ```
  __call__(w)
 ```
 Call self as a function.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L40-L41)
-
+View source
 
 ```
  get_config()

@@ -1,7 +1,7 @@
 Set the virtual device configuration for a PhysicalDevice.
 ### Aliases:
-- tf.compat.v1.config.experimental.set_virtual_device_configuration
-- tf.compat.v2.config.experimental.set_virtual_device_configuration
+- `tf.compat.v1.config.experimental.set_virtual_device_configuration`
+- `tf.compat.v2.config.experimental.set_virtual_device_configuration`
 
 ```
  tf.config.experimental.set_virtual_device_configuration(
@@ -10,7 +10,7 @@ Set the virtual device configuration for a PhysicalDevice.
 )
 ```
 ### Used in the guide:
-- Use a GPU
+- ``U``s``e`` ``a`` ``G``P``U``
 A PhysicalDevice marked as visible will by default have a single LogicalDevice allocated to it once the runtime is configured. Specifying a list of tf.config.experimental.VirtualDeviceConfiguration objects allows multiple devices to be configured that utilize the same PhysicalDevice.
 The following example splits the CPU into 2 virtual devices:
 
@@ -62,5 +62,5 @@ except:
   print('Cannot modify the virtual devices once they have been initialized.')
 ```
 #### Args:
-- device: (optional) Need to update
-- virtual_devices: (optional) Need to update
+- `device`: (optional) Need to update
+- `virtual_devices`: (optional) Need to update

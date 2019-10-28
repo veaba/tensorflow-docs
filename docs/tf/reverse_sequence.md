@@ -1,6 +1,6 @@
 Reverses variable length slices.
 ### Aliases:
-- tf.compat.v2.reverse_sequence
+- `tf.compat.v2.reverse_sequence`
 
 ```
  tf.reverse_sequence(
@@ -11,9 +11,9 @@ Reverses variable length slices.
     name=None
 )
 ```
-This op first slices input along the dimension batch_axis, and for each slice i, reverses the first seq_lengths[i] elements along the dimension seq_axis.
-The elements of seq_lengths must obey seq_lengths[i] <= input.dims[seq_dim], and seq_lengths must be a vector of length input.dims[batch_dim].
-The output slice i along dimension batch_axis is then given by input slice i, with the first seq_lengths[i] slices along dimension seq_axis reversed.
+Th`i`s op f`i`rst sl`i`ces `input` along the d`i`mens`i`on `batch_axis`, and for each sl`i`ce `i`, reverses the f`i`rst `seq_lengths[i]` elements along the d`i`mens`i`on `seq_axis`.
+The elements of `seq_lengths` must obey `seq_lengths`[i] <= input.dims[seq_dim], and `seq_lengths` must be a vector of length `input.dims[batch_dim]`.
+The output sl`i`ce `i` along d`i`mens`i`on `batch_axis` `i`s then g`i`ven by `i`nput sl`i`ce `i`, w`i`th the f`i`rst `seq_lengths[i]` sl`i`ces along d`i`mens`i`on `seq_axis` reversed.
 #### For example:
 
 ```
@@ -57,10 +57,6 @@ output[3:, :, 2, :, ...] = input[3:, :, 2, :, ...]
 output[2:, :, 3, :, ...] = input[2:, :, 3, :, ...]
 ```
 #### Args:
-- input: A Tensor. The input to reverse.
-- seq_lengths: A Tensor. Must be one of the following types: int32, int64. 1-D with length input.dims(batch_dim) and max`(seq_lengths)` <= input.dims(seq_dim)
-- seq_axis: An int. The dimension which is partially reversed.
-- batch_axis: An optional int. Defaults to 0. The dimension along which reversal is performed.
-- name: A name for the operation (optional).
+- `input`: A `Tensor`. The `input` to reverse.
 #### Returns:
-A Tensor. Has the same type as input.
+A `Tensor`. Has the same type as `input`.

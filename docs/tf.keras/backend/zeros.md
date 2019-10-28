@@ -1,7 +1,7 @@
 Instantiates an all-zeros variable and returns it.
 ### Aliases:
-- tf.compat.v1.keras.backend.zeros
-- tf.compat.v2.keras.backend.zeros
+- `tf.compat.v1.keras.backend.zeros`
+- `tf.compat.v2.keras.backend.zeros`
 
 ```
  tf.keras.backend.zeros(
@@ -11,11 +11,11 @@ Instantiates an all-zeros variable and returns it.
 )
 ```
 #### Arguments:
-- shape: Tuple or list of integers, shape of returned Keras variable
-- dtype: data type of returned Keras variable
-- name: name of returned Keras variable
+- `shape`: Tuple or list of integers, `shape` of returned Keras variable
+- `dtype`: data type of returned Keras variable
+- `name`: `name` of returned Keras variable
 #### Returns:
-A variable (including Keras metadata), filled with 0.0. Note that if shape was symbolic, we cannot return a variable, and will return a dynamically-shaped tensor instead.
+A variable (including Keras metadata), filled with `0.0`. Note that if `shape` was symbolic, we cannot return a variable, and will return a dynamically-`shape`d tensor instead.
 #### Example:
 
 ```

@@ -1,6 +1,6 @@
 Declares that the current module will not define any more key flags.
 ### Aliases:
-- tf.compat.v1.app.flags.disclaim_key_flags
+- `tf.compat.v1.app.flags.disclaim_key_flags`
 
 ```
  tf.compat.v1.flags.disclaim_key_flags()

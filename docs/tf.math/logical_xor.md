@@ -1,11 +1,11 @@
 Logical XOR function.
 ### Aliases:
-- tf.RaggedTensor.xor
-- tf.compat.v1.RaggedTensor.xor
-- tf.compat.v1.logical_xor
-- tf.compat.v1.math.logical_xor
-- tf.compat.v2.RaggedTensor.xor
-- tf.compat.v2.math.logical_xor
+- `tf.RaggedTensor.xor`
+- `tf.compat.v1.RaggedTensor.xor`
+- `tf.compat.v1.logical_xor`
+- `tf.compat.v1.math.logical_xor`
+- `tf.compat.v2.RaggedTensor.xor`
+- `tf.compat.v2.math.logical_xor`
 
 ```
  tf.math.logical_xor(
@@ -25,7 +25,7 @@ z = tf.logical_xor(x, y, name="LogicalXor")
 #  here z = [False  True  True False]
 ```
 #### Args:
-- x: A Tensor type bool.
-- y: A Tensor of type bool.
+- `x`: A `Tensor` type bool.
+- `y`: A `Tensor` of t`y`pe bool.
 #### Returns:
-A Tensor of type bool with the same size as that of x or y.
+A `Tensor` of type bool with the same size as that of x or y.

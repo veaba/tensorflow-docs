@@ -1,14 +1,14 @@
 Sets the graph-level random seed.
 ### Aliases:
-- tf.compat.v2.random.set_seed
+- `tf.compat.v2.random.set_seed`
 
 ```
  tf.random.set_seed(seed)
 ```
 ### Used in the tutorials:
-- Boosted trees using Estimators
-- Gradient Boosted Trees: Model understanding
-- Time series forecasting
+- ``B``o``o``s``t``e``d`` ``t``r``e``e``s`` ``u``s``i``n``g`` ``E``s``t``i``m``a``t``o``r``s``
+- ``G``r``a``d``i``e``n``t`` ``B``o``o``s``t``e``d`` ``T``r``e``e``s``:`` ``M``o``d``e``l`` ``u``n``d``e``r``s``t``a``n``d``i``n``g``
+- ``T``i``m``e`` ``s``e``r``i``e``s`` ``f``o``r``e``c``a``s``t``i``n``g``
 Operations that rely on a random seed actually derive it from two seeds: the graph-level and operation-level seeds. This sets the graph-level seed.
 Its interactions with operation-level seeds is as follows:
 To illustrate the user-visible effects, consider these examples:
@@ -78,4 +78,4 @@ with tf.compat.v1.Session() as sess2:
   print(sess2.run(b))  # generates 'B2'
 ```
 #### Args:
-- seed: integer.
+- `seed`: integer.

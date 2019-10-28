@@ -1,20 +1,16 @@
 ## Class GeneratorEnqueuer
 Builds a queue out of a data generator.
-[SequenceEnqueuer](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/SequenceEnqueuer)Inherits From: 
-
+Inherits From: `SequenceEnqueuer`
 ### Aliases:
-- Class tf.compat.v1.keras.utils.GeneratorEnqueuer
-- Class tf.compat.v2.keras.utils.GeneratorEnqueuer
-The provided generator can be finite in which case the class will throw a StopIteration exception.
-Used in fit_generator, evaluate_generator, predict_generator.
+- Class `tf.compat.v1.keras.utils.GeneratorEnqueuer`
+- Class `tf.compat.v2.keras.utils.GeneratorEnqueuer`
+The provided generator can be finite in which case the class will throw a `StopIteration` exception.
+Used in `fit_generator`, `evaluate_generator`, `predict_generator`.
 #### Arguments:
-- generator: a generator function which yields data
-- use_multiprocessing: use multiprocessing if True, otherwise threading
-- wait_time: time to sleep in-between calls to put()
-- random_seed: Initial seed for workers, will be incremented by one for each worker.
+- `generator`: a `generator` function which yields data
+- `use_multiprocessing`: use multiprocessing if True, otherwise threading
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L848-L852)
-
+View source
 
 ```
  __init__(
@@ -26,26 +22,23 @@ Used in fit_generator, evaluate_generator, predict_generator.
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### get
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L882-L918)
-
+View source
 
 ```
  get()
 ```
 Creates a generator to extract data from the queue.
-Skip the data if it is None.
+Skip the data if it is `None`.
 #### Yields:
-The next element in the queue, i.e. a tuple (inputs, targets) or (inputs, targets, sample_weights).
+The next element in the queue, i.e. a tuple `inputs, targets)` or `inputs, targets, sample_weights)`.
 ### is_running
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L626-L627)
-
+View source
 
 ```
  is_running()
 ```
 ### start
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L629-L647)
-
+View source
 
 ```
  start(
@@ -55,16 +48,11 @@ The next element in the queue, i.e. a tuple (inputs, targets) or (inputs, target
 ```
 Starts the handler's workers.
 #### Arguments:
-- workers: Number of workers.
-- max_queue_size: queue size (when full, workers could block on put())
+- `workers`: Number of `workers`.
 ### stop
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L654-L668)
-
+View source
 
 ```
  stop(timeout=None)
 ```
 Stops running threads and wait for them to exit, if necessary.
-Should be called by the same thread which called start().
-#### Arguments:
-- timeout: maximum time to wait on thread.join()

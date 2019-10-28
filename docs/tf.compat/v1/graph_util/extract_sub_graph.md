@@ -7,9 +7,9 @@ Extract the subgraph that can reach any of the nodes in 'dest_nodes'. (deprecate
 )
 ```
 #### Args:
-- graph_def: A graph_pb2.GraphDef proto.
-- dest_nodes: A list of strings specifying the destination node names.
+- `graph_def`: A graph_pb2.GraphDef proto.
+- `dest_nodes`: A list of strings specifying the destination node names.
 #### Returns:
 The GraphDef of the sub-graph.
 #### Raises:
-- TypeError: If 'graph_def' is not a graph_pb2.GraphDef proto.
+- `TypeError`: If 'graph_def' is not a graph_pb2.GraphDef proto.

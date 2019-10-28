@@ -1,7 +1,7 @@
 Returns the value of the fuzz factor used in numeric expressions.
 ### Aliases:
-- tf.compat.v1.keras.backend.epsilon
-- tf.compat.v2.keras.backend.epsilon
+- `tf.compat.v1.keras.backend.epsilon`
+- `tf.compat.v2.keras.backend.epsilon`
 
 ```
  tf.keras.backend.epsilon()

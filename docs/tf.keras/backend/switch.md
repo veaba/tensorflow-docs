@@ -1,7 +1,7 @@
 Switches between two operations depending on a scalar value.
 ### Aliases:
-- tf.compat.v1.keras.backend.switch
-- tf.compat.v2.keras.backend.switch
+- `tf.compat.v1.keras.backend.switch`
+- `tf.compat.v2.keras.backend.switch`
 
 ```
  tf.keras.backend.switch(
@@ -10,12 +10,12 @@ Switches between two operations depending on a scalar value.
     else_expression
 )
 ```
-Note that both then_expression and else_expression should be symbolic tensors of the same shape.
+Note that both `then_expression` and `else_expression` should be symbolic tensors of the same shape.
 #### Arguments:
-- condition: tensor (int or bool).
-- then_expression: either a tensor, or a callable that returns a tensor.
-- else_expression: either a tensor, or a callable that returns a tensor.
+- `condition`: tensor (`int` or `bool`).
+- `then_expression`: either a tensor, or a callable that returns a tensor.
+- `else_expression`: either a tensor, or a callable that returns a tensor.
 #### Returns:
 The selected tensor.
 #### Raises:
-- ValueError: If rank of condition is greater than rank of expressions.
+- `ValueError`: If rank of `condition` is greater than rank of expressions.

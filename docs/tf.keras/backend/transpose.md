@@ -1,13 +1,13 @@
 Transposes a tensor and returns it.
 ### Aliases:
-- tf.compat.v1.keras.backend.transpose
-- tf.compat.v2.keras.backend.transpose
+- `tf.compat.v1.keras.backend.transpose`
+- `tf.compat.v2.keras.backend.transpose`
 
 ```
  tf.keras.backend.transpose(x)
 ```
 #### Arguments:
-- x: Tensor or variable.
+- `x`: Tensor or variable.
 #### Returns:
 A tensor.
 #### Examples:

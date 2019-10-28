@@ -1,17 +1,17 @@
 ## Class SessionLog
 A ProtocolMessage
 ### Aliases:
-- Class tf.compat.v1.summary.SessionLog
+- Class `tf.compat.v1.summary.SessionLog`
 ## Properties
 ### checkpoint_path
-string checkpoint_path
+`string checkpoint_path`
 ### msg
-string msg
+`string msg`
 ### status
-SessionStatus status
+`SessionStatus status`
 ## Class Members
-- CHECKPOINT = 3
-- START = 1
-- STATUS_UNSPECIFIED = 0
-- STOP = 2
-- SessionStatus
+- `CHECKPOINT = 3`
+- `START = 1`
+- `STATUS_UNSPECIFIED = 0`
+- `STOP = 2`
+- `SessionStatus`

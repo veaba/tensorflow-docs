@@ -1,16 +1,14 @@
-[tf.distribute.ReplicaContext](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReplicaContext)Returns the current  or None.
-
+Returns the current `tf.distribute.ReplicaContext` or `None`.
 ### Aliases:
-- tf.compat.v1.distribute.get_replica_context
-- tf.compat.v2.distribute.get_replica_context
+- `tf.compat.v1.distribute.get_replica_context`
+- `tf.compat.v2.distribute.get_replica_context`
 
 ```
  tf.distribute.get_replica_context()
 ```
-Returns None if in a cross-replica context.
+Returns `None` if in a cross-replica context.
 #### Note that execution:
-[tf.distribute.Strategy](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy)Most  methods may only be executed in a cross-replica context, in a replica context you should use the API of the tf.distribute.ReplicaContext object returned by this method instead.
-
+Most `tf.distribute.Strategy` methods may only be executed in a cross-replica context, in a replica context you should use the API of the `tf.distribute.ReplicaContext` object returned by this method instead.
 
 ```
  assert tf.distribute.get_replica_context() is not None  # default
@@ -26,8 +24,5 @@ with strategy.scope():
   strategy.experimental_run_v2(f)
 ```
 #### Returns:
-[tf.distribute.ReplicaContext](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReplicaContext)The current  object when in a replica context scope, else None.
-
+The current `tf.distribute.ReplicaContext` object when in a replica context scope, else `None`.
 Within a particular block, exactly one of these two things will be true:
-- get_replica_context() returns non-None, or
-- tf.distribute.is_cross_replica_context() returns True.

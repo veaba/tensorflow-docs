@@ -1,10 +1,10 @@
-Defined in generated file: python/ops/gen_spectral_ops.py
+Defined in generated file: `python/ops/gen_spectral_ops.py`
 Inverse fast Fourier transform.
 ### Aliases:
-- tf.compat.v1.ifft
-- tf.compat.v1.signal.ifft
-- tf.compat.v1.spectral.ifft
-- tf.compat.v2.signal.ifft
+- `tf.compat.v1.ifft`
+- `tf.compat.v1.signal.ifft`
+- `tf.compat.v1.spectral.ifft`
+- `tf.compat.v2.signal.ifft`
 
 ```
  tf.signal.ifft(
@@ -12,9 +12,9 @@ Inverse fast Fourier transform.
     name=None
 )
 ```
-Computes the inverse 1-dimensional discrete Fourier transform over the inner-most dimension of input.
+Computes the inverse 1-dimensional discrete Fourier transform over the inner-most dimension of `input`.
 #### Args:
-- input: A Tensor. Must be one of the following types: complex64, complex128. A complex tensor.
-- name: A name for the operation (optional).
+- `input`: A `Tensor`. Must be one of the following types: `complex64`, `complex128`. A complex tensor.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as input.
+A `Tensor`. Has the same type as `input`.

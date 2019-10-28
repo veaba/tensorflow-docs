@@ -72,7 +72,7 @@ def fn_parse_code(list_str, text):
 
     # flag_str ==>\\1\\2\\3
     reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
-   
+
     return reg_text
 
 
@@ -178,7 +178,8 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview"}, go_webdriver)
+handle_async_flat(category_array, go_webdriver)
+# handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview"}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个

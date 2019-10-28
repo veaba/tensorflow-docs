@@ -1,5 +1,5 @@
 ### Aliases:
-- tf.compat.v2.strings.reduce_join
+- `tf.compat.v2.strings.reduce_join`
 
 ```
  tf.strings.reduce_join(

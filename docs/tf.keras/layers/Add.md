@@ -1,8 +1,8 @@
 ## Class Add
 Layer that adds a list of inputs.
 ### Aliases:
-- Class tf.compat.v1.keras.layers.Add
-- Class tf.compat.v2.keras.layers.Add
+- Class `tf.compat.v1.keras.layers.Add`
+- Class `tf.compat.v2.keras.layers.Add`
 It takes as input a list of tensors, all of the same shape, and returns a single tensor (also of the same shape).
 #### Examples:
 
@@ -19,16 +19,15 @@ It takes as input a list of tensors, all of the same shape, and returns a single
     model = keras.models.Model(inputs=[input1, input2], outputs=out)
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L41-L43)
-
+View source
 
 ```
  __init__(**kwargs)
 ```
-Functional interface to the Add layer.
+Functional interface to the `Add` layer.
 ### Aliases:
-- tf.compat.v1.keras.layers.add
-- tf.compat.v2.keras.layers.add
+- `tf.compat.v1.keras.layers.add`
+- `tf.compat.v2.keras.layers.add`
 
 ```
  tf.keras.layers.add(
@@ -37,10 +36,9 @@ Functional interface to the Add layer.
 )
 ```
 ### Used in the guide:
-- The Keras functional API in TensorFlow
+- ``T``h``e`` ``K``e``r``a``s`` ``f``u``n``c``t``i``o``n``a``l`` ``A``P``I`` ``i``n`` ``T``e``n``s``o``r``F``l``o``w``
 #### Arguments:
-- inputs: A list of input tensors (at least 2).
-- **kwargs: Standard layer keyword arguments.
+- `inputs`: A list of input tensors (at least 2).
 #### Returns:
 A tensor, the sum of the inputs.
 #### Examples:

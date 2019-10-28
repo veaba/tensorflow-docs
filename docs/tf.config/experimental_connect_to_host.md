@@ -1,7 +1,7 @@
 Connects to a single machine to enable remote execution on it.
 ### Aliases:
-- tf.compat.v1.config.experimental_connect_to_host
-- tf.compat.v2.config.experimental_connect_to_host
+- `tf.compat.v1.config.experimental_connect_to_host`
+- `tf.compat.v2.config.experimental_connect_to_host`
 
 ```
  tf.config.experimental_connect_to_host(

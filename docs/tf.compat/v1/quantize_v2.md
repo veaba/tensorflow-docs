@@ -1,5 +1,4 @@
-[tf.quantization.quantize](https://tensorflow.google.cn/api_docs/python/tf/quantization/quantize)Please use  instead.
-
+Please use `tf.quantization.quantize` instead.
 
 ```
  tf.compat.v1.quantize_v2(

@@ -7,7 +7,7 @@ Gets the total regularization loss.
 )
 ```
 #### Args:
-- scope: An optional scope name for filtering the losses to return.
-- name: The name of the returned tensor.
+- `scope`: An optional `scope` name for filtering the losses to return.
+- `name`: The `name` of the returned tensor.
 #### Returns:
 A scalar regularization loss.

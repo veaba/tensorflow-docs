@@ -1,11 +1,9 @@
 ## Class TocoConverter
-Convert a TensorFlow model into output_format using TOCO.
-[lite.TFLiteConverter](https://tensorflow.google.cn/api_docs/python/tf/lite/TFLiteConverter)This class has been deprecated. Please use  instead.
-
+Convert a TensorFlow model into `output_format` using TOCO.
+This class has been deprecated. Please use `lite.TFLiteConverter` instead.
 ## Methods
 ### from_frozen_graph
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L1050-L1060)
-
+View source
 
 ```
  @classmethod
@@ -19,8 +17,7 @@ from_frozen_graph(
 ```
 Creates a TocoConverter class from a file containing a frozen graph. (deprecated)
 ### from_keras_model_file
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L1077-L1087)
-
+View source
 
 ```
  @classmethod
@@ -34,8 +31,7 @@ from_keras_model_file(
 ```
 Creates a TocoConverter class from a tf.keras model file. (deprecated)
 ### from_saved_model
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L1062-L1075)
-
+View source
 
 ```
  @classmethod
@@ -51,8 +47,7 @@ from_saved_model(
 ```
 Creates a TocoConverter class from a SavedModel. (deprecated)
 ### from_session
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L1043-L1048)
-
+View source
 
 ```
  @classmethod

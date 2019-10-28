@@ -1,14 +1,11 @@
 ## Class ReplicaContext
-[tf.distribute.Strategy](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) API when in a replica context.
-
+`tf.distribute.Strategy` API when in a replica context.
 ### Aliases:
-- Class tf.compat.v1.distribute.ReplicaContext
-- Class tf.compat.v2.distribute.ReplicaContext
-[tf.distribute.get_replica_context](https://tensorflow.google.cn/api_docs/python/tf/distribute/get_replica_context)You can use  to get an instance of ReplicaContext. This should be inside your replicated step function, such as in a tf.distribute.Strategy.experimental_run_v2 call.
-
+- Class `tf.compat.v1.distribute.ReplicaContext`
+- Class `tf.compat.v2.distribute.ReplicaContext`
+You can use `tf.distribute.get_replica_context` to get an instance of `ReplicaContext`. This should be inside your replicated step function, such as in a `tf.distribute.Strategy.experimental_run_v2` call.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L1860-L1865)
-
+View source
 
 ```
  __init__(
@@ -24,21 +21,18 @@ The devices this replica is to be executed on, as a tuple of strings.
 Returns number of replicas over which gradients are aggregated.
 ### replica_id_in_sync_group
 Returns the id of the replica being defined.
-This identifies the replica that is part of a sync group. Currently we assume that all sync groups contain the same number of replicas. The value of the replica id can range from 0 to num_replica_in_sync - 1.
+This identifies the replica that is part of a sync group. Currently we assume that all sync groups contain the same number of replicas. The value of the replica id can range from 0 to `num_replica_in_sync` - 1.
 ### strategy
-[tf.distribute.Strategy](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy)The current  object.
-
+The current `tf.distribute.Strategy` object.
 ## Methods
 ### __enter__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L1867-L1877)
-
+View source
 
 ```
  __enter__()
 ```
 ### __exit__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L1879-L1883)
-
+View source
 
 ```
  __exit__(
@@ -48,8 +42,7 @@ This identifies the replica that is part of a sync group. Currently we assume th
 )
 ```
 ### all_reduce
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L1955-L1997)
-
+View source
 
 ```
  all_reduce(
@@ -57,20 +50,19 @@ This identifies the replica that is part of a sync group. Currently we assume th
     value
 )
 ```
-All-reduces the given value Tensor nest across replicas.
-If all_reduce is called in any replica, it must be called in all replicas. The nested structure and Tensor shapes must be identical in all replicas.
+All-reduces the given `value Tensor` nest across replicas.
+If `all_reduce` is called in any replica, it must be called in all replicas. The nested structure and `Tensor` shapes must be identical in all replicas.
 IMPORTANT: The ordering of communications must be identical in all replicas.
-Example with two replicas: Replica 0 value: {'a': 1, 'b': [40, 1]} Replica 1 value: {'a': 3, 'b': [ 2, 98]}
-If reduce_op == SUM: Result (on all replicas): {'a': 4, 'b': [42, 99]}
-If reduce_op == MEAN: Result (on all replicas): {'a': 2, 'b': [21, 49.5]}
+Example with two replicas: Replica 0 `value`: {'a': 1, 'b': [40, 1]} Replica 1 `value`: {'a': 3, 'b': [ 2, 98]}
+If `reduce_op` == `SUM`: Result (on all replicas): {'a': 4, 'b': [42, 99]}
+If `reduce_op` == `MEAN`: Result (on all replicas): {'a': 2, 'b': [21, 49.5]}
 #### Args:
-- reduce_op: Reduction type, an instance of tf.distribute.ReduceOp enum.
-- value: The nested structure of Tensors to all-reduce. The structure must be compatible with tf.nest.
+- `reduce_op`: Reduction type, an instance of `tf.distribute.ReduceOp` enum.
+- `value`: The nested structure of `Tensor`s to all-reduce. The structure must be compatible with `tf.nest`.
 #### Returns:
-A Tensor nest with the reduced values from each replica.
+A `Tensor` nest with the reduced `value`s from each replica.
 ### merge_call
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L1885-L1917)
-
+View source
 
 ```
  merge_call(
@@ -79,20 +71,4 @@ A Tensor nest with the reduced values from each replica.
     kwargs=None
 )
 ```
-Merge args across replicas and run merge_fn in a cross-replica context.
-This allows communication and coordination when there are multiple calls to the step_fn triggered by a call to strategy.experimental_run_v2(step_fn, ...).
-[tf.distribute.Strategy.experimental_run_v2](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy#experimental_run_v2)See  for an explanation.
-
-If not inside a distributed scope, this is equivalent to:
-
-```
- strategy = tf.distribute.get_strategy()
-with cross-replica-context(strategy):
-  return merge_fn(strategy, *args, **kwargs)
-```
-#### Args:
-- merge_fn: Function that joins arguments from threads that are given as PerReplica. It accepts tf.distribute.Strategy object as the first argument.
-- args: List or tuple with positional per-thread arguments for merge_fn.
-- kwargs: Dict with keyword per-thread arguments for merge_fn.
-#### Returns:
-The return value of merge_fn, except for PerReplica values which are unpacked.
+Merge args across replicas and run `merge_fn` in a cross-replica context.

@@ -1,7 +1,7 @@
 One-hot encodes a text into a list of word indexes of size n.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.text.one_hot
-- tf.compat.v2.keras.preprocessing.text.one_hot
+- `tf.compat.v1.keras.preprocessing.text.one_hot`
+- `tf.compat.v2.keras.preprocessing.text.one_hot`
 
 ```
  tf.keras.preprocessing.text.one_hot(
@@ -12,7 +12,7 @@ One-hot encodes a text into a list of word indexes of size n.
     split=' '
 )
 ```
-This is a wrapper to the hashing_trick function using hash as the hashing function; unicity of word to index mapping non-guaranteed.
+This is a wrapper to the `hashing_trick` function using `hash` as the `hash`ing function; unicity of word to index mapping non-guaranteed.
 # Arguments
 
 ```

@@ -1,9 +1,8 @@
 ## Class ListParser
 Parser for a comma-separated list of strings.
-[BaseListParser](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/BaseListParser)Inherits From: 
-
+Inherits From: `BaseListParser`
 ### Aliases:
-- Class tf.compat.v1.app.flags.ListParser
+- Class `tf.compat.v1.app.flags.ListParser`
 ## __init__
 
 ```

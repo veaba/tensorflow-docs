@@ -1,11 +1,10 @@
 ## Class CrossDeviceOps
 Base class for cross-device reduction and broadcasting algorithms.
 ### Aliases:
-- Class tf.compat.v1.distribute.CrossDeviceOps
-- Class tf.compat.v2.distribute.CrossDeviceOps
+- Class `tf.compat.v1.distribute.CrossDeviceOps`
+- Class `tf.compat.v2.distribute.CrossDeviceOps`
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L240-L241)
-
+View source
 
 ```
  __init__()
@@ -13,8 +12,7 @@ Base class for cross-device reduction and broadcasting algorithms.
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### batch_reduce
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L284-L324)
-
+View source
 
 ```
  batch_reduce(
@@ -23,17 +21,16 @@ Initialize self. See help(type(self)) for accurate signature.
 )
 ```
 Reduce PerReplica objects in a batch.
-Reduce each first element in value_destination_pairs to each second element which indicates the destinations.
+Reduce each first element in `value_destination_pairs` to each second element which indicates the destinations.
 #### Args:
-- reduce_op: Indicates how per_replica_value will be reduced. Accepted values are tf.distribute.ReduceOp.SUM, tf.distribute.ReduceOp.MEAN.
-- value_destination_pairs: a list or a tuple of tuples of PerReplica objects (or tensors with device set if there is one device) and destinations.
+- `reduce_op`: Indicates how per_replica_value will be reduced. Accepted values are `tf.distribute.ReduceOp.SUM`, `tf.distribute.ReduceOp.MEAN`.
+- `value_destination_pairs`: a list or a tuple of tuples of PerReplica objects (or tensors with device set if there is one device) and destinations.
 #### Returns:
 a list of Mirrored objects.
 #### Raises:
-- ValueError: if value_destination_pairs is not a list or a tuple of tuples of PerReplica objects and destinations
+- `ValueError`: if `value_destination_pairs` is not a list or a tuple of tuples of PerReplica objects and destinations
 ### batch_reduce_implementation
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L362-L383)
-
+View source
 
 ```
  batch_reduce_implementation(
@@ -42,17 +39,16 @@ a list of Mirrored objects.
 )
 ```
 Implementation of reduce PerReplica objects in a batch.
-Reduce each first element in value_destination_pairs to each second element which indicates the destinations.
+Reduce each first element in `value_destination_pairs` to each second element which indicates the destinations.
 #### Args:
-- reduce_op: Indicates how per_replica_value will be reduced. Accepted values are tf.distribute.ReduceOp.SUM, tf.distribute.ReduceOp.MEAN.
-- value_destination_pairs: a list or a tuple of tuples of PerReplica objects (or tensors with device set if there is one device) and destinations.
+- `reduce_op`: Indicates how per_replica_value will be reduced. Accepted values are `tf.distribute.ReduceOp.SUM`, `tf.distribute.ReduceOp.MEAN`.
+- `value_destination_pairs`: a list or a tuple of tuples of PerReplica objects (or tensors with device set if there is one device) and destinations.
 #### Returns:
 a list of Mirrored objects.
 #### Raises:
-- ValueError: if value_destination_pairs is not a list or a tuple of tuples of PerReplica objects and destinations
+- `ValueError`: if `value_destination_pairs` is not a list or a tuple of tuples of PerReplica objects and destinations
 ### broadcast
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L326-L337)
-
+View source
 
 ```
  broadcast(
@@ -60,15 +56,14 @@ a list of Mirrored objects.
     destinations
 )
 ```
-Broadcast the tensor to destinations.
+Broadcast the `tensor` to destinations.
 #### Args:
-- tensor: the tensor to broadcast.
-- destinations: the broadcast destinations.
+- `tensor`: the `tensor` to broadcast.
+- `destinations`: the broadcast `destinations`.
 #### Returns:
 a Mirrored object.
 ### broadcast_implementation
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L385-L396)
-
+View source
 
 ```
  broadcast_implementation(
@@ -76,15 +71,14 @@ a Mirrored object.
     destinations
 )
 ```
-Implementation of broadcast the tensor to destinations.
+Implementation of broadcast the `tensor` to destinations.
 #### Args:
-- tensor: the tensor to broadcast.
-- destinations: the broadcast destinations.
+- `tensor`: the `tensor` to broadcast.
+- `destinations`: the broadcast `destinations`.
 #### Returns:
 a Mirrored object.
 ### reduce
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L248-L282)
-
+View source
 
 ```
  reduce(
@@ -93,19 +87,18 @@ a Mirrored object.
     destinations
 )
 ```
-Reduce per_replica_value to destinations.
-It runs the reduction operation defined by reduce_op and put the result on destinations.
+Reduce `per_replica_value` to `destinations`.
+It runs the reduction operation defined by `reduce_op` and put the result on `destinations`.
 #### Args:
-- reduce_op: Indicates how per_replica_value will be reduced. Accepted values are tf.distribute.ReduceOp.SUM, tf.distribute.ReduceOp.MEAN.
-- per_replica_value: a PerReplica object or a tensor with device set.
-- destinations: the reduction destinations.
+- `reduce_op`: Indicates how per_replica_value will be reduced. Accepted values are `tf.distribute.ReduceOp.SUM`, `tf.distribute.ReduceOp.MEAN`.
+- `per_replica_value`: a PerReplica object or a tensor with device set.
+- `destinations`: the reduction `destinations`.
 #### Returns:
 a Mirrored object.
 #### Raises:
-- ValueError: if per_replica_value can't be converted to a PerReplica object.
+- `ValueError`: if per_replica_value can't be converted to a PerReplica object.
 ### reduce_implementation
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cross_device_ops.py#L339-L360)
-
+View source
 
 ```
  reduce_implementation(
@@ -114,13 +107,13 @@ a Mirrored object.
     destinations
 )
 ```
-The implementation of reduce of per_replica_value to destinations.
-It runs the reduction operation defined by reduce_op and put the result on destinations.
+The implementation of reduce of `per_replica_value` to `destinations`.
+It runs the reduction operation defined by `reduce_op` and put the result on `destinations`.
 #### Args:
-- reduce_op: Indicates how per_replica_value will be reduced. Accepted values are tf.distribute.ReduceOp.SUM, tf.distribute.ReduceOp.MEAN.
-- per_replica_value: a PerReplica object or a tensor with device set.
-- destinations: the reduction destinations.
+- `reduce_op`: Indicates how per_replica_value will be reduced. Accepted values are `tf.distribute.ReduceOp.SUM`, `tf.distribute.ReduceOp.MEAN`.
+- `per_replica_value`: a PerReplica object or a tensor with device set.
+- `destinations`: the reduction `destinations`.
 #### Returns:
 a Mirrored object.
 #### Raises:
-- ValueError: if per_replica_value can't be converted to a PerReplica object.
+- `ValueError`: if per_replica_value can't be converted to a PerReplica object.

@@ -1,6 +1,7 @@
 Searches input tensor for values on the innermost dimension.
-- tf.compat.v1.searchsorted
-- tf.compat.v2.searchsorted
+### Aliases:
+- `tf.compat.v1.searchsorted`
+- `tf.compat.v2.searchsorted`
 
 ```
  tf.searchsorted(
@@ -30,12 +31,12 @@ A 2-D example:
              [0, 2, 5]]
 ```
 #### Args:
-- sorted_sequence: N-D Tensor containing a sorted sequence.
-- values: N-D Tensor containing the search values.
-- side: 'left' or 'right'; 'left' corresponds to lower_bound and 'right' to upper_bound.
-- out_type: The output type (int32 or int64). Default is tf.int32.
-- name: Optional name for the operation.
+- `sorted_sequence`: N-D `Tensor` containing a sorted sequence.
+- `values`: N-D `Tensor` containing the search `values`.
+- `side`: 'left' or 'right'; 'left' corresponds to lower_bound and 'right' to upper_bound.
+- `out_type`: The output type (`int32` or `int64`). Default is `tf.int32`.
+- `name`: Optional `name` for the operation.
 #### Returns:
-An N-D Tensor the size of values containing the result of applying either lower_bound or upper_bound (depending on side) to each value. The result is not a global index to the entire Tensor, but the index in the last dimension.
+An N-D `Tensor` the size of values containing the result of applying either lower_bound or upper_bound (depending on side) to each value. The result is not a global index to the entire `Tensor`, but the index in the last dimension.
 #### Raises:
-- ValueError: If the last dimension of sorted_sequence >= 2^31-1 elements. If the total size of values exceeds 2^31 - 1 elements. If the first N-1 dimensions of the two tensors don't match.
+- `ValueError`: If the last dimension of sorted_sequence >= 2^31-1 elements. If the total size of values exceeds 2^31 - 1 elements. If the first `N-1` dimensions of the two tensors don't match.

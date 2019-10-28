@@ -1,7 +1,7 @@
 Performs a random spatial shear of a Numpy image tensor.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.random_shear
-- tf.compat.v2.keras.preprocessing.image.random_shear
+- `tf.compat.v1.keras.preprocessing.image.random_shear`
+- `tf.compat.v2.keras.preprocessing.image.random_shear`
 
 ```
  tf.keras.preprocessing.image.random_shear(

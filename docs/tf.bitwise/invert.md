@@ -1,8 +1,8 @@
-Defined in generated file: python/ops/gen_bitwise_ops.py
-Invert (flip) each bit of supported types; for example, type uint8 value 01010101 becomes 10101010.
+Defined in generated file: `python/ops/gen_bitwise_ops.py`
+Invert (flip) each bit of supported types; for example, type `uint8` value 01010101 becomes 10101010.
 ### Aliases:
-- tf.compat.v1.bitwise.invert
-- tf.compat.v2.bitwise.invert
+- `tf.compat.v1.bitwise.invert`
+- `tf.compat.v2.bitwise.invert`
 
 ```
  tf.bitwise.invert(
@@ -10,7 +10,7 @@ Invert (flip) each bit of supported types; for example, type uint8 value 0101010
     name=None
 )
 ```
-Flip each bit of supported types. For example, type int8 (decimal 2) binary 00000010 becomes (decimal -3) binary 11111101. This operation is performed on each element of the tensor argument x.
+Flip each bit of supported types. For e`x`ample, type `int8` (decimal 2) binary 00000010 becomes (decimal -3) binary 11111101. This operation is performed on each element of the tensor argument `x`.
 #### Example:
 
 ```
@@ -49,7 +49,7 @@ for dtype in dtype_list:
     tf.assert_equal(tf.cast(inverted, tf.float32), tf.cast(expected, tf.float32))
 ```
 #### Args:
-- x: A Tensor. Must be one of the following types: int8, int16, int32, int64, uint8, uint16, uint32, uint64.
-- name: A name for the operation (optional).
+- `x`: A `Tensor`. Must be one of the following types: `int8`, `int16`, `int32`, `int64`, `uint8`, `uint16`, `uint32`, `uint64`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as x.
+A `Tensor`. Has the same type as `x`.

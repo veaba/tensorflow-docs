@@ -1,13 +1,13 @@
 Returns the shape of tensor or variable as a tuple of int or None entries.
 ### Aliases:
-- tf.compat.v1.keras.backend.int_shape
-- tf.compat.v2.keras.backend.int_shape
+- `tf.compat.v1.keras.backend.int_shape`
+- `tf.compat.v2.keras.backend.int_shape`
 
 ```
  tf.keras.backend.int_shape(x)
 ```
 #### Arguments:
-- x: Tensor or variable.
+- `x`: Tensor or variable.
 #### Returns:
 A tuple of integers (or None entries).
 #### Examples:

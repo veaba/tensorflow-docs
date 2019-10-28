@@ -1,11 +1,10 @@
 ## Class MapVectorizationOptions
 Represents options for the MapVectorization optimization.
 ### Aliases:
-- Class tf.compat.v1.data.experimental.MapVectorizationOptions
-- Class tf.compat.v2.data.experimental.MapVectorizationOptions
+- Class `tf.compat.v1.data.experimental.MapVectorizationOptions`
+- Class `tf.compat.v2.data.experimental.MapVectorizationOptions`
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L33-L35)
-
+View source
 
 ```
  __init__()
@@ -18,16 +17,14 @@ Whether to vectorize map transformations. If None, defaults to False.
 Whether to use ChooseFastestBranchDataset with this transformation. If True, the pipeline picks between the vectorized and original segment at runtime based on their iterations speed. If None, defaults to False.
 ## Methods
 ### __eq__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L37-L43)
-
+View source
 
 ```
  __eq__(other)
 ```
 Return self==value.
 ### __ne__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L45-L49)
-
+View source
 
 ```
  __ne__(other)

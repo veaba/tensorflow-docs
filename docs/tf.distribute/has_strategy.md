@@ -1,8 +1,7 @@
-[tf.distribute.Strategy](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy)Return if there is a current non-default .
-
+Return if there is a current non-default `tf.distribute.Strategy`.
 ### Aliases:
-- tf.compat.v1.distribute.has_strategy
-- tf.compat.v2.distribute.has_strategy
+- `tf.compat.v1.distribute.has_strategy`
+- `tf.compat.v2.distribute.has_strategy`
 
 ```
  tf.distribute.has_strategy()

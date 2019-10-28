@@ -1,8 +1,8 @@
+## Class CsvListSerializer
 Base class for generating string representations of a flag value.
-[ArgumentSerializer](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentSerializer)Inherits From: 
-
+Inherits From: `ArgumentSerializer`
 ### Aliases:
-- Class tf.compat.v1.app.flags.CsvListSerializer
+- Class `tf.compat.v1.app.flags.CsvListSerializer`
 ## __init__
 
 ```

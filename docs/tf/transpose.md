@@ -1,6 +1,6 @@
-Transposes a.
+Tr`a`nsposes `a`.
 ### Aliases:
-- tf.compat.v2.transpose
+- `tf.compat.v2.transpose`
 
 ```
  tf.transpose(
@@ -11,10 +11,10 @@ Transposes a.
 )
 ```
 ### Used in the tutorials:
-- Better performance with tf.function
-- Transformer model for language understanding
-Permutes the dimensions according to perm.
-The returned tensor's dimension i will correspond to the input dimension perm[i]. If perm is not given, it is set to (n-1...0), where n is the rank of the input tensor. Hence by default, this operation performs a regular matrix transpose on 2-D input Tensors. If conjugate is True and a.dtype is either complex64 or complex128 then the values of a are conjugated and transposed.
+- ``B``e``t``t``e``r`` ``p``e``r``f``o``r``m``a``n``c``e`` ``w``i``t``h`` ``t``f``.``f``u``n``c``t``i``o``n``
+- ``T``r``a``n``s``f``o``r``m``e``r`` ``m``o``d``e``l`` ``f``o``r`` ``l``a``n``g``u``a``g``e`` ``u``n``d``e``r``s``t``a``n``d``i``n``g``
+Permutes the dimensions according to `perm`.
+The returned tensor's dimension i will correspond to the input dimension `perm[i]`. If `perm` is not given, it is set to (n-1...0), where n is the r`a`nk of the input tensor. Hence by def`a`ult, this oper`a`tion performs `a` regul`a`r m`a`trix tr`a`nspose on 2-D input Tensors. If conjug`a`te is True `a`nd `a.dtype` is either `complex64` or `complex128` then the v`a`lues of `a` `a`re conjug`a`ted `a`nd tr`a`nsposed.
 #### For example:
 
 ```
@@ -51,12 +51,12 @@ tf.transpose(x, perm=[0, 2, 1])  # [[[1,  4],
                                  #   [9, 12]]]
 ```
 #### Args:
-- a: A Tensor.
-- perm: A permutation of the dimensions of a.
-- conjugate: Optional bool. Setting it to True is mathematically equivalent to tf.math.conj(tf.transpose(input)).
-- name: A name for the operation (optional).
+- `a`: A `Tensor`.
+- `perm`: A `perm`ut`a`tion of the dimensions of `a`.
+- `conjugate`: Optional bool. Setting it to `True` is mathematically equivalent to tf.math.conj(tf.transpose(input)).
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A transposed Tensor.
+A transposed `Tensor`.
 #### Numpy Compatibility
-In numpy transposes are memory-efficient constant time operations as they simply return a new view of the same data with adjusted strides.
-TensorFlow does not support strides, so transpose returns a new tensor with the items permuted.
+In `numpy` transposes are memory-efficient constant time operations as they simply return a new view of the same data with adjusted `strides`.
+TensorFlow does not support strides, so `transpose` returns a new tensor with the items permuted.

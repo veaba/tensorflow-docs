@@ -1,7 +1,7 @@
-Creates a tensor by tiling x by n.
+Creates a te`n`sor by tili`n`g `x` by `n`.
 ### Aliases:
-- tf.compat.v1.keras.backend.tile
-- tf.compat.v2.keras.backend.tile
+- `tf.compat.v1.keras.backend.tile`
+- `tf.compat.v2.keras.backend.tile`
 
 ```
  tf.keras.backend.tile(
@@ -10,7 +10,7 @@ Creates a tensor by tiling x by n.
 )
 ```
 #### Arguments:
-- x: A tensor or variable
-- n: A list of integer. The length must be the same as the number of dimensions in x.
+- `x`: A tensor or variable
+- `n`: A list of i`n`teger. The le`n`gth must be the same as the `n`umber of dime`n`sio`n`s i`n` `x`.
 #### Returns:
 A tiled tensor.

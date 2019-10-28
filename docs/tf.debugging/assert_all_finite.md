@@ -1,6 +1,6 @@
 Assert that the tensor does not contain any NaN's or Inf's.
 ### Aliases:
-- tf.compat.v2.debugging.assert_all_finite
+- `tf.compat.v2.debugging.assert_all_finite`
 
 ```
  tf.debugging.assert_all_finite(
@@ -10,8 +10,8 @@ Assert that the tensor does not contain any NaN's or Inf's.
 )
 ```
 #### Args:
-- x: Tensor to check.
-- message: Message to log on failure.
-- name: A name for this operation (optional).
+- `x`: Tensor to check.
+- `message`: Message to log on failure.
+- `name`: A `name` for this operation (optional).
 #### Returns:
-Same tensor as x.
+Same tensor as `x`.

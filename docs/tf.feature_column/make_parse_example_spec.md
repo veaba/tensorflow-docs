@@ -1,14 +1,13 @@
 Creates parsing spec dictionary from input feature_columns.
 ### Aliases:
-- tf.compat.v2.feature_column.make_parse_example_spec
+- `tf.compat.v2.feature_column.make_parse_example_spec`
 
 ```
  tf.feature_column.make_parse_example_spec(feature_columns)
 ```
 ### Used in the guide:
-- Using the SavedModel format
-[tf.io.parse_example](https://tensorflow.google.cn/api_docs/python/tf/io/parse_example)The returned dictionary can be used as arg 'features' in .
-
+- ``U``s``i``n``g`` ``t``h``e`` ``S``a``v``e``d``M``o``d``e``l`` ``f``o``r``m``a``t``
+The returned dictionary can be used as arg 'features' in `tf.io.parse_example`.
 #### Typical usage example:
 
 ```
@@ -35,8 +34,8 @@ For the above example, make_parse_example_spec would return the dict:
 }
 ```
 #### Args:
-- feature_columns: An iterable containing all feature columns. All items should be instances of classes derived from FeatureColumn.
+- `feature_columns`: An iterable containing all feature columns. All items should be instances of classes derived from `FeatureColumn`.
 #### Returns:
-A dict mapping each feature key to a FixedLenFeature or VarLenFeature value.
+A dict mapping each feature key to a `FixedLenFeature` or `VarLenFeature` value.
 #### Raises:
-- ValueError: If any of the given feature_columns is not a FeatureColumn instance.
+- `ValueError`: If any of the given `feature_columns` is not a `FeatureColumn` instance.

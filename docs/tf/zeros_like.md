@@ -1,6 +1,6 @@
 Creates a tensor with all elements set to zero.
 ### Aliases:
-- tf.compat.v2.zeros_like
+- `tf.compat.v2.zeros_like`
 
 ```
  tf.zeros_like(
@@ -10,11 +10,11 @@ Creates a tensor with all elements set to zero.
 )
 ```
 ### Used in the tutorials:
-- CycleGAN
-- Deep Convolutional Generative Adversarial Network
-- DeepDream
-- Pix2Pix
-Given a single tensor ``(tensor)``, this operation returns a tensor of the same type and shape as tensor with all elements set to zero. Optionally, you can use dtype to specify a new type for the returned tensor.
+- ``C``y``c``l``e``G``A``N``
+- ``D``e``e``p`` ``C``o``n``v``o``l``u``t``i``o``n``a``l`` ``G``e``n``e``r``a``t``i``v``e`` ``A``d``v``e``r``s``a``r``i``a``l`` ``N``e``t``w``o``r``k``
+- ``D``e``e``p``D``r``e``a``m``
+- ``P``i``x``2``P``i``x``
+Given a single `tensor` (`tensor`), this operation returns a `tensor` of the same type and shape as `tensor` with all elements set to zero. Optionally, you can use `dtype` to specify a new type for the returned `tensor`.
 #### For example:
 
 ```
@@ -31,8 +31,8 @@ tf.zeros_like(tensor,dtype=tf.int32)  # [[0, 0, 0], [0, 0, 0]] with
 dtype=int32
 ```
 #### Args:
-- input: A Tensor.
-- dtype: A type for the returned Tensor. Must be float16, float32, float64, int8, uint8, int16, uint16, int32, int64, complex64, complex128, bool or string.
-- name: A name for the operation (optional).
+- `input`: A `Tensor`.
+- `dtype`: A type for the returned `Tensor`. Must be `float16`, `float32`, `float64`, `int8`, `uint8`, `int16`, `uint16`, `int32`, `int64`, `complex64`, `complex128`, `bool` or `string`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor with all elements set to zero.
+A `Tensor` with all elements set to zero.

@@ -1,9 +1,8 @@
 ## Class BaseListParser
 Base class for a parser of lists of strings.
-[ArgumentParser](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentParser)Inherits From: 
-
+Inherits From: `ArgumentParser`
 ### Aliases:
-- Class tf.compat.v1.app.flags.BaseListParser
+- Class `tf.compat.v1.app.flags.BaseListParser`
 To extend, inherit from this class; from the subclass init, call
 
 ```

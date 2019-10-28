@@ -1,6 +1,6 @@
 Disables the mixed precision graph rewrite.
 ### Aliases:
-- tf.compat.v2.train.experimental.disable_mixed_precision_graph_rewrite
+- `tf.compat.v2.train.experimental.disable_mixed_precision_graph_rewrite`
 
 ```
  tf.train.experimental.disable_mixed_precision_graph_rewrite()

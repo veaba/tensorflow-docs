@@ -1,8 +1,8 @@
 Compatibility utility required to allow for both V1 and V2 behavior in TF.
 ### Aliases:
-- tf.compat.v1.compat.dimension_at_index
-- tf.compat.v1.dimension_at_index
-- tf.compat.v2.compat.dimension_at_index
+- `tf.compat.v1.compat.dimension_at_index`
+- `tf.compat.v1.dimension_at_index`
+- `tf.compat.v2.compat.dimension_at_index`
 
 ```
  tf.compat.dimension_at_index(
@@ -10,7 +10,7 @@ Compatibility utility required to allow for both V1 and V2 behavior in TF.
     index
 )
 ```
-Until the release of TF 2.0, we need the legacy behavior of TensorShape to coexist with the new behavior. This utility is a bridge between the two.
+Until the release of TF 2.0, we need the legacy behavior of `TensorShape` to coexist with the new behavior. This utility is a bridge between the two.
 If you want to retrieve the Dimension instance corresponding to a certain index in a TensorShape instance, use this utility, like this:
 
 ```
@@ -36,7 +36,7 @@ else:
 # instantiated on the fly.
 ```
 #### Arguments:
-- shape: A TensorShape instance.
-- index: An integer index.
+- `shape`: A TensorShape instance.
+- `index`: An integer `index`.
 #### Returns:
 A dimension object.

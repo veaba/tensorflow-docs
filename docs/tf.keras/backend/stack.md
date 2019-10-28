@@ -1,7 +1,7 @@
-Stacks a list of rank R tensors into a rank R+1 tensor.
+Stacks a list of rank `R` tensors into a rank `R`+1 tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.stack
-- tf.compat.v2.keras.backend.stack
+- `tf.compat.v1.keras.backend.stack`
+- `tf.compat.v2.keras.backend.stack`
 
 ```
  tf.keras.backend.stack(
@@ -10,8 +10,8 @@ Stacks a list of rank R tensors into a rank R+1 tensor.
 )
 ```
 #### Arguments:
-- x: List of tensors.
-- axis: Axis along which to perform stacking.
+- `x`: List of tensors.
+- `axis`: Axis along which to perform stacking.
 #### Returns:
 A tensor.
 #### Example:

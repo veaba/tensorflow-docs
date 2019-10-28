@@ -1,8 +1,8 @@
-Slice a SparseTensor based on the start and `size.
+Slice a `SparseTensor` based on the `start` and `size.
 ### Aliases:
-- tf.compat.v1.sparse.slice
-- tf.compat.v1.sparse_slice
-- tf.compat.v2.sparse.slice
+- `tf.compat.v1.sparse.slice`
+- `tf.compat.v1.sparse_slice`
+- `tf.compat.v2.sparse.slice`
 
 ```
  tf.sparse.slice(
@@ -31,11 +31,11 @@ sparse.slice([0, 4], [2, 3]) = shape = [2, 3]
 [      ]
 ```
 #### Args:
-- sp_input: The SparseTensor to split.
-- start: 1-D. tensor represents the start of the slice.
-- size: 1-D. tensor represents the size of the slice.
-- name: A name for the operation (optional).
+- `sp_input`: The `SparseTensor` to split.
+- `start`: 1-D. tensor represents the `start` of the slice.
+- `size`: 1-D. tensor represents the `size` of the slice.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A SparseTensor objects resulting from splicing.
+A `SparseTensor` objects resulting from splicing.
 #### Raises:
-- TypeError: If sp_input is not a SparseTensor.
+- `TypeError`: If `sp_input` is not a `SparseTensor`.

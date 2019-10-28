@@ -1,7 +1,7 @@
-Train and evaluate the estimator.
+Train and evaluate the `estimator`.
 ### Aliases:
-- tf.compat.v1.estimator.train_and_evaluate
-- tf.compat.v2.estimator.train_and_evaluate
+- `tf.compat.v1.estimator.train_and_evaluate`
+- `tf.compat.v2.estimator.train_and_evaluate`
 
 ```
  tf.estimator.train_and_evaluate(
@@ -11,15 +11,13 @@ Train and evaluate the estimator.
 )
 ```
 ### Used in the guide:
-- Migrate your TensorFlow 1 code to TensorFlow 2
+- ``M``i``g``r``a``t``e`` ``y``o``u``r`` ``T``e``n``s``o``r``F``l``o``w`` ``1`` ``c``o``d``e`` ``t``o`` ``T``e``n``s``o``r``F``l``o``w`` ``2``
 ### Used in the tutorials:
-- Multi-worker training with Estimator
-This utility function trains, evaluates, and (optionally) exports the model by using the given estimator. All training related specification is held in train_spec, including training input_fn and training max steps, etc. All evaluation and export related specification is held in eval_spec, including evaluation input_fn, steps, etc.
-[DistributionStrategies](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/distribute)This utility function provides consistent behavior for both local (non-distributed) and distributed configurations. The default distribution configuration is parameter server-based between-graph replication. For other types of distribution configurations such as all-reduce training, please use .
-
-Overfitting: In order to avoid overfitting, it is recommended to set up the training input_fn to shuffle the training data properly.
-[Estimator.train](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator#train)Stop condition: In order to support both distributed and non-distributed configuration reliably, the only supported stop condition for model training is train_spec.max_steps. If train_spec.max_steps is None, the model is trained forever. Use with care if model stop condition is different. For example, assume that the model is expected to be trained with one epoch of training data, and the training input_fn is configured to throw OutOfRangeError after going through one epoch, which stops the . For a three-training-worker distributed configuration, each training worker is likely to go through the whole epoch independently. So, the model will be trained with three epochs of training data instead of one epoch.
-
+- ``M``u``l``t``i``-``w``o``r``k``e``r`` ``t``r``a``i``n``i``n``g`` ``w``i``t``h`` ``E``s``t``i``m``a``t``o``r``
+This utility function trains, evaluates, and (optionally) exports the model by using the given `estimator`. All training related specification is held in `train_spec`, including training `input_fn` and training max steps, etc. All evaluation and export related specification is held in `eval_spec`, including evaluation `input_fn`, steps, etc.
+This utility function provides consistent behavior for both local (non-distributed) and distributed configurations. The default distribution configuration is parameter server-based between-graph replication. For other types of distribution configurations such as all-reduce training, please use DistributionStrategies.
+Overfitting: In order to avoid overfitting, it is recommended to set up the training `input_fn` to shuffle the training data properly.
+Stop condition: In order to support both distributed and non-distributed configuration reliably, the only supported stop condition for model training is `train_spec.max_steps`. If `train_spec.max_steps` is `None`, the model is trained forever. Use with care if model stop condition is different. For example, assume that the model is expected to be trained with one epoch of training data, and the training `input_fn` is configured to throw `OutOfRangeError` after going through one epoch, which stops the `Estimator.train`. For a three-training-worker distributed configuration, each training worker is likely to go through the whole epoch independently. So, the model will be trained with three epochs of training data instead of one epoch.
 Example of local (non-distributed) training:
 
 ```
@@ -52,25 +50,23 @@ eval_spec = tf.estimator.EvalSpec(input_fn=eval_input_fn)
 
 tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
 ```
-Note that in current implementation estimator.evaluate will be called multiple times. This means that evaluation graph (including eval_input_fn) will be re-created for each evaluate call. estimator.train will be called only once.
+Note that in current implementation `estimator.evaluate` will be called multiple times. This means that evaluation graph (including eval_input_fn) will be re-created for each `evaluate` call. `estimator.train` will be called only once.
 Example of distributed training:
-[RunConfig.model_dir](https://tensorflow.google.cn/api_docs/python/tf/estimator/RunConfig#model_dir)Regarding the example of distributed training, the code above can be used without a change (Please do make sure that the  for all workers is set to the same directory, i.e., a shared file system all workers can read and write). The only extra work to do is setting the environment variable TF_CONFIG properly for each worker correspondingly.
-
-[Distributed TensorFlow](https://tensorflow.google.cn/deploy/distributed)Also see .
-
-Setting environment variable depends on the platform. For example, on Linux, it can be done as follows ($ is the shell prompt):
+Regarding the example of distributed training, the code above can be used without a change (Please do make sure that the `RunConfig.model_dir` for all workers is set to the same directory, i.e., a shared file system all workers can read and write). The only extra work to do is setting the environment variable `TF_CONFIG` properly for each worker correspondingly.
+Also see Distributed TensorFlow.
+Setting environment variable depends on the platform. For example, on Linux, it can be done as follows ($ is the shell prompt):``
 
 ```
  $ TF_CONFIG='<replace_with_real_content>' python train_model.py
 ```
-For the content in TF_CONFIG, assume that the training cluster spec looks like:
+For the content in `TF_CONFIG`, assume that the training cluster spec looks like:
 
 ```
  cluster = {"chief": ["host0:2222"],
            "worker": ["host1:2222", "host2:2222", "host3:2222"],
            "ps": ["host4:2222", "host5:2222"]}
 ```
-Example of TF_CONFIG for chief training worker (must have one and only one):
+Example of `TF_CONFIG` for chief training worker (must have one and only one):
 
 ```
  # This should be a JSON string, which is set as environment variable. Usually
@@ -85,7 +81,7 @@ TF_CONFIG='{
 }'
 ```
 Note that the chief worker also does the model training job, similar to other non-chief training workers (see next paragraph). In addition to the model training, it manages some extra work, e.g., checkpoint saving and restoring, writing summaries, etc.
-Example of TF_CONFIG for non-chief training worker (optional, could be multiple):
+Example of `TF_CONFIG` for non-chief training worker (optional, could be multiple):
 
 ```
  # This should be a JSON string, which is set as environment variable. Usually
@@ -99,8 +95,8 @@ TF_CONFIG='{
     "task": {"type": "worker", "index": 0}
 }'
 ```
-where the task.index should be set as 0, 1, 2, in this example, respectively for non-chief training workers.
-Example of TF_CONFIG for parameter server, aka ps (could be multiple):
+where the `task.index` should be set as 0, 1, 2, in this example, respectively for non-chief training workers.
+Example of `TF_CONFIG` for parameter server, aka ps (could be multiple):
 
 ```
  # This should be a JSON string, which is set as environment variable. Usually
@@ -114,8 +110,8 @@ TF_CONFIG='{
     "task": {"type": "ps", "index": 0}
 }'
 ```
-where the task.index should be set as 0 and 1, in this example, respectively for parameter servers.
-Example of TF_CONFIG for evaluator task. Evaluator is a special task that is not part of the training cluster. There could be only one. It is used for model evaluation.
+where the `task.index` should be set as 0 and 1, in this example, respectively for parameter servers.
+Example of `TF_CONFIG` for evaluator task. Evaluator is a special task that is not part of the training cluster. There could be only one. It is used for model evaluation.
 
 ```
  # This should be a JSON string, which is set as environment variable. Usually
@@ -129,12 +125,12 @@ TF_CONFIG='{
     "task": {"type": "evaluator", "index": 0}
 }'
 ```
-When distribute or experimental_distribute.train_distribute and experimental_distribute.remote_cluster is set, this method will start a client running on the current host which connects to the remote_cluster for training and evaluation.
+When `distribute` or `experimental_distribute.train_distribute` and `experimental_distribute.remote_cluster` is set, this method will start a client running on the current host which connects to the `remote_cluster` for training and evaluation.
 #### Args:
-- estimator: An Estimator instance to train and evaluate.
-- train_spec: A TrainSpec instance to specify the training specification.
-- eval_spec: A EvalSpec instance to specify the evaluation and export specification.
+- `estimator`: An `Estimator` instance to train and evaluate.
+- `train_spec`: A `TrainSpec` instance to specify the training specification.
+- `eval_spec`: A `EvalSpec` instance to specify the evaluation and export specification.
 #### Returns:
-A tuple of the result of the evaluate call to the Estimator and the export results using the specified ExportStrategy. Currently, the return value is undefined for distributed training mode.
+A tuple of the result of the `evaluate` call to the `Estimator` and the export results using the specified `ExportStrategy`. Currently, the return value is undefined for distributed training mode.
 #### Raises:
-- ValueError: if environment variable TF_CONFIG is incorrectly set.
+- `ValueError`: if environment variable `TF_CONFIG` is incorrectly set.

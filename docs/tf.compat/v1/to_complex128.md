@@ -1,4 +1,4 @@
-Casts a tensor to type complex128. (deprecated)
+Casts a tensor to type `complex128`. (deprecated)
 
 ```
  tf.compat.v1.to_complex128(
@@ -7,9 +7,9 @@ Casts a tensor to type complex128. (deprecated)
 )
 ```
 #### Args:
-- x: A Tensor or SparseTensor or IndexedSlices.
-- name: A name for the operation (optional).
+- `x`: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor or SparseTensor or IndexedSlices with same shape as x with type complex128.
+A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with type `complex128`.
 #### Raises:
-- TypeError: If x cannot be cast to the complex128.
+- `TypeError`: If `x` cannot be cast to the `complex128`.

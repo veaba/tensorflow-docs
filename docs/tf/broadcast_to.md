@@ -1,8 +1,8 @@
-Defined in generated file: python/ops/gen_array_ops.py
+Defined in generated file: `python/ops/gen_array_ops.py`
 Broadcast an array for a compatible shape.
 ### Aliases:
-- tf.compat.v1.broadcast_to
-- tf.compat.v2.broadcast_to
+- `tf.compat.v1.broadcast_to`
+- `tf.compat.v2.broadcast_to`
 
 ```
  tf.broadcast_to(
@@ -22,10 +22,10 @@ array([[1, 2, 3],
        [1, 2, 3],
        [1, 2, 3]], dtype=int32)
 ```
-In the above example, the input Tensor with the shape of [1, 3] is broadcasted to output Tensor with shape of [3, 3].
+In the above example, the input Tensor with the shape of `[1, 3]` is broadcasted to output Tensor with shape of `[3, 3]`.
 #### Args:
-- input: A Tensor. A Tensor to broadcast.
-- shape: A Tensor. Must be one of the following types: int32, int64. An 1-D int Tensor. The shape of the desired output.
-- name: A name for the operation (optional).
+- `input`: A `Tensor`. A `Tensor` to broadcast.
+- `shape`: A `Tensor`. Must be one of the following types: `int32`, `int64`. An 1-D `int` `Tensor`. The `shape` of the desired output.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as input.
+A `Tensor`. Has the same type as `input`.

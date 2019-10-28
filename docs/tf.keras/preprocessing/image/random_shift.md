@@ -1,6 +1,7 @@
 Performs a random spatial shift of a Numpy image tensor.
-- tf.compat.v1.keras.preprocessing.image.random_shift
-- tf.compat.v2.keras.preprocessing.image.random_shift
+### Aliases:
+- `tf.compat.v1.keras.preprocessing.image.random_shift`
+- `tf.compat.v2.keras.preprocessing.image.random_shift`
 
 ```
  tf.keras.preprocessing.image.random_shift(
@@ -15,6 +16,7 @@ Performs a random spatial shift of a Numpy image tensor.
     interpolation_order=1
 )
 ```
+# Arguments
 
 ```
  x: Input tensor. Must be 3D.

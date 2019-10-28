@@ -1,8 +1,8 @@
 SpaceToBatch for N-D tensors of type T.
 ### Aliases:
-- tf.compat.v2.nn.space_to_batch
-- tf.compat.v2.space_to_batch
-- tf.nn.space_to_batch
+- `tf.compat.v2.nn.space_to_batch`
+- `tf.compat.v2.space_to_batch`
+- `tf.nn.space_to_batch`
 
 ```
  tf.space_to_batch(
@@ -12,35 +12,35 @@ SpaceToBatch for N-D tensors of type T.
     name=None
 )
 ```
-This operation divides "spatial" dimensions [1, ..., M] of the input into a grid of blocks of shape block_shape, and interleaves these blocks with the "batch" dimension (0) such that in the output, the spatial dimensions [1, ..., M] correspond to the position within the grid, and the batch dimension combines both the position within a spatial block and the original batch position. Prior to division into blocks, the spatial dimensions of the input are optionally zero padded according to paddings. See below for a precise description.
+This operation divides "spatial" dimensions `[1, ..., M]` of the input into a grid of blocks of shape `block_shape`, and interleaves these blocks with the "batch" dimension (0) such that in the output, the spatial dimensions `[1, ..., M]` correspond to the position within the grid, and the batch dimension combines both the position within a spatial block and the original batch position. Prior to division into blocks, the spatial dimensions of the input are optionally zero padded according to `paddings`. See below for a precise description.
 #### Args:
-- input: A Tensor. N-D with shape input_shape = [batch] + spatial_shape + remaining_shape, where spatial_shape has M dimensions.
-- block_shape: A Tensor. Must be one of the following types: int32, int64. 1-D with shape [M], all values must be >= 1.
-- paddings: A Tensor. Must be one of the following types: int32, int64. 2-D with shape [M, 2], all values must be >= 0. paddings[i] = [pad_start, pad_end] specifies the padding for input dimension i + 1, which corresponds to spatial dimension i. It is required that block_shape[i] divides input_shape[i + 1] + pad_start + pad_end.
-This operation is equivalent to the following steps:
-Zero-pad the start and end of dimensions [1, ..., M] of the input according to paddings to produce padded of shape padded_shape.
-Reshape padded to reshaped_padded of shape:
-[batch] + [padded_shape[1] / block_shape[0], block_shape[0], ..., padded_shape[M] / block_shape[M-1], block_shape[M-1]] + remaining_shape
-Permute dimensions of reshaped_padded to produce permuted_reshaped_padded of shape:
-block_shape + [batch] + [padded_shape[1] / block_shape[0], ..., padded_shape[M] / block_shape[M-1]] + remaining_shape
-Reshape permuted_reshaped_padded to flatten block_shape into the batch dimension, producing an output tensor of shape:
-[batch * prod``(block_shape)``] + [padded_shape[1] / block_shape[0], ..., padded_shape[M] / block_shape[M-1]] + remaining_shape
+- `input`: A `Tensor`. N-D with shape `input`_shape = [batch] + spatial_shape + remaining_shape, where spatial_shape has `M` dimensions.
+- `block_shape`: A `Tensor`. Must be one of the following types: `int32`, `int64`. 1-D with shape `[M]`, all values must be >= 1.
+- `paddings`: A `Tensor`. Must be one of the follow`i`ng types: `int32`, `int64`. 2-D w`i`th shape `[M, 2]`, all values must be >= 0. `paddings`[`i`] = [pad_start, pad_end] spec`i`f`i`es the padd`i`ng for `i`nput d`i`mens`i`on `i + 1`, wh`i`ch corresponds to spat`i`al d`i`mens`i`on `i`. It `i`s requ`i`red that `block_shape[i]` d`i`v`i`des `i`nput_shape[`i + 1`] + pad_start + pad_end.
+Th`i`s operat`i`on `i`s equ`i`valent to the follow`i`ng steps:
+Zero-pad the start and end of d`i`mens`i`ons `[1, ..., M]` of the `i`nput accord`i`ng to `paddings` to produce `padded` of shape `padded`_shape.
+Reshape `padded` to `reshaped_padded` of shape:
+[batch] + [`padded`_shape[1] / `block_shape`[0], `block_shape`[0], ..., `padded`_shape[M] / `block_shape`[M-1], `block_shape`[M-1]] + rema`i`n`i`ng_shape
+Permute d`i`mens`i`ons of `reshaped_padded` to produce `permuted_reshaped_padded` of shape:
+`block_shape` + [batch] + [`padded`_shape[1] / `block_shape`[0], ..., `padded`_shape[M] / `block_shape`[M-1]] + rema`i`n`i`ng_shape
+Reshape `permuted_reshaped_padded` to flatten `block_shape` `i`nto the batch d`i`mens`i`on, produc`i`ng an output tensor of shape:
+[batch * prod(`block_shape`)] + [`padded`_shape[1] / `block_shape`[0], ..., `padded`_shape[M] / `block_shape`[M-1]] + rema`i`n`i`ng_shape
 Some examples:
-(1) For the following input of shape [1, 2, 2, 1], block_shape = [2, 2], and paddings = [[0, 0], [0, 0]]:
-- Zero-pad the start and end of dimensions [1, ..., M] of the input according to paddings to produce padded of shape padded_shape.
-- Reshape padded to reshaped_padded of shape:
-[batch] + [padded_shape[1] / block_shape[0], block_shape[0], ..., padded_shape[M] / block_shape[M-1], block_shape[M-1]] + remaining_shape
-- Permute dimensions of reshaped_padded to produce permuted_reshaped_padded of shape:
+(1) For the follow`i`ng `i`nput of shape `[1, 2, 2, 1]`, `block_shape` = [2, 2], and `paddings` = [[0, 0], [0, 0]]:
+- Zero-pad the start and end of dimensions `[1, ..., M]` of the input according to `paddings` to produce `padded` of shape `padded`_shape.
+- Reshape `padded` to `reshaped_padded` of shape:
+[batch] + [`padded`_shape[1] / block_shape[0], block_shape[0], ..., `padded`_shape[M] / block_shape[M-1], block_shape[M-1]] + remaining_shape
+- Permute dimensions of `reshaped_padded` to produce `permuted_reshaped_padded` of shape:
 block_shape + [batch] + [padded_shape[1] / block_shape[0], ..., padded_shape[M] / block_shape[M-1]] + remaining_shape
-- Reshape permuted_reshaped_padded to flatten block_shape into the batch dimension, producing an output tensor of shape:
-[batch * prod```(block_shape)```] + [padded_shape[1] / block_shape[0], ..., padded_shape[M] / block_shape[M-1]] + remaining_shape
-The output tensor has shape [4, 1, 1, 1] and value:
-(2) For the following input of shape [1, 2, 2, 3], block_shape = [2, 2], and paddings = [[0, 0], [0, 0]]:
-The output tensor has shape [4, 1, 1, 3] and value:
-(3) For the following input of shape [1, 4, 4, 1], block_shape = [2, 2], and paddings = [[0, 0], [0, 0]]:
-The output tensor has shape [4, 2, 2, 1] and value:
-(4) For the following input of shape [2, 2, 4, 1], block_shape = [2, 2], and paddings = [[0, 0], [2, 0]]:
-The output tensor has shape [8, 1, 3, 1] and value:
-Among others, this operation is useful for reducing atrous convolution into regular convolution. * name: A name for the operation (optional).
+- Reshape `permuted_reshaped_padded` to flatten `block_shape` into the batch dimension, producing an output tensor of shape:
+[batch * prod(`block_shape`)] + [padded_shape[1] / `block_shape`[0], ..., padded_shape[M] / `block_shape`[M-1]] + remaining_shape
+The output tensor has shape `[4, 1, 1, 1]` and value:
+(2) For the following input of shape `[1, 2, 2, 3]`, `block_shape = [2, 2]`, and `paddings = [[0, 0], [0, 0]]`:
+The output tensor has shape `[4, 1, 1, 3]` and value:
+(3) For the following input of shape `[1, 4, 4, 1]`, `block_shape = [2, 2]`, and `paddings = [[0, 0], [0, 0]]`:
+The output tensor has shape `[4, 2, 2, 1]` and value:
+(4) For the following input of shape `[2, 2, 4, 1]`, block_shape = `[2, 2]`, and paddings = `[[0, 0], [2, 0]]`:
+The output tensor has shape `[8, 1, 3, 1]` and value:
+Among others, this operation is useful for reducing atrous convolution into regular convolution. * `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor. Has the same type as input.
+A `Tensor`. Has the same type as `input`.

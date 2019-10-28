@@ -1,7 +1,7 @@
 Instantiates a variable with values drawn from a uniform distribution.
 ### Aliases:
-- tf.compat.v1.keras.backend.random_uniform_variable
-- tf.compat.v2.keras.backend.random_uniform_variable
+- `tf.compat.v1.keras.backend.random_uniform_variable`
+- `tf.compat.v2.keras.backend.random_uniform_variable`
 
 ```
  tf.keras.backend.random_uniform_variable(
@@ -14,12 +14,12 @@ Instantiates a variable with values drawn from a uniform distribution.
 )
 ```
 #### Arguments:
-- shape: Tuple of integers, shape of returned Keras variable.
-- low: Float, lower boundary of the output interval.
-- high: Float, upper boundary of the output interval.
-- dtype: String, dtype of returned Keras variable.
-- name: String, name of returned Keras variable.
-- seed: Integer, random seed.
+- `shape`: Tuple of integers, `shape` of returned Keras variable.
+- `low`: Float, `low`er boundary of the output interval.
+- `high`: Float, upper boundary of the output interval.
+- `dtype`: String, `dtype` of returned Keras variable.
+- `name`: String, `name` of returned Keras variable.
+- `seed`: Integer, random `seed`.
 #### Returns:
 A Keras variable, filled with drawn samples.
 #### Example:

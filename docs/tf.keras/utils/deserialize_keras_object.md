@@ -1,6 +1,6 @@
 ### Aliases:
-- tf.compat.v1.keras.utils.deserialize_keras_object
-- tf.compat.v2.keras.utils.deserialize_keras_object
+- `tf.compat.v1.keras.utils.deserialize_keras_object`
+- `tf.compat.v2.keras.utils.deserialize_keras_object`
 
 ```
  tf.keras.utils.deserialize_keras_object(

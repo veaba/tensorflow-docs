@@ -7,5 +7,5 @@ Adds a externally defined loss to the collection of losses.
 )
 ```
 #### Args:
-- loss: A loss Tensor.
-- loss_collection: Optional collection to add the loss to.
+- `loss`: A `loss` `Tensor`.
+- `loss_collection`: Optional collection to add the loss to.

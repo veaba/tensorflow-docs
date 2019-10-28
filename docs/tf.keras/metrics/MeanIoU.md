@@ -1,14 +1,13 @@
 ## Class MeanIoU
 Computes the mean Intersection-Over-Union metric.
-[Metric](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Metric)Inherits From: 
-
+Inherits From: `Metric`
 ### Aliases:
-- Class tf.compat.v1.keras.metrics.MeanIoU
-- Class tf.compat.v2.keras.metrics.MeanIoU
-- Class tf.compat.v2.metrics.MeanIoU
-- Class tf.metrics.MeanIoU
-Mean Intersection-Over-Union is a common evaluation metric for semantic image segmentation, which first computes the IOU for each semantic class and then computes the average over classes. IOU is defined as follows: IOU = true_positive / (true_positive + false_positive + false_negative). The predictions are accumulated in a confusion matrix, weighted by sample_weight and the metric is then calculated from it.
-If sample_weight is None, weights default to 1. Use sample_weight of 0 to mask values.
+- Class `tf.compat.v1.keras.metrics.MeanIoU`
+- Class `tf.compat.v2.keras.metrics.MeanIoU`
+- Class `tf.compat.v2.metrics.MeanIoU`
+- Class `tf.metrics.MeanIoU`
+Mean Intersection-Over-Union is a common evaluation metric for semantic image segmentation, which first computes the IOU for each semantic class and then computes the average over classes. IOU is defined as follows: IOU = true_positive / (true_positive + false_positive + false_negative). The predictions are accumulated in a confusion matrix, weighted by `sample_weight` and the metric is then calculated from it.
+If `sample_weight` is `None`, weights default to 1. Use `sample_weight` of 0 to mask values.
 #### Usage:
 
 ```
@@ -32,8 +31,7 @@ model.compile(
   metrics=[tf.keras.metrics.MeanIoU(num_classes=2)])
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2291-L2310)
-
+View source
 
 ```
  __init__(
@@ -42,14 +40,13 @@ model.compile(
     dtype=None
 )
 ```
-Creates a MeanIoU instance.
+Creates a `MeanIoU` instance.
 #### Args:
-- num_classes: The possible number of labels the prediction task can have. This value must be provided, since a confusion matrix of dimension = [num_classes, num_classes] will be allocated.
-- name: (Optional) string name of the metric instance.
-- dtype: (Optional) data type of the metric result.
+- `num_classes`: The possible number of labels the prediction task can have. This value must be provided, since a confusion matrix of dimension = [`num_classes`, `num_classes`] will be allocated.
+- `name`: (Optional) string `name` of the metric instance.
+- `dtype`: (Optional) data type of the metric result.
 ## __new__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
+View source
 
 ```
  __new__(
@@ -61,8 +58,7 @@ Creates a MeanIoU instance.
 Create and return a new object. See help(type) for accurate signature.
 ## Methods
 ### reset_states
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2372-L2373)
-
+View source
 
 ```
  reset_states()
@@ -70,16 +66,14 @@ Create and return a new object. See help(type) for accurate signature.
 Resets all of the metric state variables.
 This function is called between epochs/steps, when a metric is evaluated during training.
 ### result
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2348-L2370)
-
+View source
 
 ```
  result()
 ```
 Compute the mean intersection-over-union via the confusion matrix.
 ### update_state
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2312-L2346)
-
+View source
 
 ```
  update_state(
@@ -90,8 +84,8 @@ Compute the mean intersection-over-union via the confusion matrix.
 ```
 Accumulates the confusion matrix statistics.
 #### Args:
-- y_true: The ground truth values.
-- y_pred: The predicted values.
-- sample_weight: Optional weighting of each example. Defaults to 1. Can be a Tensor whose rank is either 0, or the same rank as y_true, and must be broadcastable to y_true.
+- `y_true`: The ground truth values.
+- `y_pred`: The predicted values.
+- `sample_weight`: Optional weighting of each example. Defaults to 1. Can be a `Tensor` whose rank is either 0, or the same rank as `y_true`, and must be broadcastable to `y_true`.
 #### Returns:
 Update op.

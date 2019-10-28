@@ -11,7 +11,7 @@ Returns input function that would feed dict of numpy arrays into the model.
     num_threads=1
 )
 ```
-This returns a function outputting features and targets based on the dict of numpy arrays. The dict features has the same keys as the x. The dict targets has the same keys as the y if y is a dict.
+This returns a function outputting `features` and `targets` based on the dict of nump`y` arra`y`s. The dict `features` has the same ke`y`s as the `x`. The dict `targets` has the same ke`y`s as the `y` if `y` is a dict.
 #### Example:
 
 ```
@@ -25,18 +25,18 @@ with tf.Session() as session:
       x, y, batch_size=2, shuffle=False, num_epochs=1)
 ```
 #### Args:
-- x: numpy array object or dict of numpy array objects. If an array, the array will be treated as a single feature.
-- y: numpy array object or dict of numpy array object. None if absent.
-- batch_size: Integer, size of batches to return.
-- num_epochs: Integer, number of epochs to iterate over data. If None will run forever.
-- shuffle: Boolean, if True shuffles the queue. Avoid shuffle at prediction time.
-- queue_capacity: Integer, size of queue to accumulate.
-- num_threads: Integer, number of threads used for reading and enqueueing. In order to have predicted and repeatable order of reading and enqueueing, such as in prediction and evaluation mode, num_threads should be 1.
+- `x`: numpy array object or dict of numpy array objects. If an array, the array will be treated as a single feature.
+- `y`: nump`y` arra`y` object or dict of nump`y` arra`y` object. `None` if absent.
+- `batch_size`: Integer, size of batches to return.
+- `num_epochs`: Integer, number of epochs to iterate over data. If `None` will run forever.
+- `shuffle`: Boolean, if True `shuffle`s the queue. Avoid `shuffle` at prediction time.
+- `queue_capacity`: Integer, size of queue to accumulate.
+- `num_threads`: Integer, number of threads used for reading and enqueueing. In order to have predicted and repeatable order of reading and enqueueing, such as in prediction and evaluation mode, `num_threads` should be 1.
 #### Returns:
-Function, that has signature of ()->(dict of features, targets)
+Function, that has signature of ()->(dict of `features`, `targets`)
 #### Raises:
-- ValueError: if the shape of y mismatches the shape of values in x (i.e., values in x have same shape).
-- ValueError: if duplicate keys are in both x and y when y is a dict.
-- ValueError: if x or y is an empty dict.
-- TypeError: x is not a dict or array.
-- ValueError: if 'shuffle' is not provided or a bool.
+- `ValueError`: if the shape of `y` mismatches the shape of values in `x` (i.e., values in `x` have same shape).
+- `ValueError`: if duplicate ke`y`s are in both `x` and `y` when `y` is a dict.
+- `ValueError`: if x or y is an empty dict.
+- `TypeError`: `x` is not a dict or array.
+- `ValueError`: if 'shuffle' is not provided or a bool.

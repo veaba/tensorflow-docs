@@ -1,4 +1,4 @@
-Split elements of source based on delimiter. (deprecated arguments)
+Split elements of `source` based on `delimiter`. (deprecated arguments)
 
 ```
  tf.compat.v1.string_split(
@@ -10,8 +10,8 @@ Split elements of source based on delimiter. (deprecated arguments)
     name=None
 )
 ```
-Let N be the size of source (typically N will be the batch size). Split each element of source based on delimiter and return a SparseTensor or RaggedTensor containing the split tokens. Empty tokens are ignored.
-If sep is an empty string, each element of the source is split into individual strings, each containing one byte. (This includes splitting multibyte sequences of UTF-8.) If delimiter contains multiple bytes, it is treated as a set of delimiters with each considered a potential split point.
+Let N be the size of `source` (typically N will be the batch size). Split each element of `source` based on `delimiter` and return a `SparseTensor` or `RaggedTensor` containing the split tokens. Empty tokens are ignored.
+If `sep` is an empty string, each element of the `source` is split into individual strings, each containing one byte. (This includes splitting multibyte sequences of UTF-8.) If delimiter contains multiple bytes, it is treated as a set of delimiters with each considered a potential split point.
 #### Examples:
 
 ```

@@ -1,7 +1,7 @@
-Retrieves the elements of indices indices in the tensor reference.
+Retrieves the elements of `indices` `indices` in the tensor `reference`.
 ### Aliases:
-- tf.compat.v1.keras.backend.gather
-- tf.compat.v2.keras.backend.gather
+- `tf.compat.v1.keras.backend.gather`
+- `tf.compat.v2.keras.backend.gather`
 
 ```
  tf.keras.backend.gather(
@@ -10,7 +10,7 @@ Retrieves the elements of indices indices in the tensor reference.
 )
 ```
 #### Arguments:
-- reference: A tensor.
-- indices: An integer tensor of indices.
+- `reference`: A tensor.
+- `indices`: An integer tensor of `indices`.
 #### Returns:
-A tensor of same type as reference.
+A tensor of same type as `reference`.

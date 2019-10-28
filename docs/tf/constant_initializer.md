@@ -1,29 +1,28 @@
 ## Class constant_initializer
 Initializer that generates tensors with constant values.
-[Initializer](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/Initializer)Inherits From: 
-
+Inherits From: `Initializer`
 ### Aliases:
-- Class tf.compat.v2.constant_initializer
-- Class tf.compat.v2.initializers.Constant
-- Class tf.compat.v2.initializers.constant
-- Class tf.compat.v2.keras.initializers.Constant
-- Class tf.compat.v2.keras.initializers.constant
-- Class tf.initializers.Constant
-- Class tf.initializers.constant
-- Class tf.keras.initializers.Constant
-- Class tf.keras.initializers.constant
+- Class `tf.compat.v2.constant_initializer`
+- Class `tf.compat.v2.initializers.Constant`
+- Class `tf.compat.v2.initializers.constant`
+- Class `tf.compat.v2.keras.initializers.Constant`
+- Class `tf.compat.v2.keras.initializers.constant`
+- Class `tf.initializers.Constant`
+- Class `tf.initializers.constant`
+- Class `tf.keras.initializers.Constant`
+- Class `tf.keras.initializers.constant`
 ### Used in the guide:
-- Keras overview
+- ``K``e``r``a``s`` ``o``v``e``r``v``i``e``w``
 ### Used in the tutorials:
-- Classification on imbalanced data
-The resulting tensor is populated with values of type dtype, as specified by arguments value following the desired shape of the new tensor (see examples below).
-The argument value can be a constant value, or a list of values of type dtype. If value is a list, then the length of the list must be less than or equal to the number of elements implied by the desired shape of the tensor. In the case where the total number of elements in value is less than the number of elements required by the tensor shape, the last element in value will be used to fill the remaining entries. If the total number of elements in value is greater than the number of elements required by the tensor shape, the initializer will raise a ValueError.
+- ``C``l``a``s``s``i``f``i``c``a``t``i``o``n`` ``o``n`` ``i``m``b``a``l``a``n``c``e``d`` ``d``a``t``a``
+The resulting tensor is populated with `value`s of type `dtype`, as specified by arguments `value` following the desired `shape` of the new tensor (see examples below).
+The argument `value` can be a constant `value`, or a list of `value`s of type `dtype`. If `value` is a list, then the length of the list must be less than or equal to the number of elements implied by the desired shape of the tensor. In the case where the total number of elements in `value` is less than the number of elements required by the tensor shape, the last element in `value` will be used to fill the remaining entries. If the total number of elements in `value` is greater than the number of elements required by the tensor shape, the initializer will raise a `ValueError`.
 #### Args:
-- value: A Python scalar, list or tuple of values, or a N-dimensional numpy array. All elements of the initialized variable will be set to the corresponding value in the value argument.
+- `value`: A Python scalar, list or tuple of `value`s, or a N-dimensional numpy array. All elements of the initialized variable will be set to the corresponding `value` in the `value` argument.
 #### Raises:
-- TypeError: If the input value is not one of the expected types.
+- `TypeError`: If the input `value` is not one of the expected types.
 #### Examples:
-The following example can be rewritten using a numpy.ndarray instead of the value list, even reshaped, as shown in the two commented lines below the value list initialization.
+The following example can be rewritten using a numpy.ndarray instead of the `value` list, even reshaped, as shown in the two commented lines below the `value` list initialization.
 
 ```
    import numpy as np
@@ -77,8 +76,7 @@ The following example can be rewritten using a numpy.ndarray instead of the valu
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L197-L212)
-
+View source
 
 ```
  __call__(
@@ -88,13 +86,12 @@ Initialize self. See help(type(self)) for accurate signature.
 ```
 Returns a tensor object initialized as specified by the initializer.
 #### Args:
-- shape: Shape of the tensor.
-- dtype: Optional dtype of the tensor. If not provided the dtype of the tensor created will be the type of the inital value.
+- `shape`: Shape of the tensor.
+- `dtype`: Optional `dtype` of the tensor. If not provided the `dtype` of the tensor created will be the type of the inital value.
 #### Raises:
-- TypeError: If the initializer cannot create a tensor of the requested dtype.
+- `TypeError`: If the initializer cannot create a tensor of the requested dtype.
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L69-L89)
-
+View source
 
 ```
  from_config(
@@ -111,12 +108,11 @@ config = initializer.get_config()
 initializer = RandomUniform.from_config(config)
 ```
 #### Args:
-- config: A Python dictionary. It will typically be the output of get_config.
+- `config`: A Python dictionary. It will typically be the output of `get_config`.
 #### Returns:
 An Initializer instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L214-L215)
-
+View source
 
 ```
  get_config()

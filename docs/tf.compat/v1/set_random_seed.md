@@ -1,5 +1,6 @@
 Sets the graph-level random seed for the default graph.
-- tf.compat.v1.random.set_random_seed
+### Aliases:
+- `tf.compat.v1.random.set_random_seed`
 
 ```
  tf.compat.v1.set_random_seed(seed)
@@ -73,4 +74,4 @@ with tf.compat.v1.Session() as sess2:
   print(sess2.run(b))  # generates 'B2'
 ```
 #### Args:
-- seed: integer.
+- `seed`: integer.

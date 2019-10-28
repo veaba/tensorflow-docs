@@ -1,8 +1,8 @@
 ### Aliases:
-- tf.compat.v1.keras.metrics.top_k_categorical_accuracy
-- tf.compat.v2.keras.metrics.top_k_categorical_accuracy
-- tf.compat.v2.metrics.top_k_categorical_accuracy
-- tf.metrics.top_k_categorical_accuracy
+- `tf.compat.v1.keras.metrics.top_k_categorical_accuracy`
+- `tf.compat.v2.keras.metrics.top_k_categorical_accuracy`
+- `tf.compat.v2.metrics.top_k_categorical_accuracy`
+- `tf.metrics.top_k_categorical_accuracy`
 
 ```
  tf.keras.metrics.top_k_categorical_accuracy(

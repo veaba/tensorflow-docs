@@ -1,6 +1,6 @@
 Computes number of nonzero elements across dimensions of a tensor. (deprecated arguments) (deprecated arguments)
 ### Aliases:
-- tf.compat.v1.math.count_nonzero
+- `tf.compat.v1.math.count_nonzero`
 
 ```
  tf.compat.v1.count_nonzero(
@@ -14,8 +14,8 @@ Computes number of nonzero elements across dimensions of a tensor. (deprecated a
     input=None
 )
 ```
-Reduces input_tensor along the dimensions given in axis. Unless keepdims is true, the rank of the tensor is reduced by 1 for each entry in axis. If keepdims is true, the reduced dimensions are retained with length 1.
-If axis has no entries, all dimensions are reduced, and a tensor with a single element is returned.
+Reduces `input_tensor` along the dimensions given in `axis`. Unless `keepdims` is true, the rank of the tensor is reduced by 1 for each entry in `axis`. If `keepdims` is true, the reduced dimensions are retained with length 1.
+If `axis` has no entries, all dimensions are reduced, and a tensor with a single element is returned.
 NOTE Floating point comparison to zero is done by exact floating point equality check. Small values are not rounded to zero for purposes of the nonzero check.
 #### For example:
 
@@ -27,7 +27,7 @@ tf.math.count_nonzero(x, 1)  # [1, 2]
 tf.math.count_nonzero(x, 1, keepdims=True)  # [[1], [2]]
 tf.math.count_nonzero(x, [0, 1])  # 3
 ```
-NOTE Strings are compared against zero-length empty string "". Any string with a size greater than zero is already considered as nonzero.
+NOTE Strings are compared against zero-length empty string `""`. Any string with a size greater than zero is already considered as nonzero.
 #### For example:
 
 ```
@@ -35,13 +35,13 @@ NOTE Strings are compared against zero-length empty string "". Any string with a
 tf.math.count_nonzero(x) # 3, with "a", "  ", and "b" as nonzero strings.
 ```
 #### Args:
-- input_tensor: The tensor to reduce. Should be of numeric type, bool, or string.
-- axis: The dimensions to reduce. If None (the default), reduces all dimensions. Must be in the range [-rank`(input_tensor)`, rank`(input_tensor)`).
-- keepdims: If true, retains reduced dimensions with length 1.
-- dtype: The output dtype; defaults to tf.int64.
-- name: A name for the operation (optional).
-- reduction_indices: The old (deprecated) name for axis.
-- keep_dims: Deprecated alias for keepdims.
-- input: Overrides input_tensor. For compatibility.
+- `input_tensor`: The tensor to reduce. Should be of numeric type, `bool`, or `string`.
+- `axis`: The dimensions to reduce. If `None` (the default), reduces all dimensions. Must be in the range [-rank(input_tensor), rank(input_tensor)).
+- `keepdims`: If true, retains reduced dimensions with length 1.
+- `dtype`: The output `dtype`; defaults to `tf.int64`.
+- `name`: A `name` for the operation (optional).
+- `reduction_indices`: The old (deprecated) name for axis.
+- `keep_dims`: Deprecated alias for `keepdims`.
+- `input`: Overrides `input`_tensor. For compatibility.
 #### Returns:
 The reduced tensor (number of nonzero values).

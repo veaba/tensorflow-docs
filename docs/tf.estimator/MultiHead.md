@@ -1,14 +1,13 @@
 ## Class MultiHead
-Creates a Head for multi-objective learning.
-[Head](https://tensorflow.google.cn/api_docs/python/tf/estimator/Head)Inherits From: 
-
+Creates a `Head` for multi-objective learning.
+Inherits From: `Head`
 ### Aliases:
-- Class tf.compat.v1.estimator.MultiHead
-- Class tf.compat.v2.estimator.MultiHead
-This class merges the output of multiple Head objects. Specifically:
-- For training, sums losses of each head, calls train_op_fn with this final loss.
-- For eval, merges metrics by adding head.name suffix to the keys in eval metrics, such as precision/head1.name, precision/head2.name.
-- For prediction, merges predictions and updates keys in prediction dict to a 2-tuple, (head.name, prediction_key). Merges export_outputs such that by default the first head is served.
+- Class `tf.compat.v1.estimator.MultiHead`
+- Class `tf.compat.v2.estimator.MultiHead`
+This class merges the output of multiple `Head` objects. Specifically:
+- For training, sums losses of each head, calls `train_op_fn` with this final loss.
+- For eval, merges metrics by adding `head.name` suffix to the keys in eval metrics, such as `precision/head1.name`, `precision/head2.name`.
+- For prediction, merges predictions and updates keys in prediction dict to a 2-tuple, `head.name, prediction_key)`. Merges `export_outputs` such that by default the first head is served.
 #### Usage:
 
 ```
@@ -36,7 +35,7 @@ def model_fn(features, labels, mode):
 estimator = tf.estimator.Estimator(model_fn=model_fn)
 estimator.train(input_fn=input_fn)
 ```
-Also supports logits as a Tensor of shape [D0, D1, ... DN, logits_dimension]. It will split the Tensor along the last dimension and distribute it appropriately among the heads. E.g.:
+Also supports `logits` as a `Tensor` of shape `[D0, D1, ... DN, logits_dimension]`. It will split the `Tensor` along the last dimension and distribute it appropriately among the heads. E.g.:
 # Input logits.
 # logits = np.array([[-1., 1., 2., -2., 2.], [-1.5, 1., -3., 2., -2.]],
 
@@ -65,11 +64,10 @@ Usage:
   return head.create_estimator_spec(..., logits=logits, ...)
 ```
 #### Args:
-- heads: List or tuple of Head instances. All heads must have name specified. The first head in the list is the default used at serving time.
-- head_weights: Optional list of weights, same length as heads. Used when merging losses to calculate the weighted sum of losses from each head. If None, all losses are weighted equally.
+- `heads`: List or tuple of `Head` instances. All `heads` must have `name` specified. The first head in the list is the default used at serving time.
+- `head_weights`: Optional list of weights, same length as `heads`. Used when merging losses to calculate the weighted sum of losses from each head. If `None`, all losses are weighted equally.
 ## __init__
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_head.py)
-
+View source
 
 ```
  __init__(
@@ -80,15 +78,14 @@ Usage:
 Initialize self. See help(type(self)) for accurate signature.
 ## Properties
 ### logits_dimension
-See base_head.Head for details.
+See `base_head.Head` for details.
 ### loss_reduction
-See base_head.Head for details.
+See `base_head.Head` for details.
 ### name
-See base_head.Head for details.
+See `base_head.Head` for details.
 ## Methods
 ### create_estimator_spec
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_head.py)
-
+View source
 
 ```
  create_estimator_spec(
@@ -103,24 +100,18 @@ See base_head.Head for details.
     regularization_losses=None
 )
 ```
-Returns a model_fn.EstimatorSpec.
+Returns a `model_fn.EstimatorSpec`.
 #### Args:
-- features: Input dict of Tensor or SparseTensor objects.
-- mode: Estimator's ModeKeys.
-- logits: Input dict keyed by head name, or logits Tensor with shape [D0, D1, ... DN, logits_dimension]. For many applications, the Tensor shape is [batch_size, logits_dimension]. If logits is a Tensor, it will split the Tensor along the last dimension and distribute it appropriately among the heads. Check MultiHead for examples.
-- labels: Input dict keyed by head name. For each head, the label value can be integer or string Tensor with shape matching its corresponding logits.labels is a required argument when mode equals TRAIN or EVAL.
-- optimizer: An tf.keras.optimizers.Optimizer instance to optimize the loss in TRAIN mode. Namely, sets train_op = optimizer.get_updates(loss, trainable_variables), which updates variables to minimize loss.
-- trainable_variables: A list or tuple of Variable objects to update to minimize loss. In Tensorflow 1.x, by default these are the list of variables collected in the graph under the key GraphKeys.TRAINABLE_VARIABLES. As Tensorflow 2.x doesn't have collections and GraphKeys, trainable_variables need to be passed explicitly here.
-- train_op_fn: Function that takes a scalar loss Tensor and returns train_op. Used if optimizer is None.
-- update_ops: A list or tuple of update ops to be run at training time. For example, layers such as BatchNormalization create mean and variance update ops that need to be run at training time. In Tensorflow 1.x, these are thrown into an UPDATE_OPS collection. As Tensorflow 2.x doesn't have collections, update_ops need to be passed explicitly here.
-- regularization_losses: A list of additional scalar losses to be added to the training loss, such as regularization losses. These losses are usually expressed as a batch average, so for best results, in each head, users need to use the default loss_reduction=SUM_OVER_BATCH_SIZE to avoid scaling errors. Compared to the regularization losses for each head, this loss is to regularize the merged loss of all heads in multi head, and will be added to the overall training loss of multi head.
+- `features`: Input `dict` of `Tensor` or `SparseTensor` objects.
+- `mode`: Estimator's `ModeKeys`.
+- `logits`: Input `dict` keyed by head name, or `logits` `Tensor` with shape `[D0, D1, ... DN, logits_dimension]`. For many applications, the `Tensor` shape is `[batch_size, logits_dimension]`. If `logits` is a `Tensor`, it will split the `Tensor` along the last dimension and distribute it appropriately among the heads. Check `MultiHead` for examples.
+- `labels`: Input `dict` keyed by head name. For each head, the label value can be integer or string `Tensor` with shape matching its corresponding `logits`.`labels` is a required argument when `mode` equals `TRAIN` or `EVAL`.
 #### Returns:
-A model_fn.EstimatorSpec instance.
+A `model_fn.EstimatorSpec` instance.
 #### Raises:
-- ValueError: If both train_op_fn and optimizer are None in TRAIN mode, or if both are set. If mode is not in Estimator's ModeKeys.
+- `ValueError`: If both `train_op_fn` and `optimizer` are `None` in TRAIN `mode`, or if both are set. If `mode` is not in Estimator's `ModeKeys`.
 ### loss
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_head.py)
-
+View source
 
 ```
  loss(
@@ -131,18 +122,16 @@ A model_fn.EstimatorSpec instance.
     regularization_losses=None
 )
 ```
-Returns regularized training loss. See base_head.Head for details.
+Returns regularized training loss. See `base_head.Head` for details.
 ### metrics
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_head.py)
-
+View source
 
 ```
  metrics(regularization_losses=None)
 ```
-Creates metrics. See base_head.Head for details.
+Creates metrics. See `base_head.Head` for details.
 ### predictions
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_head.py)
-
+View source
 
 ```
  predictions(
@@ -150,10 +139,9 @@ Creates metrics. See base_head.Head for details.
     keys=None
 )
 ```
-Create predictions. See base_head.Head for details.
+Create predictions. See `base_head.Head` for details.
 ### update_metrics
-[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_head.py)
-
+View source
 
 ```
  update_metrics(
@@ -164,4 +152,4 @@ Create predictions. See base_head.Head for details.
     regularization_losses=None
 )
 ```
-Updates eval metrics. See base_head.Head for details.
+Updates eval metrics. See `base_head.Head` for details.

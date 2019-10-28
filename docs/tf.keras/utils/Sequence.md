@@ -1,11 +1,11 @@
 ## Class Sequence
 Base object for fitting to a sequence of data, such as a dataset.
 ### Aliases:
-- Class tf.compat.v1.keras.utils.Sequence
-- Class tf.compat.v2.keras.utils.Sequence
-Every Sequence must implement the __getitem__ and the __len__ methods. If you want to modify your dataset between epochs you may implement on_epoch_end. The method __getitem__ should return a complete batch.
+- Class `tf.compat.v1.keras.utils.Sequence`
+- Class `tf.compat.v2.keras.utils.Sequence`
+Every `Sequence` must implement the `__getitem__` and the `__len__` methods. If you want to modify your dataset between epochs you may implement `on_epoch_end`. The method `__getitem__` should return a complete batch.
 #### Notes:
-Sequence are a safer way to do multiprocessing. This structure guarantees that the network will only train once on each sample per epoch which is not the case with generators.
+`Sequence` are a safer way to do multiprocessing. This structure guarantees that the network will only train once on each sample per epoch which is not the case with generators.
 #### Examples:
 
 ```
@@ -38,28 +38,25 @@ Sequence are a safer way to do multiprocessing. This structure guarantees that t
 ```
 ## Methods
 ### __getitem__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L377-L387)
-
+View source
 
 ```
  __getitem__(index)
 ```
-Gets batch at position index.
+Gets batch at position `index`.
 #### Arguments:
-- index: position of the batch in the Sequence.
+- `index`: position of the batch in the Sequence.
 #### Returns:
 A batch
 ### __iter__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L403-L406)
-
+View source
 
 ```
  __iter__()
 ```
 Create a generator that iterate over the Sequence.
 ### __len__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L389-L396)
-
+View source
 
 ```
  __len__()
@@ -68,8 +65,7 @@ Number of batch in the Sequence.
 #### Returns:
 The number of batches in the Sequence.
 ### on_epoch_end
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L398-L401)
-
+View source
 
 ```
  on_epoch_end()

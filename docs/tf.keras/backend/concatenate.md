@@ -1,7 +1,7 @@
 Concatenates a list of tensors alongside the specified axis.
 ### Aliases:
-- tf.compat.v1.keras.backend.concatenate
-- tf.compat.v2.keras.backend.concatenate
+- `tf.compat.v1.keras.backend.concatenate`
+- `tf.compat.v2.keras.backend.concatenate`
 
 ```
  tf.keras.backend.concatenate(
@@ -10,8 +10,8 @@ Concatenates a list of tensors alongside the specified axis.
 )
 ```
 #### Arguments:
-- tensors: list of tensors to concatenate.
-- axis: concatenation axis.
+- `tensors`: list of `tensors` to concatenate.
+- `axis`: concatenation `axis`.
 #### Returns:
 A tensor.
 #### Example:

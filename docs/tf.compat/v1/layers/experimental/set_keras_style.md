@@ -5,7 +5,7 @@ Use Keras-style variable management.
 ```
 All tf.layers and tf RNN cells created after keras style ha been enabled use Keras-style variable management. Creating such layers with a scope= argument is disallowed, and reuse=True is disallowed.
 The purpose of this function is to allow users of existing layers to slowly transition to Keras layers API without breaking existing functionality.
-For more details, see the documentation for keras_style_scope.
+For more details, see the documentation for `keras_style_scope`.
 Note, once keras style has been set, it is set globally for the entire program and cannot be unset.
 #### Example:
 

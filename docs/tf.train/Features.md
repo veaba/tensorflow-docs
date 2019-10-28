@@ -1,13 +1,12 @@
 ## Class Features
 A ProtocolMessage
 ### Aliases:
-- Class tf.compat.v1.train.Features
-- Class tf.compat.v2.train.Features
+- Class `tf.compat.v1.train.Features`
+- Class `tf.compat.v2.train.Features`
 ### Used in the tutorials:
-- TFRecord and tf.Example
+- ``T``F``R``e``c``o``r``d`` ``a``n``d`` ``t``f``.``E``x``a``m``p``l``e``
 ## Child Classes
-[class FeatureEntry](https://tensorflow.google.cn/api_docs/python/tf/train/Features/FeatureEntry)
-
+`class FeatureEntry`
 ## Properties
 ### feature
-repeated FeatureEntry feature
+`repeated FeatureEntry feature`

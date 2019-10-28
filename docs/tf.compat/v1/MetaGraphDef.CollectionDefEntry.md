@@ -2,6 +2,6 @@
 A ProtocolMessage
 ## Properties
 ### key
-string key
+`string key`
 ### value
-CollectionDef value
+`CollectionDef value`

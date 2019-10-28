@@ -1,7 +1,7 @@
 Updates the shape of a tensor and checks at runtime that the shape holds.
 ### Aliases:
-- tf.compat.v1.ensure_shape
-- tf.compat.v2.ensure_shape
+- `tf.compat.v1.ensure_shape`
+- `tf.compat.v2.ensure_shape`
 
 ```
  tf.ensure_shape(
@@ -29,12 +29,10 @@ with tf.compat.v1.Session() as sess:
   # compatible with the shape (None, 3, 3)
   sess.run(y, feed_dict={x: [1, 2, 3]})
 ```
-[Tensor.set_shape](https://tensorflow.google.cn/api_docs/python/tf/Tensor#set_shape)NOTE: This differs from  in that it sets the static shape of the resulting tensor and enforces it at runtime, raising an error if the tensor's runtime shape is incompatible with the specified shape.  sets the static shape of the tensor without enforcing it at runtime, which may result in inconsistencies between the statically-known shape of tensors and the runtime value of tensors.
-
+NOTE: This differs from `Tensor.set_shape` in that it sets the static shape of the resulting tensor and enforces it at runtime, raising an error if the tensor's runtime shape is incompatible with the specified shape. `Tensor.set_shape` sets the static shape of the tensor without enforcing it at runtime, which may result in inconsistencies between the statically-known shape of tensors and the runtime value of tensors.
 #### Args:
-- x: A Tensor.
-- shape: A TensorShape representing the shape of this tensor, a TensorShapeProto, a list, a tuple, or None.
-- name: A name for this operation (optional). Defaults to "EnsureShape".
+- `x`: A `Tensor`.
+- `shape`: A `TensorShape` representing the `shape` of this tensor, a `TensorShape`Proto, a list, a tuple, or None.
+- `name`: A `name` for this operation (optional). Defaults to "EnsureShape".
 #### Returns:
-[tf.errors.InvalidArgumentError](https://tensorflow.google.cn/api_docs/python/tf/errors/InvalidArgumentError)A Tensor. Has the same type and contents as x. At runtime, raises a  if shape is incompatible with the shape of x.
-
+A `Tensor`. Has the same type and contents as `x`. At runtime, raises a `tf.errors.InvalidArgumentError` if `shape` is incompatible with the `shape` of `x`.

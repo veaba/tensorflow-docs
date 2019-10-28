@@ -1,7 +1,7 @@
 Converts a text to a sequence of words (or tokens).
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.text.text_to_word_sequence
-- tf.compat.v2.keras.preprocessing.text.text_to_word_sequence
+- `tf.compat.v1.keras.preprocessing.text.text_to_word_sequence`
+- `tf.compat.v2.keras.preprocessing.text.text_to_word_sequence`
 
 ```
  tf.keras.preprocessing.text.text_to_word_sequence(

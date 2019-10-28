@@ -1,7 +1,7 @@
 Computes the Levenshtein distance between sequences.
 ### Aliases:
-- tf.compat.v1.edit_distance
-- tf.compat.v2.edit_distance
+- `tf.compat.v1.edit_distance`
+- `tf.compat.v2.edit_distance`
 
 ```
  tf.edit_distance(
@@ -11,7 +11,7 @@ Computes the Levenshtein distance between sequences.
     name='edit_distance'
 )
 ```
-This operation takes variable-length sequences (hypothesis and truth), each provided as a SparseTensor, and computes the Levenshtein distance. You can normalize the edit distance by length of truth by setting normalize to true.
+This operation takes variable-length sequences (`hypothesis` and `truth`), each provided as a `SparseTensor`, and computes the Levenshtein distance. You can `normalize` the edit distance by length of `truth` by setting `normalize` to true.
 For example, given the following input:
 
 ```
@@ -48,11 +48,11 @@ output ==> [[inf, 1.0],  # (0,0): no truth, (0,1): no hypothesis
            [0.5, 1.0]]  # (1,0): addition, (1,1): no hypothesis
 ```
 #### Args:
-- hypothesis: A SparseTensor containing hypothesis sequences.
-- truth: A SparseTensor containing truth sequences.
-- normalize: A bool. If True, normalizes the Levenshtein distance by length of truth.
-- name: A name for the operation (optional).
+- `hypothesis`: A `SparseTensor` containing `hypothesis` sequences.
+- `truth`: A `SparseTensor` containing `truth` sequences.
+- `normalize`: A `bool`. If `True`, `normalize`s the Levenshtein distance by length of `truth.`
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A dense Tensor with rank R - 1, where R is the rank of the SparseTensor inputs hypothesis and truth.
+A dense `Tensor` with rank `R - 1`, where R is the rank of the `SparseTensor` inputs `hypothesis` and `truth`.
 #### Raises:
-- TypeError: If either hypothesis or truth are not a SparseTensor.
+- `TypeError`: If either `hypothesis` or `truth` are not a `SparseTensor`.

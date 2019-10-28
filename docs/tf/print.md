@@ -1,7 +1,7 @@
 Print the specified inputs.
 ### Aliases:
-- tf.compat.v1.print
-- tf.compat.v2.print
+- `tf.compat.v1.print`
+- `tf.compat.v2.print`
 
 ```
  tf.print(
@@ -10,10 +10,10 @@ Print the specified inputs.
 )
 ```
 ### Used in the guide:
-- Better performance with tf.function and AutoGraph
-- Using the SavedModel format
+- ``B``e``t``t``e``r`` ``p``e``r``f``o``r``m``a``n``c``e`` ``w``i``t``h`` ``t``f``.``f``u``n``c``t``i``o``n`` ``a``n``d`` ``A``u``t``o``G``r``a``p``h``
+- ``U``s``i``n``g`` ``t``h``e`` ``S``a``v``e``d``M``o``d``e``l`` ``f``o``r``m``a``t``
 ### Used in the tutorials:
-- Better performance with tf.function
+- ``B``e``t``t``e``r`` ``p``e``r``f``o``r``m``a``n``c``e`` ``w``i``t``h`` ``t``f``.``f``u``n``c``t``i``o``n``
 A TensorFlow operator that prints the specified inputs to a desired output stream or logging level. The inputs may be dense or sparse Tensors, primitive python objects, data structures that contain tensors, and printable Python objects. Printed tensors will recursively show the first and last elements of each dimension to summarize.
 #### Example:
 Single-input usage:
@@ -38,8 +38,7 @@ tensor_b = tensor_a * 2
 tf.print(tensor_a, tensor_b, output_stream=sys.stderr, sep=',')
 ```
 (This prints "[0 1],[0 2]" to sys.stderr)
-[tf.function](https://tensorflow.google.cn/api_docs/python/tf/function)Usage in a :
-
+Usage in a `tf.function`:
 
 ```
  @tf.function
@@ -51,21 +50,14 @@ def f():
 range_tensor = f()
 ```
 (This prints "[0 1 2 ... 7 8 9]" to sys.stderr)
-[tf.function](https://tensorflow.google.cn/api_docs/python/tf/function)@compatibility(TF 1.x Graphs and Sessions) In graphs manually created outside of , this method returns the created TF operator that prints the data. To make sure the operator runs, users need to pass the produced op to tf.compat.v1.Session's run method, or to use the op as a control dependency for executed ops by specifying with tf.compat.v1.control_dependencies([print_op]). @end_compatibility
+[tf.function](https://tensorflow.google.cn/api_docs/python/tf/function)
 
 Compatibility usage in TF 1.x graphs:
 (This prints "tensors: [0 1 2 ... 7 8 9] {2: [0 2 4 ... 14 16 18]}" to sys.stdout)
 #### Args:
-- *inputs: Positional arguments that are the inputs to print. Inputs in the printed output will be separated by spaces. Inputs may be python primitives, tensors, data structures such as dicts and lists that may contain tensors (with the data structures possibly nested in arbitrary ways), and printable python objects.
-- output_stream: The output stream, logging level, or file to print to. Defaults to sys.stderr, but sys.stdout, tf.compat.v1.logging.info, tf.compat.v1.logging.warning, tf.compat.v1.logging.error, absl.logging.info, absl.logging.warning and absl.loogging,error are also supported. To print to a file, pass a string started with "file://" followed by the file path, e.g., "file:///tmp/foo.out".
-- summarize: The first and last summarize elements within each dimension are recursively printed per Tensor. If None, then the first 3 and last 3 elements of each dimension are printed for each tensor. If set to -1, it will print all elements of every tensor.
-- sep: The string to use to separate the inputs. Defaults to " ".
-- end: End character that is appended at the end the printed string. Defaults to the newline character.
-- name: A name for the operation (optional).
 #### Returns:
-[tf.compat.v1](https://tensorflow.google.cn/api_docs/python/tf/compat/v1)None when executing eagerly. During graph tracing this returns a TF operator that prints the specified inputs in the specified output stream or logging level. This operator will be automatically executed except inside of  graphs and sessions.
-
+None when executing eagerly. During graph tracing this returns a TF operator that prints the specified inputs in the specified output stream or logging level. This operator will be automatically executed except inside of `tf.compat.v1` graphs and sessions.
 #### Raises:
-- ValueError: If an unsupported output stream is specified.
+- `ValueError`: If an unsupported output stream is specified.
 #### Python2 Compatibility
-In python 2.7, make sure to import the following: from __future__ import print_function
+In python 2.7, make sure to import the following: `from __future__ import print_function`

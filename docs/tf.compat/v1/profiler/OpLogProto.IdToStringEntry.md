@@ -2,6 +2,6 @@
 A ProtocolMessage
 ## Properties
 ### key
-int64 key
+`int64 key`
 ### value
-string value
+`string value`

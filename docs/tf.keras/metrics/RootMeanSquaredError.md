@@ -1,11 +1,11 @@
-Computes root mean squared error metric between y_true and y_pred.
-[Mean](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Mean)Inherits From: 
-
+## Class RootMeanSquaredError
+Computes root mean squared error metric between `y_true` and `y_pred`.
+Inherits From: `Mean`
 ### Aliases:
-- Class tf.compat.v1.keras.metrics.RootMeanSquaredError
-- Class tf.compat.v2.keras.metrics.RootMeanSquaredError
-- Class tf.compat.v2.metrics.RootMeanSquaredError
-- Class tf.metrics.RootMeanSquaredError
+- Class `tf.compat.v1.keras.metrics.RootMeanSquaredError`
+- Class `tf.compat.v2.keras.metrics.RootMeanSquaredError`
+- Class `tf.compat.v2.metrics.RootMeanSquaredError`
+- Class `tf.metrics.RootMeanSquaredError`
 #### Usage:
 
 ```
@@ -20,8 +20,7 @@ Usage with tf.keras API:
 model.compile('sgd', metrics=[tf.keras.metrics.RootMeanSquaredError()])
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2145-L2146)
-
+View source
 
 ```
  __init__(
@@ -29,13 +28,12 @@ model.compile('sgd', metrics=[tf.keras.metrics.RootMeanSquaredError()])
     dtype=None
 )
 ```
-Creates a Mean instance.
+Creates a `Mean` instance.
 #### Args:
-- name: (Optional) string name of the metric instance.
-- dtype: (Optional) data type of the metric result.
+- `name`: (Optional) string `name` of the metric instance.
+- `dtype`: (Optional) data type of the metric result.
 ## __new__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
+View source
 
 ```
  __new__(
@@ -47,8 +45,7 @@ Creates a Mean instance.
 Create and return a new object. See help(type) for accurate signature.
 ## Methods
 ### reset_states
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L203-L209)
-
+View source
 
 ```
  reset_states()
@@ -56,8 +53,7 @@ Create and return a new object. See help(type) for accurate signature.
 Resets all of the metric state variables.
 This function is called between epochs/steps, when a metric is evaluated during training.
 ### result
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2169-L2170)
-
+View source
 
 ```
  result()
@@ -65,8 +61,7 @@ This function is called between epochs/steps, when a metric is evaluated during 
 Computes and returns the metric value tensor.
 Result computation is an idempotent operation that simply calculates the metric value using the state variables.
 ### update_state
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2148-L2167)
-
+View source
 
 ```
  update_state(
@@ -77,8 +72,8 @@ Result computation is an idempotent operation that simply calculates the metric 
 ```
 Accumulates root mean squared error statistics.
 #### Args:
-- y_true: The ground truth values.
-- y_pred: The predicted values.
-- sample_weight: Optional weighting of each example. Defaults to 1. Can be a Tensor whose rank is either 0, or the same rank as y_true, and must be broadcastable to y_true.
+- `y_true`: The ground truth values.
+- `y_pred`: The predicted values.
+- `sample_weight`: Optional weighting of each example. Defaults to 1. Can be a `Tensor` whose rank is either 0, or the same rank as `y_true`, and must be broadcastable to `y_true`.
 #### Returns:
 Update op.

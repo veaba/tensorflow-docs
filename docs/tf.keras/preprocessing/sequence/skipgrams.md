@@ -1,7 +1,7 @@
 Generates skipgram word pairs.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.sequence.skipgrams
-- tf.compat.v2.keras.preprocessing.sequence.skipgrams
+- `tf.compat.v1.keras.preprocessing.sequence.skipgrams`
+- `tf.compat.v2.keras.preprocessing.sequence.skipgrams`
 
 ```
  tf.keras.preprocessing.sequence.skipgrams(
@@ -16,10 +16,9 @@ Generates skipgram word pairs.
 )
 ```
 This function transforms a sequence of word indexes (list of integers) into tuples of words of the form:
-- (word, word in the same window), with label 1 (positive samples).
-- (word, random word from the vocabulary), with label 0 (negative samples).
-[Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781v3.pdf)Read more about Skipgram in this gnomic paper by Mikolov et al.: 
-
+- ``(``w``o``r``d``,`` ``w``o``r``d`` ``i``n`` ``t``h``e`` ``s``a``m``e`` ``w``i``n``d``o``w``)``,`` ``w``i``t``h`` ``l``a``b``e``l`` ``1`` ``(``p``o``s``i``t``i``v``e`` ``s``a``m``p``l``e``s``)``.``
+- ``(``w``o``r``d``,`` ``r``a``n``d``o``m`` ``w``o``r``d`` ``f``r``o``m`` ``t``h``e`` ``v``o``c``a``b``u``l``a``r``y``)``,`` ``w``i``t``h`` ``l``a``b``e``l`` ``0`` ``(``n``e``g``a``t``i``v``e`` ``s``a``m``p``l``e``s``)``.``
+Read more about Skipgram in this gnomic paper by Mikolov et al.: Efficient Estimation of Word Representations in Vector Space
 # Arguments
 
 ```

@@ -1,6 +1,6 @@
 Piecewise constant from boundaries and interval values.
 ### Aliases:
-- tf.compat.v1.train.piecewise_constant_decay
+- `tf.compat.v1.train.piecewise_constant_decay`
 
 ```
  tf.compat.v1.train.piecewise_constant(
@@ -22,13 +22,13 @@ values)
 # Later, whenever we perform an optimization step, we increment global_step.
 ```
 #### Args:
-- x: A 0-D scalar Tensor. Must be one of the following types: float32, float64, uint8, int8, int16, int32, int64.
-- boundaries: A list of Tensors or ints or floats with strictly increasing entries, and with all elements having the same type as x.
-- values: A list of Tensors or floats or ints that specifies the values for the intervals defined by boundaries. It should have one more element than boundaries, and all elements should have the same type.
-- name: A string. Optional name of the operation. Defaults to 'PiecewiseConstant'.
+- `x`: A 0-D scalar `Tensor`. Must be one of the following types: `float32`, `float64`, `uint8`, `int8`, `int16`, `int32`, `int64`.
+- `boundaries`: A list of `Tensor`s or `int`s or `float`s with strictly increasing entries, and with all elements having the same type as `x`.
+- `values`: A list of `Tensor`s or `float`s or `int`s that specifies the `values` for the `int`ervals defined by `boundaries`. It should have one more element than `boundaries`, and all elements should have the same type.
+- `name`: A string. Optional `name` of the operation. Defaults to 'PiecewiseConstant'.
 #### Returns:
-A 0-D Tensor. Its value is values[0] when x <= boundaries[0], values[1] when x > boundaries[0] and x <= boundaries[1], ..., and values[-1] when x > boundaries[-1].
+A 0-D Tensor. Its value is `values[0]` when `x <= boundaries[0]`, `values[1]` when `x > boundaries[0]` and `x <= boundaries[1]`, ..., and values[-1] when `x > boundaries[-1]`.
 #### Raises:
-- ValueError: if types of x and boundaries do not match, or types of all values do not match or the number of elements in the lists does not match.
+- `ValueError`: if types of `x` and `boundaries` do not match, or types of all `values` do not match or the number of elements in the lists does not match.
 #### Eager Compatibility
 When eager execution is enabled, this function returns a function which in turn returns the decayed learning rate Tensor. This can be useful for changing the learning rate value across different invocations of optimizer functions.

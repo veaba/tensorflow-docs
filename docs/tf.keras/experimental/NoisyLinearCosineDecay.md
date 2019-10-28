@@ -1,13 +1,11 @@
 ## Class NoisyLinearCosineDecay
 A LearningRateSchedule that uses a noisy linear cosine decay schedule.
-[LearningRateSchedule](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)Inherits From: 
-
+Inherits From: `LearningRateSchedule`
 ### Aliases:
-- Class tf.compat.v1.keras.experimental.NoisyLinearCosineDecay
-- Class tf.compat.v2.keras.experimental.NoisyLinearCosineDecay
+- Class `tf.compat.v1.keras.experimental.NoisyLinearCosineDecay`
+- Class `tf.compat.v2.keras.experimental.NoisyLinearCosineDecay`
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L849-L934)
-
+View source
 
 ```
  __init__(
@@ -23,9 +21,9 @@ A LearningRateSchedule that uses a noisy linear cosine decay schedule.
 ```
 Applies noisy linear cosine decay to the learning rate.
 See [Bello et al., ICML2017] Neural Optimizer Search with RL. https://arxiv.org/abs/1709.07417
-For the idea of warm starts here controlled by num_periods, see [Loshchilov & Hutter, ICLR2016] SGDR: Stochastic Gradient Descent with Warm Restarts. https://arxiv.org/abs/1608.03983
+For the idea of warm starts here controlled by `num_periods`, see [Loshchilov & Hutter, ICLR2016] SGDR: Stochastic Gradient Descent with Warm Restarts. https://arxiv.org/abs/1608.03983
 Note that linear cosine decay is more aggressive than cosine decay and larger initial learning rates can typically be used.
-When training a model, it is often recommended to lower the learning rate as the training progresses. This schedule applies a noisy linear cosine decay function to an optimizer step, given a provided initial learning rate. It requires a step value to compute the decayed learning rate. You can just pass a TensorFlow variable that you increment at each training step.
+When training a model, it is often recommended to lower the learning rate as the training progresses. This schedule applies a noisy linear cosine decay function to an optimizer `step`, given a provided initial learning rate. It requires a `step` value to compute the decayed learning rate. You can just pass a TensorFlow variable that you increment at each training `step`.
 The schedule a 1-arg callable that produces a decayed learning rate when passed the current optimizer step. This can be useful for changing the learning rate value across different invocations of optimizer functions. It is computed as:
 
 ```
@@ -46,31 +44,28 @@ lr_decayed_fn = (
   tf.keras.experimental.NoisyLinearCosineDecay(
     initial_learning_rate, decay_steps))
 ```
-[tf.keras.optimizers.Optimizer](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)You can pass this schedule directly into a  as the learning rate. The learning rate schedule is also serializable and deserializable using tf.keras.optimizers.schedules.serialize and tf.keras.optimizers.schedules.deserialize.
-
+You can pass this schedule directly into a `tf.keras.optimizers.Optimizer` as the learning rate. The learning rate schedule is also serializable and deserializable using `tf.keras.optimizers.schedules.serialize` and `tf.keras.optimizers.schedules.deserialize`.
 #### Args:
-- initial_learning_rate: A scalar float32 or float64 Tensor or a Python number. The initial learning rate.
-- decay_steps: A scalar int32 or int64 Tensor or a Python number. Number of steps to decay over.
-- initial_variance: initial variance for the noise. See computation above.
-- variance_decay: decay for the noise's variance. See computation above.
-- num_periods: Number of periods in the cosine part of the decay. See computation above.
-- alpha: See computation above.
-- beta: See computation above.
-- name: String. Optional name of the operation. Defaults to 'NoisyLinearCosineDecay'.
+- `initial_learning_rate`: A scalar `float32` or `float64` Tensor or a Python number. The initial learning rate.
+- `decay_steps`: A scalar `int32` or `int64` `Tensor` or a Python number. Number of steps to decay over.
+- `initial_variance`: initial variance for the noise. See computation above.
+- `variance_decay`: decay for the noise's variance. See computation above.
+- `num_periods`: Number of periods in the cosine part of the decay. See computation above.
+- `alpha`: See computation above.
+- `beta`: See computation above.
+- `name`: String. Optional `name` of the operation. Defaults to 'NoisyLinearCosineDecay'.
 #### Returns:
-A 1-arg callable learning rate schedule that takes the current optimizer step and outputs the decayed learning rate, a scalar Tensor of the same type as initial_learning_rate.
+A 1-arg callable learning rate schedule that takes the current optimizer step and outputs the decayed learning rate, a scalar `Tensor` of the same type as `initial_learning_rate`.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L936-L966)
-
+View source
 
 ```
  __call__(step)
 ```
 Call self as a function.
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
-
+View source
 
 ```
  from_config(
@@ -78,14 +73,12 @@ Call self as a function.
     config
 )
 ```
-Instantiates a LearningRateSchedule from its config.
+Instantiates a `LearningRateSchedule` from its config.
 #### Args:
-- config: Output of get_config().
 #### Returns:
-A LearningRateSchedule instance.
+A `LearningRateSchedule` instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L968-L978)
-
+View source
 
 ```
  get_config()

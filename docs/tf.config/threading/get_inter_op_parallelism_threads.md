@@ -1,7 +1,7 @@
 Get number of threads used for parallelism between independent operations.
 ### Aliases:
-- tf.compat.v1.config.threading.get_inter_op_parallelism_threads
-- tf.compat.v2.config.threading.get_inter_op_parallelism_threads
+- `tf.compat.v1.config.threading.get_inter_op_parallelism_threads`
+- `tf.compat.v2.config.threading.get_inter_op_parallelism_threads`
 
 ```
  tf.config.threading.get_inter_op_parallelism_threads()

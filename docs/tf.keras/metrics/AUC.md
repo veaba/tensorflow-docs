@@ -1,18 +1,17 @@
 ## Class AUC
 Computes the approximate AUC (Area under the curve) via a Riemann sum.
-[Metric](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Metric)Inherits From: 
-
+Inherits From: `Metric`
 ### Aliases:
-- Class tf.compat.v1.keras.metrics.AUC
-- Class tf.compat.v2.keras.metrics.AUC
-- Class tf.compat.v2.metrics.AUC
-- Class tf.metrics.AUC
+- Class `tf.compat.v1.keras.metrics.AUC`
+- Class `tf.compat.v2.keras.metrics.AUC`
+- Class `tf.compat.v2.metrics.AUC`
+- Class `tf.metrics.AUC`
 ### Used in the tutorials:
-- Classification on imbalanced data
-This metric creates four local variables, true_positives, true_negatives, false_positives and false_negatives that are used to compute the AUC. To discretize the AUC curve, a linearly spaced set of thresholds is used to compute pairs of recall and precision values. The area under the ROC-curve is therefore computed using the height of the recall values by the false positive rate, while the area under the PR-curve is the computed using the height of the precision values by the recall.
-This value is ultimately returned as auc, an idempotent operation that computes the area under a discretized curve of precision versus recall values (computed using the aforementioned variables). The num_thresholds variable controls the degree of discretization with larger numbers of thresholds more closely approximating the true AUC. The quality of the approximation may vary dramatically depending on num_thresholds. The thresholds parameter can be used to manually specify thresholds which split the predictions more evenly.
-For best results, predictions should be distributed approximately uniformly in the range [0, 1] and not peaked around 0 or 1. The quality of the AUC approximation may be poor if this is not the case. Setting summation_method to 'minoring' or 'majoring' can help quantify the error in the approximation by providing lower or upper bound estimate of the AUC.
-If sample_weight is None, weights default to 1. Use sample_weight of 0 to mask values.
+- ``C``l``a``s``s``i``f``i``c``a``t``i``o``n`` ``o``n`` ``i``m``b``a``l``a``n``c``e``d`` ``d``a``t``a``
+This metric creates four local variables, `true_positives`, `true_negatives`, `false_positives` and `false_negatives` that are used to compute the AUC. To discretize the AUC curve, a linearly spaced set of thresholds is used to compute pairs of recall and precision values. The area under the ROC-curve is therefore computed using the height of the recall values by the false positive rate, while the area under the PR-curve is the computed using the height of the precision values by the recall.
+This value is ultimately returned as `auc`, an idempotent operation that computes the area under a discretized curve of precision versus recall values (computed using the aforementioned variables). The `num_thresholds` variable controls the degree of discretization with larger numbers of `thresholds` more closely approximating the true AUC. The quality of the approximation may vary dramatically depending on `num_thresholds`. The `thresholds` parameter can be used to manually specify `thresholds` which split the predictions more evenly.
+For best results, `predictions` should be distributed approximately uniformly in the range [0, 1] and not peaked around 0 or 1. The quality of the AUC approximation may be poor if this is not the case. Setting `summation_method` to 'minoring' or 'majoring' can help quantify the error in the approximation by providing lower or upper bound estimate of the AUC.
+If `sample_weight` is `None`, weights default to 1. Use `sample_weight` of 0 to mask values.
 #### Usage:
 
 ```
@@ -33,8 +32,7 @@ Usage with tf.keras API:
 model.compile('sgd', loss='mse', metrics=[tf.keras.metrics.AUC()])
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1638-L1727)
-
+View source
 
 ```
  __init__(
@@ -46,17 +44,16 @@ model.compile('sgd', loss='mse', metrics=[tf.keras.metrics.AUC()])
     thresholds=None
 )
 ```
-Creates an AUC instance.
+Creates an `AUC` instance.
 #### Args:
-- num_thresholds: (Optional) Defaults to 200. The number of thresholds to use when discretizing the roc curve. Values must be > 1.
-- curve: (Optional) Specifies the name of the curve to be computed, 'ROC' [default] or 'PR' for the Precision-Recall-curve.
-- summation_method: (Optional) Specifies the Riemann summation method used (https://en.wikipedia.org/wiki/Riemann_sum): 'interpolation' [default], applies mid-point summation scheme for ROC. For PR-AUC, interpolates (true/false) positives but not the ratio that is precision (see Davis & Goadrich 2006 for details); 'minoring' that applies left summation for increasing intervals and right summation for decreasing intervals; 'majoring' that does the opposite.
-- name: (Optional) string name of the metric instance.
-- dtype: (Optional) data type of the metric result.
-- thresholds: (Optional) A list of floating point values to use as the thresholds for discretizing the curve. If set, the num_thresholds parameter is ignored. Values should be in [0, 1]. Endpoint thresholds equal to {-epsilon, 1+epsilon} for a small positive epsilon value will be automatically included with these to correctly handle predictions equal to exactly 0 or 1.
+- `num_thresholds`: (Optional) Defaults to 200. The number of thresholds to use when discretizing the roc curve. Values must be > 1.
+- `curve`: (Optional) Specifies the name of the `curve` to be computed, 'ROC' [default] or 'PR' for the Precision-Recall-`curve`.
+- `summation_method`: (Optional) Specifies the Riemann summation method used (https://en.wikipedia.org/wiki/Riemann_sum): 'interpolation' [default], applies mid-point summation scheme for `ROC`. For PR-AUC, interpolates (true/false) positives but not the ratio that is precision (see Davis & Goadrich 2006 for details); 'minoring' that applies left summation for increasing intervals and right summation for decreasing intervals; 'majoring' that does the opposite.
+- `name`: (Optional) string `name` of the metric instance.
+- `dtype`: (Optional) data type of the metric result.
+- `thresholds`: (Optional) A list of floating point values to use as the `thresholds` for discretizing the curve. If set, the `num_thresholds` parameter is ignored. Values should be in [0, 1]. Endpoint `thresholds` equal to {-epsilon, 1+epsilon} for a small positive epsilon value will be automatically included with these to correctly handle predictions equal to exactly 0 or 1.
 ## __new__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
+View source
 
 ```
  __new__(
@@ -68,8 +65,7 @@ Creates an AUC instance.
 Create and return a new object. See help(type) for accurate signature.
 ## Methods
 ### interpolate_pr_auc
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1749-L1816)
-
+View source
 
 ```
  interpolate_pr_auc()
@@ -91,10 +87,9 @@ Note that when P_A == 0 the above calculation simplifies into
 int_A^B{Precision.dTP} = int_A^B{slope * dTP} = slope * (TP_B - TP_A)
 which is really equivalent to imputing constant precision throughout the first bucket having >0 true positives.
 #### Returns:
-- pr_auc: an approximation of the area under the P-R curve.
+- `pr_auc`: an approximation of the area under the P-R curve.
 ### reset_states
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1853-L1855)
-
+View source
 
 ```
  reset_states()
@@ -102,8 +97,7 @@ which is really equivalent to imputing constant precision throughout the first b
 Resets all of the metric state variables.
 This function is called between epochs/steps, when a metric is evaluated during training.
 ### result
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1818-L1851)
-
+View source
 
 ```
  result()
@@ -111,8 +105,7 @@ This function is called between epochs/steps, when a metric is evaluated during 
 Computes and returns the metric value tensor.
 Result computation is an idempotent operation that simply calculates the metric value using the state variables.
 ### update_state
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1729-L1747)
-
+View source
 
 ```
  update_state(
@@ -123,8 +116,8 @@ Result computation is an idempotent operation that simply calculates the metric 
 ```
 Accumulates confusion matrix statistics.
 #### Args:
-- y_true: The ground truth values.
-- y_pred: The predicted values.
-- sample_weight: Optional weighting of each example. Defaults to 1. Can be a Tensor whose rank is either 0, or the same rank as y_true, and must be broadcastable to y_true.
+- `y_true`: The ground truth values.
+- `y_pred`: The predicted values.
+- `sample_weight`: Optional weighting of each example. Defaults to 1. Can be a `Tensor` whose rank is either 0, or the same rank as `y_true`, and must be broadcastable to `y_true`.
 #### Returns:
 Update op.

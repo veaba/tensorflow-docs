@@ -1,13 +1,13 @@
 Evaluates the value of a variable.
 ### Aliases:
-- tf.compat.v1.keras.backend.eval
-- tf.compat.v2.keras.backend.eval
+- `tf.compat.v1.keras.backend.eval`
+- `tf.compat.v2.keras.backend.eval`
 
 ```
  tf.keras.backend.eval(x)
 ```
 #### Arguments:
-- x: A variable.
+- `x`: A variable.
 #### Returns:
 A Numpy array.
 #### Examples:

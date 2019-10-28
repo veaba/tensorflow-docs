@@ -1,7 +1,7 @@
 Get if JIT compilation is enabled.
 ### Aliases:
-- tf.compat.v1.config.optimizer.get_jit
-- tf.compat.v2.config.optimizer.get_jit
+- `tf.compat.v1.config.optimizer.get_jit`
+- `tf.compat.v2.config.optimizer.get_jit`
 
 ```
  tf.config.optimizer.get_jit()

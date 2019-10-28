@@ -1,4 +1,4 @@
-Casts a tensor to type int32. (deprecated)
+Casts a tensor to type `int32`. (deprecated)
 
 ```
  tf.compat.v1.to_int32(
@@ -7,9 +7,9 @@ Casts a tensor to type int32. (deprecated)
 )
 ```
 #### Args:
-- x: A Tensor or SparseTensor or IndexedSlices.
-- name: A name for the operation (optional).
+- `x`: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor or SparseTensor or IndexedSlices with same shape as x with type int32.
+A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with type `int32`.
 #### Raises:
-- TypeError: If x cannot be cast to the int32.
+- `TypeError`: If `x` cannot be cast to the `int32`.

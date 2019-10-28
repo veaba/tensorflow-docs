@@ -7,7 +7,7 @@ Returns True if the given node_def must run on CPU, otherwise False. (deprecated
 )
 ```
 #### Args:
-- node: The node to be assigned to a device. Could be either an ops.Operation or NodeDef.
-- pin_variables_on_cpu: If True, this function will return False if node_def represents a variable-related op.
+- `node`: The `node` to be assigned to a device. Could be either an ops.Operation or NodeDef.
+- `pin_variables_on_cpu`: If True, this function will return False if node_def represents a variable-related op.
 #### Returns:
 True if the given node must run on CPU, otherwise False.

@@ -1,4 +1,4 @@
-Defined in generated file: python/ops/gen_math_ops.py
+Defined in generated file: `python/ops/gen_math_ops.py`
 Multiply matrix "a" by matrix "b".
 
 ```
@@ -12,15 +12,15 @@ Multiply matrix "a" by matrix "b".
     name=None
 )
 ```
-The inputs must be two-dimensional matrices and the inner dimension of "a" must match the outer dimension of "b". Both "a" and "b" must be Tensors not SparseTensors. This op is optimized for the case where at least one of "a" or "b" is sparse, in the sense that they have a large proportion of zero values. The breakeven for using this versus a dense matrix multiply on one platform was 30% zero values in the sparse matrix.
+The inputs must be two-dimensional matrices and the inner dimension of "a" must match the outer dimension of "b". Both "a" and "b" must be `Tensor`s not `SparseTensor`s. This op is optimized for the case where at least one of "a" or "b" is sparse, in the sense that they have a large proportion of zero values. The breakeven for using this versus a dense matrix multiply on one platform was 30% zero values in the sparse matrix.
 The gradient computation of this operation will only take advantage of sparsity in the input gradient when that gradient comes from a Relu.
 #### Args:
-- a: A Tensor. Must be one of the following types: float32, bfloat16.
-- b: A Tensor. Must be one of the following types: float32, bfloat16.
-- transpose_a: An optional bool. Defaults to False.
-- transpose_b: An optional bool. Defaults to False.
-- a_is_sparse: An optional bool. Defaults to False.
-- b_is_sparse: An optional bool. Defaults to False.
-- name: A name for the operation (optional).
+- `a`: A `Tensor`. Must be one of the following types: `float32`, `bfloat16`.
+- `b`: A `Tensor`. Must `b`e one of the following types: `float32`, `b`float16.
+- `transpose_a`: An optional `bool`. Defaults to `False`.
+- `transpose_b`: An optional `bool`. Defaults to `False`.
+- `a_is_sparse`: An optional `bool`. Defaults to `False`.
+- `b_is_sparse`: An optional `bool`. Defaults to `False`.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor of type float32.
+A `Tensor` of type `float32`.

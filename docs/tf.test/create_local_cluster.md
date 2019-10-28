@@ -1,7 +1,7 @@
-Create and start local servers and return the associated Server objects.
+Create and start local servers and return the associated `Server` objects.
 ### Aliases:
-- tf.compat.v1.test.create_local_cluster
-- tf.compat.v2.test.create_local_cluster
+- `tf.compat.v1.test.create_local_cluster`
+- `tf.compat.v2.test.create_local_cluster`
 
 ```
  tf.test.create_local_cluster(
@@ -34,13 +34,13 @@ with tf.device("/job:worker/task:1"):
 worker_sessions[0].run(...)
 ```
 #### Args:
-- num_workers: Number of worker servers to start.
-- num_ps: Number of PS servers to start.
-- protocol: Communication protocol. Allowed values are documented in the documentation of tf.distribute.Server.
-- worker_config: (optional) tf.ConfigProto to initialize workers. Can be used to instantiate multiple devices etc.
-- ps_config: (optional) tf.ConfigProto to initialize PS servers.
+- `num_workers`: Number of worker servers to start.
+- `num_ps`: Number of PS servers to start.
+- `protocol`: Communication `protocol`. Allowed values are documented in the documentation of `tf.distribute.Server`.
+- `worker_config`: (optional) `tf.ConfigProto` to initialize workers. Can be used to instantiate multiple devices etc.
+- `ps_config`: (optional) `tf.ConfigProto` to initialize PS servers.
 #### Returns:
-[tf.distribute.Server](https://tensorflow.google.cn/api_docs/python/tf/distribute/Server)A tuple (worker_servers, ps_servers). worker_servers is a list of num_workers objects of type  (all running locally); and ps_servers is a list of num_ps objects of similar type.
+[tf.distribute.Server](https://tensorflow.google.cn/api_docs/python/tf/distribute/Server)
 
 #### Raises:
-- ImportError: if portpicker module was not found at load time
+- `ImportError`: if portpicker module was not found at load time

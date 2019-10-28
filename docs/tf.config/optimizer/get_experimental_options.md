@@ -1,7 +1,7 @@
 Get experimental optimizer options.
 ### Aliases:
-- tf.compat.v1.config.optimizer.get_experimental_options
-- tf.compat.v2.config.optimizer.get_experimental_options
+- `tf.compat.v1.config.optimizer.get_experimental_options`
+- `tf.compat.v2.config.optimizer.get_experimental_options`
 
 ```
  tf.config.optimizer.get_experimental_options()

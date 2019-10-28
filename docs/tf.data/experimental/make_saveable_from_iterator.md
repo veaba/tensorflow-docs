@@ -1,17 +1,17 @@
 Returns a SaveableObject for saving/restoring iterator state using Saver.
 ### Aliases:
-- tf.compat.v1.data.experimental.make_saveable_from_iterator
-- tf.compat.v2.data.experimental.make_saveable_from_iterator
+- `tf.compat.v1.data.experimental.make_saveable_from_iterator`
+- `tf.compat.v2.data.experimental.make_saveable_from_iterator`
 
 ```
  tf.data.experimental.make_saveable_from_iterator(iterator)
 ```
 #### Args:
-- iterator: Iterator.
+- `iterator`: Iterator.
 #### Returns:
 A SaveableObject for saving/restoring iterator state using Saver.
 #### Raises:
-- ValueError: If iterator does not support checkpointing.
+- `ValueError`: If iterator does not support checkpointing.
 #### For example:
 
 ```

@@ -1,7 +1,7 @@
 Replicates a model on different GPUs. (deprecated)
 ### Aliases:
-- tf.compat.v1.keras.utils.multi_gpu_model
-- tf.compat.v2.keras.utils.multi_gpu_model
+- `tf.compat.v1.keras.utils.multi_gpu_model`
+- `tf.compat.v2.keras.utils.multi_gpu_model`
 
 ```
  tf.keras.utils.multi_gpu_model(
@@ -12,19 +12,19 @@ Replicates a model on different GPUs. (deprecated)
 )
 ```
 Specifically, this function implements single-machine multi-GPU data parallelism. It works in the following way:
-- Divide the model's input(s) into multiple sub-batches.
-- Apply a model copy on each sub-batch. Every model copy is executed on a dedicated GPU.
-- Concatenate the results (on CPU) into one big batch.
-E.g. if your batch_size is 64 and you use gpus=2, then we will divide the input into 2 sub-batches of 32 samples, process each sub-batch on one GPU, then return the full batch of 64 processed samples.
+- ``D``i``v``i``d``e`` ``t``h``e`` ``m``o``d``e``l``'``s`` ``i``n``p``u``t``(``s``)`` ``i``n``t``o`` ``m``u``l``t``i``p``l``e`` ``s``u``b``-``b``a``t``c``h``e``s``.``
+- ``A``p``p``l``y`` ``a`` ``m``o``d``e``l`` ``c``o``p``y`` ``o``n`` ``e``a``c``h`` ``s``u``b``-``b``a``t``c``h``.`` ``E``v``e``r``y`` ``m``o``d``e``l`` ``c``o``p``y`` ``i``s`` ``e``x``e``c``u``t``e``d`` ``o``n`` ``a`` ``d``e``d``i``c``a``t``e``d`` ``G``P``U``.``
+- ``C``o``n``c``a``t``e``n``a``t``e`` ``t``h``e`` ``r``e``s``u``l``t``s`` ``(``o``n`` ``C``P``U``)`` ``i``n``t``o`` ``o``n``e`` ``b``i``g`` ``b``a``t``c``h``.``
+E.g. if your `batch_size` is 64 and you use `gpus=2`, then we will divide the input into 2 sub-batches of 32 samples, process each sub-batch on one GPU, then return the full batch of 64 processed samples.
 This induces quasi-linear speedup on up to 8 GPUs.
 This function is only available with the TensorFlow backend for the time being.
 #### Arguments:
-- model: A Keras model instance. To avoid OOM errors, this model could have been built on CPU, for instance (see usage example below).
-- gpus: Integer >= 2, number of on GPUs on which to create model replicas.
-- cpu_merge: A boolean value to identify whether to force merging model weights under the scope of the CPU or not.
-- cpu_relocation: A boolean value to identify whether to create the model's weights under the scope of the CPU. If the model is not defined under any preceding device scope, you can still rescue it by activating this option.
+- `model`: A Keras `model` instance. To avoid OOM errors, this `model` could have been built on CPU, for instance (see usage example below).
+- `gpus`: Integer >= 2, number of on GPUs on which to create model replicas.
+- `cpu_merge`: A boolean value to identify whether to force merging model weights under the scope of the CPU or not.
+- `cpu_relocation`: A boolean value to identify whether to create the model's weights under the scope of the CPU. If the model is not defined under any preceding device scope, you can still rescue it by activating this option.
 #### Returns:
-A Keras Model instance which can be used just like the initial model argument, but which distributes its workload on multiple GPUs.
+A Keras `Model` instance which can be used just like the initial `model` argument, but which distributes its workload on multiple GPUs.
 Example 1: Training models with weights merge on CPU
 
 ```
@@ -97,4 +97,4 @@ Example 3: Training models with weights merge on GPU (recommended for NV-link)
      ..
 ```
 #### Raises:
-- ValueError: if the gpus argument does not match available devices.
+- `ValueError`: if the `gpus` argument does not match available devices.

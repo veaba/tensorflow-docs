@@ -1,17 +1,16 @@
 ## Class SaveSliceInfo
 Information on how to save this Variable as a slice.
 ### Aliases:
-- Class tf.compat.v1.Variable.SaveSliceInfo
-- Class tf.compat.v2.Variable.SaveSliceInfo
+- Class `tf.compat.v1.Variable.SaveSliceInfo`
+- Class `tf.compat.v2.Variable.SaveSliceInfo`
 Provides internal support for saving variables as slices of a larger variable. This API is not public and is subject to change.
 #### Available properties:
-- full_name
-- full_shape
-- var_offset
-- var_shape
+- ``f``u``l``l``_``n``a``m``e``
+- ``f``u``l``l``_``s``h``a``p``e``
+- ``v``a``r``_``o``f``f``s``e``t``
+- ``v``a``r``_``s``h``a``p``e``
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variables.py#L1293-L1326)
-
+View source
 
 ```
  __init__(
@@ -23,27 +22,26 @@ Provides internal support for saving variables as slices of a larger variable. T
     import_scope=None
 )
 ```
-Create a SaveSliceInfo.
+Create a `SaveSliceInfo`.
 #### Args:
-- full_name: Name of the full variable of which this Variable is a slice.
-- full_shape: Shape of the full variable, as a list of int.
-- var_offset: Offset of this Variable into the full variable, as a list of int.
-- var_shape: Shape of this Variable, as a list of int.
-- save_slice_info_def: SaveSliceInfoDef protocol buffer. If not None, recreates the SaveSliceInfo object its contents. save_slice_info_def and other arguments are mutually exclusive.
-- import_scope: Optional string. Name scope to add. Only used when initializing from protocol buffer.
+- `full_name`: Name of the full variable of which this `Variable` is a slice.
+- `full_shape`: Shape of the full variable, as a list of int.
+- `var_offset`: Offset of this `Variable` into the full variable, as a list of int.
+- `var_shape`: Shape of this `Variable`, as a list of int.
+- `save_slice_info_def`: `SaveSliceInfoDef` protocol buffer. If not `None`, recreates the SaveSliceInfo object its contents. `save_slice_info_def` and other arguments are mutually exclusive.
+- `import_scope`: Optional `string`. Name scope to add. Only used when initializing from protocol buffer.
 ## Properties
 ### spec
 Computes the spec string used for saving.
 ## Methods
 ### to_proto
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variables.py#L1336-L1358)
-
+View source
 
 ```
  to_proto(export_scope=None)
 ```
 Returns a SaveSliceInfoDef() proto.
 #### Args:
-- export_scope: Optional string. Name scope to remove.
+- `export_scope`: Optional `string`. Name scope to remove.
 #### Returns:
-A SaveSliceInfoDef protocol buffer, or None if the Variable is not in the specified name scope.
+A `SaveSliceInfoDef` protocol buffer, or None if the `Variable` is not in the specified name scope.

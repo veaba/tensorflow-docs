@@ -1,15 +1,13 @@
 ## Class InverseTimeDecay
 A LearningRateSchedule that uses an inverse time decay schedule.
-[LearningRateSchedule](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)Inherits From: 
-
+Inherits From: `LearningRateSchedule`
 ### Aliases:
-- Class tf.compat.v1.keras.optimizers.schedules.InverseTimeDecay
-- Class tf.compat.v2.keras.optimizers.schedules.InverseTimeDecay
-- Class tf.compat.v2.optimizers.schedules.InverseTimeDecay
-- Class tf.optimizers.schedules.InverseTimeDecay
+- Class `tf.compat.v1.keras.optimizers.schedules.InverseTimeDecay`
+- Class `tf.compat.v2.keras.optimizers.schedules.InverseTimeDecay`
+- Class `tf.compat.v2.optimizers.schedules.InverseTimeDecay`
+- Class `tf.optimizers.schedules.InverseTimeDecay`
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L413-L486)
-
+View source
 
 ```
  __init__(
@@ -21,21 +19,20 @@ A LearningRateSchedule that uses an inverse time decay schedule.
 )
 ```
 Applies inverse time decay to the initial learning rate.
-When training a model, it is often recommended to lower the learning rate as the training progresses. This schedule applies the inverse decay function to an optimizer step, given a provided initial learning rate. It requires a step value to compute the decayed learning rate. You can just pass a TensorFlow variable that you increment at each training step.
+When training a model, it is often recommended to lower the learning rate as the training progresses. This schedule applies the inverse decay function to an optimizer `step`, given a provided initial learning rate. It requires a `step` value to compute the decayed learning rate. You can just pass a TensorFlow variable that you increment at each training `step`.
 The schedule a 1-arg callable that produces a decayed learning rate when passed the current optimizer step. This can be useful for changing the learning rate value across different invocations of optimizer functions. It is computed as:
 
 ```
  def decayed_learning_rate(step):
   return initial_learning_rate / (1 + decay_rate * step / decay_step)
 ```
-or, if staircase is True, as:
+or, if `staircase` is `True`, as:
 
 ```
  def decayed_learning_rate(step):
   return initial_learning_rate / (1 + decay_rate * floor(step / decay_step))
 ```
-[tf.keras.optimizers.Optimizer](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)You can pass this schedule directly into a  as the learning rate. Example: Fit a Keras model when decaying 1/t with a rate of 0.5:
-
+You can pass this schedule directly into a `tf.keras.optimizers.Optimizer` as the learning rate. Example: Fit a Keras model when decaying 1/t with a rate of 0.5:
 
 ```
  ...
@@ -53,25 +50,23 @@ model.compile(optimizer=tf.keras.optimizers.SGD(
 model.fit(data, labels, epochs=5)
 ```
 #### Args:
-- initial_learning_rate: A scalar float32 or float64 Tensor or a Python number. The initial learning rate.
-- decay_steps: How often to apply decay.
-- decay_rate: A Python number. The decay rate.
-- staircase: Whether to apply decay in a discrete staircase, as opposed to continuous, fashion.
-- name: String. Optional name of the operation. Defaults to 'InverseTimeDecay'.
+- `initial_learning_rate`: A scalar `float32` or `float64` `Tensor` or a Python number. The initial learning rate.
+- `decay_steps`: How often to apply decay.
+- `decay_rate`: A Python number. The decay rate.
+- `staircase`: Whether to apply decay in a discrete `staircase`, as opposed to continuous, fashion.
+- `name`: String. Optional `name` of the operation. Defaults to 'InverseTimeDecay'.
 #### Returns:
-A 1-arg callable learning rate schedule that takes the current optimizer step and outputs the decayed learning rate, a scalar Tensor of the same type as initial_learning_rate.
+A 1-arg callable learning rate schedule that takes the current optimizer step and outputs the decayed learning rate, a scalar `Tensor` of the same type as `initial_learning_rate`.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L488-L502)
-
+View source
 
 ```
  __call__(step)
 ```
 Call self as a function.
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
-
+View source
 
 ```
  from_config(
@@ -79,14 +74,12 @@ Call self as a function.
     config
 )
 ```
-Instantiates a LearningRateSchedule from its config.
+Instantiates a `LearningRateSchedule` from its config.
 #### Args:
-- config: Output of get_config().
 #### Returns:
-A LearningRateSchedule instance.
+A `LearningRateSchedule` instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L504-L511)
-
+View source
 
 ```
  get_config()

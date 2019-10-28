@@ -1,7 +1,7 @@
 Categorical crossentropy between an output tensor and a target tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.categorical_crossentropy
-- tf.compat.v2.keras.backend.categorical_crossentropy
+- `tf.compat.v1.keras.backend.categorical_crossentropy`
+- `tf.compat.v2.keras.backend.categorical_crossentropy`
 
 ```
  tf.keras.backend.categorical_crossentropy(
@@ -12,14 +12,14 @@ Categorical crossentropy between an output tensor and a target tensor.
 )
 ```
 #### Arguments:
-- target: A tensor of the same shape as output.
-- output: A tensor resulting from a softmax (unless from_logits is True, in which case output is expected to be the logits).
-- from_logits: Boolean, whether output is the result of a softmax, or is a tensor of logits.
-- axis: Int specifying the channels axis. axis=-1 corresponds to data format channels_last', andaxis=1corresponds to data formatchannels_first`.
+- `target`: A tensor of the same shape as `output`.
+- `output`: A tensor resulting from a softmax (unless `from_logits` is True, in which case `output` is expected to be the logits).
+- `from_logits`: Boolean, whether `output` is the result of a softmax, or is a tensor of logits.
+- `axis`: Int specifying the channels `axis`. `axis`=-1 `corresponds to data format` `channels_last', and``axis`=1`corresponds to data format`channels_first`.
 #### Returns:
 Output tensor.
 #### Raises:
-- ValueError: if axis is neither -1 nor one of the axes of output.
+- `ValueError`: if `axis` is neither -1 nor one of the axes of `output`.
 #### Example:
 
 ```

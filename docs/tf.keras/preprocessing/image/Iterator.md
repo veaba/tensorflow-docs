@@ -1,11 +1,10 @@
 ## Class Iterator
 Base class for image data iterators.
-[Sequence](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)Inherits From: 
-
+Inherits From: `Sequence`
 ### Aliases:
-- Class tf.compat.v1.keras.preprocessing.image.Iterator
-- Class tf.compat.v2.keras.preprocessing.image.Iterator
-Every Iterator must implement the _get_batches_of_transformed_samples method.
+- Class `tf.compat.v1.keras.preprocessing.image.Iterator`
+- Class `tf.compat.v2.keras.preprocessing.image.Iterator`
+Every `Iterator` must implement the `_get_batches_of_transformed_samples` method.
 # Arguments
 
 ```
@@ -31,9 +30,9 @@ Initialize self. See help(type(self)) for accurate signature.
 ```
  __getitem__(idx)
 ```
-Gets batch at position index.
+Gets batch at position `index`.
 #### Arguments:
-- index: position of the batch in the Sequence.
+- `index`: position of the batch in the Sequence.
 #### Returns:
 A batch
 ### __iter__
@@ -73,4 +72,4 @@ Method called at the end of every epoch.
  reset()
 ```
 ## Class Members
-- white_list_formats
+- `white_list_formats`

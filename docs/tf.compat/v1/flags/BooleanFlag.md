@@ -1,9 +1,8 @@
 ## Class BooleanFlag
 Basic boolean flag.
-[Flag](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Flag)Inherits From: 
-
+Inherits From: `Flag`
 ### Aliases:
-- Class tf.compat.v1.app.flags.BooleanFlag
+- Class `tf.compat.v1.app.flags.BooleanFlag`
 Boolean flags do not take any arguments, and their value is either True (1) or False (0). The false value is specified on the command line by prepending the word 'no' to either the long or the short flag name.
 For example, if a Boolean flag was created whose long name was 'update' and whose short name was 'x', then this flag could be explicitly unset through either --noupdate or --nox.
 ## __init__
@@ -74,7 +73,7 @@ NOTE: we use strings, and not the types.*Type constants because our flags can ha
 ```
 Parses string and sets flag value.
 #### Args:
-- argument: str or the correct flag value type, argument to be parsed.
+- `argument`: str or the correct flag value type, `argument` to be parsed.
 ### serialize
 
 ```

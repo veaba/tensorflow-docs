@@ -1,5 +1,5 @@
 ### Aliases:
-- tf.compat.v2.data.experimental.make_batched_features_dataset
+- `tf.compat.v2.data.experimental.make_batched_features_dataset`
 
 ```
  tf.data.experimental.make_batched_features_dataset(

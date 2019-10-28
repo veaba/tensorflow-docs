@@ -1,7 +1,7 @@
 Build a serving_input_receiver_fn expecting fed tf.Examples.
 ### Aliases:
-- tf.compat.v1.estimator.export.build_parsing_serving_input_receiver_fn
-- tf.compat.v2.estimator.export.build_parsing_serving_input_receiver_fn
+- `tf.compat.v1.estimator.export.build_parsing_serving_input_receiver_fn`
+- `tf.compat.v2.estimator.export.build_parsing_serving_input_receiver_fn`
 
 ```
  tf.estimator.export.build_parsing_serving_input_receiver_fn(
@@ -10,10 +10,10 @@ Build a serving_input_receiver_fn expecting fed tf.Examples.
 )
 ```
 ### Used in the guide:
-- Using the SavedModel format
+- ``U``s``i``n``g`` ``t``h``e`` ``S``a``v``e``d``M``o``d``e``l`` ``f``o``r``m``a``t``
 Creates a serving_input_receiver_fn that expects a serialized tf.Example fed into a string placeholder. The function parses the tf.Example according to the provided feature_spec, and returns all parsed Tensors as features.
 #### Args:
-- feature_spec: a dict of string to VarLenFeature/FixedLenFeature.
-- default_batch_size: the number of query examples expected per batch. Leave unset for variable batch size (recommended).
+- `feature_spec`: a dict of string to `VarLenFeature`/`FixedLenFeature`.
+- `default_batch_size`: the number of query examples expected per batch. Leave unset for variable batch size (recommended).
 #### Returns:
 A serving_input_receiver_fn suitable for use in serving.

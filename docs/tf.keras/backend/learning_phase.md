@@ -1,7 +1,7 @@
 Returns the learning phase flag.
 ### Aliases:
-- tf.compat.v1.keras.backend.learning_phase
-- tf.compat.v2.keras.backend.learning_phase
+- `tf.compat.v1.keras.backend.learning_phase`
+- `tf.compat.v2.keras.backend.learning_phase`
 
 ```
  tf.keras.backend.learning_phase()

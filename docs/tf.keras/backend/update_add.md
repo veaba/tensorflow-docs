@@ -1,7 +1,7 @@
-Update the value of x by adding increment.
+Update the value of `x` by adding `increment`.
 ### Aliases:
-- tf.compat.v1.keras.backend.update_add
-- tf.compat.v2.keras.backend.update_add
+- `tf.compat.v1.keras.backend.update_add`
+- `tf.compat.v2.keras.backend.update_add`
 
 ```
  tf.keras.backend.update_add(
@@ -10,7 +10,7 @@ Update the value of x by adding increment.
 )
 ```
 #### Arguments:
-- x: A Variable.
-- increment: A tensor of same shape as x.
+- `x`: A Variable.
+- `increment`: A tensor of same shape as `x`.
 #### Returns:
-The variable x updated.
+The variable `x` updated.

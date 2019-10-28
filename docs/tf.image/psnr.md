@@ -1,7 +1,7 @@
 Returns the Peak Signal-to-Noise Ratio between a and b.
 ### Aliases:
-- tf.compat.v1.image.psnr
-- tf.compat.v2.image.psnr
+- `tf.compat.v1.image.psnr`
+- `tf.compat.v2.image.psnr`
 
 ```
  tf.image.psnr(
@@ -29,10 +29,9 @@ The last three dimensions of input are expected to be [height, width, depth].
     # psnr1 and psnr2 both have type tf.float32 and are almost equal.
 ```
 #### Arguments:
-- a: First set of images.
-- b: Second set of images.
-- max_val: The dynamic range of the images (i.e., the difference between the maximum the and minimum allowed values).
-- name: Namespace to embed the computation in.
+- `a`: First set of im`a`ges.
+- `b`: Second set of images.
+- `max_val`: The dynamic range of the images (i.e., the difference between the maximum the and minimum allowed values).
+- `name`: Namespace to embed the computation in.
 #### Returns:
-[tf.float32](https://tensorflow.google.cn/api_docs/python/tf#float32)The scalar PSNR between a and b. The returned tensor has type  and shape [batch_size, 1].
-
+The scalar PSNR between a and b. The returned tensor has type `tf.float32` and shape [batch_size, 1].

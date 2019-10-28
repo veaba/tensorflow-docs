@@ -8,8 +8,8 @@ Function builder for a linear logit_fn.
 )
 ```
 #### Args:
-- units: An int indicating the dimension of the logit layer.
-- feature_columns: An iterable containing all the feature columns used by the model.
-- sparse_combiner: A string specifying how to reduce if a categorical column is multivalent. One of "mean", "sqrtn", and "sum".
+- `units`: An int indicating the dimension of the logit layer.
+- `feature_columns`: An iterable containing all the feature columns used by the model.
+- `sparse_combiner`: A string specifying how to reduce if a categorical column is multivalent. One of "mean", "sqrtn", and "sum".
 #### Returns:
 A logit_fn (see below).

@@ -1,15 +1,12 @@
 ## Class FailedPreconditionError
 Operation was rejected because the system is not in a state to execute it.
-[OpError](https://tensorflow.google.cn/api_docs/python/tf/errors/OpError)Inherits From: 
-
+Inherits From: `OpError`
 ### Aliases:
-- Class tf.compat.v1.errors.FailedPreconditionError
-- Class tf.compat.v2.errors.FailedPreconditionError
-[tf.Variable](https://tensorflow.google.cn/api_docs/python/tf/Variable)This exception is most commonly raised when running an operation that reads a  before it has been initialized.
-
+- Class `tf.compat.v1.errors.FailedPreconditionError`
+- Class `tf.compat.v2.errors.FailedPreconditionError`
+This exception is most commonly raised when running an operation that reads a `tf.Variable` before it has been initialized.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/errors_impl.py#L382-L385)
-
+View source
 
 ```
  __init__(
@@ -18,17 +15,16 @@ Operation was rejected because the system is not in a state to execute it.
     message
 )
 ```
-Creates a FailedPreconditionError.
+Creates a `FailedPreconditionError`.
 ## Properties
 ### error_code
 The integer error code that describes the error.
 ### message
 The error message that describes the error.
 ### node_def
-The NodeDef proto representing the op that failed.
+The `NodeDef` proto representing the op that failed.
 ### op
 The operation that failed, if known.
-[tf.Operation](https://tensorflow.google.cn/api_docs/python/tf/Operation)N.B. If the failed op was synthesized at runtime, e.g. a Send or Recv op, there will be no corresponding  object. In that case, this will return None, and you should instead use the tf.errors.OpError.node_def to discover information about the op.
-
+N.B. If the failed op was synthesized at runtime, e.g. a `Send` or `Recv` op, there will be no corresponding `tf.Operation` object. In that case, this will return `None`, and you should instead use the `tf.errors.OpError.node_def` to discover information about the op.
 #### Returns:
-The Operation that failed, or None.
+The `Operation` that failed, or None.

@@ -1,6 +1,6 @@
-Return substrings from Tensor of strings.
+Return substrings from `Tensor` of strings.
 ### Aliases:
-- tf.compat.v2.strings.substr
+- `tf.compat.v2.strings.substr`
 
 ```
  tf.strings.substr(
@@ -12,19 +12,18 @@ Return substrings from Tensor of strings.
 )
 ```
 ### Used in the guide:
-- tf.data: Build TensorFlow input pipelines
-- Ragged tensors
+- ``t``f``.``d``a``t``a``:`` ``B``u``i``l``d`` ``T``e``n``s``o``r``F``l``o``w`` ``i``n``p``u``t`` ``p``i``p``e``l``i``n``e``s``
+- ``R``a``g``g``e``d`` ``t``e``n``s``o``r``s``
 ### Used in the tutorials:
-- Unicode strings
-For each string in the input Tensor, creates a substring starting at index pos with a total length of len.
-If len defines a substring that would extend beyond the length of the input string, then as many characters as possible are used.
-A negative pos indicates distance within the string backwards from the end.
-If pos specifies an index which is out of range for any of the input strings, then an InvalidArgumentError is thrown.
-pos and len must have the same shape, otherwise a ValueError is thrown on Op creation.
-[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)NOTE: Substr supports broadcasting up to two dimensions. More about broadcasting 
-
+- ``U``n``i``c``o``d``e`` ``s``t``r``i``n``g``s``
+For each string in the input `Tensor`, creates a substring starting at index `pos` with a total `len`gth of `len`.
+If `len` defines a substring that would extend beyond the `len`gth of the input string, then as many characters as possible are used.
+A negative `pos` indicates distance within the string backwards from the end.
+If `pos` specifies an index which is out of range for any of the input strings, then an `InvalidArgumentError` is thrown.
+`pos` and `len` must have the same shape, otherwise a `ValueError` is thrown on Op creation.
+NOTE: `Substr` supports broadcasting up to two dimensions. More about broadcasting here
 Examples
-Using scalar pos and len:
+Using scalar `pos` and `len`:
 
 ```
  input = [b'Hello', b'World']
@@ -33,7 +32,7 @@ length = 3
 
 output = [b'ell', b'orl']
 ```
-Using pos and len with same shape as input:
+Using `pos` and `len` with same shape as `input`:
 
 ```
  input = [[b'ten', b'eleven', b'twelve'],
@@ -50,7 +49,7 @@ output = [[b'en', b'eve', b'lve'],
           [b'hirt', b'urt', b'te'],
           [b'ixtee', b'vente', b'hteen']]
 ```
-Broadcasting pos and len onto input:
+Broadcasting `pos` and `len` onto `input`:
 
 ```
  input = [[b'ten', b'eleven', b'twelve'],
@@ -65,7 +64,7 @@ output = [[b'e', b'ev', b'lve'],
           [b'i', b've', b'hte'],
           [b'i', b'en', b'nty']]
 ```
-Broadcasting input onto pos and len:
+Broadcasting `input` onto `pos` and `len`:
 
 ```
  input = b'thirteen'
@@ -75,10 +74,10 @@ length =   [3, 2, 1]
 output = [b'hir', b'ee', b'n']
 ```
 #### Args:
-- input: A Tensor of type string. Tensor of strings
-- pos: A Tensor. Must be one of the following types: int32, int64. Scalar defining the position of first character in each substring
-- len: A Tensor. Must have the same type as pos. Scalar defining the number of characters to include in each substring
-- unit: An optional string from: "BYTE", "UTF8_CHAR". Defaults to "BYTE". The unit that is used to create the substring. One of: "BYTE" (for defining position and length by bytes) or "UTF8_CHAR" (for the UTF-8 encoded Unicode code points). The default is "BYTE". Results are undefined if unit=UTF8_CHAR and the input strings do not contain structurally valid UTF-8.
-- name: A name for the operation (optional).
+- `input`: A `Tensor` of type `string`. `Tensor` of `string`s
+- `pos`: A `Tensor`. Must be one of the following types: `int32`, `int64`. Scalar defining the `pos`ition of first character in each substring
+- `len`: A `Tensor`. Must have the same type as `pos`. Scalar defining the number of characters to include in each substring
+- `unit`: An optional `string` from: `"BYTE", "UTF8_CHAR"`. Defaults to `"BYTE"`. The `unit` that is used to create the sub`string`. One of: `"BYTE"` (for defining position and length by bytes) or `"UTF8_CHAR"` (for the UTF-8 encoded Unicode code points). The default is `"BYTE"`. Results are undefined if `unit`=UTF8_CHAR and the `input` `string`s do not contain structurally valid UTF-8.
+- `name`: A `name` for the operation (optional).
 #### Returns:
-A Tensor of type string.
+A `Tensor` of type `string`.

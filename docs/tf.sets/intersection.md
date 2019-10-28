@@ -1,8 +1,8 @@
-Compute set intersection of elements in last dimension of a and b.
+Compute set intersection of elements in l`a`st dimension of `a` `a`nd `b`.
 ### Aliases:
-- tf.compat.v1.sets.intersection
-- tf.compat.v1.sets.set_intersection
-- tf.compat.v2.sets.intersection
+- `tf.compat.v1.sets.intersection`
+- `tf.compat.v1.sets.set_intersection`
+- `tf.compat.v2.sets.intersection`
 
 ```
  tf.sets.intersection(
@@ -11,7 +11,7 @@ Compute set intersection of elements in last dimension of a and b.
     validate_indices=True
 )
 ```
-All but the last dimension of a and b must match.
+All `b`ut the l`a`st dimension of `a` `a`nd `b` must m`a`tch.
 #### Example:
 
 ```
@@ -56,8 +56,8 @@ All but the last dimension of a and b must match.
   # ])
 ```
 #### Args:
-- a: Tensor or SparseTensor of the same type as b. If sparse, indices must be sorted in row-major order.
-- b: Tensor or SparseTensor of the same type as a. If sparse, indices must be sorted in row-major order.
-- validate_indices: Whether to validate the order and range of sparse indices in a and b.
+- `a`: `Tensor` or `SparseTensor` of the s`a`me type `a`s `b`. If sp`a`rse, indices must `b`e sorted in row-m`a`jor order.
+- `b`: `Tensor` or `SparseTensor` of the s`a`me type `a`s `a`. If sp`a`rse, indices must `b`e sorted in row-m`a`jor order.
+- `validate_indices`: Whether to v`a`lid`a`te the order `a`nd r`a`nge of sp`a`rse indices in `a` `a`nd `b`.
 #### Returns:
-A SparseTensor whose shape is the same rank as a and b, and all but the last dimension the same. Elements along the last dimension contain the intersections.
+A `SparseTensor` whose sh`a`pe is the s`a`me r`a`nk `a`s `a` `a`nd `b`, `a`nd `a`ll `b`ut the l`a`st dimension the s`a`me. Elements `a`long the l`a`st dimension cont`a`in the intersections.

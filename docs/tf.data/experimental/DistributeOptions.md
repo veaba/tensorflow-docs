@@ -1,10 +1,9 @@
 ## Class DistributeOptions
 Represents options for distributed data processing.
 ### Aliases:
-- Class tf.compat.v1.data.experimental.DistributeOptions
-- Class tf.compat.v2.data.experimental.DistributeOptions
-[tf.data.Options](https://tensorflow.google.cn/api_docs/python/tf/data/Options)You can set the distribution options of a dataset through the experimental_distribute property of ; the property is an instance of tf.data.experimental.DistributeOptions.
-
+- Class `tf.compat.v1.data.experimental.DistributeOptions`
+- Class `tf.compat.v2.data.experimental.DistributeOptions`
+You can set the distribution options of a dataset through the `experimental_distribute` property of `tf.data.Options`; the property is an instance of `tf.data.experimental.DistributeOptions`.
 
 ```
  options = tf.data.Options()
@@ -12,8 +11,7 @@ options.experimental_distribute.auto_shard = False
 dataset = dataset.with_options(options)
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L33-L35)
-
+View source
 
 ```
  __init__()
@@ -26,16 +24,14 @@ Whether the dataset should be automatically sharded when processedin a distribut
 The number of devices attached to this input pipeline. This will be automatically set by MultiDeviceIterator.
 ## Methods
 ### __eq__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L37-L43)
-
+View source
 
 ```
  __eq__(other)
 ```
 Return self==value.
 ### __ne__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L45-L49)
-
+View source
 
 ```
  __ne__(other)

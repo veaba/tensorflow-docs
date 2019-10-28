@@ -1,7 +1,7 @@
 Exponential linear unit.
 ### Aliases:
-- tf.compat.v1.keras.backend.elu
-- tf.compat.v2.keras.backend.elu
+- `tf.compat.v1.keras.backend.elu`
+- `tf.compat.v2.keras.backend.elu`
 
 ```
  tf.keras.backend.elu(
@@ -10,7 +10,7 @@ Exponential linear unit.
 )
 ```
 #### Arguments:
-- x: A tensor or variable to compute the activation function for.
-- alpha: A scalar, slope of negative section.
+- `x`: A tensor or variable to compute the activation function for.
+- `alpha`: A scalar, slope of negative section.
 #### Returns:
 A tensor.

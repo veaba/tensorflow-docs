@@ -1,9 +1,7 @@
-## Class MultiEnumClassFlag
 A multi_enum_class flag.
-[MultiFlag](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/MultiFlag)Inherits From: 
-
+Inherits From: `MultiFlag`
 ### Aliases:
-- Class tf.compat.v1.app.flags.MultiEnumClassFlag
+- Class `tf.compat.v1.app.flags.MultiEnumClassFlag`
 See the doc for MultiFlag for most behaviors of this class. In addition, this class knows how to handle enum.Enum instances as values for this flag type.
 ## __init__
 
@@ -72,7 +70,7 @@ See base class.
 ```
 Parses one or more arguments with the installed parser.
 #### Args:
-- arguments: a single argument or a list of arguments (typically a list of default values); a single argument is converted internally into a list containing one item.
+- `arguments`: a single argument or a list of `arguments` (typically a list of default values); a single argument is converted internally into a list containing one item.
 ### serialize
 
 ```

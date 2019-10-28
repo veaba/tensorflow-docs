@@ -1,13 +1,13 @@
 Returns the symbolic shape of a tensor or variable.
 ### Aliases:
-- tf.compat.v1.keras.backend.shape
-- tf.compat.v2.keras.backend.shape
+- `tf.compat.v1.keras.backend.shape`
+- `tf.compat.v2.keras.backend.shape`
 
 ```
  tf.keras.backend.shape(x)
 ```
 #### Arguments:
-- x: A tensor or variable.
+- `x`: A tensor or variable.
 #### Returns:
 A symbolic shape (which is itself a tensor).
 #### Examples:

@@ -1,26 +1,25 @@
 ## Class AttrValue
 A ProtocolMessage
 ## Child Classes
-[class ListValue](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/AttrValue/ListValue)
-
+`class ListValue`
 ## Properties
 ### b
-bool b
+`bool b`
 ### f
-float f
+`float f`
 ### func
-NameAttrList func
+`NameAttrList func`
 ### i
-int64 i
+`int64 i`
 ### list
-ListValue list
+`ListValue list`
 ### placeholder
-string placeholder
+`string placeholder`
 ### s
-bytes s
+`bytes s`
 ### shape
-TensorShapeProto shape
+`TensorShapeProto shape`
 ### tensor
-TensorProto tensor
+`TensorProto tensor`
 ### type
-DataType type
+`DataType type`

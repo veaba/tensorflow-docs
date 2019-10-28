@@ -1,7 +1,7 @@
 Scales per-example losses with sample_weights and computes their average.
 ### Aliases:
-- tf.compat.v1.nn.compute_average_loss
-- tf.compat.v2.nn.compute_average_loss
+- `tf.compat.v1.nn.compute_average_loss`
+- `tf.compat.v2.nn.compute_average_loss`
 
 ```
  tf.nn.compute_average_loss(
@@ -28,8 +28,8 @@ Usage with distribution strategy and custom training loop:
         global_batch_size=GLOBAL_BATCH_SIZE)
 ```
 #### Args:
-- per_example_loss: Per-example loss.
-- sample_weight: Optional weighting for each example.
-- global_batch_size: Optional global batch size value. Defaults to (size of first dimension of losses) * (number of replicas).
+- `per_example_loss`: Per-example loss.
+- `sample_weight`: Optional weighting for each example.
+- `global_batch_size`: Optional global batch size value. Defaults to (size of first dimension of `losses`) * (number of replicas).
 #### Returns:
 Scalar loss value.

@@ -1,24 +1,22 @@
 ## Class random_normal_initializer
 Initializer that generates tensors with a normal distribution.
-[Initializer](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/Initializer)Inherits From: 
-
+Inherits From: `Initializer`
 ### Aliases:
-- Class tf.compat.v2.initializers.RandomNormal
-- Class tf.compat.v2.keras.initializers.RandomNormal
-- Class tf.compat.v2.random_normal_initializer
-- Class tf.initializers.RandomNormal
-- Class tf.keras.initializers.RandomNormal
+- Class `tf.compat.v2.initializers.RandomNormal`
+- Class `tf.compat.v2.keras.initializers.RandomNormal`
+- Class `tf.compat.v2.random_normal_initializer`
+- Class `tf.initializers.RandomNormal`
+- Class `tf.keras.initializers.RandomNormal`
 ### Used in the guide:
-- Writing custom layers and models with Keras
+- ``W``r``i``t``i``n``g`` ``c``u``s``t``o``m`` ``l``a``y``e``r``s`` ``a``n``d`` ``m``o``d``e``l``s`` ``w``i``t``h`` ``K``e``r``a``s``
 ### Used in the tutorials:
-- Pix2Pix
+- ``P``i``x``2``P``i``x``
 #### Args:
-- mean: a python scalar or a scalar tensor. Mean of the random values to generate.
-- stddev: a python scalar or a scalar tensor. Standard deviation of the random values to generate.
-- seed: A Python integer. Used to create random seeds. See tf.compat.v1.set_random_seed for behavior.
+- `mean`: a python scalar or a scalar tensor. Mean of the random values to generate.
+- `stddev`: a python scalar or a scalar tensor. Standard deviation of the random values to generate.
+- `seed`: A Python integer. Used to create random `seed`s. See `tf.compat.v1.set_random_seed` for behavior.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L277-L281)
-
+View source
 
 ```
  __init__(
@@ -30,8 +28,7 @@ Initializer that generates tensors with a normal distribution.
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L283-L296)
-
+View source
 
 ```
  __call__(
@@ -41,13 +38,12 @@ Initialize self. See help(type(self)) for accurate signature.
 ```
 Returns a tensor object initialized as specified by the initializer.
 #### Args:
-- shape: Shape of the tensor.
-- dtype: Optional dtype of the tensor. Only floating point types are supported.
+- `shape`: Shape of the tensor.
+- `dtype`: Optional `dtype` of the tensor. Only floating point types are supported.
 #### Raises:
-- ValueError: If the dtype is not floating point
+- `ValueError`: If the dtype is not floating point
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L69-L89)
-
+View source
 
 ```
  from_config(
@@ -64,12 +60,11 @@ config = initializer.get_config()
 initializer = RandomUniform.from_config(config)
 ```
 #### Args:
-- config: A Python dictionary. It will typically be the output of get_config.
+- `config`: A Python dictionary. It will typically be the output of `get_config`.
 #### Returns:
 An Initializer instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L298-L303)
-
+View source
 
 ```
  get_config()

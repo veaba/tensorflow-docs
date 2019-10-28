@@ -1,6 +1,6 @@
-Asserts that the given tensor is a scalar.
+Asserts that the given `tensor` is a scalar.
 ### Aliases:
-- tf.compat.v2.debugging.assert_scalar
+- `tf.compat.v2.debugging.assert_scalar`
 
 ```
  tf.debugging.assert_scalar(
@@ -9,11 +9,11 @@ Asserts that the given tensor is a scalar.
     name=None
 )
 ```
-This function raises ValueError unless it can be certain that the given tensor is a scalar. ValueError is also raised if the shape of tensor is unknown.
+This function raises `ValueError` unless it can be certain that the given `tensor` is a scalar. `ValueError` is also raised if the shape of `tensor` is unknown.
 This is always checked statically, so this method returns nothing.
 #### Args:
-- tensor: A Tensor.
-- message: A string to prefix to the default message.
-- name: A name for this operation. Defaults to "assert_scalar"
+- `tensor`: A `Tensor`.
+- `message`: A string to prefix to the default `message`.
+- `name`: A `name` for this operation. Defaults to "assert_scalar"
 #### Raises:
-- ValueError: If the tensor is not scalar (rank 0), or if its shape is unknown.
+- `ValueError`: If the tensor is not scalar (rank 0), or if its shape is unknown.

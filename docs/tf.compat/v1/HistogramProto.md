@@ -2,16 +2,16 @@
 A ProtocolMessage
 ## Properties
 ### bucket
-repeated double bucket
+`repeated double bucket`
 ### bucket_limit
-repeated double bucket_limit
+`repeated double bucket_limit`
 ### max
-double max
+`double max`
 ### min
-double min
+`double min`
 ### num
-double num
+`double num`
 ### sum
-double sum
+`double sum`
 ### sum_squares
-double sum_squares
+`double sum_squares`

@@ -1,7 +1,7 @@
 Gets the current device policy.
 ### Aliases:
-- tf.compat.v1.config.experimental.get_device_policy
-- tf.compat.v2.config.experimental.get_device_policy
+- `tf.compat.v1.config.experimental.get_device_policy`
+- `tf.compat.v2.config.experimental.get_device_policy`
 
 ```
  tf.config.experimental.get_device_policy()

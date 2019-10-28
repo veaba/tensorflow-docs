@@ -1,21 +1,19 @@
 ## Class Identity
 Initializer that generates the identity matrix.
-[Initializer](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/Initializer)Inherits From: 
-
+Inherits From: `Initializer`
 ### Aliases:
-- Class tf.compat.v2.initializers.Identity
-- Class tf.compat.v2.initializers.identity
-- Class tf.compat.v2.keras.initializers.Identity
-- Class tf.compat.v2.keras.initializers.identity
-- Class tf.initializers.Identity
-- Class tf.initializers.identity
-- Class tf.keras.initializers.identity
+- Class `tf.compat.v2.initializers.Identity`
+- Class `tf.compat.v2.initializers.identity`
+- Class `tf.compat.v2.keras.initializers.Identity`
+- Class `tf.compat.v2.keras.initializers.identity`
+- Class `tf.initializers.Identity`
+- Class `tf.initializers.identity`
+- Class `tf.keras.initializers.identity`
 Only use for 2D matrices.
 #### Args:
-- gain: Multiplicative factor to apply to the identity matrix.
+- `gain`: Multiplicative factor to apply to the identity matrix.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L527-L528)
-
+View source
 
 ```
  __init__(gain=1.0)
@@ -23,8 +21,7 @@ Only use for 2D matrices.
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L530-L551)
-
+View source
 
 ```
  __call__(
@@ -34,13 +31,12 @@ Initialize self. See help(type(self)) for accurate signature.
 ```
 Returns a tensor object initialized as specified by the initializer.
 #### Args:
-- shape: Shape of the tensor.
-- dtype: Optional dtype of the tensor. Only floating point types are supported.
+- `shape`: Shape of the tensor.
+- `dtype`: Optional `dtype` of the tensor. Only floating point types are supported.
 #### Raises:
-- ValueError: If the dtype is not floating point
+- `ValueError`: If the dtype is not floating point
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L69-L89)
-
+View source
 
 ```
  from_config(
@@ -57,12 +53,11 @@ config = initializer.get_config()
 initializer = RandomUniform.from_config(config)
 ```
 #### Args:
-- config: A Python dictionary. It will typically be the output of get_config.
+- `config`: A Python dictionary. It will typically be the output of `get_config`.
 #### Returns:
 An Initializer instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L553-L554)
-
+View source
 
 ```
  get_config()

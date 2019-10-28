@@ -1,7 +1,7 @@
 Permutes axes in a tensor.
 ### Aliases:
-- tf.compat.v1.keras.backend.permute_dimensions
-- tf.compat.v2.keras.backend.permute_dimensions
+- `tf.compat.v1.keras.backend.permute_dimensions`
+- `tf.compat.v2.keras.backend.permute_dimensions`
 
 ```
  tf.keras.backend.permute_dimensions(
@@ -10,8 +10,8 @@ Permutes axes in a tensor.
 )
 ```
 #### Arguments:
-- x: Tensor or variable.
-- pattern: A tuple of dimension indices, e.g. (0, 2, 1).
+- `x`: Tensor or variable.
+- `pattern`: A tuple of dimension indices, e.g. `0, 2, 1)`.
 #### Returns:
 A tensor.
 #### Example:

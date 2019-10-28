@@ -1,4 +1,4 @@
-Renamed to precision_at_k, please use that method instead. (deprecated)
+Renamed to `precision_at_k`, please use that method instead. (deprecated)
 
 ```
  tf.compat.v1.metrics.sparse_precision_at_k(

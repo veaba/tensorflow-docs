@@ -1,7 +1,7 @@
 Hyperbolic Tangent (tanh) activation function.
 ### Aliases:
-- tf.compat.v1.keras.activations.tanh
-- tf.compat.v2.keras.activations.tanh
+- `tf.compat.v1.keras.activations.tanh`
+- `tf.compat.v2.keras.activations.tanh`
 
 ```
  tf.keras.activations.tanh(x)
@@ -16,4 +16,3 @@ b = tf.keras.activations.tanh(a) #[-0.9950547,-0.7615942,
 ```
 Arguments: x: Input tensor.
 #### Returns:
-A tensor of same shape and dtype of input x. The tanh activation: tanh`(x)` = sinh`(x)`/cosh`(x)` = ((exp`(x)` - exp(-x))/(exp`(x)` + exp(-x))).

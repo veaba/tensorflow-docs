@@ -1,22 +1,22 @@
 ## Class Mean
 Computes the (weighted) mean of the given values.
 ### Aliases:
-- Class tf.compat.v1.keras.metrics.Mean
-- Class tf.compat.v2.keras.metrics.Mean
-- Class tf.compat.v2.metrics.Mean
-- Class tf.metrics.Mean
+- Class `tf.compat.v1.keras.metrics.Mean`
+- Class `tf.compat.v2.keras.metrics.Mean`
+- Class `tf.compat.v2.metrics.Mean`
+- Class `tf.metrics.Mean`
 ### Used in the guide:
-- Eager execution
-- Writing custom layers and models with Keras
-- Migrate your TensorFlow 1 code to TensorFlow 2
+- ``E``a``g``e``r`` ``e``x``e``c``u``t``i``o``n``
+- ``W``r``i``t``i``n``g`` ``c``u``s``t``o``m`` ``l``a``y``e``r``s`` ``a``n``d`` ``m``o``d``e``l``s`` ``w``i``t``h`` ``K``e``r``a``s``
+- ``M``i``g``r``a``t``e`` ``y``o``u``r`` ``T``e``n``s``o``r``F``l``o``w`` ``1`` ``c``o``d``e`` ``t``o`` ``T``e``n``s``o``r``F``l``o``w`` ``2``
 ### Used in the tutorials:
-- TensorFlow 2 quickstart for experts
-- Custom training: walkthrough
-- Convolutional Variational Autoencoder
-- Transformer model for language understanding
+- ``T``e``n``s``o``r``F``l``o``w`` ``2`` ``q``u``i``c``k``s``t``a``r``t`` ``f``o``r`` ``e``x``p``e``r``t``s``
+- ``C``u``s``t``o``m`` ``t``r``a``i``n``i``n``g``:`` ``w``a``l``k``t``h``r``o``u``g``h``
+- ``C``o``n``v``o``l``u``t``i``o``n``a``l`` ``V``a``r``i``a``t``i``o``n``a``l`` ``A``u``t``o``e``n``c``o``d``e``r``
+- ``T``r``a``n``s``f``o``r``m``e``r`` ``m``o``d``e``l`` ``f``o``r`` ``l``a``n``g``u``a``g``e`` ``u``n``d``e``r``s``t``a``n``d``i``n``g``
 For example, if values is [1, 3, 5, 7] then the mean is 4. If the weights were specified as [1, 1, 0, 0] then the mean would be 2.
-This metric creates two variables, total and count that are used to compute the average of values. This average is ultimately returned as mean which is an idempotent operation that simply divides total by count.
-If sample_weight is None, weights default to 1. Use sample_weight of 0 to mask values.
+This metric creates two variables, `total` and `count` that are used to compute the average of `values`. This average is ultimately returned as `mean` which is an idempotent operation that simply divides `total` by `count`.
+If `sample_weight` is `None`, weights default to 1. Use `sample_weight` of 0 to mask values.
 #### Usage:
 
 ```
@@ -32,8 +32,7 @@ model.add_metric(tf.keras.metrics.Mean(name='mean_1')(outputs))
 model.compile('sgd', loss='mse')
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L446-L454)
-
+View source
 
 ```
  __init__(
@@ -41,13 +40,12 @@ model.compile('sgd', loss='mse')
     dtype=None
 )
 ```
-Creates a Mean instance.
+Creates a `Mean` instance.
 #### Args:
-- name: (Optional) string name of the metric instance.
-- dtype: (Optional) data type of the metric result.
+- `name`: (Optional) string `name` of the metric instance.
+- `dtype`: (Optional) data type of the metric result.
 ## __new__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
+View source
 
 ```
  __new__(
@@ -59,8 +57,7 @@ Creates a Mean instance.
 Create and return a new object. See help(type) for accurate signature.
 ## Methods
 ### reset_states
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L203-L209)
-
+View source
 
 ```
  reset_states()
@@ -68,8 +65,7 @@ Create and return a new object. See help(type) for accurate signature.
 Resets all of the metric state variables.
 This function is called between epochs/steps, when a metric is evaluated during training.
 ### result
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L361-L371)
-
+View source
 
 ```
  result()
@@ -77,8 +73,7 @@ This function is called between epochs/steps, when a metric is evaluated during 
 Computes and returns the metric value tensor.
 Result computation is an idempotent operation that simply calculates the metric value using the state variables.
 ### update_state
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L299-L359)
-
+View source
 
 ```
  update_state(
@@ -87,9 +82,3 @@ Result computation is an idempotent operation that simply calculates the metric 
 )
 ```
 Accumulates statistics for computing the reduction metric.
-For example, if values is [1, 3, 5, 7] and reduction=SUM_OVER_BATCH_SIZE, then the value of result() is 4. If the sample_weight is specified as [1, 1, 0, 0] then value of result() would be 2.
-#### Args:
-- values: Per-example value.
-- sample_weight: Optional weighting of each example. Defaults to 1.
-#### Returns:
-Update op.

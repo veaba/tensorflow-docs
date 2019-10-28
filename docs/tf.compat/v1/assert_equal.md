@@ -1,6 +1,6 @@
-Assert the condition x == y holds element-wise.
+Assert the condition `x == y` holds element-wise.
 ### Aliases:
-- tf.compat.v1.debugging.assert_equal
+- `tf.compat.v1.debugging.assert_equal`
 
 ```
  tf.compat.v1.assert_equal(
@@ -18,17 +18,17 @@ Example of adding a dependency to an operation:
  with tf.control_dependencies([tf.compat.v1.assert_equal(x, y)]):
   output = tf.reduce_sum(x)
 ```
-This condition holds if for every pair of (possibly broadcast) elements x[i], y[i], we have x[i] == y[i]. If both x and y are empty, this is trivially satisfied.
+This condition holds if for ever`y` pair of (possibl`y` broadcast) elements `x[i]`, `y[i]`, we have `x[i]` == `y[i]`. If both `x` and `y` are empt`y`, this is triviall`y` satisfied.
 #### Args:
-- x: Numeric Tensor.
-- y: Numeric Tensor, same dtype as and broadcastable to x.
-- data: The tensors to print out if the condition is False. Defaults to error message and first few entries of x, y.
-- summarize: Print this many entries of each tensor.
-- message: A string to prefix to the default message.
-- name: A name for this operation (optional). Defaults to "assert_equal".
+- `x`: Numeric `Tensor`.
+- `y`: Numeric `Tensor`, same dt`y`pe as and broadcastable to `x`.
+- `data`: The tensors to print out if the condition is False. Defaults to error message and first few entries of `x`, `y`.
+- `summarize`: Print this many entries of each tensor.
+- `message`: A string to prefix to the default `message`.
+- `name`: A `name` for this operation (optional). Defaults to "assert_equal".
 #### Returns:
-Op that raises InvalidArgumentError if x == y is False.
+Op that raises `InvalidArgumentError` if `x == y` is False.
 #### Raises:
-- InvalidArgumentError: if the check can be performed immediately and x == y is False. The check can be performed immediately during eager execution or if x and y are statically known.
+- `InvalidArgumentError`: if the check can be performed immediatel`y` and `x == y` is False. The check can be performed immediatel`y` during eager e`x`ecution or if `x` and `y` are staticall`y` known.
 #### Eager Compatibility
 returns None

@@ -1,7 +1,7 @@
 Returns CheckpointState proto from the "checkpoint" file.
 ### Aliases:
-- tf.compat.v1.train.get_checkpoint_state
-- tf.compat.v2.train.get_checkpoint_state
+- `tf.compat.v1.train.get_checkpoint_state`
+- `tf.compat.v2.train.get_checkpoint_state`
 
 ```
  tf.train.get_checkpoint_state(
@@ -11,9 +11,9 @@ Returns CheckpointState proto from the "checkpoint" file.
 ```
 If the "checkpoint" file contains a valid CheckpointState proto, returns it.
 #### Args:
-- checkpoint_dir: The directory of checkpoints.
-- latest_filename: Optional name of the checkpoint file. Default to 'checkpoint'.
+- `checkpoint_dir`: The directory of checkpoints.
+- `latest_filename`: Optional name of the checkpoint file. Default to 'checkpoint'.
 #### Returns:
 A CheckpointState if the state was available, None otherwise.
 #### Raises:
-- ValueError: if the checkpoint read doesn't have model_checkpoint_path set.
+- `ValueError`: if the checkpoint read doesn't have model_checkpoint_path set.

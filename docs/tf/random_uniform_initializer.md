@@ -1,20 +1,18 @@
 ## Class random_uniform_initializer
 Initializer that generates tensors with a uniform distribution.
-[Initializer](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/Initializer)Inherits From: 
-
+Inherits From: `Initializer`
 ### Aliases:
-- Class tf.compat.v2.initializers.RandomUniform
-- Class tf.compat.v2.keras.initializers.RandomUniform
-- Class tf.compat.v2.random_uniform_initializer
-- Class tf.initializers.RandomUniform
-- Class tf.keras.initializers.RandomUniform
+- Class `tf.compat.v2.initializers.RandomUniform`
+- Class `tf.compat.v2.keras.initializers.RandomUniform`
+- Class `tf.compat.v2.random_uniform_initializer`
+- Class `tf.initializers.RandomUniform`
+- Class `tf.keras.initializers.RandomUniform`
 #### Args:
-- minval: A python scalar or a scalar tensor. Lower bound of the range of random values to generate.
-- maxval: A python scalar or a scalar tensor. Upper bound of the range of random values to generate. Defaults to 1 for float types.
-- seed: A Python integer. Used to create random seeds. See tf.compat.v1.set_random_seed for behavior.
+- `minval`: A python scalar or a scalar tensor. Lower bound of the range of random values to generate.
+- `maxval`: A python scalar or a scalar tensor. Upper bound of the range of random values to generate. Defaults to 1 for float types.
+- `seed`: A Python integer. Used to create random `seed`s. See `tf.compat.v1.set_random_seed` for behavior.
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L232-L236)
-
+View source
 
 ```
  __init__(
@@ -26,8 +24,7 @@ Initializer that generates tensors with a uniform distribution.
 Initialize self. See help(type(self)) for accurate signature.
 ## Methods
 ### __call__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L238-L253)
-
+View source
 
 ```
  __call__(
@@ -37,13 +34,12 @@ Initialize self. See help(type(self)) for accurate signature.
 ```
 Returns a tensor object initialized as specified by the initializer.
 #### Args:
-- shape: Shape of the tensor.
-- dtype: Optional dtype of the tensor. Only floating point and integer types are supported.
+- `shape`: Shape of the tensor.
+- `dtype`: Optional `dtype` of the tensor. Only floating point and integer types are supported.
 #### Raises:
-- ValueError: If the dtype is not numeric.
+- `ValueError`: If the dtype is not numeric.
 ### from_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L69-L89)
-
+View source
 
 ```
  from_config(
@@ -60,12 +56,11 @@ config = initializer.get_config()
 initializer = RandomUniform.from_config(config)
 ```
 #### Args:
-- config: A Python dictionary. It will typically be the output of get_config.
+- `config`: A Python dictionary. It will typically be the output of `get_config`.
 #### Returns:
 An Initializer instance.
 ### get_config
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L255-L260)
-
+View source
 
 ```
  get_config()

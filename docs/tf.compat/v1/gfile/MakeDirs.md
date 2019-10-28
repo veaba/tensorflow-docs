@@ -5,6 +5,6 @@ Creates a directory and all parent/intermediate directories.
 ```
 It succeeds if dirname already exists and is writable.
 #### Args:
-- dirname: string, name of the directory to be created
+- `dirname`: string, name of the directory to be created
 #### Raises:
-- errors.OpError: If the operation fails.
+- `errors.OpError`: If the operation fails.

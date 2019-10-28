@@ -1,7 +1,7 @@
 Instantiates a variable and returns it.
 ### Aliases:
-- tf.compat.v1.keras.backend.variable
-- tf.compat.v2.keras.backend.variable
+- `tf.compat.v1.keras.backend.variable`
+- `tf.compat.v2.keras.backend.variable`
 
 ```
  tf.keras.backend.variable(
@@ -12,10 +12,10 @@ Instantiates a variable and returns it.
 )
 ```
 #### Arguments:
-- value: Numpy array, initial value of the tensor.
-- dtype: Tensor type.
-- name: Optional name string for the tensor.
-- constraint: Optional projection function to be applied to the variable after an optimizer update.
+- `value`: Numpy array, initial `value` of the tensor.
+- `dtype`: Tensor type.
+- `name`: Optional `name` string for the tensor.
+- `constraint`: Optional projection function to be applied to the variable after an optimizer update.
 #### Returns:
 A variable instance (with Keras metadata included).
 #### Examples:

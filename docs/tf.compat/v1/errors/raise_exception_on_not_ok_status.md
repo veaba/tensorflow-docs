@@ -2,15 +2,13 @@
 Context manager to check for C API status.
 ## Methods
 ### __enter__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/errors_impl.py#L546-L548)
-
+View source
 
 ```
  __enter__()
 ```
 ### __exit__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/errors_impl.py#L550-L562)
-
+View source
 
 ```
  __exit__(

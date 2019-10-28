@@ -1,6 +1,6 @@
-Creates a Dataset that counts from start in steps of size step.
+Creates a `Dataset` that counts from `start` in `step`s of size `step`.
 ### Aliases:
-- tf.compat.v2.data.experimental.Counter
+- `tf.compat.v2.data.experimental.Counter`
 
 ```
  tf.data.experimental.Counter(
@@ -10,7 +10,7 @@ Creates a Dataset that counts from start in steps of size step.
 )
 ```
 ### Used in the guide:
-- tf.data: Build TensorFlow input pipelines
+- ``t``f``.``d``a``t``a``:`` ``B``u``i``l``d`` ``T``e``n``s``o``r``F``l``o``w`` ``i``n``p``u``t`` ``p``i``p``e``l``i``n``e``s``
 #### For example:
 
 ```
@@ -21,8 +21,8 @@ Dataset.count(0, -1) == [0, -1, -2, ...)
 Dataset.count(10, -1) == [10, 9, ...)
 ```
 #### Args:
-- start: (Optional.) The starting value for the counter. Defaults to 0.
-- step: (Optional.) The step size for the counter. Defaults to 1.
-- dtype: (Optional.) The data type for counter elements. Defaults to tf.int64.
+- `start`: (Optional.) The `start`ing value for the counter. Defaults to 0.
+- `step`: (Optional.) The `step` size for the counter. Defaults to 1.
+- `dtype`: (Optional.) The data type for counter elements. Defaults to `tf.int64`.
 #### Returns:
-A Dataset of scalar dtype elements.
+A `Dataset` of scalar `dtype` elements.

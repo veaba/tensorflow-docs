@@ -1,7 +1,7 @@
 Get if soft device placement is enabled.
 ### Aliases:
-- tf.compat.v1.config.get_soft_device_placement
-- tf.compat.v2.config.get_soft_device_placement
+- `tf.compat.v1.config.get_soft_device_placement`
+- `tf.compat.v2.config.get_soft_device_placement`
 
 ```
  tf.config.get_soft_device_placement()

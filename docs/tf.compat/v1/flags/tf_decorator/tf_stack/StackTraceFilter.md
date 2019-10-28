@@ -1,20 +1,17 @@
 ## Class StackTraceFilter
 Allows filtering traceback information by removing superfluous frames.
-[StackTraceTransform](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceTransform)Inherits From: 
-
+Inherits From: `StackTraceTransform`
 ### Aliases:
-- Class tf.compat.v1.app.flags.tf_decorator.tf_stack.StackTraceFilter
+- Class `tf.compat.v1.app.flags.tf_decorator.tf_stack.StackTraceFilter`
 ## Methods
 ### __enter__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L59-L75)
-
+View source
 
 ```
  __enter__()
 ```
 ### __exit__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L77-L79)
-
+View source
 
 ```
  __exit__(
@@ -24,15 +21,13 @@ Allows filtering traceback information by removing superfluous frames.
 )
 ```
 ### get_filtered_filenames
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L104-L105)
-
+View source
 
 ```
  get_filtered_filenames()
 ```
 ### reset
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L101-L102)
-
+View source
 
 ```
  reset()

@@ -21,7 +21,7 @@ global_step_tensor))
 global_step: 10
 ```
 #### Args:
-- sess: A TensorFlow Session object.
-- global_step_tensor: Tensor or the name of the operation that contains the global step.
+- `sess`: A TensorFlow `Session` object.
+- `global_step_tensor`: `Tensor` or the `name` of the operation that contains the global step.
 #### Returns:
 The global step value.

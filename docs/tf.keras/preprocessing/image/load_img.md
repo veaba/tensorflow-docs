@@ -1,7 +1,7 @@
 Loads an image into PIL format.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.load_img
-- tf.compat.v2.keras.preprocessing.image.load_img
+- `tf.compat.v1.keras.preprocessing.image.load_img`
+- `tf.compat.v2.keras.preprocessing.image.load_img`
 
 ```
  tf.keras.preprocessing.image.load_img(
@@ -13,9 +13,9 @@ Loads an image into PIL format.
 )
 ```
 ### Used in the guide:
-- Using the SavedModel format
+- ``U``s``i``n``g`` ``t``h``e`` ``S``a``v``e``d``M``o``d``e``l`` ``f``o``r``m``a``t``
 ### Used in the tutorials:
-- DeepDream
+- ``D``e``e``p``D``r``e``a``m``
 # Arguments
 
 ```

@@ -1,6 +1,6 @@
 ### Aliases:
-- tf.compat.v1.keras.applications.vgg19.decode_predictions
-- tf.compat.v2.keras.applications.vgg19.decode_predictions
+- `tf.compat.v1.keras.applications.vgg19.decode_predictions`
+- `tf.compat.v2.keras.applications.vgg19.decode_predictions`
 
 ```
  tf.keras.applications.vgg19.decode_predictions(
@@ -9,4 +9,4 @@
 )
 ```
 ### Used in the tutorials:
-- Neural style transfer
+- ``N``e``u``r``a``l`` ``s``t``y``l``e`` ``t``r``a``n``s``f``e``r``

@@ -1,9 +1,9 @@
-An iterator for reading Event protocol buffers from an event file.
+An iterator for reading `Event` protocol buffers from an event file.
 
 ```
  tf.compat.v1.train.summary_iterator(path)
 ```
-You can use this function to read events written to an event file. It returns a Python iterator that yields Event protocol buffers.
+You can use this function to read events written to an event file. It returns a Python iterator that yields `Event` protocol buffers.
 Example: Print the contents of an events file.
 
 ```
@@ -22,9 +22,8 @@ for e in tf.compat.v1.train.summary_iterator(path to events file):
         if v.tag == 'loss':
             print(v.simple_value)
 ```
-[Event](https://tensorflow.google.cn/code/tensorflow/core/util/event.proto)See the protocol buffer definitions of  and Summary for more information about their attributes.
-
+See the protocol buffer definitions of Event and Summary for more information about their attributes.
 #### Args:
-- path: The path to an event file created by a SummaryWriter.
+- `path`: The `path` to an event file created by a `SummaryWriter`.
 #### Yields:
-Event protocol buffers.
+`Event` protocol buffers.

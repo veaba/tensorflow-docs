@@ -1,12 +1,11 @@
 Softsign activation function.
 ### Aliases:
-- tf.compat.v1.keras.activations.softsign
-- tf.compat.v2.keras.activations.softsign
+- `tf.compat.v1.keras.activations.softsign`
+- `tf.compat.v2.keras.activations.softsign`
 
 ```
  tf.keras.activations.softsign(x)
 ```
 #### Arguments:
-- x: Input tensor.
+- `x`: Input tensor.
 #### Returns:
-The softplus activation: x / (abs(x) + 1).

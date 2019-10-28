@@ -1,7 +1,7 @@
 Returns the default float type, as a string.
 ### Aliases:
-- tf.compat.v1.keras.backend.floatx
-- tf.compat.v2.keras.backend.floatx
+- `tf.compat.v1.keras.backend.floatx`
+- `tf.compat.v2.keras.backend.floatx`
 
 ```
  tf.keras.backend.floatx()

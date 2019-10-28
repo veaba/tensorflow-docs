@@ -1,4 +1,4 @@
-A general quantization scheme is being developed in tf.contrib.quantize. (deprecated)
+A general quantization scheme is being developed in `tf.contrib.quantize`. (deprecated)
 
 ```
  tf.compat.v1.train.do_quantize_training_on_graphdef(

@@ -1,13 +1,12 @@
 ## Class StackedRNNCells
 Wrapper allowing a stack of RNN cells to behave as a single cell.
-[Layer](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)Inherits From: 
-
+Inherits From: `Layer`
 ### Aliases:
-- Class tf.compat.v1.keras.layers.StackedRNNCells
-- Class tf.compat.v2.keras.layers.StackedRNNCells
+- Class `tf.compat.v1.keras.layers.StackedRNNCells`
+- Class `tf.compat.v2.keras.layers.StackedRNNCells`
 Used to implement efficient stacked RNNs.
 #### Arguments:
-- cells: List of RNN cell instances.
+- `cells`: List of RNN cell instances.
 #### Examples:
 
 ```
@@ -21,8 +20,7 @@ inputs = keras.Input((timesteps, input_dim))
 x = keras.layers.RNN(cells)(inputs)
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/recurrent.py#L71-L91)
-
+View source
 
 ```
  __init__(
@@ -35,8 +33,7 @@ x = keras.layers.RNN(cells)(inputs)
 ### state_size
 ## Methods
 ### get_initial_state
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/recurrent.py#L107-L118)
-
+View source
 
 ```
  get_initial_state(

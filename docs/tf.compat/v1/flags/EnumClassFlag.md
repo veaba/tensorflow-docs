@@ -1,9 +1,8 @@
 ## Class EnumClassFlag
 Basic enum flag; its value is an enum class's member.
-[Flag](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Flag)Inherits From: 
-
+Inherits From: `Flag`
 ### Aliases:
-- Class tf.compat.v1.app.flags.EnumClassFlag
+- Class `tf.compat.v1.app.flags.EnumClassFlag`
 ## __init__
 
 ```
@@ -73,7 +72,7 @@ NOTE: we use strings, and not the types.*Type constants because our flags can ha
 ```
 Parses string and sets flag value.
 #### Args:
-- argument: str or the correct flag value type, argument to be parsed.
+- `argument`: str or the correct flag value type, `argument` to be parsed.
 ### serialize
 
 ```

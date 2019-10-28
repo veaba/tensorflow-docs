@@ -1,7 +1,7 @@
 A sequence of categorical terms where ids are set by hashing.
 ### Aliases:
-- tf.compat.v1.feature_column.sequence_categorical_column_with_hash_bucket
-- tf.compat.v2.feature_column.sequence_categorical_column_with_hash_bucket
+- `tf.compat.v1.feature_column.sequence_categorical_column_with_hash_bucket`
+- `tf.compat.v2.feature_column.sequence_categorical_column_with_hash_bucket`
 
 ```
  tf.feature_column.sequence_categorical_column_with_hash_bucket(
@@ -10,7 +10,7 @@ A sequence of categorical terms where ids are set by hashing.
     dtype=tf.dtypes.string
 )
 ```
-Pass this to embedding_column or indicator_column to convert sequence categorical data into dense representation for input to sequence NN, such as RNN.
+Pass this to `embedding_column` or `indicator_column` to convert sequence categorical data into dense representation for input to sequence NN, such as RNN.
 #### Example:
 
 ```
@@ -29,11 +29,11 @@ rnn_layer = tf.keras.layers.RNN(rnn_cell)
 outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
 ```
 #### Args:
-- key: A unique string identifying the input feature.
-- hash_bucket_size: An int > 1. The number of buckets.
-- dtype: The type of features. Only string and integer types are supported.
+- `key`: A unique string identifying the input feature.
+- `hash_bucket_size`: An int > 1. The number of buckets.
+- `dtype`: The type of features. Only string and integer types are supported.
 #### Returns:
-A SequenceCategoricalColumn.
+A `SequenceCategoricalColumn`.
 #### Raises:
-- ValueError: hash_bucket_size is not greater than 1.
-- ValueError: dtype is neither string nor integer.
+- `ValueError`: `hash_bucket_size` is not greater than 1.
+- `ValueError`: `dtype` is neither string nor integer.

@@ -1,7 +1,7 @@
-Creates a Dataset from another Dataset and silently ignores any errors.
+Creates a `Dataset` from another `Dataset` and silently ignores any errors.
 ### Aliases:
-- tf.compat.v1.data.experimental.ignore_errors
-- tf.compat.v2.data.experimental.ignore_errors
+- `tf.compat.v1.data.experimental.ignore_errors`
+- `tf.compat.v2.data.experimental.ignore_errors`
 
 ```
  tf.data.experimental.ignore_errors()
@@ -20,5 +20,4 @@ dataset =
     dataset.apply(tf.data.experimental.ignore_errors())  # ==> {1., 0.5, 0.2}
 ```
 #### Returns:
-[tf.data.Dataset.apply](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply)A Dataset transformation function, which can be passed to .
-
+A `Dataset` transformation function, which can be passed to `tf.data.Dataset.apply`.

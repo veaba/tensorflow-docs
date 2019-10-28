@@ -1,7 +1,7 @@
 Applies an affine transformation specified by the parameters given.
 ### Aliases:
-- tf.compat.v1.keras.preprocessing.image.apply_affine_transform
-- tf.compat.v2.keras.preprocessing.image.apply_affine_transform
+- `tf.compat.v1.keras.preprocessing.image.apply_affine_transform`
+- `tf.compat.v2.keras.preprocessing.image.apply_affine_transform`
 
 ```
  tf.keras.preprocessing.image.apply_affine_transform(

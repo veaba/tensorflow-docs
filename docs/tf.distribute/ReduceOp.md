@@ -1,10 +1,10 @@
 ## Class ReduceOp
 Indicates how a set of values should be reduced.
 ### Aliases:
-- Class tf.compat.v1.distribute.ReduceOp
-- Class tf.compat.v2.distribute.ReduceOp
-- SUM: Add all the values.
-- MEAN: Take the arithmetic mean ("average") of the values.
+- Class `tf.compat.v1.distribute.ReduceOp`
+- Class `tf.compat.v2.distribute.ReduceOp`
+- `SUM`: Add all the values.
+- `MEAN`: Take the arithmetic mean ("average") of the values.
 ## Class Members
-- MEAN
-- SUM
+- `MEAN`
+- `SUM`

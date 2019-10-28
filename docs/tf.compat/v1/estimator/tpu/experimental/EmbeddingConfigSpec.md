@@ -1,8 +1,7 @@
 ## Class EmbeddingConfigSpec
 Class to keep track of the specification for TPU embeddings.
-Pass this class to tf.estimator.tpu.TPUEstimator via the embedding_config_spec parameter. At minimum you need to specify feature_columns and optimization_parameters. The feature columns passed should be created with some combination of tf.tpu.experimental.embedding_column and tf.tpu.experimental.shared_embedding_columns.
-[tf.tpu.experimental](https://tensorflow.google.cn/api_docs/python/tf/tpu/experimental)TPU embeddings do not support arbitrary Tensorflow optimizers and the main optimizer you use for your model will be ignored for the embedding table variables. Instead TPU embeddigns support a fixed set of predefined optimizers that you can select from and set the parameters of. These include adagrad, adam and stochastic gradient descent. Each supported optimizer has a Parameters class in the  namespace.
-
+Pass this class to `tf.estimator.tpu.TPUEstimator` via the `embedding_config_spec` parameter. At minimum you need to specify `feature_columns` and `optimization_parameters`. The feature columns passed should be created with some combination of `tf.tpu.experimental.embedding_column` and `tf.tpu.experimental.shared_embedding_columns`.
+TPU embeddings do not support arbitrary Tensorflow optimizers and the main optimizer you use for your model will be ignored for the embedding table variables. Instead TPU embeddigns support a fixed set of predefined optimizers that you can select from and set the parameters of. These include adagrad, adam and stochastic gradient descent. Each supported optimizer has a `Parameters` class in the `tf.tpu.experimental` namespace.
 
 ```
  column_a = tf.feature_column.categorical_column_with_identity(...)
@@ -45,22 +44,22 @@ __new__(
     partition_strategy='div'
 )
 ```
-Creates an EmbeddingConfigSpec instance.
+Creates an `EmbeddingConfigSpec` instance.
 #### Args:
-- feature_columns: All embedding FeatureColumns used by model.
-- optimization_parameters: An instance of AdagradParameters, AdamParameters or StochasticGradientDescentParameters. This optimizer will be applied to all embedding variables specified by feature_columns.
-- clipping_limit: (Optional) Clipping limit (absolute value).
-- pipeline_execution_with_tensor_core: setting this to True makes training faster, but trained model will be different if step N and step N+1 involve the same set of embedding IDs. Please see tpu_embedding_configuration.proto for details.
-- experimental_gradient_multiplier_fn: (Optional) A Fn taking global step as input returning the current multiplier for all embedding gradients.
-- feature_to_config_dict: A dictionary mapping features names to instances of the class FeatureConfig. Either features_columns or the pair of feature_to_config_dict and table_to_config_dict must be specified.
-- table_to_config_dict: A dictionary mapping features names to instances of the class TableConfig. Either features_columns or the pair of feature_to_config_dict and table_to_config_dict must be specified.
-- partition_strategy: A string, determining how tensors are sharded to the tpu hosts. See tf.nn.safe_embedding_lookup_sparse for more details. Allowed value are "div" and "mod"'. If"mod"` is used, evaluation and exporting the model to CPU will not work as expected.
+- `feature_columns`: All embedding `FeatureColumn`s used by model.
+- `optimization_parameters`: An instance of `AdagradParameters`, `AdamParameters` or `StochasticGradientDescentParameters`. This optimizer will be applied to all embedding variables specified by `feature_columns`.
+- `clipping_limit`: (Optional) Clipping limit (absolute value).
+- `pipeline_execution_with_tensor_core`: setting this to `True` makes training faster, but trained model will be different if step N and step N+1 involve the same set of embedding IDs. Please see `tpu_embedding_configuration.proto` for details.
+- `experimental_gradient_multiplier_fn`: (Optional) A Fn taking global step as input returning the current multiplier for all embedding gradients.
+- `feature_to_config_dict`: A dictionary mapping features names to instances of the class `FeatureConfig`. Either features_columns or the pair of `feature_to_config_dict` and `table_to_config_dict` must be specified.
+- `table_to_config_dict`: A dictionary mapping features names to instances of the class `TableConfig`. Either features_columns or the pair of `feature_to_config_dict` and `table_to_config_dict` must be specified.
+- `partition_strategy`: A string, determining how tensors are sharded to the tpu hosts. See `tf.nn.safe_embedding_lookup_sparse` for more details. Allowed value are `"div"` and `"mod"'. If`"mod"` is used, evaluation and exporting the model to CPU will not work as expected.
 #### Returns:
-An EmbeddingConfigSpec instance.
+An `EmbeddingConfigSpec` instance.
 #### Raises:
-- ValueError: If the feature_columns are not specified.
-- TypeError: If the feature columns are not of ths correct type (one of _SUPPORTED_FEATURE_COLUMNS, _TPU_EMBEDDING_COLUMN_CLASSES OR _EMBEDDING_COLUMN_CLASSES).
-- ValueError: If optimization_parameters is not one of the required types.
+- `ValueError`: If the feature_columns are not specified.
+- `TypeError`: If the feature columns are not of ths correct type (one of _SUPPORTED_FEATURE_COLUMNS, _TPU_EMBEDDING_COLUMN_CLASSES OR _EMBEDDING_COLUMN_CLASSES).
+- `ValueError`: If `optimization_parameters` is not one of the required types.
 ## Properties
 ### feature_columns
 ### optimization_parameters

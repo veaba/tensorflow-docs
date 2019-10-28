@@ -1,7 +1,7 @@
 Gets whether operations are executed synchronously or asynchronously.
 ### Aliases:
-- tf.compat.v1.config.experimental.get_synchronous_execution
-- tf.compat.v2.config.experimental.get_synchronous_execution
+- `tf.compat.v1.config.experimental.get_synchronous_execution`
+- `tf.compat.v2.config.experimental.get_synchronous_execution`
 
 ```
  tf.config.experimental.get_synchronous_execution()

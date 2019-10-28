@@ -1,7 +1,7 @@
 Instantiate an identity matrix and returns it.
 ### Aliases:
-- tf.compat.v1.keras.backend.eye
-- tf.compat.v2.keras.backend.eye
+- `tf.compat.v1.keras.backend.eye`
+- `tf.compat.v2.keras.backend.eye`
 
 ```
  tf.keras.backend.eye(
@@ -11,9 +11,9 @@ Instantiate an identity matrix and returns it.
 )
 ```
 #### Arguments:
-- size: Integer, number of rows/columns.
-- dtype: String, data type of returned Keras variable.
-- name: String, name of returned Keras variable.
+- `size`: Integer, number of rows/columns.
+- `dtype`: String, data type of returned Keras variable.
+- `name`: String, `name` of returned Keras variable.
 #### Returns:
 A Keras variable, an identity matrix.
 #### Example:

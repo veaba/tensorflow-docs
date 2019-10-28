@@ -1,7 +1,7 @@
 Generates sparse cross from a list of sparse and dense tensors.
 ### Aliases:
-- tf.compat.v1.sparse.cross
-- tf.compat.v2.sparse.cross
+- `tf.compat.v1.sparse.cross`
+- `tf.compat.v2.sparse.cross`
 
 ```
  tf.sparse.cross(
@@ -30,7 +30,7 @@ then the output will be:
 [1, 1]: "c_X_e_X_g"
 ```
 #### Args:
-- inputs: An iterable of Tensor or SparseTensor.
-- name: Optional name for the op.
+- `inputs`: An iterable of `Tensor` or `SparseTensor`.
+- `name`: Optional `name` for the op.
 #### Returns:
-A SparseTensor of type string.
+A `SparseTensor` of type `string`.

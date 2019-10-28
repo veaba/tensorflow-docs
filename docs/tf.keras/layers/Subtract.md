@@ -1,8 +1,8 @@
 ## Class Subtract
 Layer that subtracts two inputs.
 ### Aliases:
-- Class tf.compat.v1.keras.layers.Subtract
-- Class tf.compat.v2.keras.layers.Subtract
+- Class `tf.compat.v1.keras.layers.Subtract`
+- Class `tf.compat.v2.keras.layers.Subtract`
 It takes as input a list of tensors of size 2, both of the same shape, and returns a single tensor, (inputs[0] - inputs[1]), also of the same shape.
 #### Examples:
 
@@ -20,16 +20,15 @@ It takes as input a list of tensors of size 2, both of the same shape, and retur
     model = keras.models.Model(inputs=[input1, input2], outputs=out)
 ```
 ## __init__
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L41-L43)
-
+View source
 
 ```
  __init__(**kwargs)
 ```
-Functional interface to the Subtract layer.
+Functional interface to the `Subtract` layer.
 ### Aliases:
-- tf.compat.v1.keras.layers.subtract
-- tf.compat.v2.keras.layers.subtract
+- `tf.compat.v1.keras.layers.subtract`
+- `tf.compat.v2.keras.layers.subtract`
 
 ```
  tf.keras.layers.subtract(
@@ -38,8 +37,7 @@ Functional interface to the Subtract layer.
 )
 ```
 #### Arguments:
-- inputs: A list of input tensors (exactly 2).
-- **kwargs: Standard layer keyword arguments.
+- `inputs`: A list of input tensors (exactly 2).
 #### Returns:
 A tensor, the difference of the inputs.
 #### Examples:
