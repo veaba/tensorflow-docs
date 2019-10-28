@@ -8,6 +8,7 @@
 # 第二次改造：3.2个小时，20个线程
 # TODO第三次改造：200个线程，优化Python溢出问题，截断式组件多调用函数
 # TODO第四次改造：500个线程，存储实例，再次调用实例，减少创建实例的时间，溢出无关打印，减少IO调用
+# all_Symbols 这个页面太大了，需要五分钟
 import asyncio
 from selenium import webdriver
 from category import category
@@ -15,7 +16,7 @@ from category_array import category_array
 from utils import handle, handle_async, handle_async_flat, remove_docs_path
 import time
 import re
-
+import math
 url = "https://tensorflow.google.cn/api_docs/python/"
 
 # 全局存储实例数组，Chrome driver的实例，TODO ，后续需要做重置掉
@@ -40,12 +41,39 @@ def can_write(file_path):
             return True
 
 
-# 返回 正则的字段函数
+# 返回 正则的字段函数，因为会重复替换，所以这个replace 不能够完全解决问题
 # list_str 数组
+# todo 因为python 无法使用\\100，所以这里需要重新处理，另外replace也无法满足
 def fn_parse_code(list_str, text):
-    for code in list_str:
-        text = text.replace(code, '`' + code + '`')
-    return text
+    code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
+    reg_list = ['+', '.', '[', ']', '((', '))']
+
+    # 再次转换
+    for reg in reg_list:
+        code_text_str = code_text_str.replace(reg, "\\" + reg)
+
+    # 编译为正则
+    pattern_str = re.compile(r'' + code_text_str + '')
+
+    # 根据list_str,转为\\1\\2
+
+    flag_str = ''
+
+    # 判断向上取整,绕开python 的双斜杠替换符超过100的字符溢出
+    up_int= math.ceil(len(list_str)/99)
+    if up_int>1:
+         for i in range(up_int):
+             for item in  enumerate(list_str[i*99:(i+1)*99]):
+                flag_str = flag_str + "\\" + str(item[0] + 1)
+    # 如果不超过100的时候
+    else:
+        for item in enumerate(list_str):
+            flag_str = flag_str + "\\" + str(item[0] + 1)
+
+    # flag_str ==>\\1\\2\\3
+    reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
+   
+    return reg_text
 
 
 # 去解析node节点,返回markdown
@@ -72,7 +100,7 @@ def node_level(driver, contents=None, file_markdown_path=""):
                 # ##################### code 节点
                 elif node.tag_name and node.tag_name == "devsite-code":
                     contents.append("\n```\n " + node.text + "\n```\n")
-                # ##################### href 节点
+                ##################### href 节点
                 elif node.tag_name == "p":
                     try:
                         a_node = node.find_element_by_tag_name("a")
@@ -84,42 +112,40 @@ def node_level(driver, contents=None, file_markdown_path=""):
                             + "]("
                             + a_node_href
                             + ")"
-                            + list_to_str(a_node_list) + "\n\n"
+                            + list_to_str(fn_parse_code(a_node_list,node.text)) + "\n\n"
                         )
-                    except Exception as err:
+                    except:
                         # todo ###################### p todo
-                        # print("p标签异常：", err)
                         if len(node.text):
                             p_texts = []
                             try:
                                 codes_node = node.find_elements_by_css_selector("code")
                                 for code in codes_node:
                                     p_texts.append('(' + code.text + ')')
-                            except Exception as e2:
-                                print("p code：", e2)
+                            except:
+                                pass
                             if len(p_texts) > 0:
                                 contents.append(fn_parse_code(p_texts, node.text) + '\n')
                             else:
                                 contents.append(node.text + '\n')
                 # ##################### ul>无序.
                 elif node.tag_name == "ul":
-                    li_texts = []
                     try:
                         li_nodes = node.find_elements_by_css_selector("li")
                         for li in li_nodes:
-                            # 如果是code ``
+                            # 如果是code: ``,暂时不实现image 和a标签
+                            li_texts = []
                             try:
                                 codes_node = li.find_elements_by_css_selector("code")
                                 for code in codes_node:
                                     li_texts.append('(' + code.text + ')')
-                            except Exception as e2:
-                                print("code：", e2)
-                            # print("li_texts:", li_texts)
-                            # print("li_text:", li.text)
+                            except:
+                                pass
+                            print("li_texts:", li_texts)
+                            print("li_text:", li.text)
                             contents.append('- ' + fn_parse_code(li_texts, li.text) + '\n')
-                    # 编译后的正则
-                    except Exception as e1:
-                        print("li:", e1)
+                    except:
+                        pass
 
     except Exception as e:
         print("===> 啥错误:", e)
@@ -143,25 +169,6 @@ def go_webdriver(url_path, file_path=None):
     print('===> 爬虫所需时间：', end_time1 - start_time1, file_path + '\n')
 
 
-# def parent_path(parent, key_name, task=None):
-#     asyncio.sleep(0.1)
-#     no_docs_path = remove_docs_path(parent)
-#     tf_path = re.sub(r"[.]", "/", no_docs_path)
-#     url_path = url + tf_path + re.sub(r"[.]", "/", key_name)
-#     page_url_re = re.sub(r"/Overview", "", url_path)
-#     page_url = re.sub(r"/All Symbols", "", page_url_re)
-#     file_path_re = parent + key_name
-#     file_path = re.sub(r' ', '_', file_path_re)
-#     if not can_write(file_path + '.md'):
-#         print("===> 已存在文件，将忽略跳过：", file_path)
-#         return
-#     print("===> 爬取的页面：", page_url)
-#     print("===> 写入的文件路径：", file_path)
-#     go_webdriver(page_url, file_path + '.md')
-
-
-# handle(category[0]['tf'], "../docs/", parent_path)
-
 start_time = time.time()
 # handle_async(category, "../docs/", parent_path)
 # 重置实例
@@ -171,7 +178,8 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat(category_array, go_webdriver)
+handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview"}, go_webdriver)
+# handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
 # go_webdriver('https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged',
