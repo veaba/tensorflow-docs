@@ -40,14 +40,23 @@ def can_write(file_path):
         else:
             return True
 
+# 过滤忽略掉的标签,是无效标签则移除
+def ignoreTag(node):
+    tempContent= node.get_attribute('innerHTML')
+    htmlContent=re.sub(r'\n','',tempContent)
+    if node.tag_name=='style':
+        return True
+    elif re.match(r'^.*\<meta',htmlContent):
+        return True
+    else:
+        return False
 
 # 返回 正则的字段函数，因为会重复替换，所以这个replace 不能够完全解决问题
 # list_str 数组
 # todo 因为python 无法使用\\100，所以这里需要重新处理，另外replace也无法满足
-def fn_parse_code(list_str, text):
+def fn_parse_code(list_str=[], text=""):
     code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
     reg_list = ['+', '.', '[', ']', '((', '))']
-
     # 再次转换
     for reg in reg_list:
         code_text_str = code_text_str.replace(reg, "\\" + reg)
@@ -71,82 +80,24 @@ def fn_parse_code(list_str, text):
             flag_str = flag_str + "\\" + str(item[0] + 1)
 
     # flag_str ==>\\1\\2\\3
-    reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
-
+    # 存在正则才走这一步
+    if len(flag_str):
+        reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
+    else:
+        reg_text=text
     return reg_text
 
 
-# 去解析node节点,返回markdown
+# todo 去解析node节点,返回markdown
 def node_level(driver, contents=None, file_markdown_path=""):
     if contents is None:
         contents = []
     html = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
         for node in html:
-            if len(node.text) > 0:
-                # ##################### h1-h6标签
-                if node.get_attribute("level") == "h1":
-                    contents.append("# " + node.text + "\n")
-                elif node.get_attribute("level") == "h2":
-                    contents.append("## " + node.text + "\n")
-                elif node.get_attribute("level") == "h3":
-                    contents.append("### " + node.text + "\n")
-                elif node.get_attribute("level") == "h4":
-                    contents.append("#### " + node.text + "\n")
-                elif node.get_attribute("level") == "h5":
-                    contents.append("##### " + node.text + "\n")
-                elif node.get_attribute("level") == "h6":
-                    contents.append("###### " + node.text + "\n")
-                # ##################### code 节点
-                elif node.tag_name and node.tag_name == "devsite-code":
-                    contents.append("\n```\n " + node.text + "\n```\n")
-                ##################### href 节点
-                elif node.tag_name == "p":
-                    try:
-                        a_node = node.find_element_by_tag_name("a")
-                        a_node_href = a_node.get_attribute("href")
-                        a_node_list = node.text.split(a_node.text)
-                        contents.append(
-                            "["
-                            + a_node.text
-                            + "]("
-                            + a_node_href
-                            + ")"
-                            + list_to_str(fn_parse_code(a_node_list,node.text)) + "\n\n"
-                        )
-                    except:
-                        # todo ###################### p todo
-                        if len(node.text):
-                            p_texts = []
-                            try:
-                                codes_node = node.find_elements_by_css_selector("code")
-                                for code in codes_node:
-                                    p_texts.append('(' + code.text + ')')
-                            except:
-                                pass
-                            if len(p_texts) > 0:
-                                contents.append(fn_parse_code(p_texts, node.text) + '\n')
-                            else:
-                                contents.append("\n"+node.text + '\n')
-                # ##################### ul>无序.
-                elif node.tag_name == "ul":
-                    try:
-                        li_nodes = node.find_elements_by_css_selector("li")
-                        for li in li_nodes:
-                            # 如果是code: ``,暂时不实现image 和a标签
-                            li_texts = []
-                            try:
-                                codes_node = li.find_elements_by_css_selector("code")
-                                for code in codes_node:
-                                    li_texts.append('(' + code.text + ')')
-                            except:
-                                pass
-                            print("li_texts:", li_texts)
-                            print("li_text:", li.text)
-                            contents.append('- ' + fn_parse_code(li_texts, li.text) + '\n')
-                    except:
-                        pass
-
+            # if not ignoreTag(node):
+                # print(node.tag_name,node.get_attribute('innerHTML')+'\n')
+        pass
     except Exception as e:
         print("===> 啥错误:", e)
     # 写入文件
@@ -158,6 +109,7 @@ def node_level(driver, contents=None, file_markdown_path=""):
 
 
 def go_webdriver(url_path, file_path=None):
+    asyncio.sleep(0.2)
     file_path = category_array[url_path] + '.md'
     start_time1 = time.time()
     option = webdriver.ChromeOptions()
@@ -178,8 +130,8 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat(category_array, go_webdriver)
-# handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod": "../docs/tf/AggregationMethod"}, go_webdriver)
+# handle_async_flat(category_array, go_webdriver)
+handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf/clip_by_value": "../docs/tf/clip_by_value"}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个

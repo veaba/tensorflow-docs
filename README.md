@@ -1,5 +1,5 @@
 # tensorflow-docs
-python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本、百度翻译API
+python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API
 
 
 ### TODO
@@ -44,6 +44,8 @@ def fn_parse_code_before(list_str, text):
     return reg_text
 
 ```
+- TODO 调整转移策略（2019年10月29日11:19:34），更优化精准的将HTML转为markdown
+> get_attribute('innerHTML')
 ## TODO 额外：尝试迁移前端项目到Python平台
 
 已迁移到新的仓库：[pypackjs](https://github.com/veaba/pypackjs)
