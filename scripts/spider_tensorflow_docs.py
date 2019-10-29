@@ -127,7 +127,7 @@ def node_level(driver, contents=None, file_markdown_path=""):
                             if len(p_texts) > 0:
                                 contents.append(fn_parse_code(p_texts, node.text) + '\n')
                             else:
-                                contents.append(node.text + '\n')
+                                contents.append("\n"+node.text + '\n')
                 # ##################### ul>无序.
                 elif node.tag_name == "ul":
                     try:
@@ -179,7 +179,7 @@ start_time = time.time()
 
 
 handle_async_flat(category_array, go_webdriver)
-# handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview"}, go_webdriver)
+# handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod": "../docs/tf/AggregationMethod"}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
