@@ -14,6 +14,7 @@ from selenium import webdriver
 from category import category
 from category_array import category_array
 from utils import handle, handle_async, handle_async_flat, remove_docs_path
+from html_to_markdown import HTMK
 import time
 import re
 import math
@@ -92,12 +93,15 @@ def fn_parse_code(list_str=[], text=""):
 def node_level(driver, contents=None, file_markdown_path=""):
     if contents is None:
         contents = []
-    html = driver.find_elements_by_css_selector(".devsite-article-body>*")
+    htmls = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
-        for node in html:
-            # if not ignoreTag(node):
-                # print(node.tag_name,node.get_attribute('innerHTML')+'\n')
-        pass
+        for node in htmls:
+            # print('node',node.get_attribute('innerHTML'))
+            if not ignoreTag(node):
+                html=node.get_attribute('innerHTML') or ""
+                mk=HTMK(html)
+                print("待转译html：",html)
+                print("转译的mk:",mk.markdown())
     except Exception as e:
         print("===> 啥错误:", e)
     # 写入文件
