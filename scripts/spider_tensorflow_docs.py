@@ -14,10 +14,12 @@ from selenium import webdriver
 from category import category
 from category_array import category_array
 from utils import handle, handle_async, handle_async_flat, remove_docs_path
-from html_to_markdown import HTMK
+from pyhtmd import Pyhtmd
 import time
 import re
 import math
+# import sys
+# sys.setrecursionlimit(10000000)
 url = "https://tensorflow.google.cn/api_docs/python/"
 
 # 全局存储实例数组，Chrome driver的实例，TODO ，后续需要做重置掉
@@ -90,24 +92,22 @@ def fn_parse_code(list_str=[], text=""):
 
 
 # todo 去解析node节点,返回markdown
-def node_level(driver, contents=None, file_markdown_path=""):
-    if contents is None:
-        contents = []
+def node_level(driver, file_markdown_path=""):
     htmls = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
         for node in htmls:
-            # print('node',node.get_attribute('innerHTML'))
             if not ignoreTag(node):
                 html=node.get_attribute('innerHTML') or ""
-                mk=HTMK(html)
+                mk=Pyhtmd(html).markdown()
                 print("待转译html：",html)
-                print("转译的mk:",mk.markdown())
+                print("转译的mk:",mk)
+                # 写入文件
+                with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
+                    f.write(mk)
+                with open('11.txt', "a", errors="ignore", encoding='utf-8') as f:
+                    f.write('1==='+html+'===2')
     except Exception as e:
         print("===> 啥错误:", e)
-    # 写入文件
-    for text in contents:
-        with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
-            f.write(text)
     # 手动关闭，todo，为了让驱动继续存活，可能不能手动关闭？？
     driver.quit()
 
