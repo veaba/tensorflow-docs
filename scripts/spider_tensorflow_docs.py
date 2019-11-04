@@ -13,11 +13,12 @@ import asyncio
 from selenium import webdriver
 from category import category
 from category_array import category_array
-from utils import handle, handle_async, handle_async_flat, remove_docs_path
+from utils import handle, handle_async, handle_async_flat, remove_docs_path, can_write
 from pyhtmd import Pyhtmd
 import time
 import re
 import math
+
 # import sys
 # sys.setrecursionlimit(10000000)
 url = "https://tensorflow.google.cn/api_docs/python/"
@@ -34,25 +35,17 @@ def list_to_str(str_list, code=""):
         return ''
 
 
-# 判断是否可以写入，存在内容不写入
-def can_write(file_path):
-    with open(file_path, "r") as f:
-        f.read()
-        if f.tell() > 0:
-            return False
-        else:
-            return True
-
 # 过滤忽略掉的标签,是无效标签则移除
 def ignoreTag(node):
-    tempContent= node.get_attribute('innerHTML')
-    htmlContent=re.sub(r'\n','',tempContent)
-    if node.tag_name=='style':
+    tempContent = node.get_attribute('innerHTML')
+    htmlContent = re.sub(r'\n', '', tempContent)
+    if node.tag_name == 'style':
         return True
-    elif re.match(r'^.*\<meta',htmlContent):
+    elif re.match(r'^.*\<meta', htmlContent):
         return True
     else:
         return False
+
 
 # 返回 正则的字段函数，因为会重复替换，所以这个replace 不能够完全解决问题
 # list_str 数组
@@ -72,10 +65,10 @@ def fn_parse_code(list_str=[], text=""):
     flag_str = ''
 
     # 判断向上取整,绕开python 的双斜杠替换符超过100的字符溢出
-    up_int= math.ceil(len(list_str)/99)
-    if up_int>1:
-         for i in range(up_int):
-             for item in  enumerate(list_str[i*99:(i+1)*99]):
+    up_int = math.ceil(len(list_str) / 99)
+    if up_int > 1:
+        for i in range(up_int):
+            for item in enumerate(list_str[i * 99:(i + 1) * 99]):
                 flag_str = flag_str + "\\" + str(item[0] + 1)
     # 如果不超过100的时候
     else:
@@ -87,20 +80,20 @@ def fn_parse_code(list_str=[], text=""):
     if len(flag_str):
         reg_text = re.sub(pattern_str, "`" + flag_str + "`", text)
     else:
-        reg_text=text
+        reg_text = text
     return reg_text
 
 
 # todo 去解析node节点,返回markdown
-def node_level(driver, file_markdown_path=""):
+def node_level(driver, file_markdown_path="", url_path=""):
     htmls = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
         for node in htmls:
             if not ignoreTag(node):
-                html=node.get_attribute('innerHTML') or "" #TODO 这里只能获取到它的子级
-                if node.tag_name=='aside': # 对引用补丁进行补全
-                    html='<blockquote>'+html+'</blockquote>'
-                mk=Pyhtmd(html,language="python").markdown()
+                html = node.get_attribute('innerHTML') or ""  # TODO 这里只能获取到它的子级
+                if node.tag_name == 'aside':  # 对引用补丁进行补全
+                    html = '<blockquote>' + html + '</blockquote>'
+                mk = Pyhtmd(html, language="python").markdown()
                 # print("待转译html：",html)
                 # print("转译的mk:",mk)
                 # 写入文件
@@ -108,19 +101,27 @@ def node_level(driver, file_markdown_path=""):
                     f.write(mk)
     except Exception as e:
         print("===> 啥错误:", e)
+        print('===> 错误路径：', file_markdown_path)
+        print('===> 错误页面：', url_path)
+        with open('error.yml', "a", errors="ignore", encoding='utf-8') as f:
+            f.write('"' + url_path + '":' + '"' + file_markdown_path + '"' + ',\n')
+
     # 手动关闭，todo，为了让驱动继续存活，可能不能手动关闭？？
     driver.quit()
 
 
-def go_webdriver(url_path, file_path=None):
-    asyncio.sleep(0.2)
+def go_webdriver(url_path, file_path=""):
+    if file_path:
+        if not can_write(file_path):
+            print("===> 已存在文件，将忽略跳过：", file_path)
+            return
     file_path = category_array[url_path] + '.md'
     start_time1 = time.time()
     option = webdriver.ChromeOptions()
     option.add_argument("headless")
     driver = webdriver.Chrome(options=option)
     driver.get(url_path)
-    node_level(driver, file_markdown_path=file_path)
+    node_level(driver, file_markdown_path=file_path, url_path=url_path)
     end_time1 = time.time()
     print('===> 爬虫所需时间：', end_time1 - start_time1, file_path + '\n')
 
@@ -134,8 +135,10 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-# handle_async_flat(category_array, go_webdriver)
-handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview"}, go_webdriver)
+handle_async_flat(category_array, go_webdriver)
+# handle_async_flat({
+#     "https://tensorflow.google.cn/api_docs/python/tf/clip_by_value": "../docs/tf/clip_by_value.md",
+# }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个

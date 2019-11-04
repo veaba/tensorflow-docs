@@ -30,6 +30,16 @@ def clear_file(path):
         f.write('')
 
 
+# 判断是否可以写入，存在内容不写入
+def can_write(file_path):
+    with open(file_path, "r") as f:
+        f.read()
+        if f.tell() > 0:
+            return False
+        else:
+            return True
+
+
 # 递归遍历目录,同步的方式
 # array 数组
 # parent 重组的文档目录
