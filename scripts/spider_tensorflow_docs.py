@@ -97,15 +97,15 @@ def node_level(driver, file_markdown_path=""):
     try:
         for node in htmls:
             if not ignoreTag(node):
-                html=node.get_attribute('innerHTML') or ""
-                mk=Pyhtmd(html).markdown()
-                print("待转译html：",html)
-                print("转译的mk:",mk)
+                html=node.get_attribute('innerHTML') or "" #TODO 这里只能获取到它的子级
+                if node.tag_name=='aside': # 对引用补丁进行补全
+                    html='<blockquote>'+html+'</blockquote>'
+                mk=Pyhtmd(html,language="python").markdown()
+                # print("待转译html：",html)
+                # print("转译的mk:",mk)
                 # 写入文件
                 with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
                     f.write(mk)
-                with open('11.txt', "a", errors="ignore", encoding='utf-8') as f:
-                    f.write('1==='+html+'===2')
     except Exception as e:
         print("===> 啥错误:", e)
     # 手动关闭，todo，为了让驱动继续存活，可能不能手动关闭？？
@@ -135,7 +135,7 @@ start_time = time.time()
 
 
 # handle_async_flat(category_array, go_webdriver)
-handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf/clip_by_value": "../docs/tf/clip_by_value"}, go_webdriver)
+handle_async_flat({"https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview"}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
