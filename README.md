@@ -6,13 +6,13 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 - 增加丢弃的模块标注或者移除
 - 发现tf目录文档重复，需要重爬这个目录 2019年10月11日16:29:15
 - 现在进入对比源文档阶段1%
+- TODO 注意：
+    部分地址相对路径设置比较浮夸~：/api_docs => https://tensorflow.google.cn/api_docs
 - All_Symbols.md 这个不知道干嘛了！
     - 给官方提供一个正则溢出bug： https://bugs.python.org/issue38582 由于使用八进制导致当双斜杠替换符//100 混淆了,但现阶段似乎不准备修复这个问题。
     - 由于进制混淆的原因，准备限制到99就报错了，而不再支持超过99的双斜杠替换符
-    - F:\Github\tensorflow-docs\docs\tf.ragged\Overview.md
-    - F:\Github\tensorflow-docs\docs\tf.compat\v2\ragged\Overview.md
-    - F:\Github\tensorflow-docs\docs\tf.compat\v1\ragged\Overview.md
-    - F:\Github\tensorflow-docs\docs\All_Symbols.md
+- 2019年11月4日23:32:23 现在重点在HTML的解析包的开发：[pyhtmd](https://github.com/veaba/pyhtmd)：调整数学符号
+    - docs/tf/Overview.md  【TODO】
 
 ```python
 # 替换后(过于简介，引起舒适，当初怎么想起一坨坨代码的。。。还第一个发现的python 正则溢出)：
