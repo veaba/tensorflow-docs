@@ -6,7 +6,6 @@
 
 ```python
 pip install tensorflow
-
 ```
 
 
@@ -268,7 +267,7 @@ pip install tensorflow
 
 [ `executing_eagerly(...)` ](https://tensorflow.google.cn/api_docs/python/tf/executing_eagerly): Returns True if the current thread has eager execution enabled.
 
-[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax_SVG" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>y</mi><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></math>" role="presentation" style="font-size: 100%; display: inline-block; position: relative;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.51ex" height="2.494ex" viewBox="0 -766.3 2802.9 1074" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-79" x="0" y="0"></use><use xlink:href="#MJMAIN-3D" x="775" y="0"></use><g transform="translate(1831,0)"><use xlink:href="#MJMATHI-65" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-78" x="659" y="513"></use></g></g></svg><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-1">y = e^x</script>.
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAVCAYAAADiv3Z7AAADYUlEQVR4nN2WTWwbVRCAv7VybOx71w5/QvJPWsGFpBYVFxL3WLDTa90kAlQE1LLalBZFdVyEAFmtOFVNUsIBVNcOJ0RoODe7dg4IZDvJ0d51OO+2XD0cXC+Y2o4NbUP6Sat9evNm3szOm3mriIjwjOLabwf+C7ZtU6lUnLFpmm1y5aBmLp9fxTTrANTrdVRVJZfPs3jzBsFgEDigmbNtG8MwOXfuQ4LBAJquMz0dR1EU3G63s+7AZq5FKpXGtm0ymS8fkR3IzP0dXS8wOTkB8EjNuaCZ5qWlZVKpNIZhtC0ol8voeuEpudqOZVncuZNjdvYdUqk0mqYDsL7+My+8+DKmabK9s0MwGABgefnrNn1FRCSZPE80+jarq99jmnWy2e8AEBFeP/4GAb+fpaWbHR0wDMMp7H4JhYJttdGJtbWfmJv7mHj8NDMzZ6jVarz73lnWfvyBra1trl//Cq9XJRDws7W1DcD0dNxpJgBDGxsaqqoSDh9jYeEqLtdfJ7VcLlOv73ImfrqrE7peoFYzuso74fN5ewa3saFx9v0PuHzpIrOzMwCMjo7iHm7qjI+Pcfv2t3vuMwRw6lSMUqnE9s4Oly9dbHO8ZawbU1OxPsIZjPMX5hgePkQkMomm6di2TS6XZ2LiTTweT992hsLhYwBkszkATpyIOMJCocjw8CFCodDj9b4HpVKJ3d3fUdXDZLM5FEXB43EzP/8JIyMjA9kaag0KhSIBvx+fzwc0600vFBgfG0NRlK4G7t5dp1LZGmjTqakoXq+3o8yybADeOnmSZDIxkN1/4oJmIMXNTcbGXnMElUqFBw/+aJvrhogM9PSqN4/HjYh0/KCGYWDbdt/BOZlT1cNtirdurSAiPesNIBKZJBKZ7HvDvQiFQgT8/rY7S0TQNJ10+lMWF2/s2WlbOH8ouVyehfRVYtEohmFQ3NxERPjt1196HssnQblcJpm8QDAYwOfzoWk6Xq/KlSvzfQcGgDyk0WhIo9GQe/c2pFaryZEjr0gikZT9pFqtSqlUkkaj8a/0sSxLjh59VcLh485kJnNNnnv+JalWq4/Lz33BZVkW9v37xGJRoHmBrqx8wxeffzZw6/2/oYiIZDLXKBabNeb1qiQSHzlXwkHGaSgPX0+9eTxJnKvgWQqqxZ8XCxFYcHSQDAAAAABJRU5ErkJggg==)
 
 [ `expand_dims(...)` ](https://tensorflow.google.cn/api_docs/python/tf/expand_dims): Inserts a dimension of 1 into a tensor's shape.
 

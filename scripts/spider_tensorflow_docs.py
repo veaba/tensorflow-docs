@@ -13,11 +13,14 @@ import asyncio
 from selenium import webdriver
 from category import category
 from category_array import category_array
+from PIL import Image
 from utils import handle, handle_async, handle_async_flat, remove_docs_path, can_write
 from pyhtmd import Pyhtmd
 import time
 import re
 import math
+import base64
+import io
 
 # import sys
 # sys.setrecursionlimit(10000000)
@@ -36,12 +39,12 @@ def list_to_str(str_list, code=""):
 
 
 # 过滤忽略掉的标签,是无效标签则移除
-def ignoreTag(node):
-    tempContent = node.get_attribute('innerHTML')
-    htmlContent = re.sub(r'\n', '', tempContent)
+def ignore_tag(node):
+    temp_content = node.get_attribute('innerHTML')
+    html_content = re.sub(r'\n', '', temp_content)
     if node.tag_name == 'style':
         return True
-    elif re.match(r'^.*\<meta', htmlContent):
+    elif re.match(r'^.*<meta', html_content):
         return True
     else:
         return False
@@ -50,7 +53,9 @@ def ignoreTag(node):
 # 返回 正则的字段函数，因为会重复替换，所以这个replace 不能够完全解决问题
 # list_str 数组
 # todo 因为python 无法使用\\100，所以这里需要重新处理，另外replace也无法满足
-def fn_parse_code(list_str=[], text=""):
+def fn_parse_code(list_str=None, text=""):
+    if list_str is None:
+        list_str = []
     code_text_str = list_to_str(list_str, '|')  # 转为字符 xxx|oo
     reg_list = ['+', '.', '[', ']', '((', '))']
     # 再次转换
@@ -84,17 +89,72 @@ def fn_parse_code(list_str=[], text=""):
     return reg_text
 
 
-# todo 去解析node节点,返回markdown
+# 入参base64，然后裁剪后，出来base64
+# cartesian(左、上、右、下、）
+def crop_base64_img(base64_str, cartesian):
+    if not isinstance(cartesian, tuple):
+        raise RuntimeError('cartesian参数错误：格式为(a,b,c,d)')
+    base64_data = re.sub('^data:image/.+;base64,', '', base64_str)
+    byte_data = base64.b64decode(base64_data)
+    # BytesIO 对象
+    image_data = io.BytesIO(byte_data)
+    # 得到Image对象
+    img = Image.open(image_data)
+    # 裁剪图片（左、上、右、下、），笛卡尔
+    new_img = img.crop(cartesian)
+    # BytesIo 对象
+    img_byte_array = io.BytesIO()
+    new_img.save(img_byte_array, format='PNG')
+    # 获得字节
+    img_byte_array = img_byte_array.getvalue()
+    base64_str = base64.b64encode(img_byte_array)
+    return str(base64_str, encoding='utf-8')
+
+
+# 解析 svg，有些情况下，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf  exp(...): Computes exponential of x
+# element-wise. 数学表达式
+def __cover_svg_to_img(block=""):
+    pass
+
+
+# 窗口滚动
+# h 高度，threshold 阈值，一般为200
+def window_scroll(h, threshold):
+    return '' + 'window.scroll(0,' + str(h - threshold) + ')' + ''
+
+
+# 去解析node节点,返回markdown
 def node_level(driver, file_markdown_path="", url_path=""):
     htmls = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
         for node in htmls:
-            if not ignoreTag(node):
+            if not ignore_tag(node):
                 html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
                 if node.tag_name == 'aside':  # 对引用打补丁
                     html = '<blockquote>' + html + '</blockquote>'
+                top = 200  # 阈值
+                # 解析svg
+
+                svg_list = node.find_elements_by_css_selector('svg')
+                for svg in svg_list:
+                    print('svg:', svg.location)
+                    left = svg.location['x']
+                    scroll_height = svg.location['y']
+                    # 具体滚动
+                    driver.execute_script(window_scroll(scroll_height, top))
+                    # 重新定位截图区域
+                    right = left + math.floor(svg.size['width'])
+                    bottom = top + math.floor(svg.size['height'])
+                    time.sleep(1 / 5)
+                    # 获取大图的base
+                    # 1. 大图转base64
+                    all_base64_str = driver.get_screenshot_as_base64()
+                    # 2. base64 crop 裁剪
+                    target_base64_str = crop_base64_img(all_base64_str, (left, top, right, bottom))
+                    print('转换后的svg base64：', target_base64_str)
+                    html = re.sub(r'<svg([>| ])(.*?)</svg>', '<img src="data:image/png;base64,' + target_base64_str + '">',html, count=1)
                 mk = Pyhtmd(html, language="python").markdown()
-                # print("待转译html：",html)
+                print("待转译html：", html)
                 # print("转译的mk:",mk)
                 # 写入文件
                 with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
@@ -135,10 +195,10 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat(category_array, go_webdriver)
-# handle_async_flat({
-#     "https://tensorflow.google.cn/api_docs/python/tf/argsort": "../docs/tf/argsort.md",
-# }, go_webdriver)
+# handle_async_flat(category_array, go_webdriver)
+handle_async_flat({
+    "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
