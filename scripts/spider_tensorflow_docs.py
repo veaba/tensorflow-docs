@@ -161,7 +161,7 @@ def node_level(driver, file_markdown_path="", url_path=""):
                     if image_path_group:
                         image_path = image_path_group.group()
                         # 二进制格式写入
-                        with open(image_path, 'wb', ) as f:
+                        with open(image_path_re, 'wb', ) as f:
                             f.write(target_base64_byte)
                         html = re.sub(r'<svg([>| ])(.*?)</svg>',
                                       '<img src="' + image_path + '">', html, count=1)
