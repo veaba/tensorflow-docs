@@ -42,9 +42,14 @@ def list_to_str(str_list, code=""):
 def ignore_tag(node):
     temp_content = node.get_attribute('innerHTML')
     html_content = re.sub(r'\n', '', temp_content)
+    # 丢弃style
     if node.tag_name == 'style':
         return True
-    elif re.match(r'^.*<meta', html_content):
+    # 丢弃table，也不定
+    elif re.match(r'^<table', html_content):
+        return True
+    # 丢失meta
+    elif re.match(r'^<meta', html_content):
         return True
     else:
         return False
@@ -113,61 +118,60 @@ def crop_base64_img(base64_str, cartesian):
 
 
 # 解析 svg，有些情况下，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf  exp(...): Computes exponential of x
-# element-wise. 数学表达式
-def __cover_svg_to_img(block=""):
-    pass
+def cover_svg_to_img(html, driver, file_markdown_path, svg_list=[], top=200, ):
+    # top = 200  # 阈值
+    for index, svg in enumerate(svg_list):
+        print('svg:', svg.location)
+        left = svg.location['x']
+        scroll_height = svg.location['y']
+        # 具体滚动
+        driver.execute_script(window_scroll(scroll_height, top))
+        # 重新定位截图区域
+        right = left + math.floor(svg.size['width'])
+        bottom = top + math.floor(svg.size['height'])
+        time.sleep(1 / 2)
+        # 获取大图的base
+        # 1. 大图转base64
+        all_base64_str = driver.get_screenshot_as_base64()
+        # 2. base64 crop 裁剪
+        target_base64_str = crop_base64_img(all_base64_str, (left, top, right, bottom))
+        # print("target_base64_str:", target_base64_str)
+        target_base64_byte = base64.b64decode(target_base64_str)
+        # print("target_base64_byte:", target_base64_byte)
+        image_path_re = file_markdown_path + '_' + str(index) + '.png'
+        image_path_group = re.search(r'[^/]+$', image_path_re)
+        if image_path_group:
+            image_path = image_path_group.group()
+            # 二进制格式写入
+            with open(image_path_re, 'wb', ) as f:
+                f.write(target_base64_byte)
+            html = re.sub(r'<svg([>| ])(.*?)</svg>',
+                          '<img src="./' + image_path + '">', html, count=1)
+    return html
 
 
 # 窗口滚动
 # h 高度，threshold 阈值，一般为200
 def window_scroll(h, threshold):
-    return '' + 'window.scroll(0,' + str(h - threshold) + ')' + ''
+    return '' + 'window.scroll(0,' + str(h - threshold) + ')'
 
 
 # 去解析node节点,返回markdown
 def node_level(driver, file_markdown_path="", url_path=""):
-    htmls = driver.find_elements_by_css_selector(".devsite-article-body>*")
+    nodes = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
-        for node in htmls:
+        for node in nodes:
             if not ignore_tag(node):
                 html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
                 if node.tag_name == 'aside':  # 对引用打补丁
                     html = '<blockquote>' + html + '</blockquote>'
+                # print("待转译html：", html)
 
-                print("待转译html：", html)
-                top = 200  # 阈值
                 # 解析svg
                 svg_list = node.find_elements_by_css_selector('svg')
-                for index, svg in enumerate(svg_list):
-                    print('svg:', svg.location)
-                    left = svg.location['x']
-                    scroll_height = svg.location['y']
-                    # 具体滚动
-                    driver.execute_script(window_scroll(scroll_height, top))
-                    # 重新定位截图区域
-                    right = left + math.floor(svg.size['width'])
-                    bottom = top + math.floor(svg.size['height'])
-                    time.sleep(1 / 5)
-                    # 获取大图的base
-                    # 1. 大图转base64
-                    all_base64_str = driver.get_screenshot_as_base64()
-                    # 2. base64 crop 裁剪
-                    target_base64_str = crop_base64_img(all_base64_str, (left, top, right, bottom))
-                    print("target_base64_str:", target_base64_str)
-                    target_base64_byte = base64.b64decode(target_base64_str)
-                    print("target_base64_byte:", target_base64_byte)
-                    image_path_re = file_markdown_path + '_' + str(index) + '.png'
-                    image_path_group = re.search(r'[^/]+$', image_path_re)
-                    if image_path_group:
-                        image_path = image_path_group.group()
-                        # 二进制格式写入
-                        with open(image_path_re, 'wb', ) as f:
-                            f.write(target_base64_byte)
-                        html = re.sub(r'<svg([>| ])(.*?)</svg>',
-                                      '<img src="' + image_path + '">', html, count=1)
-                print("添加svg后待转译html：", html)
-                mk = Pyhtmd(html, language="python").markdown()
-                print("svgho de ：", html)
+                html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
+                # print("添加svg后待转译html：", html)
+                mk = Pyhtmd(html).markdown()
                 # print("转译的mk:",mk)
                 # 写入文件
                 with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
@@ -210,7 +214,7 @@ start_time = time.time()
 
 # handle_async_flat(category_array, go_webdriver)
 handle_async_flat({
-    "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+    "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
 }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 

@@ -46,6 +46,12 @@ def fn_parse_code_before(list_str, text):
 ```
 - TODO 调整转移策略（2019年10月29日11:19:34），更优化精准的将HTML转为markdown
 > get_attribute('innerHTML')
+
+
+## vuepress theme 阅读规范
+
+- 下划线，代表有链接 todo
+
 ## TODO 额外：尝试迁移前端项目到Python平台
 
 已迁移到新的仓库：[pypackjs](https://github.com/veaba/pypackjs)
@@ -455,7 +461,10 @@ key="xxxx"
     - 但建议：脚本一键生成之后脚本可以做保留用，后续手动调整markdown文件即可，无需再用脚本生成，尽管biubiu~一下就完成，很好玩~~
     - 记住，做备份！
 
-- 第八步：发布
+- 第八步：手动调整
+    - 有些页面需要手动调整，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf/batch_to_space 存在html标签的错误，导致vuepress 无法编辑通过，这情况，只能手动去调整了
+    
+- 第九步：发布
     - 因为文件太多，vuepress 生成2.5k个文件确实很慢，起码两个小时才能build完成
 
 
