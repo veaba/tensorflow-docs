@@ -91,6 +91,7 @@ def fn_parse_code(list_str=None, text=""):
 
 # 入参base64，然后裁剪后，出来base64
 # cartesian(左、上、右、下、）
+# 返回的byte
 def crop_base64_img(base64_str, cartesian):
     if not isinstance(cartesian, tuple):
         raise RuntimeError('cartesian参数错误：格式为(a,b,c,d)')
@@ -108,7 +109,7 @@ def crop_base64_img(base64_str, cartesian):
     # 获得字节
     img_byte_array = img_byte_array.getvalue()
     base64_str = base64.b64encode(img_byte_array)
-    return str(base64_str, encoding='utf-8')
+    return str(base64_str, 'utf-8')
 
 
 # 解析 svg，有些情况下，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf  exp(...): Computes exponential of x
@@ -132,11 +133,12 @@ def node_level(driver, file_markdown_path="", url_path=""):
                 html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
                 if node.tag_name == 'aside':  # 对引用打补丁
                     html = '<blockquote>' + html + '</blockquote>'
+
+                print("待转译html：", html)
                 top = 200  # 阈值
                 # 解析svg
-
                 svg_list = node.find_elements_by_css_selector('svg')
-                for svg in svg_list:
+                for index, svg in enumerate(svg_list):
                     print('svg:', svg.location)
                     left = svg.location['x']
                     scroll_height = svg.location['y']
@@ -151,10 +153,21 @@ def node_level(driver, file_markdown_path="", url_path=""):
                     all_base64_str = driver.get_screenshot_as_base64()
                     # 2. base64 crop 裁剪
                     target_base64_str = crop_base64_img(all_base64_str, (left, top, right, bottom))
-                    print('转换后的svg base64：', target_base64_str)
-                    html = re.sub(r'<svg([>| ])(.*?)</svg>', '<img src="data:image/png;base64,' + target_base64_str + '">',html, count=1)
+                    print("target_base64_str:", target_base64_str)
+                    target_base64_byte = base64.b64decode(target_base64_str)
+                    print("target_base64_byte:", target_base64_byte)
+                    image_path_re = file_markdown_path + '_' + str(index) + '.png'
+                    image_path_group = re.search(r'[^/]+$', image_path_re)
+                    if image_path_group:
+                        image_path = image_path_group.group()
+                        # 二进制格式写入
+                        with open(image_path, 'wb', ) as f:
+                            f.write(target_base64_byte)
+                        html = re.sub(r'<svg([>| ])(.*?)</svg>',
+                                      '<img src="' + image_path + '">', html, count=1)
+                print("添加svg后待转译html：", html)
                 mk = Pyhtmd(html, language="python").markdown()
-                print("待转译html：", html)
+                print("svgho de ：", html)
                 # print("转译的mk:",mk)
                 # 写入文件
                 with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
