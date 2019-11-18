@@ -16,6 +16,7 @@ from category_array import category_array
 from PIL import Image
 from utils import handle, handle_async, handle_async_flat, remove_docs_path, can_write
 from pyhtmd import Pyhtmd
+import html2text
 import time
 import re
 import math
@@ -158,30 +159,20 @@ def window_scroll(h, threshold):
 
 # 去解析node节点,返回markdown
 def node_level(driver, file_markdown_path="", url_path=""):
-    nodes = driver.find_elements_by_css_selector(".devsite-article-body>*")
     try:
-        for node in nodes:
-            if not ignore_tag(node):
-                html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
-                if node.tag_name == 'aside':  # 对引用打补丁
-                    html = '<blockquote>' + html + '</blockquote>'
-                # print("待转译html：", html)
-
-                # 解析svg
-                svg_list = node.find_elements_by_css_selector('svg')
-                html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
-                # print("添加svg后待转译html：", html)
-                mk = Pyhtmd(html).markdown()
-                # print("转译的mk:",mk)
-                # 写入文件
-                with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
-                    f.write(mk)
+        htmls=driver.find_element_by_css_selector('.devsite-article-body')
+        html=htmls.get_attribute('innerHTML') or ''
+        h=html2text.HTML2Text()
+        content=h.handle(html)
+        # 写入文件
+        with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
+            f.write(content)
     except Exception as e:
         print("===> 啥错误:", e)
         print('===> 错误路径：', file_markdown_path)
         print('===> 错误页面：', url_path)
         with open('error.yml', "a", errors="ignore", encoding='utf-8') as f:
-            f.write('"' + url_path + '":' + '"' + file_markdown_path + '"' + ',\n')
+            f.write('"' + url_path + '":' + '"' + file_markdown_path + '"' + '\n')
 
     # 手动关闭
     driver.quit()
@@ -213,8 +204,10 @@ start_time = time.time()
 
 
 # handle_async_flat(category_array, go_webdriver)
+# https://tensorflow.google.cn/api_docs/python/tf
 handle_async_flat({
-    "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+    "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
 }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
