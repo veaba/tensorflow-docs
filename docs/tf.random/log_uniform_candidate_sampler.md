@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/log_uniform_candidate_sampler
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/candidate_sampling_ops.py#L89-L151)  
----|---  
+  
   
 Samples a set of classes using a log-uniform (Zipfian) base distribution.
 

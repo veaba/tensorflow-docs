@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/experimental/load_from_saved_m
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/saving/saved_model_experimental.py#L373-L428)  
----|---  
+  
   
 Loads a keras Model from a SavedModel created by `export_saved_model()`.
 (deprecated)

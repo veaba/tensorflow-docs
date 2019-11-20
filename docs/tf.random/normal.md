@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/normal) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/random_ops.py#L42-L78)  
----|---  
+  
   
 Outputs random values from a normal distribution.
 

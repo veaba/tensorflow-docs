@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/test/create_local_cluster) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/test_util.py#L2947-L3034)  
----|---  
+  
   
 Create and start local servers and return the associated `Server` objects.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/bytes_produced_sta
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/stats_ops.py#L51-L71)  
----|---  
+  
   
 Records the number of bytes produced by each element of the input dataset.
 

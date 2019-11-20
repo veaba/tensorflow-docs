@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/losses/LogCosh) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L655-L678)  
----|---  
+  
   
 ## Class `LogCosh`
 
@@ -122,7 +122,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/losses/logcosh) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L918-L940)  
----|---  
+  
   
 Logarithm of the hyperbolic cosine of the prediction error.
 

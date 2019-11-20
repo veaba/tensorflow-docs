@@ -111,7 +111,7 @@ def fn_parse_code_before(list_str, text):
 ### 统计
 
 |类别|统计|
-|---|---|
+||
 |tensorflow 文档文件个数（含丢弃）|2767|
 |tensorflow 文档总行数|169618|
 |tensorflow 总字符数|9487919|
@@ -157,7 +157,7 @@ https://github.com/zalandoresearch/fashion-mnist
 ### 模块划分
 
 |模块|英文迁移|中文|
-|---|---|---|
+||---|
 |tf|√||
 |tf.audio|√||
 |tf.autograph|√||
@@ -233,7 +233,7 @@ https://github.com/zalandoresearch/fashion-mnist
 ### 百度翻译API
 
 |版本|计费|耗时|
-|---|---|---|
+||---|
 |普通版本|免费|47个小时，1次/s|
 |高级版本|月低于200w，超过则49元百万/字符，需要366RMB|4.7个小时，10次/1s|
 |企业版|月低于200w，超过则49元百万/字符，需要366RMB|0.47个小时=28分钟，100次/1s|
@@ -286,7 +286,7 @@ cnpm run build
 为什么这文件个数有点不一样呀。需要走一下check_empty的脚本来检查
 
 |测试次数|描述|指标|
-|---|---|---|
+||---|
 |第一次|同步，超过24小时才能完成2.56k文件的爬虫，|同时没有手动关闭driver情况下，导致N多进程在资源管理器停留|
 |第二次|异步，引入线程池，调用20个线程|3.2个小时完成2.56k个文件，耗时：11652.326999940872|
 |第三次|异步，修复Python正则溢出带来的字符串乱码问题|3.29个小时完成,引入线程池，调用200个线程，耗时：11874s
@@ -472,7 +472,7 @@ key="xxxx"
 ### 目录
 
 |文件|用途|
-|---|---|
+||
 |[category.py](scripts/category.py)|目录|
 |[check_empty_file.py](scripts/check_empty_file.py)|用途检查文件docs的文件是否为空不被写入|
 |[config.py](scripts/config.py)|百度翻译秘钥，不上传到仓库|

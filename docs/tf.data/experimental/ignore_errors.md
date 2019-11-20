@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/ignore_errors) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/error_ops.py#L25-L53)  
----|---  
+  
   
 Creates a `Dataset` from another `Dataset` and silently ignores any errors.
 

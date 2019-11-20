@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/group) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/control_flow_ops.py#L2850-L2908)  
----|---  
+  
   
 Create an op that groups multiple operations.
 

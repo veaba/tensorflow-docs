@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/rfft) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/fft_ops.py#L114-L125)  
----|---  
+  
   
 Real-valued fast Fourier transform.
 

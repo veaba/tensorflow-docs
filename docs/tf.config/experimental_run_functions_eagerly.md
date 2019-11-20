@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/config/experimental_run_functions_ea
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/eager/def_function.py#L254-L271)  
----|---  
+  
   
 Enables / disables eager execution of
 [`tf.function`](https://tensorflow.google.cn/api_docs/python/tf/function)s.

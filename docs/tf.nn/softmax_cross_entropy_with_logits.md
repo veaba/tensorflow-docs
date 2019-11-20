@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/softmax_cross_entropy_with_logits
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L3054-L3105)  
----|---  
+  
   
 Computes softmax cross entropy between `logits` and `labels`.
 

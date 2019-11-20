@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/datasets/mnist/load_data) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/datasets/mnist.py#L27-L55)  
----|---  
+  
   
 Loads the MNIST dataset.
 

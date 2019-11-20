@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/stop_gradient) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L3800-L3815)  
----|---  
+  
   
 Returns `variables` but with zero gradient w.r.t. every other variable.
 

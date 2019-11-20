@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/get_structure) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/dataset_ops.py#L2109-L2128)  
----|---  
+  
   
 Returns the type specification of an element of a `Dataset` or `Iterator`.
 

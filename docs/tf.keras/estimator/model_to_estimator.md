@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/estimator/model_to_estimator)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/estimator/__init__.py#L110-L166)  
----|---  
+  
   
 Constructs an `Estimator` instance from given keras model.
 

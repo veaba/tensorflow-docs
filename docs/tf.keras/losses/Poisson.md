@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/losses/Poisson) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L629-L651)  
----|---  
+  
   
 ## Class `Poisson`
 
@@ -122,7 +122,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/losses/poisson) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L1035-L1061)  
----|---  
+  
   
 Computes the Poisson loss between y_true and y_pred.
 

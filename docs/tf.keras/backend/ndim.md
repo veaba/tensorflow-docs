@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/ndim) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L1193-L1218)  
----|---  
+  
   
 Returns the number of axes in a tensor, as an integer.
 

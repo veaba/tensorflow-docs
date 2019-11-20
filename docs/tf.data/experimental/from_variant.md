@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/from_variant) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/dataset_ops.py#L2432-L2444)  
----|---  
+  
   
 Constructs a dataset from the given variant and structure.
 

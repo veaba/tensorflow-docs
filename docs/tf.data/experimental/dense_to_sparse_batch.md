@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/dense_to_sparse_ba
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/batching.py#L33-L80)  
----|---  
+  
   
 A transformation that batches ragged elements into
 [`tf.SparseTensor`](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor)s.

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/tile) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L3000-L3014)  
----|---  
+  
   
 Creates a tensor by tiling `x` by `n`.
 

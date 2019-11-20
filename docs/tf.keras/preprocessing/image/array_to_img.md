@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/preprocessing/image/array_to_i
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/preprocessing/image.py#L47-L74)  
----|---  
+  
   
 Converts a 3D Numpy array to a PIL Image instance.
 

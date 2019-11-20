@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/eye) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L180-L211)  
----|---  
+  
   
 Creates a two-dimensional sparse tensor with ones along the diagonal.
 

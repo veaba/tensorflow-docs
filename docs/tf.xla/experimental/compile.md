@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/xla/experimental/compile) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/compiler/xla/xla.py#L65-L110)  
----|---  
+  
   
 Builds an operator that compiles and runs `computation` with XLA.
 

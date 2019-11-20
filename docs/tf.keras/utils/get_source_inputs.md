@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/utils/get_source_inputs) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/layer_utils.py#L31-L67)  
----|---  
+  
   
 Returns the list of input tensors necessary to compute `tensor`.
 

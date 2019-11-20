@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/weighted_cross_entropy_with_logit
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L243-L318)  
----|---  
+  
   
 Computes a weighted cross entropy.
 

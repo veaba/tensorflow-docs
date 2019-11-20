@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/unique) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/unique.py#L26-L48)  
----|---  
+  
   
 Creates a `Dataset` from another `Dataset`, discarding duplicates.
 

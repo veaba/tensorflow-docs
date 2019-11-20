@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/expm) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg/linalg_impl.py#L228-L339)  
----|---  
+  
   
 Computes the matrix exponential of one or more square matrices.
 

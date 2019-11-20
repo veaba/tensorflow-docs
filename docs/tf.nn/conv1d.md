@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/conv1d) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L1685-L1747)  
----|---  
+  
   
 Computes a 1-D convolution given 3-D input and filter tensors.
 

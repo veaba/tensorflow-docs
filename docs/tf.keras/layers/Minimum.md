@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Minimum) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L340-L352)  
----|---  
+  
   
 ## Class `Minimum`
 
@@ -32,7 +32,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/minimum) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L679-L690)  
----|---  
+  
   
 Functional interface to the `Minimum` layer.
 

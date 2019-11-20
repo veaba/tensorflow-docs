@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/LinearOperatorInversion) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg/linear_operator_inversion.py#L30-L198)  
----|---  
+  
   
 ## Class `LinearOperatorInversion`
 

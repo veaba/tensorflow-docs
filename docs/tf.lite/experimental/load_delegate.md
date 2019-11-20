@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/lite/experimental/load_delegate) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/interpreter.py#L140-L169)  
----|---  
+  
   
 Returns loaded Delegate object.
 

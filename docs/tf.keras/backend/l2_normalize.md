@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/l2_normalize) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L4659-L4670)  
----|---  
+  
   
 Normalizes a tensor wrt the L2 norm alongside the specified axis.
 

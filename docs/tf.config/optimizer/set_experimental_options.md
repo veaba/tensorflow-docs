@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/config/optimizer/set_experimental_op
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/config.py#L117-L156)  
----|---  
+  
   
 Set experimental optimizer options.
 

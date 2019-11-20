@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/ones_like) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L1405-L1428)  
----|---  
+  
   
 Instantiates an all-ones variable of the same shape as another tensor.
 

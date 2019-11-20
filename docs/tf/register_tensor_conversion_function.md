@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/register_tensor_conversion_function)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/tensor_conversion_registry.py#L56-L111)  
----|---  
+  
   
 Registers a function for converting objects of `base_type` to `Tensor`.
 

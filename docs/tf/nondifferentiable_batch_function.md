@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nondifferentiable_batch_function)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/batch_ops.py#L31-L111)  
----|---  
+  
   
 Batches the computation done by the decorated function.
 

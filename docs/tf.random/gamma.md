@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/gamma) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/random_ops.py#L413-L496)  
----|---  
+  
   
 Draws `shape` samples from each of the given Gamma distribution(s).
 

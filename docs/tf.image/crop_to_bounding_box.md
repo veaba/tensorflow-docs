@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/crop_to_bounding_box) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/image_ops_impl.py#L809-L886)  
----|---  
+  
   
 Crops an image to a specified bounding box.
 

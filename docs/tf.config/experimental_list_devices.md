@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/config/experimental_list_devices)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/eager/context.py#L1693-L1701)  
----|---  
+  
   
 List the names of the available devices.
 

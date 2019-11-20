@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/train/checkpoints_iterator) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/checkpoint_utils.py#L137-L200)  
----|---  
+  
   
 Continuously yield new checkpoint files as they appear.
 

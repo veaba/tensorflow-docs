@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/debugging/assert_integer) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L1530-L1547)  
----|---  
+  
   
 Assert that `x` is of integer dtype.
 

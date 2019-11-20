@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/cast_to_floatx) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L150-L180)  
----|---  
+  
   
 Cast a Numpy array to the default Keras float type.
 

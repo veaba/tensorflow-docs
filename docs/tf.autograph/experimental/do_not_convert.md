@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/autograph/experimental/do_not_conver
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/autograph/impl/api.py#L273-L298)  
----|---  
+  
   
 Decorator that suppresses the conversion of a function.
 

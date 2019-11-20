@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Multiply) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L292-L304)  
----|---  
+  
   
 ## Class `Multiply`
 
@@ -32,7 +32,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/multiply) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L619-L630)  
----|---  
+  
   
 Functional interface to the `Multiply` layer.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sets/size) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sets_impl.py#L34-L58)  
----|---  
+  
   
 Compute number of unique elements along last dimension of `a`.
 

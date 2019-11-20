@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/embedding_lookup) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/embedding_ops.py#L320-L364)  
----|---  
+  
   
 Looks up `ids` in a list of embedding tensors.
 

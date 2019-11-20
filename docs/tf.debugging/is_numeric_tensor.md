@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/debugging/is_numeric_tensor) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L1984-L2008)  
----|---  
+  
   
 Returns `True` if the elements of `tensor` are numbers.
 

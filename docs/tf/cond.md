@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/cond) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/control_flow_ops.py#L1318-L1389)  
----|---  
+  
   
 Return `true_fn()` if the predicate `pred` is true else `false_fn()`.
 

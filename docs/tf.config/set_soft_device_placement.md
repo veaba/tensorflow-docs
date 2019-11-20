@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/config/set_soft_device_placement)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/config.py#L174-L186)  
----|---  
+  
   
 Set if soft device placement is enabled.
 

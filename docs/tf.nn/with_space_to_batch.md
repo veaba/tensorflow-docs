@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/with_space_to_batch) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L326-L483)  
----|---  
+  
   
 Performs `op` on the space-to-batch representation of `input`.
 

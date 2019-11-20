@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/graph_util/import_graph_def) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/importer.py#L347-L405)  
----|---  
+  
   
 Imports the graph from `graph_def` into the current default `Graph`.
 (deprecated arguments)

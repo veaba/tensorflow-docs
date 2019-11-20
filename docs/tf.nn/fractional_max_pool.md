@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/fractional_max_pool) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L4465-L4546)  
----|---  
+  
   
 Performs fractional max pooling on the input.
 

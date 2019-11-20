@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/io/parse_single_example) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/parsing_ops.py#L1025-L1072)  
----|---  
+  
   
 Parses a single `Example` proto.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/floatx) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend_config.py#L60-L74)  
----|---  
+  
   
 Returns the default float type, as a string.
 

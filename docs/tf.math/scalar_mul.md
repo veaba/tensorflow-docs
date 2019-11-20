@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/scalar_mul) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L427-L431)  
----|---  
+  
   
 Multiplies a scalar times a `Tensor` or `IndexedSlices` object.
 

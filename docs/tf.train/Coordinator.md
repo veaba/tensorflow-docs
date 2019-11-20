@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/train/Coordinator) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/coordinator.py#L34-L407)  
----|---  
+  
   
 ## Class `Coordinator`
 

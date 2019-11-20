@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sysconfig/get_include) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/platform/sysconfig.py#L31-L43)  
----|---  
+  
   
 Get the directory containing the TensorFlow C++ header files.
 

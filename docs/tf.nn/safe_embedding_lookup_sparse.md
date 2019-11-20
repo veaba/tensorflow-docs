@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/safe_embedding_lookup_sparse) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/embedding_ops.py#L621-L682)  
----|---  
+  
   
 Lookup embedding results, accounting for invalid IDs and empty features.
 

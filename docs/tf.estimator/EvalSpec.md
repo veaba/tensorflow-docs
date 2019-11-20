@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/estimator/EvalSpec) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/training.py)  
----|---  
+  
   
 ## Class `EvalSpec`
 

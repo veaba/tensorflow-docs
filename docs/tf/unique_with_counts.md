@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/unique_with_counts) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L1630-L1636)  
----|---  
+  
   
 Finds unique elements in a 1-D tensor.
 

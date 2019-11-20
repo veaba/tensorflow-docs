@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/get_single_element
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/get_single_element.py#L26-L70)  
----|---  
+  
   
 Returns the single element in `dataset` as a nested structure of tensors.
 

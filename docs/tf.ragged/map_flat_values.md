@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/ragged/map_flat_values) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/ragged_functional_ops.py#L30-L94)  
----|---  
+  
   
 Applies `op` to the values of one or more RaggedTensors.
 

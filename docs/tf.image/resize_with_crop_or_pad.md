@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/resize_with_crop_or_pad) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/image_ops_impl.py#L889-L1005)  
----|---  
+  
   
 Crops and/or pads an image to a target width and height.
 

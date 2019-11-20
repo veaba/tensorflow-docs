@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/matvec) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L2768-L2863)  
----|---  
+  
   
 Multiplies matrix `a` by vector `b`, producing `a` * `b`.
 

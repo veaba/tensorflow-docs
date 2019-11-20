@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/dct) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/dct_ops.py#L51-L163)  
----|---  
+  
   
 Computes the 1D [Discrete Cosine Transform
 (DCT)](https://en.wikipedia.org/wiki/Discrete_cosine_transform) of `input`.

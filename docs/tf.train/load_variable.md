@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/train/load_variable) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/checkpoint_utils.py#L69-L84)  
----|---  
+  
   
 Returns the tensor value of the given variable in the checkpoint.
 

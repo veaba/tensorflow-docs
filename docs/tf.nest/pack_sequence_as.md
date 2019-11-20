@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nest/pack_sequence_as) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/nest.py#L416-L471)  
----|---  
+  
   
 Returns a given flattened sequence packed into a given structure.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/debugging/assert_greater) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L955-L988)  
----|---  
+  
   
 Assert the condition `x > y` holds element-wise.
 

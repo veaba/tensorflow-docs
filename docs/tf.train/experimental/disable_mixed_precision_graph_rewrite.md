@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/train/experimental/disable_mixed_pre
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/mixed_precision.py#L196-L217)  
----|---  
+  
   
 Disables the mixed precision graph rewrite.
 

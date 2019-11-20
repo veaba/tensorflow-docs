@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/reduce_max) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L1053-L1129)  
----|---  
+  
   
 Computes the max of elements across dimensions of a SparseTensor.
 

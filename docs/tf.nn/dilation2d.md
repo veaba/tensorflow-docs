@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/dilation2d) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L241-L305)  
----|---  
+  
   
 Computes the grayscale dilation of 4-D `input` and 3-D `filters` tensors.
 

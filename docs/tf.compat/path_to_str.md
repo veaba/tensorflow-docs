@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/compat/path_to_str) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/compat.py#L128-L164)  
----|---  
+  
   
 Converts input which is a `PathLike` object to `str` type.
 

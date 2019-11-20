@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/multiply_no_nan) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L1121-L1143)  
----|---  
+  
   
 Computes the product of x and y and returns 0 if the y is zero, even if x is
 NaN or infinite.

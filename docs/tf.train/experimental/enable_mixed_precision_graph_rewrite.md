@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/train/experimental/enable_mixed_prec
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/mixed_precision.py#L78-L119)  
----|---  
+  
   
 Enable mixed precision in
 [`tf.function`](https://tensorflow.google.cn/api_docs/python/tf/function)s via

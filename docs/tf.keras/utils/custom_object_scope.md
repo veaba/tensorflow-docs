@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/utils/custom_object_scope) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/generic_utils.py#L76-L104)  
----|---  
+  
   
 Provides a scope that changes to `_GLOBAL_CUSTOM_OBJECTS` cannot escape.
 

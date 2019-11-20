@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/experimental/terminate_keras_m
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L450-L554)  
----|---  
+  
   
 Destroy Keras' multiprocessing pools to prevent deadlocks.
 

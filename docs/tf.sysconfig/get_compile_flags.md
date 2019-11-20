@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sysconfig/get_compile_flags) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/platform/sysconfig.py#L57-L67)  
----|---  
+  
   
 Get the compilation flags for custom operators.
 

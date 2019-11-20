@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/argsort) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sort_ops.py#L69-L109)  
----|---  
+  
   
 Returns the indices of a tensor that give its sorted order along an axis.
 

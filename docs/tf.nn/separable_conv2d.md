@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/separable_conv2d) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L992-L1056)  
----|---  
+  
   
 2-D convolution with separable filters.
 

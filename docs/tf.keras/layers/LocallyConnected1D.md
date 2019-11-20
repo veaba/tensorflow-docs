@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/LocallyConnected1D) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/local.py#L36-L331)  
----|---  
+  
   
 ## Class `LocallyConnected1D`
 

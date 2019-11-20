@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/repeat_elements) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L2866-L2924)  
----|---  
+  
   
 Repeats the elements of a tensor along an axis, like `np.repeat`.
 

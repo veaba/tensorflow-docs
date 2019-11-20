@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/concat) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L331-L363)  
----|---  
+  
   
 Concatenates a list of `SparseTensor` along the specified dimension.
 (deprecated arguments)

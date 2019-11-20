@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/shuffle_and_repeat
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/shuffle_ops.py#L54-L92)  
----|---  
+  
   
 Shuffles and repeats a Dataset returning a new permutation for each epoch.
 (deprecated)

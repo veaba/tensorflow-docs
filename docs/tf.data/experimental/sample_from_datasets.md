@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/sample_from_datase
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/interleave_ops.py#L143-L224)  
----|---  
+  
   
 Samples elements at random from the datasets in `datasets`.
 

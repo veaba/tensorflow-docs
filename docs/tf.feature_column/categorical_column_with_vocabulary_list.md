@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/feature_column/categorical_column_wi
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/feature_column/feature_column_v2.py#L1695-L1809)  
----|---  
+  
   
 A `CategoricalColumn` with in-memory vocabulary.
 

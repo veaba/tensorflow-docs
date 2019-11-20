@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/ragged/constant) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/ragged_factory_ops.py#L36-L87)  
----|---  
+  
   
 Constructs a constant RaggedTensor from a nested Python list.
 

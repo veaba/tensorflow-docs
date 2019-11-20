@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/reduce_prod) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L1978-L2011)  
----|---  
+  
   
 Computes the product of elements across dimensions of a tensor.
 

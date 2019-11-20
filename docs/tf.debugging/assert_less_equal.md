@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/debugging/assert_less_equal) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L870-L903)  
----|---  
+  
   
 Assert the condition `x <= y` holds element-wise.
 

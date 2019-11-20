@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/sampled_softmax_loss) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L2036-L2124)  
----|---  
+  
   
 Computes and returns the sampled softmax training loss.
 

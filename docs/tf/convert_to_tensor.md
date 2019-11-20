@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/convert_to_tensor) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L1187-L1242)  
----|---  
+  
   
 Converts the given `value` to a `Tensor`.
 

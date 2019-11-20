@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/fill_empty_rows) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L1856-L1920)  
----|---  
+  
   
 Fills empty rows in the input 2-D `SparseTensor` with a default value.
 

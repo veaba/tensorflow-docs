@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/confusion_matrix) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/confusion_matrix.py#L95-L201)  
----|---  
+  
   
 Computes the confusion matrix from predictions and labels.
 

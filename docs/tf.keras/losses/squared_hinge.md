@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/losses/squared_hinge) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L829-L845)  
----|---  
+  
   
 Computes the squared hinge loss between `y_true` and `y_pred`.
 

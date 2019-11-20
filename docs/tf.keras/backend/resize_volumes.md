@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/resize_volumes) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L2834-L2863)  
----|---  
+  
   
 Resizes the volume contained in a 5D tensor.
 

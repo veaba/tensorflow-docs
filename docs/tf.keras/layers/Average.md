@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Average) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L308-L320)  
----|---  
+  
   
 ## Class `Average`
 
@@ -32,7 +32,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/average) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L633-L644)  
----|---  
+  
   
 Functional interface to the `Average` layer.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/squeeze) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L3652-L3701)  
----|---  
+  
   
 Removes dimensions of size 1 from the shape of a tensor.
 

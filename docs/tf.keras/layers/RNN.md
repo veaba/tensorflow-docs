@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/RNN) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/recurrent.py#L183-L889)  
----|---  
+  
   
 ## Class `RNN`
 

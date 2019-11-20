@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/hann_window) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/window_ops.py#L33-L55)  
----|---  
+  
   
 Generate a [Hann
 window](https://en.wikipedia.org/wiki/Window_function#Hann_and_Hamming_windows).

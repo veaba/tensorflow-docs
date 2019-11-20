@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/meshgrid) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L2882-L2955)  
----|---  
+  
   
 Broadcasts parameters for evaluation on an N-D grid.
 

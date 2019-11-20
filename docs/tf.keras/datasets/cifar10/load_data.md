@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/datasets/cifar10/load_data)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/datasets/cifar10.py#L31-L70)  
----|---  
+  
   
 Loads CIFAR10 dataset.
 

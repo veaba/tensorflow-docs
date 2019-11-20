@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/test/is_gpu_available) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/test_util.py#L1385-L1447)  
----|---  
+  
   
 Returns whether TensorFlow can access a GPU.
 

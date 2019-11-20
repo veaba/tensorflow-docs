@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/hard_sigmoid) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L4604-L4623)  
----|---  
+  
   
 Segment-wise linear approximation of sigmoid.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/logical_xor) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L1234-L1265)  
----|---  
+  
   
 Logical XOR function.
 

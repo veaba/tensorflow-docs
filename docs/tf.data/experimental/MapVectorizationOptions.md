@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/MapVectorizationOp
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/optimization_options.py#L25-L53)  
----|---  
+  
   
 ## Class `MapVectorizationOptions`
 

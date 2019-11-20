@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/numpy_function) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/script_ops.py#L501-L503)  
----|---  
+  
   
 Wraps a python function and uses it as a TensorFlow op.
 

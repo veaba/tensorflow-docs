@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/permute_dimensions)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L2740-L2768)  
----|---  
+  
   
 Permutes axes in a tensor.
 

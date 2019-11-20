@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/parallel_interleav
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/interleave_ops.py#L36-L96)  
----|---  
+  
   
 A parallel version of the
 [`Dataset.interleave()`](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#interleave)

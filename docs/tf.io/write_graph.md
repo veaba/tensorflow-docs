@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/io/write_graph) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/graph_io.py#L30-L75)  
----|---  
+  
   
 Writes a graph proto to a file.
 

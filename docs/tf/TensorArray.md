@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/TensorArray) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/tensor_array_ops.py#L923-L1196)  
----|---  
+  
   
 ## Class `TensorArray`
 

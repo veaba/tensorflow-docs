@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/autograph/trace) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/autograph/utils/ag_logging.py#L91-L111)  
----|---  
+  
   
 Traces argument information at compilation time.
 

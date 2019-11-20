@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/mask) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L1574-L1615)  
----|---  
+  
   
 Masks elements of `IndexedSlices`.
 

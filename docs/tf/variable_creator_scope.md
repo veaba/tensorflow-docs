@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/variable_creator_scope) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L2647-L2712)  
----|---  
+  
   
 Scope which defines a variable creation function to be used by variable().
 

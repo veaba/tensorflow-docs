@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/strings/unicode_encode) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/ragged_string_ops.py#L83-L175)  
----|---  
+  
   
 Encodes each sequence of Unicode code points in `input` into a string.
 

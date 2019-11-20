@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/io/serialize_many_sparse) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L1998-L2030)  
----|---  
+  
   
 Serialize `N`-minibatch `SparseTensor` into an `[N, 3]` `Tensor`.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/batch_normalization) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L1382-L1442)  
----|---  
+  
   
 Batch normalization.
 

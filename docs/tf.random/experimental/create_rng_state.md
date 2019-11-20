@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/experimental/create_rng_state
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/stateful_random_ops.py#L140-L151)  
----|---  
+  
   
 Creates a RNG state.
 

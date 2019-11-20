@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sequence_mask) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L3532-L3594)  
----|---  
+  
   
 Returns a mask tensor representing the first N positions of each cell.
 

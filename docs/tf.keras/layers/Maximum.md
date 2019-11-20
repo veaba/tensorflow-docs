@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Maximum) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L324-L336)  
----|---  
+  
   
 ## Class `Maximum`
 
@@ -32,7 +32,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/maximum) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L647-L676)  
----|---  
+  
   
 Functional interface to the `Maximum` layer that computes
 

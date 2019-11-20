@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/diag_part) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L2092-L2197)  
----|---  
+  
   
 Returns the batched diagonal part of a batched tensor.
 

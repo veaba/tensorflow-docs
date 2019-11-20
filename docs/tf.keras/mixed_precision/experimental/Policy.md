@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/mixed_precision/experimental/P
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/mixed_precision/experimental/policy.py#L39-L329)  
----|---  
+  
   
 ## Class `Policy`
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/idct) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/dct_ops.py#L167-L207)  
----|---  
+  
   
 Computes the 1D [Inverse Discrete Cosine Transform
 (DCT)](https://en.wikipedia.org/wiki/Discrete_cosine_transform#Inverse_transforms)

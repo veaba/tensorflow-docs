@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/vectorized_map) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/parallel_for/control_flow_ops.py#L308-L390)  
----|---  
+  
   
 Parallel map on the list of tensors unpacked from `elems` on dimension 0.
 

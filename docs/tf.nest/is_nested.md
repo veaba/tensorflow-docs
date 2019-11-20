@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nest/is_nested) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/nest.py#L217-L228)  
----|---  
+  
   
 Returns true if its input is a collections.abc.Sequence (except strings).
 

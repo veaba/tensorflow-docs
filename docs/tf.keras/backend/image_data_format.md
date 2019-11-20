@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/image_data_format) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend_config.py#L95-L107)  
----|---  
+  
   
 Returns the default image data format convention.
 

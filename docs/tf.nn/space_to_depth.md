@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/space_to_depth) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L3252-L3254)  
----|---  
+  
   
 SpaceToDepth for tensors of type T.
 

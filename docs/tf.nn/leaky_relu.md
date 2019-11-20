@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/leaky_relu) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L2800-L2822)  
----|---  
+  
   
 Compute the Leaky ReLU activation function.
 

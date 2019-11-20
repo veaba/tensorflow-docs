@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/tpu/experimental/initialize_tpu_syst
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/tpu/tpu_strategy_util.py#L39-L118)  
----|---  
+  
   
 Initialize the TPU devices.
 

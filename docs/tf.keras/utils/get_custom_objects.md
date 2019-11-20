@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/utils/get_custom_objects) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/generic_utils.py#L107-L125)  
----|---  
+  
   
 Retrieves a live reference to the global dictionary of custom objects.
 

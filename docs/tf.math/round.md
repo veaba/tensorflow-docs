@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/round) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L618-L643)  
----|---  
+  
   
 Rounds the values of a tensor to the nearest integer, element-wise.
 

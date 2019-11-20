@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/rgb_to_yiq) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/image_ops_impl.py#L2857-L2876)  
----|---  
+  
   
 Converts one or more images from RGB to YIQ.
 

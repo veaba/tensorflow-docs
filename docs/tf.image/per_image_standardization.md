@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/per_image_standardization) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/image_ops_impl.py#L1477-L1519)  
----|---  
+  
   
 Linearly scales each image in `image` to have mean 0 and variance 1.
 

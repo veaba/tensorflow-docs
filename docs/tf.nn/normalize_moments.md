@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/normalize_moments) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L1147-L1176)  
----|---  
+  
   
 Calculate the mean and variance of based on the sufficient statistics.
 

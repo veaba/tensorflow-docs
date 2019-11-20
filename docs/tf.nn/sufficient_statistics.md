@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/sufficient_statistics) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L1118-L1144)  
----|---  
+  
   
 Calculate the sufficient statistics for the mean and variance of `x`.
 

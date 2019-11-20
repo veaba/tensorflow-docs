@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/truediv) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L1036-L1066)  
----|---  
+  
   
 Divides x / y elementwise (using Python 3 division operator semantics).
 

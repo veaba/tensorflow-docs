@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/ragged/segment_ids_to_row_splits)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/segment_id_ops.py#L78-L136)  
----|---  
+  
   
 Generates the RaggedTensor `row_splits` corresponding to a segmentation.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/bias_add) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L5480-L5548)  
----|---  
+  
   
 Adds a bias vector to a tensor.
 

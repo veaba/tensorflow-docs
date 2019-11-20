@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/models/model_from_json) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/saving/model_config.py#L81-L96)  
----|---  
+  
   
 Parses a JSON model configuration file and returns a model instance.
 

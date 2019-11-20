@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/wrappers/scikit_learn/KerasCla
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/wrappers/scikit_learn.py#L191-L310)  
----|---  
+  
   
 ## Class `KerasClassifier`
 

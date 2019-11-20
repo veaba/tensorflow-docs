@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/custom_gradient) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/custom_gradient.py#L85-L170)  
----|---  
+  
   
 Decorator to define a function with a custom gradient.
 

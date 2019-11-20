@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/map_and_batch) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/batching.py#L139-L199)  
----|---  
+  
   
 Fused implementation of `map` and `batch`. (deprecated)
 

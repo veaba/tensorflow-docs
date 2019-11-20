@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/conv1d_transpose) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L1750-L1829)  
----|---  
+  
   
 The transpose of `conv1d`.
 

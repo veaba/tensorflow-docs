@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/ctc_unique_labels) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ctc_ops.py#L910-L942)  
----|---  
+  
   
 Get unique labels and indices for batched labels for
 [`tf.nn.ctc_loss`](https://tensorflow.google.cn/api_docs/python/tf/nn/ctc_loss).

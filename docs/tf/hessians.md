@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/hessians) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/gradients_impl.py#L399-L406)  
----|---  
+  
   
 Constructs the Hessian of sum of `ys` with respect to `x` in `xs`.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Attention) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/dense_attention.py#L182-L303)  
----|---  
+  
   
 ## Class `Attention`
 

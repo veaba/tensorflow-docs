@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/imag) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L542-L572)  
----|---  
+  
   
 Returns the imaginary part of a complex (or real) tensor.
 

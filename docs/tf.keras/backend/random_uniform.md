@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/random_uniform) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L5577-L5598)  
----|---  
+  
   
 Returns a tensor with uniform distribution of values.
 

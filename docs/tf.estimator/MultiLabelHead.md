@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/estimator/MultiLabelHead) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_label_head.py)  
----|---  
+  
   
 ## Class `MultiLabelHead`
 

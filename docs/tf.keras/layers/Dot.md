@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Dot) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L447-L558)  
----|---  
+  
   
 ## Class `Dot`
 
@@ -43,7 +43,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/dot) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L708-L725)  
----|---  
+  
   
 Functional interface to the `Dot` layer.
 

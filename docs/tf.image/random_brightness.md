@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/random_brightness) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/image_ops_impl.py#L1522-L1545)  
----|---  
+  
   
 Adjust the brightness of images by a random factor.
 

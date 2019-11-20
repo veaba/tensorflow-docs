@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/io/parse_example) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/parsing_ops.py#L584-L808)  
----|---  
+  
   
 Parses `Example` protos into a `dict` of tensors.
 

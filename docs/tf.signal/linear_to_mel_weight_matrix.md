@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/linear_to_mel_weight_matrix)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/mel_ops.py#L91-L213)  
----|---  
+  
   
 Returns a matrix to warp linear scale spectrograms to the [mel
 scale](https://en.wikipedia.org/wiki/Mel_scale).

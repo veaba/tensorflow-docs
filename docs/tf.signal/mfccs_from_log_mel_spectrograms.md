@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/mfccs_from_log_mel_spectrogra
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/mfcc_ops.py#L29-L111)  
----|---  
+  
   
 Computes [MFCCs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum) of
 `log_mel_spectrograms`.

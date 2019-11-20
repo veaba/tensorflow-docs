@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/gradients) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/gradients_impl.py#L162-L274)  
----|---  
+  
   
 Constructs symbolic derivatives of sum of `ys` w.r.t. x in `xs`.
 

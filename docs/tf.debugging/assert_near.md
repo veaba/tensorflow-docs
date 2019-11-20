@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/debugging/assert_near) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L655-L705)  
----|---  
+  
   
 Assert the condition `x` and `y` are close element-wise.
 

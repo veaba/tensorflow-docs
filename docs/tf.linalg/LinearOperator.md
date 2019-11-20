@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/LinearOperator) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg/linear_operator.py#L49-L1030)  
----|---  
+  
   
 ## Class `LinearOperator`
 

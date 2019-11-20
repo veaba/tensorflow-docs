@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/errors/ResourceExhaustedError) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/errors_impl.py#L356-L368)  
----|---  
+  
   
 ## Class `ResourceExhaustedError`
 

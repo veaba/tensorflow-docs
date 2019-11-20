@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/metrics/MeanIoU) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2253-L2378)  
----|---  
+  
   
 ## Class `MeanIoU`
 

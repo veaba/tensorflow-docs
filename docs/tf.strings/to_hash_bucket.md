@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/strings/to_hash_bucket) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/string_ops.py#L459-L481)  
----|---  
+  
   
 Converts each string in the input Tensor to its hash mod by a number of
 buckets.

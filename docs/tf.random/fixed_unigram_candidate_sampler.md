@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/fixed_unigram_candidate_sampl
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/candidate_sampling_ops.py#L214-L304)  
----|---  
+  
   
 Samples a set of classes using the provided (fixed) base distribution.
 

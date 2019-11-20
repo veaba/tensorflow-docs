@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/irfft3d) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/fft_ops.py#L133-L145)  
----|---  
+  
   
 Inverse 3D real-valued fast Fourier transform.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/binary_crossentropy)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L4558-L4588)  
----|---  
+  
   
 Binary crossentropy between an output tensor and a target tensor.
 

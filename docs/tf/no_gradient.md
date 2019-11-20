@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/no_gradient) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L2493-L2525)  
----|---  
+  
   
 Specifies that ops of type `op_type` is not differentiable.
 

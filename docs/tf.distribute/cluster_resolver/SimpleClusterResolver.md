@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/distribute/cluster_resolver/SimpleCl
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/cluster_resolver.py#L182-L279)  
----|---  
+  
   
 ## Class `SimpleClusterResolver`
 

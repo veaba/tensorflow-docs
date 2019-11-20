@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/initializers/TruncatedNormal)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L306-L350)  
----|---  
+  
   
 ## Class `TruncatedNormal`
 

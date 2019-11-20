@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/stateless_uniform) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/stateless_random_ops.py#L36-L102)  
----|---  
+  
   
 Outputs deterministic pseudorandom values from a uniform distribution.
 

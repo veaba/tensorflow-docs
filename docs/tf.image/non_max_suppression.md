@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/non_max_suppression) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/image_ops_impl.py#L2604-L2653)  
----|---  
+  
   
 Greedily selects a subset of bounding boxes in descending order of score.
 

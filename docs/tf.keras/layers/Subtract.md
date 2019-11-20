@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Subtract) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L253-L288)  
----|---  
+  
   
 ## Class `Subtract`
 
@@ -49,7 +49,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/subtract) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L590-L616)  
----|---  
+  
   
 Functional interface to the `Subtract` layer.
 

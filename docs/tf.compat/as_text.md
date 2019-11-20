@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/compat/as_text) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/compat.py#L74-L95)  
----|---  
+  
   
 Converts any string-like python input types to unicode.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/make_saveable_from
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/iterator_ops.py#L30-L72)  
----|---  
+  
   
 Returns a SaveableObject for saving/restoring iterator state using Saver.
 

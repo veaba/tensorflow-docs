@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/feature_column/sequence_categorical_
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/feature_column/sequence_feature_column.py#L251-L294)  
----|---  
+  
   
 A sequence of categorical terms where ids are set by hashing.
 

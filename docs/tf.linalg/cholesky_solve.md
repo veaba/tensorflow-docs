@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/cholesky_solve) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg_ops.py#L82-L124)  
----|---  
+  
   
 Solves systems of linear eqns `A X = RHS`, given Cholesky factorizations.
 

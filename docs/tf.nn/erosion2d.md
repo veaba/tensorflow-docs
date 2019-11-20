@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/erosion2d) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L4743-L4809)  
----|---  
+  
   
 Computes the grayscale erosion of 4-D `value` and 3-D `filters` tensors.
 

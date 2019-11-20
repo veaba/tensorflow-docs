@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/serialize) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/serialization.py#L61-L63)  
----|---  
+  
   
 ### Aliases:
 

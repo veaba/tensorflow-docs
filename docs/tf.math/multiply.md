@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/multiply) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L328-L331)  
----|---  
+  
   
 Returns x * y element-wise.
 

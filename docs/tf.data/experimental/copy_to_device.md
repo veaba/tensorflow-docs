@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/copy_to_device)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/prefetching_ops.py#L59-L80)  
----|---  
+  
   
 A transformation that copies dataset elements to the given `target_device`.
 

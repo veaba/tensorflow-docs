@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/latency_stats) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/stats_ops.py#L74-L94)  
----|---  
+  
   
 Records the latency of producing each element of the input dataset.
 

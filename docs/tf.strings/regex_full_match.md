@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/strings/regex_full_match) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/string_ops.py#L48-L73)  
----|---  
+  
   
 Check if the input matches the regex pattern.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/tridiagonal_solve) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg/linalg_impl.py#L342-L502)  
----|---  
+  
   
 Solves tridiagonal systems of equations.
 

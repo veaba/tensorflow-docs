@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/experimental/LinearCosineDecay
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L730-L842)  
----|---  
+  
   
 ## Class `LinearCosineDecay`
 

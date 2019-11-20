@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/batch_to_space) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L3294-L3368)  
----|---  
+  
   
 BatchToSpace for N-D tensors of type T.
 

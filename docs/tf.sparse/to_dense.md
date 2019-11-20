@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/to_dense) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L1430-L1482)  
----|---  
+  
   
 Converts a `SparseTensor` into a dense tensor.
 

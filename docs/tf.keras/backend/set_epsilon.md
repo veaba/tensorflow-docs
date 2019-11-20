@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/set_epsilon) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend_config.py#L47-L57)  
----|---  
+  
   
 Sets the value of the fuzz factor used in numeric expressions.
 

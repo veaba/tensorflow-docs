@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/cross_hashed) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L553-L597)  
----|---  
+  
   
 Generates hashed sparse cross from a list of sparse and dense tensors.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/scale_regularization_loss) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L441-L476)  
----|---  
+  
   
 Scales the sum of the given regularization losses by number of replicas.
 

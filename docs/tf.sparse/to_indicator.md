@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sparse/to_indicator) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L1485-L1547)  
----|---  
+  
   
 Converts a `SparseTensor` of ids into a dense bool indicator tensor.
 

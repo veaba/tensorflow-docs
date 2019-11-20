@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/unbatch) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/batching.py#L202-L229)  
----|---  
+  
   
 Splits elements of a dataset into multiple elements on the batch dimension.
 (deprecated)

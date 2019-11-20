@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/test/is_built_with_gpu_support) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/platform/test.py#L105-L108)  
----|---  
+  
   
 Returns whether TensorFlow was built with GPU (i.e. CUDA or ROCm) support.
 

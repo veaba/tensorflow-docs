@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/inverse_stft_window_fn) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/spectral_ops.py#L95-L153)  
----|---  
+  
   
 Generates a window function that can be used in `inverse_stft`.
 

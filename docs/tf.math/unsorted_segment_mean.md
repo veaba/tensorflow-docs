@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/math/unsorted_segment_mean) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L3527-L3570)  
----|---  
+  
   
 Computes the mean along segments of a tensor.
 

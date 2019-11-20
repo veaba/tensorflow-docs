@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/frame) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/shape_ops.py#L55-L191)  
----|---  
+  
   
 Expands `signal`'s `axis` dimension into frames of `frame_length`.
 

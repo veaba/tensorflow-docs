@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/random_normal_variable
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L1481-L1516)  
----|---  
+  
   
 Instantiates a variable with values drawn from a normal distribution.
 

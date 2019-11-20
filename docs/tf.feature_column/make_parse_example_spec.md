@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/feature_column/make_parse_example_sp
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/feature_column/feature_column_v2.py#L758-L816)  
----|---  
+  
   
 Creates parsing spec dictionary from input feature_columns.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/group_by_reducer)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/grouping.py#L37-L64)  
----|---  
+  
   
 A transformation that groups elements and performs a reduction.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/group_by_window)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/grouping.py#L67-L124)  
----|---  
+  
   
 A transformation that groups windows of elements by key and reduces them.
 

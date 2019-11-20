@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/utils/model_to_dot) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/vis_utils.py#L68-L249)  
----|---  
+  
   
 Convert a Keras model to dot format.
 

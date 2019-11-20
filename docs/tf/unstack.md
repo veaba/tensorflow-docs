@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/unstack) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L1289-L1334)  
----|---  
+  
   
 Unpacks the given dimension of a rank-`R` tensor into rank-`(R-1)` tensors.
 

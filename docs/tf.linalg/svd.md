@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/svd) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg_ops.py#L355-L422)  
----|---  
+  
   
 Computes the singular value decompositions of one or more matrices.
 

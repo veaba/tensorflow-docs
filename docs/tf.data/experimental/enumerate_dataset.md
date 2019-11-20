@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/enumerate_dataset)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/enumerate_ops.py#L24-L58)  
----|---  
+  
   
 A transformation that enumerates the elements of a dataset. (deprecated)
 

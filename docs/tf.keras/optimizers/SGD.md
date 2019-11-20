@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/optimizers/SGD) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/gradient_descent.py#L29-L164)  
----|---  
+  
   
 ## Class `SGD`
 

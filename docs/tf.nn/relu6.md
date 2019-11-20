@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/nn/relu6) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_ops.py#L2780-L2797)  
----|---  
+  
   
 Computes Rectified Linear 6: `min(max(features, 0), 6)`.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/distribute/cluster_resolver/Kubernet
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/kubernetes_cluster_resolver.py#L35-L158)  
----|---  
+  
   
 ## Class `KubernetesClusterResolver`
 

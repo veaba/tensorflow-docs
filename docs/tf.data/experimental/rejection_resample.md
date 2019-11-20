@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/rejection_resample
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/resampling.py#L37-L101)  
----|---  
+  
   
 A transformation that resamples a dataset to achieve a target distribution.
 

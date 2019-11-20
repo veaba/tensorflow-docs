@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/ragged/stack) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/ragged_concat_ops.py#L74-L113)  
----|---  
+  
   
 Stacks a list of rank-`R` tensors into one rank-`(R+1)` `RaggedTensor`.
 

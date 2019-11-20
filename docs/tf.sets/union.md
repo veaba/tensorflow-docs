@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/sets/union) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sets_impl.py#L283-L357)  
----|---  
+  
   
 Compute set union of elements in last dimension of `a` and `b`.
 

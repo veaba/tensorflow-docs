@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/make_tensor_proto) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/tensor_util.py#L355-L558)  
----|---  
+  
   
 Create a TensorProto.
 

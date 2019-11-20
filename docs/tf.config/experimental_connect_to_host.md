@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/config/experimental_connect_to_host)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/eager/remote.py#L38-L70)  
----|---  
+  
   
 Connects to a single machine to enable remote execution on it.
 

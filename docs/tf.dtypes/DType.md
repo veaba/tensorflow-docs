@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/dtypes/DType) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/dtypes.py#L31-L296)  
----|---  
+  
   
 ## Class `DType`
 

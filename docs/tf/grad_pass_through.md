@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/grad_pass_through) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/custom_gradient.py#L408-L458)  
----|---  
+  
   
 Creates a grad-pass-through op with the forward behavior provided in f.
 

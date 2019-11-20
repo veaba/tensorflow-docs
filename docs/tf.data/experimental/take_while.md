@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/take_while) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/take_while_ops.py#L55-L72)  
----|---  
+  
   
 A transformation that stops dataset iteration based on a `predicate`.
 

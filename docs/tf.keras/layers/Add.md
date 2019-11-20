@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/Add) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L222-L249)  
----|---  
+  
   
 ## Class `Add`
 
@@ -48,7 +48,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/layers/add) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L561-L587)  
----|---  
+  
   
 Functional interface to the `Add` layer.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/optimizers/Adadelta) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/adadelta.py#L32-L169)  
----|---  
+  
   
 ## Class `Adadelta`
 

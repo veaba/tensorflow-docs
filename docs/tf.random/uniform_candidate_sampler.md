@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/random/uniform_candidate_sampler)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/candidate_sampling_ops.py#L30-L86)  
----|---  
+  
   
 Samples a set of classes using a uniform base distribution.
 

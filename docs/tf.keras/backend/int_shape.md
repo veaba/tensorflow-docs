@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/backend/int_shape) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L1162-L1190)  
----|---  
+  
   
 Returns the shape of tensor or variable as a tuple of int or None entries.
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/image/extract_patches) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L4541-L4659)  
----|---  
+  
   
 Extract `patches` from `images`.
 

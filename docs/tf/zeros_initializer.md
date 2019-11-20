@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/zeros_initializer) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L93-L98)  
----|---  
+  
   
 ## Class `zeros_initializer`
 

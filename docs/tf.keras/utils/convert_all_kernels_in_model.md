@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/utils/convert_all_kernels_in_m
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/layer_utils.py#L303-L326)  
----|---  
+  
   
 Converts all convolution kernels in a model from Theano to TensorFlow.
 

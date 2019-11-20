@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/eigh) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg_ops.py#L309-L329)  
----|---  
+  
   
 Computes the eigen decomposition of a batch of self-adjoint matrices.
 

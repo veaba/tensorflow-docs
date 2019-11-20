@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/linalg/global_norm) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/clip_ops.py#L187-L234)  
----|---  
+  
   
 Computes the global norm of multiple tensors.
 

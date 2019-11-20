@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/distribute/has_strategy) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribution_strategy_context.py#L199-L212)  
----|---  
+  
   
 Return if there is a current non-default
 [`tf.distribute.Strategy`](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy).

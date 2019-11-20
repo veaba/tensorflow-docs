@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/required_space_to_batch_paddings)
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L3137-L3213)  
----|---  
+  
   
 Calculate padding required to make block_shape divide input_shape.
 

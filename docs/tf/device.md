@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/device) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L5147-L5177)  
----|---  
+  
   
 Specifies the device for ops created/executed in this context.
 

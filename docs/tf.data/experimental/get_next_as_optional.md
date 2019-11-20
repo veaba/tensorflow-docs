@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/data/experimental/get_next_as_option
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/iterator_ops.py#L800-L820)  
----|---  
+  
   
 Returns an `Optional` that contains the next value from the iterator.
 

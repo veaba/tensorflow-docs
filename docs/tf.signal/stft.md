@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/signal/stft) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/signal/spectral_ops.py#L36-L92)  
----|---  
+  
   
 Computes the [Short-time Fourier
 Transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) of

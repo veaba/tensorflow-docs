@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/train/ExponentialMovingAverage) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/moving_averages.py#L260-L550)  
----|---  
+  
   
 ## Class `ExponentialMovingAverage`
 

@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/OptionalSpec) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/optional_ops.py#L164-L201)  
----|---  
+  
   
 ## Class `OptionalSpec`
 

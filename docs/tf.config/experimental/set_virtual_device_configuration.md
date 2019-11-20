@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/config/experimental/set_virtual_devi
 |  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
 on GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/config.py#L492-L556)  
----|---  
+  
   
 Set the virtual device configuration for a PhysicalDevice.
 

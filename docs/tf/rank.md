@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/rank) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L586-L617)  
----|---  
+  
   
 Returns the rank of a tensor.
 

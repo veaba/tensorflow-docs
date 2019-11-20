@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/keras/utils/multi_gpu_model) |  [
 ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/multi_gpu_utils.py#L37-L268)  
----|---  
+  
   
 Replicates a model on different GPUs. (deprecated)
 

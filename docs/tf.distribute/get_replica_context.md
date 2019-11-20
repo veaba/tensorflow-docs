@@ -3,7 +3,7 @@ version](/versions/r1.15/api_docs/python/tf/distribute/get_replica_context) |
 [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
 GitHub
 ](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribution_strategy_context.py#L89-L135)  
----|---  
+  
   
 Returns the current
 [`tf.distribute.ReplicaContext`](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReplicaContext)
