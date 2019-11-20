@@ -1,40 +1,75 @@
-## Class SummaryWriter
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L178-L202)  
+---  
+  
+## Class `SummaryWriter`
+
 Interface representing a stateful summary writer object.
+
 ### Aliases:
-- Class `tf.compat.v2.summary.SummaryWriter`
+
+  * Class [`tf.compat.v2.summary.SummaryWriter`](/api_docs/python/tf/summary/SummaryWriter)
+
 ## Methods
-### as_default
-View source
 
-```
- as_default()
-```
+### `as_default`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L186-L190)
+
+    
+    
+    as_default()
+    
+
 Returns a context manager that enables summary writing.
-### close
-View source
 
-```
- close()
-```
+### `close`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L200-L202)
+
+    
+    
+    close()
+    
+
 Flushes and closes the summary writer.
-### flush
-View source
 
-```
- flush()
-```
+### `flush`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L196-L198)
+
+    
+    
+    flush()
+    
+
 Flushes any buffered data.
-### init
-View source
 
-```
- init()
-```
+### `init`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L192-L194)
+
+    
+    
+    init()
+    
+
 Initializes the summary writer.
-### set_as_default
-View source
 
-```
- set_as_default()
-```
+### `set_as_default`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L181-L184)
+
+    
+    
+    set_as_default()
+    
+
 Enables this summary writer for the current thread.
+

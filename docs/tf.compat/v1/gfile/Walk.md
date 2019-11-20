@@ -1,13 +1,26 @@
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L648-L663)  
+---  
+  
 Recursive directory tree generator for directories.
 
-```
- tf.compat.v1.gfile.Walk(
-    top,
-    in_order=True
-)
-```
+    
+    
+    tf.compat.v1.gfile.Walk(
+        top,
+        in_order=True
+    )
+    
+
 #### Args:
-- `top`: string, a Directory name
-- `in_order`: bool, Traverse in order if True, post order if False. Errors that happen while listing directories are ignored.
+
+  * **`top`** : string, a Directory name
+  * **`in_order`** : bool, Traverse in order if True, post order if False. Errors that happen while listing directories are ignored.
+
 #### Yields:
-Each yield is a 3-tuple: the pathname of a directory, followed by lists of all its subdirectories and leaf files. (dirname, [subdirname, subdirname, ...], [filename, filename, ...]) as strings
+
+Each yield is a 3-tuple: the pathname of a directory, followed by lists of all
+its subdirectories and leaf files. (dirname, [subdirname, subdirname, ...],
+[filename, filename, ...]) as strings
+

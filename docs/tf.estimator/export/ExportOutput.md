@@ -1,17 +1,39 @@
-## Class ExportOutput
-Represents an output of a model that can be served.
-### Aliases:
-- Class `tf.compat.v1.estimator.export.ExportOutput`
-- Class `tf.compat.v2.estimator.export.ExportOutput`
-These typically correspond to model heads.
-## Methods
-### as_signature_def
-View source
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/estimator/export/ExportOutput) |
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/saved_model/model_utils/export_output.py#L32-L99)  
+---|---  
+  
+## Class `ExportOutput`
 
-```
- as_signature_def(receiver_tensors)
-```
+Represents an output of a model that can be served.
+
+### Aliases:
+
+  * Class [`tf.compat.v1.estimator.export.ExportOutput`](/api_docs/python/tf/estimator/export/ExportOutput)
+  * Class [`tf.compat.v2.estimator.export.ExportOutput`](/api_docs/python/tf/estimator/export/ExportOutput)
+
+These typically correspond to model heads.
+
+## Methods
+
+### `as_signature_def`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/saved_model/model_utils/export_output.py#L42-L53)
+
+    
+    
+    as_signature_def(receiver_tensors)
+    
+
 Generate a SignatureDef proto for inclusion in a MetaGraphDef.
-The SignatureDef will specify outputs as described in this ExportOutput, and will use the provided receiver_tensors as inputs.
+
+The SignatureDef will specify outputs as described in this ExportOutput, and
+will use the provided receiver_tensors as inputs.
+
 #### Args:
-- `receiver_tensors`: a `Tensor`, or a dict of string to `Tensor`, specifying input nodes that will be fed.
+
+  * **`receiver_tensors`** : a `Tensor`, or a dict of string to `Tensor`, specifying input nodes that will be fed.
+

@@ -1,27 +1,69 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/random/uniform) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/random_ops.py#L186-L252)  
+---|---  
+  
 Outputs random values from a uniform distribution.
-### Aliases:
-- `tf.compat.v1.random.uniform`
-- `tf.compat.v1.random_uniform`
-- `tf.compat.v2.random.uniform`
 
-```
- tf.random.uniform(
-    shape,
-    minval=0,
-    maxval=None,
-    dtype=tf.dtypes.float32,
-    seed=None,
-    name=None
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.random.uniform`](/api_docs/python/tf/random/uniform)
+  * [`tf.compat.v1.random_uniform`](/api_docs/python/tf/random/uniform)
+  * [`tf.compat.v2.random.uniform`](/api_docs/python/tf/random/uniform)
+
+    
+    
+    tf.random.uniform(
+        shape,
+        minval=0,
+        maxval=None,
+        dtype=tf.dtypes.float32,
+        seed=None,
+        name=None
+    )
+    
+
 ### Used in the guide:
-- ``t``f``.``d``a``t``a``:`` ``B``u``i``l``d`` ``T``e``n``s``o``r``F``l``o``w`` ``i``n``p``u``t`` ``p``i``p``e``l``i``n``e``s``
-- ``B``e``t``t``e``r`` ``p``e``r``f``o``r``m``a``n``c``e`` ``w``i``t``h`` ``t``f``.``f``u``n``c``t``i``o``n`` ``a``n``d`` ``A``u``t``o``G``r``a``p``h``
+
+  * [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
+  * [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
+
 ### Used in the tutorials:
-- ``T``r``a``n``s``f``o``r``m``e``r`` ``m``o``d``e``l`` ``f``o``r`` ``l``a``n``g``u``a``g``e`` ``u``n``d``e``r``s``t``a``n``d``i``n``g``
-- ``C``u``s``t``o``m``i``z``a``t``i``o``n`` ``b``a``s``i``c``s``:`` ``t``e``n``s``o``r``s`` ``a``n``d`` ``o``p``e``r``a``t``i``o``n``s``
-- ``B``e``t``t``e``r`` ``p``e``r``f``o``r``m``a``n``c``e`` ``w``i``t``h`` ``t``f``.``f``u``n``c``t``i``o``n``
-- ``D``e``e``p``D``r``e``a``m``
-- ``P``i``x``2``P``i``x``
-The generated values follow a uniform distribution in the range `[minval, maxval)`. The lower bound `minval` is included in the range, while the upper bound `maxval` is excluded.
-For floats, the default range is `[0, 1)`. For ints, at least `maxval` must be specified explicitly.
+
+  * [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
+  * [Customization basics: tensors and operations](https://tensorflow.google.cn/tutorials/customization/basics)
+  * [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
+  * [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
+  * [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
+
+The generated values follow a uniform distribution in the range `[minval,
+maxval)`. The lower bound `minval` is included in the range, while the upper
+bound `maxval` is excluded.
+
+For floats, the default range is `[0, 1)`. For ints, at least `maxval` must be
+specified explicitly.
+
+In the integer case, the random integers are slightly biased unless `maxval -
+minval` is an exact power of two. The bias is small for values of `maxval -
+minval` significantly smaller than the range of the output (either `2**32` or
+`2**64`).
+
+#### Args:
+
+  * **`shape`** : A 1-D integer Tensor or Python array. The shape of the output tensor.
+  * **`minval`** : A 0-D Tensor or Python value of type `dtype`. The lower bound on the range of random values to generate. Defaults to 0.
+  * **`maxval`** : A 0-D Tensor or Python value of type `dtype`. The upper bound on the range of random values to generate. Defaults to 1 if `dtype` is floating point.
+  * **`dtype`** : The type of the output: `float16`, `float32`, `float64`, `int32`, or `int64`.
+  * **`seed`** : A Python integer. Used to create a random seed for the distribution. See [`tf.compat.v1.set_random_seed`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed) for behavior.
+  * **`name`** : A name for the operation (optional).
+
+#### Returns:
+
+A tensor of the specified shape filled with random uniform values.
+
+#### Raises:
+
+  * **`ValueError`** : If `dtype` is integral and `maxval` is not specified.
+

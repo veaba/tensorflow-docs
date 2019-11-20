@@ -1,22 +1,46 @@
-## Class SaverDef
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/protobuf/saver.proto)  
+---  
+  
+## Class `SaverDef`
+
 A ProtocolMessage
+
 ## Properties
-### filename_tensor_name
+
+### `filename_tensor_name`
+
 `string filename_tensor_name`
-### keep_checkpoint_every_n_hours
+
+### `keep_checkpoint_every_n_hours`
+
 `float keep_checkpoint_every_n_hours`
-### max_to_keep
+
+### `max_to_keep`
+
 `int32 max_to_keep`
-### restore_op_name
+
+### `restore_op_name`
+
 `string restore_op_name`
-### save_tensor_name
+
+### `save_tensor_name`
+
 `string save_tensor_name`
-### sharded
+
+### `sharded`
+
 `bool sharded`
-### version
+
+### `version`
+
 `CheckpointFormatVersion version`
+
 ## Class Members
-- `CheckpointFormatVersion`
-- `LEGACY = 0`
-- `V1 = 1`
-- `V2 = 2`
+
+  * `CheckpointFormatVersion`
+  * `LEGACY = 0`
+  * `V1 = 1`
+  * `V2 = 2`
+

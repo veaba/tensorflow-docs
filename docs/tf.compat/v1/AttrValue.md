@@ -1,25 +1,56 @@
-## Class AttrValue
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/framework/attr_value.proto)  
+---  
+  
+## Class `AttrValue`
+
 A ProtocolMessage
+
 ## Child Classes
-`class ListValue`
+
+[`class
+ListValue`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/AttrValue/ListValue)
+
 ## Properties
-### b
+
+### `b`
+
 `bool b`
-### f
+
+### `f`
+
 `float f`
-### func
+
+### `func`
+
 `NameAttrList func`
-### i
+
+### `i`
+
 `int64 i`
-### list
+
+### `list`
+
 `ListValue list`
-### placeholder
+
+### `placeholder`
+
 `string placeholder`
-### s
+
+### `s`
+
 `bytes s`
-### shape
+
+### `shape`
+
 `TensorShapeProto shape`
-### tensor
+
+### `tensor`
+
 `TensorProto tensor`
-### type
+
+### `type`
+
 `DataType type`
+

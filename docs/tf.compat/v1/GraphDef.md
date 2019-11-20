@@ -1,13 +1,31 @@
-## Class GraphDef
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/framework/graph.proto)  
+---  
+  
+## Class `GraphDef`
+
 A ProtocolMessage
+
 ### Used in the guide:
-- ``M``i``g``r``a``t``e`` ``y``o``u``r`` ``T``e``n``s``o``r``F``l``o``w`` ``1`` ``c``o``d``e`` ``t``o`` ``T``e``n``s``o``r``F``l``o``w`` ``2``
+
+  * [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
+
 ## Properties
-### library
+
+### `library`
+
 `FunctionDefLibrary library`
-### node
+
+### `node`
+
 `repeated NodeDef node`
-### version
+
+### `version`
+
 `int32 version`
-### versions
+
+### `versions`
+
 `VersionDef versions`
+

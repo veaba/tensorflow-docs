@@ -1,10 +1,23 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/sysconfig/get_include) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/platform/sysconfig.py#L31-L43)  
+---|---  
+  
 Get the directory containing the TensorFlow C++ header files.
-### Aliases:
-- `tf.compat.v1.sysconfig.get_include`
-- `tf.compat.v2.sysconfig.get_include`
 
-```
- tf.sysconfig.get_include()
-```
+### Aliases:
+
+  * [`tf.compat.v1.sysconfig.get_include`](/api_docs/python/tf/sysconfig/get_include)
+  * [`tf.compat.v2.sysconfig.get_include`](/api_docs/python/tf/sysconfig/get_include)
+
+    
+    
+    tf.sysconfig.get_include()
+    
+
 #### Returns:
+
 The directory as string.
+

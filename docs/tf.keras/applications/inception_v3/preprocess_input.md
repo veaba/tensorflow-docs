@@ -1,13 +1,25 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/applications/inception_v3/preprocess_input)
+|  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
+on GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/applications/__init__.py#L43-L49)  
+---|---  
+  
 ### Aliases:
-- `tf.compat.v1.keras.applications.inception_v3.preprocess_input`
-- `tf.compat.v2.keras.applications.inception_v3.preprocess_input`
 
-```
- tf.keras.applications.inception_v3.preprocess_input(
-    *args,
-    **kwargs
-)
-```
+  * [`tf.compat.v1.keras.applications.inception_v3.preprocess_input`](/api_docs/python/tf/keras/applications/inception_v3/preprocess_input)
+  * [`tf.compat.v2.keras.applications.inception_v3.preprocess_input`](/api_docs/python/tf/keras/applications/inception_v3/preprocess_input)
+
+    
+    
+    tf.keras.applications.inception_v3.preprocess_input(
+        *args,
+        **kwargs
+    )
+    
+
 ### Used in the tutorials:
-- ``D``e``e``p``D``r``e``a``m``
-- ``I``m``a``g``e`` ``c``a``p``t``i``o``n``i``n``g`` ``w``i``t``h`` ``v``i``s``u``a``l`` ``a``t``t``e``n``t``i``o``n``
+
+  * [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
+  * [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
+

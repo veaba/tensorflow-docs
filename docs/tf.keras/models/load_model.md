@@ -1,33 +1,56 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/models/load_model) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/saving/save.py#L118-L154)  
+---|---  
+  
 Loads a model saved via `save_model`.
-### Aliases:
-- `tf.compat.v1.keras.models.load_model`
-- `tf.compat.v2.keras.models.load_model`
 
-```
- tf.keras.models.load_model(
-    filepath,
-    custom_objects=None,
-    compile=True
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.keras.models.load_model`](/api_docs/python/tf/keras/models/load_model)
+  * [`tf.compat.v2.keras.models.load_model`](/api_docs/python/tf/keras/models/load_model)
+
+    
+    
+    tf.keras.models.load_model(
+        filepath,
+        custom_objects=None,
+        compile=True
+    )
+    
+
 ### Used in the guide:
-- ``S``a``v``e`` ``a``n``d`` ``s``e``r``i``a``l``i``z``e`` ``m``o``d``e``l``s`` ``w``i``t``h`` ``K``e``r``a``s``
-- ``T``h``e`` ``K``e``r``a``s`` ``f``u``n``c``t``i``o``n``a``l`` ``A``P``I`` ``i``n`` ``T``e``n``s``o``r``F``l``o``w``
-- ``K``e``r``a``s`` ``o``v``e``r``v``i``e``w``
+
+  * [Save and serialize models with Keras](https://tensorflow.google.cn/guide/keras/save_and_serialize)
+  * [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
+  * [Keras overview](https://tensorflow.google.cn/guide/keras/overview)
+
 ### Used in the tutorials:
-- ``D``i``s``t``r``i``b``u``t``e``d`` ``t``r``a``i``n``i``n``g`` ``w``i``t``h`` ``K``e``r``a``s``
-- ``S``a``v``e`` ``a``n``d`` ``l``o``a``d`` ``a`` ``m``o``d``e``l`` ``u``s``i``n``g`` ``a`` ``d``i``s``t``r``i``b``u``t``i``o``n`` ``s``t``r``a``t``e``g``y``
-- ``S``a``v``e`` ``a``n``d`` ``l``o``a``d`` ``m``o``d``e``l``s``
+
+  * [Distributed training with Keras](https://tensorflow.google.cn/tutorials/distribute/keras)
+  * [Save and load a model using a distribution strategy](https://tensorflow.google.cn/tutorials/distribute/save_and_load)
+  * [Save and load models](https://tensorflow.google.cn/tutorials/keras/save_and_load)
+  * [Transfer learning with TensorFlow Hub](https://tensorflow.google.cn/tutorials/images/transfer_learning_with_hub)
+
 #### Arguments:
-- `filepath`: One of the following:
-String, path to the saved model
-`h5py.File` object from which to load the model
-- ``S``t``r``i``n``g``,`` ``p``a``t``h`` ``t``o`` ``t``h``e`` ``s``a``v``e``d`` ``m``o``d``e``l``
-- `h5py.File` object from which to load the model
-- `custom_objects`: Optional dictionary mapping names (strings) to custom classes or functions to be considered during deserialization.
-- `compile`: Boolean, whether to `compile` the model after loading.
+
+  * **`filepath`** : One of the following: 
+    * String, path to the saved model
+    * `h5py.File` object from which to load the model
+  * **`custom_objects`** : Optional dictionary mapping names (strings) to custom classes or functions to be considered during deserialization.
+  * **`compile`** : Boolean, whether to compile the model after loading.
+
 #### Returns:
-A Keras model instance. If an optimizer was found as part of the saved model, the model is already `compile`d. Otherwise, the model is un`compile`d and a warning will be displayed. When `compile` is set to False, the compilation is omitted without any warning.
+
+A Keras model instance. If an optimizer was found as part of the saved model,
+the model is already compiled. Otherwise, the model is uncompiled and a
+warning will be displayed. When `compile` is set to False, the compilation is
+omitted without any warning.
+
 #### Raises:
-- `ImportError`: if loading from an hdf5 file and h5py is not available.
-- `IOError`: In case of an invalid savefile.
+
+  * **`ImportError`** : if loading from an hdf5 file and h5py is not available.
+  * **`IOError`** : In case of an invalid savefile.
+

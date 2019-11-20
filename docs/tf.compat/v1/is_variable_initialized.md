@@ -1,10 +1,24 @@
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variables.py#L3273-L3285)  
+---  
+  
 Tests if a variable has been initialized.
 
-```
- tf.compat.v1.is_variable_initialized(variable)
-```
+    
+    
+    tf.compat.v1.is_variable_initialized(variable)
+    
+
 #### Args:
-- `variable`: A `Variable`.
+
+  * **`variable`** : A `Variable`.
+
 #### Returns:
-Returns a scalar boolean Tensor, `True` if the variable has been initialized, `False` otherwise.
-NOTE The output of this function should be used. If it is not, a warning will be logged. To mark the output as used, call its .mark_used() method.
+
+Returns a scalar boolean Tensor, `True` if the variable has been initialized,
+`False` otherwise.
+
+**NOTE** The output of this function should be used. If it is not, a warning
+will be logged. To mark the output as used, call its .mark_used() method.
+

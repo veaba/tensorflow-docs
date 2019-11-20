@@ -1,48 +1,80 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/math/argmax) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/math_ops.py#L141-L184)  
+---|---  
+  
 Returns the index with the largest value across axes of a tensor.
-### Aliases:
-- `tf.argmax`
-- `tf.compat.v2.argmax`
-- `tf.compat.v2.math.argmax`
 
-```
- tf.math.argmax(
-    input,
-    axis=None,
-    output_type=tf.dtypes.int64,
-    name=None
-)
-```
+### Aliases:
+
+  * [`tf.argmax`](/api_docs/python/tf/math/argmax)
+  * [`tf.compat.v2.argmax`](/api_docs/python/tf/math/argmax)
+  * [`tf.compat.v2.math.argmax`](/api_docs/python/tf/math/argmax)
+
+    
+    
+    tf.math.argmax(
+        input,
+        axis=None,
+        output_type=tf.dtypes.int64,
+        name=None
+    )
+    
+
 ### Used in the guide:
-- ``M``i``g``r``a``t``e`` ``y``o``u``r`` ``T``e``n``s``o``r``F``l``o``w`` ``1`` ``c``o``d``e`` ``t``o`` ``T``e``n``s``o``r``F``l``o``w`` ``2``
-- ``R``e``c``u``r``r``e``n``t`` ``N``e``u``r``a``l`` ``N``e``t``w``o``r``k``s`` ``(``R``N``N``)`` ``w``i``t``h`` ``K``e``r``a``s``
-- ``T``r``a``i``n`` ``a``n``d`` ``e``v``a``l``u``a``t``e`` ``w``i``t``h`` ``K``e``r``a``s``
+
+  * [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
+  * [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
+  * [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
+
 ### Used in the tutorials:
-- ``C``u``s``t``o``m`` ``t``r``a``i``n``i``n``g``:`` ``w``a``l``k``t``h``r``o``u``g``h``
-- ``I``m``a``g``e`` ``s``e``g``m``e``n``t``a``t``i``o``n``
-- ``I``m``a``g``e`` ``c``a``p``t``i``o``n``i``n``g`` ``w``i``t``h`` ``v``i``s``u``a``l`` ``a``t``t``e``n``t``i``o``n``
-- ``N``e``u``r``a``l`` ``m``a``c``h``i``n``e`` ``t``r``a``n``s``l``a``t``i``o``n`` ``w``i``t``h`` ``a``t``t``e``n``t``i``o``n``
-- ``T``r``a``n``s``f``o``r``m``e``r`` ``m``o``d``e``l`` ``f``o``r`` ``l``a``n``g``u``a``g``e`` ``u``n``d``e``r``s``t``a``n``d``i``n``g``
+
+  * [Custom training: walkthrough](https://tensorflow.google.cn/tutorials/customization/custom_training_walkthrough)
+  * [Image segmentation](https://tensorflow.google.cn/tutorials/images/segmentation)
+  * [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
+  * [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
+  * [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
+
 Note that in case of ties the identity of the return value is not guaranteed.
+
 #### For example:
 
-```
- A=tf.constant([2,20,30,3,6]) # Constant 1-D Tensor
-tf.math.argmax(A) # output 2 as index 2 (A[2]) is maximum in tensor A
-B=tf.constant([[2,20,30,3,6],[3,11,16,1,8],[14,45,23,5,27]])
-tf.math.argmax(B,0) # [2, 2, 0, 2, 2]
-tf.math.argmax(B,1) # [2, 2, 1]
-```
-[tf.DType](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType)
+    
+    
+    A=tf.constant([2,20,30,3,6]) # Constant 1-D Tensor
+    tf.math.argmax(A) # output 2 as index 2 (A[2]) is maximum in tensor A
+    B=tf.constant([[2,20,30,3,6],[3,11,16,1,8],[14,45,23,5,27]])
+    tf.math.argmax(B,0) # [2, 2, 0, 2, 2]
+    tf.math.argmax(B,1) # [2, 2, 1]
+    
+
+Args: input: A `Tensor`. Must be one of the following types: `float32`,
+`float64`, `int32`, `uint8`, `int16`, `int8`, `complex64`, `int64`, `qint8`,
+`quint8`, `qint32`, `bfloat16`, `uint16`, `complex128`, `half`, `uint32`,
+`uint64`. axis: A `Tensor`. Must be one of the following types: `int32`,
+`int64`. int32 or int64, must be in the range `-rank(input), rank(input))`.
+Describes which axis of the input Tensor to reduce across. For vectors, use
+axis = 0. output_type: An optional
+[`tf.DType`](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType)
+from: `tf.int32, tf.int64`. Defaults to
+[`tf.int64`](https://tensorflow.google.cn/api_docs/python/tf#int64). name: A
+name for the operation (optional).
 
 #### Returns:
+
 A `Tensor` of type `output_type`.
+
 #### Usage:
 
-```
- import tensorflow as tf
-a = [1, 10, 26.9, 2.8, 166.32, 62.3]
-b = tf.math.argmax(input = a)
-c = tf.keras.backend.eval(b)
-# c = 4
-# here a[4] = 166.32 which is the largest element of a across axis 0
-```
+    
+    
+    import tensorflow as tf
+    a = [1, 10, 26.9, 2.8, 166.32, 62.3]
+    b = tf.math.argmax(input = a)
+    c = tf.keras.backend.eval(b)
+    # c = 4
+    # here a[4] = 166.32 which is the largest element of a across axis 0
+    
+

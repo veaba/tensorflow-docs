@@ -1,37 +1,47 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/losses/MAPE) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L786-L797)  
+---|---  
+  
 ### Aliases:
-- `tf.compat.v1.keras.losses.MAPE`
-- `tf.compat.v1.keras.losses.mape`
-- `tf.compat.v1.keras.losses.mean_absolute_percentage_error`
-- `tf.compat.v1.keras.metrics.MAPE`
-- `tf.compat.v1.keras.metrics.mape`
-- `tf.compat.v1.keras.metrics.mean_absolute_percentage_error`
-- `tf.compat.v2.keras.losses.MAPE`
-- `tf.compat.v2.keras.losses.mape`
-- `tf.compat.v2.keras.losses.mean_absolute_percentage_error`
-- `tf.compat.v2.keras.metrics.MAPE`
-- `tf.compat.v2.keras.metrics.mape`
-- `tf.compat.v2.keras.metrics.mean_absolute_percentage_error`
-- `tf.compat.v2.losses.MAPE`
-- `tf.compat.v2.losses.mape`
-- `tf.compat.v2.losses.mean_absolute_percentage_error`
-- `tf.compat.v2.metrics.MAPE`
-- `tf.compat.v2.metrics.mape`
-- `tf.compat.v2.metrics.mean_absolute_percentage_error`
-- `tf.keras.losses.mape`
-- `tf.keras.losses.mean_absolute_percentage_error`
-- `tf.keras.metrics.MAPE`
-- `tf.keras.metrics.mape`
-- `tf.keras.metrics.mean_absolute_percentage_error`
-- `tf.losses.MAPE`
-- `tf.losses.mape`
-- `tf.losses.mean_absolute_percentage_error`
-- `tf.metrics.MAPE`
-- `tf.metrics.mape`
-- `tf.metrics.mean_absolute_percentage_error`
 
-```
- tf.keras.losses.MAPE(
-    y_true,
-    y_pred
-)
-```
+  * [`tf.compat.v1.keras.losses.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v1.keras.losses.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v1.keras.losses.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v1.keras.metrics.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v1.keras.metrics.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v1.keras.metrics.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.keras.losses.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.keras.losses.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.keras.losses.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.keras.metrics.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.keras.metrics.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.keras.metrics.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.losses.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.losses.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.losses.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.metrics.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.metrics.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.compat.v2.metrics.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.keras.losses.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.keras.losses.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.keras.metrics.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.keras.metrics.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.keras.metrics.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.losses.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.losses.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.losses.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.metrics.MAPE`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.metrics.mape`](/api_docs/python/tf/keras/losses/MAPE)
+  * [`tf.metrics.mean_absolute_percentage_error`](/api_docs/python/tf/keras/losses/MAPE)
+
+    
+    
+    tf.keras.losses.MAPE(
+        y_true,
+        y_pred
+    )
+    
+

@@ -1,32 +1,49 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/random/normal) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/random_ops.py#L42-L78)  
+---|---  
+  
 Outputs random values from a normal distribution.
-### Aliases:
-- `tf.compat.v1.random.normal`
-- `tf.compat.v1.random_normal`
-- `tf.compat.v2.random.normal`
 
-```
- tf.random.normal(
-    shape,
-    mean=0.0,
-    stddev=1.0,
-    dtype=tf.dtypes.float32,
-    seed=None,
-    name=None
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.random.normal`](/api_docs/python/tf/random/normal)
+  * [`tf.compat.v1.random_normal`](/api_docs/python/tf/random/normal)
+  * [`tf.compat.v2.random.normal`](/api_docs/python/tf/random/normal)
+
+    
+    
+    tf.random.normal(
+        shape,
+        mean=0.0,
+        stddev=1.0,
+        dtype=tf.dtypes.float32,
+        seed=None,
+        name=None
+    )
+    
+
 ### Used in the guide:
-- ``E``a``g``e``r`` ``e``x``e``c``u``t``i``o``n``
+
+  * [Eager execution](https://tensorflow.google.cn/guide/eager)
+
 ### Used in the tutorials:
-- ``C``o``n``v``o``l``u``t``i``o``n``a``l`` ``V``a``r``i``a``t``i``o``n``a``l`` ``A``u``t``o``e``n``c``o``d``e``r``
-- ``D``e``e``p`` ``C``o``n``v``o``l``u``t``i``o``n``a``l`` ``G``e``n``e``r``a``t``i``v``e`` ``A``d``v``e``r``s``a``r``i``a``l`` ``N``e``t``w``o``r``k``
-- ``C``u``s``t``o``m`` ``t``r``a``i``n``i``n``g``:`` ``b``a``s``i``c``s``
-- ``C``u``s``t``o``m`` ``t``r``a``i``n``i``n``g`` ``w``i``t``h`` ``t``f``.``d``i``s``t``r``i``b``u``t``e``.``S``t``r``a``t``e``g``y``
+
+  * [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
+  * [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
+
 #### Args:
-- `shape`: A 1-D integer Tensor or Python array. The `shape` of the output tensor.
-- `mean`: A 0-D Tensor or Python value of type `dtype`. The `mean` of the normal distribution.
-- `stddev`: A 0-D Tensor or Python value of type `dtype`. The standard deviation of the normal distribution.
-- `dtype`: The type of the output.
-- `seed`: A Python integer. Used to create a random `seed` for the distribution. See `tf.compat.v1.set_random_seed` for behavior.
-- `name`: A `name` for the operation (optional).
+
+  * **`shape`** : A 1-D integer Tensor or Python array. The shape of the output tensor.
+  * **`mean`** : A 0-D Tensor or Python value of type `dtype`. The mean of the normal distribution.
+  * **`stddev`** : A 0-D Tensor or Python value of type `dtype`. The standard deviation of the normal distribution.
+  * **`dtype`** : The type of the output.
+  * **`seed`** : A Python integer. Used to create a random seed for the distribution. See [`tf.compat.v1.set_random_seed`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed) for behavior.
+  * **`name`** : A name for the operation (optional).
+
 #### Returns:
+
 A tensor of the specified shape filled with random normal values.
+

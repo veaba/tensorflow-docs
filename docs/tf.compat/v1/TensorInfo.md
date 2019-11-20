@@ -1,13 +1,32 @@
-## Class TensorInfo
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/protobuf/meta_graph.proto)  
+---  
+  
+## Class `TensorInfo`
+
 A ProtocolMessage
+
 ## Child Classes
-`class CooSparse`
+
+[`class
+CooSparse`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/TensorInfo/CooSparse)
+
 ## Properties
-### coo_sparse
+
+### `coo_sparse`
+
 `CooSparse coo_sparse`
-### dtype
+
+### `dtype`
+
 `DataType dtype`
-### name
+
+### `name`
+
 `string name`
-### tensor_shape
+
+### `tensor_shape`
+
 `TensorShapeProto tensor_shape`
+

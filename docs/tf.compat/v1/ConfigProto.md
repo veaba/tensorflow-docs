@@ -1,38 +1,83 @@
-## Class ConfigProto
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/protobuf/config.proto)  
+---  
+  
+## Class `ConfigProto`
+
 A ProtocolMessage
+
 ## Child Classes
-`class DeviceCountEntry`
-`class Experimental`
+
+[`class
+DeviceCountEntry`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ConfigProto/DeviceCountEntry)
+
+[`class
+Experimental`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ConfigProto/Experimental)
+
 ## Properties
-### allow_soft_placement
+
+### `allow_soft_placement`
+
 `bool allow_soft_placement`
-### cluster_def
+
+### `cluster_def`
+
 `ClusterDef cluster_def`
-### device_count
+
+### `device_count`
+
 `repeated DeviceCountEntry device_count`
-### device_filters
+
+### `device_filters`
+
 `repeated string device_filters`
-### experimental
+
+### `experimental`
+
 `Experimental experimental`
-### gpu_options
+
+### `gpu_options`
+
 `GPUOptions gpu_options`
-### graph_options
+
+### `graph_options`
+
 `GraphOptions graph_options`
-### inter_op_parallelism_threads
+
+### `inter_op_parallelism_threads`
+
 `int32 inter_op_parallelism_threads`
-### intra_op_parallelism_threads
+
+### `intra_op_parallelism_threads`
+
 `int32 intra_op_parallelism_threads`
-### isolate_session_state
+
+### `isolate_session_state`
+
 `bool isolate_session_state`
-### log_device_placement
+
+### `log_device_placement`
+
 `bool log_device_placement`
-### operation_timeout_in_ms
+
+### `operation_timeout_in_ms`
+
 `int64 operation_timeout_in_ms`
-### placement_period
+
+### `placement_period`
+
 `int32 placement_period`
-### rpc_options
+
+### `rpc_options`
+
 `RPCOptions rpc_options`
-### session_inter_op_thread_pool
+
+### `session_inter_op_thread_pool`
+
 `repeated ThreadPoolOptionProto session_inter_op_thread_pool`
-### use_per_session_threads
+
+### `use_per_session_threads`
+
 `bool use_per_session_threads`
+

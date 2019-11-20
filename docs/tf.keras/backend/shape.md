@@ -1,31 +1,48 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/backend/shape) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L1129-L1159)  
+---|---  
+  
 Returns the symbolic shape of a tensor or variable.
-### Aliases:
-- `tf.compat.v1.keras.backend.shape`
-- `tf.compat.v2.keras.backend.shape`
 
-```
- tf.keras.backend.shape(x)
-```
+### Aliases:
+
+  * [`tf.compat.v1.keras.backend.shape`](/api_docs/python/tf/keras/backend/shape)
+  * [`tf.compat.v2.keras.backend.shape`](/api_docs/python/tf/keras/backend/shape)
+
+    
+    
+    tf.keras.backend.shape(x)
+    
+
 #### Arguments:
-- `x`: A tensor or variable.
+
+  * **`x`** : A tensor or variable.
+
 #### Returns:
+
 A symbolic shape (which is itself a tensor).
+
 #### Examples:
 
-```
-     # TensorFlow example
-    >>> from keras import backend as K
-    >>> tf_session = K.get_session()
-    >>> val = np.array([[1, 2], [3, 4]])
-    >>> kvar = K.variable(value=val)
-    >>> input = keras.backend.placeholder(shape=(2, 4, 5))
-    >>> K.shape(kvar)
-    <tf.Tensor 'Shape_8:0' shape=(2,) dtype=int32>
-    >>> K.shape(input)
-    <tf.Tensor 'Shape_9:0' shape=(3,) dtype=int32>
-    # To get integer shape (Instead, you can use K.int_shape(x))
-    >>> K.shape(kvar).eval(session=tf_session)
-    array([2, 2], dtype=int32)
-    >>> K.shape(input).eval(session=tf_session)
-    array([2, 4, 5], dtype=int32)
-```
+    
+    
+        # TensorFlow example
+        >>> from keras import backend as K
+        >>> tf_session = K.get_session()
+        >>> val = np.array([[1, 2], [3, 4]])
+        >>> kvar = K.variable(value=val)
+        >>> input = keras.backend.placeholder(shape=(2, 4, 5))
+        >>> K.shape(kvar)
+        <tf.Tensor 'Shape_8:0' shape=(2,) dtype=int32>
+        >>> K.shape(input)
+        <tf.Tensor 'Shape_9:0' shape=(3,) dtype=int32>
+        # To get integer shape (Instead, you can use K.int_shape(x))
+        >>> K.shape(kvar).eval(session=tf_session)
+        array([2, 2], dtype=int32)
+        >>> K.shape(input).eval(session=tf_session)
+        array([2, 4, 5], dtype=int32)
+    
+

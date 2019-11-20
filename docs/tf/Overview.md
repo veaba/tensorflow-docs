@@ -6,7 +6,7 @@ version](/versions/r1.15/api_docs/python/tf)
 
     
     
-    pip install tensorflow
+    pip install tensorflow  
     
 
 ## Modules

@@ -1,13 +1,44 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/ragged/segment_ids_to_row_splits)
+|  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
+on GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/segment_id_ops.py#L78-L136)  
+---|---  
+  
 Generates the RaggedTensor `row_splits` corresponding to a segmentation.
-### Aliases:
-- `tf.compat.v1.ragged.segment_ids_to_row_splits`
-- `tf.compat.v2.ragged.segment_ids_to_row_splits`
 
-```
- tf.ragged.segment_ids_to_row_splits(
-    segment_ids,
-    num_segments=None,
-    out_type=None,
-    name=None
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.ragged.segment_ids_to_row_splits`](/api_docs/python/tf/ragged/segment_ids_to_row_splits)
+  * [`tf.compat.v2.ragged.segment_ids_to_row_splits`](/api_docs/python/tf/ragged/segment_ids_to_row_splits)
+
+    
+    
+    tf.ragged.segment_ids_to_row_splits(
+        segment_ids,
+        num_segments=None,
+        out_type=None,
+        name=None
+    )
+    
+
+Returns an integer vector `splits`, where `splits[0] = 0` and `splits[i] =
+splits[i-1] + count(segment_ids==i)`. Example:
+
+    
+    
+    ragged.segment_ids_to_row_splits([0, 0, 0, 2, 2, 3, 4, 4, 4]).eval()
+    [ 0 3 3 5 6 9 ]
+    
+
+#### Args:
+
+  * **`segment_ids`** : A 1-D integer Tensor.
+  * **`num_segments`** : A scalar integer indicating the number of segments. Defaults to `max(segment_ids) + 1` (or zero if `segment_ids` is empty).
+  * **`out_type`** : The dtype for the return value. Defaults to `segment_ids.dtype`, or [`tf.int64`](https://tensorflow.google.cn/api_docs/python/tf#int64) if `segment_ids` does not have a dtype.
+  * **`name`** : A name prefix for the returned tensor (optional).
+
+#### Returns:
+
+A sorted 1-D integer Tensor, with `shape=[num_segments + 1]`.
+

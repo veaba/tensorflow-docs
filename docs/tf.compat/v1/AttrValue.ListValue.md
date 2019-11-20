@@ -1,19 +1,43 @@
-## Class ListValue
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/framework/attr_value.proto)  
+---  
+  
+## Class `ListValue`
+
 A ProtocolMessage
+
 ## Properties
-### b
+
+### `b`
+
 `repeated bool b`
-### f
+
+### `f`
+
 `repeated float f`
-### func
+
+### `func`
+
 `repeated NameAttrList func`
-### i
+
+### `i`
+
 `repeated int64 i`
-### s
+
+### `s`
+
 `repeated bytes s`
-### shape
+
+### `shape`
+
 `repeated TensorShapeProto shape`
-### tensor
+
+### `tensor`
+
 `repeated TensorProto tensor`
-### type
+
+### `type`
+
 `repeated DataType type`
+

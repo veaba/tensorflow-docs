@@ -1,29 +1,64 @@
-## Class Average
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/layers/Average) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L308-L320)  
+---|---  
+  
+## Class `Average`
+
 Layer that averages a list of inputs.
-### Aliases:
-- Class `tf.compat.v1.keras.layers.Average`
-- Class `tf.compat.v2.keras.layers.Average`
-It takes as input a list of tensors, all of the same shape, and returns a single tensor (also of the same shape).
-## __init__
-View source
 
-```
- __init__(**kwargs)
-```
+### Aliases:
+
+  * Class [`tf.compat.v1.keras.layers.Average`](/api_docs/python/tf/keras/layers/Average)
+  * Class [`tf.compat.v2.keras.layers.Average`](/api_docs/python/tf/keras/layers/Average)
+
+It takes as input a list of tensors, all of the same shape, and returns a
+single tensor (also of the same shape).
+
+## `__init__`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L41-L43)
+
+    
+    
+    __init__(**kwargs)
+    
+
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/layers/average) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L633-L644)  
+---|---  
+  
 Functional interface to the `Average` layer.
-### Aliases:
-- `tf.compat.v1.keras.layers.average`
-- `tf.compat.v2.keras.layers.average`
 
-```
- tf.keras.layers.average(
-    inputs,
-    **kwargs
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.keras.layers.average`](/api_docs/python/tf/keras/layers/average)
+  * [`tf.compat.v2.keras.layers.average`](/api_docs/python/tf/keras/layers/average)
+
+    
+    
+    tf.keras.layers.average(
+        inputs,
+        **kwargs
+    )
+    
+
 ### Used in the guide:
-- ``T``h``e`` ``K``e``r``a``s`` ``f``u``n``c``t``i``o``n``a``l`` ``A``P``I`` ``i``n`` ``T``e``n``s``o``r``F``l``o``w``
+
+  * [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
+
 #### Arguments:
-- `inputs`: A list of input tensors (at least 2).
+
+  * **`inputs`** : A list of input tensors (at least 2).
+  * **`**kwargs`** : Standard layer keyword arguments.
+
 #### Returns:
+
 A tensor, the average of the inputs.
+

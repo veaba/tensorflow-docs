@@ -1,23 +1,46 @@
-## Class NonNeg
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/constraints/NonNeg) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L82-L87)  
+---|---  
+  
+## Class `NonNeg`
+
 Constrains the weights to be non-negative.
-Inherits From: `Constraint`
+
+Inherits From:
+[`Constraint`](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/Constraint)
+
 ### Aliases:
-- Class `tf.compat.v1.keras.constraints.NonNeg`
-- Class `tf.compat.v1.keras.constraints.non_neg`
-- Class `tf.compat.v2.keras.constraints.NonNeg`
-- Class `tf.compat.v2.keras.constraints.non_neg`
-- Class `tf.keras.constraints.non_neg`
+
+  * Class [`tf.compat.v1.keras.constraints.NonNeg`](/api_docs/python/tf/keras/constraints/NonNeg)
+  * Class [`tf.compat.v1.keras.constraints.non_neg`](/api_docs/python/tf/keras/constraints/NonNeg)
+  * Class [`tf.compat.v2.keras.constraints.NonNeg`](/api_docs/python/tf/keras/constraints/NonNeg)
+  * Class [`tf.compat.v2.keras.constraints.non_neg`](/api_docs/python/tf/keras/constraints/NonNeg)
+  * Class [`tf.keras.constraints.non_neg`](/api_docs/python/tf/keras/constraints/NonNeg)
+
 ## Methods
-### __call__
-View source
 
-```
- __call__(w)
-```
+### `__call__`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L86-L87)
+
+    
+    
+    __call__(w)
+    
+
 Call self as a function.
-### get_config
-View source
 
-```
- get_config()
-```
+### `get_config`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L40-L41)
+
+    
+    
+    get_config()
+    
+

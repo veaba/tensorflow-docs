@@ -1,21 +1,103 @@
-## Class Conv2D
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/layers/Conv2D) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/convolutional.py#L391-L498)  
+---|---  
+  
+## Class `Conv2D`
+
 2D convolution layer (e.g. spatial convolution over images).
+
 ### Aliases:
-- Class `tf.compat.v1.keras.layers.Conv2D`
-- Class `tf.compat.v1.keras.layers.Convolution2D`
-- Class `tf.compat.v2.keras.layers.Conv2D`
-- Class `tf.compat.v2.keras.layers.Convolution2D`
-- Class `tf.keras.layers.Convolution2D`
+
+  * Class [`tf.compat.v1.keras.layers.Conv2D`](/api_docs/python/tf/keras/layers/Conv2D)
+  * Class [`tf.compat.v1.keras.layers.Convolution2D`](/api_docs/python/tf/keras/layers/Conv2D)
+  * Class [`tf.compat.v2.keras.layers.Conv2D`](/api_docs/python/tf/keras/layers/Conv2D)
+  * Class [`tf.compat.v2.keras.layers.Convolution2D`](/api_docs/python/tf/keras/layers/Conv2D)
+  * Class [`tf.keras.layers.Convolution2D`](/api_docs/python/tf/keras/layers/Conv2D)
+
 ### Used in the guide:
-- ``T``h``e`` ``K``e``r``a``s`` ``f``u``n``c``t``i``o``n``a``l`` ``A``P``I`` ``i``n`` ``T``e``n``s``o``r``F``l``o``w``
-- ``M``i``g``r``a``t``e`` ``y``o``u``r`` ``T``e``n``s``o``r``F``l``o``w`` ``1`` ``c``o``d``e`` ``t``o`` ``T``e``n``s``o``r``F``l``o``w`` ``2``
-- ``E``a``g``e``r`` ``e``x``e``c``u``t``i``o``n``
-- ``T``r``a``i``n`` ``a``n``d`` ``e``v``a``l``u``a``t``e`` ``w``i``t``h`` ``K``e``r``a``s``
-- ``B``e``t``t``e``r`` ``p``e``r``f``o``r``m``a``n``c``e`` ``w``i``t``h`` ``t``f``.``f``u``n``c``t``i``o``n`` ``a``n``d`` ``A``u``t``o``G``r``a``p``h``
+
+  * [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
+  * [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
+  * [Eager execution](https://tensorflow.google.cn/guide/eager)
+  * [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
+  * [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
+
 ### Used in the tutorials:
-- ``C``u``s``t``o``m`` ``l``a``y``e``r``s``
-- ``I``m``a``g``e`` ``c``l``a``s``s``i``f``i``c``a``t``i``o``n``
-- ``B``a``s``i``c`` ``c``l``a``s``s``i``f``i``c``a``t``i``o``n``:`` ``C``l``a``s``s``i``f``y`` ``i``m``a``g``e``s`` ``o``f`` ``c``l``o``t``h``i``n``g``
-- ``P``i``x``2``P``i``x``
-- ``C``o``n``v``o``l``u``t``i``o``n``a``l`` ``N``e``u``r``a``l`` ``N``e``t``w``o``r``k`` ``(``C``N``N``)``
-This layer creates a convolution kernel that is convolved with the layer input to produce a tensor of outputs. If `use_bias` is True, a bias vector is created and added to the outputs. Finally, if `activation` is not `None`, it is applied to the outputs as well.
+
+  * [Custom layers](https://tensorflow.google.cn/tutorials/customization/custom_layers)
+  * [Image classification](https://tensorflow.google.cn/tutorials/images/classification)
+  * [Basic classification: Classify images of clothing](https://tensorflow.google.cn/tutorials/keras/classification)
+  * [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
+  * [Convolutional Neural Network (CNN)](https://tensorflow.google.cn/tutorials/images/cnn)
+
+This layer creates a convolution kernel that is convolved with the layer input
+to produce a tensor of outputs. If `use_bias` is True, a bias vector is
+created and added to the outputs. Finally, if `activation` is not `None`, it
+is applied to the outputs as well.
+
+When using this layer as the first layer in a model, provide the keyword
+argument `input_shape` (tuple of integers, does not include the sample axis),
+e.g. `input_shape=(128, 128, 3)` for 128x128 RGB pictures in
+`data_format="channels_last"`.
+
+#### Arguments:
+
+  * **`filters`** : Integer, the dimensionality of the output space (i.e. the number of output filters in the convolution).
+  * **`kernel_size`** : An integer or tuple/list of 2 integers, specifying the height and width of the 2D convolution window. Can be a single integer to specify the same value for all spatial dimensions.
+  * **`strides`** : An integer or tuple/list of 2 integers, specifying the strides of the convolution along the height and width. Can be a single integer to specify the same value for all spatial dimensions. Specifying any stride value != 1 is incompatible with specifying any `dilation_rate` value != 1.
+  * **`padding`** : one of `"valid"` or `"same"` (case-insensitive).
+  * **`data_format`** : A string, one of `channels_last` (default) or `channels_first`. The ordering of the dimensions in the inputs. `channels_last` corresponds to inputs with shape `(batch, height, width, channels)` while `channels_first` corresponds to inputs with shape `(batch, channels, height, width)`. It defaults to the `image_data_format` value found in your Keras config file at `~/.keras/keras.json`. If you never set it, then it will be "channels_last".
+  * **`dilation_rate`** : an integer or tuple/list of 2 integers, specifying the dilation rate to use for dilated convolution. Can be a single integer to specify the same value for all spatial dimensions. Currently, specifying any `dilation_rate` value != 1 is incompatible with specifying any stride value != 1.
+  * **`activation`** : Activation function to use. If you don't specify anything, no activation is applied (ie. "linear" activation: `a(x) = x`).
+  * **`use_bias`** : Boolean, whether the layer uses a bias vector.
+  * **`kernel_initializer`** : Initializer for the `kernel` weights matrix.
+  * **`bias_initializer`** : Initializer for the bias vector.
+  * **`kernel_regularizer`** : Regularizer function applied to the `kernel` weights matrix.
+  * **`bias_regularizer`** : Regularizer function applied to the bias vector.
+  * **`activity_regularizer`** : Regularizer function applied to the output of the layer (its "activation")..
+  * **`kernel_constraint`** : Constraint function applied to the kernel matrix.
+  * **`bias_constraint`** : Constraint function applied to the bias vector.
+
+#### Input shape:
+
+4D tensor with shape: `(samples, channels, rows, cols)` if
+data_format='channels_first' or 4D tensor with shape: `(samples, rows, cols,
+channels)` if data_format='channels_last'.
+
+#### Output shape:
+
+4D tensor with shape: `(samples, filters, new_rows, new_cols)` if
+data_format='channels_first' or 4D tensor with shape: `(samples, new_rows,
+new_cols, filters)` if data_format='channels_last'. `rows` and `cols` values
+might have changed due to padding.
+
+## `__init__`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/convolutional.py#L464-L498)
+
+    
+    
+    __init__(
+        filters,
+        kernel_size,
+        strides=(1, 1),
+        padding='valid',
+        data_format=None,
+        dilation_rate=(1, 1),
+        activation=None,
+        use_bias=True,
+        kernel_initializer='glorot_uniform',
+        bias_initializer='zeros',
+        kernel_regularizer=None,
+        bias_regularizer=None,
+        activity_regularizer=None,
+        kernel_constraint=None,
+        bias_constraint=None,
+        **kwargs
+    )
+    
+

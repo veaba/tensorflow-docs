@@ -1,24 +1,42 @@
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L515-L544)  
+---  
+  
 Returns the size of a tensor.
 
-```
- tf.compat.v1.size(
-    input,
-    name=None,
-    out_type=tf.dtypes.int32
-)
-```
-Returns a 0-D `Tensor` representing the number of elements in `input` of type `out_type`. Defaults to tf.int32.
+    
+    
+    tf.compat.v1.size(
+        input,
+        name=None,
+        out_type=tf.dtypes.int32
+    )
+    
+
+Returns a 0-D `Tensor` representing the number of elements in `input` of type
+`out_type`. Defaults to tf.int32.
+
 #### For example:
 
-```
- t = tf.constant([[[1, 1, 1], [2, 2, 2]], [[3, 3, 3], [4, 4, 4]]])
-tf.size(t)  # 12
-```
+    
+    
+    t = tf.constant([[[1, 1, 1], [2, 2, 2]], [[3, 3, 3], [4, 4, 4]]])
+    tf.size(t)  # 12
+    
+
 #### Args:
-- `input`: A `Tensor` or `SparseTensor`.
-- `name`: A `name` for the operation (optional).
-- `out_type`: (Optional) The specified non-quantized numeric output type of the operation. Defaults to `tf.int32`.
+
+  * **`input`** : A `Tensor` or `SparseTensor`.
+  * **`name`** : A name for the operation (optional).
+  * **`out_type`** : (Optional) The specified non-quantized numeric output type of the operation. Defaults to [`tf.int32`](https://tensorflow.google.cn/api_docs/python/tf#int32).
+
 #### Returns:
-A `Tensor` of type `out_type`. Defaults to `tf.int32`.
+
+A `Tensor` of type `out_type`. Defaults to
+[`tf.int32`](https://tensorflow.google.cn/api_docs/python/tf#int32).
+
 #### Numpy Compatibility
+
 Equivalent to np.size()
+

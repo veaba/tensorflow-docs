@@ -1,32 +1,51 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/backend/repeat) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L2927-L2959)  
+---|---  
+  
 Repeats a 2D tensor.
-### Aliases:
-- `tf.compat.v1.keras.backend.repeat`
-- `tf.compat.v2.keras.backend.repeat`
 
-```
- tf.keras.backend.repeat(
-    x,
-    n
-)
-```
-if `x` has shape (samples, dim) a`n`d `n` is `2`, the output will have shape `samples, 2, dim)`.
+### Aliases:
+
+  * [`tf.compat.v1.keras.backend.repeat`](/api_docs/python/tf/keras/backend/repeat)
+  * [`tf.compat.v2.keras.backend.repeat`](/api_docs/python/tf/keras/backend/repeat)
+
+    
+    
+    tf.keras.backend.repeat(
+        x,
+        n
+    )
+    
+
+if `x` has shape (samples, dim) and `n` is `2`, the output will have shape
+`(samples, 2, dim)`.
+
 #### Arguments:
-- `x`: Tensor or variable.
-- `n`: Pytho`n` i`n`teger, `n`umber of times to repeat.
+
+  * **`x`** : Tensor or variable.
+  * **`n`** : Python integer, number of times to repeat.
+
 #### Returns:
+
 A tensor.
+
 #### Example:
 
-```
-   >>> b = tf.constant([[1, 2], [3, 4]])
-  >>> b
-  <tf.Tensor: id=78, shape=(2, 2), dtype=int32, numpy=
-  array([[1, 2],
-         [3, 4]], dtype=int32)>
-  >>> tf.keras.backend.repeat(b, n=2)
-  <tf.Tensor: id=82, shape=(2, 2, 2), dtype=int32, numpy=
-  array([[[1, 2],
-          [1, 2]],
-         [[3, 4],
-          [3, 4]]], dtype=int32)>
-```
+    
+    
+      >>> b = tf.constant([[1, 2], [3, 4]])
+      >>> b
+      <tf.Tensor: id=78, shape=(2, 2), dtype=int32, numpy=
+      array([[1, 2],
+             [3, 4]], dtype=int32)>
+      >>> tf.keras.backend.repeat(b, n=2)
+      <tf.Tensor: id=82, shape=(2, 2, 2), dtype=int32, numpy=
+      array([[[1, 2],
+              [1, 2]],
+             [[3, 4],
+              [3, 4]]], dtype=int32)>
+    
+

@@ -1,18 +1,43 @@
-## Class NodeDef
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/framework/node_def.proto)  
+---  
+  
+## Class `NodeDef`
+
 A ProtocolMessage
+
 ## Child Classes
-`class AttrEntry`
-`class ExperimentalDebugInfo`
+
+[`class
+AttrEntry`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/NodeDef/AttrEntry)
+
+[`class
+ExperimentalDebugInfo`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/NodeDef/ExperimentalDebugInfo)
+
 ## Properties
-### attr
+
+### `attr`
+
 `repeated AttrEntry attr`
-### device
+
+### `device`
+
 `string device`
-### experimental_debug_info
+
+### `experimental_debug_info`
+
 `ExperimentalDebugInfo experimental_debug_info`
-### input
+
+### `input`
+
 `repeated string input`
-### name
+
+### `name`
+
 `string name`
-### op
+
+### `op`
+
 `string op`
+

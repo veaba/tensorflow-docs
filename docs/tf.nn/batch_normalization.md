@@ -1,31 +1,56 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/nn/batch_normalization) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L1382-L1442)  
+---|---  
+  
 Batch normalization.
-### Aliases:
-- `tf.compat.v1.nn.batch_normalization`
-- `tf.compat.v2.nn.batch_normalization`
 
-```
- tf.nn.batch_normalization(
-    x,
-    mean,
-    variance,
-    offset,
-    scale,
-    variance_epsilon,
-    name=None
-)
-```
-Normalizes a tensor by `mean` and `variance`, and applies (optionally) a `scale` γ to it, as well as an `offset` β:
-`mean`, `variance`, `offset` and `scale` are all expected to be of one of two shapes:
-See Source: Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift; S. Ioffe, C. Szegedy.
+### Aliases:
+
+  * [`tf.compat.v1.nn.batch_normalization`](/api_docs/python/tf/nn/batch_normalization)
+  * [`tf.compat.v2.nn.batch_normalization`](/api_docs/python/tf/nn/batch_normalization)
+
+    
+    
+    tf.nn.batch_normalization(
+        x,
+        mean,
+        variance,
+        offset,
+        scale,
+        variance_epsilon,
+        name=None
+    )
+    
+
+Normalizes a tensor by `mean` and `variance`, and applies (optionally) a
+`scale` \\(\gamma\\) to it, as well as an `offset` \\(\beta\\):
+
+\\(\frac{\gamma(x-\mu)}{\sigma}+\beta\\)
+
+`mean`, `variance`, `offset` and `scale` are all expected to be of one of two
+shapes:
+
+  * In all generality, they can have the same number of dimensions as the input `x`, with identical sizes as `x` for the dimensions that are not normalized over (the 'depth' dimension(s)), and dimension 1 for the others which are being normalized over. `mean` and `variance` in this case would typically be the outputs of [`tf.nn.moments(..., keep_dims=True)`](https://tensorflow.google.cn/api_docs/python/tf/nn/moments) during training, or running averages thereof during inference.
+  * In the common case where the 'depth' dimension is the last dimension in the input tensor `x`, they may be one dimensional tensors of the same size as the 'depth' dimension. This is the case for example for the common `[batch, depth]` layout of fully-connected layers, and `[batch, height, width, depth]` for convolutions. `mean` and `variance` in this case would typically be the outputs of [`tf.nn.moments(..., keep_dims=False)`](https://tensorflow.google.cn/api_docs/python/tf/nn/moments) during training, or running averages thereof during inference.
+
+See Source: [Batch Normalization: Accelerating Deep Network Training by
+Reducing Internal Covariate Shift; S. Ioffe, C.
+Szegedy](http://arxiv.org/abs/1502.03167).
+
 #### Args:
-- `x`: Input `Tensor` of arbitrary dimensionality.
-- `mean`: A `mean` `Tensor`.
-- `variance`: A `variance` `Tensor`.
-- `offset`: An `offset` `Tensor`, often denoted
-in equations, or None. If present, will be added to the normalized tensor.
-- `scale`: A `scale` `Tensor`, often denoted
-in equations, or `None`. If present, the `scale` is applied to the normalized tensor.
-- `variance_epsilon`: A small float number to avoid dividing by 0.
-- `name`: A `name` for this operation (optional).
+
+  * **`x`** : Input `Tensor` of arbitrary dimensionality.
+  * **`mean`** : A mean `Tensor`.
+  * **`variance`** : A variance `Tensor`.
+  * **`offset`** : An offset `Tensor`, often denoted \\(\beta\\) in equations, or None. If present, will be added to the normalized tensor.
+  * **`scale`** : A scale `Tensor`, often denoted \\(\gamma\\) in equations, or `None`. If present, the scale is applied to the normalized tensor.
+  * **`variance_epsilon`** : A small float number to avoid dividing by 0.
+  * **`name`** : A name for this operation (optional).
+
 #### Returns:
+
 the normalized, scaled, offset tensor.
+

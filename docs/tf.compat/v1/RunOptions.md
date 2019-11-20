@@ -1,25 +1,52 @@
-## Class RunOptions
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/protobuf/config.proto)  
+---  
+  
+## Class `RunOptions`
+
 A ProtocolMessage
+
 ## Child Classes
-`class Experimental`
+
+[`class
+Experimental`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/RunOptions/Experimental)
+
 ## Properties
-### debug_options
+
+### `debug_options`
+
 `DebugOptions debug_options`
-### experimental
+
+### `experimental`
+
 `Experimental experimental`
-### inter_op_thread_pool
+
+### `inter_op_thread_pool`
+
 `int32 inter_op_thread_pool`
-### output_partition_graphs
+
+### `output_partition_graphs`
+
 `bool output_partition_graphs`
-### report_tensor_allocations_upon_oom
+
+### `report_tensor_allocations_upon_oom`
+
 `bool report_tensor_allocations_upon_oom`
-### timeout_in_ms
+
+### `timeout_in_ms`
+
 `int64 timeout_in_ms`
-### trace_level
+
+### `trace_level`
+
 `TraceLevel trace_level`
+
 ## Class Members
-- `FULL_TRACE = 3`
-- `HARDWARE_TRACE = 2`
-- `NO_TRACE = 0`
-- `SOFTWARE_TRACE = 1`
-- `TraceLevel`
+
+  * `FULL_TRACE = 3`
+  * `HARDWARE_TRACE = 2`
+  * `NO_TRACE = 0`
+  * `SOFTWARE_TRACE = 1`
+  * `TraceLevel`
+

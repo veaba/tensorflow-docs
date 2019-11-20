@@ -1,23 +1,66 @@
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L708-L784)  
+---  
+  
 Assert the condition `x` and `y` are close element-wise.
-### Aliases:
-- `tf.compat.v1.debugging.assert_near`
 
-```
- tf.compat.v1.assert_near(
-    x,
-    y,
-    rtol=None,
-    atol=None,
-    data=None,
-    summarize=None,
-    message=None,
-    name=None
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.debugging.assert_near`](/api_docs/python/tf/compat/v1/assert_near)
+
+    
+    
+    tf.compat.v1.assert_near(
+        x,
+        y,
+        rtol=None,
+        atol=None,
+        data=None,
+        summarize=None,
+        message=None,
+        name=None
+    )
+    
+
 Example of adding a dependency to an operation:
 
-```
- with tf.control_dependencies([tf.compat.v1.assert_near(x, y)]):
-  output = tf.reduce_sum(x)
-```
-This condition holds if for every pair of (possibly broadcast) elements `x[i]`, `y[i]`, we have
+    
+    
+    with tf.control_dependencies([tf.compat.v1.assert_near(x, y)]):
+      output = tf.reduce_sum(x)
+    
+
+This condition holds if for every pair of (possibly broadcast) elements
+`x[i]`, `y[i]`, we have
+
+`tf.abs(x[i] - y[i]) <= atol + rtol * tf.abs(y[i])`.
+
+If both `x` and `y` are empty, this is trivially satisfied.
+
+The default `atol` and `rtol` is `10 * eps`, where `eps` is the smallest
+representable positive number such that `1 + eps != 1`. This is about `1.2e-6`
+in `32bit`, `2.22e-15` in `64bit`, and `0.00977` in `16bit`. See
+`numpy.finfo`.
+
+#### Args:
+
+  * **`x`** : Float or complex `Tensor`.
+  * **`y`** : Float or complex `Tensor`, same `dtype` as, and broadcastable to, `x`.
+  * **`rtol`** : `Tensor`. Same `dtype` as, and broadcastable to, `x`. The relative tolerance. Default is `10 * eps`.
+  * **`atol`** : `Tensor`. Same `dtype` as, and broadcastable to, `x`. The absolute tolerance. Default is `10 * eps`.
+  * **`data`** : The tensors to print out if the condition is False. Defaults to error message and first few entries of `x`, `y`.
+  * **`summarize`** : Print this many entries of each tensor.
+  * **`message`** : A string to prefix to the default message.
+  * **`name`** : A name for this operation (optional). Defaults to "assert_near".
+
+#### Returns:
+
+Op that raises `InvalidArgumentError` if `x` and `y` are not close enough.
+
+#### Numpy Compatibility
+
+Similar to `numpy.assert_allclose`, except tolerance depends on data type.
+This is due to the fact that `TensorFlow` is often used with `32bit`, `64bit`,
+and even `16bit` data.
+

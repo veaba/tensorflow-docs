@@ -1,28 +1,47 @@
-Creates a `Dataset` that counts from `start` in `step`s of size `step`.
-### Aliases:
-- `tf.compat.v2.data.experimental.Counter`
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/data/experimental/Counter) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/counter.py#L28-L55)  
+---|---  
+  
+Creates a `Dataset` that counts from `start` in steps of size `step`.
 
-```
- tf.data.experimental.Counter(
-    start=0,
-    step=1,
-    dtype=tf.dtypes.int64
-)
-```
+### Aliases:
+
+  * [`tf.compat.v2.data.experimental.Counter`](/api_docs/python/tf/data/experimental/Counter)
+
+    
+    
+    tf.data.experimental.Counter(
+        start=0,
+        step=1,
+        dtype=tf.dtypes.int64
+    )
+    
+
 ### Used in the guide:
-- ``t``f``.``d``a``t``a``:`` ``B``u``i``l``d`` ``T``e``n``s``o``r``F``l``o``w`` ``i``n``p``u``t`` ``p``i``p``e``l``i``n``e``s``
+
+  * [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
+
 #### For example:
 
-```
- Dataset.count() == [0, 1, 2, ...)
-Dataset.count(2) == [2, 3, ...)
-Dataset.count(2, 5) == [2, 7, 12, ...)
-Dataset.count(0, -1) == [0, -1, -2, ...)
-Dataset.count(10, -1) == [10, 9, ...)
-```
+    
+    
+    Dataset.count() == [0, 1, 2, ...)
+    Dataset.count(2) == [2, 3, ...)
+    Dataset.count(2, 5) == [2, 7, 12, ...)
+    Dataset.count(0, -1) == [0, -1, -2, ...)
+    Dataset.count(10, -1) == [10, 9, ...)
+    
+
 #### Args:
-- `start`: (Optional.) The `start`ing value for the counter. Defaults to 0.
-- `step`: (Optional.) The `step` size for the counter. Defaults to 1.
-- `dtype`: (Optional.) The data type for counter elements. Defaults to `tf.int64`.
+
+  * **`start`** : (Optional.) The starting value for the counter. Defaults to 0.
+  * **`step`** : (Optional.) The step size for the counter. Defaults to 1.
+  * **`dtype`** : (Optional.) The data type for counter elements. Defaults to [`tf.int64`](https://tensorflow.google.cn/api_docs/python/tf#int64).
+
 #### Returns:
+
 A `Dataset` of scalar `dtype` elements.
+

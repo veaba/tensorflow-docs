@@ -1,23 +1,51 @@
-## Class Value
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/framework/summary.proto)  
+---  
+  
+## Class `Value`
+
 A ProtocolMessage
+
 ### Aliases:
-- Class `tf.compat.v1.summary.Summary.Value`
+
+  * Class [`tf.compat.v1.summary.Summary.Value`](/api_docs/python/tf/compat/v1/Summary/Value)
+
 ## Properties
-### audio
+
+### `audio`
+
 `Audio audio`
-### histo
+
+### `histo`
+
 `HistogramProto histo`
-### image
+
+### `image`
+
 `Image image`
-### metadata
+
+### `metadata`
+
 `SummaryMetadata metadata`
-### node_name
+
+### `node_name`
+
 `string node_name`
-### obsolete_old_style_histogram
+
+### `obsolete_old_style_histogram`
+
 `bytes obsolete_old_style_histogram`
-### simple_value
+
+### `simple_value`
+
 `float simple_value`
-### tag
+
+### `tag`
+
 `string tag`
-### tensor
+
+### `tensor`
+
 `TensorProto tensor`
+

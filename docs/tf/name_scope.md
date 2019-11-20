@@ -1,72 +1,79 @@
-![](https://tensorflow.google.cn/images/tf_logo_32px.png)
-## Class  `name_scope` 
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/name_scope) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6386-L6454)  
+---|---  
+  
+## Class `name_scope`
 
 A context manager for use when defining a Python op.
 
-Inherits From: [ `name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/backend/name_scope)
+Inherits From:
+[`name_scope`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/backend/name_scope)
 
 ### Aliases:
 
-- Class [ `tf.compat.v2.name_scope` ](/api_docs/python/tf/name_scope)
+  * Class [`tf.compat.v2.name_scope`](/api_docs/python/tf/name_scope)
 
-This context manager pushes a name scope, which will make the name of alloperations added within it have a prefix.
+This context manager pushes a name scope, which will make the name of all
+operations added within it have a prefix.
 
-For example, to define a new Python op called  `my_op` :
+For example, to define a new Python op called `my_op`:
 
+    
+    
+    def my_op(a, b, c, name=None):
+      with tf.name_scope("MyOp") as scope:
+        a = tf.convert_to_tensor(a, name="a")
+        b = tf.convert_to_tensor(b, name="b")
+        c = tf.convert_to_tensor(c, name="c")
+        # Define some computation that uses `a`, `b`, and `c`.
+        return foo_op(..., name=scope)
+    
 
-```python
-def my_op(a, b, c, name=None):
-&nbsp; with tf.name_scope("MyOp") as scope:
-  a = tf.convert_to_tensor(a, name="a")
-  b = tf.convert_to_tensor(b, name="b")
-  c = tf.convert_to_tensor(c, name="c")
-  # Define some computation that uses `a`, `b`, and `c`.
-  return foo_op(..., name=scope)
+When executed, the Tensors `a`, `b`, `c`, will have names `MyOp/a`, `MyOp/b`,
+and `MyOp/c`.
 
-```
+If the scope name already exists, the name will be made unique by appending
+`_n`. For example, calling `my_op` the second time will generate `MyOp_1/a`,
+etc.
 
+## `__init__`
 
-When executed, the Tensors  `a` ,  `b` ,  `c` , will have names  `MyOp/a` ,  `MyOp/b` ,and  `MyOp/c` .
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6412-L6424)
 
-If the scope name already exists, the name will be made unique by appending `_n` . For example, calling  `my_op`  the second time will generate  `MyOp_1/a` ,etc.
-
-##  `__init__` 
-
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6412-L6424)
-
-
-```python
-__init__(name)
-
-```
-
+    
+    
+    __init__(name)
+    
 
 Initialize the context manager.
 
 #### Args:
 
-- **`name`** : The prefix to use on all names created within the name scope.
+  * **`name`** : The prefix to use on all names created within the name scope.
 
 #### Raises:
 
-- **`ValueError`** : If name is None, or not a string.
+  * **`ValueError`** : If name is None, or not a string.
 
 ## Properties
 
-###  `name` 
+### `name`
 
 ## Methods
 
-###  `__enter__` 
+### `__enter__`
 
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6430-L6449)
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6430-L6449)
 
-
-```python
-__enter__()
-
-```
-
+    
+    
+    __enter__()
+    
 
 Start the scope block.
 
@@ -76,19 +83,19 @@ The scope name.
 
 #### Raises:
 
-- **`ValueError`** : if neither  `name`  nor  `default_name`  is providedbut  `values`  are.
+  * **`ValueError`** : if neither `name` nor `default_name` is provided but `values` are.
 
-###  `__exit__` 
+### `__exit__`
 
-[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6451-L6454)
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6451-L6454)
 
-
-```python
-__exit__(
-  type_arg,
-  value_arg,
-  traceback_arg
-)
-
-```
+    
+    
+    __exit__(
+        type_arg,
+        value_arg,
+        traceback_arg
+    )
+    
 

@@ -1,70 +1,92 @@
-Compute set difference of elements in l`a`st dimension of `a` `a`nd `b`.
-### Aliases:
-- `tf.compat.v1.sets.difference`
-- `tf.compat.v1.sets.set_difference`
-- `tf.compat.v2.sets.difference`
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/sets/difference) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sets_impl.py#L204-L280)  
+---|---  
+  
+Compute set difference of elements in last dimension of `a` and `b`.
 
-```
- tf.sets.difference(
-    a,
-    b,
-    aminusb=True,
-    validate_indices=True
-)
-```
-All `b`ut the l`a`st dimension of `a` `a`nd `b` must m`a`tch.
+### Aliases:
+
+  * [`tf.compat.v1.sets.difference`](/api_docs/python/tf/sets/difference)
+  * [`tf.compat.v1.sets.set_difference`](/api_docs/python/tf/sets/difference)
+  * [`tf.compat.v2.sets.difference`](/api_docs/python/tf/sets/difference)
+
+    
+    
+    tf.sets.difference(
+        a,
+        b,
+        aminusb=True,
+        validate_indices=True
+    )
+    
+
+All but the last dimension of `a` and `b` must match.
+
 #### Example:
 
-```
-   import tensorflow as tf
-  import collections
+    
+    
+      import tensorflow as tf
+      import collections
+    
+      # Represent the following array of sets as a sparse tensor:
+      # a = np.array([[{1, 2}, {3}], [{4}, {5, 6}]])
+      a = collections.OrderedDict([
+          ((0, 0, 0), 1),
+          ((0, 0, 1), 2),
+          ((0, 1, 0), 3),
+          ((1, 0, 0), 4),
+          ((1, 1, 0), 5),
+          ((1, 1, 1), 6),
+      ])
+      a = tf.SparseTensor(list(a.keys()), list(a.values()), dense_shape=[2, 2, 2])
+    
+      # np.array([[{1, 3}, {2}], [{4, 5}, {5, 6, 7, 8}]])
+      b = collections.OrderedDict([
+          ((0, 0, 0), 1),
+          ((0, 0, 1), 3),
+          ((0, 1, 0), 2),
+          ((1, 0, 0), 4),
+          ((1, 0, 1), 5),
+          ((1, 1, 0), 5),
+          ((1, 1, 1), 6),
+          ((1, 1, 2), 7),
+          ((1, 1, 3), 8),
+      ])
+      b = tf.SparseTensor(list(b.keys()), list(b.values()), dense_shape=[2, 2, 4])
+    
+      # `set_difference` is applied to each aligned pair of sets.
+      tf.sets.difference(a, b)
+    
+      # The result will be equivalent to either of:
+      #
+      # np.array([[{2}, {3}], [{}, {}]])
+      #
+      # collections.OrderedDict([
+      #     ((0, 0, 0), 2),
+      #     ((0, 1, 0), 3),
+      # ])
+    
 
-  # Represent the following array of sets as a sparse tensor:
-  # a = np.array([[{1, 2}, {3}], [{4}, {5, 6}]])
-  a = collections.OrderedDict([
-      ((0, 0, 0), 1),
-      ((0, 0, 1), 2),
-      ((0, 1, 0), 3),
-      ((1, 0, 0), 4),
-      ((1, 1, 0), 5),
-      ((1, 1, 1), 6),
-  ])
-  a = tf.SparseTensor(list(a.keys()), list(a.values()), dense_shape=[2, 2, 2])
-
-  # np.array([[{1, 3}, {2}], [{4, 5}, {5, 6, 7, 8}]])
-  b = collections.OrderedDict([
-      ((0, 0, 0), 1),
-      ((0, 0, 1), 3),
-      ((0, 1, 0), 2),
-      ((1, 0, 0), 4),
-      ((1, 0, 1), 5),
-      ((1, 1, 0), 5),
-      ((1, 1, 1), 6),
-      ((1, 1, 2), 7),
-      ((1, 1, 3), 8),
-  ])
-  b = tf.SparseTensor(list(b.keys()), list(b.values()), dense_shape=[2, 2, 4])
-
-  # `set_difference` is applied to each aligned pair of sets.
-  tf.sets.difference(a, b)
-
-  # The result will be equivalent to either of:
-  #
-  # np.array([[{2}, {3}], [{}, {}]])
-  #
-  # collections.OrderedDict([
-  #     ((0, 0, 0), 2),
-  #     ((0, 1, 0), 3),
-  # ])
-```
 #### Args:
-- `a`: `Tensor` or `SparseTensor` of the s`a`me type `a`s `b`. If sp`a`rse, indices must `b`e sorted in row-m`a`jor order.
-- `b`: `Tensor` or `SparseTensor` of the s`a`me type `a`s `a`. If sp`a`rse, indices must `b`e sorted in row-m`a`jor order.
-- `aminusb`: Whether to su`b`tr`a`ct `b` from `a`, vs vice vers`a`.
-- `validate_indices`: Whether to v`a`lid`a`te the order `a`nd r`a`nge of sp`a`rse indices in `a` `a`nd `b`.
+
+  * **`a`** : `Tensor` or `SparseTensor` of the same type as `b`. If sparse, indices must be sorted in row-major order.
+  * **`b`** : `Tensor` or `SparseTensor` of the same type as `a`. If sparse, indices must be sorted in row-major order.
+  * **`aminusb`** : Whether to subtract `b` from `a`, vs vice versa.
+  * **`validate_indices`** : Whether to validate the order and range of sparse indices in `a` and `b`.
+
 #### Returns:
-A `SparseTensor` whose sh`a`pe is the s`a`me r`a`nk `a`s `a` `a`nd `b`, `a`nd `a`ll `b`ut the l`a`st dimension the s`a`me. Elements `a`long the l`a`st dimension cont`a`in the differences.
+
+A `SparseTensor` whose shape is the same rank as `a` and `b`, and all but the
+last dimension the same. Elements along the last dimension contain the
+differences.
+
 #### Raises:
-- `TypeError`: If inputs `a`re inv`a`lid types, or if `a` `a`nd `b` h`a`ve different types.
-- `ValueError`: If `a` is sp`a`rse `a`nd `b` is dense.
-- `errors_impl.InvalidArgumentError`: If the sh`a`pes of `a` `a`nd `b` do not m`a`tch in `a`ny dimension other th`a`n the l`a`st dimension.
+
+  * **`TypeError`** : If inputs are invalid types, or if `a` and `b` have different types.
+  * **`ValueError`** : If `a` is sparse and `b` is dense.
+  * **`errors_impl.InvalidArgumentError`** : If the shapes of `a` and `b` do not match in any dimension other than the last dimension.
+

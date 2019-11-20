@@ -1,16 +1,31 @@
-Creates a te`n`sor by tili`n`g `x` by `n`.
-### Aliases:
-- `tf.compat.v1.keras.backend.tile`
-- `tf.compat.v2.keras.backend.tile`
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/backend/tile) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L3000-L3014)  
+---|---  
+  
+Creates a tensor by tiling `x` by `n`.
 
-```
- tf.keras.backend.tile(
-    x,
-    n
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.keras.backend.tile`](/api_docs/python/tf/keras/backend/tile)
+  * [`tf.compat.v2.keras.backend.tile`](/api_docs/python/tf/keras/backend/tile)
+
+    
+    
+    tf.keras.backend.tile(
+        x,
+        n
+    )
+    
+
 #### Arguments:
-- `x`: A tensor or variable
-- `n`: A list of i`n`teger. The le`n`gth must be the same as the `n`umber of dime`n`sio`n`s i`n` `x`.
+
+  * **`x`** : A tensor or variable
+  * **`n`** : A list of integer. The length must be the same as the number of dimensions in `x`.
+
 #### Returns:
+
 A tiled tensor.
+

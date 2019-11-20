@@ -1,29 +1,56 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/data/experimental/get_single_element)
+|  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
+on GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/get_single_element.py#L26-L70)  
+---|---  
+  
 Returns the single element in `dataset` as a nested structure of tensors.
+
 ### Aliases:
-- `tf.compat.v1.data.experimental.get_single_element`
-- `tf.compat.v2.data.experimental.get_single_element`
 
-```
- tf.data.experimental.get_single_element(dataset)
-```
-This function enables you to use a `tf.data.Dataset` in a stateless "tensor-in tensor-out" expression, without creating a `tf.compat.v1.data.Iterator`. This can be useful when your preprocessing transformations are expressed as a `Dataset`, and you want to use the transformation at serving time. For example:
+  * [`tf.compat.v1.data.experimental.get_single_element`](/api_docs/python/tf/data/experimental/get_single_element)
+  * [`tf.compat.v2.data.experimental.get_single_element`](/api_docs/python/tf/data/experimental/get_single_element)
 
-```
- input_batch = tf.compat.v1.placeholder(tf.string, shape=[BATCH_SIZE])
+    
+    
+    tf.data.experimental.get_single_element(dataset)
+    
 
-def preprocessing_fn(input_str):
-  # ...
-  return image, label
+This function enables you to use a
+[`tf.data.Dataset`](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset)
+in a stateless "tensor-in tensor-out" expression, without creating a
+[`tf.compat.v1.data.Iterator`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/Iterator).
+This can be useful when your preprocessing transformations are expressed as a
+`Dataset`, and you want to use the transformation at serving time. For
+example:
 
-dataset = (tf.data.Dataset.from_tensor_slices(input_batch)
-           .map(preprocessing_fn, num_parallel_calls=BATCH_SIZE)
-           .batch(BATCH_SIZE))
+    
+    
+    input_batch = tf.compat.v1.placeholder(tf.string, shape=[BATCH_SIZE])
+    
+    def preprocessing_fn(input_str):
+      # ...
+      return image, label
+    
+    dataset = (tf.data.Dataset.from_tensor_slices(input_batch)
+               .map(preprocessing_fn, num_parallel_calls=BATCH_SIZE)
+               .batch(BATCH_SIZE))
+    
+    image_batch, label_batch = tf.data.experimental.get_single_element(dataset)
+    
 
-image_batch, label_batch = tf.data.experimental.get_single_element(dataset)
-```
 #### Args:
-- `dataset`: A `tf.data.Dataset` object containing a single element.
+
+  * **`dataset`** : A [`tf.data.Dataset`](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) object containing a single element.
+
 #### Returns:
-A nested structure of `tf.Tensor` objects, corresponding to the single element of `dataset`.
+
+A nested structure of
+[`tf.Tensor`](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects,
+corresponding to the single element of `dataset`.
+
 #### Raises:
-- `TypeError`: if `dataset` is not a `tf.data.Dataset` object. InvalidArgumentError (at runtime): if `dataset` does not contain exactly one element.
+
+  * **`TypeError`** : if `dataset` is not a [`tf.data.Dataset`](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) object. InvalidArgumentError (at runtime): if `dataset` does not contain exactly one element.
+

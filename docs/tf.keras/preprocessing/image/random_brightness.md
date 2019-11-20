@@ -1,28 +1,42 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/preprocessing/image/random_brightness)  
+---  
+  
 Performs a random brightness shift.
-### Aliases:
-- `tf.compat.v1.keras.preprocessing.image.random_brightness`
-- `tf.compat.v2.keras.preprocessing.image.random_brightness`
 
-```
- tf.keras.preprocessing.image.random_brightness(
-    x,
-    brightness_range
-)
-```
+### Aliases:
+
+  * [`tf.compat.v1.keras.preprocessing.image.random_brightness`](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
+  * [`tf.compat.v2.keras.preprocessing.image.random_brightness`](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
+
+    
+    
+    tf.keras.preprocessing.image.random_brightness(
+        x,
+        brightness_range
+    )
+    
+
 # Arguments
 
-```
- x: Input tensor. Must be 3D.
-brightness_range: Tuple of floats; brightness range.
-channel_axis: Index of axis for channels in the input tensor.
-```
+    
+    
+    x: Input tensor. Must be 3D.
+    brightness_range: Tuple of floats; brightness range.
+    channel_axis: Index of axis for channels in the input tensor.
+    
+
 # Returns
 
-```
- Numpy image tensor.
-```
+    
+    
+    Numpy image tensor.
+    
+
 # Raises
 
-```
- ValueError if `brightness_range` isn't a tuple.
-```
+    
+    
+    ValueError if `brightness_range` isn't a tuple.
+    
+

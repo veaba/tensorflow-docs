@@ -1,32 +1,56 @@
-Computes the theoretical and numeric Jacobian o`f` `f`.
-### Aliases:
-- `tf.compat.v2.test.compute_gradient`
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/test/compute_gradient) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/gradient_checker_v2.py#L296-L332)  
+---|---  
+  
+Computes the theoretical and numeric Jacobian of `f`.
 
-```
- tf.test.compute_gradient(
-    f,
-    x,
-    delta=0.001
-)
-```
+### Aliases:
+
+  * [`tf.compat.v2.test.compute_gradient`](/api_docs/python/tf/test/compute_gradient)
+
+    
+    
+    tf.test.compute_gradient(
+        f,
+        x,
+        delta=0.001
+    )
+    
+
 With y = f(x), computes the theoretical and numeric Jacobian dy/dx.
+
 #### Args:
-- `f`: the `f`unction.
-- `x`: a list arguments for the function
-- `delta`: (optional) perturbation used to compute numeric Jacobian.
+
+  * **`f`** : the function.
+  * **`x`** : a list arguments for the function
+  * **`delta`** : (optional) perturbation used to compute numeric Jacobian.
+
 #### Returns:
-A pair of lists, where the first is a list of 2-d numpy arrays representing the theoretical Jacobians for each argument, and the second list is the numerical ones. Each 2-d array has "x_size" rows and "y_size" columns where "x_size" is the number of elements in the corresponding argument and "y_size" is the number of elements in f(x).
+
+A pair of lists, where the first is a list of 2-d numpy arrays representing
+the theoretical Jacobians for each argument, and the second list is the
+numerical ones. Each 2-d array has "x_size" rows and "y_size" columns where
+"x_size" is the number of elements in the corresponding argument and "y_size"
+is the number of elements in f(x).
+
 #### Raises:
-- `ValueError`: If result is empty but the gradient is nonzero.
-- `ValueError`: If x is not list, but any other type.
+
+  * **`ValueError`** : If result is empty but the gradient is nonzero.
+  * **`ValueError`** : If x is not list, but any other type.
+
 #### Example:
 
-```
- @tf.function
-def test_func(x):
-  return x*x
+    
+    
+    @tf.function
+    def test_func(x):
+      return x*x
+    
+    theoretical, numerical = tf.test.compute_gradient(test_func, [1.0])
+    theoretical, numerical
+    # ((array([[2.]], dtype=float32),), (array([[2.000004]], dtype=float32),))
+    
 
-theoretical, numerical = tf.test.compute_gradient(test_func, [1.0])
-theoretical, numerical
-# ((array([[2.]], dtype=float32),), (array([[2.000004]], dtype=float32),))
-```

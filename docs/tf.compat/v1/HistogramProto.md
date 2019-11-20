@@ -1,17 +1,39 @@
-## Class HistogramProto
+[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/framework/summary.proto)  
+---  
+  
+## Class `HistogramProto`
+
 A ProtocolMessage
+
 ## Properties
-### bucket
+
+### `bucket`
+
 `repeated double bucket`
-### bucket_limit
+
+### `bucket_limit`
+
 `repeated double bucket_limit`
-### max
+
+### `max`
+
 `double max`
-### min
+
+### `min`
+
 `double min`
-### num
+
+### `num`
+
 `double num`
-### sum
+
+### `sum`
+
 `double sum`
-### sum_squares
+
+### `sum_squares`
+
 `double sum_squares`
+

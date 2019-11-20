@@ -1,26 +1,46 @@
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/math/betainc)  
+---  
+  
 Defined in generated file: `python/ops/gen_math_ops.py`
-Compute the regularized incomplete beta integral Ix(a,b).
-### Aliases:
-- `tf.compat.v1.betainc`
-- `tf.compat.v1.math.betainc`
-- `tf.compat.v2.math.betainc`
 
-```
- tf.math.betainc(
-    a,
-    b,
-    x,
-    name=None
-)
-```
+Compute the regularized incomplete beta integral \\(I_x(a, b)\\).
+
+### Aliases:
+
+  * [`tf.compat.v1.betainc`](/api_docs/python/tf/math/betainc)
+  * [`tf.compat.v1.math.betainc`](/api_docs/python/tf/math/betainc)
+  * [`tf.compat.v2.math.betainc`](/api_docs/python/tf/math/betainc)
+
+    
+    
+    tf.math.betainc(
+        a,
+        b,
+        x,
+        name=None
+    )
+    
+
 The regularized incomplete beta integral is defined as:
+
+\\(I_x(a, b) = \frac{B(x; a, b)}{B(a, b)}\\)
+
 where
-is the incomplete beta function and
-is the complete beta function.
+
+\\(B(x; a, b) = \int_0^x t^{a-1} (1 - t)^{b-1} dt\\)
+
+is the incomplete beta function and \\(B(a, b)\\) is the _complete_ beta
+function.
+
 #### Args:
-- `a`: A `Tensor`. Must be one of the following types: `float32`, `float64`.
-- `b`: A `Tensor`. Must h`a`ve the s`a`me type `a`s `a`.
-- `x`: A `Tensor`. Must h`a`ve the s`a`me type `a`s `a`.
-- `name`: A `name` for the operation (optional).
+
+  * **`a`** : A `Tensor`. Must be one of the following types: `float32`, `float64`.
+  * **`b`** : A `Tensor`. Must have the same type as `a`.
+  * **`x`** : A `Tensor`. Must have the same type as `a`.
+  * **`name`** : A name for the operation (optional).
+
 #### Returns:
-A `Tensor`. H`a`s the s`a`me type `a`s `a`.
+
+A `Tensor`. Has the same type as `a`.
+

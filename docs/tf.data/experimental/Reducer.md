@@ -1,21 +1,44 @@
-## Class Reducer
-A reducer is used for reducing a set of elements.
-### Aliases:
-- Class `tf.compat.v1.data.experimental.Reducer`
-- Class `tf.compat.v2.data.experimental.Reducer`
-A reducer is represented as a tuple of the three functions: 1) initialization function: key => initial state 2) reduce function: (old state, input) => new state 3) finalization function: state => result
-## __init__
-View source
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/data/experimental/Reducer) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/grouping.py#L443-L467)  
+---|---  
+  
+## Class `Reducer`
 
-```
- __init__(
-    init_func,
-    reduce_func,
-    finalize_func
-)
-```
+A reducer is used for reducing a set of elements.
+
+### Aliases:
+
+  * Class [`tf.compat.v1.data.experimental.Reducer`](/api_docs/python/tf/data/experimental/Reducer)
+  * Class [`tf.compat.v2.data.experimental.Reducer`](/api_docs/python/tf/data/experimental/Reducer)
+
+A reducer is represented as a tuple of the three functions: 1) initialization
+function: key => initial state 2) reduce function: (old state, input) => new
+state 3) finalization function: state => result
+
+## `__init__`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/grouping.py#L452-L455)
+
+    
+    
+    __init__(
+        init_func,
+        reduce_func,
+        finalize_func
+    )
+    
+
 Initialize self. See help(type(self)) for accurate signature.
+
 ## Properties
-### finalize_func
-### init_func
-### reduce_func
+
+### `finalize_func`
+
+### `init_func`
+
+### `reduce_func`
+

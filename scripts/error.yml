@@ -1,0 +1,8 @@
+"https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distribute/CentralStorageStrategy":"../docs/tf.compat/v1/distribute/CentralStorageStrategy.md"
+"https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distribute/MultiWorkerMirroredStrategy":"../docs/tf.compat/v1/distribute/MultiWorkerMirroredStrategy.md"
+"https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distribute/ParameterServerStrategy":"../docs/tf.compat/v1/distribute/ParameterServerStrategy.md"
+"https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distribute/TPUStrategy":"../docs/tf.compat/v1/distribute/TPUStrategy.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/imdb/Overvie":"../docs/tf.keras/datasets/imdb/Overvie.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/imdb/wget_word_index":"../docs/tf.keras/datasets/imdb/wget_word_index.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/rstimator":"../docs/tf.keras/datasets/rstimator/Overview.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/rstimator/model_to_estimator":"../docs/tf.keras/datasets/rstimator/model_to_estimator.md"

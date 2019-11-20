@@ -1,34 +1,62 @@
-## Class InputLayer
-Layer to be used as an entry point into a Network (a graph of layers).
-Inherits From: `Layer`
-### Aliases:
-- Class `tf.compat.v1.keras.layers.InputLayer`
-- Class `tf.compat.v2.keras.layers.InputLayer`
-### Used in the tutorials:
-- ``C``o``n``v``o``l``u``t``i``o``n``a``l`` ``V``a``r``i``a``t``i``o``n``a``l`` ``A``u``t``o``e``n``c``o``d``e``r``
-It can either wrap an existing tensor (pass an `input_tensor` argument) or create a placeholder tensor (pass arguments `input_shape`, and optionally, `dtype`).
-It is generally recommend to use the functional layer API via `Input`, (which creates an `Input`Layer) without directly using `Input`Layer.
-This class can create placeholders for tf.Tensors, tf.SparseTensors, and tf.RaggedTensors by choosing 'sparse=True' or 'ragged=True'.
-#### Arguments:
-- `input_shape`: Shape tuple (not including the batch axis), or `TensorShape` instance (not including the batch axis).
-- `batch_size`: Optional input batch size (integer or None).
-- `dtype`: Datatype of the input.
-- `input_tensor`: Optional tensor to use as layer input instead of creating a placeholder.
-- `sparse`: Boolean, whether the placeholder created is meant to be `sparse`.
-- `ragged`: Boolean, whether the placeholder created is meant to be `ragged`. In this case, values of 'None' in the 'shape' argument represent `ragged` dimensions. For more information about RaggedTensors, see https://www.tensorflow.org/guide/`ragged`_tensors.
-- `name`: Name of the layer (string).
-## __init__
-View source
+[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
+version](/versions/r1.15/api_docs/python/tf/keras/layers/InputLayer) |  [
+![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
+GitHub
+](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/input_layer.py#L33-L157)  
+---|---  
+  
+## Class `InputLayer`
 
-```
- __init__(
-    input_shape=None,
-    batch_size=None,
-    dtype=None,
-    input_tensor=None,
-    sparse=False,
-    name=None,
-    ragged=False,
-    **kwargs
-)
-```
+Layer to be used as an entry point into a Network (a graph of layers).
+
+Inherits From:
+[`Layer`](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
+
+### Aliases:
+
+  * Class [`tf.compat.v1.keras.layers.InputLayer`](/api_docs/python/tf/keras/layers/InputLayer)
+  * Class [`tf.compat.v2.keras.layers.InputLayer`](/api_docs/python/tf/keras/layers/InputLayer)
+
+### Used in the tutorials:
+
+  * [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
+
+It can either wrap an existing tensor (pass an `input_tensor` argument) or
+create a placeholder tensor (pass arguments `input_shape`, and optionally,
+`dtype`).
+
+It is generally recommend to use the functional layer API via `Input`, (which
+creates an `InputLayer`) without directly using `InputLayer`.
+
+This class can create placeholders for tf.Tensors, tf.SparseTensors, and
+tf.RaggedTensors by choosing 'sparse=True' or 'ragged=True'.
+
+#### Arguments:
+
+  * **`input_shape`** : Shape tuple (not including the batch axis), or `TensorShape` instance (not including the batch axis).
+  * **`batch_size`** : Optional input batch size (integer or None).
+  * **`dtype`** : Datatype of the input.
+  * **`input_tensor`** : Optional tensor to use as layer input instead of creating a placeholder.
+  * **`sparse`** : Boolean, whether the placeholder created is meant to be sparse.
+  * **`ragged`** : Boolean, whether the placeholder created is meant to be ragged. In this case, values of 'None' in the 'shape' argument represent ragged dimensions. For more information about RaggedTensors, see https://www.tensorflow.org/guide/ragged_tensors.
+  * **`name`** : Name of the layer (string).
+
+## `__init__`
+
+[View
+source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/input_layer.py#L61-L148)
+
+    
+    
+    __init__(
+        input_shape=None,
+        batch_size=None,
+        dtype=None,
+        input_tensor=None,
+        sparse=False,
+        name=None,
+        ragged=False,
+        **kwargs
+    )
+    
+
