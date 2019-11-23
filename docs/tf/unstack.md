@@ -1,55 +1,46 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/unstack) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/array_ops.py#L1289-L1334)  
-  
-  
-Unpacks the given dimension of a rank-`R` tensor into rank-`(R-1)` tensors.
+
+Unpacks the given dimension of a rank- `R`  tensor into rank- `(R-1)`  tensors.
+
 
 ### Aliases:
+- [ `tf.compat.v1.unstack` ](/api_docs/python/tf/unstack)
+- [ `tf.compat.v2.unstack` ](/api_docs/python/tf/unstack)
 
-  * [`tf.compat.v1.unstack`](/api_docs/python/tf/unstack)
-  * [`tf.compat.v2.unstack`](/api_docs/python/tf/unstack)
 
-    
-    
-    tf.unstack(
-        value,
-        num=None,
-        axis=0,
-        name='unstack'
-    )
-    
+```
+tf.unstack(
+    value,
+    num=None,
+    axis=0,
+    name='unstack'
+)
 
-Unpacks `num` tensors from `value` by chipping it along the `axis` dimension.
-If `num` is not specified (the default), it is inferred from `value`'s shape.
-If `value.shape[axis]` is not known, `ValueError` is raised.
+```
 
-For example, given a tensor of shape `(A, B, C, D)`;
 
-If `axis == 0` then the i'th tensor in `output` is the slice `value[i, :, :,
-:]` and each tensor in `output` will have shape `(B, C, D)`. (Note that the
-dimension unpacked along is gone, unlike `split`).
+Unpacks  `num`  tensors from  `value`  by chipping it along the  `axis`  dimension.If  `num`  is not specified (the default), it is inferred from  `value` 's shape.If  `value.shape[axis]`  is not known,  `ValueError`  is raised.
 
-If `axis == 1` then the i'th tensor in `output` is the slice `value[:, i, :,
-:]` and each tensor in `output` will have shape `(A, C, D)`. Etc.
+For example, given a tensor of shape  `(A, B, C, D)` ;
+
+If  `axis == 0`  then the i'th tensor in  `output`  is the slice   `value[i, :, :, :]`  and each tensor in  `output`  will have shape  `(B, C, D)` .  (Note that the dimension unpacked along is gone, unlike  `split` ).
+
+If  `axis == 1`  then the i'th tensor in  `output`  is the slice   `value[:, i, :, :]`  and each tensor in  `output`  will have shape  `(A, C, D)` .Etc.
 
 This is the opposite of stack.
 
-#### Args:
 
-  * **`value`** : A rank `R > 0` `Tensor` to be unstacked.
-  * **`num`** : An `int`. The length of the dimension `axis`. Automatically inferred if `None` (the default).
-  * **`axis`** : An `int`. The axis to unstack along. Defaults to the first dimension. Negative values wrap around, so the valid range is `[-R, R)`.
-  * **`name`** : A name for the operation (optional).
+#### Args:
+- **`value`** : A rank  `R > 0`   `Tensor`  to be unstacked.
+- **`num`** : An  `int` . The length of the dimension  `axis` . Automatically inferred if `None`  (the default).
+- **`axis`** : An  `int` . The axis to unstack along. Defaults to the first dimension.Negative values wrap around, so the valid range is  `[-R, R)` .
+- **`name`** : A name for the operation (optional).
+
 
 #### Returns:
 
-The list of `Tensor` objects unstacked from `value`.
+The list of  `Tensor`  objects unstacked from  `value` .
+
 
 #### Raises:
-
-  * **`ValueError`** : If `num` is unspecified and cannot be inferred.
-  * **`ValueError`** : If `axis` is out of the range [-R, R).
-
+- **`ValueError`** : If  `num`  is unspecified and cannot be inferred.
+- **`ValueError`** : If  `axis`  is out of the range [-R, R).

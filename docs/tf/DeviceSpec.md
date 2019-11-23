@@ -1,287 +1,312 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/DeviceSpec) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L48-L375)  
-  
-  
-## Class `DeviceSpec`
+
+
+## Class  `DeviceSpec` 
 
 Represents a (possibly partial) specification for a TensorFlow device.
 
+
 ### Aliases:
+- Class [ `tf.compat.v2.DeviceSpec` ](/api_docs/python/tf/DeviceSpec)
 
-  * Class [`tf.compat.v2.DeviceSpec`](/api_docs/python/tf/DeviceSpec)
+ `DeviceSpec` s are used throughout TensorFlow to describe where state is storedand computations occur. Using  `DeviceSpec`  allows you to parse device specstrings to verify their validity, merge them or compose them programmatically.
 
-`DeviceSpec`s are used throughout TensorFlow to describe where state is stored
-and computations occur. Using `DeviceSpec` allows you to parse device spec
-strings to verify their validity, merge them or compose them programmatically.
 
 #### Example:
 
-    
-    
-    # Place the operations on device "GPU:0" in the "ps" job.
-    device_spec = DeviceSpec(job="ps", device_type="GPU", device_index=0)
-    with tf.device(device_spec):
-      # Both my_var and squared_var will be placed on /job:ps/device:GPU:0.
-      my_var = tf.Variable(..., name="my_variable")
-      squared_var = tf.square(my_var)
-    
 
-If a `DeviceSpec` is partially specified, it will be merged with other
-`DeviceSpec`s according to the scope in which it is defined. `DeviceSpec`
-components defined in inner scopes take precedence over those defined in outer
-scopes.
+```
+# Place the operations on device "GPU:0" in the "ps" job.
+device_spec = DeviceSpec(job="ps", device_type="GPU", device_index=0)
+with tf.device(device_spec):
+  # Both my_var and squared_var will be placed on /job:ps/device:GPU:0.
+  my_var = tf.Variable(..., name="my_variable")
+  squared_var = tf.square(my_var)
 
-    
-    
-    with tf.device(DeviceSpec(job="train", )):
-      with tf.device(DeviceSpec(job="ps", device_type="GPU", device_index=0):
-        # Nodes created here will be assigned to /job:ps/device:GPU:0.
-      with tf.device(DeviceSpec(device_type="GPU", device_index=1):
-        # Nodes created here will be assigned to /job:train/device:GPU:1.
-    
+```
 
-A `DeviceSpec` consists of 5 components -- each of which is optionally
-specified:
 
-  * Job: The job name.
-  * Replica: The replica index.
-  * Task: The task index.
-  * Device type: The device type string (e.g. "CPU" or "GPU").
-  * Device index: The device index.
+If a  `DeviceSpec`  is partially specified, it will be merged with other `DeviceSpec` s according to the scope in which it is defined.  `DeviceSpec` components defined in inner scopes take precedence over those defined inouter scopes.
 
-## `__init__`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L92-L112)
+```
+with tf.device(DeviceSpec(job="train", )):
+  with tf.device(DeviceSpec(job="ps", device_type="GPU", device_index=0):
+    # Nodes created here will be assigned to /job:ps/device:GPU:0.
+  with tf.device(DeviceSpec(device_type="GPU", device_index=1):
+    # Nodes created here will be assigned to /job:train/device:GPU:1.
 
-    
-    
-    __init__(
-        job=None,
-        replica=None,
-        task=None,
-        device_type=None,
-        device_index=None
-    )
-    
+```
 
-Create a new `DeviceSpec` object.
+
+A  `DeviceSpec`  consists of 5 components -- each ofwhich is optionally specified:
+- Job: The job name.
+- Replica: The replica index.
+- Task: The task index.
+- Device type: The device type string (e.g. "CPU" or "GPU").
+- Device index: The device index.
+
+
+##  `__init__` 
+
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L92-L112)
+
+
+```
+__init__(
+    job=None,
+    replica=None,
+    task=None,
+    device_type=None,
+    device_index=None
+)
+
+```
+
+
+Create a new  `DeviceSpec`  object.
+
 
 #### Args:
+- **`job`** : string.  Optional job name.
+- **`replica`** : int.  Optional replica index.
+- **`task`** : int.  Optional task index.
+- **`device_type`** : Optional device type string (e.g. "CPU" or "GPU")
+- **`device_index`** : int.  Optional device index.  If leftunspecified, device represents 'any' device_index.
 
-  * **`job`** : string. Optional job name.
-  * **`replica`** : int. Optional replica index.
-  * **`task`** : int. Optional task index.
-  * **`device_type`** : Optional device type string (e.g. "CPU" or "GPU")
-  * **`device_index`** : int. Optional device index. If left unspecified, device represents 'any' device_index.
 
 ## Properties
 
-### `device_index`
 
-### `device_type`
+###  `device_index` 
 
-### `job`
 
-### `replica`
+###  `device_type` 
 
-### `task`
+
+###  `job` 
+
+
+###  `replica` 
+
+
+###  `task` 
+
 
 ## Methods
 
-### `__eq__`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L358-L372)
+###  `__eq__` 
 
-    
-    
-    __eq__(other)
-    
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L358-L372)
 
-Checks if the `other` DeviceSpec is same as the current instance, eg have
+
+```
+__eq__(other)
+
+```
+
+
+Checks if the  `other`  DeviceSpec is same as the current instance, eg have
 
 same value for all the internal fields.
 
-#### Args:
 
-  * **`other`** : Another DeviceSpec
+#### Args:
+- **`other`** : Another DeviceSpec
+
 
 #### Returns:
 
-Return `True` if `other` is also a DeviceSpec instance and has same value as
-the current instance. Return `False` otherwise.
+Return  `True`  if  `other`  is also a DeviceSpec instance and has same valueas the current instance.Return  `False`  otherwise.
 
-### `from_string`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L123-L138)
+###  `from_string` 
 
-    
-    
-    @classmethod
-    from_string(
-        cls,
-        spec
-    )
-    
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L123-L138)
 
-Construct a `DeviceSpec` from a string.
+
+```
+@classmethod
+from_string(
+    cls,
+    spec
+)
+
+```
+
+
+Construct a  `DeviceSpec`  from a string.
+
 
 #### Args:
+- **`spec`** : a string of the form/job:/replica:/task:/device:CPU:or/job:/replica:/task:/device:GPU:as cpu and gpu are mutually exclusive.All entries are optional.
 
-  * **`spec`** : a string of the form /job:/replica:/task:/device:CPU: or /job:/replica:/task:/device:GPU: as cpu and gpu are mutually exclusive. All entries are optional.
 
 #### Returns:
 
 A DeviceSpec.
 
-### `make_merged_spec`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L193-L215)
+###  `make_merged_spec` 
 
-    
-    
-    make_merged_spec(dev)
-    
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L193-L215)
 
-Returns a new DeviceSpec which incorporates `dev`.
 
-When combining specs, `dev` will take precidence over the current spec. So for
-instance:
+```
+make_merged_spec(dev)
 
-    
-    
-    first_spec = tf.DeviceSpec(job=0, device_type="CPU")
-    second_spec = tf.DeviceSpec(device_type="GPU")
-    combined_spec = first_spec.make_merged_spec(second_spec)
-    
+```
+
+
+Returns a new DeviceSpec which incorporates  `dev` .
+
+When combining specs,  `dev`  will take precidence over the current spec.So for instance:
+
+
+```
+first_spec = tf.DeviceSpec(job=0, device_type="CPU")
+second_spec = tf.DeviceSpec(device_type="GPU")
+combined_spec = first_spec.make_merged_spec(second_spec)
+
+```
+
 
 is equivalent to:
 
-    
-    
-    combined_spec = tf.DeviceSpec(job=0, device_type="GPU")
-    
+
+```
+combined_spec = tf.DeviceSpec(job=0, device_type="GPU")
+
+```
+
+
 
 #### Args:
+- **`dev`** : a  `DeviceSpec` 
 
-  * **`dev`** : a `DeviceSpec`
 
 #### Returns:
 
-A new `DeviceSpec` which combines `self` and `dev`
+A new  `DeviceSpec`  which combines  `self`  and  `dev` 
 
-### `parse_from_string`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L140-L191)
+###  `parse_from_string` 
 
-    
-    
-    parse_from_string(spec)
-    
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L140-L191)
 
-Parse a `DeviceSpec` name into its components.
 
-2.x behavior change: In TensorFlow 1.x, this function mutates its own state
-and returns itself. In 2.x, DeviceSpecs are immutable, and this function will
-return a DeviceSpec which contains the spec.
+```
+parse_from_string(spec)
+
+```
+
+
+Parse a  `DeviceSpec`  name into its components.
+
+2.x behavior change:  In TensorFlow 1.x, this function mutates its own state and returns itself.  In 2.x, DeviceSpecs are immutable, and this function will return a    DeviceSpec which contains the spec.
 
 Recommended:
 
->
->     # my_spec and my_updated_spec are unrelated.
->     my_spec = tf.DeviceSpec.from_string("/CPU:0")
->     my_updated_spec = tf.DeviceSpec.from_string("/GPU:0")
->     with tf.device(my_updated_spec):
->       ...
->  
+
+```
+# my_spec and my_updated_spec are unrelated.
+my_spec = tf.DeviceSpec.from_string("/CPU:0")
+my_updated_spec = tf.DeviceSpec.from_string("/GPU:0")
+with tf.device(my_updated_spec):
+  ...
+
+```
+
 
 Will work in 1.x and 2.x (though deprecated in 2.x):
 
->
->     my_spec = tf.DeviceSpec.from_string("/CPU:0")
->     my_updated_spec = my_spec.parse_from_string("/GPU:0")
->     with tf.device(my_updated_spec):
->       ...
->  
+
+```
+my_spec = tf.DeviceSpec.from_string("/CPU:0")
+my_updated_spec = my_spec.parse_from_string("/GPU:0")
+with tf.device(my_updated_spec):
+  ...
+
+```
+
 
 Will NOT work in 2.x:
 
->
->     my_spec = tf.DeviceSpec.from_string("/CPU:0")
->     my_spec.parse_from_string("/GPU:0")  # <== Will not update my_spec
->     with tf.device(my_spec):
->       ...
->  
 
-In general,
-[`DeviceSpec.from_string`](https://tensorflow.google.cn/api_docs/python/tf/DeviceSpec#from_string)
-should completely replace
-[`DeviceSpec.parse_from_string`](https://tensorflow.google.cn/api_docs/python/tf/DeviceSpec#parse_from_string),
-and
-[`DeviceSpec.replace`](https://tensorflow.google.cn/api_docs/python/tf/DeviceSpec#replace)
-should completely replace setting attributes directly.
+```
+my_spec = tf.DeviceSpec.from_string("/CPU:0")
+my_spec.parse_from_string("/GPU:0")  # <== Will not update my_spec
+with tf.device(my_spec):
+  ...
+
+```
+
+
+In general, [ `DeviceSpec.from_string` ](https://tensorflow.google.cn/api_docs/python/tf/DeviceSpec#from_string) should completely replace  [ `DeviceSpec.parse_from_string` ](https://tensorflow.google.cn/api_docs/python/tf/DeviceSpec#parse_from_string), and [ `DeviceSpec.replace` ](https://tensorflow.google.cn/api_docs/python/tf/DeviceSpec#replace) should  completely replace setting attributes directly.
+
 
 #### Args:
+- **`spec`** : an optional string of the form/job:/replica:/task:/device:CPU:or/job:/replica:/task:/device:GPU:as cpu and gpu are mutually exclusive.All entries are optional.
 
-  * **`spec`** : an optional string of the form /job:/replica:/task:/device:CPU: or /job:/replica:/task:/device:GPU: as cpu and gpu are mutually exclusive. All entries are optional.
 
 #### Returns:
 
-The `DeviceSpec`.
+The  `DeviceSpec` .
+
 
 #### Raises:
+- **`ValueError`** : if the spec was not valid.
 
-  * **`ValueError`** : if the spec was not valid.
 
-### `replace`
+###  `replace` 
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L217-L239)
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L217-L239)
 
-    
-    
-    replace(**kwargs)
-    
+
+```
+replace(**kwargs)
+
+```
+
 
 Convenience method for making a new DeviceSpec by overriding fields.
 
+
 #### For instance:
 
-    
-    
-    my_spec = DeviceSpec=(job="my_job", device="CPU")
-    my_updated_spec = my_spec.replace(device="GPU")
-    my_other_spec = my_spec.replace(device=None)
-    
+
+```
+my_spec = DeviceSpec=(job="my_job", device="CPU")
+my_updated_spec = my_spec.replace(device="GPU")
+my_other_spec = my_spec.replace(device=None)
+
+```
+
+
 
 #### Args:
+- **`**kwargs`** : This method takes the same args as the DeviceSpec constructor
 
-  * **`**kwargs`** : This method takes the same args as the DeviceSpec constructor
 
 #### Returns:
 
 A DeviceSpec with the fields specified in kwargs overridden.
 
-### `to_string`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L114-L121)
+###  `to_string` 
 
-    
-    
-    to_string()
-    
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/device_spec.py#L114-L121)
 
-Return a string representation of this `DeviceSpec`.
+
+```
+to_string()
+
+```
+
+
+Return a string representation of this  `DeviceSpec` .
+
 
 #### Returns:
 
-a string of the form /job:/replica:/task:/device::.
-
+a string of the form/job:/replica:/task:/device::.

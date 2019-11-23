@@ -219,13 +219,13 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-# handle_async_flat(category_array, go_webdriver)
+handle_async_flat(category_array, go_webdriver)
 # https://tensorflow.google.cn/api_docs/python/tf
-handle_async_flat({
-    "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-}, go_webdriver)
+# handle_async_flat({
+#     "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+# }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
