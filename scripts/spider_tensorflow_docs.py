@@ -170,19 +170,19 @@ def node_level(driver, file_markdown_path="", url_path=""):
                 # 解析svg
                 svg_list = node.find_elements_by_css_selector('svg')
                 html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
-                print("添加svg后待转译html：", html)
+                # print("添加svg后待转译html：", html)
 
-                # 补全li标签名称
-                if node.tag_name == 'li':
-                    if node.tag_name == 'ul':
-                        html = '<ul>' + html + '</ul>'
-                    if node.tag_name == 'ol':
-                        html = '<ol>' + html + '</ol>'
-                # mk = Pyhtmd(html).markdown()
-                # print("转译的mk:",mk)
+                # 补全ul标签名称
+                if node.tag_name == 'ul':
+                    html = '<ul>' + html + '</ul>'
+                # 补全ul标签名称
+                if node.tag_name == 'ol':
+                    html = '<ol>' + html + '</ol>'
+                mk = Pyhtmd(html).markdown()
+                # print("转译的mk:", mk)
                 # 写入文件
-                # with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
-                #     f.write(mk)
+                with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
+                    f.write(mk)
     except Exception as e:
         print("===> 啥错误:", e)
         print('===> 错误路径：', file_markdown_path)
