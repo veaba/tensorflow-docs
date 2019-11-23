@@ -158,7 +158,6 @@ def window_scroll(h, threshold):
 
 # 去解析node节点,返回markdown
 def node_level(driver, file_markdown_path="", url_path=""):
-    
     try:
         nodes = driver.find_elements_by_css_selector(".devsite-article-body>*")
         for node in nodes:
@@ -171,12 +170,19 @@ def node_level(driver, file_markdown_path="", url_path=""):
                 # 解析svg
                 svg_list = node.find_elements_by_css_selector('svg')
                 html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
-                # print("添加svg后待转译html：", html)
-                mk = Pyhtmd(html).markdown()
+                print("添加svg后待转译html：", html)
+
+                # 补全li标签名称
+                if node.tag_name == 'li':
+                    if node.tag_name == 'ul':
+                        html = '<ul>' + html + '</ul>'
+                    if node.tag_name == 'ol':
+                        html = '<ol>' + html + '</ol>'
+                # mk = Pyhtmd(html).markdown()
                 # print("转译的mk:",mk)
                 # 写入文件
-                with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
-                    f.write(mk)
+                # with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
+                #     f.write(mk)
     except Exception as e:
         print("===> 啥错误:", e)
         print('===> 错误路径：', file_markdown_path)
@@ -213,12 +219,13 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat(category_array, go_webdriver)
+# handle_async_flat(category_array, go_webdriver)
 # https://tensorflow.google.cn/api_docs/python/tf
-# handle_async_flat({
-#     "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
-#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-# }, go_webdriver)
+handle_async_flat({
+    "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
