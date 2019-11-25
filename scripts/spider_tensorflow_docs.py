@@ -162,24 +162,26 @@ def node_level(driver, file_markdown_path="", url_path=""):
         nodes = driver.find_elements_by_css_selector(".devsite-article-body>*")
         for node in nodes:
             if not ignore_tag(node):
-                html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
-                if node.tag_name == 'aside':  # 对引用打补丁
-                    html = '<blockquote>' + html + '</blockquote>'
-                # print("待转译html：", html)
-
-                # 解析svg
-                svg_list = node.find_elements_by_css_selector('svg')
-                html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
-                # print("添加svg后待转译html：", html)
-
-                # 补全ul标签名称
-                if node.tag_name == 'ul':
-                    html = '<ul>' + html + '</ul>'
-                # 补全ul标签名称
-                if node.tag_name == 'ol':
-                    html = '<ol>' + html + '</ol>'
+                html = node.get_attribute('outerHTML') or ""  # 注意，如果是innerHTML 这里只能获取到它的子级，需要使用outerHTML
+                print("====> ",html)
+                # html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
+                # if node.tag_name == 'aside':  # 对引用打补丁
+                #     html = '<blockquote>' + html + '</blockquote>'
+                # # print("待转译html：", html)
+                #
+                # # 解析svg
+                # svg_list = node.find_elements_by_css_selector('svg')
+                # html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
+                # # print("添加svg后待转译html：", html)
+                #
+                # # 补全ul标签名称
+                # if node.tag_name == 'ul':
+                #     html = '<ul>' + html + '</ul>'
+                # # 补全ul标签名称
+                # if node.tag_name == 'ol':
+                #     html = '<ol>' + html + '</ol>'
                 mk = Pyhtmd(html).markdown()
-                # print("转译的mk:", mk)
+                print("****> :", mk)
                 # 写入文件
                 with open(file_markdown_path, "a", errors="ignore", encoding='utf-8') as f:
                     f.write(mk)
@@ -219,13 +221,14 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat(category_array, go_webdriver)
+# handle_async_flat(category_array, go_webdriver)
 # https://tensorflow.google.cn/api_docs/python/tf
-# handle_async_flat({
-#     "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
-#     # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
-#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-# }, go_webdriver)
+handle_async_flat({
+    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
+    "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
