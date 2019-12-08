@@ -1,48 +1,53 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/protobuf/config.proto)  
----  
-  
-## Class `Experimental`
 
+
+## Class  `Experimental` 
 A ProtocolMessage
 
-## Child Classes
 
-[`class
-VirtualDevices`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/GPUOptions/Experimental/VirtualDevices)
+
+## Child Classes
+[ `class VirtualDevices` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/GPUOptions/Experimental/VirtualDevices)
+
+
 
 ## Properties
 
-### `collective_ring_order`
 
-`string collective_ring_order`
+###  `collective_ring_order` 
+ `string collective_ring_order` 
 
-### `kernel_tracker_max_bytes`
 
-`int32 kernel_tracker_max_bytes`
 
-### `kernel_tracker_max_interval`
+###  `kernel_tracker_max_bytes` 
+ `int32 kernel_tracker_max_bytes` 
 
-`int32 kernel_tracker_max_interval`
 
-### `kernel_tracker_max_pending`
 
-`int32 kernel_tracker_max_pending`
+###  `kernel_tracker_max_interval` 
+ `int32 kernel_tracker_max_interval` 
 
-### `num_dev_to_dev_copy_streams`
 
-`int32 num_dev_to_dev_copy_streams`
 
-### `timestamped_allocator`
+###  `kernel_tracker_max_pending` 
+ `int32 kernel_tracker_max_pending` 
 
-`bool timestamped_allocator`
 
-### `use_unified_memory`
 
-`bool use_unified_memory`
+###  `num_dev_to_dev_copy_streams` 
+ `int32 num_dev_to_dev_copy_streams` 
 
-### `virtual_devices`
 
-`repeated VirtualDevices virtual_devices`
+
+###  `timestamped_allocator` 
+ `bool timestamped_allocator` 
+
+
+
+###  `use_unified_memory` 
+ `bool use_unified_memory` 
+
+
+
+###  `virtual_devices` 
+ `repeated VirtualDevices virtual_devices` 
 

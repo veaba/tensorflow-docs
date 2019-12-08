@@ -1,33 +1,41 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/nn/softsign)  
----  
-  
-Defined in generated file: `python/ops/gen_nn_ops.py`
+Defined in generated file:  `python/ops/gen_nn_ops.py` 
 
-Computes softsign: `features / (abs(features) + 1)`.
+Computes softsign:  `features / (abs(features) + 1)` .
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.math.softsign`](/api_docs/python/tf/nn/softsign)
-  * [`tf.compat.v1.nn.softsign`](/api_docs/python/tf/nn/softsign)
-  * [`tf.compat.v2.math.softsign`](/api_docs/python/tf/nn/softsign)
-  * [`tf.compat.v2.nn.softsign`](/api_docs/python/tf/nn/softsign)
-  * [`tf.math.softsign`](/api_docs/python/tf/nn/softsign)
+- [ `tf.compat.v1.math.softsign` ](/api_docs/python/tf/nn/softsign)
 
-    
-    
-    tf.nn.softsign(
-        features,
-        name=None
-    )
-    
+- [ `tf.compat.v1.nn.softsign` ](/api_docs/python/tf/nn/softsign)
+
+- [ `tf.compat.v2.math.softsign` ](/api_docs/python/tf/nn/softsign)
+
+- [ `tf.compat.v2.nn.softsign` ](/api_docs/python/tf/nn/softsign)
+
+- [ `tf.math.softsign` ](/api_docs/python/tf/nn/softsign)
+
+
+
+```
+ tf.nn.softsign(
+    features,
+    name=None
+)
+ 
+```
+
+
 
 #### Args:
 
-  * **`features`** : A `Tensor`. Must be one of the following types: `half`, `bfloat16`, `float32`, `float64`.
-  * **`name`** : A name for the operation (optional).
+- **`features`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` ,  `float64` .
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
-
-A `Tensor`. Has the same type as `features`.
+A  `Tensor` . Has the same type as  `features` .
 

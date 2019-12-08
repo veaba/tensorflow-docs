@@ -1,57 +1,67 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/preprocessing/image/random_zoom)  
----  
-  
 Performs a random spatial zoom of a Numpy image tensor.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.keras.preprocessing.image.random_zoom`](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
-  * [`tf.compat.v2.keras.preprocessing.image.random_zoom`](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
+- [ `tf.compat.v1.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
 
-    
-    
-    tf.keras.preprocessing.image.random_zoom(
-        x,
-        zoom_range,
-        row_axis=1,
-        col_axis=2,
-        channel_axis=0,
-        fill_mode='nearest',
-        cval=0.0,
-        interpolation_order=1
-    )
-    
+- [ `tf.compat.v2.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
+
+
+
+```
+ tf.keras.preprocessing.image.random_zoom(
+    x,
+    zoom_range,
+    row_axis=1,
+    col_axis=2,
+    channel_axis=0,
+    fill_mode='nearest',
+    cval=0.0,
+    interpolation_order=1
+)
+ 
+```
+
+
 
 # Arguments
 
-    
-    
-    x: Input tensor. Must be 3D.
-    zoom_range: Tuple of floats; zoom range for width and height.
-    row_axis: Index of axis for rows in the input tensor.
-    col_axis: Index of axis for columns in the input tensor.
-    channel_axis: Index of axis for channels in the input tensor.
-    fill_mode: Points outside the boundaries of the input
-        are filled according to the given mode
-        (one of `{'constant', 'nearest', 'reflect', 'wrap'}`).
-    cval: Value used for points outside the boundaries
-        of the input if `mode='constant'`.
-    interpolation_order: int, order of spline interpolation.
-        see `ndimage.interpolation.affine_transform`
-    
+
+```
+ x: Input tensor. Must be 3D.
+zoom_range: Tuple of floats; zoom range for width and height.
+row_axis: Index of axis for rows in the input tensor.
+col_axis: Index of axis for columns in the input tensor.
+channel_axis: Index of axis for channels in the input tensor.
+fill_mode: Points outside the boundaries of the input
+    are filled according to the given mode
+    (one of `{'constant', 'nearest', 'reflect', 'wrap'}`).
+cval: Value used for points outside the boundaries
+    of the input if `mode='constant'`.
+interpolation_order: int, order of spline interpolation.
+    see `ndimage.interpolation.affine_transform`
+ 
+```
+
+
 
 # Returns
 
-    
-    
-    Zoomed Numpy image tensor.
-    
+
+```
+ Zoomed Numpy image tensor.
+ 
+```
+
+
 
 # Raises
 
-    
-    
-    ValueError: if `zoom_range` isn't a tuple.
-    
+
+```
+ ValueError: if `zoom_range` isn't a tuple.
+ 
+```
 

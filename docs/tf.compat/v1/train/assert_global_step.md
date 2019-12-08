@@ -1,16 +1,11 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/training_util.py#L165-L185)  
----  
-  
-Asserts `global_step_tensor` is a scalar int `Variable` or `Tensor`.
+Asserts  `global_step_tensor`  is a scalar int  `Variable`  or  `Tensor` .
 
-    
-    
-    tf.compat.v1.train.assert_global_step(global_step_tensor)
-    
+
+<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.train.assert_global_step(global_step_tensor)
+</code></pre></devsite-code>
+
 
 #### Args:
 
-  * **`global_step_tensor`** : `Tensor` to test.
+- **`global_step_tensor`** :  `Tensor`  to test.
 

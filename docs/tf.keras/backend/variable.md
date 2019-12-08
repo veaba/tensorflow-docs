@@ -1,52 +1,60 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/backend/variable) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L768-L817)  
-  
-  
 Instantiates a variable and returns it.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.keras.backend.variable`](/api_docs/python/tf/keras/backend/variable)
-  * [`tf.compat.v2.keras.backend.variable`](/api_docs/python/tf/keras/backend/variable)
+- [ `tf.compat.v1.keras.backend.variable` ](/api_docs/python/tf/keras/backend/variable)
 
-    
-    
-    tf.keras.backend.variable(
-        value,
-        dtype=None,
-        name=None,
-        constraint=None
-    )
-    
+- [ `tf.compat.v2.keras.backend.variable` ](/api_docs/python/tf/keras/backend/variable)
+
+
+
+```
+ tf.keras.backend.variable(
+    value,
+    dtype=None,
+    name=None,
+    constraint=None
+)
+ 
+```
+
+
 
 #### Arguments:
 
-  * **`value`** : Numpy array, initial value of the tensor.
-  * **`dtype`** : Tensor type.
-  * **`name`** : Optional name string for the tensor.
-  * **`constraint`** : Optional projection function to be applied to the variable after an optimizer update.
+- **`value`** : Numpy array, initial value of the tensor.
+
+- **`dtype`** : Tensor type.
+
+- **`name`** : Optional name string for the tensor.
+
+- **`constraint`** : Optional projection function to be
+applied to the variable after an optimizer update.
+
+
 
 #### Returns:
-
 A variable instance (with Keras metadata included).
+
+
 
 #### Examples:
 
-    
-    
-        >>> import numpy as np
-        >>> from keras import backend as K
-        >>> val = np.array([[1, 2], [3, 4]])
-        >>> kvar = K.variable(value=val, dtype='float64', name='example_var')
-        >>> K.dtype(kvar)
-        'float64'
-        >>> print(kvar)
-        example_var
-        >>> kvar.eval()
-        array([[ 1.,  2.],
-               [ 3.,  4.]])
-    
+
+```
+     >>> import numpy as np
+    >>> from keras import backend as K
+    >>> val = np.array([[1, 2], [3, 4]])
+    >>> kvar = K.variable(value=val, dtype='float64', name='example_var')
+    >>> K.dtype(kvar)
+    'float64'
+    >>> print(kvar)
+    example_var
+    >>> kvar.eval()
+    array([[ 1.,  2.],
+           [ 3.,  4.]])
+ 
+```
 

@@ -1,29 +1,33 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variables.py#L3055-L3078)  
----  
-  
 Returns global variables.
 
-    
-    
-    tf.compat.v1.global_variables(scope=None)
-    
+
+
+```
+ tf.compat.v1.global_variables(scope=None)
+ 
+```
 
 Global variables are variables that are shared across machines in a
-distributed environment. The `Variable()` constructor or `get_variable()`
+distributed environment. The  `Variable()`  constructor or  `get_variable()` 
 automatically adds new variables to the graph collection
-`GraphKeys.GLOBAL_VARIABLES`. This convenience function returns the contents
-of that collection.
+ `GraphKeys.GLOBAL_VARIABLES` .
+This convenience function returns the contents of that collection.
 
 An alternative to global variables are local variables. See
-[`tf.compat.v1.local_variables`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/local_variables)
+[ `tf.compat.v1.local_variables` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/local_variables)
+
+
 
 #### Args:
 
-  * **`scope`** : (Optional.) A string. If supplied, the resulting list is filtered to include only items whose `name` attribute matches `scope` using `re.match`. Items without a `name` attribute are never returned if a scope is supplied. The choice of `re.match` means that a `scope` without special tokens filters by prefix.
+- **`scope`** : (Optional.) A string. If supplied, the resulting list is filtered to
+include only items whose  `name`  attribute matches  `scope`  using
+ `re.match` . Items without a  `name`  attribute are never returned if a scope
+is supplied. The choice of  `re.match`  means that a  `scope`  without special
+tokens filters by prefix.
+
+
 
 #### Returns:
-
-A list of `Variable` objects.
+A list of  `Variable`  objects.
 

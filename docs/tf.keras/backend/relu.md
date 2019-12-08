@@ -1,40 +1,46 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/backend/relu) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L4313-L4363)  
-  
-  
 Rectified linear unit.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.keras.backend.relu`](/api_docs/python/tf/keras/backend/relu)
-  * [`tf.compat.v2.keras.backend.relu`](/api_docs/python/tf/keras/backend/relu)
+- [ `tf.compat.v1.keras.backend.relu` ](/api_docs/python/tf/keras/backend/relu)
 
-    
-    
-    tf.keras.backend.relu(
-        x,
-        alpha=0.0,
-        max_value=None,
-        threshold=0
-    )
-    
+- [ `tf.compat.v2.keras.backend.relu` ](/api_docs/python/tf/keras/backend/relu)
 
-With default values, it returns element-wise `max(x, 0)`.
 
-Otherwise, it follows: `f(x) = max_value` for `x >= max_value`, `f(x) = x` for
-`threshold <= x < max_value`, `f(x) = alpha * (x - threshold)` otherwise.
+
+```
+ tf.keras.backend.relu(
+    x,
+    alpha=0.0,
+    max_value=None,
+    threshold=0
+)
+ 
+```
+
+With default values, it returns element-wise  `max(x, 0)` .
+
+Otherwise, it follows:
+ `f(x) = max_value`  for  `x >= max_value` ,
+ `f(x) = x`  for  `threshold <= x < max_value` ,
+ `f(x) = alpha * (x - threshold)`  otherwise.
+
+
 
 #### Arguments:
 
-  * **`x`** : A tensor or variable.
-  * **`alpha`** : A scalar, slope of negative section (default=`0.`).
-  * **`max_value`** : float. Saturation threshold.
-  * **`threshold`** : float. Threshold value for thresholded activation.
+- **`x`** : A tensor or variable.
+
+- **`alpha`** : A scalar, slope of negative section (default= `0.` ).
+
+- **`max_value`** : float. Saturation threshold.
+
+- **`threshold`** : float. Threshold value for thresholded activation.
+
+
 
 #### Returns:
-
 A tensor.
 

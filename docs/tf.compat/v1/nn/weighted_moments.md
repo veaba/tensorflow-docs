@@ -1,32 +1,35 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L1280-L1355)  
----  
-  
-Returns the frequency-weighted mean and variance of `x`.
+Returns the frequency-weighted mean and variance of  `x` .
 
-    
-    
-    tf.compat.v1.nn.weighted_moments(
-        x,
-        axes,
-        frequency_weights,
-        name=None,
-        keep_dims=None,
-        keepdims=None
-    )
-    
+
+<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.nn.weighted_moments(
+    x,
+    axes,
+    frequency_weights,
+    name=None,
+    keep_dims=None,
+    keepdims=None
+)
+</code></pre></devsite-code>
+
 
 #### Args:
 
-  * **`x`** : A tensor.
-  * **`axes`** : 1-d tensor of int32 values; these are the axes along which to compute mean and variance.
-  * **`frequency_weights`** : A tensor of positive weights which can be broadcast with x.
-  * **`name`** : Name used to scope the operation.
-  * **`keep_dims`** : Produce moments with the same dimensionality as the input.
-  * **`keepdims`** : Alias of keep_dims.
+- **`x`** : A tensor.
+
+- **`axes`** : 1-d tensor of int32 values; these are the axes along which
+to compute mean and variance.
+
+- **`frequency_weights`** : A tensor of positive weights which can be
+broadcast with x.
+
+- **`name`** : Name used to scope the operation.
+
+- **`keep_dims`** : Produce moments with the same dimensionality as the input.
+
+- **`keepdims`** : Alias of keep_dims.
+
+
 
 #### Returns:
-
-Two tensors: `weighted_mean` and `weighted_variance`.
+Two tensors:  `weighted_mean`  and  `weighted_variance` .
 

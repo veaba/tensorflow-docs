@@ -1,48 +1,59 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/math/l2_normalize) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/nn_impl.py#L627-L653)  
-  
-  
-Normalizes along dimension `axis` using an L2 norm.
+Normalizes along dimension  `axis`  using an L2 norm.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v2.linalg.l2_normalize`](/api_docs/python/tf/math/l2_normalize)
-  * [`tf.compat.v2.math.l2_normalize`](/api_docs/python/tf/math/l2_normalize)
-  * [`tf.compat.v2.nn.l2_normalize`](/api_docs/python/tf/math/l2_normalize)
-  * [`tf.linalg.l2_normalize`](/api_docs/python/tf/math/l2_normalize)
-  * [`tf.nn.l2_normalize`](/api_docs/python/tf/math/l2_normalize)
+- [ `tf.compat.v2.linalg.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
 
-    
-    
-    tf.math.l2_normalize(
-        x,
-        axis=None,
-        epsilon=1e-12,
-        name=None
-    )
-    
+- [ `tf.compat.v2.math.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
 
-For a 1-D tensor with `axis = 0`, computes
+- [ `tf.compat.v2.nn.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
 
-    
-    
-    output = x / sqrt(max(sum(x**2), epsilon))
-    
+- [ `tf.linalg.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
 
-For `x` with more dimensions, independently normalizes each 1-D slice along
-dimension `axis`.
+- [ `tf.nn.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
+
+
+
+```
+ tf.math.l2_normalize(
+    x,
+    axis=None,
+    epsilon=1e-12,
+    name=None
+)
+ 
+```
+
+For a 1-D tensor with  `axis = 0` , computes
+
+
+
+```
+ output = x / sqrt(max(sum(x**2), epsilon))
+ 
+```
+
+For  `x`  with more dimensions, independently normalizes each 1-D slice along
+dimension  `axis` .
+
+
 
 #### Args:
 
-  * **`x`** : A `Tensor`.
-  * **`axis`** : Dimension along which to normalize. A scalar or a vector of integers.
-  * **`epsilon`** : A lower bound value for the norm. Will use `sqrt(epsilon)` as the divisor if `norm < sqrt(epsilon)`.
-  * **`name`** : A name for this operation (optional).
+- **`x`** : A  `Tensor` .
+
+- **`axis`** : Dimension along which to normalize.  A scalar or a vector of
+integers.
+
+- **`epsilon`** : A lower bound value for the norm. Will use  `sqrt(epsilon)`  as the
+divisor if  `norm < sqrt(epsilon)` .
+
+- **`name`** : A name for this operation (optional).
+
+
 
 #### Returns:
-
-A `Tensor` with the same shape as `x`.
+A  `Tensor`  with the same shape as  `x` .
 

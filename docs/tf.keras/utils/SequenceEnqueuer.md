@@ -1,121 +1,141 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/utils/SequenceEnqueuer) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L575-L696)  
-  
-  
-## Class `SequenceEnqueuer`
 
+
+## Class  `SequenceEnqueuer` 
 Base class to enqueue inputs.
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.keras.utils.SequenceEnqueuer`](/api_docs/python/tf/keras/utils/SequenceEnqueuer)
-  * Class [`tf.compat.v2.keras.utils.SequenceEnqueuer`](/api_docs/python/tf/keras/utils/SequenceEnqueuer)
+- Class [ `tf.compat.v1.keras.utils.SequenceEnqueuer` ](/api_docs/python/tf/keras/utils/SequenceEnqueuer)
 
-The task of an Enqueuer is to use parallelism to speed up preprocessing. This
-is done with processes or threads.
+- Class [ `tf.compat.v2.keras.utils.SequenceEnqueuer` ](/api_docs/python/tf/keras/utils/SequenceEnqueuer)
+
+The task of an Enqueuer is to use parallelism to speed up preprocessing.
+This is done with processes or threads.
+
+
 
 #### Example:
 
-    
-    
-        enqueuer = SequenceEnqueuer(...)
-        enqueuer.start()
-        datas = enqueuer.get()
-        for data in datas:
-            # Use the inputs; training, evaluating, predicting.
-            # ... stop sometime.
-        enqueuer.close()
-    
 
-The `enqueuer.get()` should be an infinite stream of datas.
+```
+     enqueuer = SequenceEnqueuer(...)
+    enqueuer.start()
+    datas = enqueuer.get()
+    for data in datas:
+        # Use the inputs; training, evaluating, predicting.
+        # ... stop sometime.
+    enqueuer.close()
+ 
+```
 
-## `__init__`
+The  `enqueuer.get()`  should be an infinite stream of datas.
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L596-L624)
 
-    
-    
-    __init__(
-        sequence,
-        use_multiprocessing=False
-    )
-    
 
-Initialize self. See help(type(self)) for accurate signature.
+##  `__init__` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L596-L624)
+
+
+
+```
+ __init__(
+    sequence,
+    use_multiprocessing=False
+)
+ 
+```
+
+Initialize self.  See help(type(self)) for accurate signature.
+
+
 
 ## Methods
 
-### `get`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L687-L696)
+###  `get` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L687-L696)
 
-    
-    
-    get()
-    
+
+
+```
+ get()
+ 
+```
 
 Creates a generator to extract data from the queue.
 
-Skip the data if it is `None`.
+Skip the data if it is  `None` .
+
+
 
 # Returns
 
-    
-    
-    Generator yielding tuples `(inputs, targets)`
-        or `(inputs, targets, sample_weights)`.
-    
 
-### `is_running`
+```
+ Generator yielding tuples `(inputs, targets)`
+    or `(inputs, targets, sample_weights)`.
+ 
+```
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L626-L627)
 
-    
-    
-    is_running()
-    
 
-### `start`
+###  `is_running` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L626-L627)
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L629-L647)
 
-    
-    
-    start(
-        workers=1,
-        max_queue_size=10
-    )
-    
+
+```
+ is_running()
+ 
+```
+
+
+
+###  `start` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L629-L647)
+
+
+
+```
+ start(
+    workers=1,
+    max_queue_size=10
+)
+ 
+```
 
 Starts the handler's workers.
 
+
+
 #### Arguments:
 
-  * **`workers`** : Number of workers.
-  * **`max_queue_size`** : queue size (when full, workers could block on `put()`)
+- **`workers`** : Number of workers.
 
-### `stop`
+- **`max_queue_size`** : queue size
+(when full, workers could block on  `put()` )
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L654-L668)
 
-    
-    
-    stop(timeout=None)
-    
+
+###  `stop` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L654-L668)
+
+
+
+```
+ stop(timeout=None)
+ 
+```
 
 Stops running threads and wait for them to exit, if necessary.
 
-Should be called by the same thread which called `start()`.
+Should be called by the same thread which called  `start()` .
+
+
 
 #### Arguments:
 
-  * **`timeout`** : maximum time to wait on `thread.join()`
+- **`timeout`** : maximum time to wait on  `thread.join()` 
 

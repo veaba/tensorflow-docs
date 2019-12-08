@@ -1,28 +1,28 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/nest/flatten) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/nest.py#L231-L262)  
-  
-  
 Returns a flat list from a given nested structure.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.nest.flatten`](/api_docs/python/tf/nest/flatten)
-  * [`tf.compat.v2.nest.flatten`](/api_docs/python/tf/nest/flatten)
+- [ `tf.compat.v1.nest.flatten` ](/api_docs/python/tf/nest/flatten)
 
-    
-    
-    tf.nest.flatten(
-        structure,
-        expand_composites=False
-    )
-    
+- [ `tf.compat.v2.nest.flatten` ](/api_docs/python/tf/nest/flatten)
+
+
+
+```
+ tf.nest.flatten(
+    structure,
+    expand_composites=False
+)
+ 
+```
+
+
 
 ### Used in the guide:
 
-  * [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
+- [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 If nest is not a sequence, tuple, or dict, then returns a single-element list:
 [nest].
@@ -39,16 +39,24 @@ flattened.
 Users must not modify any collections used in nest while this function is
 running.
 
+
+
 #### Args:
 
-  * **`structure`** : an arbitrarily nested structure or a scalar object. Note, numpy arrays are considered scalars.
-  * **`expand_composites`** : If true, then composite tensors such as tf.SparseTensor and tf.RaggedTensor are expanded into their component tensors.
+- **`structure`** : an arbitrarily nested structure or a scalar object. Note, numpy
+arrays are considered scalars.
+
+- **`expand_composites`** : If true, then composite tensors such as tf.SparseTensor
+and tf.RaggedTensor are expanded into their component tensors.
+
+
 
 #### Returns:
-
 A Python list, the flattened version of the input.
+
+
 
 #### Raises:
 
-  * **`TypeError`** : The nest is or contains a dict with non-sortable keys.
+- **`TypeError`** : The nest is or contains a dict with non-sortable keys.
 

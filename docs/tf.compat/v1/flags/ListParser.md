@@ -1,40 +1,52 @@
-## Class `ListParser`
 
+
+## Class  `ListParser` 
 Parser for a comma-separated list of strings.
 
-Inherits From:
-[`BaseListParser`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/BaseListParser)
+Inherits From: [ `BaseListParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/BaseListParser)
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.app.flags.ListParser`](/api_docs/python/tf/compat/v1/flags/ListParser)
+- Class [ `tf.compat.v1.app.flags.ListParser` ](/api_docs/python/tf/compat/v1/flags/ListParser)
 
-## `__init__`
 
-    
-    
-    __init__()  
-    
 
-Initialize self. See help(type(self)) for accurate signature.
+##  `__init__` 
+
+
+```
+ __init__()
+ 
+```
+
+Initialize self.  See help(type(self)) for accurate signature.
+
+
 
 ## Methods
 
-### `flag_type`
 
-    
-    
-    flag_type()  
-    
+###  `flag_type` 
+
+
+```
+ flag_type()
+ 
+```
 
 See base class.
 
-### `parse`
 
-    
-    
-    parse(argument)  
-    
+
+###  `parse` 
+
+
+```
+ parse(argument)
+ 
+```
 
 Parses argument as comma-separated list of strings.
 

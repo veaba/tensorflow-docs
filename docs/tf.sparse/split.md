@@ -1,62 +1,72 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/sparse/split) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/sparse_ops.py#L899-L941)  
-  
-  
-Split a `SparseTensor` into `num_split` tensors along `axis`.
+Split a  `SparseTensor`  into  `num_split`  tensors along  `axis` .
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v2.sparse.split`](/api_docs/python/tf/sparse/split)
+- [ `tf.compat.v2.sparse.split` ](/api_docs/python/tf/sparse/split)
 
-    
-    
-    tf.sparse.split(
-        sp_input=None,
-        num_split=None,
-        axis=None,
-        name=None
-    )
-    
 
-If the `sp_input.dense_shape[axis]` is not an integer multiple of `num_split`
-each slice starting from 0:`shape[axis] % num_split` gets extra one dimension.
-For example, if `axis = 1` and `num_split = 2` and the input is:
 
-    
-    
-    input_tensor = shape = [2, 7]
-    [    a   d e  ]
-    [b c          ]
-    
+```
+ tf.sparse.split(
+    sp_input=None,
+    num_split=None,
+    axis=None,
+    name=None
+)
+ 
+```
+
+If the  `sp_input.dense_shape[axis]`  is not an integer multiple of  `num_split` 
+each slice starting from 0: `shape[axis] % num_split`  gets extra one
+dimension. For example, if  `axis = 1`  and  `num_split = 2`  and the
+input is:
+
+
+
+```
+ input_tensor = shape = [2, 7]
+[    a   d e  ]
+[b c          ]
+ 
+```
 
 Graphically the output tensors are:
 
-    
-    
-    output_tensor[0] =
-    [    a ]
-    [b c   ]
-    
-    output_tensor[1] =
-    [ d e  ]
-    [      ]
-    
+
+
+```
+ output_tensor[0] =
+[    a ]
+[b c   ]
+
+output_tensor[1] =
+[ d e  ]
+[      ]
+ 
+```
+
+
 
 #### Args:
 
-  * **`sp_input`** : The `SparseTensor` to split.
-  * **`num_split`** : A Python integer. The number of ways to split.
-  * **`axis`** : A 0-D `int32` `Tensor`. The dimension along which to split.
-  * **`name`** : A name for the operation (optional).
+- **`sp_input`** : The  `SparseTensor`  to split.
+
+- **`num_split`** : A Python integer. The number of ways to split.
+
+- **`axis`** : A 0-D  `int32`   `Tensor` . The dimension along which to split.
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
+ `num_split`   `SparseTensor`  objects resulting from splitting  `value` .
 
-`num_split` `SparseTensor` objects resulting from splitting `value`.
+
 
 #### Raises:
 
-  * **`TypeError`** : If `sp_input` is not a `SparseTensor`.
+- **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
 

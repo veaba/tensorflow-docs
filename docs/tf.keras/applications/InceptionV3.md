@@ -1,28 +1,32 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/applications/InceptionV3) |
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/applications/__init__.py#L43-L49)  
-  
-  
+
+
 ### Aliases:
 
-  * [`tf.compat.v1.keras.applications.InceptionV3`](/api_docs/python/tf/keras/applications/InceptionV3)
-  * [`tf.compat.v1.keras.applications.inception_v3.InceptionV3`](/api_docs/python/tf/keras/applications/InceptionV3)
-  * [`tf.compat.v2.keras.applications.InceptionV3`](/api_docs/python/tf/keras/applications/InceptionV3)
-  * [`tf.compat.v2.keras.applications.inception_v3.InceptionV3`](/api_docs/python/tf/keras/applications/InceptionV3)
-  * [`tf.keras.applications.inception_v3.InceptionV3`](/api_docs/python/tf/keras/applications/InceptionV3)
+- [ `tf.compat.v1.keras.applications.InceptionV3` ](/api_docs/python/tf/keras/applications/InceptionV3)
 
-    
-    
-    tf.keras.applications.InceptionV3(
-        *args,
-        **kwargs
-    )
-    
+- [ `tf.compat.v1.keras.applications.inception_v3.InceptionV3` ](/api_docs/python/tf/keras/applications/InceptionV3)
+
+- [ `tf.compat.v2.keras.applications.InceptionV3` ](/api_docs/python/tf/keras/applications/InceptionV3)
+
+- [ `tf.compat.v2.keras.applications.inception_v3.InceptionV3` ](/api_docs/python/tf/keras/applications/InceptionV3)
+
+- [ `tf.keras.applications.inception_v3.InceptionV3` ](/api_docs/python/tf/keras/applications/InceptionV3)
+
+
+
+```
+ tf.keras.applications.InceptionV3(
+    *args,
+    **kwargs
+)
+ 
+```
+
+
 
 ### Used in the tutorials:
 
-  * [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
-  * [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
+- [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
+
+- [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 

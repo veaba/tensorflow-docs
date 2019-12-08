@@ -1,47 +1,53 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/protobuf/config.proto)  
----  
-  
-## Class `GraphOptions`
 
+
+## Class  `GraphOptions` 
 A ProtocolMessage
+
+
 
 ## Properties
 
-### `build_cost_model`
 
-`int64 build_cost_model`
+###  `build_cost_model` 
+ `int64 build_cost_model` 
 
-### `build_cost_model_after`
 
-`int64 build_cost_model_after`
 
-### `enable_bfloat16_sendrecv`
+###  `build_cost_model_after` 
+ `int64 build_cost_model_after` 
 
-`bool enable_bfloat16_sendrecv`
 
-### `enable_recv_scheduling`
 
-`bool enable_recv_scheduling`
+###  `enable_bfloat16_sendrecv` 
+ `bool enable_bfloat16_sendrecv` 
 
-### `infer_shapes`
 
-`bool infer_shapes`
 
-### `optimizer_options`
+###  `enable_recv_scheduling` 
+ `bool enable_recv_scheduling` 
 
-`OptimizerOptions optimizer_options`
 
-### `place_pruned_graph`
 
-`bool place_pruned_graph`
+###  `infer_shapes` 
+ `bool infer_shapes` 
 
-### `rewrite_options`
 
-`RewriterConfig rewrite_options`
 
-### `timeline_step`
+###  `optimizer_options` 
+ `OptimizerOptions optimizer_options` 
 
-`int32 timeline_step`
+
+
+###  `place_pruned_graph` 
+ `bool place_pruned_graph` 
+
+
+
+###  `rewrite_options` 
+ `RewriterConfig rewrite_options` 
+
+
+
+###  `timeline_step` 
+ `int32 timeline_step` 
 

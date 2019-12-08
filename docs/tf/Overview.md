@@ -6,14 +6,13 @@
 
 
 ```
-pip install tensorflow
-
+ pip install tensorflow
+ 
 ```
 
 
 
 ## Modules
-
 [ `audio` ](https://tensorflow.google.cn/api_docs/python/tf/audio) module: Public API for tf.audio namespace.
 
 [ `autograph` ](https://tensorflow.google.cn/api_docs/python/tf/autograph) module: Conversion of plain Python into TensorFlow graph code.
@@ -103,8 +102,8 @@ pip install tensorflow
 [ `xla` ](https://tensorflow.google.cn/api_docs/python/tf/xla) module: Public API for tf.xla namespace.
 
 
-## Classes
 
+## Classes
 [ `class AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod): A class listing aggregation methods used to combine gradients.
 
 [ `class CriticalSection` ](https://tensorflow.google.cn/api_docs/python/tf/CriticalSection): Critical section.
@@ -170,8 +169,8 @@ pip install tensorflow
 [ `class zeros_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_initializer): Initializer that generates tensors initialized to 0.
 
 
-## Functions
 
+## Functions
 [ `Assert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert): Asserts that the given condition is true.
 
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/abs): Computes the absolute value of a tensor.
@@ -272,7 +271,7 @@ pip install tensorflow
 
 [ `executing_eagerly(...)` ](https://tensorflow.google.cn/api_docs/python/tf/executing_eagerly): Returns True if the current thread has eager execution enabled.
 
-[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  ![](./Overview.md_0.png).
+[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.51ex" height="2.494ex" viewBox="0 -766.3 2802.9 1074" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-79" x="0" y="0"></use><use xlink:href="#MJMAIN-3D" x="775" y="0"></use><g transform="translate(1831,0)"><use xlink:href="#MJMATHI-65" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-78" x="659" y="513"></use></g></g></svg>.
 
 [ `expand_dims(...)` ](https://tensorflow.google.cn/api_docs/python/tf/expand_dims): Inserts a dimension of 1 into a tensor's shape.
 
@@ -529,30 +528,58 @@ pip install tensorflow
 [ `zeros_like(...)` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_like): Creates a tensor with all elements set to zero.
 
 
+
 ## Other Members
+
 -  `__version__ = '2.0.0'`  []()
+
 -  `bfloat16`  []()
+
 -  `bool`  []()
+
 -  `complex128`  []()
+
 -  `complex64`  []()
+
 -  `double`  []()
+
 -  `float16`  []()
+
 -  `float32`  []()
+
 -  `float64`  []()
+
 -  `half`  []()
+
 -  `int16`  []()
+
 -  `int32`  []()
+
 -  `int64`  []()
+
 -  `int8`  []()
+
 -  `qint16`  []()
+
 -  `qint32`  []()
+
 -  `qint8`  []()
+
 -  `quint16`  []()
+
 -  `quint8`  []()
+
 -  `resource`  []()
+
 -  `string`  []()
+
 -  `uint16`  []()
+
 -  `uint32`  []()
+
 -  `uint64`  []()
+
 -  `uint8`  []()
+
 -  `variant`  []()
+

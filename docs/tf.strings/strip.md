@@ -1,31 +1,37 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/strings/strip)  
----  
-  
-Defined in generated file: `python/ops/gen_string_ops.py`
+Defined in generated file:  `python/ops/gen_string_ops.py` 
 
 Strip leading and trailing whitespaces from the Tensor.
 
+
+
 ### Aliases:
 
-  * [`tf.compat.v1.string_strip`](/api_docs/python/tf/strings/strip)
-  * [`tf.compat.v1.strings.strip`](/api_docs/python/tf/strings/strip)
-  * [`tf.compat.v2.strings.strip`](/api_docs/python/tf/strings/strip)
+- [ `tf.compat.v1.string_strip` ](/api_docs/python/tf/strings/strip)
 
-    
-    
-    tf.strings.strip(
-        input,
-        name=None
-    )
-    
+- [ `tf.compat.v1.strings.strip` ](/api_docs/python/tf/strings/strip)
+
+- [ `tf.compat.v2.strings.strip` ](/api_docs/python/tf/strings/strip)
+
+
+
+```
+ tf.strings.strip(
+    input,
+    name=None
+)
+ 
+```
+
+
 
 #### Args:
 
-  * **`input`** : A `Tensor` of type `string`. A string `Tensor` of any shape.
-  * **`name`** : A name for the operation (optional).
+- **`input`** : A  `Tensor`  of type  `string` . A string  `Tensor`  of any shape.
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
-
-A `Tensor` of type `string`.
+A  `Tensor`  of type  `string` .
 

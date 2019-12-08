@@ -1,47 +1,72 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/losses/MSE) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/losses.py#L762-L771)  
-  
-  
+
+
 ### Aliases:
 
-  * [`tf.compat.v1.keras.losses.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v1.keras.losses.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v1.keras.losses.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v1.keras.metrics.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v1.keras.metrics.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v1.keras.metrics.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.keras.losses.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.keras.losses.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.keras.losses.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.keras.metrics.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.keras.metrics.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.keras.metrics.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.losses.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.losses.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.losses.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.metrics.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.metrics.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.compat.v2.metrics.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.keras.losses.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.keras.losses.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.keras.metrics.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.keras.metrics.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.keras.metrics.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.losses.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.losses.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.losses.mse`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.metrics.MSE`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.metrics.mean_squared_error`](/api_docs/python/tf/keras/losses/MSE)
-  * [`tf.metrics.mse`](/api_docs/python/tf/keras/losses/MSE)
+- [ `tf.compat.v1.keras.losses.MSE` ](/api_docs/python/tf/keras/losses/MSE)
 
-    
-    
-    tf.keras.losses.MSE(
-        y_true,
-        y_pred
-    )
-    
+- [ `tf.compat.v1.keras.losses.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v1.keras.losses.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v1.keras.metrics.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v1.keras.metrics.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v1.keras.metrics.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.keras.losses.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.keras.losses.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.keras.losses.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.keras.metrics.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.keras.metrics.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.keras.metrics.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.losses.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.losses.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.losses.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.metrics.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.metrics.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.compat.v2.metrics.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.keras.losses.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.keras.losses.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.keras.metrics.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.keras.metrics.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.keras.metrics.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.losses.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.losses.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.losses.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.metrics.MSE` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.metrics.mean_squared_error` ](/api_docs/python/tf/keras/losses/MSE)
+
+- [ `tf.metrics.mse` ](/api_docs/python/tf/keras/losses/MSE)
+
+
+
+```
+ tf.keras.losses.MSE(
+    y_true,
+    y_pred
+)
+ 
+```
 

@@ -1,37 +1,36 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/data/experimental/cardinality) |
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/cardinality.py#L32-L51)  
-  
-  
-Returns the cardinality of `dataset`, if known.
+Returns the cardinality of  `dataset` , if known.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.data.experimental.cardinality`](/api_docs/python/tf/data/experimental/cardinality)
-  * [`tf.compat.v2.data.experimental.cardinality`](/api_docs/python/tf/data/experimental/cardinality)
+- [ `tf.compat.v1.data.experimental.cardinality` ](/api_docs/python/tf/data/experimental/cardinality)
 
-    
-    
-    tf.data.experimental.cardinality(dataset)
-    
+- [ `tf.compat.v2.data.experimental.cardinality` ](/api_docs/python/tf/data/experimental/cardinality)
 
-The operation returns the cardinality of `dataset`. The operation may return
-[`tf.data.experimental.INFINITE_CARDINALITY`](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#INFINITE_CARDINALITY)
-if `dataset` contains an infinite number of elements or
-[`tf.data.experimental.UNKNOWN_CARDINALITY`](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#UNKNOWN_CARDINALITY)
-if the analysis fails to determine the number of elements in `dataset` (e.g.
-when the dataset source is a file).
+
+
+```
+ tf.data.experimental.cardinality(dataset)
+ 
+```
+
+The operation returns the cardinality of  `dataset` . The operation may return
+[ `tf.data.experimental.INFINITE_CARDINALITY` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#INFINITE_CARDINALITY) if  `dataset`  contains an infinite
+number of elements or [ `tf.data.experimental.UNKNOWN_CARDINALITY` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#UNKNOWN_CARDINALITY) if the
+analysis fails to determine the number of elements in  `dataset`  (e.g. when the
+dataset source is a file).
+
+
 
 #### Args:
 
-  * **`dataset`** : A [`tf.data.Dataset`](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) for which to determine cardinality.
+- **`dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) for which to determine cardinality.
+
+
 
 #### Returns:
-
-A scalar [`tf.int64`](https://tensorflow.google.cn/api_docs/python/tf#int64)
-`Tensor` representing the cardinality of `dataset`. If the cardinality is
-infinite or unknown, the operation returns the named constant
-`INFINITE_CARDINALITY` and `UNKNOWN_CARDINALITY` respectively.
+A scalar [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64)  `Tensor`  representing the cardinality of  `dataset` . If
+the cardinality is infinite or unknown, the operation returns the named
+constant  `INFINITE_CARDINALITY`  and  `UNKNOWN_CARDINALITY`  respectively.
 

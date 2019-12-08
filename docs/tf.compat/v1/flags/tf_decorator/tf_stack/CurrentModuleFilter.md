@@ -1,74 +1,82 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L108-L134)  
----  
-  
-## Class `CurrentModuleFilter`
 
+
+## Class  `CurrentModuleFilter` 
 Filters stack frames from the module where this is used (best effort).
 
-Inherits From:
-[`StackTraceFilter`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceFilter)
+Inherits From: [ `StackTraceFilter` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceFilter)
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.app.flags.tf_decorator.tf_stack.CurrentModuleFilter`](/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/CurrentModuleFilter)
+- Class [ `tf.compat.v1.app.flags.tf_decorator.tf_stack.CurrentModuleFilter` ](/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/CurrentModuleFilter)
 
-## `__init__`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L111-L127)
 
-    
-    
-    __init__()
-    
+##  `__init__` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L111-L127)
 
-Initialize self. See help(type(self)) for accurate signature.
+
+
+```
+ __init__()
+ 
+```
+
+Initialize self.  See help(type(self)) for accurate signature.
+
+
 
 ## Methods
 
-### `__enter__`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L59-L75)
+###  `__enter__` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L59-L75)
 
-    
-    
-    __enter__()
-    
 
-### `__exit__`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L77-L79)
+```
+ __enter__()
+ 
+```
 
-    
-    
-    __exit__(
-        unused_type,
-        unused_value,
-        unused_traceback
-    )
-    
 
-### `get_filtered_filenames`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L129-L134)
+###  `__exit__` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L77-L79)
 
-    
-    
-    get_filtered_filenames()
-    
 
-### `reset`
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L101-L102)
+```
+ __exit__(
+    unused_type,
+    unused_value,
+    unused_traceback
+)
+ 
+```
 
-    
-    
-    reset()
-    
+
+
+###  `get_filtered_filenames` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L129-L134)
+
+
+
+```
+ get_filtered_filenames()
+ 
+```
+
+
+
+###  `reset` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L101-L102)
+
+
+
+```
+ reset()
+ 
+```
 

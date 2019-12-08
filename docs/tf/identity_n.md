@@ -1,46 +1,54 @@
-
 Defined in generated file:  `python/ops/gen_array_ops.py` 
 
 Returns a list of tensors with the same shapes and contents as the input
 
 
+
 ### Aliases:
+
 - [ `tf.compat.v1.identity_n` ](/api_docs/python/tf/identity_n)
+
 - [ `tf.compat.v2.identity_n` ](/api_docs/python/tf/identity_n)
 
 
+
 ```
-tf.identity_n(
+ tf.identity_n(
     input,
     name=None
 )
-
+ 
 ```
-
 
 tensors.
 
-This op can be used to override the gradient for complicated functions. Forexample, suppose y = f(x) and we wish to apply a custom function g for backpropsuch that dx = g(dy). In Python,
+This op can be used to override the gradient for complicated functions. For
+example, suppose y = f(x) and we wish to apply a custom function g for backprop
+such that dx = g(dy). In Python,
+
 
 
 ```
-with tf.get_default_graph().gradient_override_map(
+ with tf.get_default_graph().gradient_override_map(
     {'IdentityN': 'OverrideGradientWithG'}):
   y, _ = identity_n([f(x), x])
 
 @tf.RegisterGradient('OverrideGradientWithG')
 def ApplyG(op, dy, _):
   return [None, g(dy)]  # Do not backprop to f(x).
-
+ 
 ```
 
 
 
 #### Args:
+
 - **`input`** : A list of  `Tensor`  objects.
+
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
 
+#### Returns:
 A list of  `Tensor`  objects. Has the same type as  `input` .
+

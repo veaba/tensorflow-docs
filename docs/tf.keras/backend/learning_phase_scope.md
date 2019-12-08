@@ -1,33 +1,36 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/backend/learning_phase_scope)
-|  [ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source
-on GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/backend.py#L360-L402)  
-  
-  
-Provides a scope within which the learning phase is equal to `value`.
+Provides a scope within which the learning phase is equal to  `value` .
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.keras.backend.learning_phase_scope`](/api_docs/python/tf/keras/backend/learning_phase_scope)
-  * [`tf.compat.v2.keras.backend.learning_phase_scope`](/api_docs/python/tf/keras/backend/learning_phase_scope)
+- [ `tf.compat.v1.keras.backend.learning_phase_scope` ](/api_docs/python/tf/keras/backend/learning_phase_scope)
 
-    
-    
-    tf.keras.backend.learning_phase_scope(value)
-    
+- [ `tf.compat.v2.keras.backend.learning_phase_scope` ](/api_docs/python/tf/keras/backend/learning_phase_scope)
+
+
+
+```
+ tf.keras.backend.learning_phase_scope(value)
+ 
+```
 
 The learning phase gets restored to its original value upon exiting the scope.
 
+
+
 #### Arguments:
 
-  * **`value`** : Learning phase value, either 0 or 1 (integers).
+- **`value`** : Learning phase value, either 0 or 1 (integers).
+
+
 
 #### Yields:
-
 None.
+
+
 
 #### Raises:
 
-  * **`ValueError`** : if `value` is neither `0` nor `1`.
+- **`ValueError`** : if  `value`  is neither  `0`  nor  `1` .
 

@@ -1,24 +1,26 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L350-L363)  
----  
-  
 Returns a list of files that match the given pattern(s).
 
-    
-    
-    tf.compat.v1.gfile.Glob(filename)
-    
+
+
+```
+ tf.compat.v1.gfile.Glob(filename)
+ 
+```
+
+
 
 #### Args:
 
-  * **`filename`** : string or iterable of strings. The glob pattern(s).
+- **`filename`** : string or iterable of strings. The glob pattern(s).
+
+
 
 #### Returns:
-
 A list of strings containing filenames that match the given pattern(s).
+
+
 
 #### Raises:
 
-  * **[`errors.OpError`](/api_docs/python/tf/errors/OpError)** : If there are filesystem / directory listing errors.
+- **[ `errors.OpError` ](/api_docs/python/tf/errors/OpError)** : If there are filesystem / directory listing errors.
 

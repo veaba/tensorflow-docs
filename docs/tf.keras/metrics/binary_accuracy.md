@@ -1,23 +1,23 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/metrics/binary_accuracy) |
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2756-L2760)  
-  
-  
+
+
 ### Aliases:
 
-  * [`tf.compat.v1.keras.metrics.binary_accuracy`](/api_docs/python/tf/keras/metrics/binary_accuracy)
-  * [`tf.compat.v2.keras.metrics.binary_accuracy`](/api_docs/python/tf/keras/metrics/binary_accuracy)
-  * [`tf.compat.v2.metrics.binary_accuracy`](/api_docs/python/tf/keras/metrics/binary_accuracy)
-  * [`tf.metrics.binary_accuracy`](/api_docs/python/tf/keras/metrics/binary_accuracy)
+- [ `tf.compat.v1.keras.metrics.binary_accuracy` ](/api_docs/python/tf/keras/metrics/binary_accuracy)
 
-    
-    
-    tf.keras.metrics.binary_accuracy(
-        y_true,
-        y_pred,
-        threshold=0.5
-    )
-    
+- [ `tf.compat.v2.keras.metrics.binary_accuracy` ](/api_docs/python/tf/keras/metrics/binary_accuracy)
+
+- [ `tf.compat.v2.metrics.binary_accuracy` ](/api_docs/python/tf/keras/metrics/binary_accuracy)
+
+- [ `tf.metrics.binary_accuracy` ](/api_docs/python/tf/keras/metrics/binary_accuracy)
+
+
+
+```
+ tf.keras.metrics.binary_accuracy(
+    y_true,
+    y_pred,
+    threshold=0.5
+)
+ 
+```
 

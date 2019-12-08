@@ -1,69 +1,83 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/strings/split) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/ragged_string_ops.py#L457-L517)  
-  
-  
-Split elements of `input` based on `sep` into a `RaggedTensor`.
+Split elements of  `input`  based on  `sep`  into a  `RaggedTensor` .
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v2.strings.split`](/api_docs/python/tf/strings/split)
+- [ `tf.compat.v2.strings.split` ](/api_docs/python/tf/strings/split)
 
-    
-    
-    tf.strings.split(
-        input,
-        sep=None,
-        maxsplit=-1,
-        name=None
-    )
-    
+
+
+```
+ tf.strings.split(
+    input,
+    sep=None,
+    maxsplit=-1,
+    name=None
+)
+ 
+```
+
+
 
 ### Used in the guide:
 
-  * [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
+- [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
+
+
 
 ### Used in the tutorials:
 
-  * [Load images](https://tensorflow.google.cn/tutorials/load_data/images)
+- [Load images](https://tensorflow.google.cn/tutorials/load_data/images)
 
-Let N be the size of `input` (typically N will be the batch size). Split each
-element of `input` based on `sep` and return a `SparseTensor` or
-`RaggedTensor` containing the split tokens. Empty tokens are ignored.
+Let N be the size of  `input`  (typically N will be the batch size). Split each
+element of  `input`  based on  `sep`  and return a  `SparseTensor`  or
+ `RaggedTensor`  containing the split tokens. Empty tokens are ignored.
+
+
 
 #### Example:
 
-    
-    
-    tf.strings.split('hello world')
-    <Tensor ['hello', 'world']>
-    tf.strings.split(['hello world', 'a b c'])
-    <tf.RaggedTensor [['hello', 'world'], ['a', 'b', 'c']]>
-    
 
-If `sep` is given, consecutive delimiters are not grouped together and are
-deemed to delimit empty strings. For example, `input` of `"1<>2<><>3"` and
-`sep` of `"<>"` returns `["1", "2", "", "3"]`. If `sep` is None or an empty
+```
+ tf.strings.split('hello world') 
+ <Tensor ['hello', 'world']> 
+ tf.strings.split(['hello world', 'a b c']) 
+ <tf.RaggedTensor [['hello', 'world'], ['a', 'b', 'c']]> 
+
+```
+
+If  `sep`  is given, consecutive delimiters are not grouped together and are
+deemed to delimit empty strings. For example,  `input`  of  `"1<>2<><>3"`  and
+ `sep`  of  `"<>"`  returns  `["1", "2", "", "3"]` . If  `sep`  is None or an empty
 string, consecutive whitespace are regarded as a single separator, and the
 result will contain no empty strings at the start or end if the string has
 leading or trailing whitespace.
 
 Note that the above mentioned behavior matches python's str.split.
 
+
+
 #### Args:
 
-  * **`input`** : A string `Tensor` of rank `N`, the strings to split. If `rank(input)` is not known statically, then it is assumed to be `1`.
-  * **`sep`** : `0-D` string `Tensor`, the delimiter string.
-  * **`maxsplit`** : An `int`. If `maxsplit > 0`, limit of the split of the result.
-  * **`name`** : A name for the operation (optional).
+- **`input`** : A string  `Tensor`  of rank  `N` , the strings to split.  If
+ `rank(input)`  is not known statically, then it is assumed to be  `1` .
+
+- **`sep`** :  `0-D`  string  `Tensor` , the delimiter string.
+
+- **`maxsplit`** : An  `int` . If  `maxsplit > 0` , limit of the split of the result.
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Raises:
 
-  * **`ValueError`** : If sep is not a string.
+- **`ValueError`** : If sep is not a string.
+
+
 
 #### Returns:
-
-A `RaggedTensor` of rank `N+1`, the strings split according to the delimiter.
+A  `RaggedTensor`  of rank  `N+1` , the strings split according to the
+delimiter.
 

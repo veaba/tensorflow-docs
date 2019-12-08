@@ -1,136 +1,174 @@
-## Class `BooleanFlag`
 
+
+## Class  `BooleanFlag` 
 Basic boolean flag.
 
-Inherits From:
-[`Flag`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Flag)
+Inherits From: [ `Flag` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Flag)
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.app.flags.BooleanFlag`](/api_docs/python/tf/compat/v1/flags/BooleanFlag)
+- Class [ `tf.compat.v1.app.flags.BooleanFlag` ](/api_docs/python/tf/compat/v1/flags/BooleanFlag)
 
-Boolean flags do not take any arguments, and their value is either True (1) or
-False (0). The false value is specified on the command line by prepending the
-word 'no' to either the long or the short flag name.
+Boolean flags do not take any arguments, and their value is either
+True (1) or False (0).  The false value is specified on the command
+line by prepending the word 'no' to either the long or the short flag
+name.
 
-For example, if a Boolean flag was created whose long name was 'update' and
-whose short name was 'x', then this flag could be explicitly unset through
-either --noupdate or --nox.
+For example, if a Boolean flag was created whose long name was
+'update' and whose short name was 'x', then this flag could be
+explicitly unset through either --noupdate or --nox.
 
-## `__init__`
 
-    
-    
-    __init__(
-        name,
-        default,
-        help,
-        short_name=None,
-        **args
-    )
-    
 
-Initialize self. See help(type(self)) for accurate signature.
+##  `__init__` 
+
+
+```
+ __init__(
+    name,
+    default,
+    help,
+    short_name=None,
+    **args
+)
+ 
+```
+
+Initialize self.  See help(type(self)) for accurate signature.
+
+
 
 ## Properties
 
-### `value`
+
+###  `value` 
+
 
 ## Methods
 
-### `__eq__`
 
-    
-    
-    __eq__(other)
-    
+###  `__eq__` 
+
+
+```
+ __eq__(other)
+ 
+```
 
 Return self==value.
 
-### `__ge__`
 
-    
-    
-    __ge__(
-        other,
-        NotImplemented=NotImplemented
-    )
-    
 
-Return a >= b. Computed by @total_ordering from (not a < b).
+###  `__ge__` 
 
-### `__gt__`
 
-    
-    
-    __gt__(
-        other,
-        NotImplemented=NotImplemented
-    )
-    
+```
+ __ge__(
+    other,
+    NotImplemented=NotImplemented
+)
+ 
+```
 
-Return a > b. Computed by @total_ordering from (not a < b) and (a != b).
+Return a >= b.  Computed by @total_ordering from (not a < b).
 
-### `__le__`
 
-    
-    
-    __le__(
-        other,
-        NotImplemented=NotImplemented
-    )
-    
 
-Return a <= b. Computed by @total_ordering from (a < b) or (a == b).
+###  `__gt__` 
 
-### `__lt__`
 
-    
-    
-    __lt__(other)
-    
+```
+ __gt__(
+    other,
+    NotImplemented=NotImplemented
+)
+ 
+```
+
+Return a > b.  Computed by @total_ordering from (not a < b) and (a != b).
+
+
+
+###  `__le__` 
+
+
+```
+ __le__(
+    other,
+    NotImplemented=NotImplemented
+)
+ 
+```
+
+Return a <= b.  Computed by @total_ordering from (a < b) or (a == b).
+
+
+
+###  `__lt__` 
+
+
+```
+ __lt__(other)
+ 
+```
 
 Return self<value.
 
-### `flag_type`
 
-    
-    
-    flag_type()
-    
+
+###  `flag_type` 
+
+
+```
+ flag_type()
+ 
+```
 
 Returns a str that describes the type of the flag.
 
-NOTE: we use strings, and not the types.*Type constants because our flags can
-have more exotic types, e.g., 'comma separated list of strings', 'whitespace
-separated list of strings', etc.
+NOTE: we use strings, and not the types.*Type constants because
+our flags can have more exotic types, e.g., 'comma separated list
+of strings', 'whitespace separated list of strings', etc.
 
-### `parse`
 
-    
-    
-    parse(argument)
-    
+
+###  `parse` 
+
+
+```
+ parse(argument)
+ 
+```
 
 Parses string and sets flag value.
 
+
+
 #### Args:
 
-  * **`argument`** : str or the correct flag value type, argument to be parsed.
+- **`argument`** : str or the correct flag value type, argument to be parsed.
 
-### `serialize`
 
-    
-    
-    serialize()
-    
+
+###  `serialize` 
+
+
+```
+ serialize()
+ 
+```
 
 Serializes the flag.
 
-### `unparse`
 
-    
-    
-    unparse()
-    
+
+###  `unparse` 
+
+
+```
+ unparse()
+ 
+```
 

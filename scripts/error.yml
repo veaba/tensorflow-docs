@@ -6,3 +6,8 @@
 "https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/imdb/wget_word_index":"../docs/tf.keras/datasets/imdb/wget_word_index.md"
 "https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/rstimator":"../docs/tf.keras/datasets/rstimator/Overview.md"
 "https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/rstimator/model_to_estimator":"../docs/tf.keras/datasets/rstimator/model_to_estimator.md"
+"https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor":"../docs/tf/RaggedTensor.md"
+
+"https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor":"../docs/tf/RaggedTensor.md"
+"https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor":"../docs/tf/RaggedTensor.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer":"../docs/tf.keras/optimizers/Optimizer.md"

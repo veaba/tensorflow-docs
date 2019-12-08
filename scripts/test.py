@@ -119,3 +119,5 @@ clear_dir_file_content('../docs/', category[0])
 # #     bbb = bbb + '\\' + str(index + 1)
 #
 # print(bbb)
+
+# https://tensorflow.google.cn/api_docs/python/tf/bitcast

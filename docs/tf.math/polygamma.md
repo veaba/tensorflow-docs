@@ -1,40 +1,49 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/math/polygamma)  
----  
-  
-Defined in generated file: `python/ops/gen_math_ops.py`
 
-Compute the polygamma function \\(\psi^{(n)}(x)\\).
+
+Defined in generated file:  `python/ops/gen_math_ops.py` 
+
+Compute the polygamma function \(\psi^{(n)}(x)\).
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.math.polygamma`](/api_docs/python/tf/math/polygamma)
-  * [`tf.compat.v1.polygamma`](/api_docs/python/tf/math/polygamma)
-  * [`tf.compat.v2.math.polygamma`](/api_docs/python/tf/math/polygamma)
+- [ `tf.compat.v1.math.polygamma` ](/api_docs/python/tf/math/polygamma)
 
-    
-    
-    tf.math.polygamma(
-        a,
-        x,
-        name=None
-    )
-    
+- [ `tf.compat.v1.polygamma` ](/api_docs/python/tf/math/polygamma)
+
+- [ `tf.compat.v2.math.polygamma` ](/api_docs/python/tf/math/polygamma)
+
+
+
+```
+ tf.math.polygamma(
+    a,
+    x,
+    name=None
+)
+ 
+```
 
 The polygamma function is defined as:
 
-\\(\psi^{(a)}(x) = \frac{d^a}{dx^a} \psi(x)\\)
+ψ(a)(x)=dadxaψ(x)
 
-where \\(\psi(x)\\) is the digamma function. The polygamma function is defined
-only for non-negative integer orders \a\\.
+where ψ(x) is the digamma function.
+The polygamma function is defined only for non-negative integer orders \a\.
+
+
 
 #### Args:
 
-  * **`a`** : A `Tensor`. Must be one of the following types: `float32`, `float64`.
-  * **`x`** : A `Tensor`. Must have the same type as `a`.
-  * **`name`** : A name for the operation (optional).
+- **`a`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` .
+
+- **`x`** : A  `Tensor` . Must have the same type as  `a` .
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
-
-A `Tensor`. Has the same type as `a`.
+A  `Tensor` . Has the same type as  `a` .
 

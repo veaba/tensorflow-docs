@@ -1,50 +1,52 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/linalg/expm) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg/linalg_impl.py#L228-L339)  
-  
-  
 Computes the matrix exponential of one or more square matrices.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.linalg.expm`](/api_docs/python/tf/linalg/expm)
-  * [`tf.compat.v2.linalg.expm`](/api_docs/python/tf/linalg/expm)
+- [ `tf.compat.v1.linalg.expm` ](/api_docs/python/tf/linalg/expm)
 
-    
-    
-    tf.linalg.expm(
-        input,
-        name=None
-    )
-    
+- [ `tf.compat.v2.linalg.expm` ](/api_docs/python/tf/linalg/expm)
 
+
+<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.linalg.expm(
+    input,
+    name=None
+)
+</code></pre></devsite-code>
 exp(A) = \sum_{n=0}^\infty A^n/n!
 
 The exponential is computed using a combination of the scaling and squaring
-method and the Pade approximation. Details can be found in: Nicholas J.
-Higham, "The scaling and squaring method for the matrix exponential
-revisited," SIAM J. Matrix Anal. Applic., 26:1179-1193, 2005.
+method and the Pade approximation. Details can be found in:
+Nicholas J. Higham, "The scaling and squaring method for the matrix
+exponential revisited," SIAM J. Matrix Anal. Applic., 26:1179-1193, 2005.
 
-The input is a tensor of shape `[..., M, M]` whose inner-most 2 dimensions
+The input is a tensor of shape  `[..., M, M]`  whose inner-most 2 dimensions
 form square matrices. The output is a tensor of the same shape as the input
-containing the exponential for all input submatrices `[..., :, :]`.
+containing the exponential for all input submatrices  `[..., :, :]` .
+
+
 
 #### Args:
 
-  * **`input`** : A `Tensor`. Must be `float16`, `float32`, `float64`, `complex64`, or `complex128` with shape `[..., M, M]`.
-  * **`name`** : A name to give this `Op` (optional).
+- **`input`** : A  `Tensor` . Must be  `float16` ,  `float32` ,  `float64` ,  `complex64` , or
+ `complex128`  with shape  `[..., M, M]` .
+
+- **`name`** :  A name to give this  `Op`  (optional).
+
+
 
 #### Returns:
-
 the matrix exponential of the input.
+
+
 
 #### Raises:
 
-  * **`ValueError`** : An unsupported type is provided as input.
+- **`ValueError`** : An unsupported type is provided as input.
+
+
 
 #### Scipy Compatibility
-
 Equivalent to scipy.linalg.expm
 

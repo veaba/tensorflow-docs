@@ -1,51 +1,59 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/util/event.proto)  
----  
-  
-## Class `Event`
 
+
+## Class  `Event` 
 A ProtocolMessage
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.summary.Event`](/api_docs/python/tf/compat/v1/Event)
+- Class [ `tf.compat.v1.summary.Event` ](/api_docs/python/tf/compat/v1/Event)
+
+
 
 ## Properties
 
-### `file_version`
 
-`string file_version`
+###  `file_version` 
+ `string file_version` 
 
-### `graph_def`
 
-`bytes graph_def`
 
-### `log_message`
+###  `graph_def` 
+ `bytes graph_def` 
 
-`LogMessage log_message`
 
-### `meta_graph_def`
 
-`bytes meta_graph_def`
+###  `log_message` 
+ `LogMessage log_message` 
 
-### `session_log`
 
-`SessionLog session_log`
 
-### `step`
+###  `meta_graph_def` 
+ `bytes meta_graph_def` 
 
-`int64 step`
 
-### `summary`
 
-`Summary summary`
+###  `session_log` 
+ `SessionLog session_log` 
 
-### `tagged_run_metadata`
 
-`TaggedRunMetadata tagged_run_metadata`
 
-### `wall_time`
+###  `step` 
+ `int64 step` 
 
-`double wall_time`
+
+
+###  `summary` 
+ `Summary summary` 
+
+
+
+###  `tagged_run_metadata` 
+ `TaggedRunMetadata tagged_run_metadata` 
+
+
+
+###  `wall_time` 
+ `double wall_time` 
 

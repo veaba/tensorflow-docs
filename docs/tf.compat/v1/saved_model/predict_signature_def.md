@@ -1,36 +1,41 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/saved_model/signature_def_utils_impl.py#L171-L209)  
----  
-  
 Creates prediction signature from given inputs and outputs.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.saved_model.signature_def_utils.predict_signature_def`](/api_docs/python/tf/compat/v1/saved_model/predict_signature_def)
+- [ `tf.compat.v1.saved_model.signature_def_utils.predict_signature_def` ](/api_docs/python/tf/compat/v1/saved_model/predict_signature_def)
 
-    
-    
-    tf.compat.v1.saved_model.predict_signature_def(
-        inputs,
-        outputs
-    )
-    
+
+
+```
+ tf.compat.v1.saved_model.predict_signature_def(
+    inputs,
+    outputs
+)
+ 
+```
 
 This function produces signatures intended for use with the TensorFlow Serving
 Predict API (tensorflow_serving/apis/prediction_service.proto). This API
 imposes no constraints on the input and output types.
 
+
+
 #### Args:
 
-  * **`inputs`** : dict of string to `Tensor`.
-  * **`outputs`** : dict of string to `Tensor`.
+- **`inputs`** : dict of string to  `Tensor` .
+
+- **`outputs`** : dict of string to  `Tensor` .
+
+
 
 #### Returns:
-
 A prediction-flavored signature_def.
+
+
 
 #### Raises:
 
-  * **`ValueError`** : If inputs or outputs is `None`.
+- **`ValueError`** : If inputs or outputs is  `None` .
 

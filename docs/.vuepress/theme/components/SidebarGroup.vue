@@ -80,10 +80,10 @@
 								line-height 1.4
 								font-weight normal
 								padding-left 2rem
-								
-								/*&:not(.clickable)*/
-								/*		opacity 0.5*/
-						
+								&.open
+										/*background #eaecef*/
+										background-color rgba(27,31,35,0.05);
+
 						& > .sidebar-group-items
 								padding-left 1rem
 								

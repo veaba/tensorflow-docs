@@ -1,46 +1,55 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/random/shuffle) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/random_ops.py#L258-L287)  
-  
-  
 Randomly shuffles a tensor along its first dimension.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.random.shuffle`](/api_docs/python/tf/random/shuffle)
-  * [`tf.compat.v1.random_shuffle`](/api_docs/python/tf/random/shuffle)
-  * [`tf.compat.v2.random.shuffle`](/api_docs/python/tf/random/shuffle)
+- [ `tf.compat.v1.random.shuffle` ](/api_docs/python/tf/random/shuffle)
 
-    
-    
-    tf.random.shuffle(
-        value,
-        seed=None,
-        name=None
-    )
-    
+- [ `tf.compat.v1.random_shuffle` ](/api_docs/python/tf/random/shuffle)
 
-The tensor is shuffled along dimension 0, such that each `value[j]` is mapped
-to one and only one `output[i]`. For example, a mapping that might occur for a
+- [ `tf.compat.v2.random.shuffle` ](/api_docs/python/tf/random/shuffle)
+
+
+
+```
+ tf.random.shuffle(
+    value,
+    seed=None,
+    name=None
+)
+ 
+```
+
+The tensor is shuffled along dimension 0, such that each  `value[j]`  is mapped
+to one and only one  `output[i]` . For example, a mapping that might occur for a
 3x2 tensor is:
 
-    
-    
-    [[1, 2],       [[5, 6],
-     [3, 4],  ==>   [1, 2],
-     [5, 6]]        [3, 4]]
-    
+
+
+```
+ [[1, 2],       [[5, 6],
+ [3, 4],  ==>   [1, 2],
+ [5, 6]]        [3, 4]]
+ 
+```
+
+
 
 #### Args:
 
-  * **`value`** : A Tensor to be shuffled.
-  * **`seed`** : A Python integer. Used to create a random seed for the distribution. See [`tf.compat.v1.set_random_seed`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed) for behavior.
-  * **`name`** : A name for the operation (optional).
+- **`value`** : A Tensor to be shuffled.
+
+- **`seed`** : A Python integer. Used to create a random seed for the distribution.
+See
+[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed)
+for behavior.
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
-
-A tensor of same shape and type as `value`, shuffled along its first
+A tensor of same shape and type as  `value` , shuffled along its first
 dimension.
 

@@ -1,17 +1,11 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/preprocessing)  
----  
-  
 Keras data preprocessing utils.
 
+
+
 ## Modules
+[ `image` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image) module: Set of tools for real-time data augmentation on image data.
 
-[`image`](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image)
-module: Set of tools for real-time data augmentation on image data.
+[ `sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/sequence) module: Utilities for preprocessing sequence data.
 
-[`sequence`](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/sequence)
-module: Utilities for preprocessing sequence data.
-
-[`text`](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/text)
-module: Utilities for text input preprocessing.
+[ `text` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/text) module: Utilities for text input preprocessing.
 

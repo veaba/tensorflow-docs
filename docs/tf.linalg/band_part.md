@@ -1,81 +1,101 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/linalg/band_part)  
----  
-  
-Defined in generated file: `python/ops/gen_array_ops.py`
+Defined in generated file:  `python/ops/gen_array_ops.py` 
 
-Copy a tensor setting everything outside a central band in each innermost
-matrix
+Copy a tensor setting everything outside a central band in each innermost matrix
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.linalg.band_part`](/api_docs/python/tf/linalg/band_part)
-  * [`tf.compat.v1.matrix_band_part`](/api_docs/python/tf/linalg/band_part)
-  * [`tf.compat.v2.linalg.band_part`](/api_docs/python/tf/linalg/band_part)
+- [ `tf.compat.v1.linalg.band_part` ](/api_docs/python/tf/linalg/band_part)
 
-    
-    
-    tf.linalg.band_part(
-        input,
-        num_lower,
-        num_upper,
-        name=None
-    )
-    
+- [ `tf.compat.v1.matrix_band_part` ](/api_docs/python/tf/linalg/band_part)
+
+- [ `tf.compat.v2.linalg.band_part` ](/api_docs/python/tf/linalg/band_part)
+
+
+
+```
+ tf.linalg.band_part(
+    input,
+    num_lower,
+    num_upper,
+    name=None
+)
+ 
+```
+
+
 
 ### Used in the tutorials:
 
-  * [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
+- [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 
 to zero.
 
-The `band` part is computed as follows: Assume `input` has `k` dimensions `[I,
-J, K, ..., M, N]`, then the output is a tensor with the same shape where
+The  `band`  part is computed as follows:
+Assume  `input`  has  `k`  dimensions  `[I, J, K, ..., M, N]` , then the output is a
+tensor with the same shape where
 
-`band[i, j, k, ..., m, n] = in_band(m, n) * input[i, j, k, ..., m, n]`.
+ `band[i, j, k, ..., m, n] = in_band(m, n) * input[i, j, k, ..., m, n]` .
 
 The indicator function
 
-`in_band(m, n) = (num_lower < 0 || (m-n) <= num_lower)) && (num_upper < 0 ||
-(n-m) <= num_upper)`.
+<code translate="no" dir="ltr">in_band(m, n) = (num_lower < 0 || (m-n) <= num_lower)) &amp;&amp;
+                 (num_upper < 0 || (n-m) <= num_upper)</code>.
+
+
 
 #### For example:
 
-    
-    
-    # if 'input' is [[ 0,  1,  2, 3]
-                     [-1,  0,  1, 2]
-                     [-2, -1,  0, 1]
-                     [-3, -2, -1, 0]],
-    
-    tf.matrix_band_part(input, 1, -1) ==> [[ 0,  1,  2, 3]
-                                           [-1,  0,  1, 2]
-                                           [ 0, -1,  0, 1]
-                                           [ 0,  0, -1, 0]],
-    
-    tf.matrix_band_part(input, 2, 1) ==> [[ 0,  1,  0, 0]
-                                          [-1,  0,  1, 0]
-                                          [-2, -1,  0, 1]
-                                          [ 0, -2, -1, 0]]
-    
+
+```
+ # if 'input' is [[ 0,  1,  2, 3]
+                 [-1,  0,  1, 2]
+                 [-2, -1,  0, 1]
+                 [-3, -2, -1, 0]],
+
+tf.matrix_band_part(input, 1, -1) ==> [[ 0,  1,  2, 3]
+                                       [-1,  0,  1, 2]
+                                       [ 0, -1,  0, 1]
+                                       [ 0,  0, -1, 0]],
+
+tf.matrix_band_part(input, 2, 1) ==> [[ 0,  1,  0, 0]
+                                      [-1,  0,  1, 0]
+                                      [-2, -1,  0, 1]
+                                      [ 0, -2, -1, 0]]
+ 
+```
+
+
 
 #### Useful special cases:
 
-    
-    
-     tf.matrix_band_part(input, 0, -1) ==> Upper triangular part.
-     tf.matrix_band_part(input, -1, 0) ==> Lower triangular part.
-     tf.matrix_band_part(input, 0, 0) ==> Diagonal.
-    
+
+```
+  tf.matrix_band_part(input, 0, -1) ==> Upper triangular part.
+ tf.matrix_band_part(input, -1, 0) ==> Lower triangular part.
+ tf.matrix_band_part(input, 0, 0) ==> Diagonal.
+ 
+```
+
+
 
 #### Args:
 
-  * **`input`** : A `Tensor`. Rank `k` tensor.
-  * **`num_lower`** : A `Tensor`. Must be one of the following types: `int32`, `int64`. 0-D tensor. Number of subdiagonals to keep. If negative, keep entire lower triangle.
-  * **`num_upper`** : A `Tensor`. Must have the same type as `num_lower`. 0-D tensor. Number of superdiagonals to keep. If negative, keep entire upper triangle.
-  * **`name`** : A name for the operation (optional).
+- **`input`** : A  `Tensor` . Rank  `k`  tensor.
+
+- **`num_lower`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .
+0-D tensor. Number of subdiagonals to keep. If negative, keep entire
+lower triangle.
+
+- **`num_upper`** : A  `Tensor` . Must have the same type as  `num_lower` .
+0-D tensor. Number of superdiagonals to keep. If negative, keep
+entire upper triangle.
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
-
-A `Tensor`. Has the same type as `input`.
+A  `Tensor` . Has the same type as  `input` .
 

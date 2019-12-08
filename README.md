@@ -472,7 +472,7 @@ key="xxxx"
 ### 目录
 
 |文件|用途|
-||
+|---|---|
 |[category.py](scripts/category.py)|目录|
 |[check_empty_file.py](scripts/check_empty_file.py)|用途检查文件docs的文件是否为空不被写入|
 |[config.py](scripts/config.py)|百度翻译秘钥，不上传到仓库|

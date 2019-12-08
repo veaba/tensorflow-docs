@@ -1,42 +1,50 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/check_ops.py#L1550-L1586)  
----  
-  
-Assert that `x` is of integer dtype.
+Assert that  `x`  is of integer dtype.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.debugging.assert_integer`](/api_docs/python/tf/compat/v1/assert_integer)
+- [ `tf.compat.v1.debugging.assert_integer` ](/api_docs/python/tf/compat/v1/assert_integer)
 
-    
-    
-    tf.compat.v1.assert_integer(
-        x,
-        message=None,
-        name=None
-    )
-    
+
+
+```
+ tf.compat.v1.assert_integer(
+    x,
+    message=None,
+    name=None
+)
+ 
+```
 
 Example of adding a dependency to an operation:
 
-    
-    
-    with tf.control_dependencies([tf.compat.v1.assert_integer(x)]):
-      output = tf.reduce_sum(x)
-    
+
+
+```
+ with tf.control_dependencies([tf.compat.v1.assert_integer(x)]):
+  output = tf.reduce_sum(x)
+ 
+```
+
+
 
 #### Args:
 
-  * **`x`** : `Tensor` whose basetype is integer and is not quantized.
-  * **`message`** : A string to prefix to the default message.
-  * **`name`** : A name for this operation (optional). Defaults to "assert_integer".
+- **`x`** :  `Tensor`  whose basetype is integer and is not quantized.
+
+- **`message`** : A string to prefix to the default message.
+
+- **`name`** : A name for this operation (optional).  Defaults to "assert_integer".
+
+
 
 #### Raises:
 
-  * **`TypeError`** : If `x.dtype` is anything other than non-quantized integer.
+- **`TypeError`** :  If  `x.dtype`  is anything other than non-quantized integer.
+
+
 
 #### Returns:
-
-A `no_op` that does nothing. Type can be determined statically.
+A  `no_op`  that does nothing.  Type can be determined statically.
 

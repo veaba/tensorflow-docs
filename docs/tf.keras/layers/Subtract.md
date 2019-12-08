@@ -1,93 +1,101 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/layers/Subtract) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L253-L288)  
-  
-  
-## Class `Subtract`
 
+
+## Class  `Subtract` 
 Layer that subtracts two inputs.
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.keras.layers.Subtract`](/api_docs/python/tf/keras/layers/Subtract)
-  * Class [`tf.compat.v2.keras.layers.Subtract`](/api_docs/python/tf/keras/layers/Subtract)
+- Class [ `tf.compat.v1.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
 
-It takes as input a list of tensors of size 2, both of the same shape, and
-returns a single tensor, (inputs[0] - inputs[1]), also of the same shape.
+- Class [ `tf.compat.v2.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
+
+It takes as input a list of tensors of size 2,
+both of the same shape, and returns a single tensor, (inputs[0] - inputs[1]),
+also of the same shape.
+
+
 
 #### Examples:
 
-    
-    
-        import keras
-    
-        input1 = keras.layers.Input(shape=(16,))
-        x1 = keras.layers.Dense(8, activation='relu')(input1)
-        input2 = keras.layers.Input(shape=(32,))
-        x2 = keras.layers.Dense(8, activation='relu')(input2)
-        # Equivalent to subtracted = keras.layers.subtract([x1, x2])
-        subtracted = keras.layers.Subtract()([x1, x2])
-    
-        out = keras.layers.Dense(4)(subtracted)
-        model = keras.models.Model(inputs=[input1, input2], outputs=out)
-    
 
-## `__init__`
+```
+     import keras
 
-[View
-source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L41-L43)
+    input1 = keras.layers.Input(shape=(16,))
+    x1 = keras.layers.Dense(8, activation='relu')(input1)
+    input2 = keras.layers.Input(shape=(32,))
+    x2 = keras.layers.Dense(8, activation='relu')(input2)
+    # Equivalent to subtracted = keras.layers.subtract([x1, x2])
+    subtracted = keras.layers.Subtract()([x1, x2])
 
-    
-    
-    __init__(**kwargs)
-    
+    out = keras.layers.Dense(4)(subtracted)
+    model = keras.models.Model(inputs=[input1, input2], outputs=out)
+ 
+```
 
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/keras/layers/subtract) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L590-L616)  
-  
-  
-Functional interface to the `Subtract` layer.
+
+
+##  `__init__` 
+[View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L41-L43)
+
+
+
+```
+ __init__(**kwargs)
+ 
+```
+
+Functional interface to the  `Subtract`  layer.
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.keras.layers.subtract`](/api_docs/python/tf/keras/layers/subtract)
-  * [`tf.compat.v2.keras.layers.subtract`](/api_docs/python/tf/keras/layers/subtract)
+- [ `tf.compat.v1.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
 
-    
-    
-    tf.keras.layers.subtract(
-        inputs,
-        **kwargs
-    )
-    
+- [ `tf.compat.v2.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
+
+
+
+```
+ tf.keras.layers.subtract(
+    inputs,
+    **kwargs
+)
+ 
+```
+
+
 
 #### Arguments:
 
-  * **`inputs`** : A list of input tensors (exactly 2).
-  * **`**kwargs`** : Standard layer keyword arguments.
+- **`inputs`** : A list of input tensors (exactly 2).
+
+- **`**kwargs`** : Standard layer keyword arguments.
+
+
 
 #### Returns:
-
 A tensor, the difference of the inputs.
+
+
 
 #### Examples:
 
-    
-    
-        import keras
-    
-        input1 = keras.layers.Input(shape=(16,))
-        x1 = keras.layers.Dense(8, activation='relu')(input1)
-        input2 = keras.layers.Input(shape=(32,))
-        x2 = keras.layers.Dense(8, activation='relu')(input2)
-        subtracted = keras.layers.subtract([x1, x2])
-    
-        out = keras.layers.Dense(4)(subtracted)
-        model = keras.models.Model(inputs=[input1, input2], outputs=out)
-    
+
+```
+     import keras
+
+    input1 = keras.layers.Input(shape=(16,))
+    x1 = keras.layers.Dense(8, activation='relu')(input1)
+    input2 = keras.layers.Input(shape=(32,))
+    x2 = keras.layers.Dense(8, activation='relu')(input2)
+    subtracted = keras.layers.subtract([x1, x2])
+
+    out = keras.layers.Dense(4)(subtracted)
+    model = keras.models.Model(inputs=[input1, input2], outputs=out)
+ 
+```
 

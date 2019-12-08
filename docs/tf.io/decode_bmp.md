@@ -1,44 +1,57 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/io/decode_bmp)  
----  
-  
-Defined in generated file: `python/ops/gen_image_ops.py`
+Defined in generated file:  `python/ops/gen_image_ops.py` 
 
 Decode the first frame of a BMP-encoded image to a uint8 tensor.
 
+
+
 ### Aliases:
 
-  * [`tf.compat.v1.image.decode_bmp`](/api_docs/python/tf/io/decode_bmp)
-  * [`tf.compat.v1.io.decode_bmp`](/api_docs/python/tf/io/decode_bmp)
-  * [`tf.compat.v2.image.decode_bmp`](/api_docs/python/tf/io/decode_bmp)
-  * [`tf.compat.v2.io.decode_bmp`](/api_docs/python/tf/io/decode_bmp)
-  * [`tf.image.decode_bmp`](/api_docs/python/tf/io/decode_bmp)
+- [ `tf.compat.v1.image.decode_bmp` ](/api_docs/python/tf/io/decode_bmp)
 
-    
-    
-    tf.io.decode_bmp(
-        contents,
-        channels=0,
-        name=None
-    )
-    
+- [ `tf.compat.v1.io.decode_bmp` ](/api_docs/python/tf/io/decode_bmp)
 
-The attr `channels` indicates the desired number of color channels for the
+- [ `tf.compat.v2.image.decode_bmp` ](/api_docs/python/tf/io/decode_bmp)
+
+- [ `tf.compat.v2.io.decode_bmp` ](/api_docs/python/tf/io/decode_bmp)
+
+- [ `tf.image.decode_bmp` ](/api_docs/python/tf/io/decode_bmp)
+
+
+
+```
+ tf.io.decode_bmp(
+    contents,
+    channels=0,
+    name=None
+)
+ 
+```
+
+The attr  `channels`  indicates the desired number of color channels for the
 decoded image.
+
+
 
 #### Accepted values are:
 
-  * 0: Use the number of channels in the BMP-encoded image.
-  * 3: output an RGB image.
-  * 4: output an RGBA image.
+- 0: Use the number of channels in the BMP-encoded image.
+
+- 3: output an RGB image.
+
+- 4: output an RGBA image.
+
+
 
 #### Args:
 
-  * **`contents`** : A `Tensor` of type `string`. 0-D. The BMP-encoded image.
-  * **`channels`** : An optional `int`. Defaults to `0`.
-  * **`name`** : A name for the operation (optional).
+- **`contents`** : A  `Tensor`  of type  `string` . 0-D.  The BMP-encoded image.
+
+- **`channels`** : An optional  `int` . Defaults to  `0` .
+
+- **`name`** : A name for the operation (optional).
+
+
 
 #### Returns:
-
-A `Tensor` of type `uint8`.
+A  `Tensor`  of type  `uint8` .
 

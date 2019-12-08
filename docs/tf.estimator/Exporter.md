@@ -1,57 +1,71 @@
-[ ![](https://tensorflow.google.cn/images/tf_logo_32px.png) TensorFlow 1
-version](/versions/r1.15/api_docs/python/tf/estimator/Exporter) |  [
-![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/exporter.py)  
-  
-  
-## Class `Exporter`
 
+
+## Class  `Exporter` 
 A class representing a type of model export.
+
+
 
 ### Aliases:
 
-  * Class [`tf.compat.v1.estimator.Exporter`](/api_docs/python/tf/estimator/Exporter)
-  * Class [`tf.compat.v2.estimator.Exporter`](/api_docs/python/tf/estimator/Exporter)
+- Class [ `tf.compat.v1.estimator.Exporter` ](/api_docs/python/tf/estimator/Exporter)
+
+- Class [ `tf.compat.v2.estimator.Exporter` ](/api_docs/python/tf/estimator/Exporter)
+
+
 
 ## Properties
 
-### `name`
 
+###  `name` 
 Directory name.
 
-A directory name under the export base directory where exports of this type
-are written. Should not be `None` nor empty.
+A directory name under the export base directory where exports of
+this type are written.  Should not be  `None`  nor empty.
+
+
 
 ## Methods
 
-### `export`
 
-[View
-source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/exporter.py)
+###  `export` 
+[View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/exporter.py)
 
-    
-    
-    export(
-        estimator,
-        export_path,
-        checkpoint_path,
-        eval_result,
-        is_the_final_export
-    )
-    
 
-Exports the given `Estimator` to a specific format.
+
+```
+ export(
+    estimator,
+    export_path,
+    checkpoint_path,
+    eval_result,
+    is_the_final_export
+)
+ 
+```
+
+Exports the given  `Estimator`  to a specific format.
+
+
 
 #### Args:
 
-  * **`estimator`** : the `Estimator` to export.
-  * **`export_path`** : A string containing a directory where to write the export.
-  * **`checkpoint_path`** : The checkpoint path to export.
-  * **`eval_result`** : The output of [`Estimator.evaluate`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator#evaluate) on this checkpoint.
-  * **`is_the_final_export`** : This boolean is True when this is an export in the end of training. It is False for the intermediate exports during the training. When passing `Exporter` to [`tf.estimator.train_and_evaluate`](https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate) `is_the_final_export` is always False if [`TrainSpec.max_steps`](https://tensorflow.google.cn/api_docs/python/tf/estimator/TrainSpec#max_steps) is `None`.
+- **`estimator`** : the  `Estimator`  to export.
+
+- **`export_path`** : A string containing a directory where to write the export.
+
+- **`checkpoint_path`** : The checkpoint path to export.
+
+- **`eval_result`** : The output of [ `Estimator.evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator#evaluate) on this checkpoint.
+
+- **`is_the_final_export`** : This boolean is True when this is an export in the
+end of training.  It is False for the intermediate exports during
+the training.
+When passing  `Exporter`  to [ `tf.estimator.train_and_evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate)
+ `is_the_final_export`  is always False if [ `TrainSpec.max_steps` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/TrainSpec#max_steps) is
+ `None` .
+
+
 
 #### Returns:
-
-The string path to the exported directory or `None` if export is skipped.
+The string path to the exported directory or  `None`  if export is skipped.
 

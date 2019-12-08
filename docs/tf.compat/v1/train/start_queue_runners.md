@@ -1,57 +1,73 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/queue_runner_impl.py#L414-L480)  
----  
-  
 Starts all queue runners collected in the graph. (deprecated)
+
+
 
 ### Aliases:
 
-  * [`tf.compat.v1.train.queue_runner.start_queue_runners`](/api_docs/python/tf/compat/v1/train/start_queue_runners)
+- [ `tf.compat.v1.train.queue_runner.start_queue_runners` ](/api_docs/python/tf/compat/v1/train/start_queue_runners)
 
-    
-    
-    tf.compat.v1.train.start_queue_runners(
-        sess=None,
-        coord=None,
-        daemon=True,
-        start=True,
-        collection=tf.GraphKeys.QUEUE_RUNNERS
-    )
-    
 
-**Warning:** THIS FUNCTION IS DEPRECATED. It will be removed in a future
-version. Instructions for updating: To construct input pipelines, use the
-[`tf.data`](https://tensorflow.google.cn/api_docs/python/tf/data) module.
 
-This is a companion method to `add_queue_runner()`. It just starts threads for
-all queue runners collected in the graph. It returns the list of all threads.
+```
+ tf.compat.v1.train.start_queue_runners(
+    sess=None,
+    coord=None,
+    daemon=True,
+    start=True,
+    collection=tf.GraphKeys.QUEUE_RUNNERS
+)
+ 
+```
+
+
+<aside class="warning">**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) module.</aside>
+This is a companion method to  `add_queue_runner()` .  It just starts
+threads for all queue runners collected in the graph.  It returns
+the list of all threads.
+
+
 
 #### Args:
 
-  * **`sess`** : `Session` used to run the queue ops. Defaults to the default session.
-  * **`coord`** : Optional `Coordinator` for coordinating the started threads.
-  * **`daemon`** : Whether the threads should be marked as `daemons`, meaning they don't block program exit.
-  * **`start`** : Set to `False` to only create the threads, not start them.
-  * **`collection`** : A `GraphKey` specifying the graph collection to get the queue runners from. Defaults to `GraphKeys.QUEUE_RUNNERS`.
+- **`sess`** :  `Session`  used to run the queue ops.  Defaults to the
+default session.
+
+- **`coord`** : Optional  `Coordinator`  for coordinating the started threads.
+
+- **`daemon`** : Whether the threads should be marked as  `daemons` , meaning
+they don't block program exit.
+
+- **`start`** : Set to  `False`  to only create the threads, not start them.
+
+- **`collection`** : A  `GraphKey`  specifying the graph collection to
+get the queue runners from.  Defaults to  `GraphKeys.QUEUE_RUNNERS` .
+
+
 
 #### Raises:
 
-  * **`ValueError`** : if `sess` is None and there isn't any default session.
-  * **`TypeError`** : if `sess` is not a [`tf.compat.v1.Session`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session) object.
+- **`ValueError`** : if  `sess`  is None and there isn't any default session.
+
+- **`TypeError`** : if  `sess`  is not a [ `tf.compat.v1.Session` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session) object.
+
+
 
 #### Returns:
-
 A list of threads.
+
+
 
 #### Raises:
 
-  * **`RuntimeError`** : If called with eager execution enabled.
-  * **`ValueError`** : If called without a default [`tf.compat.v1.Session`](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session) registered.
+- **`RuntimeError`** : If called with eager execution enabled.
+
+- **`ValueError`** : If called without a default [ `tf.compat.v1.Session` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session) registered.
+
+
 
 #### Eager Compatibility
-
-Not compatible with eager execution. To ingest data under eager execution, use
-the [`tf.data`](https://tensorflow.google.cn/api_docs/python/tf/data) API
-instead.
+Not compatible with eager execution. To ingest data under eager execution,
+use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API instead.
 

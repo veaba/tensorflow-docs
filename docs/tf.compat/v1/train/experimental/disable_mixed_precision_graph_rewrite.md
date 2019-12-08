@@ -1,21 +1,14 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/mixed_precision.py#L220-L244)  
----  
-  
 Disables the mixed precision graph rewrite.
 
-    
-    
-    tf.compat.v1.train.experimental.disable_mixed_precision_graph_rewrite()
-    
 
+<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.train.experimental.disable_mixed_precision_graph_rewrite()
+</code></pre></devsite-code>
 After this is called, the mixed precision graph rewrite will no longer run for
 new Sessions, and so float32 operations will no longer be converted to float16
 in such Sessions. However, any existing Sessions will continue to have the
 graph rewrite enabled if they were created after
-`enable_mixed_precision_graph_rewrite` was called but before
-`disable_mixed_precision_graph_rewrite` was called.
+ `enable_mixed_precision_graph_rewrite`  was called but before
+ `disable_mixed_precision_graph_rewrite`  was called.
 
 This does not undo the effects of loss scaling. Any optimizers wrapped with a
 LossScaleOptimizer will continue to do loss scaling, although this loss
@@ -25,6 +18,6 @@ the graph rewrite no longer converts the graph to use float16.
 This function is useful for unit testing. A unit tests can test using the
 mixed precision graph rewrite, then disable it so future unit tests continue
 using float32. If this is done, unit tests should not share a single session,
-as `enable_mixed_precision_graph_rewrite` and
-`disable_mixed_precision_graph_rewrite` have no effect on existing sessions.
+as  `enable_mixed_precision_graph_rewrite`  and
+ `disable_mixed_precision_graph_rewrite`  have no effect on existing sessions.
 

@@ -1,95 +1,113 @@
-[ ![](https://tensorflow.google.cn/images/GitHub-Mark-32px.png) View source on
-GitHub
-](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/core/profiler/tfprof_output.proto)  
----  
-  
-## Class `MultiGraphNodeProto`
 
+
+## Class  `MultiGraphNodeProto` 
 A ProtocolMessage
+
+
 
 ## Properties
 
-### `accelerator_exec_micros`
 
-`int64 accelerator_exec_micros`
+###  `accelerator_exec_micros` 
+ `int64 accelerator_exec_micros` 
 
-### `children`
 
-`repeated MultiGraphNodeProto children`
 
-### `cpu_exec_micros`
+###  `children` 
+ `repeated MultiGraphNodeProto children` 
 
-`int64 cpu_exec_micros`
 
-### `exec_micros`
 
-`int64 exec_micros`
+###  `cpu_exec_micros` 
+ `int64 cpu_exec_micros` 
 
-### `float_ops`
 
-`int64 float_ops`
 
-### `graph_nodes`
+###  `exec_micros` 
+ `int64 exec_micros` 
 
-`repeated GraphNodeProto graph_nodes`
 
-### `name`
 
-`string name`
+###  `float_ops` 
+ `int64 float_ops` 
 
-### `output_bytes`
 
-`int64 output_bytes`
 
-### `parameters`
+###  `graph_nodes` 
+ `repeated GraphNodeProto graph_nodes` 
 
-`int64 parameters`
 
-### `peak_bytes`
 
-`int64 peak_bytes`
+###  `name` 
+ `string name` 
 
-### `requested_bytes`
 
-`int64 requested_bytes`
 
-### `residual_bytes`
+###  `output_bytes` 
+ `int64 output_bytes` 
 
-`int64 residual_bytes`
 
-### `total_accelerator_exec_micros`
 
-`int64 total_accelerator_exec_micros`
+###  `parameters` 
+ `int64 parameters` 
 
-### `total_cpu_exec_micros`
 
-`int64 total_cpu_exec_micros`
 
-### `total_exec_micros`
+###  `peak_bytes` 
+ `int64 peak_bytes` 
 
-`int64 total_exec_micros`
 
-### `total_float_ops`
 
-`int64 total_float_ops`
+###  `requested_bytes` 
+ `int64 requested_bytes` 
 
-### `total_output_bytes`
 
-`int64 total_output_bytes`
 
-### `total_parameters`
+###  `residual_bytes` 
+ `int64 residual_bytes` 
 
-`int64 total_parameters`
 
-### `total_peak_bytes`
 
-`int64 total_peak_bytes`
+###  `total_accelerator_exec_micros` 
+ `int64 total_accelerator_exec_micros` 
 
-### `total_requested_bytes`
 
-`int64 total_requested_bytes`
 
-### `total_residual_bytes`
+###  `total_cpu_exec_micros` 
+ `int64 total_cpu_exec_micros` 
 
-`int64 total_residual_bytes`
+
+
+###  `total_exec_micros` 
+ `int64 total_exec_micros` 
+
+
+
+###  `total_float_ops` 
+ `int64 total_float_ops` 
+
+
+
+###  `total_output_bytes` 
+ `int64 total_output_bytes` 
+
+
+
+###  `total_parameters` 
+ `int64 total_parameters` 
+
+
+
+###  `total_peak_bytes` 
+ `int64 total_peak_bytes` 
+
+
+
+###  `total_requested_bytes` 
+ `int64 total_requested_bytes` 
+
+
+
+###  `total_residual_bytes` 
+ `int64 total_residual_bytes` 
 
