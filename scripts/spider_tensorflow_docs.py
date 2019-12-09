@@ -220,7 +220,21 @@ handle_async_flat({
     # "https://tensorflow.google.cn/api_docs/python/tf/broadcast_to": "../docs/tf/broadcast_to.md",
     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
     # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging": "../docs/tf.compat/v1/logging/Overview.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging": "../docs/tf.compat/v1/logging/Overview.md",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/experimental/KMeans": "../docs/tf.compat/v1/estimator/experimental/KMeans",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/gather": "../docs/tf.compat/v1/gather",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/math": "../docs/tf.compat/v1/math/Overview",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1": "../docs/tf.compat/v1/Overview",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Variable": "../docs/tf.compat/v1/Variable",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v2/math": "../docs/tf.compat/v2/math/Overview",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v2": "../docs/tf.compat/v2/Overview",
+    "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adam": "../docs/tf.keras/optimizers/Adam",
+    "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Ftrl": "../docs/tf.keras/optimizers/Ftrl",
+    "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/RMSprop": "../docs/tf.keras/optimizers/RMSprop",
+    "https://tensorflow.google.cn/api_docs/python/tf/math": "../docs/tf.math/Overview",
+    "https://tensorflow.google.cn/api_docs/python/tf/gather": "../docs/tf/gather",
+    "https://tensorflow.google.cn/api_docs/python/tf/Tensor": "../docs/tf/Tensor",
+    "https://tensorflow.google.cn/api_docs/python/tf/Variable": "../docs/tf/Variable",
 }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 

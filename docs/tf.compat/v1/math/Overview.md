@@ -105,7 +105,7 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
 
 [ `bessel_i1e(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/bessel_i1e): Computes the Bessel i1e function of  `x`  element-wise.
 
-[ `betainc(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/betainc): Compute the regularized incomplete beta integral <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.266ex" height="2.613ex" viewBox="0 -817.3 3128.5 1125" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-49" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-78" x="622" y="-213"></use><use xlink:href="#MJMAIN-28" x="945" y="0"></use><use xlink:href="#MJMATHI-61" x="1334" y="0"></use><use xlink:href="#MJMAIN-2C" x="1864" y="0"></use><use xlink:href="#MJMATHI-62" x="2309" y="0"></use><use xlink:href="#MJMAIN-29" x="2738" y="0"></use></g></svg>.
+[ `betainc(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/betainc): Compute the regularized incomplete beta integral ![](./Overview.md_0.png).
 
 [ `bincount(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/bincount): Counts the number of occurrences of each value in an integer array.
 
@@ -139,7 +139,7 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
 
 [ `erfc(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/erfc): Computes the complementary error function of  `x`  element-wise.
 
-[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.51ex" height="2.494ex" viewBox="0 -766.3 2802.9 1074" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-79" x="0" y="0"></use><use xlink:href="#MJMAIN-3D" x="775" y="0"></use><g transform="translate(1831,0)"><use xlink:href="#MJMATHI-65" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-78" x="659" y="513"></use></g></g></svg>.
+[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  ![](./Overview.md_0.png).
 
 [ `expm1(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/expm1): Computes  `exp(x) - 1`  element-wise.
 
@@ -175,7 +175,7 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
 
 [ `l2_normalize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/linalg/l2_normalize): Normalizes along dimension  `axis`  using an L2 norm. (deprecated arguments)
 
-[ `lbeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/lbeta): Computes <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.247ex" height="2.613ex" viewBox="0 -817.3 5703.5 1125" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-6C" x="0" y="0"></use><use xlink:href="#MJMATHI-6E" x="298" y="0"></use><use xlink:href="#MJMAIN-28" x="899" y="0"></use><use xlink:href="#MJMAIN-7C" x="1288" y="0"></use><use xlink:href="#MJMATHI-42" x="1567" y="0"></use><use xlink:href="#MJMATHI-65" x="2326" y="0"></use><use xlink:href="#MJMATHI-74" x="2793" y="0"></use><use xlink:href="#MJMATHI-61" x="3154" y="0"></use><use xlink:href="#MJMAIN-28" x="3684" y="0"></use><use xlink:href="#MJMATHI-78" x="4073" y="0"></use><use xlink:href="#MJMAIN-29" x="4646" y="0"></use><use xlink:href="#MJMAIN-7C" x="5035" y="0"></use><use xlink:href="#MJMAIN-29" x="5314" y="0"></use></g></svg>, reducing along the last dimension.
+[ `lbeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/lbeta): Computes ![](./Overview.md_0.png), reducing along the last dimension.
 
 [ `less(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/less): Returns the truth value of (x < y) element-wise.
 
@@ -215,7 +215,7 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
 
 [ `not_equal(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/not_equal): Returns the truth value of (x != y) element-wise.
 
-[ `polygamma(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/polygamma): Compute the polygamma function <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.15ex" height="2.968ex" viewBox="0 -970.1 3078.5 1277.8" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-3C8" x="0" y="0"></use><g transform="translate(651,362)"><use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="389" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="989" y="0"></use></g><use xlink:href="#MJMAIN-28" x="1726" y="0"></use><use xlink:href="#MJMATHI-78" x="2116" y="0"></use><use xlink:href="#MJMAIN-29" x="2688" y="0"></use></g></svg>.
+[ `polygamma(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/polygamma): Compute the polygamma function ![](./Overview.md_0.png).
 
 [ `polyval(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/polyval): Computes the elementwise value of a polynomial.
 
@@ -315,5 +315,5 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
 
 [ `zero_fraction(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zero_fraction): Returns the fraction of zeros in  `value` .
 
-[ `zeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta): Compute the Hurwitz zeta function <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.338ex" height="2.613ex" viewBox="0 -817.3 2728.7 1125" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-3B6" x="0" y="0"></use><use xlink:href="#MJMAIN-28" x="471" y="0"></use><use xlink:href="#MJMATHI-78" x="861" y="0"></use><use xlink:href="#MJMAIN-2C" x="1433" y="0"></use><use xlink:href="#MJMATHI-71" x="1878" y="0"></use><use xlink:href="#MJMAIN-29" x="2339" y="0"></use></g></svg>.
+[ `zeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta): Compute the Hurwitz zeta function ![](./Overview.md_0.png).
 

@@ -29,9 +29,9 @@ For 0-D (scalar)  `indices` :
 
 
 >
-<p> `output` </p> [p0,...,paxis−1,paxis+1,...,pN−1]<script type="math/tex" id="MathJax-Element-1">[p_0,          ..., p_{axis-1},        \hspace{5.1em}
+<p> `output` </p> [p0,...,paxis−1,paxis+1,...,pN−1]<img src="./gather.md_0.png"><script type="math/tex" id="MathJax-Element-1">[p_0,          ..., p_{axis-1},        \hspace{5.1em}
            p_{axis + 1}, ..., p_{N-1}]</script>  =<br>
- `params`  [p0,...,paxis−1,indices,paxis+1,...,pN−1]<script type="math/tex" id="MathJax-Element-2">[p_0,          ..., p_{axis-1},        \hspace{1em}
+ `params`  [p0,...,paxis−1,indices,paxis+1,...,pN−1]<img src="./gather.md_1.png"><script type="math/tex" id="MathJax-Element-2">[p_0,          ..., p_{axis-1},        \hspace{1em}
            indices,                              \hspace{1em}
            p_{axis + 1}, ..., p_{N-1}]</script> .<p></p>
 
@@ -39,17 +39,17 @@ For 1-D (vector)  `indices`  with  `batch_dims=0` :
 
 
 >
-<p> `output` </p> [p0,...,paxis−1,i,paxis+1,...,pN−1]<script type="math/tex" id="MathJax-Element-3">[p_0,          ..., p_{axis-1},        \hspace{2.6em}
+<p> `output` </p> <img src="./gather.md_0.png"><script type="math/tex" id="MathJax-Element-3">[p_0,          ..., p_{axis-1},        \hspace{2.6em}
            i,                                    \hspace{2.6em}
            p_{axis + 1}, ..., p_{N-1}]</script>  =<br>
- `params`  [p0,...,paxis−1,indices[i],paxis+1,...,pN−1]<script type="math/tex" id="MathJax-Element-4">[p_0,          ..., p_{axis-1},        \hspace{1em}
+ `params`  <img src="./gather.md_1.png"><script type="math/tex" id="MathJax-Element-4">[p_0,          ..., p_{axis-1},        \hspace{1em}
            indices[i],                           \hspace{1em}
            p_{axis + 1}, ..., p_{N-1}]</script> .<p></p>
 
 In the general case, produces an output tensor where:
 
 
-output[p0,...,paxis−1,iB,...,iM−1,paxis+1,...,pN−1]=params[p0,...,paxis−1,indices[p0,...,pB−1,iB,...,iM−1],paxis+1,...,pN−1]<script type="math/tex; mode=display" id="MathJax-Element-5">\begin{align*}
+![](./gather.md_0.png)<script type="math/tex; mode=display" id="MathJax-Element-5">\begin{align*}
 output[p_0,             &..., p_{axis-1},                       &
      &i_{B},           ..., i_{M-1},                          &
      p_{axis + 1},    &..., p_{N-1}]                          = \\
@@ -60,15 +60,15 @@ params[p_0,             &..., p_{axis-1},                       &
 Where 
 
 
-N<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.064ex" height="2.021ex" viewBox="0 -766.3 888.5 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-4E" x="0" y="0"></use></g></svg>
+![](./gather.md_0.png)
 
 ndims(params)
 
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.442ex" height="2.021ex" viewBox="0 -766.3 1051.5 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-4D" x="0" y="0"></use></g></svg>
+![](./gather.md_0.png)
 
 ndims(indices)
 
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.764ex" height="2.021ex" viewBox="0 -766.3 759.5 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-42" x="0" y="0"></use></g></svg>
+![](./gather.md_0.png)
 
 batch_dims
 

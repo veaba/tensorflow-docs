@@ -181,12 +181,12 @@ centers from the first input batch. If the batch size is less than
 
 
     -  `KMeansClustering.SQUARED_EUCLIDEAN_DISTANCE` : Euclidean distance
-between vectors  `u`  and  `v`  is defined as <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.939ex" height="2.731ex" viewBox="0 -817.3 3848.9 1175.9" role="img" focusable="false" style="vertical-align: -0.833ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMAIN-7C" x="0" y="0"></use><use xlink:href="#MJMAIN-7C" x="278" y="0"></use><use xlink:href="#MJMATHI-75" x="557" y="0"></use><use xlink:href="#MJMAIN-2212" x="1351" y="0"></use><use xlink:href="#MJMATHI-76" x="2352" y="0"></use><use xlink:href="#MJMAIN-7C" x="2837" y="0"></use><g transform="translate(3116,0)"><use xlink:href="#MJMAIN-7C" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="393" y="-404"></use></g></g></svg> which is
+between vectors  `u`  and  `v`  is defined as ![](./KMeans.md_0.png) which is
 the square root of the sum of the absolute squares of the elements'
 difference.
 
     -  `KMeansClustering.COSINE_DISTANCE` : Cosine distance between vectors
- `u`  and  `v`  is defined as <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="22.016ex" height="2.731ex" viewBox="0 -817.3 9478.9 1175.9" role="img" focusable="false" style="vertical-align: -0.833ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMAIN-31" x="0" y="0"></use><use xlink:href="#MJMAIN-2212" x="722" y="0"></use><use xlink:href="#MJMAIN-28" x="1723" y="0"></use><use xlink:href="#MJMATHI-75" x="2112" y="0"></use><use xlink:href="#MJMAIN-2E" x="2685" y="0"></use><use xlink:href="#MJMATHI-76" x="3130" y="0"></use><use xlink:href="#MJMAIN-29" x="3616" y="0"></use><use xlink:href="#MJMAIN-2F" x="4005" y="0"></use><use xlink:href="#MJMAIN-28" x="4506" y="0"></use><use xlink:href="#MJMAIN-7C" x="4895" y="0"></use><use xlink:href="#MJMAIN-7C" x="5174" y="0"></use><use xlink:href="#MJMATHI-75" x="5452" y="0"></use><use xlink:href="#MJMAIN-7C" x="6025" y="0"></use><g transform="translate(6303,0)"><use xlink:href="#MJMAIN-7C" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="393" y="-404"></use></g><use xlink:href="#MJMAIN-7C" x="7036" y="0"></use><use xlink:href="#MJMAIN-7C" x="7314" y="0"></use><use xlink:href="#MJMATHI-76" x="7593" y="0"></use><use xlink:href="#MJMAIN-7C" x="8078" y="0"></use><g transform="translate(8357,0)"><use xlink:href="#MJMAIN-7C" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="393" y="-404"></use></g><use xlink:href="#MJMAIN-29" x="9089" y="0"></use></g></svg>.
+ `u`  and  `v`  is defined as ![](./KMeans.md_1.png).
 
 
 

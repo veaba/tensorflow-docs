@@ -53,26 +53,26 @@ A detailed description of rmsprop.
 - divide gradient by the root of this average
 
 
-meansquaret=rho∗meansquaret−1+(1−rho)∗gradient∗∗2
+$$mean_square_t = rho * mean_square{t-1} + (1-rho) * gradient ** 2$$
 
-momt=momentum∗momt−1+learningrate∗gradient/√/meansquaret+ϵ<script type="math/tex; mode=display" id="MathJax-Element-2">mom_t = momentum * mom_{t-1} + learning_rate * gradient / \sqrt{ /
-    mean_square_t + \epsilon}</script>
+$$mom_t = momentum * mom_{t-1} + learning_rate * gradient / \sqrt{ /
+    mean_square_t + \epsilon}$$
 
-variablet:=variablet−1−momt
+$$variable_t := variable_{t-1} - mom_t$$
 This implementation of RMSprop uses plain momentum, not Nesterov momentum.
 
 The centered version additionally maintains a moving average of the
 gradients, and uses that average to estimate the variance:
 
 
-meangradt=rho∗meangradt−1+(1−rho)∗gradient
+$$mean_grad_t = rho * mean_grad_{t-1} + (1-rho) * gradient$$
 
-meansquaret=rho∗meansquaret−1+(1−rho)∗gradient∗∗2
+$$mean_square_t = rho * mean_square_{t-1} + (1-rho) * gradient ** 2$$
 
-momt=momentum∗momt−1+learningrate∗gradient/sqrt(meansquaret−meangradt∗∗2+epsilon)<script type="math/tex; mode=display" id="MathJax-Element-6">mom_t = momentum * mom_{t-1} + learning_rate * gradient /
-    sqrt(mean_square_t - mean_grad_t**2 + epsilon)</script>
+$$mom_t = momentum * mom_{t-1} + learning_rate * gradient /
+    sqrt(mean_square_t - mean_grad_t**2 + epsilon)$$
 
-variablet:=variablet−1−momt<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="32.798ex" height="2.494ex" viewBox="0 -766.3 14121.2 1074" role="img" focusable="false" style="vertical-align: -0.715ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-76" x="0" y="0"></use><use xlink:href="#MJMATHI-61" x="485" y="0"></use><use xlink:href="#MJMATHI-72" x="1015" y="0"></use><use xlink:href="#MJMATHI-69" x="1466" y="0"></use><use xlink:href="#MJMATHI-61" x="1812" y="0"></use><use xlink:href="#MJMATHI-62" x="2341" y="0"></use><use xlink:href="#MJMATHI-6C" x="2771" y="0"></use><g transform="translate(3069,0)"><use xlink:href="#MJMATHI-65" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-74" x="659" y="-213"></use></g><g transform="translate(4169,0)"><use xlink:href="#MJMAIN-3A"></use><use xlink:href="#MJMAIN-3D" x="278" y="0"></use></g><use xlink:href="#MJMATHI-76" x="5504" y="0"></use><use xlink:href="#MJMATHI-61" x="5989" y="0"></use><use xlink:href="#MJMATHI-72" x="6519" y="0"></use><use xlink:href="#MJMATHI-69" x="6970" y="0"></use><use xlink:href="#MJMATHI-61" x="7316" y="0"></use><use xlink:href="#MJMATHI-62" x="7845" y="0"></use><use xlink:href="#MJMATHI-6C" x="8275" y="0"></use><g transform="translate(8573,0)"><use xlink:href="#MJMATHI-65" x="0" y="0"></use><g transform="translate(466,-150)"><use transform="scale(0.707)" xlink:href="#MJMATHI-74" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="361" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1140" y="0"></use></g></g><use xlink:href="#MJMAIN-2212" x="10522" y="0"></use><use xlink:href="#MJMATHI-6D" x="11523" y="0"></use><use xlink:href="#MJMATHI-6F" x="12401" y="0"></use><g transform="translate(12887,0)"><use xlink:href="#MJMATHI-6D" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-74" x="1242" y="-213"></use></g></g></svg>
+$$variable_t := variable_{t-1} - mom_t$$
 References
   See ([pdf]
     http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf).

@@ -265,7 +265,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `executing_eagerly(...)` ](https://tensorflow.google.cn/api_docs/python/tf/executing_eagerly): Returns True if the current thread has eager execution enabled.
 
-[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.51ex" height="2.494ex" viewBox="0 -766.3 2802.9 1074" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-79" x="0" y="0"></use><use xlink:href="#MJMAIN-3D" x="775" y="0"></use><g transform="translate(1831,0)"><use xlink:href="#MJMATHI-65" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-78" x="659" y="513"></use></g></g></svg>.
+[ `exp(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/exp): Computes exponential of x element-wise.  ![](./Overview.md_0.png).
 
 [ `expand_dims(...)` ](https://tensorflow.google.cn/api_docs/python/tf/expand_dims): Inserts a dimension of 1 into a tensor's shape.
 

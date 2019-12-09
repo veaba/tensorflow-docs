@@ -54,15 +54,15 @@ params[p_0,             &..., p_{axis-1},                       &
 Where 
 
 
-N<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.064ex" height="2.021ex" viewBox="0 -766.3 888.5 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-4E" x="0" y="0"></use></g></svg>
+N![](./gather.md_0.png)
 
 ndims(params)
 
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.442ex" height="2.021ex" viewBox="0 -766.3 1051.5 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-4D" x="0" y="0"></use></g></svg>
+![](./gather.md_0.png)
 
 ndims(indices)
 
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.764ex" height="2.021ex" viewBox="0 -766.3 759.5 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-42" x="0" y="0"></use></g></svg>
+![](./gather.md_0.png)
 
 batch_dims
 

@@ -346,8 +346,8 @@ corresponding element in the input.
 
 Given a tensor  `x`  of complex numbers, this operation returns a tensor of type
  `float32`  or  `float64`  that is the absolute value of each element in  `x` . All
-elements in  `x`  must be complex numbers of the form <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.026ex" height="2.494ex" viewBox="0 -766.3 2594.4 1074" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-61" x="0" y="0"></use><use xlink:href="#MJMAIN-2B" x="751" y="0"></use><use xlink:href="#MJMATHI-62" x="1752" y="0"></use><use xlink:href="#MJMATHI-6A" x="2181" y="0"></use></g></svg>. The
-absolute value is computed as <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.112ex" height="2.85ex" viewBox="0 -1021.1 3923.3 1226.9" role="img" focusable="false" style="vertical-align: -0.478ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMAIN-221A" x="0" y="60"></use><rect stroke="none" width="3089" height="60" x="833" y="801"></rect><g transform="translate(833,0)"><use xlink:href="#MJMATHI-61" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="748" y="408"></use><use xlink:href="#MJMAIN-2B" x="1205" y="0"></use><g transform="translate(2206,0)"><use xlink:href="#MJMATHI-62" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="607" y="408"></use></g></g></g></svg>.  For example:
+elements in  `x`  must be complex numbers of the form ![](./Variable.md_0.png). The
+absolute value is computed as ![](./Variable.md_1.png).  For example:
 
 
 
@@ -1020,7 +1020,7 @@ Compares two variables element-wise for equality.
 
 Computes numerical negative value element-wise.
 
-I.e., <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.392ex" height="2.258ex" viewBox="0 -664.4 3182.6 972.1" role="img" focusable="false" style="vertical-align: -0.715ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-79" x="0" y="0"></use><use xlink:href="#MJMAIN-3D" x="775" y="0"></use><use xlink:href="#MJMAIN-2212" x="1831" y="0"></use><use xlink:href="#MJMATHI-78" x="2610" y="0"></use></g></svg>.
+I.e., ![](./Variable.md_0.png).
 
 
 
@@ -1089,7 +1089,7 @@ A  `Tensor`  of type  `bool` .
 
 Computes the power of one value to another.
 
-Given a tensor  `x`  and a tensor  `y` , this operation computes <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.379ex" height="2.021ex" viewBox="0 -766.3 1024.3 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-78" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-79" x="809" y="513"></use></g></svg> for
+Given a tensor  `x`  and a tensor  `y` , this operation computes ![](./Variable.md_0.png) for
 corresponding elements in  `x`  and  `y` . For example:
 
 
@@ -1503,7 +1503,7 @@ A  `Tensor`  of type  `bool` .
 
 Computes the power of one value to another.
 
-Given a tensor  `x`  and a tensor  `y` , this operation computes <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.379ex" height="2.021ex" viewBox="0 -766.3 1024.3 870.2" role="img" focusable="false" style="vertical-align: -0.241ex;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#MJMATHI-78" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#MJMATHI-79" x="809" y="513"></use></g></svg> for
+Given a tensor  `x`  and a tensor  `y` , this operation computes ![](./Variable.md_0.png) for
 corresponding elements in  `x`  and  `y` . For example:
 
 
