@@ -29,14 +29,12 @@ url = "https://tensorflow.google.cn/api_docs/python/"
 # 全局存储实例数组，Chrome driver的实例，TODO ，后续需要做重置掉
 DRIVER_INSTANCE_LIST = []
 
-
 # list 转字符
 def list_to_str(str_list, code=""):
     if isinstance(str_list, list):
         return code.join(str_list)
     else:
         return ''
-
 
 # 过滤忽略掉的标签,是无效标签则移除
 def ignore_tag(node):
@@ -53,7 +51,6 @@ def ignore_tag(node):
         return True
     else:
         return False
-
 
 # 返回 正则的字段函数，因为会重复替换，所以这个replace 不能够完全解决问题
 # list_str 数组
@@ -93,7 +90,6 @@ def fn_parse_code(list_str=None, text=""):
         reg_text = text
     return reg_text
 
-
 # 入参base64，然后裁剪后，出来base64
 # cartesian(左、上、右、下、）
 # 返回的byte
@@ -115,7 +111,6 @@ def crop_base64_img(base64_str, cartesian):
     img_byte_array = img_byte_array.getvalue()
     base64_str = base64.b64encode(img_byte_array)
     return str(base64_str, 'utf-8')
-
 
 # 解析 svg，有些情况下，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf  exp(...): Computes exponential of x
 def cover_svg_to_img(html, driver, file_markdown_path, svg_list=[], top=200, ):
@@ -149,12 +144,10 @@ def cover_svg_to_img(html, driver, file_markdown_path, svg_list=[], top=200, ):
                           '<img src="./' + image_path + '">', html, count=1)
     return html
 
-
 # 窗口滚动
 # h 高度，threshold 阈值，一般为200
 def window_scroll(h, threshold):
     return '' + 'window.scroll(0,' + str(h - threshold) + ')'
-
 
 # 去解析node节点,返回markdown
 def node_level(driver, file_markdown_path="", url_path=""):
@@ -165,7 +158,7 @@ def node_level(driver, file_markdown_path="", url_path=""):
                 html = node.get_attribute('outerHTML') or ""  # 注意，如果是innerHTML 这里只能获取到它的子级，需要使用outerHTML
                 # print("====> ",html)
                 # html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
-        
+
                 # 解析svg
                 svg_list = node.find_elements_by_css_selector('svg')
                 html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
@@ -185,7 +178,6 @@ def node_level(driver, file_markdown_path="", url_path=""):
     # 手动关闭
     driver.quit()
 
-
 def go_webdriver(url_path, file_path=""):
     if file_path:
         if not can_write(file_path):
@@ -201,7 +193,6 @@ def go_webdriver(url_path, file_path=""):
     end_time1 = time.time()
     print('===> 爬虫所需时间：', end_time1 - start_time1, file_path + '\n')
 
-
 start_time = time.time()
 # handle_async(category, "../docs/", parent_path)
 # 重置实例
@@ -209,33 +200,17 @@ start_time = time.time()
 # handle_async(category[0]['tf'], "../docs/", parent_path)
 
 # flat 扁平化处理
-
-
-# handle_async_flat(category_array, go_webdriver)
+handle_async_flat(category_array, go_webdriver)
 # https://tensorflow.google.cn/api_docs/python/tf
-handle_async_flat({
-    # "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/batch_to_space_nd": "../docs/tf.compat/v1/batch_to_space_nd.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf/broadcast_to": "../docs/tf/broadcast_to.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
-    # "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging": "../docs/tf.compat/v1/logging/Overview.md",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/experimental/KMeans": "../docs/tf.compat/v1/estimator/experimental/KMeans",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/gather": "../docs/tf.compat/v1/gather",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/math": "../docs/tf.compat/v1/math/Overview",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1": "../docs/tf.compat/v1/Overview",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Variable": "../docs/tf.compat/v1/Variable",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v2/math": "../docs/tf.compat/v2/math/Overview",
-    "https://tensorflow.google.cn/api_docs/python/tf/compat/v2": "../docs/tf.compat/v2/Overview",
-    "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adam": "../docs/tf.keras/optimizers/Adam",
-    "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Ftrl": "../docs/tf.keras/optimizers/Ftrl",
-    "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/RMSprop": "../docs/tf.keras/optimizers/RMSprop",
-    "https://tensorflow.google.cn/api_docs/python/tf/math": "../docs/tf.math/Overview",
-    "https://tensorflow.google.cn/api_docs/python/tf/gather": "../docs/tf/gather",
-    "https://tensorflow.google.cn/api_docs/python/tf/Tensor": "../docs/tf/Tensor",
-    "https://tensorflow.google.cn/api_docs/python/tf/Variable": "../docs/tf/Variable",
-}, go_webdriver)
+# handle_async_flat({
+#     # "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/batch_to_space_nd": "../docs/tf.compat/v1/batch_to_space_nd.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf/broadcast_to": "../docs/tf/broadcast_to.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+#     # "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging": "../docs/tf.compat/v1/logging/Overview.md",
+# }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个

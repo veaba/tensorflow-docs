@@ -7,7 +7,9 @@
 "https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/rstimator":"../docs/tf.keras/datasets/rstimator/Overview.md"
 "https://tensorflow.google.cn/api_docs/python/tf/keras/datasets/rstimator/model_to_estimator":"../docs/tf.keras/datasets/rstimator/model_to_estimator.md"
 "https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor":"../docs/tf/RaggedTensor.md"
-
-"https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor":"../docs/tf/RaggedTensor.md"
-"https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor":"../docs/tf/RaggedTensor.md"
 "https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer":"../docs/tf.keras/optimizers/Optimizer.md"
+"https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu":"../docs/tf.compat/v1/tpu/Overview.md"
+"https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate":"../docs/tf.estimator/train_and_evaluate.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/backend/abs":"../docs/tf.keras/backend/abs.md"
+"https://tensorflow.google.cn/api_docs/python/tf/estimator/DNNLinearCombinedEstimator":"../docs/tf.estimator/DNNLinearCombinedEstimator.md"
+"https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Nadam":"../docs/tf.keras/optimizers/Nadam.md"

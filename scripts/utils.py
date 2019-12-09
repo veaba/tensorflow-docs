@@ -13,22 +13,19 @@ from category import category
 salt = "tensorflow"
 import re
 
-url = "https://tensorflow.google.cn/api_docs/python/"
-
+url = "https://tensorflow.google.cn/api_docs/python/"  
 
 # 返回一个md加密加盐后的字符
 def md5(content):
     m = hashlib.md5()
     sign = appid + content + salt + key
     m.update(sign.encode("utf-8"))
-    return m.hexdigest()
-
+    return m.hexdigest()  
 
 # 清空文件
 def clear_file(path):
     with open(path, 'w', encoding="utf-8") as f:
-        f.write('')
-
+        f.write('')  
 
 # 判断是否可以写入，存在内容不写入
 def can_write(file_path):
@@ -37,8 +34,7 @@ def can_write(file_path):
         if f.tell() > 0:
             return False
         else:
-            return True
-
+            return True  
 
 # 递归遍历目录,同步的方式
 # array 数组
@@ -59,8 +55,7 @@ def handle(array, parent, fn, task=None):
             else:
                 handle(item_list, parent + key_name + "/", fn, task)
         elif type(obj) == str:
-            fn(parent, obj, task)
-
+            fn(parent, obj, task)  
 
 # 递归遍历目录,异步的方式
 # array 数组
@@ -90,8 +85,7 @@ def handle_async(array, parent, fn, task=None):
 
     pool = ThreadPool(processes=8)
     pool.map(process, (obj for obj in array))
-    pool.close()
-
+    pool.close()  
 
 # 百度翻译，返回翻译的内容
 async def baidu_api_translate(content):
@@ -119,8 +113,7 @@ async def baidu_api_translate(content):
             [obj] = trans_result or [{'dst': ''}]
             return obj['dst']
     else:
-        return ""
-
+        return ""  
 
 # 指定目录清空文件内容
 
@@ -129,8 +122,7 @@ def clear_dir_file_content(parent_path, obj):
     for path in obj[tf]:
         the_dir_path = parent_path + tf + '/' + path
         print(the_dir_path)
-        clear_file(the_dir_path + '.md')
-
+        clear_file(the_dir_path + '.md')  
 
 # 将category.py 解析为category_array.py文件，扁平化
 
@@ -149,8 +141,7 @@ def flag_category(array, parent, fn, task=None):
             else:
                 handle(item_list, parent + key_name + "/", fn)
         elif type(obj) == str:
-            fn(parent, obj, task)
-
+            fn(parent, obj, task)  
 
 def flag_write(parent, key_name, task=None):
     no_docs_path = re.sub(r'(../docs/)', '', parent)
@@ -164,12 +155,10 @@ def flag_write(parent, key_name, task=None):
     print("===> 写入的文件路径：", file_path)
 
     with open('category_array.py', 'a') as f:
-        f.write('"' + page_url + '":' + '"' + file_path + '"' + ',\n')
-
+        f.write('"' + page_url + '":' + '"' + file_path + '"' + ',\n')  
 
 def remove_docs_path(parent):
-    return re.sub(r'(../docs/)', '', parent)
-
+    return re.sub(r'(../docs/)', '', parent)  
 
 # 生成扁平化category_array
 # flag_category(category, '../docs/', flag_write)

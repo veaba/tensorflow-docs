@@ -1,11 +1,8 @@
-# Script 工具
-
+# Script 工具  
 
 ## selenium_spider.py
 chromedriver 镜像，需要和浏览器版本一直的驱动安装，并安装到path变量里面
-https://npm.taobao.org/mirrors/chromedriver/
-
-
+https://npm.taobao.org/mirrors/chromedriver/  
 
 ### selenium + webdriver 的方式是可以的
 - 比较有限麻烦，
@@ -18,16 +15,13 @@ https://www.cnblogs.com/hellosecretgarden/p/9206648.html
 from selenium import webdriver
 driver=webdriver.Chrome()
 
-driver.get("http://www.baidu.com")
-
+driver.get("http://www.baidu.com")  
 
 ```
 
 ### selenium_spider 负责将tensorflow api 文档爬取并调用百度API方式翻译写入
 
-[selenium_spider](spider_tensorflow_docs.py)
-
-
+[selenium_spider](spider_tensorflow_docs.py)  
 
 ```txt
 

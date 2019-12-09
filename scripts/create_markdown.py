@@ -4,12 +4,10 @@ from category import category
 import os
 import re
 
-
 def create_file(path_name, file_name):
     # a模式 是append ,w 是覆写
     with open(path_name + file_name + ".md", "w") as f:
         f.write("")
-
 
 # 根据目录去生成文件路径和文件
 def create_dir(array, n=0, parent_path="../docs/"):
@@ -37,6 +35,5 @@ def create_dir(array, n=0, parent_path="../docs/"):
             str_name = re.sub(r' ', '_', obj)
             create_file(parent_path, str_name)
     print(n, "个文件/路径")
-
 
 create_dir(category, 0, "../docs/")

@@ -4,7 +4,6 @@
 import scrapy
 import requests
 
-
 class Spider(scrapy.Spider):
     name = "baidu"
     ROBOTSTXT_OBEY = False
@@ -15,7 +14,6 @@ class Spider(scrapy.Spider):
     def parse(self, response):
         with open('baidu.html', "w", encoding="utf-8") as f:
             f.write(response.body.decode("utf-8"))
-
 
 ua_header = {"User-Agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;"}
 

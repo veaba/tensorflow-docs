@@ -5,7 +5,6 @@ from utils import handle
 
 paths = []
 
-
 def parent_path(parent, key_name,task=None):
     file_path_re = parent + key_name
     file_path = re.sub(r' ', '_', file_path_re)
@@ -14,7 +13,6 @@ def parent_path(parent, key_name,task=None):
         f.read()
         if not f.tell():
             paths.append(file_path)
-
 
 handle(category, "../docs/", parent_path)
 

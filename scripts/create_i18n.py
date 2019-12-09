@@ -5,7 +5,6 @@ from i18n_dict import i18n_dict
 from utils import handle, baidu_api_translate
 import time
 
-
 # 匹配模式，匹配到则不翻译，返回true，false 翻译。判断是横杠：- 开头的，不翻译
 def match_mode(line):
     if re.match('-', str.strip(line)):
@@ -48,17 +47,14 @@ def match_mode(line):
         return True
     return False
 
-
 all_lines_en = {
 
 }
-
 
 # 清空文件
 def clear_file(path):
     with open(path, 'w', encoding="utf-8") as f:
         f.write('')
-
 
 def create_i18n_dict_file(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -74,13 +70,11 @@ def create_i18n_dict_file(path):
             f.write("'" + new_line + "':'" + "" + "'," + '\n')
         f.write('}')
 
-
 def parent_path(parent, key_name, task):
     file_path_re = parent + key_name
     file_path = re.sub(r' ', '_', file_path_re)
     if not task:
         create_i18n_dict_file(file_path + '.md')
-
 
 # 将空的对象转为翻译对象
 def i18n_translate(array):
@@ -102,13 +96,11 @@ def i18n_translate(array):
     time_end = time.time()
     print('翻译 create_i18n_file 所消耗时间：', time_end - time_start)
 
-
 def create_i18n_py():
     time_start = time.time()
     handle(category, "../docs/", parent_path)
     time_end = time.time()
     print('创建 create_i18n_dict_file 所消耗时间：', time_end - time_start)
-
 
 i18n_translate(i18n_dict)
 # create_i18n_py()

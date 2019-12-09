@@ -39,7 +39,6 @@
 #     "## 999 symbols":"## 主要三符号",
 # }
 
-
 # def read_lines():
 #     with open('test.md','r') as f:
 #         for line in f.readlines():
@@ -75,7 +74,6 @@
 #     print("key:", item)
 #     print("---:", i18n_dict[item])
 
-
 # ###############################3
 from category import category
 from utils import clear_dir_file_content
@@ -108,7 +106,6 @@ clear_dir_file_content('../docs/', category[0])
 # print('xxx:', node)
 # =================================================================================
 # p_pattern_str=re.compile('(M + 1|block_shape + [batch]|[1, ..., M]|crops)') 的结果
-
 
 # aaa = ['a', 'b', 'c']
 #

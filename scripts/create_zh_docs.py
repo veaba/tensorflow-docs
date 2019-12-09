@@ -4,7 +4,6 @@ import time
 from i18n import i18n
 from utils import handle, clear_file
 
-
 # 匹配模式，匹配到则不翻译，返回true，false 翻译。判断是横杠：- 开头的，不翻译
 def match_mode(line):
     if re.match('-', str.strip(line)):
@@ -49,7 +48,6 @@ def match_mode(line):
         return True
     return False
 
-
 # 创建空英文词典
 def read_line(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -64,7 +62,6 @@ def read_line(path):
             new_line = line.replace('\n', '').replace("'", "\\'")
             f.write("'" + new_line + "':''," + '\n')
         f.write('}')
-
 
 # 翻译写入到原文件
 def re_write_line(path):
@@ -94,7 +91,6 @@ def re_write_line(path):
         for line in wait_save_list:
             f.write(line)
 
-
 def parent_path(parent, key_name, task):
     file_path_re = parent + key_name
     file_path = re.sub(r' ', '_', file_path_re)
@@ -103,13 +99,11 @@ def parent_path(parent, key_name, task):
         # 根据数组写入
         re_write_line(file_path + '.md')
 
-
 def create_zh_docs():
     time_create = time.time()
     handle(category, "../docs/", parent_path, task=1)  # 根据i18 生成中文文档
     time_end = time.time()
 
     print("批量翻译文档所消耗时间：", time_end - time_create)
-
 
 create_zh_docs()

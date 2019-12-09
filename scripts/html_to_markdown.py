@@ -8,7 +8,7 @@ class HTMK:
         # 错误处理
         if not isinstance(self.html,str):
             raise RuntimeError('The params is no str type')
-    
+
     # 判断是否li开头的标签
     @staticmethod
     def __is_li(self):
@@ -22,7 +22,7 @@ class HTMK:
         if re.match(r'^.*<code>',self.html):
 	        return True
         else:
-            return False 
+            return False
     # 判断h1-h6
     @staticmethod
     def __is_head(self):
@@ -84,9 +84,8 @@ class HTMK:
         the_href= re.sub(r'(href=")(.+?)(")','\\2',the_href_element.group()) # 获得a标签的地址
         return the_href
 
-
-    # 剥离外边父级标签,等同于获取内容  
-    @staticmethod 
+# 剥离外边父级标签,等同于获取内容
+    @staticmethod
     def __remove_parent_wrap(self,html=""):
         left= re.sub(r'^<(.*?)(>)','',html)
         return re.sub(r'<\/*\/([^\/]+[^\.])$','',left)
@@ -101,7 +100,7 @@ class HTMK:
         else:
             return self.__get_tag_text(self,newString=self.__remove_parent_wrap(self,html=newString))
         return text
-   
+
     # 获取是标签名
     @staticmethod
     def __get_tag_name(self):
@@ -119,7 +118,7 @@ class HTMK:
         return ''
 
     # ***************************解析部分************************ #
-    
+
     # h1-h6 todo 可能还有其他子标签
     @staticmethod
     def __parser_head(self):
@@ -168,7 +167,7 @@ class HTMK:
         left=re.sub(r'<code(.*?)>','`',self.html.strip())
         return re.sub(r'</code>','`',left)
 
-    # 将a标签 <a href="/api_docs/python/tf/clip_by_value"><code translate="no" dir="ltr">tf.compat.v2.clip_by_value</code></a> 
+    # 将a标签 <a href="/api_docs/python/tf/clip_by_value"><code translate="no" dir="ltr">tf.compat.v2.clip_by_value</code></a>
     # 转为 [xx](xxx)
     @staticmethod
     def __parser_a(self):
@@ -187,6 +186,6 @@ class HTMK:
             pass
         if self.__is_pre(self):
             pass
-        
+
         return text
 

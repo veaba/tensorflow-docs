@@ -3,7 +3,6 @@ import re
 # from category import category
 from i18n import i18n
 
-
 # from utils import handle
 
 def read_line(str_count=0, line_count=0):
@@ -16,7 +15,6 @@ def read_line(str_count=0, line_count=0):
         print("行数：", line_count)
         print("总字符数：", str_count)
 
-
 # read_line()
 
 COUNTS = {
@@ -25,7 +23,6 @@ COUNTS = {
     "STRINGS": 0,  # 总字符数
     "I18N": 0,  # 需要翻译的字符
 }
-
 
 def parent_path(parent, key_name):
     file_path_re = parent + key_name
@@ -42,14 +39,12 @@ def parent_path(parent, key_name):
                 COUNTS["LINES"] += 1
                 COUNTS["STRINGS"] += len(line)
 
-
 # handle(category, "../docs/",parent_path)
 
 # 计算需要翻译的字符长度
 def total_i18n():
     for key in i18n:
         COUNTS['I18N'] += len(key)
-
 
 total_i18n()
 print("文件个数：", COUNTS["FILES"])
