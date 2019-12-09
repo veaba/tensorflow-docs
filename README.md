@@ -1,6 +1,5 @@
 # tensorflow-docs
-python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API
-
+python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API  
 
 ### TODO
 - 增加丢弃的模块标注或者移除
@@ -45,8 +44,7 @@ def fn_parse_code_before(list_str, text):
 
 ```
 - TODO 调整转移策略（2019年10月29日11:19:34），更优化精准的将HTML转为markdown
-> get_attribute('innerHTML')
-
+> get_attribute('innerHTML')  
 
 ## vuepress theme 阅读规范
 
@@ -56,8 +54,7 @@ def fn_parse_code_before(list_str, text):
 
 已迁移到新的仓库：[pypackjs](https://github.com/veaba/pypackjs)
 
-> vuepress build 构建本项目需要3个小时，所以想找一种替代方案来完成，之前尝试过python 的线程池 将工作效率提高20倍以上，这或许是一种方式
-
+> vuepress build 构建本项目需要3个小时，所以想找一种替代方案来完成，之前尝试过python 的线程池 将工作效率提高20倍以上，这或许是一种方式  
 
 2.6K个文件，生成js等静态文件，多达5.2k多，需要等待3个小时才能打包完毕。
 
@@ -94,8 +91,7 @@ def fn_parse_code_before(list_str, text):
 - html->AST
 - js-load 解析js文件,但也是可以调用JS引擎做一些事情
 - v-node load
-- python 版本的js压缩工具
-
+- python 版本的js压缩工具  
 
 分析了一波，所以需要看一下vuepres 的核心源码是怎么做的，并迁移到python平台
 ## 关于本项目
@@ -128,9 +124,7 @@ def fn_parse_code_before(list_str, text):
 
 ### 新增分支
 - 新增dev分支，保留原始docs en 文档，用来生成中文文档
-- 新增tag origin-bookmark ，保留原始文档
-
-
+- 新增tag origin-bookmark ，保留原始文档  
 
 ### 项目起初一些废话
 
@@ -225,9 +219,7 @@ https://github.com/zalandoresearch/fashion-mnist
 6. 需要安装chromeDriver，目前是在windows平台完成
 7. TODO Image、Table
 8. 需要多线程处理这个异步请求！
-9. 完成了文件的爬取，但此时是英文
-
-
+9. 完成了文件的爬取，但此时是英文  
 
 ### 百度翻译API
 
@@ -364,8 +356,7 @@ class A:
         time.sleep(1)
     def go(self,i):
         # time.sleep(1)
-        print(i,'我被实例化拉！',time.time())
-
+        print(i,'我被实例化拉！',time.time())  
 
 start=time.time()
 for i in range(10):
@@ -389,8 +380,7 @@ class A:
         time.sleep(1)
     def go(self,i):
         # time.sleep(1)
-        print(i,'我被实例化拉！',time.time())
-
+        print(i,'我被实例化拉！',time.time())  
 
 start=time.time()
 for i in range(10):
@@ -464,9 +454,7 @@ key="xxxx"
     - 有些页面需要手动调整，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf/batch_to_space 存在html标签的错误，导致vuepress 无法编辑通过，这情况，只能手动去调整了
     
 - 第九步：发布
-    - 因为文件太多，vuepress 生成2.5k个文件确实很慢，起码两个小时才能build完成
-
-
+    - 因为文件太多，vuepress 生成2.5k个文件确实很慢，起码两个小时才能build完成  
 
 ### 目录
 

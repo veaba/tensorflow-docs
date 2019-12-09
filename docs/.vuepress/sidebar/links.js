@@ -9,7 +9,6 @@
 
 // v1 app ove
 
-
 module.exports = {
 	tfLinks: [
 		{title: "Overview", type: "group", link: "/tf/Overview"},
@@ -2573,9 +2572,8 @@ module.exports = {
 				},
 			]
 		},
-	
-	
-	],
+
+],
 	tfDataLinks: [
 		{title: "Overview", type: "group", link: "/tf.data/Overview"},
 		{title: "Dataset", type: "group", link: "/tf.data/Dataset"},
@@ -3572,7 +3570,7 @@ module.exports = {
 				{title: "SpatialDropout3D", type: "group", link: "/tf.keras/layers/SpatialDropout3D"},
 				{title: "StackedRNNCells", type: "group", link: "/tf.keras/layers/StackedRNNCells"},
 				{title: "Subtract", type: "group", link: "/tf.keras/layers/Subtract"},
-				{title: "subtract", type: "group", link: "/tf.keras/layers/subtract"},
+				{title: "subtract", type: "group", link: "/tf.keras/layers/subtract1"},
 				{title: "ThresholdedReLU", type: "group", link: "/tf.keras/layers/ThresholdedReLU"},
 				{title: "TimeDistributed", type: "group", link: "/tf.keras/layers/TimeDistributed"},
 				{title: "UpSampling1D", type: "group", link: "/tf.keras/layers/UpSampling1D"},

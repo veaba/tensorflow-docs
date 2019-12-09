@@ -14,20 +14,20 @@ jobs:
       - name: Steps:[1] Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }} 
-      
+          node-version: ${{ matrix.node-version }}
+
       - name: Steps:[2] Install dependent
         run: |
-          npm install 
+          npm install
           npm run build
-          export 
-        env: 
+          export
+        env:
           CI: true
           HAHA: hello_world
 
       - name: Steps:[3] Deploy Project
         # uses: veaba/tensorflow-docs
-          
+
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_ACCESS_TOKEN_TENSORFLOW_CI }}
           PUBLISH_BRANCH: gh-pages
@@ -37,5 +37,4 @@ jobs:
 
         run: |
           bash ./scripts/deploy.sh
-
 
