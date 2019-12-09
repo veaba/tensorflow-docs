@@ -165,21 +165,11 @@ def node_level(driver, file_markdown_path="", url_path=""):
                 html = node.get_attribute('outerHTML') or ""  # 注意，如果是innerHTML 这里只能获取到它的子级，需要使用outerHTML
                 # print("====> ",html)
                 # html = node.get_attribute('innerHTML') or ""  # 注意：这里只能获取到它的子级
-                # if node.tag_name == 'aside':  # 对引用打补丁
-                #     html = '<blockquote>' + html + '</blockquote>'
-                # # print("待转译html：", html)
-                #
-                # # 解析svg
-                # svg_list = node.find_elements_by_css_selector('svg')
-                # html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
-                # # print("添加svg后待转译html：", html)
-                #
-                # # 补全ul标签名称
-                # if node.tag_name == 'ul':
-                #     html = '<ul>' + html + '</ul>'
-                # # 补全ul标签名称
-                # if node.tag_name == 'ol':
-                #     html = '<ol>' + html + '</ol>'
+        
+                # 解析svg
+                svg_list = node.find_elements_by_css_selector('svg')
+                html = cover_svg_to_img(html, driver, file_markdown_path, svg_list=svg_list)
+                # print("添加svg后待转译html：", html)
                 mk = Pyhtmd(html).markdown()
                 # print("****> :", mk)
                 # 写入文件
@@ -221,14 +211,16 @@ start_time = time.time()
 # flat 扁平化处理
 
 
-handle_async_flat(category_array, go_webdriver)
+# handle_async_flat(category_array, go_webdriver)
 # https://tensorflow.google.cn/api_docs/python/tf
-# handle_async_flat({
-#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-#     # "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
-#     "https://tensorflow.google.cn/api_docs/python/tf/broadcast_to": "../docs/tf/broadcast_to.md",
-#     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-# }, go_webdriver)
+handle_async_flat({
+    # "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/batch_to_space_nd": "../docs/tf.compat/v1/batch_to_space_nd.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/broadcast_to": "../docs/tf/broadcast_to.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
+    "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+}, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
 # 29s 单个
