@@ -219,7 +219,8 @@ handle_async_flat({
     # "https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AdditiveAttention": "../docs/tf.keras/layers/AdditiveAttention.md",
     # "https://tensorflow.google.cn/api_docs/python/tf/broadcast_to": "../docs/tf/broadcast_to.md",
     # "https://tensorflow.google.cn/api_docs/python/tf/custom_gradient": "../docs/tf/custom_gradient.md",
-    "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+    # "https://tensorflow.google.cn/api_docs/python/tf": "../docs/tf/Overview.md",
+    "https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging": "../docs/tf.compat/v1/logging/Overview.md",
 }, go_webdriver)
 # handle_async_flat({"https://tensorflow.google.cn/api_docs/python": "../docs/All_Symbols"}, go_webdriver)
 
