@@ -1,6 +1,6 @@
-Returns the indices of a tensor that give its sorted order along an axis.
+返回按轴排序的张量的索引。
 
-**Aliases** : [ `tf.compat.v1.argsort` ](/api_docs/python/tf/argsort), [ `tf.compat.v2.argsort` ](/api_docs/python/tf/argsort)
+**别名** : [ `tf.compat.v1.argsort` ](/api_docs/python/tf/argsort), [ `tf.compat.v2.argsort` ](/api_docs/python/tf/argsort)
 
 ```
  tf.argsort(
@@ -15,7 +15,7 @@ Returns the indices of a tensor that give its sorted order along an axis.
 
 For a 1D tensor,  `tf.gather(values, tf.argsort(values))`  is equivalent to[ `tf.sort(values)` ](https://tensorflow.google.cn/api_docs/python/tf/sort). For higher dimensions, the output has the same shape as `values` , but along the given axis, values represent the index of the sortedelement in that slice of the tensor at the given position.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -27,7 +27,7 @@ c = tf.keras.backend.eval(b)
  
 ```
 
-#### Args:
+#### 参数：
 - **`values`** : 1-D or higher numeric  `Tensor` .
 - **`axis`** : The axis along which to sort. The default is -1, which sorts the lastaxis.
 - **`direction`** : The direction in which to sort the values ( `'ASCENDING'`  or `'DESCENDING'` ).
@@ -35,8 +35,8 @@ c = tf.keras.backend.eval(b)
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 An int32  `Tensor`  with the same shape as  `values` . The indices that would    sort each slice of the given  `values`  along the given  `axis` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If axis is not a constant scalar, or the direction is invalid.

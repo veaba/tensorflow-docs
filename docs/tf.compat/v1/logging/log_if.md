@@ -1,4 +1,4 @@
-Log 'msg % args' at level 'level' only if condition is fulfilled.
+仅当条件满足时，才在“level”级别记录“msg%args”。
 
 ```
  tf.compat.v1.logging.log_if(

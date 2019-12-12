@@ -5,7 +5,7 @@ Creates a  `Head`  for multi-objective learning.
 
 Inherits From: [ `Head` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Head)
 
-**Aliases** : [ `tf.compat.v1.estimator.MultiHead` ](/api_docs/python/tf/estimator/MultiHead), [ `tf.compat.v2.estimator.MultiHead` ](/api_docs/python/tf/estimator/MultiHead)
+**别名** : [ `tf.compat.v1.estimator.MultiHead` ](/api_docs/python/tf/estimator/MultiHead), [ `tf.compat.v2.estimator.MultiHead` ](/api_docs/python/tf/estimator/MultiHead)
 
 This class merges the output of multiple  `Head`  objects. Specifically:
 
@@ -14,7 +14,7 @@ This class merges the output of multiple  `Head`  objects. Specifically:
 - For prediction, merges predictions and updates keys in prediction dict to a2-tuple,  `(head.name, prediction_key)` . Merges  `export_outputs`  such thatby default the first head is served.
 
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -71,7 +71,7 @@ Also supports  `logits`  as a  `Tensor`  of shape `[D0, D1, ... DN, logits_dimen
  
 ```
 
-Usage:
+用法：
 
 ```
  def model_fn(features, labels, mode):
@@ -87,7 +87,7 @@ Usage:
  
 ```
 
-#### Args:
+#### 参数：
 - **`heads`** : List or tuple of  `Head`  instances. All heads must have  `name` specified. The first head in the list is the default used at serving time.
 - **`head_weights`** : Optional list of weights, same length as  `heads` . Used whenmerging losses to calculate the weighted sum of losses from each head. If `None` , all losses are weighted equally.
 
@@ -105,7 +105,7 @@ Usage:
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `logits_dimension` 
@@ -117,7 +117,7 @@ See  `base_head.Head`  for details.
 ###  `name` 
 See  `base_head.Head`  for details.
 
-## Methods
+## 方法
 
 
 ###  `create_estimator_spec` 
@@ -140,7 +140,7 @@ See  `base_head.Head`  for details.
 
 Returns a  `model_fn.EstimatorSpec` .
 
-#### Args:
+#### 参数：
 - **`features`** : Input  `dict`  of  `Tensor`  or  `SparseTensor`  objects.
 - **`mode`** : Estimator's  `ModeKeys` .
 - **`logits`** : Input  `dict`  keyed by head name, or logits  `Tensor`  with shape `[D0, D1, ... DN, logits_dimension]` . For many applications, the `Tensor`  shape is  `[batch_size, logits_dimension]` . If logits is a `Tensor` , it  will split the  `Tensor`  along the last dimension anddistribute it appropriately among the heads. Check  `MultiHead`  forexamples.
@@ -152,10 +152,10 @@ Returns a  `model_fn.EstimatorSpec` .
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses. These losses areusually expressed as a batch average, so for best results, in each head,users need to use the default  `loss_reduction=SUM_OVER_BATCH_SIZE`  toavoid scaling errors.  Compared to the regularization losses for eachhead, this loss is to regularize the merged loss of all heads in multihead, and will be added to the overall training loss of multi head.
 
 
-#### Returns:
+#### 返回：
 A  `model_fn.EstimatorSpec`  instance.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both  `train_op_fn`  and  `optimizer`  are  `None`  in TRAINmode, or if both are set.If  `mode`  is not in Estimator's  `ModeKeys` .
 
 

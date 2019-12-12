@@ -66,7 +66,7 @@ WARNING: tf.Variable objects by default have a non-intuitive memory model. AVari
 
 ```
  v = tf.Variable(True)
-tf.cond(v, lambda: v.assign(False), my_false_fn)  # Note: this is broken.
+tf.cond(v, lambda: v.assign(False), my_false_fn)  # 注意：this is broken.
  
 ```
 
@@ -116,7 +116,7 @@ If  `trainable`  is  `True`  the variable is also added to the graph collection 
 
 This constructor creates both a  `variable`  Op and an  `assign`  Op to set thevariable to its initial value.
 
-#### Args:
+#### 参数：
 - **`initial_value`** : A  `Tensor` , or Python object convertible to a  `Tensor` ,which is the initial value for the Variable. The initial value must havea shape specified unless  `validate_shape`  is set to False. Can also be acallable with no argument that returns the initial value when called. Inthat case,  `dtype`  must be specified. (Note that initializer functionsfrom init_ops.py must first be bound to a shape before being used here.)
 - **`trainable`** : If  `True` , also adds the variable to the graph collection `GraphKeys.TRAINABLE_VARIABLES` . This collection is used as the defaultlist of variables to use by the  `Optimizer`  classes. Defaults to  `True` ,unless  `synchronization`  is set to  `ON_READ` , in which case it defaultsto  `False` .
 - **`collections`** : List of graph collections keys. The new variable is added tothese collections. Defaults to  `[GraphKeys.GLOBAL_VARIABLES]` .
@@ -134,29 +134,29 @@ This constructor creates both a  `variable`  Op and an  `assign`  Op to set thev
 - **`shape`** : (optional) The shape of this variable. If None, the shape of `initial_value`  will be used. When setting this argument to[ `tf.TensorShape(None)` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) (representing an unspecified shape), the variablecan be assigned with values of different shapes.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both  `variable_def`  and initial_value are specified.
 - **`ValueError`** : If the initial value is not specified, or does not have ashape and  `validate_shape`  is  `True` .
 - **`RuntimeError`** : If eager execution is enabled.
 
 
-## Child Classes
+## 子类
 [ `class SaveSliceInfo` ](https://tensorflow.google.cn/api_docs/python/tf/Variable/SaveSliceInfo)
 
-## Properties
+## 属性
 
 
 ###  `aggregation` 
 
 
 ###  `constraint` 
-Returns the constraint function associated with this variable.
+返回与此变量关联的约束函数。
 
-#### Returns:
+#### 返回：
 The constraint function that was passed to the variable constructor.Can be  `None`  if no constraint was passed.
 
 ###  `device` 
-The device of this variable.
+这个变量的装置。
 
 ###  `dtype` 
 The  `DType`  of this variable.
@@ -165,18 +165,18 @@ The  `DType`  of this variable.
 The  `Graph`  of this variable.
 
 ###  `initial_value` 
-Returns the Tensor used as the initial value for the variable.
+返回用作变量初始值的张量。
 
 Note that this is different from  `initialized_value()`  which runsthe op that initializes the variable before returning its value.This method returns the tensor that is used by the op that initializesthe variable.
 
-#### Returns:
+#### 返回：
 A  `Tensor` .
 
 ###  `initializer` 
-The initializer operation for this variable.
+此变量的初始值设定项操作。
 
 ###  `name` 
-The name of this variable.
+此变量的名称。
 
 ###  `op` 
 The  `Operation`  of this variable.
@@ -184,7 +184,7 @@ The  `Operation`  of this variable.
 ###  `shape` 
 The  `TensorShape`  of this variable.
 
-#### Returns:
+#### 返回：
 A  `TensorShape` .
 
 ###  `synchronization` 
@@ -193,7 +193,7 @@ A  `TensorShape` .
 ###  `trainable` 
 
 
-## Methods
+## 方法
 
 
 ###  `__abs__` 
@@ -207,7 +207,7 @@ A  `TensorShape` .
  
 ```
 
-Computes the absolute value of a tensor.
+计算张量的绝对值。
 
 Given a tensor of integer or floating-point values, this operation returns atensor of the same type, where each element contains the absolute value of thecorresponding element in the input.
 
@@ -219,12 +219,12 @@ tf.abs(x)  # [5.25594902, 6.60492229]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  or  `SparseTensor`  of type  `float16` ,  `float32` ,  `float64` , `int32` ,  `int64` ,  `complex64`  or  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  or  `SparseTensor`  the same size, type, and sparsity as  `x`  with  absolute values.Note, for  `complex64`  or  `complex128`  input, the returned  `Tensor`  will be  of type  `float32`  or  `float64` , respectively.
 
 ###  `__add__` 
@@ -257,13 +257,13 @@ Returns the truth value of x AND y element-wise.
 
 *NOTE*: [ `math.logical_and` ](/api_docs/python/tf/math/logical_and) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__div__` 
@@ -278,17 +278,17 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Divide two values using Python 2 semantics.
+使用python 2语义划分两个值。
 
 Used for Tensor.**div** .
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  returns the quotient of x and y.
 
 ###  `__eq__` 
@@ -319,16 +319,16 @@ The same as [ `tf.compat.v1.div(x,y)` ](https://tensorflow.google.cn/api_docs/py
 
  `x`  and  `y`  must have the same type, and the result will have the same typeas well.
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  rounded down.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the inputs are complex.
 
 
@@ -348,13 +348,13 @@ Returns the truth value of (x >= y) element-wise.
 
 *NOTE*: [ `math.greater_equal` ](/api_docs/python/tf/math/greater_equal) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__getitem__` 
@@ -368,7 +368,7 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Creates a slice helper object given a variable.
+创建给定变量的切片辅助对象。
 
 This allows creating a sub-tensor from part of the current contentsof a variable. See [ `tf.Tensor.**getitem** ` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#__getitem__) for detailed examplesof slicing.
 
@@ -388,15 +388,15 @@ with tf.compat.v1.Session() as sess:
 
 Note that assignments currently do not support NumPy broadcastingsemantics.
 
-#### Args:
+#### 参数：
 - **`var`** : An  `ops.Variable`  object.
 - **`slice_spec`** : The arguments to [ `Tensor.**getitem** ` ](/api_docs/python/tf/Tensor#__getitem__).
 
 
-#### Returns:
+#### 返回：
 The appropriate slice of "tensor", based on "slice_spec".As an operator. The operator also has a  `assign()`  methodthat can be used to generate an assignment operator.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If a slice range is negative size.
 - **`TypeError`** : TypeError: If the slice indices aren't int, slice,ellipsis, tf.newaxis or int32/int64 tensors.
 
@@ -417,13 +417,13 @@ Returns the truth value of (x > y) element-wise.
 
 *NOTE*: [ `math.greater` ](/api_docs/python/tf/math/greater) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__invert__` 
@@ -440,12 +440,12 @@ A  `Tensor`  of type  `bool` .
 
 Returns the truth value of NOT x element-wise.
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__iter__` 
@@ -456,13 +456,13 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Dummy method to prevent iteration.
+防止迭代的虚拟方法。
 
-Do not call.
+不要打电话。
 
 NOTE(mrry): If we register **getitem**  as an overloaded operator,Python will valiantly attempt to iterate over the variable's Tensor from 0to infinity.  Declaring this method prevents this unintended behavior.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when invoked.
 
 
@@ -482,13 +482,13 @@ Returns the truth value of (x <= y) element-wise.
 
 *NOTE*: [ `math.less_equal` ](/api_docs/python/tf/math/less_equal) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__lt__` 
@@ -507,13 +507,13 @@ Returns the truth value of (x < y) element-wise.
 
 *NOTE*: [ `math.less` ](/api_docs/python/tf/math/less) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__matmul__` 
@@ -538,7 +538,7 @@ Either matrix can be transposed or adjointed (conjugated and transposed) onthe f
 
 If one or both of the matrices contain a lot of zeros, a more efficientmultiplication algorithm can be used by setting the corresponding `a_is_sparse`  or  `b_is_sparse`  flag to  `True` . These are  `False`  by default.This optimization is only available for plain matrices (rank-2 tensors) withdatatypes  `bfloat16`  or  `float32` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -592,7 +592,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `complex64` , `complex128`  and rank > 1.
 - **`b`** :  `Tensor`  with same type and rank as  `a` .
 - **`transpose_a`** : If  `True` ,  `a`  is transposed before multiplication.
@@ -604,7 +604,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
 - **`name`** : Name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix isthe product of the corresponding matrices in  `a`  and  `b` , e.g. if alltranspose or adjoint attributes are  `False` :
 
  `output` [..., i, j] = sum_k ( `a` [..., i, k] *  `b` [..., k, j]),for all indices i, j.
@@ -612,7 +612,7 @@ A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix is
 - **`Note`** : This is matrix product, not element-wise product.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If transpose_a and adjoint_a, or transpose_b and adjoint_bare both set to True.
 
 
@@ -634,13 +634,13 @@ true, this follows Python semantics in that the result here is consistentwith a 
 
 *NOTE*: [ `math.floormod` ](/api_docs/python/tf/math/floormod) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` ,  `bfloat16` ,  `half` ,  `float32` ,  `float64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__mul__` 
@@ -683,12 +683,12 @@ Computes numerical negative value element-wise.
 
 I.e., ![](./Variable.md_0.png).
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__or__` 
@@ -707,13 +707,13 @@ Returns the truth value of x OR y element-wise.
 
 *NOTE*: [ `math.logical_or` ](/api_docs/python/tf/math/logical_or) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__pow__` 
@@ -728,7 +728,7 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Computes the power of one value to another.
+计算一个值对另一个值的幂。
 
 Given a tensor  `x`  and a tensor  `y` , this operation computes ![](./Variable.md_0.png) forcorresponding elements in  `x`  and  `y` . For example:
 
@@ -739,13 +739,13 @@ tf.pow(x, y)  # [[256, 65536], [9, 27]]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`y`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` .
 
 ###  `__radd__` 
@@ -778,13 +778,13 @@ Returns the truth value of x AND y element-wise.
 
 *NOTE*: [ `math.logical_and` ](/api_docs/python/tf/math/logical_and) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__rdiv__` 
@@ -799,17 +799,17 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Divide two values using Python 2 semantics.
+使用python 2语义划分两个值。
 
 Used for Tensor.**div** .
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  returns the quotient of x and y.
 
 ###  `__rfloordiv__` 
@@ -830,16 +830,16 @@ The same as [ `tf.compat.v1.div(x,y)` ](https://tensorflow.google.cn/api_docs/py
 
  `x`  and  `y`  must have the same type, and the result will have the same typeas well.
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  rounded down.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the inputs are complex.
 
 
@@ -865,7 +865,7 @@ Either matrix can be transposed or adjointed (conjugated and transposed) onthe f
 
 If one or both of the matrices contain a lot of zeros, a more efficientmultiplication algorithm can be used by setting the corresponding `a_is_sparse`  or  `b_is_sparse`  flag to  `True` . These are  `False`  by default.This optimization is only available for plain matrices (rank-2 tensors) withdatatypes  `bfloat16`  or  `float32` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -919,7 +919,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `complex64` , `complex128`  and rank > 1.
 - **`b`** :  `Tensor`  with same type and rank as  `a` .
 - **`transpose_a`** : If  `True` ,  `a`  is transposed before multiplication.
@@ -931,7 +931,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
 - **`name`** : Name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix isthe product of the corresponding matrices in  `a`  and  `b` , e.g. if alltranspose or adjoint attributes are  `False` :
 
  `output` [..., i, j] = sum_k ( `a` [..., i, k] *  `b` [..., k, j]),for all indices i, j.
@@ -939,7 +939,7 @@ A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix is
 - **`Note`** : This is matrix product, not element-wise product.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If transpose_a and adjoint_a, or transpose_b and adjoint_bare both set to True.
 
 
@@ -961,13 +961,13 @@ true, this follows Python semantics in that the result here is consistentwith a 
 
 *NOTE*: [ `math.floormod` ](/api_docs/python/tf/math/floormod) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` ,  `bfloat16` ,  `half` ,  `float32` ,  `float64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__rmul__` 
@@ -1000,13 +1000,13 @@ Returns the truth value of x OR y element-wise.
 
 *NOTE*: [ `math.logical_or` ](/api_docs/python/tf/math/logical_or) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__rpow__` 
@@ -1021,7 +1021,7 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Computes the power of one value to another.
+计算一个值对另一个值的幂。
 
 Given a tensor  `x`  and a tensor  `y` , this operation computes ![](./Variable.md_0.png) forcorresponding elements in  `x`  and  `y` . For example:
 
@@ -1032,13 +1032,13 @@ tf.pow(x, y)  # [[256, 65536], [9, 27]]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`y`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` .
 
 ###  `__rsub__` 
@@ -1057,13 +1057,13 @@ Returns x - y element-wise.
 
 *NOTE*:  `Subtract`  supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `uint8` ,  `int8` ,  `uint16` ,  `int16` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__rtruediv__` 
@@ -1090,13 +1090,13 @@ A  `Tensor` . Has the same type as  `x` .
  
 ```
 
-Logical XOR function.
+逻辑异或函数。
 
 x ^ y = (x | y) &amp; ~(x &amp; y)
 
 Inputs are tensor and if the tensors contains more than one element, anelement-wise logical XOR is computed.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -1105,12 +1105,12 @@ Inputs are tensor and if the tensors contains more than one element, anelement-w
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  type bool.
 - **`y`** : A  `Tensor`  of type bool.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type bool with the same size as that of x or y.
 
 ###  `__sub__` 
@@ -1129,13 +1129,13 @@ Returns x - y element-wise.
 
 *NOTE*:  `Subtract`  supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `uint8` ,  `int8` ,  `uint16` ,  `int16` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__truediv__` 
@@ -1162,13 +1162,13 @@ A  `Tensor` . Has the same type as  `x` .
  
 ```
 
-Logical XOR function.
+逻辑异或函数。
 
 x ^ y = (x | y) &amp; ~(x &amp; y)
 
 Inputs are tensor and if the tensors contains more than one element, anelement-wise logical XOR is computed.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -1177,12 +1177,12 @@ Inputs are tensor and if the tensors contains more than one element, anelement-w
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  type bool.
 - **`y`** : A  `Tensor`  of type bool.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type bool with the same size as that of x or y.
 
 ###  `assign` 
@@ -1198,18 +1198,18 @@ A  `Tensor`  of type bool with the same size as that of x or y.
  
 ```
 
-Assigns a new value to the variable.
+为变量指定一个新值。
 
 This is essentially a shortcut for  `assign(self, value)` .
 
-#### Args:
+#### 参数：
 - **`value`** : A  `Tensor` . The new value for this variable.
 - **`use_locking`** : If  `True` , use locking during the assignment.
 - **`name`** : The name of the operation to be created
 - **`read_value`** : if True, will return something which evaluates to the newvalue of the variable; if False will return the assign op.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe assignment has completed.
 
 ###  `assign_add` 
@@ -1225,18 +1225,18 @@ A  `Tensor`  that will hold the new value of this variable afterthe assignment h
  
 ```
 
-Adds a value to this variable.
+向此变量添加值。
 
 This is essentially a shortcut for  `assign_add(self, delta)` .
 
-#### Args:
+#### 参数：
 - **`delta`** : A  `Tensor` . The value to add to this variable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : The name of the operation to be created
 - **`read_value`** : if True, will return something which evaluates to the newvalue of the variable; if False will return the assign op.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe addition has completed.
 
 ###  `assign_sub` 
@@ -1252,18 +1252,18 @@ A  `Tensor`  that will hold the new value of this variable afterthe addition has
  
 ```
 
-Subtracts a value from this variable.
+从这个变量中减去一个值。
 
 This is essentially a shortcut for  `assign_sub(self, delta)` .
 
-#### Args:
+#### 参数：
 - **`delta`** : A  `Tensor` . The value to subtract from this variable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : The name of the operation to be created
 - **`read_value`** : if True, will return something which evaluates to the newvalue of the variable; if False will return the assign op.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe subtraction has completed.
 
 ###  `batch_scatter_update` 
@@ -1288,7 +1288,7 @@ where
 
  `sparse_delta.updates.shape[:num_prefix_dims]`  `== sparse_delta.indices.shape[:num_prefix_dims]`  `== var.shape[:num_prefix_dims]` 
 
-And the operation performed can be expressed as:
+所进行的操作可以表示为：
 
  `var[i_1, ..., i_n,     sparse_delta.indices[i_1, ..., i_n, j]] = sparse_delta.updates[        i_1, ..., i_n, j]` 
 
@@ -1296,16 +1296,16 @@ When sparse_delta.indices is a 1D tensor, this operation is equivalent to `scatt
 
 To avoid this operation one can looping over the first  `ndims`  of thevariable and using  `scatter_update`  on the subtensors that result of slicingthe first dimension. This is a valid option for  `ndims = 1` , but lessefficient than this implementation.
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to be assigned to this variable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered assignment has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1327,11 +1327,11 @@ If no error is raised, the Op outputs the value of the variable beforethe increm
 
 This is essentially a shortcut for  `count_up_to(self, limit)` .
 
-#### Args:
+#### 参数：
 - **`limit`** : value at which incrementing the variable raises an error.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the variable value before the increment. If noother Op modifies this variable, the values produced will all bedistinct.
 
 ###  `eval` 
@@ -1362,11 +1362,11 @@ with tf.compat.v1.Session() as sess:
  
 ```
 
-#### Args:
+#### 参数：
 - **`session`** : The session to use to evaluate this variable. If none, thedefault session is used.
 
 
-#### Returns:
+#### 返回：
 A numpy  `ndarray`  with a copy of the value of this variable.
 
 ###  `experimental_ref` 
@@ -1377,7 +1377,7 @@ A numpy  `ndarray`  with a copy of the value of this variable.
  
 ```
 
-Returns a hashable reference object to this Variable.
+返回对此变量的哈希引用对象。
 
 
 **Warning:**  Experimental API that could be changed or removed.
@@ -1453,12 +1453,12 @@ Gather slices from  `params`  into a Tensor with shape specified by  `indices` .
 
 See tf.gather_nd for details.
 
-#### Args:
+#### 参数：
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Index tensor.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `params` .
 
 ###  `get_shape` 
@@ -1495,7 +1495,7 @@ w = tf.Variable(v.initialized_value() * 2.0)
  
 ```
 
-#### Returns:
+#### 返回：
 A  `Tensor`  holding the value of this variable after its initializerhas run.
 
 ###  `load` 
@@ -1513,7 +1513,7 @@ Load new value into this variable. (deprecated)
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Prefer Variable.assign which has equivalent behavior in 2.X.
-Writes new value to variable's memory. Doesn't add ops to the graph.
+将新值写入变量的内存。不向图表添加操作。
 
 This convenience method requires a session where the graphcontaining this variable has been launched. If no session ispassed, the default session is used.  See [ `tf.compat.v1.Session` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session) for moreinformation on launching a graph and on sessions.
 
@@ -1533,12 +1533,12 @@ with tf.compat.v1.Session() as sess:
  
 ```
 
-#### Args:
+#### 参数：
 - **`value`** : New variable value
 - **`session`** : The session to use to evaluate this variable. If none, thedefault session is used.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : Session is not passed and no default session
 
 
@@ -1554,7 +1554,7 @@ Returns the value of this variable, read in the current context.
 
 Can be different from value() if it's on another device, with controldependencies, etc.
 
-#### Returns:
+#### 返回：
 A  `Tensor`  containing the value of the variable.
 
 ###  `scatter_add` 
@@ -1571,16 +1571,16 @@ A  `Tensor`  containing the value of the variable.
 
 Adds [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to this variable.
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to be added to this variable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered addition has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1598,16 +1598,16 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered ad
 
 Divide this variable by [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices).
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to divide this variable by.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered division has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1625,16 +1625,16 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered di
 
 Updates this variable with the max of [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) and itself.
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to use as an argument of max with thisvariable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered maximization has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1652,16 +1652,16 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered ma
 
 Updates this variable with the min of [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) and itself.
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to use as an argument of min with thisvariable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered minimization has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1679,16 +1679,16 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered mi
 
 Multiply this variable by [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices).
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to multiply this variable by.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered multiplication has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1704,7 +1704,7 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered mu
  
 ```
 
-Applies sparse addition to individual values or slices in a Variable.
+对变量中的单个值或切片应用稀疏加法。
 
 The Variable has rank  `P`  and  `indices`  is a  `Tensor`  of rank  `Q` .
 
@@ -1731,7 +1731,7 @@ For example, say we want to add 4 scattered elements to a rank-1 tensor to8 elem
  
 ```
 
-The resulting update to v would look like this:
+对v的更新结果如下：
 
 ```
  [1, 13, 3, 14, 14, 6, 7, 20]
@@ -1740,13 +1740,13 @@ The resulting update to v would look like this:
 
 See [ `tf.scatter_nd` ](https://tensorflow.google.cn/api_docs/python/tf/scatter_nd) for more details about how to make updates toslices.
 
-#### Args:
+#### 参数：
 - **`indices`** : The indices to be used in the operation.
 - **`updates`** : The values to be used in the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered addition has completed.
 
 ###  `scatter_nd_sub` 
@@ -1761,7 +1761,7 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered ad
  
 ```
 
-Applies sparse subtraction to individual values or slices in a Variable.
+对变量中的单个值或切片应用稀疏减法。
 
 Assuming the variable has rank  `P`  and  `indices`  is a  `Tensor`  of rank  `Q` .
 
@@ -1788,7 +1788,7 @@ For example, say we want to add 4 scattered elements to a rank-1 tensor to8 elem
  
 ```
 
-The resulting update to v would look like this:
+对v的更新结果如下：
 
 ```
  [1, -9, 3, -6, -6, 6, 7, -4]
@@ -1797,13 +1797,13 @@ The resulting update to v would look like this:
 
 See [ `tf.scatter_nd` ](https://tensorflow.google.cn/api_docs/python/tf/scatter_nd) for more details about how to make updates toslices.
 
-#### Args:
+#### 参数：
 - **`indices`** : The indices to be used in the operation.
 - **`updates`** : The values to be used in the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered subtraction has completed.
 
 ###  `scatter_nd_update` 
@@ -1818,7 +1818,7 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered su
  
 ```
 
-Applies sparse assignment to individual values or slices in a Variable.
+对变量中的单个值或切片应用稀疏赋值。
 
 The Variable has rank  `P`  and  `indices`  is a  `Tensor`  of rank  `Q` .
 
@@ -1845,7 +1845,7 @@ For example, say we want to add 4 scattered elements to a rank-1 tensor to8 elem
  
 ```
 
-The resulting update to v would look like this:
+对v的更新结果如下：
 
 ```
  [1, 11, 3, 10, 9, 6, 7, 12]
@@ -1854,13 +1854,13 @@ The resulting update to v would look like this:
 
 See [ `tf.scatter_nd` ](https://tensorflow.google.cn/api_docs/python/tf/scatter_nd) for more details about how to make updates toslices.
 
-#### Args:
+#### 参数：
 - **`indices`** : The indices to be used in the operation.
 - **`updates`** : The values to be used in the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered assignment has completed.
 
 ###  `scatter_sub` 
@@ -1877,16 +1877,16 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered as
 
 Subtracts [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) from this variable.
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to be subtracted from this variable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered subtraction has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1904,16 +1904,16 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered su
 
 Assigns [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to this variable.
 
-#### Args:
+#### 参数：
 - **`sparse_delta`** : [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) to be assigned to this variable.
 - **`use_locking`** : If  `True` , use locking during the operation.
 - **`name`** : the name of the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of this variable afterthe scattered assignment has completed.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `sparse_delta`  is not an  `IndexedSlices` .
 
 
@@ -1925,9 +1925,9 @@ A  `Tensor`  that will hold the new value of this variable afterthe scattered as
  
 ```
 
-Overrides the shape for this variable.
+重写此变量的形状。
 
-#### Args:
+#### 参数：
 - **`shape`** : the  `TensorShape`  representing the overridden shape.
 
 
@@ -1942,16 +1942,16 @@ Overrides the shape for this variable.
  
 ```
 
-Gather slices from params axis axis according to indices.
+根据索引从params轴收集切片。
 
 This function supports a subset of tf.gather, see tf.gather for details onusage.
 
-#### Args:
+#### 参数：
 - **`indices`** : The index  `Tensor` .  Must be one of the following types:  `int32` , `int64` . Must be in range  `[0, params.shape[axis])` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `params` .
 
 ###  `to_proto` 
@@ -1964,11 +1964,11 @@ A  `Tensor` . Has the same type as  `params` .
 
 Converts a  `Variable`  to a  `VariableDef`  protocol buffer.
 
-#### Args:
+#### 参数：
 - **`export_scope`** : Optional  `string` . Name scope to remove.
 
 
-#### Returns:
+#### 返回：
 A  `VariableDef`  protocol buffer, or  `None`  if the  `Variable`  is notin the specified name scope.
 
 ###  `value` 
@@ -1979,7 +1979,7 @@ A  `VariableDef`  protocol buffer, or  `None`  if the  `Variable`  is notin the 
  
 ```
 
-Returns the last snapshot of this variable.
+返回此变量的最后一个快照。
 
 You usually do not need to call this method as all ops that need the valueof the variable call it automatically through a  `convert_to_tensor()`  call.
 
@@ -1987,6 +1987,6 @@ Returns a  `Tensor`  which holds the value of the variable.  You can notassign a
 
 To avoid copies, if the consumer of the returned value is on the same deviceas the variable, this actually returns the live value of the variable, nota copy.  Updates to the variable are seen by the consumer.  If the consumeris on a different device it will get a copy of the variable.
 
-#### Returns:
+#### 返回：
 A  `Tensor`  containing the value of the variable.
 

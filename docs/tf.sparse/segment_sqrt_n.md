@@ -1,4 +1,4 @@
-Computes the sum along sparse segments of a tensor divided by the sqrt(N).
+计算张量稀疏段的和除以sqrt（n）。
 
 ```
  tf.sparse.segment_sqrt_n(    data,    indices,    segment_ids,    num_segments=None,    name=None) 
@@ -8,7 +8,7 @@ Read [the section onsegmentation](https://tensorflow.org/api_docs/python/tf/math
 
 Like [ `tf.sparse.segment_mean` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/segment_mean), but instead of dividing by the size of thesegment,  `N` , divide by  `sqrt(N)`  instead.
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor`  with data that will be assembled in the output.
 - **`indices`** : A 1-D  `Tensor`  with indices into  `data` . Has same rank as `segment_ids` .
 - **`segment_ids`** : A 1-D  `Tensor`  with indices into the output  `Tensor` . Valuesshould be sorted and can be repeated.
@@ -16,6 +16,6 @@ Like [ `tf.sparse.segment_mean` ](https://tensorflow.google.cn/api_docs/python/t
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `tensor`  of the shape as data, except for dimension 0 whichhas size  `k` , the number of segments specified via  `num_segments`  orinferred for the last element in  `segments_ids` .
 

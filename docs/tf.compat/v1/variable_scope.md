@@ -1,7 +1,7 @@
 
 
 ## Class  `variable_scope` 
-A context manager for defining ops that creates variables (layers).
+用于定义创建变量（层）的操作的上下文管理器。
 
 This context manager validates that the (optional)  `values`  are from the samegraph, ensures that graph is the default graph, and pushes a name scope and avariable scope.
 
@@ -9,7 +9,7 @@ If  `name_or_scope`  is not None, it is used as is. If  `name_or_scope`  is None
 
 Variable scope allows you to create new variables and to share already createdones while providing checks to not create or share by accident. For details,see the [Variable Scope How To](https://tensorflow.org/guide/variables), herewe present only a few basic examples.
 
-Simple example of how to create a new variable:
+创建新变量的简单示例：
 
 ```
  with tf.compat.v1.variable_scope("foo"):
@@ -19,7 +19,7 @@ Simple example of how to create a new variable:
  
 ```
 
-Simple example of how to reenter a premade variable scope safely:
+如何安全地重新输入预先定义的变量作用域的简单示例：
 
 ```
  with)
@@ -52,7 +52,7 @@ assert v1 == v
  
 ```
 
-Sharing a variable by capturing a scope and setting reuse:
+通过捕获作用域和设置重用来共享变量：
 
 ```
  with tf.compat.v1.variable_scope("foo") as scope:
@@ -127,9 +127,9 @@ thread = threading.Thread(target=thread_target_fn, args=(main_thread_scope,))
  
 ```
 
-Initialize the context manager.
+初始化上下文管理器。
 
-#### Args:
+#### 参数：
 - **`name_or_scope`** :  `string`  or  `VariableScope` : the scope to open.
 - **`default_name`** : The default name to use if the  `name_or_scope`  argument is `None` , this name will be uniquified. If name_or_scope is provided itwon't be used and therefore it is not required and can be None.
 - **`values`** : The list of  `Tensor`  arguments that are passed to the op function.
@@ -145,15 +145,15 @@ Initialize the context manager.
 - **`auxiliary_name_scope`** : If  `True` , we create an auxiliary name scope withthe scope. If  `False` , we don't create it. Note that the argument is notinherited, and it only takes effect for once when creating. You shouldonly use it for re-entering a premade variable scope.
 
 
-#### Returns:
-A scope that can be captured and reused.
+#### 返回：
+可以捕获和重用的作用域。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : when trying to reuse within a create scope, or create withina reuse scope.
 - **`TypeError`** : when the types of some arguments are not appropriate.
 
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

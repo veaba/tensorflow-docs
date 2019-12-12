@@ -69,7 +69,7 @@ Depending on the value of  `create_scope_now_` , the full variable scope may bec
 **Note:**   `name_` ,  `func_`  and  `create_scope_now_`  have a trailing underscore toreduce the likelihood of collisions with kwargs.
 
 
-#### Args:
+#### 参数：
 - **`name_`** : A name for the scope created by this template. If necessary, the namewill be made unique by appending  `_N`  to the name.
 - **`func_`** : The function to wrap.
 - **`create_scope_now_`** : Boolean controlling whether the scope should be createdwhen the template is constructed or when the template is called. Defaultis False, meaning the scope is created when the template is called.
@@ -78,8 +78,8 @@ Depending on the value of  `create_scope_now_` , the full variable scope may bec
 - **`**kwargs`** : Keyword arguments to apply to  `func_` .
 
 
-#### Returns:
+#### 返回：
 A function to encapsulate a set of variables which should be created onceand reused. An enclosing scope will be created either when  `make_template` is called or when the result is called, depending on the value of `create_scope_now_` . Regardless of the value, the first time the templateis called it will enter the scope with no reuse, and call  `func_`  to createvariables, which are guaranteed to be unique. All subsequent calls willre-enter the scope and reuse those variables.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `name_`  is None.

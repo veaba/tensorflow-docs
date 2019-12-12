@@ -1,13 +1,13 @@
 
 
 ## Class  `LMDBReader` 
-A Reader that outputs the records from a LMDB file.
+从lmdb文件输出记录的读取器。
 
 Inherits From: [ `ReaderBase` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ReaderBase)
 
-See ReaderBase for supported methods.
+有关支持的方法，请参阅readerbase。
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Readers are not compatible with eager execution. Instead, pleaseuse [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) to get data into your model.
 
 ##  `__init__` 
@@ -27,21 +27,21 @@ Create a LMDBReader. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Queue-based input pipelines have been replaced by [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data). Use  `tf.contrib.data.LMDBDataset` .
 
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 - **`options`** : A LMDBRecordOptions object (optional).
 
 
-## Properties
+## 属性
 
 
 ###  `reader_ref` 
-Op that implements the reader.
+实现读取器的操作。
 
 ###  `supports_serialize` 
-Whether the Reader implementation can serialize its state.
+读取器实现是否可以序列化其状态。
 
-## Methods
+## 方法
 
 
 ###  `num_records_produced` 
@@ -52,16 +52,16 @@ Whether the Reader implementation can serialize its state.
  
 ```
 
-Returns the number of records this reader has produced.
+返回此读取器生成的记录数。
 
 This is the same as the number of Read executions that havesucceeded.
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-An int64 Tensor.
+#### 返回：
+int64张量。
 
 ###  `num_work_units_completed` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/io_ops.py#L231-L245)
@@ -71,14 +71,14 @@ An int64 Tensor.
  
 ```
 
-Returns the number of work units this reader has finished processing.
+返回此读取器已完成处理的工作单元数。
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-An int64 Tensor.
+#### 返回：
+int64张量。
 
 ###  `read` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/io_ops.py#L144-L171)
@@ -95,12 +95,12 @@ Returns the next record (key, value) pair produced by a reader.
 
 Will dequeue a work unit from queue if necessary (e.g. when theReader needs to start reading from a new file since it hasfinished with the previous file).
 
-#### Args:
+#### 参数：
 - **`queue`** : A Queue or a mutable string Tensor representing a handleto a Queue, with string work items.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of Tensors (key, value).
 
 - **`key`** : A string scalar Tensor.
@@ -123,13 +123,13 @@ Returns up to num_records (key, value) pairs produced by a reader.
 
 Will dequeue a work unit from queue if necessary (e.g., when theReader needs to start reading from a new file since it hasfinished with the previous file).It may return less than num_records even before the last batch.
 
-#### Args:
+#### 参数：
 - **`queue`** : A Queue or a mutable string Tensor representing a handleto a Queue, with string work items.
 - **`num_records`** : Number of records to read.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of Tensors (keys, values).
 
 - **`keys`** : A 1-D string Tensor.
@@ -144,14 +144,14 @@ A tuple of Tensors (keys, values).
  
 ```
 
-Restore a reader to its initial clean state.
+将读取器还原到其初始干净状态。
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The created Operation.
+#### 返回：
+创建的操作。
 
 ###  `restore_state` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/io_ops.py#L264-L282)
@@ -164,17 +164,17 @@ The created Operation.
  
 ```
 
-Restore a reader to a previously saved state.
+将读取器还原到以前保存的状态。
 
 Not all Readers support being restored, so this can produce anUnimplemented error.
 
-#### Args:
+#### 参数：
 - **`state`** : A string Tensor.Result of a SerializeState of a Reader with matching type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The created Operation.
+#### 返回：
+创建的操作。
 
 ###  `serialize_state` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/io_ops.py#L247-L262)
@@ -184,14 +184,14 @@ The created Operation.
  
 ```
 
-Produce a string tensor that encodes the state of a reader.
+产生一个字符串张量来编码读卡器的状态。
 
 Not all Readers support being serialized, so this can produce anUnimplemented error.
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-A string Tensor.
+#### 返回：
+弦张量
 

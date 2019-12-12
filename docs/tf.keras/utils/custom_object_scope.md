@@ -1,6 +1,6 @@
 Provides a scope that changes to  `_GLOBAL_CUSTOM_OBJECTS`  cannot escape.
 
-**Aliases** : [ `tf.compat.v1.keras.utils.custom_object_scope` ](/api_docs/python/tf/keras/utils/custom_object_scope), [ `tf.compat.v2.keras.utils.custom_object_scope` ](/api_docs/python/tf/keras/utils/custom_object_scope)
+**别名** : [ `tf.compat.v1.keras.utils.custom_object_scope` ](/api_docs/python/tf/keras/utils/custom_object_scope), [ `tf.compat.v2.keras.utils.custom_object_scope` ](/api_docs/python/tf/keras/utils/custom_object_scope)
 
 ```
  tf.keras.utils.custom_object_scope(*args)
@@ -9,7 +9,7 @@ Provides a scope that changes to  `_GLOBAL_CUSTOM_OBJECTS`  cannot escape.
 
 Convenience wrapper for  `CustomObjectScope` .Code within a  `with`  statement will be able to access custom objectsby name. Changes to global custom objects persistwithin the enclosing  `with`  statement. At end of the  `with`  statement,global custom objects are reverted to stateat beginning of the  `with`  statement.
 
-#### Example:
+#### 示例：
 Consider a custom object  `MyObject` 
 
 ```
@@ -19,10 +19,10 @@ Consider a custom object  `MyObject`
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`*args`** : Variable length list of dictionaries of name,class pairs to add to custom objects.
 
 
-#### Returns:
+#### 返回：
 Object of type  `CustomObjectScope` .
 

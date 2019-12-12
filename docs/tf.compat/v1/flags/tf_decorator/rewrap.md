@@ -13,7 +13,7 @@ This function allows replacing a function wrapped by  `decorator_func` ,assuming
 
 The decorator function must use  `<decorator name>.__wrapped__`  instead of thewrapped function that is normally used:
 
-#### Example:
+#### 示例：
 
 
 # Instead of this:
@@ -29,12 +29,12 @@ tf_decorator.make_decorator(simple_parametrized_wrapper, wrapped_fn)
 Note that this process modifies decorator_func.
 
 
-#### Args:
+#### 参数：
 - **`decorator_func`** : Callable returned by  `wrap` .
 - **`previous_target`** : Callable that needs to be replaced.
 - **`new_target`** : Callable to replace previous_target with.
 
 
-#### Returns:
+#### 返回：
 The updated decorator. If decorator_func is not a tf_decorator, new_targetis returned.
 

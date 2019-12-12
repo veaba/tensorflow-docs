@@ -2,7 +2,7 @@
 
 Solves one or more linear least-squares problems.
 
-**Aliases** : [ `tf.compat.v1.linalg.lstsq` ](/api_docs/python/tf/linalg/lstsq), [ `tf.compat.v1.matrix_solve_ls` ](/api_docs/python/tf/linalg/lstsq), [ `tf.compat.v2.linalg.lstsq` ](/api_docs/python/tf/linalg/lstsq)
+**别名** : [ `tf.compat.v1.linalg.lstsq` ](/api_docs/python/tf/linalg/lstsq), [ `tf.compat.v1.matrix_solve_ls` ](/api_docs/python/tf/linalg/lstsq), [ `tf.compat.v2.linalg.lstsq` ](/api_docs/python/tf/linalg/lstsq)
 
 ```
  tf.linalg.lstsq(
@@ -25,7 +25,7 @@ If  `fast`  is  `True` , then the solution is computed by solving the normalequa
 
 If  `fast`  is  `False`  an algorithm based on the numerically robust completeorthogonal decomposition is used. This computes the minimum-normleast-squares solution, even when A is rank deficient. This path istypically 6-7 times slower than the fast path. If  `fast`  is  `False`  then `l2_regularizer`  is ignored.
 
-#### Args:
+#### 参数：
 - **`matrix`** :  `Tensor`  of shape  `[..., M, N]` .
 - **`rhs`** :  `Tensor`  of shape  `[..., M, K]` .
 - **`l2_regularizer`** : 0-D  `double`   `Tensor` . Ignored if  `fast=False` .
@@ -33,9 +33,9 @@ If  `fast`  is  `False`  an algorithm based on the numerically robust completeor
 - **`name`** : string, optional name of the operation.
 
 
-#### Returns:
+#### 返回：
 - **`output`** :  `Tensor`  of shape  `[..., N, K]`  whose inner-most 2 dimensions form `M` -by- `K`  matrices that solve the equations `matrix[..., :, :] * output[..., :, :] = rhs[..., :, :]`  in the leastsquares sense.
 
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** : linalg.lstsq is currently disabled for complex128and l2_regularizer != 0 due to poor accuracy.

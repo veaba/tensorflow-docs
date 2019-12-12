@@ -1,6 +1,6 @@
-Continuously yield new checkpoint files as they appear.
+不断生成新的检查点文件。
 
-**Aliases** : [ `tf.compat.v1.train.checkpoints_iterator` ](/api_docs/python/tf/train/checkpoints_iterator), [ `tf.compat.v2.train.checkpoints_iterator` ](/api_docs/python/tf/train/checkpoints_iterator)
+**别名** : [ `tf.compat.v1.train.checkpoints_iterator` ](/api_docs/python/tf/train/checkpoints_iterator), [ `tf.compat.v2.train.checkpoints_iterator` ](/api_docs/python/tf/train/checkpoints_iterator)
 
 ```
  tf.train.checkpoints_iterator(
@@ -21,13 +21,13 @@ The  `timeout`  argument is the maximum number of seconds to block waiting fora 
 - If the function returns a false boolean value then the iterator resumes thewait for new checkpoints.  At this point the timeout logic applies again.
 This behavior gives control to callers on what to do if checkpoints do notcome fast enough or stop being generated.  For example, if callers have a wayto detect that the training has stopped and know that no new checkpointswill be generated, they can provide a  `timeout_fn`  that returns  `True`  whenthe training has stopped.  If they know that the training is still going onthey return  `False`  instead.
 
-#### Args:
+#### 参数：
 - **`checkpoint_dir`** : The directory in which checkpoints are saved.
 - **`min_interval_secs`** : The minimum number of seconds between yieldingcheckpoints.
 - **`timeout`** : The maximum number of seconds to wait between checkpoints. If leftas  `None` , then the process will wait indefinitely.
 - **`timeout_fn`** : Optional function to call after a timeout.  If the functionreturns True, then it means that no new checkpoints will be generated andthe iterator will exit.  The function is called with no arguments.
 
 
-#### Yields:
-String paths to latest checkpoint files as they arrive.
+#### 收益率：
+字符串最新检查点文件到达时的路径。
 

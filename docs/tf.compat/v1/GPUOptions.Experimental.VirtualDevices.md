@@ -1,9 +1,9 @@
 
 
 ## Class  `VirtualDevices` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `memory_limit_mb` 

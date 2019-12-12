@@ -1,20 +1,20 @@
-Associates a string prefix with an integer counter in a TensorFlow graph.
+将字符串前缀与TensorFlow图中的整数计数器相关联。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid), [ `tf.compat.v2.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid)
+**别名** : [ `tf.compat.v1.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid), [ `tf.compat.v2.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid)
 
 ```
  tf.keras.backend.get_uid(prefix='')
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`prefix`** : String prefix to index.
 
 
-#### Returns:
-Unique integer ID.
+#### 返回：
+唯一整数ID。
 
-#### Example:
+#### 示例：
 
 
 ```

@@ -1,13 +1,13 @@
 
 
 ## Class  `CsvDataset` 
-A Dataset comprising lines from one or more CSV files.
+由一个或多个csv文件的行组成的数据集。
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Overfit and underfit](https://tensorflow.google.cn/tutorials/keras/overfit_and_underfit)
 
 
@@ -41,7 +41,7 @@ hijklmn,-5.3E14,,2
  
 ```
 
-We can construct a CsvDataset from it as follows:
+我们可以用它构造一个csvdataset，如下所示：
 
 ```
  tf.compat.v1.enable_eager_execution()
@@ -57,7 +57,7 @@ We can construct a CsvDataset from it as follows:
  
 ```
 
-The expected output of its iterations is:
+迭代的预期输出是：
 
 ```
  for element in dataset:
@@ -68,7 +68,7 @@ The expected output of its iterations is:
  
 ```
 
-#### Args:
+#### 参数：
 - **`filenames`** : A [ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string) tensor containing one or more filenames.
 - **`record_defaults`** : A list of default values for the CSV fields. Each item inthe list is either a valid CSV  `DType`  (float32, float64, int32, int64,string), or a  `Tensor`  object with one of the above types. One percolumn of CSV data, with either a scalar  `Tensor`  default value for thecolumn if it is optional, or  `DType`  or empty  `Tensor`  if required. Ifboth this and  `select_columns`  are specified, these must have the samelengths, and  `column_defaults`  is assumed to be sorted in order ofincreasing column index.
 - **`compression_type`** : (Optional.) A [ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string) scalar evaluating to one of `""`  (no compression),  `"ZLIB"` , or  `"GZIP"` . Defaults to nocompression.
@@ -80,16 +80,16 @@ The expected output of its iterations is:
 - **`select_cols`** : (Optional.) A sorted list of column indices to select fromthe input data. If specified, only this subset of columns will beparsed. Defaults to parsing all columns.
 
 
-## Properties
+## 属性
 
 
 ###  `element_spec` 
-The type specification of an element of this dataset.
+此数据集元素的类型规范。
 
-#### Returns:
+#### 返回：
 A nested structure of [ `tf.TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TypeSpec) objects matching the structure of anelement of this dataset and specifying the type of individual components.
 
-## Methods
+## 方法
 
 
 ###  `__iter__` 
@@ -104,10 +104,10 @@ Creates an  `Iterator`  for enumerating the elements of this dataset.
 
 The returned iterator implements the Python iterator protocol and thereforecan only be used in eager mode.
 
-#### Returns:
+#### 返回：
 An  `Iterator`  over the elements of this dataset.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If not inside of tf.function and not executing eagerly.
 
 
@@ -119,11 +119,11 @@ An  `Iterator`  over the elements of this dataset.
  
 ```
 
-Applies a transformation function to this dataset.
+将转换函数应用于此数据集。
 
  `apply`  enables chaining of custom  `Dataset`  transformations, which arerepresented as functions that take one  `Dataset`  argument and return atransformed  `Dataset` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -133,11 +133,11 @@ Applies a transformation function to this dataset.
  
 ```
 
-#### Args:
+#### 参数：
 - **`transformation_func`** : A function that takes one  `Dataset`  argument andreturns a  `Dataset` .
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : The  `Dataset`  returned by applying  `transformation_func`  to thisdataset.
 
 
@@ -152,16 +152,16 @@ Applies a transformation function to this dataset.
  
 ```
 
-Combines consecutive elements of this dataset into batches.
+将此数据集的连续元素组合成批。
 
 The components of the resulting element will have an additional outerdimension, which will be  `batch_size`  (or  `N % batch_size`  for the lastelement if  `batch_size`  does not divide the number of input elements  `N` evenly and  `drop_remainder`  is  `False` ). If your program depends on thebatches having the same outer dimension, you should set the  `drop_remainder` argument to  `True`  to prevent the smaller batch from being produced.
 
-#### Args:
+#### 参数：
 - **`batch_size`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number ofconsecutive elements of this dataset to combine in a single batch.
 - **`drop_remainder`** : (Optional.) A [ `tf.bool` ](https://tensorflow.google.cn/api_docs/python/tf#bool) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representingwhether the last batch should be dropped in the case it has fewer than `batch_size`  elements; the default behavior is not to drop the smallerbatch.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -173,13 +173,13 @@ The components of the resulting element will have an additional outerdimension, 
  
 ```
 
-Caches the elements in this dataset.
+缓存此数据集中的元素。
 
-#### Args:
+#### 参数：
 - **`filename`** : A [ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the name of adirectory on the filesystem to use for caching elements in this Dataset.If a filename is not provided, the dataset will be cached in memory.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -207,11 +207,11 @@ a.concatenate(b)  # ==> [ 1, 2, 3, 4, 5, 6, 7 ]
  
 ```
 
-#### Args:
+#### 参数：
 - **`dataset`** :  `Dataset`  to be concatenated.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -223,15 +223,15 @@ a.concatenate(b)  # ==> [ 1, 2, 3, 4, 5, 6, 7 ]
  
 ```
 
-Enumerates the elements of this dataset.
+枚举此数据集的元素。
 
 It is similar to python's  `enumerate` .
 
-#### For example:
+#### 例如：
 
 
 ```
- # NOTE: The following examples use `{ ... }` to represent the
+ # 注意：The following examples use `{ ... }` to represent the
 # contents of a dataset.
 a = { 1, 2, 3 }
 b = { (7, 8), (9, 10) }
@@ -243,11 +243,11 @@ b.enumerate() == { (0, (7, 8)), (1, (9, 10)) }
  
 ```
 
-#### Args:
+#### 参数：
 - **`start`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the start value forenumeration.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -274,11 +274,11 @@ d = d.filter(filter_fn)  # ==> [1]
  
 ```
 
-#### Args:
+#### 参数：
 - **`predicate`** : A function mapping a dataset element to a boolean.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : The  `Dataset`  containing the elements of this dataset for which `predicate`  is  `True` .
 
 
@@ -304,11 +304,11 @@ a.flat_map(lambda x: Dataset.from_tensor_slices(x + 1)) # ==>
 
 [ `tf.data.Dataset.interleave()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#interleave) is a generalization of  `flat_map` , since `flat_map`  produces the same output as[ `tf.data.Dataset.interleave(cycle_length=1)` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#interleave)
 
-#### Args:
+#### 参数：
 - **`map_func`** : A function mapping a dataset element to a dataset.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -329,7 +329,7 @@ Creates a  `Dataset`  whose elements are generated by  `generator` .
 
 The  `generator`  argument must be a callable object that returnsan object that supports the  `iter()`  protocol (e.g. a generator function).The elements generated by  `generator`  must be compatible with the given `output_types`  and (optional)  `output_shapes`  arguments.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -350,18 +350,18 @@ for value in ds.take(2):
  
 ```
 
-NOTE: The current implementation of [ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator) uses[ `tf.numpy_function` ](https://tensorflow.google.cn/api_docs/python/tf/numpy_function) and inherits the same constraints. In particular, itrequires the  `Dataset` - and  `Iterator` -related operations to be placedon a device in the same process as the Python program that called[ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator). The body of  `generator`  will not beserialized in a  `GraphDef` , and you should not use this method if youneed to serialize your model and restore it in a different environment.
+注意：The current implementation of [ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator) uses[ `tf.numpy_function` ](https://tensorflow.google.cn/api_docs/python/tf/numpy_function) and inherits the same constraints. In particular, itrequires the  `Dataset` - and  `Iterator` -related operations to be placedon a device in the same process as the Python program that called[ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator). The body of  `generator`  will not beserialized in a  `GraphDef` , and you should not use this method if youneed to serialize your model and restore it in a different environment.
 
-NOTE: If  `generator`  depends on mutable global variables or other externalstate, be aware that the runtime may invoke  `generator`  multiple times(in order to support repeating the  `Dataset` ) and at any timebetween the call to [ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator) and the production of thefirst element from the generator. Mutating global variables or externalstate can cause undefined behavior, and we recommend that you explicitlycache any external state in  `generator`  before calling[ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator).
+注意：If  `generator`  depends on mutable global variables or other externalstate, be aware that the runtime may invoke  `generator`  multiple times(in order to support repeating the  `Dataset` ) and at any timebetween the call to [ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator) and the production of thefirst element from the generator. Mutating global variables or externalstate can cause undefined behavior, and we recommend that you explicitlycache any external state in  `generator`  before calling[ `Dataset.from_generator()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#from_generator).
 
-#### Args:
+#### 参数：
 - **`generator`** : A callable object that returns an object that supports the `iter()`  protocol. If  `args`  is not specified,  `generator`  must take noarguments; otherwise it must take as many arguments as there are valuesin  `args` .
 - **`output_types`** : A nested structure of [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) objects corresponding toeach component of an element yielded by  `generator` .
 - **`output_shapes`** : (Optional.) A nested structure of [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) objectscorresponding to each component of an element yielded by  `generator` .
 - **`args`** : (Optional.) A tuple of [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects that will be evaluatedand passed to  `generator`  as NumPy-array arguments.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -377,11 +377,11 @@ Creates a  `Dataset`  whose elements are slices of the given tensors.
 
 Note that if  `tensors`  contains a NumPy array, and eager execution is notenabled, the values will be embedded in the graph as one or more[ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) operations. For large datasets (> 1 GB), this can wastememory and run into byte limits of graph serialization. If  `tensors` contains one or more large NumPy arrays, consider the alternative describedin [this guide](https://tensorflow.org/guide/datasets#consuming_numpy_arrays).
 
-#### Args:
+#### 参数：
 - **`tensors`** : A dataset element, with each component having the same size inthe 0th dimension.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -397,11 +397,11 @@ Creates a  `Dataset`  with a single element, comprising the given tensors.
 
 Note that if  `tensors`  contains a NumPy array, and eager execution is notenabled, the values will be embedded in the graph as one or more[ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) operations. For large datasets (> 1 GB), this can wastememory and run into byte limits of graph serialization. If  `tensors` contains one or more large NumPy arrays, consider the alternative describedin [thisguide](https://tensorflow.org/guide/datasets#consuming_numpy_arrays).
 
-#### Args:
+#### 参数：
 - **`tensors`** : A dataset element.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -435,13 +435,13 @@ dataset = (Dataset.from_tensor_slices(filenames)
 
 The  `cycle_length`  and  `block_length`  arguments control the order in whichelements are produced.  `cycle_length`  controls the number of input elementsthat are processed concurrently. If you set  `cycle_length`  to 1, thistransformation will handle one input element at a time, and will produceidentical results to [ `tf.data.Dataset.flat_map` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#flat_map). In general,this transformation will apply  `map_func`  to  `cycle_length`  input elements,open iterators on the returned  `Dataset`  objects, and cycle through themproducing  `block_length`  consecutive elements from each iterator, andconsuming the next input element each time it reaches the end of aniterator.
 
-#### For example:
+#### 例如：
 
 
 ```
  a = Dataset.range(1, 6)  # ==> [ 1, 2, 3, 4, 5 ]
 
-# NOTE: New lines indicate "block" boundaries.
+# 注意：New lines indicate "block" boundaries.
 a.interleave(lambda x: Dataset.from_tensors(x).repeat(6),
             cycle_length=2, block_length=4)  # ==> [1, 1, 1, 1,
                                              #      2, 2, 2, 2,
@@ -456,16 +456,16 @@ a.interleave(lambda x: Dataset.from_tensors(x).repeat(6),
  
 ```
 
-NOTE: The order of elements yielded by this transformation isdeterministic, as long as  `map_func`  is a pure function. If `map_func`  contains any stateful operations, the order in whichthat state is accessed is undefined.
+注意：The order of elements yielded by this transformation isdeterministic, as long as  `map_func`  is a pure function. If `map_func`  contains any stateful operations, the order in whichthat state is accessed is undefined.
 
-#### Args:
+#### 参数：
 - **`map_func`** : A function mapping a dataset element to a dataset.
 - **`cycle_length`** : (Optional.) The number of input elements that will beprocessed concurrently. If not specified, the value will be derived fromthe number of available CPU cores. If the  `num_parallel_calls`  argumentis set to [ `tf.data.experimental.AUTOTUNE` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#AUTOTUNE), the  `cycle_length`  argumentalso identifies the maximum degree of parallelism.
 - **`block_length`** : (Optional.) The number of consecutive elements to producefrom each input element before cycling to another input element.
 - **`num_parallel_calls`** : (Optional.) If specified, the implementation creates athreadpool, which is used to fetch inputs from cycle elementsasynchronously and in parallel. The default behavior is to fetch inputsfrom cycle elements synchronously with no parallelism. If the value[ `tf.data.experimental.AUTOTUNE` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#AUTOTUNE) is used, then the number of parallelcalls is set dynamically based on available CPU.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -481,20 +481,20 @@ NOTE: The order of elements yielded by this transformation isdeterministic, as l
  
 ```
 
-A dataset of all files matching one or more glob patterns.
+与一个或多个全局模式匹配的所有文件的数据集。
 
-NOTE: The default behavior of this method is to return filenames ina non-deterministic random shuffled order. Pass a  `seed`  or  `shuffle=False` to get results in a deterministic order.
+注意：The default behavior of this method is to return filenames ina non-deterministic random shuffled order. Pass a  `seed`  or  `shuffle=False` to get results in a deterministic order.
 
-#### Example:
+#### 示例：
 If we had the following files on our filesystem:  - /path/to/dir/a.txt  - /path/to/dir/b.py  - /path/to/dir/c.pyIf we pass "/path/to/dir/*.py" as the directory, the datasetwould produce:  - /path/to/dir/b.py  - /path/to/dir/c.py
 
-#### Args:
+#### 参数：
 - **`file_pattern`** : A string, a list of strings, or a [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) of string type(scalar or vector), representing the filename glob (i.e. shell wildcard)pattern(s) that will be matched.
 - **`shuffle`** : (Optional.) If  `True` , the file names will be shuffled randomly.Defaults to  `True` .
 - **`seed`** : (Optional.) A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the randomseed that will be used to create the distribution. See[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed) for behavior.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset`  of strings corresponding to file names.
 
 
@@ -513,7 +513,7 @@ Maps  `map_func`  across the elements of this dataset.
 
 This transformation applies  `map_func`  to each element of this dataset, andreturns a new dataset containing the transformed elements, in the sameorder as they appeared in the input.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -526,7 +526,7 @@ a.map(lambda x: x + 1)  # ==> [ 2, 3, 4, 5, 6 ]
 The input signature of  `map_func`  is determined by the structure of eachelement in this dataset. For example:
 
 ```
- # NOTE: The following examples use `{ ... }` to represent the
+ # 注意：The following examples use `{ ... }` to represent the
 # contents of a dataset.
 # Each element is a `tf.Tensor` object.
 a = { 1, 2, 3, 4, 5 }
@@ -604,12 +604,12 @@ d.map(lambda x: tf.py_function(func=upper_case_fn,
  
 ```
 
-#### Args:
+#### 参数：
 - **`map_func`** : A function mapping a dataset element to another dataset element.
 - **`num_parallel_calls`** : (Optional.) A [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor),representing the number elements to process asynchronously in parallel.If not specified, elements will be processed sequentially. If the value[ `tf.data.experimental.AUTOTUNE` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental#AUTOTUNE) is used, then the number of parallelcalls is set dynamically based on available CPU.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -621,9 +621,9 @@ d.map(lambda x: tf.py_function(func=upper_case_fn,
  
 ```
 
-Returns the options for this dataset and its inputs.
+返回此数据集及其输入的选项。
 
-#### Returns:
+#### 返回：
 A [ `tf.data.Options` ](https://tensorflow.google.cn/api_docs/python/tf/data/Options) object representing the dataset options.
 
 ###  `padded_batch` 
@@ -639,7 +639,7 @@ A [ `tf.data.Options` ](https://tensorflow.google.cn/api_docs/python/tf/data/Opt
  
 ```
 
-Combines consecutive elements of this dataset into padded batches.
+将此数据集的连续元素合并到填充的批中。
 
 This transformation combines multiple consecutive elements of the inputdataset into a single element.
 
@@ -651,14 +651,14 @@ Unlike [ `tf.data.Dataset.batch` ](https://tensorflow.google.cn/api_docs/python/
 - If the dimension is unknown (e.g. [ `tf.compat.v1.Dimension(None)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Dimension)), thecomponentwill be padded out to the maximum length of all elements in thatdimension.
 See also [ `tf.data.experimental.dense_to_sparse_batch` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/dense_to_sparse_batch), which combineselements that may have different shapes into a [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-#### Args:
+#### 参数：
 - **`batch_size`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number ofconsecutive elements of this dataset to combine in a single batch.
 - **`padded_shapes`** : A nested structure of [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) vectortensor-like objects representing the shape to which the respectivecomponent of each input element should be padded prior to batching. Anyunknown dimensions (e.g. [ `tf.compat.v1.Dimension(None)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Dimension) in a[ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) or  `-1`  in a tensor-like object) will be padded to themaximum size of that dimension in each batch.
 - **`padding_values`** : (Optional.) A nested structure of scalar-shaped[ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the padding values to use for the respectivecomponents.  Defaults are  `0`  for numeric types and the empty string forstring types.
 - **`drop_remainder`** : (Optional.) A [ `tf.bool` ](https://tensorflow.google.cn/api_docs/python/tf#bool) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representingwhether the last batch should be dropped in the case it has fewer than `batch_size`  elements; the default behavior is not to drop the smallerbatch.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -676,11 +676,11 @@ Creates a  `Dataset`  that prefetches elements from this dataset.
 **Note:**  Like other  `Dataset`  methods, prefetch operates on theelements of the input dataset. It has no concept of examples vs. batches. `examples.prefetch(2)`  will prefetch two elements (2 examples),while  `examples.batch(20).prefetch(2)`  will prefetch 2 elements(2 batches, of 20 examples each).
 
 
-#### Args:
+#### 参数：
 - **`buffer_size`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the maximumnumber of elements that will be buffered when prefetching.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -694,7 +694,7 @@ Creates a  `Dataset`  that prefetches elements from this dataset.
 
 Creates a  `Dataset`  of a step-separated range of values.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -707,15 +707,15 @@ Dataset.range(5, 1, -2) == [5, 3]
  
 ```
 
-#### Args:
+#### 参数：
 - **`*args`** : follows the same semantics as python's xrange.len(args) == 1 -> start = 0, stop = args[0], step = 1len(args) == 2 -> start = args[0], stop = args[1], step = 1len(args) == 3 -> start = args[0], stop = args[1, stop = args[2]
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `RangeDataset` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if len(args) == 0.
 
 
@@ -730,22 +730,22 @@ Dataset.range(5, 1, -2) == [5, 3]
  
 ```
 
-Reduces the input dataset to a single element.
+将输入数据集缩减为单个元素。
 
 The transformation calls  `reduce_func`  successively on every element ofthe input dataset until the dataset is exhausted, aggregating information inits internal state. The  `initial_state`  argument is used for the initialstate and the final state is returned as the result.
 
-#### For example:
+#### 例如：
 -  `tf.data.Dataset.range(5).reduce(np.int64(0), lambda x, _: x + 1)` produces  `5` 
 -  `tf.data.Dataset.range(5).reduce(np.int64(0), lambda x, y: x + y)` produces  `10` 
 
 
-#### Args:
+#### 参数：
 - **`initial_state`** : An element representing the initial state of thetransformation.
 - **`reduce_func`** : A function that maps  `(old_state, input_element)`  to `new_state` . It must take two arguments and return a new elementThe structure of  `new_state`  must match the structure of `initial_state` .
 
 
-#### Returns:
-A dataset element corresponding to the final state of the transformation.
+#### 返回：
+与转换的最终状态相对应的数据集元素。
 
 ###  `repeat` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/dataset_ops.py#L848-L862)
@@ -757,13 +757,13 @@ A dataset element corresponding to the final state of the transformation.
 
 Repeats this dataset  `count`  times.
 
-NOTE: If this dataset is a function of global state (e.g. a random numbergenerator), then different repetitions may produce different elements.
+注意：If this dataset is a function of global state (e.g. a random numbergenerator), then different repetitions may produce different elements.
 
-#### Args:
+#### 参数：
 - **`count`** : (Optional.) A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing thenumber of times the dataset should be repeated. The default behavior (if `count`  is  `None`  or  `-1` ) is for the dataset be repeated indefinitely.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -793,7 +793,7 @@ d = d.map(parser_fn, num_parallel_calls=num_map_threads)
  
 ```
 
-#### Important caveats:
+#### 重要注意事项：
 - Be sure to shard before you use any randomizing operator (such asshuffle).
 - Generally it is best if the shard operator is used early in the datasetpipeline. For example, when reading from a set of TFRecord files, shardbefore converting the dataset to input samples. This avoids reading everyfile on every worker. The following is an example of an efficientsharding strategy within a complete pipeline:
 
@@ -809,17 +809,17 @@ d = d.map(parser_fn, num_parallel_calls=num_map_threads)
  
 ```
 
-#### Args:
+#### 参数：
 - **`num_shards`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number ofshards operating in parallel.
 - **`index`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the worker index.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
-#### Raises:
-- **`InvalidArgumentError`** : if  `num_shards`  or  `index`  are illegal values.Note: error checking is done on a best-effort basis, and errors aren'tguaranteed to be caught upon dataset creation. (e.g. providing in aplaceholder tensor bypasses the early checking, and will instead resultin an error during a session.run call.)
+#### 加薪：
+- **`InvalidArgumentError`** : if  `num_shards`  or  `index`  are illegal values.注意：error checking is done on a best-effort basis, and errors aren'tguaranteed to be caught upon dataset creation. (e.g. providing in aplaceholder tensor bypasses the early checking, and will instead resultin an error during a session.run call.)
 
 
 ###  `shuffle` 
@@ -834,19 +834,19 @@ d = d.map(parser_fn, num_parallel_calls=num_map_threads)
  
 ```
 
-Randomly shuffles the elements of this dataset.
+随机洗牌此数据集的元素。
 
 This dataset fills a buffer with  `buffer_size`  elements, then randomlysamples elements from this buffer, replacing the selected elements with newelements. For perfect shuffling, a buffer size greater than or equal to thefull size of the dataset is required.
 
 For instance, if your dataset contains 10,000 elements but  `buffer_size`  isset to 1,000, then  `shuffle`  will initially select a random element fromonly the first 1,000 elements in the buffer. Once an element is selected,its space in the buffer is replaced by the next (i.e. 1,001-st) element,maintaining the 1,000 element buffer.
 
-#### Args:
+#### 参数：
 - **`buffer_size`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number ofelements from this dataset from which the new dataset will sample.
 - **`seed`** : (Optional.) A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the randomseed that will be used to create the distribution. See[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed) for behavior.
 - **`reshuffle_each_iteration`** : (Optional.) A boolean, which if true indicatesthat the dataset should be pseudorandomly reshuffled each time it isiterated over. (Defaults to  `True` .)
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -860,11 +860,11 @@ For instance, if your dataset contains 10,000 elements but  `buffer_size`  isset
 
 Creates a  `Dataset`  that skips  `count`  elements from this dataset.
 
-#### Args:
+#### 参数：
 - **`count`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number ofelements of this dataset that should be skipped to form the new dataset.If  `count`  is greater than the size of this dataset, the new datasetwill contain no elements.  If  `count`  is -1, skips the entire dataset.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -878,11 +878,11 @@ Creates a  `Dataset`  that skips  `count`  elements from this dataset.
 
 Creates a  `Dataset`  with at most  `count`  elements from this dataset.
 
-#### Args:
+#### 参数：
 - **`count`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number ofelements of this dataset that should be taken to form the new dataset.If  `count`  is -1, or if  `count`  is greater than the size of thisdataset, the new dataset will contain all elements of this dataset.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .
 
 
@@ -894,12 +894,12 @@ Creates a  `Dataset`  with at most  `count`  elements from this dataset.
  
 ```
 
-Splits elements of a dataset into multiple elements.
+将数据集的元素拆分为多个元素。
 
 For example, if elements of the dataset are shaped  `[B, a0, a1, ...]` ,where  `B`  may vary for each input element, then for each element in thedataset, the unbatched dataset will contain  `B`  consecutive elementsof shape  `[a0, a1, ...]` .
 
 ```
- # NOTE: The following example uses `{ ... }` to represent the contents
+ # 注意：The following example uses `{ ... }` to represent the contents
 # of a dataset.
 ds = { ['a', 'b', 'c'], ['a', 'b'], ['a', 'b', 'c', 'd'] }
 
@@ -907,7 +907,7 @@ ds.unbatch() == {'a', 'b', 'c', 'a', 'b', 'a', 'b', 'c', 'd'}
  
 ```
 
-#### Returns:
+#### 返回：
 A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 
 ###  `window` 
@@ -923,7 +923,7 @@ A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.
  
 ```
 
-Combines (nests of) input elements into a dataset of (nests of) windows.
+将（嵌套的）输入元素合并到（嵌套的）窗口的数据集中。
 
 A "window" is a finite dataset of flat elements of size  `size`  (or possiblyfewer if there are not enough input elements to fill the window and `drop_remainder`  evaluates to false).
 
@@ -936,19 +936,19 @@ For example, letting {...} to represent a Dataset:
 -  `tf.data.Dataset.range(7).window(3, 1, 2, True)`  produces `{ {0, 2, 4}, {1, 3, 5}, {2, 4, 6}}` 
 Note that when the  `window`  transformation is applied to a dataset ofnested elements, it produces a dataset of nested windows.
 
-#### For example:
+#### 例如：
 -  `tf.data.Dataset.from_tensor_slices((range(4), range(4))).window(2)` produces  `{({0, 1}, {0, 1}), ({2, 3}, {2, 3})}` 
 -  `tf.data.Dataset.from_tensor_slices({"a": range(4)}).window(2)` produces  `{ {"a": {0, 1}}, {"a": {2, 3}}}` 
 
 
-#### Args:
+#### 参数：
 - **`size`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the number of elementsof the input dataset to combine into a window.
 - **`shift`** : (Optional.) A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing theforward shift of the sliding window in each iteration. Defaults to `size` .
 - **`stride`** : (Optional.) A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing thestride of the input elements in the sliding window.
 - **`drop_remainder`** : (Optional.) A [ `tf.bool` ](https://tensorflow.google.cn/api_docs/python/tf#bool) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representingwhether a window should be dropped in case its size is smaller than `window_size` .
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset`  of (nests of) windows -- a finite datasets of flatelements created from the (nests of) input elements.
 
 
@@ -964,15 +964,15 @@ Returns a new [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python
 
 The options are "global" in the sense they apply to the entire dataset.If options are set multiple times, they are merged as long as differentoptions do not use different non-default values.
 
-#### Args:
+#### 参数：
 - **`options`** : A [ `tf.data.Options` ](https://tensorflow.google.cn/api_docs/python/tf/data/Options) that identifies the options the use.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset`  with the given options.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : when an option is set more than once to a non-default value
 
 
@@ -1011,9 +1011,9 @@ Dataset.zip((a, d))  # ==> [ (1, 13), (2, 14) ]
  
 ```
 
-#### Args:
+#### 参数：
 - **`datasets`** : A nested structure of datasets.
 
 
-#### Returns:
+#### 返回：
 - **`Dataset`** : A  `Dataset` .

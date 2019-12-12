@@ -1,11 +1,11 @@
 
 
 ## Class  `FeatureList` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.FeatureList` ](/api_docs/python/tf/train/FeatureList), [ `tf.compat.v2.train.FeatureList` ](/api_docs/python/tf/train/FeatureList)
+**别名** : [ `tf.compat.v1.train.FeatureList` ](/api_docs/python/tf/train/FeatureList), [ `tf.compat.v2.train.FeatureList` ](/api_docs/python/tf/train/FeatureList)
 
-## Properties
+## 属性
 
 
 ###  `feature` 

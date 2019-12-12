@@ -1,4 +1,4 @@
-Computes the sum of elements across dimensions of a SparseTensor.
+计算Sparsetensor维度上元素的总和。
 
 ```
  tf.sparse.reduce_sum(    sp_input,    axis=None,    keepdims=None,    output_is_sparse=False,    name=None) 
@@ -12,7 +12,7 @@ Reduces  `sp_input`  along the dimensions given in  `axis` .  Unless  `keepdims`
 
 If  `axis`  has no entries, all dimensions are reduced, and a tensorwith a single element is returned.  Additionally, the axes can be negative,similar to the indexing rules in Python.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -27,7 +27,7 @@ tf.sparse.reduce_sum(x, [0, 1]) ==> 3
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The SparseTensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce; list or scalar. If  `None`  (thedefault), reduces all dimensions.
 - **`keepdims`** : If true, retain reduced dimensions with length 1.
@@ -35,6 +35,6 @@ tf.sparse.reduce_sum(x, [0, 1]) ==> 3
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The reduced Tensor or the reduced SparseTensor if  `output_is_sparse`  isTrue.
 

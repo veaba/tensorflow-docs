@@ -1,12 +1,12 @@
 
 
 ## Class  `Experimental` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class VirtualDevices` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/GPUOptions/Experimental/VirtualDevices)
 
-## Properties
+## 属性
 
 
 ###  `collective_ring_order` 

@@ -1,6 +1,6 @@
 Returns  `True`  if  `x`  is non-decreasing.
 
-**Aliases** : [ `tf.compat.v1.debugging.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing), [ `tf.compat.v1.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing), [ `tf.compat.v1.math.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing), [ `tf.compat.v2.math.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing)
+**别名** : [ `tf.compat.v1.debugging.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing), [ `tf.compat.v1.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing), [ `tf.compat.v1.math.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing), [ `tf.compat.v2.math.is_non_decreasing` ](/api_docs/python/tf/math/is_non_decreasing)
 
 ```
  tf.math.is_non_decreasing(
@@ -14,13 +14,13 @@ Elements of  `x`  are compared in row-major order.  The tensor  `[x[0],...]` is 
 
 See also:   `is_strictly_increasing` 
 
-#### Args:
+#### 参数：
 - **`x`** : Numeric  `Tensor` .
 - **`name`** : A name for this operation (optional).  Defaults to "is_non_decreasing"
 
 
-#### Returns:
+#### 返回：
 Boolean  `Tensor` , equal to  `True`  iff  `x`  is non-decreasing.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `x`  is not a numeric tensor.

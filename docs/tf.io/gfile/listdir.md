@@ -1,6 +1,6 @@
-Returns a list of entries contained within a directory.
+返回目录中包含的条目列表。
 
-**Aliases** : [ `tf.compat.v1.io.gfile.listdir` ](/api_docs/python/tf/io/gfile/listdir), [ `tf.compat.v2.io.gfile.listdir` ](/api_docs/python/tf/io/gfile/listdir)
+**别名** : [ `tf.compat.v1.io.gfile.listdir` ](/api_docs/python/tf/io/gfile/listdir), [ `tf.compat.v2.io.gfile.listdir` ](/api_docs/python/tf/io/gfile/listdir)
 
 ```
  tf.io.gfile.listdir(path)
@@ -9,13 +9,13 @@ Returns a list of entries contained within a directory.
 
 The list is in arbitrary order. It does not contain the special entries "."and "..".
 
-#### Args:
+#### 参数：
 - **`path`** : string, path to a directory
 
 
-#### Returns:
+#### 返回：
 [filename1, filename2, ... filenameN] as strings
 
-#### Raises:
-errors.NotFoundError if directory doesn't exist
+#### 加薪：
+errors.notfounderror如果目录不存在
 

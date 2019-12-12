@@ -1,22 +1,22 @@
 
 
 ## Class  `ELU` 
-Exponential Linear Unit.
+指数线性单位。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.ELU` ](/api_docs/python/tf/keras/layers/ELU), [ `tf.compat.v2.keras.layers.ELU` ](/api_docs/python/tf/keras/layers/ELU)
+**别名** : [ `tf.compat.v1.keras.layers.ELU` ](/api_docs/python/tf/keras/layers/ELU), [ `tf.compat.v2.keras.layers.ELU` ](/api_docs/python/tf/keras/layers/ELU)
 
-#### It follows:
+#### 它如下：
  `f(x) =  alpha * (exp(x) - 1.) for x < 0` , `f(x) = x for x >= 0` .
 
-#### Input shape:
+#### 输入形状：
 Arbitrary. Use the keyword argument  `input_shape` (tuple of integers, does not include the samples axis)when using this layer as the first layer in a model.
 
-#### Output shape:
-Same shape as the input.
+#### 输出形状：
+与输入形状相同。
 
-#### Arguments:
+#### 参数：
 - **`alpha`** : Scale for the negative factor.
 
 

@@ -15,10 +15,10 @@ This is the recommended way to get the mtimes, since it takes into accountthe na
 **Note:**  If not all checkpoints exist, the length of the returned mtimes listwill be smaller than the length of  `checkpoint_prefixes`  list, so mappingcheckpoints to corresponding mtimes will not be possible.
 
 
-#### Args:
+#### 参数：
 - **`checkpoint_prefixes`** : a list of checkpoint paths, typically the results of `Saver.save()`  or those of [ `tf.train.latest_checkpoint()` ](https://tensorflow.google.cn/api_docs/python/tf/train/latest_checkpoint), regardless ofsharded/non-sharded or V1/V2.
 
 
-#### Returns:
-A list of mtimes (in microseconds) of the found checkpoints.
+#### 返回：
+找到的检查点的mtimes（微秒）列表。
 

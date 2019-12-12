@@ -1,4 +1,4 @@
-Enables TensorFlow 2.x behaviors.
+启用TensorFlow 2.x行为。
 
 ```
  tf.compat.v1.enable_v2_behavior()

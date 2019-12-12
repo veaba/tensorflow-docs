@@ -1,6 +1,6 @@
 Cumulative product of the values in a tensor, alongside the specified axis.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.cumprod` ](/api_docs/python/tf/keras/backend/cumprod), [ `tf.compat.v2.keras.backend.cumprod` ](/api_docs/python/tf/keras/backend/cumprod)
+**别名** : [ `tf.compat.v1.keras.backend.cumprod` ](/api_docs/python/tf/keras/backend/cumprod), [ `tf.compat.v2.keras.backend.cumprod` ](/api_docs/python/tf/keras/backend/cumprod)
 
 ```
  tf.keras.backend.cumprod(
@@ -10,11 +10,11 @@ Cumulative product of the values in a tensor, alongside the specified axis.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable.
 - **`axis`** : An integer, the axis to compute the product.
 
 
-#### Returns:
+#### 返回：
 A tensor of the cumulative product of values of  `x`  along  `axis` .
 

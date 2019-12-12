@@ -37,7 +37,7 @@ tf.device(tf.compat.v1.train.replica_device_setter(cluster=cluster_spec)):
  
 ```
 
-#### Args:
+#### 参数：
 - **`ps_tasks`** : Number of tasks in the  `ps`  job.  Ignored if  `cluster`  isprovided.
 - **`ps_device`** : String.  Device of the  `ps`  job.  If empty no  `ps`  job is used.Defaults to  `ps` .
 - **`worker_device`** : String.  Device of the  `worker`  job.  If empty no  `worker` job is used.
@@ -47,9 +47,9 @@ tf.device(tf.compat.v1.train.replica_device_setter(cluster=cluster_spec)):
 - **`ps_strategy`** : A callable invoked for every ps  `Operation`  (i.e. matched by `ps_ops` ), that takes the  `Operation`  and returns the ps task index touse.  If  `None` , defaults to a round-robin strategy across all  `ps` devices.
 
 
-#### Returns:
+#### 返回：
 A function to pass to [ `tf.device()` ](https://tensorflow.google.cn/api_docs/python/tf/device).
 
-#### Raises:
+#### 加薪：
 TypeError if  `cluster`  is not a dictionary or  `ClusterDef`  protocol buffer,or if  `ps_strategy`  is provided but not a callable.
 

@@ -1,6 +1,6 @@
 Create a switch/case operation, i.e. an integer-indexed conditional.
 
-**Aliases** : [ `tf.compat.v1.switch_case` ](/api_docs/python/tf/switch_case), [ `tf.compat.v2.switch_case` ](/api_docs/python/tf/switch_case)
+**别名** : [ `tf.compat.v1.switch_case` ](/api_docs/python/tf/switch_case), [ `tf.compat.v2.switch_case` ](/api_docs/python/tf/switch_case)
 
 ```
  tf.switch_case(
@@ -22,7 +22,7 @@ The  `branch_fns`  parameter is either a listof (int, callable) pairs, or simply
 
 **Example:** 
 
-#### Pseudocode:
+#### 伪码：
 
 
 ```
@@ -34,7 +34,7 @@ The  `branch_fns`  parameter is either a listof (int, callable) pairs, or simply
  
 ```
 
-or
+或
 
 ```
  branches = {0: lambda: 17, 1: lambda: 31}
@@ -42,7 +42,7 @@ branches.get(branch_index, lambda: -1)()
  
 ```
 
-#### Expressions:
+#### 表达式：
 
 
 ```
@@ -54,22 +54,22 @@ r = tf.switch_case(branch_index, branch_fns={0: f1, 1: f2}, default=f3)
  
 ```
 
-#### Args:
+#### 参数：
 - **`branch_index`** : An int Tensor specifying which of  `branch_fns`  should beexecuted.
 - **`branch_fns`** : A  `list`  of (int, callable) pairs, or simply a list ofcallables (in which case the index serves as the key). Each callable mustreturn a matching structure of tensors.
 - **`default`** : Optional callable that returns a structure of tensors.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 The tensors returned by the callable identified by  `branch_index` , or thosereturned by  `default`  if no key matches and  `default`  was provided, or thosereturned by the max-keyed  `branch_fn`  if no  `default`  is provided.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `branch_fns`  is not a list/dictionary.
 - **`TypeError`** : If  `branch_fns`  is a list but does not contain 2-tuples or       callables.
 - **`TypeError`** : If  `fns[i]`  is not callable for any i, or  `default`  is not       callable.
 
 
-#### V2 Compatibility
+#### v2兼容性
  `branch_fns`  could be a dictionary in v1. However, tf.Tensor andtf.Variable are no longer hashable in v2, so cannot be used as a key for adictionary.  Please use a list or a tuple instead.
 

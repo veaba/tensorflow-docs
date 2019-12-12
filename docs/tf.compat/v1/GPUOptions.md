@@ -1,12 +1,12 @@
 
 
 ## Class  `GPUOptions` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class Experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/GPUOptions/Experimental)
 
-## Properties
+## 属性
 
 
 ###  `allocator_type` 

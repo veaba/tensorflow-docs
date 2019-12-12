@@ -5,17 +5,17 @@ Gated Recurrent Unit - Cho et al. 2014.
 
 Inherits From: [ `GRU` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/layers/GRU)
 
-### Used in the guide:
+### 在指南中使用：
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 - [Text generation with an RNN](https://tensorflow.google.cn/tutorials/text/text_generation)
 Based on available runtime hardware and constraints, this layerwill choose different implementations (cuDNN-based or pure-TensorFlow)to maximize the performance. If a GPU is available and allthe arguments to the layer meet the requirement of the CuDNN kernel(see below for details), the layer will use a fast cuDNN implementation.
 
-The requirements to use the cuDNN implementation are:
+使用CUDNN实现的要求如下：
 
 1.  `activation`  == 'tanh'
 2.  `recurrent_activation`  == 'sigmoid'
@@ -28,7 +28,7 @@ There are two variants of the GRU implementation. The default one is based on[v3
 
 The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on CPU. Thus it has separate biases for  `kernel`  and `recurrent_kernel` . To use this variant, set  `'reset_after'=True`  and `recurrent_activation='sigmoid'` .
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`activation`** : Activation function to use.Default: hyperbolic tangent ( `tanh` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`recurrent_activation`** : Activation function to usefor the recurrent step.Default: sigmoid ( `sigmoid` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
@@ -54,7 +54,7 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
 - **`reset_after`** : GRU convention (whether to apply reset gate after orbefore matrix multiplication). False = "before",True = "after" (default and CuDNN compatible).
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : A 3D tensor.
 - **`mask`** : Binary tensor of shape  `(samples, timesteps)`  indicating whethera given timestep should be masked.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. This argument is passed to the cellwhen calling it. This is only relevant if  `dropout`  or `recurrent_dropout`  is used.
@@ -95,7 +95,7 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `activation` 
@@ -152,7 +152,7 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
 ###  `use_bias` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_dropout_mask_for_cell` 
@@ -167,17 +167,17 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
  
 ```
 
-Get the dropout mask for RNN cell's input.
+获取RNN单元输入的退出掩码。
 
 It will create mask based on context if there isn't any existing cachedmask. If a new mask is generated, it will update the cache in the cell.
 
-#### Args:
+#### 参数：
 - **`inputs`** : the input tensor whose shape will be used to generate dropoutmask.
 - **`training`** : boolean tensor, whether its in training mode, dropout will beignored in non-training mode.
 - **`count`** : int, how many dropout mask will be generated. It is useful for cellthat has internal weights fused together.
 
 
-#### Returns:
+#### 返回：
 List of mask tensor, generated or cached mask based on context.
 
 ###  `get_initial_state` 
@@ -200,17 +200,17 @@ List of mask tensor, generated or cached mask based on context.
  
 ```
 
-Get the recurrent dropout mask for RNN cell.
+获取RNN细胞的复发性脱落面具。
 
 It will create mask based on context if there isn't any existing cachedmask. If a new mask is generated, it will update the cache in the cell.
 
-#### Args:
+#### 参数：
 - **`inputs`** : the input tensor whose shape will be used to generate dropoutmask.
 - **`training`** : boolean tensor, whether its in training mode, dropout will beignored in non-training mode.
 - **`count`** : int, how many dropout mask will be generated. It is useful for cellthat has internal weights fused together.
 
 
-#### Returns:
+#### 返回：
 List of mask tensor, generated or cached mask based on context.
 
 ###  `reset_dropout_mask` 
@@ -221,7 +221,7 @@ List of mask tensor, generated or cached mask based on context.
  
 ```
 
-Reset the cached dropout masks if any.
+重置缓存的退出掩码（如果有）。
 
 This is important for the RNN layer to invoke this in it call() method sothat the cached mask is cleared before calling the cell.call(). The maskshould be cached across the timestep within the same batch, but shouldn'tbe cached between batches. Otherwise it will introduce unreasonable biasagainst certain index of data within the batch.
 
@@ -233,7 +233,7 @@ This is important for the RNN layer to invoke this in it call() method sothat th
  
 ```
 
-Reset the cached recurrent dropout masks if any.
+如果存在，则重置缓存的重复退出掩码。
 
 This is important for the RNN layer to invoke this in it call() method sothat the cached mask is cleared before calling the cell.call(). The maskshould be cached across the timestep within the same batch, but shouldn'tbe cached between batches. Otherwise it will introduce unreasonable biasagainst certain index of data within the batch.
 

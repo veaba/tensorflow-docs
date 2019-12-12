@@ -1,6 +1,6 @@
-Loads the Boston Housing dataset.
+加载波士顿住房数据集。
 
-**Aliases** : [ `tf.compat.v1.keras.datasets.boston_housing.load_data` ](/api_docs/python/tf/keras/datasets/boston_housing/load_data), [ `tf.compat.v2.keras.datasets.boston_housing.load_data` ](/api_docs/python/tf/keras/datasets/boston_housing/load_data)
+**别名** : [ `tf.compat.v1.keras.datasets.boston_housing.load_data` ](/api_docs/python/tf/keras/datasets/boston_housing/load_data), [ `tf.compat.v2.keras.datasets.boston_housing.load_data` ](/api_docs/python/tf/keras/datasets/boston_housing/load_data)
 
 ```
  tf.keras.datasets.boston_housing.load_data(
@@ -11,12 +11,12 @@ Loads the Boston Housing dataset.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`path`** : path where to cache the dataset locally(relative to ~/.keras/datasets).
 - **`test_split`** : fraction of the data to reserve as test set.
 - **`seed`** : Random seed for shuffling the databefore computing the test split.
 
 
-#### Returns:
+#### 返回：
 Tuple of Numpy arrays:  `(x_train, y_train), (x_test, y_test)` .
 

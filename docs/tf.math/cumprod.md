@@ -1,6 +1,6 @@
 Compute the cumulative product of the tensor  `x`  along  `axis` .
 
-**Aliases** : [ `tf.compat.v1.cumprod` ](/api_docs/python/tf/math/cumprod), [ `tf.compat.v1.math.cumprod` ](/api_docs/python/tf/math/cumprod), [ `tf.compat.v2.math.cumprod` ](/api_docs/python/tf/math/cumprod)
+**别名** : [ `tf.compat.v1.cumprod` ](/api_docs/python/tf/math/cumprod), [ `tf.compat.v1.math.cumprod` ](/api_docs/python/tf/math/cumprod), [ `tf.compat.v2.math.cumprod` ](/api_docs/python/tf/math/cumprod)
 
 ```
  tf.math.cumprod(
@@ -41,7 +41,7 @@ This is more efficient than using separate [ `tf.reverse` ](https://tensorflow.g
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` , `int64` ,  `int32` ,  `uint8` ,  `uint16` ,  `int16` ,  `int8` ,  `complex64` , `complex128` ,  `qint8` ,  `quint8` ,  `qint32` ,  `half` .
 - **`axis`** : A  `Tensor`  of type  `int32`  (default: 0). Must be in the range `[-rank(x), rank(x))` .
 - **`exclusive`** : If  `True` , perform exclusive cumprod.
@@ -49,6 +49,6 @@ This is more efficient than using separate [ `tf.reverse` ](https://tensorflow.g
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

@@ -1,6 +1,6 @@
-Outputs random values from a truncated normal distribution.
+从截断正态分布输出随机值。
 
-**Aliases** : [ `tf.compat.v1.random.truncated_normal` ](/api_docs/python/tf/random/truncated_normal), [ `tf.compat.v1.truncated_normal` ](/api_docs/python/tf/random/truncated_normal), [ `tf.compat.v2.random.truncated_normal` ](/api_docs/python/tf/random/truncated_normal)
+**别名** : [ `tf.compat.v1.random.truncated_normal` ](/api_docs/python/tf/random/truncated_normal), [ `tf.compat.v1.truncated_normal` ](/api_docs/python/tf/random/truncated_normal), [ `tf.compat.v2.random.truncated_normal` ](/api_docs/python/tf/random/truncated_normal)
 
 ```
  tf.random.truncated_normal(
@@ -14,11 +14,11 @@ Outputs random values from a truncated normal distribution.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
 The generated values follow a normal distribution with specified mean andstandard deviation, except that values whose magnitude is more than 2 standarddeviations from the mean are dropped and re-picked.
 
-#### Args:
+#### 参数：
 - **`shape`** : A 1-D integer Tensor or Python array. The shape of the output tensor.
 - **`mean`** : A 0-D Tensor or Python value of type  `dtype` . The mean of thetruncated normal distribution.
 - **`stddev`** : A 0-D Tensor or Python value of type  `dtype` . The standard deviationof the normal distribution, before truncation.
@@ -27,6 +27,6 @@ The generated values follow a normal distribution with specified mean andstandar
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-A tensor of the specified shape filled with random truncated normal values.
+#### 返回：
+指定形状的张量，填充随机截断的法值。
 

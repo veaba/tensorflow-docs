@@ -1,18 +1,18 @@
-Determines whether a path exists or not.
+确定路径是否存在。
 
-**Aliases** : [ `tf.compat.v1.io.gfile.exists` ](/api_docs/python/tf/io/gfile/exists), [ `tf.compat.v2.io.gfile.exists` ](/api_docs/python/tf/io/gfile/exists)
+**别名** : [ `tf.compat.v1.io.gfile.exists` ](/api_docs/python/tf/io/gfile/exists), [ `tf.compat.v2.io.gfile.exists` ](/api_docs/python/tf/io/gfile/exists)
 
 ```
  tf.io.gfile.exists(path)
  
 ```
 
-#### Args:
+#### 参数：
 - **`path`** : string, a path
 
 
-#### Returns:
+#### 返回：
 True if the path exists, whether it's a file or a directory.False if the path does not exist and there are no filesystem errors.
 
-#### Raises:
+#### 加薪：
 - **[ `errors.OpError` ](/api_docs/python/tf/errors/OpError)** : Propagates any errors reported by the FileSystem API.

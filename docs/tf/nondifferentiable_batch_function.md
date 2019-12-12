@@ -1,6 +1,6 @@
-Batches the computation done by the decorated function.
+批处理修饰函数完成的计算。
 
-**Aliases** : [ `tf.compat.v1.nondifferentiable_batch_function` ](/api_docs/python/tf/nondifferentiable_batch_function), [ `tf.compat.v2.nondifferentiable_batch_function` ](/api_docs/python/tf/nondifferentiable_batch_function)
+**别名** : [ `tf.compat.v1.nondifferentiable_batch_function` ](/api_docs/python/tf/nondifferentiable_batch_function), [ `tf.compat.v2.nondifferentiable_batch_function` ](/api_docs/python/tf/nondifferentiable_batch_function)
 
 ```
  tf.nondifferentiable_batch_function(
@@ -31,7 +31,7 @@ Assumes that all arguments of the decorated function are Tensors which willbe ba
 
 SparseTensor is not supported. The return value of the decorated functionmust be a Tensor or a list/tuple of Tensors.
 
-#### Args:
+#### 参数：
 - **`num_batch_threads`** : Number of scheduling threads for processing batchesof work. Determines the number of batches processed in parallel.
 - **`max_batch_size`** : Batch sizes will never be bigger than this.
 - **`batch_timeout_micros`** : Maximum number of microseconds to wait beforeoutputting an incomplete batch.
@@ -40,6 +40,6 @@ SparseTensor is not supported. The return value of the decorated functionmust be
 - **`autograph`** : Whether to use autograph to compile python and eager style codefor efficient graph-mode execution.
 
 
-#### Returns:
-The decorated function will return the unbatched computation output Tensors.
+#### 返回：
+修饰函数将返回未匹配的计算输出张量。
 

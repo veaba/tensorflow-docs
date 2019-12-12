@@ -1,6 +1,6 @@
 Finds values and indices of the  `k`  largest entries for the last dimension.
 
-**Aliases** : [ `tf.compat.v1.math.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.compat.v1.nn.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.compat.v2.math.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.compat.v2.nn.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.nn.top_k` ](/api_docs/python/tf/math/top_k)
+**别名** : [ `tf.compat.v1.math.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.compat.v1.nn.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.compat.v2.math.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.compat.v2.nn.top_k` ](/api_docs/python/tf/math/top_k), [ `tf.nn.top_k` ](/api_docs/python/tf/math/top_k)
 
 ```
  tf.math.top_k(
@@ -23,13 +23,13 @@ For matrices (resp. higher rank input), computes the top  `k`  entries in eachro
 
 If two elements are equal, the lower-index element appears first.
 
-#### Args:
+#### 参数：
 - **`input`** : 1-D or higher  `Tensor`  with last dimension at least  `k` .
 - **`k`** : 0-D  `int32`   `Tensor` .  Number of top elements to look for along the lastdimension (along each row for matrices).
 - **`sorted`** : If true the resulting  `k`  elements will be sorted by the values indescending order.
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 - **`values`** : The  `k`  largest elements along each last dimensional slice.
 - **`indices`** : The indices of  `values`  within the last dimension of  `input` .

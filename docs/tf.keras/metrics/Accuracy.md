@@ -1,15 +1,15 @@
 
 
 ## Class  `Accuracy` 
-Calculates how often predictions matches labels.
+计算预测与标签匹配的频率。
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy), [ `tf.compat.v2.keras.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy), [ `tf.compat.v2.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy), [ `tf.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy)
+**别名** : [ `tf.compat.v1.keras.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy), [ `tf.compat.v2.keras.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy), [ `tf.compat.v2.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy), [ `tf.metrics.Accuracy` ](/api_docs/python/tf/keras/metrics/Accuracy)
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Custom training: walkthrough](https://tensorflow.google.cn/tutorials/customization/custom_training_walkthrough)
 For example, if  `y_true`  is [1, 2, 3, 4] and  `y_pred`  is [0, 2, 3, 4]then the accuracy is 3/4 or .75.  If the weights were specified as[1, 1, 0, 0] then the accuracy would be 1/2 or .5.
 
@@ -17,7 +17,7 @@ This metric creates two local variables,  `total`  and  `count`  that are used t
 
 If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -27,7 +27,7 @@ print('Final result: ', m.result().numpy())  # Final result: 0.75
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -48,7 +48,7 @@ model.compile('sgd', loss='mse', metrics=[tf.keras.metrics.Accuracy()])
 
 Creates a  `MeanMetricWrapper`  instance.
 
-#### Args:
+#### 参数：
 - **`fn`** : The metric function to wrap, with signature `fn(y_true, y_pred, **kwargs)` .
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
@@ -69,7 +69,7 @@ Creates a  `MeanMetricWrapper`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -80,7 +80,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -92,7 +92,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -108,16 +108,16 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates metric statistics.
+累积度量统计。
 
  `y_true`  and  `y_pred`  should have the same shape.
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can bea  `Tensor`  whose rank is either 0, or the same rank as  `y_true` ,and must be broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

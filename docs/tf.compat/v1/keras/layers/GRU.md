@@ -9,7 +9,7 @@ There are two variants. The default one is based on 1406.1078v3 andhas reset gat
 
 The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on CPU. Thus it has separate biases for  `kernel`  and `recurrent_kernel` . Use  `'reset_after'=True`  and `recurrent_activation='sigmoid'` .
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`activation`** : Activation function to use.Default: hyperbolic tangent ( `tanh` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`recurrent_activation`** : Activation function to usefor the recurrent step.Default: hard sigmoid ( `hard_sigmoid` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
@@ -36,7 +36,7 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
 - **`reset_after`** : GRU convention (whether to apply reset gate after orbefore matrix multiplication). False = "before" (default),True = "after" (CuDNN compatible).
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : A 3D tensor.
 - **`mask`** : Binary tensor of shape  `(samples, timesteps)`  indicating whethera given timestep should be masked.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. This argument is passed to the cellwhen calling it. This is only relevant if  `dropout`  or `recurrent_dropout`  is used.
@@ -76,7 +76,7 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `activation` 
@@ -133,7 +133,7 @@ The second variant is compatible with CuDNNGRU (GPU-only) and allowsinference on
 ###  `use_bias` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

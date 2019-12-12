@@ -5,7 +5,7 @@ Groups trackable objects, saving and restoring them.
 
  `Checkpoint` 's constructor accepts keyword arguments whose values are typesthat contain trackable state, such as [ `tf.compat.v1.train.Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Optimizer)implementations, [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable),  `tf.keras.Layer`  implementations, or[ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) implementations. It saves these values with a checkpoint, andmaintains a  `save_counter`  for numbering checkpoints.
 
-Example usage when graph building:
+图形生成时的示例用法：
 
 ```
  import tensorflow as tf
@@ -28,7 +28,7 @@ with tf.compat.v1.Session() as session:
  
 ```
 
-Example usage with eager execution enabled:
+启用紧急执行的示例用法：
 
 ```
  import tensorflow as tf
@@ -72,7 +72,7 @@ When variables are assigned to multiple workers, each worker writes its ownsecti
 
 While [ `tf.keras.Model.save_weights` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model#save_weights) and [ `tf.train.Checkpoint.save` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint#save) save in thesame format, note that the root of the resulting checkpoint is the object thesave method is attached to. This means saving a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) using `save_weights`  and loading into a [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint) with a  `Model` attached (or vice versa) will not match the  `Model` 's variables. See the[guide to trainingcheckpoints](https://tensorflow.google.cn/alpha/guide/checkpoints) fordetails. Prefer [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint) over [ `tf.keras.Model.save_weights` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model#save_weights) fortraining checkpoints.
 
-#### Attributes:
+#### 属性：
 - **`save_counter`** : Incremented when  `save()`  is called. Used to numbercheckpoints.
 
 
@@ -84,28 +84,28 @@ While [ `tf.keras.Model.save_weights` ](https://tensorflow.google.cn/api_docs/py
  
 ```
 
-Group objects into a training checkpoint.
+将对象分组到训练检查点。
 
-#### Args:
+#### 参数：
 - **`**kwargs`** : Keyword arguments are set as attributes of this object, and aresaved with the checkpoint. Values must be trackable objects.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If objects in  `kwargs`  are not trackable.
 
 
-## Properties
+## 属性
 
 
 ###  `save_counter` 
-An integer variable which starts at zero and is incremented on save.
+从零开始并在保存时递增的整数变量。
 
-Used to number checkpoints.
+用于对检查点进行编号。
 
-#### Returns:
-The save counter variable.
+#### 返回：
+保存计数器变量。
 
-## Methods
+## 方法
 
 
 ###  `restore` 
@@ -116,7 +116,7 @@ The save counter variable.
  
 ```
 
-Restore a training checkpoint.
+恢复训练检查点。
 
 Restores this  `Checkpoint`  and any objects it depends on.
 
@@ -145,14 +145,14 @@ If the checkpoint has not been consumed completely, then the list of restoreops 
 
 Name-based [ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver) checkpoints can be loaded using thismethod. Names are used to match variables. No restore ops are created/rununtil  `run_restore_ops()`  or  `initialize_or_restore()`  are called on thereturned status object when graph building, but there is restore-on-creationwhen executing eagerly. Re-encode name-based checkpoints using[ `tf.train.Checkpoint.save` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint#save) as soon as possible.
 
-#### Args:
+#### 参数：
 - **`save_path`** : The path to the checkpoint, as returned by  `save`  or[ `tf.train.latest_checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/latest_checkpoint). If None (as when there is no latestcheckpoint for [ `tf.train.latest_checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/latest_checkpoint) to return), returns anobject which may run initializers for objects in the dependency graph.If the checkpoint was written by the name-based[ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver), names are used to match variables.
 
 
-#### Returns:
+#### 返回：
 A load status object, which can be used to make assertions about thestatus of a checkpoint restoration and run initialization/restore ops.
 
-The returned status object has the following methods:
+返回的status对象具有以下方法：
 
 -  `assert_consumed()` :Raises an exception if any variables/objects are unmatched: eithercheckpointed values which don't have a matching Python object orPython objects in the dependency graph with no values in thecheckpoint. This method returns the status object, and so may bechained with  `initialize_or_restore`  or  `run_restore_ops` .
 
@@ -183,19 +183,19 @@ The returned status object has the following methods:
  
 ```
 
-Saves a training checkpoint and provides basic checkpoint management.
+保存培训检查点并提供基本检查点管理。
 
 The saved checkpoint includes variables created by this object and anytrackable objects it depends on at the time [ `Checkpoint.save()` ](/api_docs/python/tf/train/Checkpoint#save) iscalled.
 
  `save`  is a basic convenience wrapper around the  `write`  method,sequentially numbering checkpoints using  `save_counter`  and updating themetadata used by [ `tf.train.latest_checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/latest_checkpoint). More advanced checkpointmanagement, for example garbage collection and custom numbering, may beprovided by other utilities which also wrap  `write` ( `tf.contrib.checkpoint.CheckpointManager`  for example).
 
-#### Args:
+#### 参数：
 - **`file_prefix`** : A prefix to use for the checkpoint filenames(/path/to/directory/and_a_prefix). Names are generated based on thisprefix and [ `Checkpoint.save_counter` ](/api_docs/python/tf/train/Checkpoint#save_counter).
 - **`session`** : The session to evaluate variables in. Ignored when executingeagerly. If not provided when graph building, the default session isused.
 
 
-#### Returns:
-The full path to the checkpoint.
+#### 返回：
+检查点的完整路径。
 
 ###  `write` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/tracking/util.py#L1463-L1494)
@@ -208,17 +208,17 @@ The full path to the checkpoint.
  
 ```
 
-Writes a training checkpoint.
+编写训练检查点。
 
 The checkpoint includes variables created by this object and anytrackable objects it depends on at the time [ `Checkpoint.write()` ](/api_docs/python/tf/train/Checkpoint#write) iscalled.
 
  `write`  does not number checkpoints, increment  `save_counter` , or update themetadata used by [ `tf.train.latest_checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/latest_checkpoint). It is primarily intended foruse by higher level checkpoint management utilities.  `save`  provides a verybasic implementation of these features.
 
-#### Args:
+#### 参数：
 - **`file_prefix`** : A prefix to use for the checkpoint filenames(/path/to/directory/and_a_prefix).
 - **`session`** : The session to evaluate variables in. Ignored when executingeagerly. If not provided when graph building, the default session isused.
 
 
-#### Returns:
+#### 返回：
 The full path to the checkpoint (i.e.  `file_prefix` ).
 

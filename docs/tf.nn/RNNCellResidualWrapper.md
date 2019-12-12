@@ -1,7 +1,7 @@
 
 
 ## Class  `RNNCellResidualWrapper` 
-RNNCell wrapper that ensures cell inputs are added to the outputs.
+RNNCell包装器，确保单元输入添加到输出。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/rnn_cell_wrapper_v2.py#L108-L109)
@@ -16,13 +16,13 @@ RNNCell wrapper that ensures cell inputs are added to the outputs.
 
 Constructs a  `ResidualWrapper`  for  `cell` .
 
-#### Args:
+#### 参数：
 - **`cell`** : An instance of  `RNNCell` .
 - **`residual_fn`** : (Optional) The function to map raw cell inputs and raw celloutputs to the actual cell outputs of the residual network.Defaults to calling nest.map_structure on (lambda i, o: i + o), inputsand outputs.
 - **`**kwargs`** : dict of keyword arguments for base layer.
 
 
-## Properties
+## 属性
 
 
 ###  `output_size` 
@@ -31,7 +31,7 @@ Constructs a  `ResidualWrapper`  for  `cell` .
 ###  `state_size` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

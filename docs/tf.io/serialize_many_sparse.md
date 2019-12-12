@@ -8,14 +8,14 @@ The  `SparseTensor`  must have rank  `R`  greater than 1, and the first dimensio
 
 The minibatch size  `N`  is extracted from  `sparse_shape[0]` .
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The input rank  `R`   `SparseTensor` .
 - **`out_type`** : The  `dtype`  to use for serialization.
 - **`name`** : A name prefix for the returned tensors (optional).
 
 
-#### Returns:
+#### 返回：
 A matrix (2-D  `Tensor` ) with  `N`  rows and  `3`  columns. Each columnrepresents serialized  `SparseTensor` 's indices, values, and shape(respectively).
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .

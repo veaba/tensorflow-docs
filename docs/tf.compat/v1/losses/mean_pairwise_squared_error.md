@@ -19,7 +19,7 @@ Note that since the inputs are of shape  `[batch_size, d0, ... dN]` , thecorresp
 
  `weights`  acts as a coefficient for the loss. If a scalar is provided, thenthe loss is simply scaled by the given value. If  `weights`  is a tensor of size `[batch_size]` , then the total loss for each sample of the batch is rescaledby the corresponding element in the  `weights`  vector.
 
-#### Args:
+#### 参数：
 - **`labels`** : The ground truth output tensor, whose shape must match the shape of `predictions` .
 - **`predictions`** : The predicted outputs, a tensor of size `[batch_size, d0, .. dN]`  where N+1 is the total number of dimensions in `predictions` .
 - **`weights`** : Coefficients for the loss a scalar, a tensor of shape `[batch_size]`  or a tensor whose shape matches  `predictions` .
@@ -27,13 +27,13 @@ Note that since the inputs are of shape  `[batch_size, d0, ... dN]` , thecorresp
 - **`loss_collection`** : collection to which the loss will be added.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  that returns the weighted loss.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `predictions`  doesn't match that of  `labels`  orif the shape of  `weights`  is invalid.  Also if  `labels`  or  `predictions` is None.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 The  `loss_collection`  argument is ignored when executing eagerly. Considerholding on to the return value or collecting losses via a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model).
 

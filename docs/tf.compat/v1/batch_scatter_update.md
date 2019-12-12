@@ -21,7 +21,7 @@ where
 
  `updates.shape[:num_prefix_dims]`  `== indices.shape[:num_prefix_dims]`  `== var.shape[:num_prefix_dims]` 
 
-And the operation performed can be expressed as:
+所进行的操作可以表示为：
 
  `var[i_1, ..., i_n, indices[i_1, ..., i_n, j]] = updates[i_1, ..., i_n, j]` 
 
@@ -31,7 +31,7 @@ To avoid this operation there would be 2 alternatives:1) Reshaping the variable 
 
 See also [ `tf.compat.v1.scatter_update` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/scatter_update) and [ `tf.compat.v1.scatter_nd_update` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/scatter_nd_update).
 
-#### Args:
+#### 参数：
 - **`ref`** :  `Variable`  to scatter onto.
 - **`indices`** : Tensor containing indices as described above.
 - **`updates`** : Tensor of updates to apply to  `ref` .
@@ -39,8 +39,8 @@ See also [ `tf.compat.v1.scatter_update` ](https://tensorflow.google.cn/api_docs
 - **`name`** : Optional scope name string.
 
 
-#### Returns:
+#### 返回：
 Ref to  `variable`  after it has been modified.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the initial  `ndims`  of  `ref` ,  `indices` , and  `updates`  arenot the same.

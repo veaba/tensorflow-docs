@@ -1,6 +1,6 @@
-Common tags used for graphs in SavedModel.
+savedModel中用于图形的公共标记。
 
-## Other Members
+## 其他成员
 -  `GPU = 'gpu'`  []()
 -  `SERVING = 'serve'`  []()
 -  `TPU = 'tpu'`  []()

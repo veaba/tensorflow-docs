@@ -7,7 +7,7 @@ Inherits From: [ `Dense` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 
 This layer implements the operation: `outputs = activation(inputs * kernel + bias)` Where  `activation`  is the activation function passed as the  `activation` argument (if not  `None` ),  `kernel`  is a weights matrix created by the layer,and  `bias`  is a bias vector created by the layer(only if  `use_bias`  is  `True` ).
 
-#### Arguments:
+#### 参数：
 - **`units`** : Integer or Long, dimensionality of the output space.
 - **`activation`** : Activation function (callable). Set it to None to maintain alinear activation.
 - **`use_bias`** : Boolean, whether the layer uses a bias.
@@ -23,7 +23,7 @@ This layer implements the operation: `outputs = activation(inputs * kernel + bia
 - **`_reuse`** : Boolean, whether to reuse the weights of a previous layerby the same name.
 
 
-#### Properties:
+#### 属性：
 - **`units`** : Python integer, dimensionality of the output space.
 - **`activation`** : Activation function (callable).
 - **`use_bias`** : Boolean, whether the layer uses a bias.
@@ -60,11 +60,11 @@ This layer implements the operation: `outputs = activation(inputs * kernel + bia
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -97,7 +97,7 @@ Functional interface for the densely-connected layer. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use keras.layers.Dense instead.
 This layer implements the operation: `outputs = activation(inputs * kernel + bias)` where  `activation`  is the activation function passed as the  `activation` argument (if not  `None` ),  `kernel`  is a weights matrix created by the layer,and  `bias`  is a bias vector created by the layer(only if  `use_bias`  is  `True` ).
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Tensor input.
 - **`units`** : Integer or Long, dimensionality of the output space.
 - **`activation`** : Activation function (callable). Set it to None to maintain alinear activation.
@@ -114,8 +114,8 @@ This layer implements the operation: `outputs = activation(inputs * kernel + bia
 - **`reuse`** : Boolean, whether to reuse the weights of a previous layerby the same name.
 
 
-#### Returns:
+#### 返回：
 Output tensor the same shape as  `inputs`  except the last dimension is ofsize  `units` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

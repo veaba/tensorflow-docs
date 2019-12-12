@@ -1,6 +1,6 @@
-Core module for TensorFlow distribution objects and helpers.
+TensorFlow分发对象和帮助程序的核心模块。
 
-## Classes
+## Class 
 [ `class Bernoulli` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distributions/Bernoulli): Bernoulli distribution.
 
 [ `class Beta` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distributions/Beta): Beta distribution.
@@ -31,9 +31,9 @@ Core module for TensorFlow distribution objects and helpers.
 
 [ `class Uniform` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distributions/Uniform): Uniform distribution with  `low`  and  `high`  parameters.
 
-## Functions
+## 功能
 [ `kl_divergence(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distributions/kl_divergence): Get the KL-divergence KL(distribution_a || distribution_b). (deprecated)
 
-## Other Members
+## 其他成员
 -  `FULLY_REPARAMETERIZED`  []()
 -  `NOT_REPARAMETERIZED`  []()

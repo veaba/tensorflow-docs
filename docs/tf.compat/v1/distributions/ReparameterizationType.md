@@ -1,7 +1,7 @@
 
 
 ## Class  `ReparameterizationType` 
-Instances of this class represent how sampling is reparameterized.
+此类的实例表示如何重新参数化采样。
 
 Two static instances exist in the distributions library, signifyingone of two possible properties for samples from a distribution:
 
@@ -17,13 +17,13 @@ Two static instances exist in the distributions library, signifyingone of two po
  
 ```
 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed after 2019-01-01.Instructions for updating:The TensorFlow Distributions library has moved to TensorFlow Probability (https://github.com/tensorflow/probability). You should update all references to use [ `tfp.distributions` ](/probability/api_docs/python/tfp/distributions) instead of  `tf.distributions` .
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -38,10 +38,10 @@ Determine if this  `ReparameterizationType`  is equal to another.
 
 Since RepaparameterizationType instances are constant static globalinstances, equality checks if two instances' id() values are equal.
 
-#### Args:
+#### 参数：
 - **`other`** : Object to compare against.
 
 
-#### Returns:
+#### 返回：
  `self is other` .
 

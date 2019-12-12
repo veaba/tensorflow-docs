@@ -1,6 +1,6 @@
-Returns a feature column that represents sequences of integers.
+返回表示整数序列的特征列。
 
-**Aliases** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_identity` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_identity), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_identity` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_identity)
+**别名** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_identity` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_identity), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_identity` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_identity)
 
 ```
  tf.feature_column.sequence_categorical_column_with_identity(
@@ -13,7 +13,7 @@ Returns a feature column that represents sequences of integers.
 
 Pass this to  `embedding_column`  or  `indicator_column`  to convert sequencecategorical data into dense representation for input to sequence NN, such asRNN.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -33,15 +33,15 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
  
 ```
 
-#### Args:
+#### 参数：
 - **`key`** : A unique string identifying the input feature.
 - **`num_buckets`** : Range of inputs. Namely, inputs are expected to be in therange  `[0, num_buckets)` .
 - **`default_value`** : If  `None` , this column's graph operations will fail forout-of-range inputs. Otherwise, this value must be in the range `[0, num_buckets)` , and will replace out-of-range inputs.
 
 
-#### Returns:
+#### 返回：
 A  `SequenceCategoricalColumn` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `num_buckets`  is less than one.
 - **`ValueError`** : if  `default_value`  is not in range  `[0, num_buckets)` .

@@ -11,11 +11,11 @@ SpaceToBatch for 4-D tensors of type T.
  
 ```
 
-This is a legacy version of the more general SpaceToBatchND.
+这是更通用的spacetobatchnd的遗留版本。
 
 Zero-pads and then rearranges (permutes) blocks of spatial data into batch.More specifically, this op outputs a copy of the input tensor where values fromthe  `height`  and  `width`  dimensions are moved to the  `batch`  dimension. Afterthe zero-padding, both  `height`  and  `width`  of the input must be divisible by theblock size.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . 4-D with shape  `[batch, height, width, depth]` .
 - **`paddings`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .2-D tensor of non-negative integers with shape  `[2, 2]` . It specifiesthe padding of the input with zeros across the spatial dimensions as follows:
 
@@ -117,6 +117,6 @@ Among others, this operation is useful for reducing atrous convolution into  reg
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

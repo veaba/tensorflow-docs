@@ -1,11 +1,11 @@
 
 
 ## Class  `CuDNNLSTM` 
-Fast LSTM implementation backed by cuDNN.
+由cudnn支持的快速lstm实现。
 
 More information about cuDNN can be found on the [NVIDIAdeveloper website](https://developer.nvidia.com/cudnn).Can only be run on GPU.
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`kernel_initializer`** : Initializer for the  `kernel`  weights matrix, used forthe linear transformation of the inputs.
 - **`unit_forget_bias`** : Boolean. If True, add 1 to the bias of the forget gateat initialization. Setting it to true will also force `bias_initializer="zeros"` . This is recommended in [Jozefowicz etal.](http://www.jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
@@ -50,7 +50,7 @@ More information about cuDNN can be found on the [NVIDIAdeveloper website](https
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `cell` 
@@ -59,7 +59,7 @@ More information about cuDNN can be found on the [NVIDIAdeveloper website](https
 ###  `states` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

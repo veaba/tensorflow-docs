@@ -10,13 +10,13 @@ The generated[ `Summary` ](https://tensorflow.google.cn/code/tensorflow/core/fra
 
 This op reports an  `InvalidArgument`  error if any value is not finite.
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the generated node. Will also serve as a series name inTensorBoard.
 - **`values`** : A real numeric  `Tensor` . Any shape. Values to use tobuild the histogram.
 - **`collections`** : Optional list of graph collections keys. The new summary op isadded to these collections. Defaults to  `[GraphKeys.SUMMARIES]` .
 - **`family`** : Optional; if provided, used as the prefix of the summary tag name,which controls the tab name used for display on Tensorboard.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of type  `string` . The serialized  `Summary`  protocolbuffer.
 

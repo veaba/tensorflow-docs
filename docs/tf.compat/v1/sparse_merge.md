@@ -55,7 +55,7 @@ The result of calling parse_example on these examples will produce adictionary w
 
 This method generalizes to higher-dimensions by simply providing a list forboth the sp_ids as well as the vocab_size.In this case the resulting  `SparseTensor`  has the following properties:  -  `indices`  is equivalent to  `sp_ids[0].indices`  with the last    dimension discarded and concatenated with     `sp_ids[0].values, sp_ids[1].values, ...` .  -  `values`  is simply  `sp_values.values` .  - If  `sp_ids.dense_shape = [D0, D1, ..., Dn, K]` , then     `output.shape = [D0, D1, ..., Dn] + vocab_size` .
 
-#### Args:
+#### 参数：
 - **`sp_ids`** : A single  `SparseTensor`  with  `values`  property of type  `int32` or  `int64`  or a Python list of such  `SparseTensor` s or a list thereof.
 - **`sp_values`** : A  `SparseTensor`  of any type.
 - **`vocab_size`** : A scalar  `int64`  Tensor (or Python int) containing the new sizeof the last dimension,  `all(0 <= sp_ids.values < vocab_size)` .Or a list thereof with  `all(0 <= sp_ids[i].values < vocab_size[i])`  forall  `i` .
@@ -63,9 +63,9 @@ This method generalizes to higher-dimensions by simply providing a list forboth 
 - **`already_sorted`** : A boolean to specify whether the per-batch values in `sp_values`  are already sorted. If so skip sorting, False by default(optional).
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  compactly representing a batch of feature ids and values,useful for passing to functions that expect such a  `SparseTensor` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_values`  is not a  `SparseTensor` . Or if  `sp_ids`  is neithera  `SparseTensor`  nor a list thereof. Or if  `vocab_size`  is not a `Tensor`  or a Python int and  `sp_ids`  is a  `SparseTensor` . Or if `vocab_size`  is not a or list thereof and  `sp_ids`  is a list.
 - **`ValueError`** : If  `sp_ids`  and  `vocab_size`  are lists of different lengths.

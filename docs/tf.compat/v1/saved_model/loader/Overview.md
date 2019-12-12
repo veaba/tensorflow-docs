@@ -6,7 +6,7 @@ The  `load`  operation requires the session in which to restore the graphdefinit
 
 Upon a load, the subset of variables and assets supplied as part of the specificmeta graph def, will be restored into the supplied session. The values of thevariables though will correspond to the saved values from the first meta graphadded to the SavedModel using  `add_meta_graph_and_variables(...)`  in `builder.py` .
 
-#### Typical usage:
+#### 典型用法：
 
 
 ```
@@ -37,7 +37,7 @@ with tf.compat.v1.Session(graph=tf.Graph()) as sess:
  
 ```
 
-## Functions
+## 功能
 [ `load(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/load): Loads the model from a SavedModel as specified by tags. (deprecated)
 
 [ `maybe_saved_model_directory(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/contains_saved_model): Checks whether the provided export directory could contain a SavedModel.

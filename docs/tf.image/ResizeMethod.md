@@ -3,7 +3,7 @@
 ## Class  `ResizeMethod` 
 
 
-## Class Members
+## Class 成员
 -  `AREA = 'area'`  []()
 -  `BICUBIC = 'bicubic'`  []()
 -  `BILINEAR = 'bilinear'`  []()

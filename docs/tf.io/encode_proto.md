@@ -1,6 +1,6 @@
-The op serializes protobuf messages provided in the input tensors.
+op序列化输入张量中提供的protobuf消息。
 
-**Aliases** : [ `tf.compat.v1.io.encode_proto` ](/api_docs/python/tf/io/encode_proto), [ `tf.compat.v2.io.encode_proto` ](/api_docs/python/tf/io/encode_proto)
+**别名** : [ `tf.compat.v1.io.encode_proto` ](/api_docs/python/tf/io/encode_proto), [ `tf.compat.v2.io.encode_proto` ](/api_docs/python/tf/io/encode_proto)
 
 ```
  tf.io.encode_proto(
@@ -33,13 +33,13 @@ The  `descriptor_source`  attribute selects the source of protocoldescriptors to
 - An empty string  or "local://", in which case protocol descriptors arecreated for C++ (not Python) proto definitions linked to the binary.
 
 
-- A file, in which case protocol descriptors are created from the file,which is expected to contain a  `FileDescriptorSet`  serialized as a string.NOTE: You can build a  `descriptor_source`  file using the  `--descriptor_set_out` and  `--include_imports`  options to the protocol compiler  `protoc` .
+- A file, in which case protocol descriptors are created from the file,which is expected to contain a  `FileDescriptorSet`  serialized as a string.注意：You can build a  `descriptor_source`  file using the  `--descriptor_set_out` and  `--include_imports`  options to the protocol compiler  `protoc` .
 
 
 - A "bytes://<bytes>", in which protocol descriptors are created from  `<bytes>` ,which is expected to be a  `FileDescriptorSet`  serialized as a string.</bytes>
 
 
-#### Args:
+#### 参数：
 - **`sizes`** : A  `Tensor`  of type  `int32` .Tensor of int32 with shape  `[batch_shape, len(field_names)]` .
 - **`values`** : A list of  `Tensor`  objects.List of tensors containing values for the corresponding field.
 - **`field_names`** : A list of  `strings` .List of strings containing proto field names.
@@ -48,6 +48,6 @@ The  `descriptor_source`  attribute selects the source of protocoldescriptors to
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

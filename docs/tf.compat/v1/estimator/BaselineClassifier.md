@@ -1,13 +1,13 @@
 
 
 ## Class  `BaselineClassifier` 
-A classifier that can establish a simple baseline.
+可以建立简单基线的分类器。
 
 Inherits From: [ `Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator)
 
 This classifier ignores feature values and will learn to predict the averagevalue of each label. For single-label problems, this will predict theprobability distribution of the classes as seen in the labels. For multi-labelproblems, this will predict the fraction of examples that are positive foreach class.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -44,7 +44,7 @@ Input of  `train`  and  `evaluate`  should have following features,  otherwise t
 - if  `weight_column`  is not  `None` , a feature with `key=weight_column`  whose value is a  `Tensor` .
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Estimators can be used while eager execution is enabled. Note that  `input_fn` and all hooks are executed inside a graph context, so they have to be writtento be compatible with graph mode. Note that  `input_fn`  code using [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data)generally works in both graph and eager modes.
 
 ##  `__init__` 
@@ -76,7 +76,7 @@ To warm-start an  `Estimator` :
 
 For more details on warm-start configuration, see[ `tf.estimator.WarmStartSettings` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/WarmStartSettings).
 
-#### Args:
+#### 参数：
 - **`model_fn`** : Model function. Follows the signature:
     - Args:
     - `features` : This is the first item returned from the  `input_fn`    passed to  `train` ,  `evaluate` , and  `predict` . This should be a   single [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) or  `dict`  of same.
@@ -99,12 +99,12 @@ If None, only TRAINABLE variables are warm-started.
 If the string filepath is provided instead of a [ `tf.estimator.WarmStartSettings` ](../../../../tf/estimator/WarmStartSettings), then all variables are
 warm-started, and it is assumed that vocabularies and [ `tf.Tensor` ](../../../../tf/Tensor) names are unchanged.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : parameters of  `model_fn`  don't match  `params` .
 - **`ValueError`** : if this is called via a subclass and if that class overridesa member of  `Estimator` .
 
 
-## Properties
+## 属性
 
 
 ###  `config` 
@@ -114,12 +114,12 @@ warm-started, and it is assumed that vocabularies and [ `tf.Tensor` ](../../../.
 ###  `model_fn` 
 Returns the  `model_fn`  which is bound to  `self.params` .
 
-#### Returns:
+#### 返回：
 The  `model_fn`  with following signature:   `def model_fn(features, labels, mode, config)` 
 
 ###  `params` 
 
-## Methods
+## 方法
 
 ###  `eval_dir` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/estimator.py)
@@ -129,13 +129,13 @@ The  `model_fn`  with following signature:   `def model_fn(features, labels, mod
  
 ```
 
-Shows the directory name where evaluation metrics are dumped.
+显示转储评估指标的目录名。
 
-#### Args:
+#### 参数：
 - **`name`** : Name of the evaluation if user needs to run multiple evaluations ondifferent data sets, such as on training data vs test data. Metrics fordifferent evaluations are saved in separate folders, and appearseparately in tensorboard.
 
-#### Returns:
-A string which is the path of directory contains evaluation metrics.
+#### 返回：
+作为目录路径的字符串包含评估度量。
 
 ###  `evaluate` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/estimator.py)
@@ -159,7 +159,7 @@ For each step, calls  `input_fn` , which returns one batch of data.Evaluates unt
 -  `input_fn`  raises an end-of-input exception ([ `tf.errors.OutOfRangeError` ](https://tensorflow.google.cn/api_docs/python/tf/errors/OutOfRangeError)or `StopIteration` ).
 
 
-#### Args:
+#### 参数：
 - **`input_fn`** : A function that constructs the input data for evaluation. See[Premade Estimators](https://tensorflow.org/guide/premade_estimators#create_input_functions)for more information. Thefunction should construct and return one of the following:  * A[ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) object: Outputs of  `Dataset`  object must be a tuple `(features, labels)`  with same constraints as below. * A tuple `(features, labels)` : Where  `features`  is a [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) or a dictionaryof string feature name to  `Tensor`  and  `labels`  is a  `Tensor`  or adictionary of string label name to  `Tensor` . Both  `features`  and `labels`  are consumed by  `model_fn` . They should satisfy the expectationof  `model_fn`  from inputs.
 - **`steps`** : Number of steps for which to evaluate model. If  `None` , evaluatesuntil  `input_fn`  raises an end-of-input exception.
 - **`hooks`** : List of  `tf.train.SessionRunHook`  subclass instances. Used forcallbacks inside the evaluation call.
@@ -167,10 +167,10 @@ For each step, calls  `input_fn` , which returns one batch of data.Evaluates unt
 - **`name`** : Name of the evaluation if user needs to run multiple evaluations ondifferent data sets, such as on training data vs test data. Metrics fordifferent evaluations are saved in separate folders, and appearseparately in tensorboard.
 
 
-#### Returns:
+#### 返回：
 A dict containing the evaluation metrics specified in  `model_fn`  keyed byname, as well as an entry  `global_step`  which contains the value of theglobal step for which this evaluation was performed. For cannedestimators, the dict contains the  `loss`  (mean loss per mini-batch) andthe  `average_loss`  (mean loss per sample). Canned classifiers also returnthe  `accuracy` . Canned regressors also return the  `label/mean`  and the `prediction/mean` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `steps <= 0` .
 
 
@@ -200,7 +200,7 @@ For training and evaluation, the  `train_op`  is stored in an extracollection,an
 
 Extra assets may be written into the  `SavedModel`  via the  `assets_extra` argument.  This should be a dict, where each key gives a destination path(including the filename) relative to the assets.extra directory.  Thecorresponding value gives the full path of the source file to be copied.For example, the simple case of copying a single file without renaming itis specified as  `{'my_asset_file.txt': '/path/to/my_asset_file.txt'}` .
 
-#### Args:
+#### 参数：
 - **`export_dir_base`** : A string containing a directory in which to createtimestamped subdirectories containing exported  `SavedModel` s.
 - **`input_receiver_fn_map`** : dict of [ `tf.estimator.ModeKeys` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/ModeKeys) to `input_receiver_fn`  mappings, where the  `input_receiver_fn`  is afunction that takes no arguments and returns the appropriate subclass of `InputReceiver` .
 - **`assets_extra`** : A dict specifying how to populate the assets.extra directorywithin the exported  `SavedModel` , or  `None`  if no extra assets areneeded.
@@ -208,10 +208,10 @@ Extra assets may be written into the  `SavedModel`  via the  `assets_extra` argu
 - **`checkpoint_path`** : The checkpoint path to export.  If  `None`  (the default),the most recent checkpoint found within the model directory is chosen.
 
 
-#### Returns:
-The string path to the exported directory.
+#### 返回：
+导出目录的字符串路径。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any  `input_receiver_fn`  is  `None` , no  `export_outputs` are provided, or no checkpoint can be found.
 
 
@@ -242,7 +242,7 @@ Extra assets may be written into the  `SavedModel`  via the  `assets_extra` argu
 
 The experimental_mode parameter can be used to export a singletrain/eval/predict graph as a  `SavedModel` .See  `experimental_export_all_saved_models`  for full docs.
 
-#### Args:
+#### 参数：
 - **`export_dir_base`** : A string containing a directory in which to createtimestamped subdirectories containing exported  `SavedModel` s.
 - **`serving_input_receiver_fn`** : A function that takes no argument and returns a[ `tf.estimator.export.ServingInputReceiver` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/ServingInputReceiver) or[ `tf.estimator.export.TensorServingInputReceiver` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/TensorServingInputReceiver).
 - **`assets_extra`** : A dict specifying how to populate the assets.extra directorywithin the exported  `SavedModel` , or  `None`  if no extra assets areneeded.
@@ -251,10 +251,10 @@ The experimental_mode parameter can be used to export a singletrain/eval/predict
 - **`experimental_mode`** : [ `tf.estimator.ModeKeys` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/ModeKeys) value indicating with modewill be exported. Note that this feature is experimental.
 
 
-#### Returns:
-The string path to the exported directory.
+#### 返回：
+导出目录的字符串路径。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if no  `serving_input_receiver_fn`  is provided, no `export_outputs`  are provided, or no checkpoint can be found.
 
 
@@ -285,7 +285,7 @@ The exported  `MetaGraphDef`  will provide one  `SignatureDef`  for eachelement 
 
 Extra assets may be written into the  `SavedModel`  via the  `assets_extra` argument.  This should be a dict, where each key gives a destination path(including the filename) relative to the assets.extra directory.  Thecorresponding value gives the full path of the source file to be copied.For example, the simple case of copying a single file without renaming itis specified as  `{'my_asset_file.txt': '/path/to/my_asset_file.txt'}` .
 
-#### Args:
+#### 参数：
 - **`export_dir_base`** : A string containing a directory in which to createtimestamped subdirectories containing exported  `SavedModel` s.
 - **`serving_input_receiver_fn`** : A function that takes no argument and returns a[ `tf.estimator.export.ServingInputReceiver` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/ServingInputReceiver) or[ `tf.estimator.export.TensorServingInputReceiver` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/TensorServingInputReceiver).
 - **`assets_extra`** : A dict specifying how to populate the assets.extra directorywithin the exported  `SavedModel` , or  `None`  if no extra assets areneeded.
@@ -294,10 +294,10 @@ Extra assets may be written into the  `SavedModel`  via the  `assets_extra` argu
 - **`strip_default_attrs`** : Boolean. If  `True` , default-valued attributes will beremoved from the  `NodeDef` s. For a detailed guide, see [StrippingDefault-Valued Attributes](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/saved_model/README.md#stripping-default-valued-attributes).
 
 
-#### Returns:
-The string path to the exported directory.
+#### 返回：
+导出目录的字符串路径。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if no  `serving_input_receiver_fn`  is provided, no `export_outputs`  are provided, or no checkpoint can be found.
 
 
@@ -309,12 +309,12 @@ The string path to the exported directory.
  
 ```
 
-Returns list of all variable names in this model.
+返回此模型中所有变量名的列表。
 
-#### Returns:
-List of names.
+#### 返回：
+名单。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `Estimator`  has not produced a checkpoint yet.
 
 
@@ -326,16 +326,16 @@ List of names.
  
 ```
 
-Returns value of the variable given by name.
+返回按名称给定的变量的值。
 
-#### Args:
+#### 参数：
 - **`name`** : string or a list of string, name of the tensor.
 
 
-#### Returns:
+#### 返回：
 Numpy array - value of the tensor.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `Estimator`  has not produced a checkpoint yet.
 
 
@@ -349,7 +349,7 @@ Numpy array - value of the tensor.
 
 Finds the filename of the latest saved checkpoint file in  `model_dir` .
 
-#### Returns:
+#### 返回：
 The full path to the latest checkpoint or  `None`  if no checkpoint wasfound.
 
 ###  `predict` 
@@ -366,11 +366,11 @@ The full path to the latest checkpoint or  `None`  if no checkpoint wasfound.
  
 ```
 
-Yields predictions for given features.
+生成给定特征的预测。
 
 Please note that interleaving two predict outputs does not work. See:[issue/20506](https://github.com/tensorflow/tensorflow/issues/20506#issuecomment-422208517)
 
-#### Args:
+#### 参数：
 - **`input_fn`** : A function that constructs the features. Prediction continuesuntil  `input_fn`  raises an end-of-input exception([ `tf.errors.OutOfRangeError` ](https://tensorflow.google.cn/api_docs/python/tf/errors/OutOfRangeError) or  `StopIteration` ).See [Premade Estimators](https://tensorflow.org/guide/premade_estimators#create_input_functions)for more information. The function should construct and return one ofthe following:
 
 
@@ -391,10 +391,10 @@ Please note that interleaving two predict outputs does not work. See:[issue/2050
     - A tuple, in which case the first item is extracted as features.
 
 
-#### Yields:
+#### 收益率：
 Evaluated values of  `predictions`  tensors.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If batch length of predictions is not the same and `yield_single_examples`  is  `True` .
 - **`ValueError`** : If there is a conflict between  `predict_keys`  and `predictions` . For example if  `predict_keys`  is not  `None`  but[ `tf.estimator.EstimatorSpec.predictions` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/EstimatorSpec#predictions) is not a  `dict` .
 
@@ -415,7 +415,7 @@ Evaluated values of  `predictions`  tensors.
 
 Trains a model given training data  `input_fn` .
 
-#### Args:
+#### 参数：
 - **`input_fn`** : A function that provides input data for training as minibatches.See [Premade Estimators](https://tensorflow.org/guide/premade_estimators#create_input_functions)for more information. The function should construct and return one ofthe following:
 - **`hooks`** : List of  `tf.train.SessionRunHook`  subclass instances. Used forcallbacks inside the training loop.
 - **`steps`** : Number of steps for which to train the model. If  `None` , trainforever or train until  `input_fn`  generates the  `tf.errors.OutOfRange` error or  `StopIteration`  exception.  `steps`  works incrementally. If youcall two times  `train(steps=10)`  then training occurs in total 20 steps.If  `OutOfRange`  or  `StopIteration`  occurs in the middle, training stopsbefore 20 steps. If you don't want to have incremental behavior pleaseset  `max_steps`  instead. If set,  `max_steps`  must be  `None` .
@@ -425,9 +425,9 @@ Trains a model given training data  `input_fn` .
     - A tuple  `(features, labels)` : Where  `features`  is a [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) ora dictionary of string feature name to  `Tensor`  and  `labels`  is a `Tensor`  or a dictionary of string label name to  `Tensor` . Both `features`  and  `labels`  are consumed by  `model_fn` . They shouldsatisfy the expectation of  `model_fn`  from inputs.
 
 
-#### Returns:
+#### 返回：
  `self` , for chaining.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both  `steps`  and  `max_steps`  are not  `None` .
 - **`ValueError`** : If either  `steps`  or  `max_steps <= 0` .

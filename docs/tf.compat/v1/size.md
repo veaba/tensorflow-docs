@@ -1,4 +1,4 @@
-Returns the size of a tensor.
+返回张量的大小。
 
 ```
  tf.compat.v1.size(
@@ -11,7 +11,7 @@ Returns the size of a tensor.
 
 Returns a 0-D  `Tensor`  representing the number of elements in  `input` of type  `out_type` . Defaults to tf.int32.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -20,15 +20,15 @@ tf.size(t)  # 12
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  or  `SparseTensor` .
 - **`name`** : A name for the operation (optional).
 - **`out_type`** : (Optional) The specified non-quantized numeric output type of theoperation. Defaults to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `out_type` . Defaults to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32).
 
-#### Numpy Compatibility
+#### numpy兼容性
 Equivalent to np.size()
 

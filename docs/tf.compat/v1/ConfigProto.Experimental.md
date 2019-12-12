@@ -1,9 +1,9 @@
 
 
 ## Class  `Experimental` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `collective_deterministic_sequential_execution` 

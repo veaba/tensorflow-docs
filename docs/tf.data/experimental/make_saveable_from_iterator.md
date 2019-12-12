@@ -1,24 +1,24 @@
-Returns a SaveableObject for saving/restoring iterator state using Saver.
+返回用于使用saver保存/还原迭代器状态的saveableobject。
 
-**Aliases** : [ `tf.compat.v1.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator), [ `tf.compat.v2.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator)
+**别名** : [ `tf.compat.v1.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator), [ `tf.compat.v2.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator)
 
 ```
  tf.data.experimental.make_saveable_from_iterator(iterator)
  
 ```
 
-#### Args:
+#### 参数：
 - **`iterator`** : Iterator.
 
 
-#### Returns:
-A SaveableObject for saving/restoring iterator state using Saver.
+#### 返回：
+用于使用saver保存/还原迭代器状态的saveableobject。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If iterator does not support checkpointing.
 
 
-#### For example:
+#### 例如：
 
 
 ```

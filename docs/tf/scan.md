@@ -1,6 +1,6 @@
 scan on the list of tensors unpacked from  `elems`  on dimension 0.
 
-**Aliases** : [ `tf.compat.v1.scan` ](/api_docs/python/tf/scan), [ `tf.compat.v2.scan` ](/api_docs/python/tf/scan)
+**别名** : [ `tf.compat.v1.scan` ](/api_docs/python/tf/scan), [ `tf.compat.v2.scan` ](/api_docs/python/tf/scan)
 
 ```
  tf.scan(
@@ -29,7 +29,7 @@ If an  `initializer`  is provided, then the output of  `fn`  must have the sames
 
 For example, if  `elems`  is  `(t1, [t2, t3])`  and  `initializer`  is `[i1, i2]`  then an appropriate signature for  `fn`  in  `python2`  is: `fn = lambda (acc_p1, acc_p2), (t1, [t2, t3]):`  and  `fn`  must return a list, `[acc_n1, acc_n2]` .  An alternative correct signature for  `fn` , and the one that works in  `python3` , is: `fn = lambda a, t:` , where  `a`  and  `t`  correspond to the input tuples.
 
-#### Args:
+#### 参数：
 - **`fn`** : The callable to be performed.  It accepts two arguments.  The first willhave the same structure as  `initializer`  if one is provided, otherwise itwill have the same structure as  `elems` .  The second will have the same(possibly nested) structure as  `elems` .  Its output must have the samestructure as  `initializer`  if one is provided, otherwise it must have thesame structure as  `elems` .
 - **`elems`** : A tensor or (possibly nested) sequence of tensors, each of which willbe unpacked along their first dimension.  The nested sequence of theresulting slices will be the first argument to  `fn` .
 - **`initializer`** : (optional) A tensor or (possibly nested) sequence of tensors,initial value for the accumulator, and the expected output type of  `fn` .
@@ -41,15 +41,15 @@ For example, if  `elems`  is  `(t1, [t2, t3])`  and  `initializer`  is `[i1, i2]
 - **`name`** : (optional) Name prefix for the returned tensors.
 
 
-#### Returns:
+#### 返回：
 A tensor or (possibly nested) sequence of tensors.  Each tensor packs theresults of applying  `fn`  to tensors unpacked from  `elems`  along the firstdimension, and the previous accumulator value(s), from first to last (orlast to first, if  `reverse=True` ).
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `fn`  is not callable or the structure of the output of `fn`  and  `initializer`  do not match.
 - **`ValueError`** : if the lengths of the output of  `fn`  and  `initializer` do not match.
 
 
-#### Examples:
+#### 示例：
 
 
 ```

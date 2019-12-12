@@ -7,13 +7,13 @@ Wrapper for [ `Graph.get_collection_ref()` ](/api_docs/python/tf/Graph#get_colle
 
 See [ `tf.Graph.get_collection_ref` ](https://tensorflow.google.cn/api_docs/python/tf/Graph#get_collection_ref)for more details.
 
-#### Args:
+#### 参数：
 - **`key`** : The key for the collection. For example, the  `GraphKeys`  class containsmany standard names for collections.
 
 
-#### Returns:
+#### 返回：
 The list of values in the collection with the given  `name` , or an emptylist if no value has been added to that collection.  Note that this returnsthe collection list itself, which can be modified in place to change thecollection.
 
-#### Eager Compatibility
-Collections are not supported when eager execution is enabled.
+#### 迫切的兼容性
+启用紧急执行时不支持集合。
 

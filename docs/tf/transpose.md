@@ -4,14 +4,14 @@ Transposes  `a` .
  tf.transpose(    a,    perm=None,    conjugate=False,    name='transpose') 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 Permutes the dimensions according to  `perm` .
 
 The returned tensor's dimension i will correspond to the input dimension `perm[i]` . If  `perm`  is not given, it is set to (n-1...0), where n isthe rank of the input tensor. Hence by default, this operation performs aregular matrix transpose on 2-D input Tensors. If conjugate is True and `a.dtype`  is either  `complex64`  or  `complex128`  then the values of  `a` are conjugated and transposed.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -49,17 +49,17 @@ tf.transpose(x, perm=[0, 2, 1])  # [[[1,  4],
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** : A  `Tensor` .
 - **`perm`** : A permutation of the dimensions of  `a` .
 - **`conjugate`** : Optional bool. Setting it to  `True`  is mathematically equivalentto tf.math.conj(tf.transpose(input)).
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A transposed  `Tensor` .
 
-#### Numpy Compatibility
+#### numpy兼容性
 In  `numpy`  transposes are memory-efficient constant time operations as theysimply return a new view of the same data with adjusted  `strides` .
 
 TensorFlow does not support strides, so  `transpose`  returns a new tensor withthe items permuted.

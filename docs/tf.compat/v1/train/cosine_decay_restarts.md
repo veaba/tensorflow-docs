@@ -1,4 +1,4 @@
-Applies cosine decay with restarts to the learning rate.
+将余弦衰减和重新启动应用于学习速率。
 
 ```
  tf.compat.v1.train.cosine_decay_restarts(    learning_rate,    global_step,    first_decay_steps,    t_mul=2.0,    m_mul=1.0,    alpha=0.0,    name=None) 
@@ -10,7 +10,7 @@ When training a model, it is often recommended to lower the learning rate asthe 
 
 The function returns the decayed learning rate while taking into accountpossible warm restarts. The learning rate multiplier first decaysfrom 1 to  `alpha`  for  `first_decay_steps`  steps. Then, a warmrestart is performed. Each new warm restart runs for  `t_mul`  times more stepsand with  `m_mul`  times smaller initial learning rate.
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -20,7 +20,7 @@ lr_decayed = cosine_decay_restarts(learning_rate, global_step,
  
 ```
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : A scalar  `float32`  or  `float64`  Tensor or a Python number.The initial learning rate.
 - **`global_step`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number. Globalstep to use for the decay computation.
 - **`first_decay_steps`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number.Number of steps to decay over.
@@ -30,13 +30,13 @@ lr_decayed = cosine_decay_restarts(learning_rate, global_step,
 - **`name`** : String. Optional name of the operation.  Defaults to 'SGDRDecay'.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of the same type as  `learning_rate` .  The decayedlearning rate.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `global_step`  is not supplied.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled, this function returns a function which inturn returns the decayed learning rate Tensor. This can be useful for changingthe learning rate value across different invocations of optimizer functions.
 

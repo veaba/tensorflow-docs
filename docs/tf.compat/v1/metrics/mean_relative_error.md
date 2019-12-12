@@ -1,4 +1,4 @@
-Computes the mean relative error by normalizing with the given values.
+通过使用给定值进行规格化来计算平均相对误差。
 
 ```
  tf.compat.v1.metrics.mean_relative_error(
@@ -19,7 +19,7 @@ For estimation of the metric over a stream of data, the function creates an `upd
 
 If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask values.
 
-#### Args:
+#### 参数：
 - **`labels`** : A  `Tensor`  of the same shape as  `predictions` .
 - **`predictions`** : A  `Tensor`  of arbitrary shape.
 - **`normalizer`** : A  `Tensor`  of the same shape as  `predictions` .
@@ -29,11 +29,11 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 - **`name`** : An optional variable_scope name.
 
 
-#### Returns:
+#### 返回：
 - **`mean_relative_error`** : A  `Tensor`  representing the current mean, the value of `total`  divided by  `count` .
 - **`update_op`** : An operation that increments the  `total`  and  `count`  variablesappropriately and whose value matches  `mean_relative_error` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `predictions`  and  `labels`  have mismatched shapes, or if `weights`  is not  `None`  and its shape doesn't match  `predictions` , or ifeither  `metrics_collections`  or  `updates_collections`  are not a list ortuple.
 - **`RuntimeError`** : If eager execution is enabled.

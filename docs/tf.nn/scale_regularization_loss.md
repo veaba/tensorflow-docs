@@ -1,13 +1,13 @@
-Scales the sum of the given regularization losses by number of replicas.
+按副本数缩放给定正则化损失的总和。
 
-**Aliases** : [ `tf.compat.v1.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss), [ `tf.compat.v2.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss)
+**别名** : [ `tf.compat.v1.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss), [ `tf.compat.v2.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss)
 
 ```
  tf.nn.scale_regularization_loss(regularization_loss)
  
 ```
 
-Usage with distribution strategy and custom training loop:
+使用分销策略和定制培训循环：
 
 ```
  with strategy.scope():
@@ -27,10 +27,10 @@ Usage with distribution strategy and custom training loop:
  
 ```
 
-#### Args:
+#### 参数：
 - **`regularization_loss`** : Regularization loss.
 
 
-#### Returns:
-Scalar loss value.
+#### 返回：
+标量损失值。
 

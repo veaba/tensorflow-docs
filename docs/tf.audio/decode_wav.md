@@ -1,6 +1,6 @@
 Decode a 16-bit PCM WAV file to a float tensor.
 
-**Aliases** : [ `tf.compat.v1.audio.decode_wav` ](/api_docs/python/tf/audio/decode_wav), [ `tf.compat.v2.audio.decode_wav` ](/api_docs/python/tf/audio/decode_wav)
+**别名** : [ `tf.compat.v1.audio.decode_wav` ](/api_docs/python/tf/audio/decode_wav), [ `tf.compat.v2.audio.decode_wav` ](/api_docs/python/tf/audio/decode_wav)
 
 ```
  tf.audio.decode_wav(
@@ -20,14 +20,14 @@ If desired_samples is set, then the audio will be cropped or padded with zeroest
 
 The first output contains a Tensor with the content of the audio samples. Thelowest dimension will be the number of channels, and the second will be thenumber of samples. For example, a ten-sample-long stereo WAV file should give anoutput shape of [10, 2].
 
-#### Args:
+#### 参数：
 - **`contents`** : A  `Tensor`  of type  `string` .The WAV-encoded audio, usually from a file.
 - **`desired_channels`** : An optional  `int` . Defaults to  `-1` .Number of sample channels wanted.
 - **`desired_samples`** : An optional  `int` . Defaults to  `-1` .Length of audio requested.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (audio, sample_rate).
 
 - **`audio`** : A  `Tensor`  of type  `float32` .

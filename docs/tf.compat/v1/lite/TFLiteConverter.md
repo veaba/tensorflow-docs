@@ -5,7 +5,7 @@ Convert a TensorFlow model into  `output_format` .
 
 This is used to convert from a TensorFlow GraphDef, SavedModel or tf.kerasmodel into either a TFLite FlatBuffer or graph visualization.
 
-#### Attributes:
+#### 属性：
 - **`inference_type`** : Target data type of real-number arrays in the output file.Must be  `{tf.float32, tf.uint8}` . If  `optimzations`  are provided, thisparameter is ignored. (default tf.float32)
 - **`inference_input_type`** : Target data type of real-number input arrays. Allowsfor a different type for input arrays.If an integer type is provided and  `optimizations`  are not used, `quantized_inputs_stats`  must be provided.If  `inference_type`  is tf.uint8, signaling conversion to a fully quantizedmodel from a quantization-aware trained input model, then `inference_input_type`  defaults to tf.uint8.In all other cases,  `inference_input_type`  defaults to tf.float32.Must be  `{tf.float32, tf.uint8, tf.int8}` 
 - **`inference_output_type`** : Target data type of real-number output arrays. Allowsfor a different type for output arrays.If  `inference_type`  is tf.uint8, signaling conversion to a fully quantizedmodel from a quantization-aware trained output model, then `inference_output_type`  defaults to tf.uint8.In all other cases,  `inference_output_type`  must be tf.float32, an errorwill be thrown otherwise.Must be  `{tf.float32, tf.uint8, tf.int8}` 
@@ -26,7 +26,7 @@ This is used to convert from a TensorFlow GraphDef, SavedModel or tf.kerasmodel 
 - **`experimental_enable_mlir_converter`** : Experimental flag, subject to change.Enables the MLIR converter instead of the TOCO converter.
 
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -68,9 +68,9 @@ open("converted_model.tflite", "wb").write(tflite_model)
  
 ```
 
-Constructor for TFLiteConverter.
+tflitecoverter的构造函数。
 
-#### Args:
+#### 参数：
 - **`graph_def`** : Frozen TensorFlow GraphDef.
 - **`input_tensors`** : List of input tensors. Type and shape are computed using `foo.shape`  and  `foo.dtype` .
 - **`output_tensors`** : List of output tensors (only .name is used from this).
@@ -79,11 +79,11 @@ Constructor for TFLiteConverter.
 - **`experimental_debug_info_func`** : An experimental function to retrieve thegraph debug info for a set of nodes from the  `graph_def` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : Invalid arguments.
 
 
-## Methods
+## 方法
 
 
 ###  `convert` 
@@ -94,12 +94,12 @@ Constructor for TFLiteConverter.
  
 ```
 
-Converts a TensorFlow GraphDef based on instance variables.
+基于实例变量转换tensorflow graphdef。
 
-#### Returns:
+#### 返回：
 The converted data in serialized format. Either a TFLite Flatbuffer or aGraphviz graph depending on value in  `output_format` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :   Input shape is not specified.None value for dimension in input_tensor.
 
 
@@ -118,19 +118,19 @@ from_frozen_graph(
  
 ```
 
-Creates a TFLiteConverter class from a file containing a frozen GraphDef.
+从包含冻结graphdef的文件创建tflitecoverter类。
 
-#### Args:
+#### 参数：
 - **`graph_def_file`** : Full filepath of file containing frozen GraphDef.
 - **`input_arrays`** : List of input tensors to freeze graph with.
 - **`output_arrays`** : List of output tensors to freeze graph with.
 - **`input_shapes`** : Dict of strings representing input tensor names to list ofintegers representing input shapes (e.g., {"foo" : [1, 16, 16, 3]}).Automatically determined when input shapes is None (e.g., {"foo" :None}). (default None)
 
 
-#### Returns:
-TFLiteConverter class.
+#### 返回：
+TFLiteConverter类。
 
-#### Raises:
+#### 加薪：
 - **`IOError`** :   File not found.Unable to parse input file.
 - **`ValueError`** :   The graph is not frozen.input_arrays or output_arrays contains an invalid tensor name.input_shapes is not correctly defined when required
 
@@ -151,9 +151,9 @@ from_keras_model_file(
  
 ```
 
-Creates a TFLiteConverter class from a tf.keras model file.
+从tf.keras模型文件创建tflitecoverter类。
 
-#### Args:
+#### 参数：
 - **`model_file`** : Full filepath of HDF5 file containing the tf.keras model.
 - **`input_arrays`** : List of input tensors to freeze graph with. Uses inputarrays from SignatureDef when none are provided. (default None)
 - **`input_shapes`** : Dict of strings representing input tensor names to list ofintegers representing input shapes (e.g., {"foo" : [1, 16, 16, 3]}).Automatically determined when input shapes is None (e.g., {"foo" :None}). (default None)
@@ -161,8 +161,8 @@ Creates a TFLiteConverter class from a tf.keras model file.
 - **`custom_objects`** : Dict mapping names (strings) to custom classes orfunctions to be considered during model deserialization. (default None)
 
 
-#### Returns:
-TFLiteConverter class.
+#### 返回：
+TFLiteConverter类。
 
 ###  `from_saved_model` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L728-L767)
@@ -181,9 +181,9 @@ from_saved_model(
  
 ```
 
-Creates a TFLiteConverter class from a SavedModel.
+从savedModel创建tfLiteConverter类。
 
-#### Args:
+#### 参数：
 - **`saved_model_dir`** : SavedModel directory to convert.
 - **`input_arrays`** : List of input tensors to freeze graph with. Uses inputarrays from SignatureDef when none are provided. (default None)
 - **`input_shapes`** : Dict of strings representing input tensor names to list ofintegers representing input shapes (e.g., {"foo" : [1, 16, 16, 3]}).Automatically determined when input shapes is None (e.g., {"foo" :None}). (default None)
@@ -192,8 +192,8 @@ Creates a TFLiteConverter class from a SavedModel.
 - **`signature_key`** : Key identifying SignatureDef containing inputs and outputs.(default DEFAULT_SERVING_SIGNATURE_DEF_KEY)
 
 
-#### Returns:
-TFLiteConverter class.
+#### 返回：
+TFLiteConverter类。
 
 ###  `from_session` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L615-L633)
@@ -209,16 +209,16 @@ from_session(
  
 ```
 
-Creates a TFLiteConverter class from a TensorFlow Session.
+从tensorflow会话创建tflitecoverter类。
 
-#### Args:
+#### 参数：
 - **`sess`** : TensorFlow Session.
 - **`input_tensors`** : List of input tensors. Type and shape are computed using `foo.shape`  and  `foo.dtype` .
 - **`output_tensors`** : List of output tensors (only .name is used from this).
 
 
-#### Returns:
-TFLiteConverter class.
+#### 返回：
+TFLiteConverter类。
 
 ###  `get_input_arrays` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L997-L1006)
@@ -228,8 +228,8 @@ TFLiteConverter class.
  
 ```
 
-Returns a list of the names of the input tensors.
+返回输入张量的名称列表。
 
-#### Returns:
-List of strings.
+#### 返回：
+字符串列表。
 

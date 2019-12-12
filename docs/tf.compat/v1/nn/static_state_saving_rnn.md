@@ -8,7 +8,7 @@ RNN that accepts a state saver for time-truncated RNN calculation. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Please use [ `keras.layers.RNN(cell, stateful=True)` ](/api_docs/python/tf/keras/layers/RNN), which is equivalent to this API
 
 
-#### Args:
+#### 参数：
 - **`cell`** : An instance of  `RNNCell` .
 - **`inputs`** : A length T list of inputs, each a  `Tensor`  of shape  `[batch_size,input_size]` .
 - **`state_saver`** : A state saver object with methods  `state`  and  `save_state` .
@@ -17,9 +17,9 @@ RNN that accepts a state saver for time-truncated RNN calculation. (deprecated)
 - **`scope`** : VariableScope for the created subgraph; defaults to "rnn".
 
 
-#### Returns:
+#### 返回：
 A pair (outputs, state) where:  outputs is a length T list of outputs (one for each input)  states is the final state
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `cell`  is not an instance of RNNCell.
 - **`ValueError`** : If  `inputs`  is  `None`  or an empty list, or if the arity andtype of  `state_name`  does not match that of  `cell.state_size` .

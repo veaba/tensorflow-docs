@@ -1,6 +1,6 @@
-Keras initializer serialization / deserialization.
+Keras初始值设定项序列化/反序列化。
 
-## Classes
+## Class 
 [ `class Constant` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Constant): Initializer that generates tensors with constant values.
 
 [ `class Identity` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Identity): Initializer that generates the identity matrix.
@@ -45,7 +45,7 @@ Keras initializer serialization / deserialization.
 
 [ `class zeros` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Zeros): Initializer that generates tensors initialized to 0.
 
-## Functions
+## 功能
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/deserialize): Return an  `Initializer`  object from its config.
 
 [ `get(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/get)

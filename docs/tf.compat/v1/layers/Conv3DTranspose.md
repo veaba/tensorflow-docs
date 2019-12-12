@@ -1,11 +1,11 @@
 
 
 ## Class  `Conv3DTranspose` 
-Transposed 3D convolution layer (sometimes called 3D Deconvolution).
+转置三维卷积层（有时称为三维反卷积）。
 
 Inherits From: [ `Conv3DTranspose` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 3 integers, specifying thedepth, height and width of the 3D convolution window.Can be a single integer to specify the same value for all spatialdimensions.
 - **`strides`** : An integer or tuple/list of 3 integers, specifying the stridesof the convolution along the depth, height and width.Can be a single integer to specify the same value for all spatialdimensions.
@@ -50,11 +50,11 @@ Inherits From: [ `Conv3DTranspose` ](https://tensorflow.google.cn/api_docs/pytho
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

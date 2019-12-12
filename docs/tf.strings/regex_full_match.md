@@ -1,6 +1,6 @@
-Check if the input matches the regex pattern.
+检查输入是否与regex模式匹配。
 
-**Aliases** : [ `tf.compat.v1.strings.regex_full_match` ](/api_docs/python/tf/strings/regex_full_match), [ `tf.compat.v2.strings.regex_full_match` ](/api_docs/python/tf/strings/regex_full_match)
+**别名** : [ `tf.compat.v1.strings.regex_full_match` ](/api_docs/python/tf/strings/regex_full_match), [ `tf.compat.v2.strings.regex_full_match` ](/api_docs/python/tf/strings/regex_full_match)
 
 ```
  tf.strings.regex_full_match(    input,    pattern,    name=None) 
@@ -10,12 +10,12 @@ The input is a string tensor of any shape. The pattern is a scalarstring tensor 
 
 The pattern follows the re2 syntax (https://github.com/google/re2/wiki/Syntax)
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `string` .A string tensor of the text to be processed.
 - **`pattern`** : A  `Tensor`  of type  `string` .A scalar string tensor containing the regular expression to match the input.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 

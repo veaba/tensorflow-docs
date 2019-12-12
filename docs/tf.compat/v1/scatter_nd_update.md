@@ -29,7 +29,7 @@ For example, say we want to update 4 scattered elements to a rank-1 tensor to8 e
  
 ```
 
-The resulting update to ref would look like this:
+ref的结果更新如下：
 
 ```
  [1, 11, 3, 10, 9, 6, 7, 12]
@@ -38,7 +38,7 @@ The resulting update to ref would look like this:
 
 See [ `tf.scatter_nd` ](https://tensorflow.google.cn/api_docs/python/tf/scatter_nd) for more details about how to make updates toslices.
 
-#### Args:
+#### 参数：
 - **`ref`** : A Variable.
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor of indices into ref.
 - **`updates`** : A  `Tensor` . Must have the same type as  `ref` .A Tensor. Must have the same type as ref. A tensor of updatedvalues to add to ref.
@@ -46,6 +46,6 @@ See [ `tf.scatter_nd` ](https://tensorflow.google.cn/api_docs/python/tf/scatter_
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The value of the variable after the update.
+#### 返回：
+更新后变量的值。
 

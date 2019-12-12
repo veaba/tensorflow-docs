@@ -12,13 +12,13 @@ Casts a tensor to type  `int64` . (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.cast` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/cast) instead.
 
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  or  `SparseTensor`  or  `IndexedSlices` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  or  `SparseTensor`  or  `IndexedSlices`  with same shape as  `x`  withtype  `int64` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `x`  cannot be cast to the  `int64` .

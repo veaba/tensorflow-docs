@@ -1,6 +1,6 @@
-Traces argument information at compilation time.
+在编译时跟踪参数信息。
 
-**Aliases** : [ `tf.compat.v1.autograph.trace` ](/api_docs/python/tf/autograph/trace), [ `tf.compat.v2.autograph.trace` ](/api_docs/python/tf/autograph/trace)
+**别名** : [ `tf.compat.v1.autograph.trace` ](/api_docs/python/tf/autograph/trace), [ `tf.compat.v2.autograph.trace` ](/api_docs/python/tf/autograph/trace)
 
 ```
  tf.autograph.trace(*args) 
@@ -19,5 +19,5 @@ for i in tf.range(10):
  
 ```
 
-#### Args:
+#### 参数：
 - **`*args`** : Arguments to print to  `sys.stdout` .

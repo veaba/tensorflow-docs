@@ -1,6 +1,6 @@
 foldr on the list of tensors unpacked from  `elems`  on dimension 0.
 
-**Aliases** : [ `tf.compat.v1.foldr` ](/api_docs/python/tf/foldr), [ `tf.compat.v2.foldr` ](/api_docs/python/tf/foldr)
+**别名** : [ `tf.compat.v1.foldr` ](/api_docs/python/tf/foldr), [ `tf.compat.v2.foldr` ](/api_docs/python/tf/foldr)
 
 ```
  tf.foldr(
@@ -21,7 +21,7 @@ Suppose that  `elems`  is unpacked into  `values` , a list of tensors. The shape
 
 This method also allows multi-arity  `elems`  and output of  `fn` .  If  `elems` is a (possibly nested) list or tuple of tensors, then each of these tensorsmust have a matching first (unpack) dimension.  The signature of  `fn`  maymatch the structure of  `elems` .  That is, if  `elems`  is `(t1, [t2, t3, [t4, t5]])` , then an appropriate signature for  `fn`  is: `fn = lambda (t1, [t2, t3, [t4, t5]]):` .
 
-#### Args:
+#### 参数：
 - **`fn`** : The callable to be performed.
 - **`elems`** : A tensor or (possibly nested) sequence of tensors, each of which willbe unpacked along their first dimension.  The nested sequence of theresulting slices will be the first argument to  `fn` .
 - **`initializer`** : (optional) A tensor or (possibly nested) sequence of tensors,as the initial value for the accumulator.
@@ -31,14 +31,14 @@ This method also allows multi-arity  `elems`  and output of  `fn` .  If  `elems`
 - **`name`** : (optional) Name prefix for the returned tensors.
 
 
-#### Returns:
+#### 返回：
 A tensor or (possibly nested) sequence of tensors, resulting from applying `fn`  consecutively to the list of tensors unpacked from  `elems` , from lastto first.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `fn`  is not callable.
 
 
-#### Example:
+#### 示例：
 
 
 ```

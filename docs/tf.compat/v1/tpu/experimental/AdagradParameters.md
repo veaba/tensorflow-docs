@@ -1,7 +1,7 @@
 
 
 ## Class  `AdagradParameters` 
-Optimization parameters for Adagrad with TPU embeddings.
+带tpu嵌入的adagrad优化参数。
 
 Pass this to  `tf.estimator.tpu.experimental.EmbeddingConfigSpec`  via the `optimization_parameters`  argument to set the optimizer and its parameters.See the documentation for  `tf.estimator.tpu.experimental.EmbeddingConfigSpec` for more details.
 
@@ -29,9 +29,9 @@ Pass this to  `tf.estimator.tpu.experimental.EmbeddingConfigSpec`  via the `opti
  
 ```
 
-Optimization parameters for Adagrad.
+adagrad的优化参数。
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : used for updating embedding table.
 - **`initial_accumulator`** : initial accumulator for Adagrad.
 - **`use_gradient_accumulation`** : setting this to  `False`  makes embeddinggradients calculation less accurate but faster. Please see `optimization_parameters.proto`  for details.for details.

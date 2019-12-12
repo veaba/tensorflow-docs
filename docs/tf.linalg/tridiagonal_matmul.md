@@ -1,6 +1,6 @@
-Multiplies tridiagonal matrix by matrix.
+将三对角矩阵乘以矩阵。
 
-**Aliases** : [ `tf.compat.v1.linalg.tridiagonal_matmul` ](/api_docs/python/tf/linalg/tridiagonal_matmul), [ `tf.compat.v2.linalg.tridiagonal_matmul` ](/api_docs/python/tf/linalg/tridiagonal_matmul)
+**别名** : [ `tf.compat.v1.linalg.tridiagonal_matmul` ](/api_docs/python/tf/linalg/tridiagonal_matmul), [ `tf.compat.v2.linalg.tridiagonal_matmul` ](/api_docs/python/tf/linalg/tridiagonal_matmul)
 
 ```
  tf.linalg.tridiagonal_matmul(
@@ -24,7 +24,7 @@ The  `sequence`  format is recommended as the one with the best performance.
 
  `rhs`  is matrix to the right of multiplication. It has shape  `[..., M, N]` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -37,15 +37,15 @@ x = tf.linalg.tridiagonal_matmul(diagonals, rhs, diagonals_format='sequence')
  
 ```
 
-#### Args:
+#### 参数：
 - **`diagonals`** : A  `Tensor`  or tuple of  `Tensor` s describing left-hand sides. Theshape depends of  `diagonals_format` , see description above. Must be `float32` ,  `float64` ,  `complex64` , or  `complex128` .
 - **`rhs`** : A  `Tensor`  of shape [..., M, N] and with the same dtype as  `diagonals` .
 - **`diagonals_format`** : one of  `sequence` , or  `compact` . Default is  `compact` .
 - **`name`** :  A name to give this  `Op`  (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of shape [..., M, N] containing the result of multiplication.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : An unsupported type is provided as input, or when the inputtensors have incorrect shapes.

@@ -11,7 +11,7 @@ Assert the condition  `x > 0`  holds element-wise.
  
 ```
 
-Example of adding a dependency to an operation:
+向操作添加依赖项的示例：
 
 ```
  with tf.control_dependencies([tf.compat.v1.assert_positive(x)]):
@@ -21,7 +21,7 @@ Example of adding a dependency to an operation:
 
 Positive means, for every element  `x[i]`  of  `x` , we have  `x[i] > 0` .If  `x`  is empty this is trivially satisfied.
 
-#### Args:
+#### 参数：
 - **`x`** :  Numeric  `Tensor` .
 - **`data`** :  The tensors to print out if the condition is False.  Defaults toerror message and first few entries of  `x` .
 - **`summarize`** : Print this many entries of each tensor.
@@ -29,6 +29,6 @@ Positive means, for every element  `x[i]`  of  `x` , we have  `x[i] > 0` .If  `x
 - **`name`** : A name for this operation (optional).  Defaults to "assert_positive".
 
 
-#### Returns:
+#### 返回：
 Op raising  `InvalidArgumentError`  unless  `x`  is all positive.
 

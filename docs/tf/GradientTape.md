@@ -1,11 +1,11 @@
 
 
 ## Class  `GradientTape` 
-Record operations for automatic differentiation.
+记录操作以便自动区分。
 
-**Aliases** : [ `tf.compat.v1.GradientTape` ](/api_docs/python/tf/GradientTape), [ `tf.compat.v2.GradientTape` ](/api_docs/python/tf/GradientTape)
+**别名** : [ `tf.compat.v1.GradientTape` ](/api_docs/python/tf/GradientTape), [ `tf.compat.v2.GradientTape` ](/api_docs/python/tf/GradientTape)
 
-### Used in the guide:
+### 在指南中使用：
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
@@ -13,7 +13,7 @@ Record operations for automatic differentiation.
 - [Distributed training with TensorFlow](https://tensorflow.google.cn/guide/distributed_training)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Automatic differentiation and gradient tape](https://tensorflow.google.cn/tutorials/customization/autodiff)
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
@@ -58,7 +58,7 @@ with tf.GradientTape(persistent=True) as g:
   z = y * y
 dz_dx = g.gradient(z, x)  # 108.0 (4*x^3 at x = 3)
 dy_dx = g.gradient(y, x)  # 6.0
-del g  # Drop the reference to the tape
+删除对磁带的引用
  
 ```
 
@@ -90,7 +90,7 @@ with tf.GradientTape(watch_accessed_variables=False) as tape:
  
 ```
 
-Note that only tensors with real or complex dtypes are differentiable.
+注意，只有实型或复型张量是可微的。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/eager/backprop.py#L778-L799)
@@ -103,14 +103,14 @@ Note that only tensors with real or complex dtypes are differentiable.
  
 ```
 
-Creates a new GradientTape.
+创建新的GradientTape。
 
-#### Args:
+#### 参数：
 - **`persistent`** : Boolean controlling whether a persistent gradient tapeis created. False by default, which means at most one call canbe made to the gradient() method on this object.
 - **`watch_accessed_variables`** : Boolean controlling whether the tape willautomatically  `watch`  any (trainable) variables accessed while the tapeis active. Defaults to True meaning gradients can be requested from anyresult computed in the tape derived from reading a trainable  `Variable` .If False users must explicitly  `watch`  any  `Variable` s they want torequest gradients from.
 
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -121,7 +121,7 @@ Creates a new GradientTape.
  
 ```
 
-Enters a context inside which operations are recorded on this tape.
+输入在此磁带上记录操作的上下文。
 
 ###  `__exit__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/eager/backprop.py#L806-L809)
@@ -159,7 +159,7 @@ See [wikipedia article](http://en.wikipedia.org/wiki/jacobian_matrix_and_determi
 
 Note that compared to [ `GradientTape.jacobian` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape#jacobian) which computes gradient ofeach output value w.r.t each input value, this function is useful when `target[i,...]`  is independent of  `source[j,...]`  for  `j != i` . Thisassumption allows more efficient computation as compared to[ `GradientTape.jacobian` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape#jacobian). The output, as well as intermediate activations,are lower dimensional and avoid a bunch of redundant zeros which wouldresult in the jacobian computation given the independence assumption.
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -172,7 +172,7 @@ batch_jacobian = g.batch_jacobian(y, x)
  
 ```
 
-#### Args:
+#### 参数：
 - **`target`** : A tensor with rank 2 or higher and with shape [b, y1, ..., y_n]. `target[i,...]`  should only depend on  `source[i,...]` .
 - **`source`** : A tensor with rank 2 or higher and with shape [b, x1, ..., x_m].
 - **`unconnected_gradients`** : a value which can either hold 'none' or 'zero' andalters the value which will be returned if the target and sources areunconnected. The possible values and effects are detailed in'UnconnectedGradients' and it defaults to 'none'.
@@ -180,10 +180,10 @@ batch_jacobian = g.batch_jacobian(y, x)
 - **`experimental_use_pfor`** : If true, uses pfor for computing the Jacobian. Elseuses a tf.while_loop.
 
 
-#### Returns:
+#### 返回：
 A tensor  `t`  with shape [b, y_1, ..., y_n, x1, ..., x_m] where  `t[i, ...]` is the jacobian of  `target[i, ...]`  w.r.t.  `source[i, ...]` , i.e. stackedper-example jacobians.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called on a non-persistent tape with eager executionenabled and without enabling experimental_use_pfor.
 - **`ValueError`** : If vectorization of jacobian computation fails or if firstdimension of  `target`  and  `source`  do not match.
 
@@ -201,19 +201,19 @@ A tensor  `t`  with shape [b, y_1, ..., y_n, x1, ..., x_m] where  `t[i, ...]` is
  
 ```
 
-Computes the gradient using operations recorded in context of this tape.
+使用此磁带上下文中记录的操作计算渐变。
 
-#### Args:
+#### 参数：
 - **`target`** : Tensor (or list of tensors) to be differentiated.
 - **`sources`** : a list or nested structure of Tensors or Variables.  `target` will be differentiated against elements in  `sources` .
 - **`output_gradients`** : a list of gradients, one for each element oftarget. Defaults to None.
 - **`unconnected_gradients`** : a value which can either hold 'none' or 'zero' andalters the value which will be returned if the target and sources areunconnected. The possible values and effects are detailed in'UnconnectedGradients' and it defaults to 'none'.
 
 
-#### Returns:
+#### 返回：
 a list or nested structure of Tensors (or IndexedSlices, or None),one for each element in  `sources` . Returned structure is the same asthe structure of  `sources` .
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : if called inside the context of the tape, or if called morethan once on a non-persistent tape.
 - **`ValueError`** : if the target is a variable or if unconnected gradients iscalled with an unknown value.
 
@@ -232,11 +232,11 @@ a list or nested structure of Tensors (or IndexedSlices, or None),one for each e
  
 ```
 
-Computes the jacobian using operations recorded in context of this tape.
+使用此磁带上下文中记录的操作计算雅可比。
 
 See [wikipedia article](http://en.wikipedia.org/wiki/jacobian_matrix_and_determinant) for thedefinition of a Jacobian.
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -249,7 +249,7 @@ jacobian = g.jacobian(y, x)
  
 ```
 
-#### Args:
+#### 参数：
 - **`target`** : Tensor to be differentiated.
 - **`sources`** : a list or nested structure of Tensors or Variables.  `target` will be differentiated against elements in  `sources` .
 - **`unconnected_gradients`** : a value which can either hold 'none' or 'zero' andalters the value which will be returned if the target and sources areunconnected. The possible values and effects are detailed in'UnconnectedGradients' and it defaults to 'none'.
@@ -257,10 +257,10 @@ jacobian = g.jacobian(y, x)
 - **`experimental_use_pfor`** : If true, vectorizes the jacobian computation. Elsefalls back to a sequential while_loop. Vectorization can sometimes failor lead to excessive memory usage. This option can be used to disablevectorization in such cases.
 
 
-#### Returns:
+#### 返回：
 A list or nested structure of Tensors (or None), one for each element in `sources` . Returned structure is the same as the structure of  `sources` .Note if any gradient is sparse (IndexedSlices), jacobian functioncurrently makes it dense and returns a Tensor instead. This may change inthe future.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called on a non-persistent tape with eager executionenabled and without enabling experimental_use_pfor.
 - **`ValueError`** : If vectorization of jacobian computation fails.
 
@@ -273,7 +273,7 @@ A list or nested structure of Tensors (or None), one for each element in `source
  
 ```
 
-Clears all information stored in this tape.
+清除此磁带中存储的所有信息。
 
 Equivalent to exiting and reentering the tape context manager with a newtape. For example, the two following code blocks are equivalent:
 
@@ -312,11 +312,11 @@ This is useful if you don't want to exit the context manager for the tape,or can
  
 ```
 
-Temporarily stops recording operations on this tape.
+暂时停止在此磁带上录制操作。
 
 Operations executed while this context manager is active will not berecorded on the tape. This is useful for reducing the memory used by tracingall computations.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -328,10 +328,10 @@ Operations executed while this context manager is active will not berecorded on 
  
 ```
 
-#### Yields:
+#### 收益率：
 None
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : if the tape is not currently recording.
 
 
@@ -345,11 +345,11 @@ None
 
 Ensures that  `tensor`  is being traced by this tape.
 
-#### Args:
+#### 参数：
 - **`tensor`** : a Tensor or list of Tensors.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if it encounters something that is not a tensor.
 
 
@@ -361,5 +361,5 @@ Ensures that  `tensor`  is being traced by this tape.
  
 ```
 
-Returns variables watched by this tape in order of construction.
+返回此磁带按构造顺序监视的变量。
 

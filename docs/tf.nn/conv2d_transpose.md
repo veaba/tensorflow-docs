@@ -16,7 +16,7 @@ The transpose of  `conv2d` .
 
 This operation is sometimes called "deconvolution" after [DeconvolutionalNetworks](http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf), but isactually the transpose (gradient) of  `conv2d`  rather than an actualdeconvolution.
 
-#### Args:
+#### 参数：
 - **`input`** : A 4-D  `Tensor`  of type  `float`  and shape  `[batch, height, width,in_channels]`  for  `NHWC`  data format or  `[batch, in_channels, height,width]`  for  `NCHW`  data format.
 - **`filters`** : A 4-D  `Tensor`  with the same type as  `input`  and shape  `[height,width, output_channels, in_channels]` .   `filter` 's  `in_channels`  dimensionmust match that of  `input` .
 - **`output_shape`** : A 1-D  `Tensor`  representing the output shape of thedeconvolution op.
@@ -27,8 +27,8 @@ This operation is sometimes called "deconvolution" after [DeconvolutionalNetwork
 - **`name`** : Optional name for the returned tensor.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `input` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If input/output depth does not match  `filter` 's shape, or ifpadding is other than  `'VALID'`  or  `'SAME'` .

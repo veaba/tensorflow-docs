@@ -4,7 +4,7 @@ Looks up  `ids`  in a list of embedding tensors.
  tf.nn.embedding_lookup(    params,    ids,    max_norm=None,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Masking and padding with Keras](https://tensorflow.google.cn/guide/keras/masking_and_padding)
 This function is used to perform parallel lookups on the list oftensors in  `params` .  It is a generalization of[ `tf.gather` ](https://tensorflow.google.cn/api_docs/python/tf/gather), where  `params`  isinterpreted as a partitioning of a large embedding tensor.   `params`  may bea  `PartitionedVariable`  as returned by using [ `tf.compat.v1.get_variable()` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/get_variable)with apartitioner.
 
@@ -14,15 +14,15 @@ The  `partition_strategy`  is always  `"div"`  currently. This means that weassi
 
 The results of the lookup are concatenated into a densetensor. The returned tensor has shape  `shape(ids) + shape(params)[1:]` .
 
-#### Args:
+#### 参数：
 - **`params`** : A single tensor representing the complete embedding tensor, or alist of P tensors all of same shape except for the first dimension,representing sharded embedding tensors.  Alternatively, a `PartitionedVariable` , created by partitioning along dimension 0. Eachelement must be appropriately sized for the 'div'  `partition_strategy` .
 - **`ids`** : A  `Tensor`  with type  `int32`  or  `int64`  containing the ids to be lookedup in  `params` .
 - **`max_norm`** : If not  `None` , each embedding is clipped if its l2-norm is largerthan this value.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as the tensors in  `params` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `params`  is empty.

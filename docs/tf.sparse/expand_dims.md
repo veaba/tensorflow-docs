@@ -1,6 +1,6 @@
-Inserts a dimension of 1 into a tensor's shape.
+在张量的形状中插入尺寸1。
 
-**Aliases** : [ `tf.compat.v1.sparse.expand_dims` ](/api_docs/python/tf/sparse/expand_dims), [ `tf.compat.v2.sparse.expand_dims` ](/api_docs/python/tf/sparse/expand_dims)
+**别名** : [ `tf.compat.v1.sparse.expand_dims` ](/api_docs/python/tf/sparse/expand_dims), [ `tf.compat.v2.sparse.expand_dims` ](/api_docs/python/tf/sparse/expand_dims)
 
 ```
  tf.sparse.expand_dims(
@@ -13,12 +13,12 @@ Inserts a dimension of 1 into a tensor's shape.
 
 Given a tensor  `sp_input` , this operation inserts a dimension of 1 at thedimension index  `axis`  of  `sp_input` 's shape. The dimension index  `axis` starts at zero; if you specify a negative number for  `axis`  it is countedbackwards from the end.
 
-#### Args:
+#### 参数：
 - **`sp_input`** : A  `SparseTensor` .
 - **`axis`** : 0-D (scalar). Specifies the dimension index at which to expand theshape of  `input` . Must be in the range  `[-rank(sp_input) - 1,rank(sp_input)]` .
 - **`name`** : The name of the output  `SparseTensor` .
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  with the same data as  `sp_input` , but its shape has anadditional dimension of size 1 added.
 

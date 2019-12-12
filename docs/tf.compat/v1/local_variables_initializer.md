@@ -1,4 +1,4 @@
-Returns an Op that initializes all local variables.
+返回初始化所有局部变量的操作。
 
 ```
  tf.compat.v1.local_variables_initializer()
@@ -7,6 +7,6 @@ Returns an Op that initializes all local variables.
 
 This is just a shortcut for  `variables_initializer(local_variables())` 
 
-#### Returns:
-An Op that initializes all local variables in the graph.
+#### 返回：
+初始化图中所有局部变量的操作。
 

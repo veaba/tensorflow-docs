@@ -1,13 +1,13 @@
 
 
 ## Class  `PredictOutput` 
-Represents the output of a generic prediction head.
+表示泛型预测头的输出。
 
 Inherits From: [ `ExportOutput` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/ExportOutput)
 
-**Aliases** : [ `tf.compat.v1.estimator.export.PredictOutput` ](/api_docs/python/tf/estimator/export/PredictOutput), [ `tf.compat.v2.estimator.export.PredictOutput` ](/api_docs/python/tf/estimator/export/PredictOutput)
+**别名** : [ `tf.compat.v1.estimator.export.PredictOutput` ](/api_docs/python/tf/estimator/export/PredictOutput), [ `tf.compat.v2.estimator.export.PredictOutput` ](/api_docs/python/tf/estimator/export/PredictOutput)
 
-A generic prediction need not be either a classification or a regression.
+一般预测不必是分类或回归。
 
 Named outputs must be provided as a dict from string to  `Tensor` ,
 
@@ -19,23 +19,23 @@ Named outputs must be provided as a dict from string to  `Tensor` ,
  
 ```
 
-Constructor for PredictOutput.
+PredictOutput的构造函数。
 
-#### Args:
+#### 参数：
 - **`outputs`** : A  `Tensor`  or a dict of string to  `Tensor`  representing thepredictions.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the outputs is not dict, or any of its keys are notstrings, or any of its values are not  `Tensor` s.
 
 
-## Properties
+## 属性
 
 
 ###  `outputs` 
 
 
-## Methods
+## 方法
 
 
 ###  `as_signature_def` 
@@ -46,9 +46,9 @@ Constructor for PredictOutput.
  
 ```
 
-Generate a SignatureDef proto for inclusion in a MetaGraphDef.
+生成signaturedef proto以包含在metagraphdef中。
 
 The SignatureDef will specify outputs as described in this ExportOutput,and will use the provided receiver_tensors as inputs.
 
-#### Args:
+#### 参数：
 - **`receiver_tensors`** : a  `Tensor` , or a dict of string to  `Tensor` , specifyinginput nodes that will be fed.

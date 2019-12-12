@@ -1,9 +1,9 @@
 
 
 ## Class  `RepresentativeDataset` 
-Representative dataset to evaluate optimizations.
+用于评估优化的代表性数据集。
 
-**Aliases** : [ `tf.compat.v1.lite.RepresentativeDataset` ](/api_docs/python/tf/lite/RepresentativeDataset), [ `tf.compat.v2.lite.RepresentativeDataset` ](/api_docs/python/tf/lite/RepresentativeDataset)
+**别名** : [ `tf.compat.v1.lite.RepresentativeDataset` ](/api_docs/python/tf/lite/RepresentativeDataset), [ `tf.compat.v2.lite.RepresentativeDataset` ](/api_docs/python/tf/lite/RepresentativeDataset)
 
 A representative dataset that can be used to evaluate optimizations by theconverter. E.g. converter can use these examples to estimate (min, max) rangesby calibrating the model on inputs. This can allow converter to quantize aconverted floating point model.
 
@@ -15,7 +15,7 @@ A representative dataset that can be used to evaluate optimizations by theconver
  
 ```
 
-Creates a representative dataset.
+创建具有代表性的数据集。
 
-#### Args:
+#### 参数：
 - **`input_gen`** : an input generator that can be used to generate input samplesfor the model. This must be a callable object that returns an objectthat supports the  `iter()`  protocol (e.g. a generator function). Theelements generated must have same type and shape as inputs to the model.

@@ -1,6 +1,6 @@
-Return true if the forward compatibility window has expired.
+如果转发兼容性窗口已过期，则返回true。
 
-**Aliases** : [ `tf.compat.v1.compat.forward_compatible` ](/api_docs/python/tf/compat/forward_compatible), [ `tf.compat.v2.compat.forward_compatible` ](/api_docs/python/tf/compat/forward_compatible)
+**别名** : [ `tf.compat.v1.compat.forward_compatible` ](/api_docs/python/tf/compat/forward_compatible), [ `tf.compat.v2.compat.forward_compatible` ](/api_docs/python/tf/compat/forward_compatible)
 
 ```
  tf.compat.forward_compatible(
@@ -28,7 +28,7 @@ For example, consider the case where a new operation  `MyNewAwesomeAdd`  iscreat
 to:
 
 ```
- from tensorflow.python.compat import compat
+从tensorflow.python.compat导入compat
 
 def add(inputs, name=None):
   if compat.forward_compatible(year, month, day):
@@ -41,12 +41,12 @@ def add(inputs, name=None):
 
 Where  `year` ,  `month` , and  `day`  specify the date beyond which binariesthat consume a model are expected to have been updated to include thenew operations. This date is typically at least 3 weeks beyond the datethe code that adds the new operation is committed.
 
-#### Args:
+#### 参数：
 - **`year`** :  A year (e.g., 2018). Must be an  `int` .
 - **`month`** : A month (1 <= month <= 12) in year. Must be an  `int` .
 - **`day`** :   A day (1 <= day <= 31, or 30, or 29, or 28) in month. Must be an `int` .
 
 
-#### Returns:
+#### 返回：
 True if the caller can expect that serialized TensorFlow graphs producedcan be consumed by programs that are compiled with the TensorFlow librarysource code after (year, month, day).
 

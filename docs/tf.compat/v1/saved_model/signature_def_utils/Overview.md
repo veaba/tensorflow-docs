@@ -1,8 +1,8 @@
-SignatureDef utility functions.
+实用函数的签名。
 
-Utility functions for building and inspecting SignatureDef protos.
+用于建立和检查原型签名的实用功能。
 
-## Functions
+## 功能
 [ `build_signature_def(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/build_signature_def): Utility function to build a SignatureDef protocol buffer.
 
 [ `classification_signature_def(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/classification_signature_def): Creates classification signature from given examples and predictions.

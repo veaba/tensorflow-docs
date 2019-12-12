@@ -1,6 +1,6 @@
-Quantizes then dequantizes a tensor.
+量子化然后去量子化张量。
 
-**Aliases** : [ `tf.compat.v1.quantization.quantize_and_dequantize` ](/api_docs/python/tf/quantization/quantize_and_dequantize), [ `tf.compat.v2.quantization.quantize_and_dequantize` ](/api_docs/python/tf/quantization/quantize_and_dequantize)
+**别名** : [ `tf.compat.v1.quantization.quantize_and_dequantize` ](/api_docs/python/tf/quantization/quantize_and_dequantize), [ `tf.compat.v2.quantization.quantize_and_dequantize` ](/api_docs/python/tf/quantization/quantize_and_dequantize)
 
 ```
  tf.quantization.quantize_and_dequantize(
@@ -17,7 +17,7 @@ Quantizes then dequantizes a tensor.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  to quantize and dequantize.
 - **`input_min`** : If range_given=True, the minimum input value that needs to berepresented in the quantized representation.
 - **`input_max`** : If range_given=True, the maximum input value that needs to berepresented in the quantized representation.
@@ -29,6 +29,6 @@ Quantizes then dequantizes a tensor.
 - **`narrow_range`** : If true, then the absolute value of the quantized minimumvalue is the same as the quantized maximum value, instead of 1 greater.i.e. for 8 bit quantization, the minimum value is -127 instead of -128.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Each element is the result of quantizing and dequantizing thecorresponding element of  `input` .
 

@@ -1,18 +1,18 @@
 Loads CIFAR100 dataset.
 
-**Aliases** : [ `tf.compat.v1.keras.datasets.cifar100.load_data` ](/api_docs/python/tf/keras/datasets/cifar100/load_data), [ `tf.compat.v2.keras.datasets.cifar100.load_data` ](/api_docs/python/tf/keras/datasets/cifar100/load_data)
+**别名** : [ `tf.compat.v1.keras.datasets.cifar100.load_data` ](/api_docs/python/tf/keras/datasets/cifar100/load_data), [ `tf.compat.v2.keras.datasets.cifar100.load_data` ](/api_docs/python/tf/keras/datasets/cifar100/load_data)
 
 ```
  tf.keras.datasets.cifar100.load_data(label_mode='fine')
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`label_mode`** : one of "fine", "coarse".
 
 
-#### Returns:
+#### 返回：
 Tuple of Numpy arrays:  `(x_train, y_train), (x_test, y_test)` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : in case of invalid  `label_mode` .

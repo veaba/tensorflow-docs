@@ -3,7 +3,7 @@
 ## Class  `SequenceFeatures` 
 A layer for sequence input.
 
-**Aliases** : [ `tf.compat.v1.keras.experimental.SequenceFeatures` ](/api_docs/python/tf/keras/experimental/SequenceFeatures), [ `tf.compat.v2.keras.experimental.SequenceFeatures` ](/api_docs/python/tf/keras/experimental/SequenceFeatures)
+**别名** : [ `tf.compat.v1.keras.experimental.SequenceFeatures` ](/api_docs/python/tf/keras/experimental/SequenceFeatures), [ `tf.compat.v2.keras.experimental.SequenceFeatures` ](/api_docs/python/tf/keras/experimental/SequenceFeatures)
 
 All  `feature_columns`  must be sequence dense columns with the same `sequence_length` . The output of this method can be fed into sequencenetworks, such as RNN.
 
@@ -11,7 +11,7 @@ The output of this method is a 3D  `Tensor`  of shape  `[batch_size, T, D]` . `T
 
 If multiple  `feature_columns`  are given with  `Di`   `num_elements`  each, theiroutputs are concatenated. So, the final  `Tensor`  has shape `[batch_size, T, D0 + D1 + ... + Dn]` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -48,7 +48,7 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
 
 "Constructs a SequenceFeatures layer.
 
-#### Args:
+#### 参数：
 - **`feature_columns`** : An iterable of dense sequence columns. Valid columns are
 - **`trainable`** : Boolean, whether the layer's variables will be updated viagradient descent during training.
 - **`name`** : Name to give to the SequenceFeatures.
@@ -57,5 +57,5 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
     -  `sequence_numeric_column` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If any of the  `feature_columns`  is not a `SequenceDenseColumn` .

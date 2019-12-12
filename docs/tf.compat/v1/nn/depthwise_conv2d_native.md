@@ -17,7 +17,7 @@ Given an input tensor of shape  `[batch, in_height, in_width, in_channels]` and 
 
 Must have  `strides[0] = strides[3] = 1` .  For the most common case of the samehorizontal and vertices strides,  `strides = [1, stride, stride, 1]` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` ,  `float64` .
 - **`filter`** : A  `Tensor` . Must have the same type as  `input` .
 - **`strides`** : A list of  `ints` .1-D of length 4.  The stride of the sliding window for each dimensionof  `input` .
@@ -27,6 +27,6 @@ Must have  `strides[0] = strides[3] = 1` .  For the most common case of the same
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

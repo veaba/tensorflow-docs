@@ -1,6 +1,6 @@
 Specifies that ops of type  `op_type`  is not differentiable.
 
-**Aliases** : [ `tf.compat.v1.NoGradient` ](/api_docs/python/tf/no_gradient), [ `tf.compat.v1.NotDifferentiable` ](/api_docs/python/tf/no_gradient), [ `tf.compat.v1.no_gradient` ](/api_docs/python/tf/no_gradient), [ `tf.compat.v2.no_gradient` ](/api_docs/python/tf/no_gradient)
+**别名** : [ `tf.compat.v1.NoGradient` ](/api_docs/python/tf/no_gradient), [ `tf.compat.v1.NotDifferentiable` ](/api_docs/python/tf/no_gradient), [ `tf.compat.v1.no_gradient` ](/api_docs/python/tf/no_gradient), [ `tf.compat.v2.no_gradient` ](/api_docs/python/tf/no_gradient)
 
 ```
  tf.no_gradient(op_type)
@@ -20,9 +20,9 @@ The gradient computed for 'op_type' will then propagate zeros.
 
 For ops that have a well-defined gradient but are not yet implemented,no declaration should be made, and an error *must* be thrown ifan attempt to request its gradient is made.
 
-#### Args:
+#### 参数：
 - **`op_type`** : The string type of an operation. This corresponds to the `OpDef.name`  field for the proto that defines the operation.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `op_type`  is not a string.

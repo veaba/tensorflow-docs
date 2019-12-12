@@ -1,6 +1,6 @@
 Compute the cumulative sum of the tensor  `x`  along  `axis` .
 
-**Aliases** : [ `tf.compat.v1.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.compat.v1.math.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.compat.v2.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.compat.v2.math.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.cumsum` ](/api_docs/python/tf/math/cumsum)
+**别名** : [ `tf.compat.v1.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.compat.v1.math.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.compat.v2.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.compat.v2.math.cumsum` ](/api_docs/python/tf/math/cumsum), [ `tf.cumsum` ](/api_docs/python/tf/math/cumsum)
 
 ```
  tf.math.cumsum(
@@ -43,7 +43,7 @@ The  `reverse`  and  `exclusive`  kwargs can also be combined:
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` , `int64` ,  `int32` ,  `uint8` ,  `uint16` ,  `int16` ,  `int8` ,  `complex64` , `complex128` ,  `qint8` ,  `quint8` ,  `qint32` ,  `half` .
 - **`axis`** : A  `Tensor`  of type  `int32`  (default: 0). Must be in the range `[-rank(x), rank(x))` .
 - **`exclusive`** : If  `True` , perform exclusive cumsum.
@@ -51,6 +51,6 @@ The  `reverse`  and  `exclusive`  kwargs can also be combined:
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

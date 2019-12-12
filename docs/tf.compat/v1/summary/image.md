@@ -23,7 +23,7 @@ The  `tag`  in the outputted Summary.Value protobufs is generated based on thena
 - If  `max_outputs`  is greater than 1, the summary value tags aregenerated sequentially as '*name*/image/0', '*name*/image/1', etc.
 
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the generated node. Will also serve as a series name inTensorBoard.
 - **`tensor`** : A 4-D  `uint8`  or  `float32`   `Tensor`  of shape  `[batch_size, height,width, channels]`  where  `channels`  is 1, 3, or 4.
 - **`max_outputs`** : Max number of batch elements to generate images for.
@@ -31,6 +31,6 @@ The  `tag`  in the outputted Summary.Value protobufs is generated based on thena
 - **`family`** : Optional; if provided, used as the prefix of the summary tag name,which controls the tab name used for display on Tensorboard.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of type  `string` . The serialized  `Summary`  protocolbuffer.
 

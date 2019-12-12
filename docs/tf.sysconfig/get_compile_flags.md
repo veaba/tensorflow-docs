@@ -1,12 +1,12 @@
-Get the compilation flags for custom operators.
+获取自定义运算符的编译标志。
 
-**Aliases** : [ `tf.compat.v1.sysconfig.get_compile_flags` ](/api_docs/python/tf/sysconfig/get_compile_flags), [ `tf.compat.v2.sysconfig.get_compile_flags` ](/api_docs/python/tf/sysconfig/get_compile_flags)
+**别名** : [ `tf.compat.v1.sysconfig.get_compile_flags` ](/api_docs/python/tf/sysconfig/get_compile_flags), [ `tf.compat.v2.sysconfig.get_compile_flags` ](/api_docs/python/tf/sysconfig/get_compile_flags)
 
 ```
  tf.sysconfig.get_compile_flags()
  
 ```
 
-#### Returns:
-The compilation flags.
+#### 返回：
+编译标志。
 

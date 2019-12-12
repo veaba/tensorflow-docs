@@ -8,7 +8,7 @@ Create a list of partitioned variables according to the given  `slicing` . (depr
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use  `tf.get_variable`  with a partitioner set.
 Currently only one dimension of the full variable can be sliced, and thefull variable can be reconstructed by the concatenation of the returnedlist along that dimension.
 
-#### Args:
+#### 参数：
 - **`shape`** : List of integers.  The shape of the full variable.
 - **`slicing`** : List of integers.  How to partition the variable.Must be of the same length as  `shape` .  Each valueindicate how many slices to create in the correspondingdimension.  Presently only one of the values can be more than 1;that is, the variable can only be sliced along one dimension.
 
@@ -33,8 +33,8 @@ For convenience, The requested number of partitions does not have todivide the c
 - **`reuse`** : Boolean or  `None` ; if  `True`  and name is set, it would reusepreviously created variables. if  `False`  it will create new variables.if  `None` , it would inherit the parent scope reuse.
 
 
-#### Returns:
-A list of Variables corresponding to the slicing.
+#### 返回：
+与切片相对应的变量列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If any of the arguments is malformed.

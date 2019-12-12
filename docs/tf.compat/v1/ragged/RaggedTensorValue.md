@@ -20,16 +20,16 @@ See [ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/Ragged
 
 Creates a  `RaggedTensorValue` .
 
-#### Args:
+#### 参数：
 - **`values`** : A numpy array of any type and shape; or a RaggedTensorValue.
 - **`row_splits`** : A 1-D int32 or int64 numpy array.
 
 
-## Properties
+## 属性
 
 
 ###  `dtype` 
-The numpy dtype of values in this tensor.
+此张量中值的numpy类型。
 
 ###  `flat_values` 
 The innermost  `values`  array for this ragged tensor value.
@@ -38,18 +38,18 @@ The innermost  `values`  array for this ragged tensor value.
 The row_splits for all ragged dimensions in this ragged tensor value.
 
 ###  `ragged_rank` 
-The number of ragged dimensions in this ragged tensor value.
+此不规则张量值中不规则维度的数目。
 
 ###  `row_splits` 
-The split indices for the ragged tensor value.
+不规则张量值的分裂指数。
 
 ###  `shape` 
-A tuple indicating the shape of this RaggedTensorValue.
+表示此RaggedSensorValue形状的元组。
 
 ###  `values` 
-The concatenated values for all rows in this tensor.
+此张量中所有行的连接值。
 
-## Methods
+## 方法
 
 
 ###  `to_list` 
@@ -60,5 +60,5 @@ The concatenated values for all rows in this tensor.
  
 ```
 
-Returns this ragged tensor value as a nested Python list.
+将这个不规则的张量值作为嵌套的python列表返回。
 

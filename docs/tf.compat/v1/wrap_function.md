@@ -1,10 +1,10 @@
-Wraps the TF 1.x function fn into a graph function.
+将tf 1.x函数fn包装成一个图形函数。
 
 ```
  tf.compat.v1.wrap_function(    fn,    signature,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 The python function  `fn`  will be called once with symbolic arguments specifiedin the  `signature` , traced, and turned into a graph function. Any variablescreated by  `fn`  will be owned by the object returned by  `wrap_function` . Theresulting graph function can be called with tensors which match thesignature.
 
@@ -38,12 +38,12 @@ Unlike [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/functio
 
 Since it is only traced once, variables and state may be created inside thefunction and owned by the function wrapper object.
 
-#### Args:
+#### 参数：
 - **`fn`** : python function to be wrapped
 - **`signature`** : the placeholder and python arguments to be passed to the wrappedfunction
 - **`name`** : Optional. The name of the function.
 
 
-#### Returns:
-the wrapped graph function.
+#### 返回：
+包装图函数。
 

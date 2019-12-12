@@ -1,6 +1,6 @@
 Extract  `patches`  from  `images` .
 
-**Aliases** : [ `tf.compat.v1.image.extract_patches` ](/api_docs/python/tf/image/extract_patches), [ `tf.compat.v2.image.extract_patches` ](/api_docs/python/tf/image/extract_patches)
+**别名** : [ `tf.compat.v1.image.extract_patches` ](/api_docs/python/tf/image/extract_patches), [ `tf.compat.v2.image.extract_patches` ](/api_docs/python/tf/image/extract_patches)
 
 ```
  tf.image.extract_patches(
@@ -26,7 +26,7 @@ The output elements are taken from the input at intervals given by the  `rate` a
 
 The  `padding`  argument has no effect on the size of each patch, it determineshow many patches are extracted. If  `VALID` , only patches which are fullycontained in the input image are included. If  `SAME` , all patches whosestarting point is inside the input are included, and areas outside the inputdefault to zero.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -99,7 +99,7 @@ We can again draw the effect, this time using the symbols  `*` ,  `x` ,  `+`  an
  
 ```
 
-#### Args:
+#### 参数：
 - **`images`** : A 4-D Tensor with shape `[batch, in_rows, in_cols, depth]
 - **`sizes`** : The size of the extracted patches. Mustbe [1, size_rows, size_cols, 1].
 - **`strides`** : A 1-D Tensor of length 4. How far the centers of two consecutivepatches are in the images. Must be:  `[1, stride_rows, stride_cols, 1]` .
@@ -108,6 +108,6 @@ We can again draw the effect, this time using the symbols  `*` ,  `x` ,  `+`  an
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A 4-D Tensor of the same type as the input.
 

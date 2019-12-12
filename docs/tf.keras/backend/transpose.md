@@ -1,20 +1,20 @@
-Transposes a tensor and returns it.
+转换张量并返回它。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.transpose` ](/api_docs/python/tf/keras/backend/transpose), [ `tf.compat.v2.keras.backend.transpose` ](/api_docs/python/tf/keras/backend/transpose)
+**别名** : [ `tf.compat.v1.keras.backend.transpose` ](/api_docs/python/tf/keras/backend/transpose), [ `tf.compat.v2.keras.backend.transpose` ](/api_docs/python/tf/keras/backend/transpose)
 
 ```
  tf.keras.backend.transpose(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Examples:
+#### 示例：
 
 
 ```

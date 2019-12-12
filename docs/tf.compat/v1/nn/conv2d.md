@@ -31,7 +31,7 @@ In detail, with the default NHWC format,
 
 Must have  `strides[0] = strides[3] = 1` .  For the most common case of the samehorizontal and vertices strides,  `strides = [1, stride, stride, 1]` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types: `half` ,  `bfloat16` ,  `float32` ,  `float64` .A 4-D tensor. The dimension order is interpreted according to the valueof  `data_format` , see below for details.
 - **`filter`** : A  `Tensor` . Must have the same type as  `input` .A 4-D tensor of shape `[filter_height, filter_width, in_channels, out_channels]` 
 - **`strides`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` .  Thestride of the sliding window for each dimension of  `input` . If a singlevalue is given it is replicated in the  `H`  and  `W`  dimension. By defaultthe  `N`  and  `C`  dimensions are set to 1. The dimension order is determinedby the value of  `data_format` , see below for details.
@@ -43,6 +43,6 @@ Must have  `strides[0] = strides[3] = 1` .  For the most common case of the same
 - **`filters`** : Alias for filter.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

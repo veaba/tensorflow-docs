@@ -1,13 +1,13 @@
 
 
 ## Class  `InputLayer` 
-Layer to be used as an entry point into a Network (a graph of layers).
+用作网络入口点的层（层的图形）。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.InputLayer` ](/api_docs/python/tf/keras/layers/InputLayer), [ `tf.compat.v2.keras.layers.InputLayer` ](/api_docs/python/tf/keras/layers/InputLayer)
+**别名** : [ `tf.compat.v1.keras.layers.InputLayer` ](/api_docs/python/tf/keras/layers/InputLayer), [ `tf.compat.v2.keras.layers.InputLayer` ](/api_docs/python/tf/keras/layers/InputLayer)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
 It can either wrap an existing tensor (pass an  `input_tensor`  argument)or create a placeholder tensor (pass arguments  `input_shape` , andoptionally,  `dtype` ).
 
@@ -15,7 +15,7 @@ It is generally recommend to use the functional layer API via  `Input` ,(which c
 
 This class can create placeholders for tf.Tensors, tf.SparseTensors, andtf.RaggedTensors by choosing 'sparse=True' or 'ragged=True'.
 
-#### Arguments:
+#### 参数：
 - **`input_shape`** : Shape tuple (not including the batch axis), or  `TensorShape` instance (not including the batch axis).
 - **`batch_size`** : Optional input batch size (integer or None).
 - **`dtype`** : Datatype of the input.

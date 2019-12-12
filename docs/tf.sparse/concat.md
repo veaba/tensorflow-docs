@@ -4,7 +4,7 @@ Concatenates a list of  `SparseTensor`  along the specified dimension. (deprecat
  tf.sparse.concat(    axis,    sp_inputs,    expand_nonconcat_dims=False,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
 
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(concat_dim)` . They will be removed in a future version.Instructions for updating:concat_dim is deprecated, use axis instead
@@ -36,7 +36,7 @@ sp_inputs[1]: shape = [2, 4]
  
 ```
 
-then the output will be
+然后输出将是
 
 ```
  shape = [2, 7]
@@ -48,7 +48,7 @@ then the output will be
  
 ```
 
-Graphically this is equivalent to doing
+从图形上看，这相当于
 
 ```
  [    a] concat [  d e  ] = [    a   d e  ]
@@ -82,7 +82,7 @@ if expand_nonconcat_dim = False, this will result in an error. But ifexpand_nonc
  
 ```
 
-Graphically this is equivalent to doing
+从图形上看，这相当于
 
 ```
  [    a] concat [  d e  ] = [    a   d e  ]
@@ -91,7 +91,7 @@ Graphically this is equivalent to doing
  
 ```
 
-#### Args:
+#### 参数：
 - **`axis`** : Dimension to concatenate along. Must be in range [-rank, rank),where rank is the number of dimensions in each input  `SparseTensor` .
 - **`sp_inputs`** : List of  `SparseTensor`  to concatenate.
 - **`name`** : A name prefix for the returned tensors (optional).
@@ -100,8 +100,8 @@ Graphically this is equivalent to doing
 - **`expand_nonconcat_dims`** : alias for expand_nonconcat_dim
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  with the concatenated output.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_inputs`  is not a list of  `SparseTensor` .

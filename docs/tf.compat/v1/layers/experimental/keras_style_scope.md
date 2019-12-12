@@ -10,7 +10,7 @@ The purpose of this scope is to allow users of existing layers toslowly transiti
 
 One example of this is when using TensorFlow's RNN classes with KerasModels or Networks.  Because Keras models do not properly set variablescopes, users of RNNs may either accidentally share scopes between twodifferent models, or get errors about variables that already exist.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -51,6 +51,6 @@ The solution is to wrap the model construction and execution in a keras-stylesco
  
 ```
 
-#### Yields:
-A keras layer style scope.
+#### 收益率：
+路缘石图层样式范围。
 

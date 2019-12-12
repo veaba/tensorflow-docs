@@ -1,6 +1,6 @@
-Publicly accessible method for determining the current backend.
+用于确定当前后端的公共访问方法。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.backend` ](/api_docs/python/tf/keras/backend/backend), [ `tf.compat.v2.keras.backend.backend` ](/api_docs/python/tf/keras/backend/backend)
+**别名** : [ `tf.compat.v1.keras.backend.backend` ](/api_docs/python/tf/keras/backend/backend), [ `tf.compat.v2.keras.backend.backend` ](/api_docs/python/tf/keras/backend/backend)
 
 ```
  tf.keras.backend.backend()
@@ -9,6 +9,6 @@ Publicly accessible method for determining the current backend.
 
 Only exists for API compatibility with multi-backend Keras.
 
-#### Returns:
-The string "tensorflow".
+#### 返回：
+字符串“tensorflow”。
 

@@ -1,4 +1,4 @@
-Example of overriding the generated code for an Op.
+重写操作生成代码的示例。
 
 ```
  tf.compat.v1.user_ops.my_fact() 

@@ -1,8 +1,8 @@
 
 
-Bring in all of the public TensorFlow interface into this module.
+将所有公共tensorflow接口引入此模块。
 
-## Modules
+## 模块
 [ `app` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/app) module: Generic entry point script.
 
 [ `audio` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/audio) module: Public API for tf.audio namespace.
@@ -113,7 +113,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `xla` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/xla) module: Public API for tf.xla namespace.
 
-## Classes
+## Class 
 [ `class AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod): A class listing aggregation methods used to combine gradients.
 
 [ `class AttrValue` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/AttrValue): A ProtocolMessage
@@ -280,7 +280,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `class zeros_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Zeros): Initializer that generates tensors initialized to 0.
 
-## Functions
+## 功能
 [ `Assert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert): Asserts that the given condition is true.
 
 [ `NoGradient(...)` ](https://tensorflow.google.cn/api_docs/python/tf/no_gradient): Specifies that ops of type  `op_type`  is not differentiable.
@@ -1189,7 +1189,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `zeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta): Compute the Hurwitz zeta function ![](./Overview.md_0.png).
 
-## Other Members
+## 其他成员
 -  `AUTO_REUSE`  []()
 -  `COMPILER_VERSION = '7.3.1 20180303'`  []()
 -  `CXX11_ABI_FLAG = 0`  []()

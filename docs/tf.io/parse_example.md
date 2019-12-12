@@ -4,7 +4,7 @@ Parses  `Example`  protos into a  `dict`  of tensors.
  tf.io.parse_example(    serialized,    features,    example_names=None,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 Parses a number of serialized [ `Example` ](https://tensorflow.google.cn/code/tensorflow/core/example/example.proto)protos given in  `serialized` . We refer to  `serialized`  as a batch with `batch_size`  many entries of individual  `Example`  protos.
 
@@ -22,7 +22,7 @@ Each  `FixedLenFeature`   `df`  maps to a  `Tensor`  of the specified type (or[ 
 
 Each  `FixedLenSequenceFeature`   `df`  maps to a  `Tensor`  of the specified type(or [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) if not specified) and shape `(serialized.size(), None) + df.shape` .All examples in  `serialized`  will be padded with  `default_value`  along thesecond dimension.
 
-#### Examples:
+#### 示例：
 For example, if one expects a [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32)  `VarLenFeature`   `ft`  and threeserialized  `Example` s are provided:
 
 ```
@@ -37,7 +37,7 @@ For example, if one expects a [ `tf.float32` ](https://tensorflow.google.cn/api_
  
 ```
 
-then the output will look like:
+然后输出如下：
 
 ```
  {"ft": SparseTensor(indices=[[0, 0], [0, 1], [2, 0]],
@@ -70,11 +70,11 @@ Given two  `Example`  input protos in  `serialized` :
  
 ```
 
-And arguments
+和争论
 
 ```
  example_names: ["input0", "input1"],
-features: {
+功能：{
     "kw": VarLenFeature(tf.string),
     "dank": VarLenFeature(tf.int64),
     "gps": VarLenFeature(tf.float32),
@@ -82,7 +82,7 @@ features: {
  
 ```
 
-Then the output is a dictionary:
+然后输出一个字典：
 
 ```
  {
@@ -118,19 +118,19 @@ For dense results in two serialized  `Example` s:
  
 ```
 
-#### We can use arguments:
+#### 我们可以使用参数：
 
 
 ```
  example_names: ["input0", "input1"],
-features: {
+功能：{
     "age": FixedLenFeature([], dtype=tf.int64, default_value=-1),
     "gender": FixedLenFeature([], dtype=tf.string),
 }
  
 ```
 
-And the expected output is:
+预期产量为：
 
 ```
  {
@@ -156,7 +156,7 @@ An alternative to  `VarLenFeature`  to obtain a  `SparseTensor`  is `SparseFeatu
  
 ```
 
-And arguments
+和争论
 
 ```
  example_names:,, dtype=tf.float32, size=100),
@@ -164,7 +164,7 @@ And arguments
  
 ```
 
-Then the output is a dictionary:
+然后输出一个字典：
 
 ```
  {
@@ -176,15 +176,15 @@ Then the output is a dictionary:
  
 ```
 
-#### Args:
+#### 参数：
 - **`serialized`** : A vector (1-D Tensor) of strings, a batch of binaryserialized  `Example`  protos.
 - **`features`** : A  `dict`  mapping feature keys to  `FixedLenFeature` , `VarLenFeature` , and  `SparseFeature`  values.
 - **`example_names`** : A vector (1-D Tensor) of strings (optional), the names ofthe serialized protos in the batch.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `dict`  mapping feature keys to  `Tensor`  and  `SparseTensor`  values.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any feature is invalid.

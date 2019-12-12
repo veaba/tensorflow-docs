@@ -1,14 +1,14 @@
 
 
 ## Class  `AdviceProto` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class Checker` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/AdviceProto/Checker)
 
 [ `class CheckersEntry` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/AdviceProto/CheckersEntry)
 
-## Properties
+## 属性
 
 
 ###  `checkers` 

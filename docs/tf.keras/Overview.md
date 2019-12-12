@@ -2,7 +2,7 @@ Implementation of the Keras API meant to be a high-level API for TensorFlow.
 
 Detailed documentation and user guides are available at[keras.io](https://keras.io).
 
-## Modules
+## 模块
 [ `activations` ](https://tensorflow.google.cn/api_docs/python/tf/keras/activations) module: Built-in activation functions.
 
 [ `applications` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications) module: Keras Applications are canned architectures with pre-trained weights.
@@ -41,13 +41,13 @@ Detailed documentation and user guides are available at[keras.io](https://keras.
 
 [ `wrappers` ](https://tensorflow.google.cn/api_docs/python/tf/keras/wrappers) module: Wrappers for Keras models, providing compatibility with other frameworks.
 
-## Classes
+## Class 
 [ `class Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model):  `Model`  groups layers into an object with training and inference features.
 
 [ `class Sequential` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Sequential): Linear stack of layers.
 
-## Functions
+## 功能
 [ `Input(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Input):  `Input()`  is used to instantiate a Keras tensor.
 
-## Other Members
+## 其他成员
 -  `__version__ = '2.2.4-tf'`  []()

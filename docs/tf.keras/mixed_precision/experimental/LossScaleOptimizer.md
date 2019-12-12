@@ -1,11 +1,11 @@
 
 
 ## Class  `LossScaleOptimizer` 
-An optimizer that applies loss scaling.
+应用损失缩放的优化器。
 
 Inherits From: [ `Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)
 
-**Aliases** : [ `tf.compat.v1.keras.mixed_precision.experimental.LossScaleOptimizer` ](/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer), [ `tf.compat.v2.keras.mixed_precision.experimental.LossScaleOptimizer` ](/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer)
+**别名** : [ `tf.compat.v1.keras.mixed_precision.experimental.LossScaleOptimizer` ](/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer), [ `tf.compat.v2.keras.mixed_precision.experimental.LossScaleOptimizer` ](/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer)
 
 Loss scaling is a process that multiplies the loss by a multiplier called theloss scale, and divides each gradient by the same multiplier. The pseudocodefor this process is:
 
@@ -56,18 +56,18 @@ opt.apply_gradients(zip(grads, vars))  # Loss scale will be updated here
  
 ```
 
-Initializes this loss scale optimizer.
+初始化此损失比例优化器。
 
-#### Args:
+#### 参数：
 - **`optimizer`** : The Optimizer instance to wrap.
 - **`loss_scale`** : The loss scale to scale the loss and gradients. This caneither be an int/float to use a fixed loss scale, the string "dynamic"to use dynamic loss scaling, or an instance of a LossScale. The string"dynamic" equivalent to passing  `DynamicLossScale()` , and passing anint/float is equivalent to passing a FixedLossScale with the given lossscale.
 
 
-## Properties
+## 属性
 
 
 ###  `iterations` 
-Variable. The number of training steps this Optimizer has run.
+变量。此优化器已运行的训练步骤数。
 
 ###  `learning_rate` 
 
@@ -79,9 +79,9 @@ The  `LossScale`  instance associated with this optimizer.
 
 
 ###  `weights` 
-Returns variables of this Optimizer based on the order created.
+根据创建的顺序返回此优化器的变量。
 
-## Methods
+## 方法
 
 
 ###  `add_slot` 
@@ -125,19 +125,19 @@ Add a new slot variable for  `var` .
  
 ```
 
-Apply gradients to variables.
+对变量应用渐变。
 
 This is the second part of  `minimize()` . It returns an  `Operation`  thatapplies gradients.
 
-#### Args:
+#### 参数：
 - **`grads_and_vars`** : List of (gradient, variable) pairs.
 - **`name`** : Optional name for the returned operation.  Default to the namepassed to the  `Optimizer`  constructor.
 
 
-#### Returns:
+#### 返回：
 An  `Operation`  that applies the specified gradients. If  `global_step` was not None, that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `grads_and_vars`  is malformed.
 - **`ValueError`** : If none of the variables have gradients.
 
@@ -155,17 +155,17 @@ from_config(
  
 ```
 
-Creates an optimizer from its config.
+从其配置创建优化器。
 
 This method is the reverse of  `get_config` ,capable of instantiating the same optimizer from the configdictionary.
 
-#### Arguments:
+#### 参数：
 - **`config`** : A Python dictionary, typically the output of get_config.
 - **`custom_objects`** : A Python dictionary mapping names to additional Pythonobjects used to create this optimizer, such as a function used for ahyperparameter.
 
 
-#### Returns:
-An optimizer instance.
+#### 返回：
+优化器实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/mixed_precision/experimental/loss_scale_optimizer.py#L248-L254)
@@ -175,12 +175,12 @@ An optimizer instance.
  
 ```
 
-Returns the config of the optimimizer.
+返回优化程序的配置。
 
 An optimizer config is a Python dictionary (serializable)containing the configuration of an optimizer.The same optimizer can be reinstantiated later(without any saved state) from this configuration.
 
-#### Returns:
-Python dictionary.
+#### 返回：
+python字典。
 
 ###  `get_gradients` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/mixed_precision/experimental/loss_scale_optimizer.py#L209-L212)
@@ -195,15 +195,15 @@ Python dictionary.
 
 Returns gradients of  `loss`  with respect to  `params` .
 
-#### Arguments:
+#### 参数：
 - **`loss`** : Loss tensor.
 - **`params`** : List of variables.
 
 
-#### Returns:
-List of gradient tensors.
+#### 返回：
+梯度张量列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case any gradient cannot be computed (e.g. if gradientfunction not implemented).
 
 
@@ -215,17 +215,17 @@ List of gradient tensors.
  
 ```
 
-Scales the loss by the loss scale.
+用损失量表来衡量损失。
 
 This method is only needed if you compute gradients manually, e.g. with[ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape). In that case, call this method to scale the loss beforepassing the loss to [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape). If you use[ `LossScaleOptimizer.minimize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer#minimize) or [ `LossScaleOptimizer.get_gradients` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer#get_gradients), lossscaling is automatically applied and this method is unneeded.
 
 If this method is called,  `get_unscaled_gradients`  should also be called.See the [ `tf.keras.mixed_precision.experimental.LossScaleOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer) doc foran example.
 
-#### Args:
+#### 参数：
 - **`loss`** : The loss, which will be multiplied by the loss scale. Can either bea tensor or a callable returning a tensor.
 
 
-#### Returns:
+#### 返回：
  `loss`  multiplied by [ `LossScaleOptimizer.loss_scale()` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer#loss_scale).
 
 ###  `get_slot` 
@@ -247,7 +247,7 @@ If this method is called,  `get_unscaled_gradients`  should also be called.See t
  
 ```
 
-A list of names for this optimizer's slots.
+此优化器插槽的名称列表。
 
 ###  `get_unscaled_gradients` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/mixed_precision/experimental/loss_scale_optimizer.py#L175-L198)
@@ -257,17 +257,17 @@ A list of names for this optimizer's slots.
  
 ```
 
-Unscales the gradients by the loss scale.
+用损失量表来解释梯度。
 
 This method is only needed if you compute gradients manually, e.g. with[ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape). In that case, call this method to unscale the gradientsafter computing them with [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape). If you use[ `LossScaleOptimizer.minimize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer#minimize) or [ `LossScaleOptimizer.get_gradients` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer#get_gradients), lossscaling is automatically applied and this method is unneeded.
 
 If this method is called,  `get_scaled_loss`  should also be called. Seethe [ `tf.keras.mixed_precision.experimental.LossScaleOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer) doc for anexample.
 
-#### Args:
+#### 参数：
 - **`grads`** : A list of tensors, each which will be divided by the loss scale.Can have None values, which are ignored.
 
 
-#### Returns:
+#### 返回：
 A new list the same size as  `grads` , where every non-None value in  `grads` is divided by [ `LossScaleOptimizer.loss_scale()` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer#loss_scale).
 
 ###  `get_updates` 
@@ -306,17 +306,17 @@ Minimize  `loss`  by updating  `var_list` .
 
 This method simply computes gradient using [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) and calls `apply_gradients()` . If you want to process the gradient before applyingthen call [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) and  `apply_gradients()`  explicitly insteadof using this function.
 
-#### Args:
+#### 参数：
 - **`loss`** : A callable taking no arguments which returns the value to minimize.
 - **`var_list`** : list or tuple of  `Variable`  objects to update to minimize `loss` , or a callable returning the list or tuple of  `Variable`  objects.Use callable when the variable list would otherwise be incomplete before `minimize`  since the variables are created at the first time  `loss`  iscalled.
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 - **`name`** : Optional name for the returned operation.
 
 
-#### Returns:
+#### 返回：
 An Operation that updates the variables in  `var_list` .  If  `global_step` was not  `None` , that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If some of the variables are not  `Variable`  objects.
 
 
@@ -336,5 +336,5 @@ An Operation that updates the variables in  `var_list` .  If  `global_step` was 
  
 ```
 
-Returns variables of this Optimizer based on the order created.
+根据创建的顺序返回此优化器的变量。
 

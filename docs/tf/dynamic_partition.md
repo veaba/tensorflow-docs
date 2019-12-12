@@ -1,6 +1,6 @@
 Partitions  `data`  into  `num_partitions`  tensors using indices from  `partitions` .
 
-**Aliases** : [ `tf.compat.v1.dynamic_partition` ](/api_docs/python/tf/dynamic_partition), [ `tf.compat.v2.dynamic_partition` ](/api_docs/python/tf/dynamic_partition)
+**别名** : [ `tf.compat.v1.dynamic_partition` ](/api_docs/python/tf/dynamic_partition), [ `tf.compat.v2.dynamic_partition` ](/api_docs/python/tf/dynamic_partition)
 
 ```
  tf.dynamic_partition(
@@ -23,7 +23,7 @@ For each index tuple  `js`  of size  `partitions.ndim` , the slice  `data[js, ..
 
  `data.shape`  must start with  `partitions.shape` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -47,13 +47,13 @@ See  `dynamic_stitch`  for an example on how to merge partitions back.
 
 ![](https://tensorflow.google.cn/images/DynamicPartition.png)
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor` .
 - **`partitions`** : A  `Tensor`  of type  `int32` .Any shape.  Indices in the range  `[0, num_partitions)` .
 - **`num_partitions`** : An  `int`  that is  `>= 1` .The number of partitions to output.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A list of  `num_partitions`   `Tensor`  objects with the same type as  `data` .
 

@@ -1,9 +1,9 @@
 
 
 ## Class  `ExperimentalDebugInfo` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `original_func_names` 

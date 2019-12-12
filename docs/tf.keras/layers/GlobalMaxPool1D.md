@@ -1,24 +1,24 @@
 
 
 ## Class  `GlobalMaxPool1D` 
-Global max pooling operation for temporal data.
+时态数据的全局最大池操作。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.GlobalMaxPool1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.compat.v1.keras.layers.GlobalMaxPooling1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.compat.v2.keras.layers.GlobalMaxPool1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.compat.v2.keras.layers.GlobalMaxPooling1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.keras.layers.GlobalMaxPooling1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D)
+**别名** : [ `tf.compat.v1.keras.layers.GlobalMaxPool1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.compat.v1.keras.layers.GlobalMaxPooling1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.compat.v2.keras.layers.GlobalMaxPool1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.compat.v2.keras.layers.GlobalMaxPooling1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D), [ `tf.keras.layers.GlobalMaxPooling1D` ](/api_docs/python/tf/keras/layers/GlobalMaxPool1D)
 
-### Used in the guide:
+### 在指南中使用：
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 
 
-#### Arguments:
+#### 参数：
 - **`data_format`** : A string,one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, steps, features)`  while  `channels_first` corresponds to inputs with shape `(batch, features, steps)` .
 
 
-#### Input shape:
+#### 输入形状：
 - If  `data_format='channels_last'` :3D tensor with shape: `(batch_size, steps, features)` 
 - If  `data_format='channels_first'` :3D tensor with shape: `(batch_size, features, steps)` 
 
 
-#### Output shape:
+#### 输出形状：
 2D tensor with shape  `(batch_size, features)` .
 
 ##  `__init__` 

@@ -1,6 +1,6 @@
-Local Response Normalization.
+本地响应规范化。
 
-**Aliases** : [ `tf.compat.v1.nn.local_response_normalization` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.compat.v1.nn.lrn` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.compat.v2.nn.local_response_normalization` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.compat.v2.nn.lrn` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.nn.lrn` ](/api_docs/python/tf/nn/local_response_normalization)
+**别名** : [ `tf.compat.v1.nn.local_response_normalization` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.compat.v1.nn.lrn` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.compat.v2.nn.local_response_normalization` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.compat.v2.nn.lrn` ](/api_docs/python/tf/nn/local_response_normalization), [ `tf.nn.lrn` ](/api_docs/python/tf/nn/local_response_normalization)
 
 ```
  tf.nn.local_response_normalization(
@@ -25,7 +25,7 @@ output = input / (bias + alpha * sqr_sum) ** beta
 
 For details, see [Krizhevsky et al., ImageNet classification with deepconvolutional neural networks (NIPS 2012)](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks).
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` .4-D.
 - **`depth_radius`** : An optional  `int` . Defaults to  `5` .0-D.  Half-width of the 1-D normalization window.
 - **`bias`** : An optional  `float` . Defaults to  `1` .An offset (usually positive to avoid dividing by 0).
@@ -34,6 +34,6 @@ For details, see [Krizhevsky et al., ImageNet classification with deepconvolutio
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

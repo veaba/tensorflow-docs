@@ -1,11 +1,11 @@
 
 
 ## Class  `UnrecognizedFlagError` 
-Raised when a flag is unrecognized.
+当无法识别标志时引发。
 
 Inherits From: [ `Error` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Error)
 
-#### Attributes:
+#### 属性：
 - **`flagname`** : str, the name of the unrecognized flag.
 - **`flagvalue`** : The value of the flag, empty if the flag is not defined.
 

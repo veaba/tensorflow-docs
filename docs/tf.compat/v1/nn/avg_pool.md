@@ -1,4 +1,4 @@
-Performs the average pooling on the input.
+对输入执行平均池。
 
 ```
  tf.compat.v1.nn.avg_pool(
@@ -15,7 +15,7 @@ Performs the average pooling on the input.
 
 Each entry in  `output`  is the mean of the corresponding size  `ksize` window in  `value` .
 
-#### Args:
+#### 参数：
 - **`value`** : A 4-D  `Tensor`  of shape  `[batch, height, width, channels]`  and type `float32` ,  `float64` ,  `qint8` ,  `quint8` , or  `qint32` .
 - **`ksize`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` . The size ofthe window for each dimension of the input tensor.
 - **`strides`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` . Thestride of the sliding window for each dimension of the input tensor.
@@ -25,6 +25,6 @@ Each entry in  `output`  is the mean of the corresponding size  `ksize` window i
 - **`input`** : Alias for value.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `value` .  The average pooled output tensor.
 

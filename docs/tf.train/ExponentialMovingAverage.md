@@ -1,9 +1,9 @@
 
 
 ## Class  `ExponentialMovingAverage` 
-Maintains moving averages of variables by employing an exponential decay.
+通过指数衰减保持变量的移动平均值。
 
-**Aliases** : [ `tf.compat.v1.train.ExponentialMovingAverage` ](/api_docs/python/tf/train/ExponentialMovingAverage), [ `tf.compat.v2.train.ExponentialMovingAverage` ](/api_docs/python/tf/train/ExponentialMovingAverage)
+**别名** : [ `tf.compat.v1.train.ExponentialMovingAverage` ](/api_docs/python/tf/train/ExponentialMovingAverage), [ `tf.compat.v2.train.ExponentialMovingAverage` ](/api_docs/python/tf/train/ExponentialMovingAverage)
 
 When training a model, it is often beneficial to maintain moving averages ofthe trained parameters.  Evaluations that use averaged parameters sometimesproduce significantly better results than the final trained values.
 
@@ -19,7 +19,7 @@ This is mathematically equivalent to the classic formula below, but the useof an
 
 Reasonable values for  `decay`  are close to 1.0, typically in themultiple-nines range: 0.999, 0.9999, etc.
 
-Example usage when creating a training model:
+创建培训模型时的示例用法：
 
 ```
  # Create variables.
@@ -45,11 +45,11 @@ with tf.control_dependencies([opt_op]):
  
 ```
 
-There are two ways to use the moving averages for evaluations:
+使用移动平均数进行评估有两种方法：
 
 - Build a model that uses the shadow variables instead of the variables.For this, use the  `average()`  method which returns the shadow variablefor a given variable.
 - Build a model normally but load the checkpoint files to evaluate by usingthe shadow variable names.  For this use the  `average_name()`  method.  Seethe [ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver) for moreinformation on restoring saved variables.
-Example of restoring the shadow variable values:
+恢复阴影变量值的示例：
 
 ```
  # Create a Saver that loads variables from their saved shadow values.
@@ -75,7 +75,7 @@ saver.restore(...checkpoint filename...)
  
 ```
 
-Creates a new ExponentialMovingAverage object.
+创建新的指数移动平均对象。
 
 The  `apply()`  method has to be called to create shadow variables and addops to maintain moving averages.
 
@@ -83,20 +83,20 @@ The optional  `num_updates`  parameter allows one to tweak the decay ratedynamic
 
  `min(decay, (1 + num_updates) / (10 + num_updates))` 
 
-#### Args:
+#### 参数：
 - **`decay`** : Float.  The decay to use.
 - **`num_updates`** : Optional count of number of updates applied to variables.
 - **`zero_debias`** : If  `True` , zero debias moving-averages that are initializedwith tensors.
 - **`name`** : String. Optional prefix name to use for the name of ops added in `apply()` .
 
 
-## Properties
+## 属性
 
 
 ###  `name` 
-The name of this ExponentialMovingAverage object.
+此指数移动平均对象的名称。
 
-## Methods
+## 方法
 
 
 ###  `apply` 
@@ -107,7 +107,7 @@ The name of this ExponentialMovingAverage object.
  
 ```
 
-Maintains moving averages of variables.
+保持变量的移动平均值。
 
  `var_list`  must be a list of  `Variable`  or  `Tensor`  objects.  This methodcreates shadow variables for all elements of  `var_list` .  Shadow variablesfor  `Variable`  objects are initialized to the variable's initial value.They will be added to the  `GraphKeys.MOVING_AVERAGE_VARIABLES`  collection.For  `Tensor`  objects, the shadow variables are initialized to 0 and zerodebiased (see docstring in  `assign_moving_average`  for more details).
 
@@ -117,14 +117,14 @@ Returns an op that updates all shadow variables from the current value oftheir a
 
 Note that  `apply()`  can be called multiple times. When eager execution isenabled each call to apply will update the variables once, so this needs tobe called in a loop.
 
-#### Args:
+#### 参数：
 - **`var_list`** : A list of Variable or Tensor objects. The variables and Tensorsmust be of types bfloat16, float16, float32, or float64.
 
 
-#### Returns:
-An Operation that updates the moving averages.
+#### 返回：
+更新移动平均值的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the arguments are not an allowed type.
 
 
@@ -138,11 +138,11 @@ An Operation that updates the moving averages.
 
 Returns the  `Variable`  holding the average of  `var` .
 
-#### Args:
+#### 参数：
 - **`var`** : A  `Variable`  object.
 
 
-#### Returns:
+#### 返回：
 A  `Variable`  object or  `None`  if the moving average of  `var` is not maintained.
 
 ###  `average_name` 
@@ -161,11 +161,11 @@ To restore variables, you have to know the name of the shadow variables.That nam
 
  `average_name()`  can be called whether or not  `apply()`  has been called.
 
-#### Args:
+#### 参数：
 - **`var`** : A  `Variable`  object.
 
 
-#### Returns:
+#### 返回：
 A string: The name of the variable that will be used or was usedby the  `ExponentialMovingAverage class`  to hold the moving average of `var` .
 
 ###  `variables_to_restore` 
@@ -188,7 +188,7 @@ For example,
  
 ```
 
-Below is an example of such mapping:
+下面是这种映射的一个示例：
 
 ```
    conv/batchnorm/gamma/ExponentialMovingAverage: conv/batchnorm/gamma,
@@ -197,10 +197,10 @@ Below is an example of such mapping:
  
 ```
 
-#### Args:
+#### 参数：
 - **`moving_avg_variables`** : a list of variables that require to use of themoving average variable name to be restored. If None, it will default tovariables.moving_average_variables() + variables.trainable_variables()
 
 
-#### Returns:
+#### 返回：
 A map from restore_names to variables. The restore_name is either theoriginal or the moving average version of the variable name, dependingon whether the variable name is in the  `moving_avg_variables` .
 

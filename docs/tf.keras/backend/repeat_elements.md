@@ -1,6 +1,6 @@
 Repeats the elements of a tensor along an axis, like  `np.repeat` .
 
-**Aliases** : [ `tf.compat.v1.keras.backend.repeat_elements` ](/api_docs/python/tf/keras/backend/repeat_elements), [ `tf.compat.v2.keras.backend.repeat_elements` ](/api_docs/python/tf/keras/backend/repeat_elements)
+**别名** : [ `tf.compat.v1.keras.backend.repeat_elements` ](/api_docs/python/tf/keras/backend/repeat_elements), [ `tf.compat.v2.keras.backend.repeat_elements` ](/api_docs/python/tf/keras/backend/repeat_elements)
 
 ```
  tf.keras.backend.repeat_elements(
@@ -13,16 +13,16 @@ Repeats the elements of a tensor along an axis, like  `np.repeat` .
 
 If  `x`  has shape  `(s1, s2, s3)`  and  `axis`  is  `1` , the outputwill have shape  `(s1, s2 * rep, s3)` .
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`rep`** : Python integer, number of times to repeat.
 - **`axis`** : Axis along which to repeat.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Example:
+#### 示例：
 
 
 ```

@@ -1,6 +1,6 @@
 Returns the current [ `tf.distribute.ReplicaContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReplicaContext) or  `None` .
 
-**Aliases** : [ `tf.compat.v1.distribute.get_replica_context` ](/api_docs/python/tf/distribute/get_replica_context), [ `tf.compat.v2.distribute.get_replica_context` ](/api_docs/python/tf/distribute/get_replica_context)
+**别名** : [ `tf.compat.v1.distribute.get_replica_context` ](/api_docs/python/tf/distribute/get_replica_context), [ `tf.compat.v2.distribute.get_replica_context` ](/api_docs/python/tf/distribute/get_replica_context)
 
 ```
  tf.distribute.get_replica_context()
@@ -9,7 +9,7 @@ Returns the current [ `tf.distribute.ReplicaContext` ](https://tensorflow.google
 
 Returns  `None`  if in a cross-replica context.
 
-#### Note that execution:
+#### 注意执行：
 1. starts in the default (single-replica) replica context (this functionwill return the default  `ReplicaContext`  object);
 2. switches to cross-replica context (in which case this will return `None` ) when entering a  `with tf.distribute.Strategy.scope():`  block;
 3. switches to a (non-default) replica context inside `strategy.experimental_run_v2(fn, ...)` ;
@@ -31,7 +31,7 @@ with strategy.scope():
  
 ```
 
-#### Returns:
+#### 返回：
 The current [ `tf.distribute.ReplicaContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReplicaContext) object when in a replica contextscope, else  `None` .
 
 Within a particular block, exactly one of these two things will be true:

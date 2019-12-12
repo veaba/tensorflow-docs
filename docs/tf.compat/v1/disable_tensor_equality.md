@@ -1,8 +1,8 @@
-Compare Tensors by their id and be hashable.
+根据张量的id比较它们，并且可以散列。
 
 ```
  tf.compat.v1.disable_tensor_equality() 
 ```
 
-This is a legacy behaviour of TensorFlow and is highly discouraged.
+这是TensorFlow的遗留行为，非常不受欢迎。
 

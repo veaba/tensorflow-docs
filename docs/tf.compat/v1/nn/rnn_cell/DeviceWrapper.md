@@ -1,7 +1,7 @@
 
 
 ## Class  `DeviceWrapper` 
-Operator that ensures an RNNCell runs on a particular device.
+确保RNNCell在特定设备上运行的运算符。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/rnn_cell_impl.py#L1191-L1192)
@@ -18,17 +18,17 @@ Construct a  `DeviceWrapper`  for  `cell`  with device  `device` .
 
 Ensures the wrapped  `cell`  is called with [ `tf.device(device)` ](https://tensorflow.google.cn/api_docs/python/tf/device).
 
-#### Args:
+#### 参数：
 - **`cell`** : An instance of  `RNNCell` .
 - **`device`** : A device string or function, for passing to [ `tf.device` ](https://tensorflow.google.cn/api_docs/python/tf/device).
 - **`**kwargs`** : dict of keyword arguments for base layer.
 
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -43,7 +43,7 @@ DEPRECATED FUNCTION
 ###  `state_size` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

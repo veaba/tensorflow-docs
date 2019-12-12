@@ -1,8 +1,8 @@
 
 
-Computes the mean along segments of a tensor.
+计算张量沿线段的平均值。
 
-**Aliases** : [ `tf.compat.v1.math.unsorted_segment_mean` ](/api_docs/python/tf/math/unsorted_segment_mean), [ `tf.compat.v1.unsorted_segment_mean` ](/api_docs/python/tf/math/unsorted_segment_mean), [ `tf.compat.v2.math.unsorted_segment_mean` ](/api_docs/python/tf/math/unsorted_segment_mean)
+**别名** : [ `tf.compat.v1.math.unsorted_segment_mean` ](/api_docs/python/tf/math/unsorted_segment_mean), [ `tf.compat.v1.unsorted_segment_mean` ](/api_docs/python/tf/math/unsorted_segment_mean), [ `tf.compat.v2.math.unsorted_segment_mean` ](/api_docs/python/tf/math/unsorted_segment_mean)
 
 ```
  tf.math.unsorted_segment_mean(
@@ -24,13 +24,13 @@ If there is no entry for a given segment ID  `i` , it outputs 0.
 
 If the given segment ID  `i`  is negative, the value is dropped and will notbe added to the sum of the segment.
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor`  with floating point or complex dtype.
 - **`segment_ids`** : An integer tensor whose shape is a prefix of  `data.shape` .
 - **`num_segments`** : An integer scalar  `Tensor` .  The number of distinct segmentIDs.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` .  Has same shape as data, except for the first  `segment_ids.rank`  dimensions, which are replaced with a single dimension which has size `num_segments` .
 

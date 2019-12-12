@@ -1,8 +1,8 @@
 
 
-Compute the regularized incomplete beta integral Ix(a,b).
+计算正则不完全β积分ix（a，b）。
 
-**Aliases** : [ `tf.compat.v1.betainc` ](/api_docs/python/tf/math/betainc), [ `tf.compat.v1.math.betainc` ](/api_docs/python/tf/math/betainc), [ `tf.compat.v2.math.betainc` ](/api_docs/python/tf/math/betainc)
+**别名** : [ `tf.compat.v1.betainc` ](/api_docs/python/tf/math/betainc), [ `tf.compat.v1.math.betainc` ](/api_docs/python/tf/math/betainc), [ `tf.compat.v2.math.betainc` ](/api_docs/python/tf/math/betainc)
 
 ```
  tf.math.betainc(
@@ -14,5 +14,5 @@ Compute the regularized incomplete beta integral Ix(a,b).
  
 ```
 
-The regularized incomplete beta integral is defined as:
+正则不完全β积分定义为：
 

@@ -1,6 +1,6 @@
-Public API for tf.queue namespace.
+tf.queue命名空间的公共api。
 
-## Classes
+## Class 
 [ `class FIFOQueue` ](https://tensorflow.google.cn/api_docs/python/tf/queue/FIFOQueue): A queue implementation that dequeues elements in first-in first-out order.
 
 [ `class PaddingFIFOQueue` ](https://tensorflow.google.cn/api_docs/python/tf/queue/PaddingFIFOQueue): A FIFOQueue that supports batching variable-sized tensors by padding.

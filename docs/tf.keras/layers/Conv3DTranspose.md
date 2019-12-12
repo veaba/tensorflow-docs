@@ -1,17 +1,17 @@
 
 
 ## Class  `Conv3DTranspose` 
-Transposed convolution layer (sometimes called Deconvolution).
+转置卷积层（有时称为反卷积）。
 
 Inherits From: [ `Conv3D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv3D)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Conv3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.compat.v1.keras.layers.Convolution3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.compat.v2.keras.layers.Conv3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.compat.v2.keras.layers.Convolution3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.keras.layers.Convolution3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose)
+**别名** : [ `tf.compat.v1.keras.layers.Conv3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.compat.v1.keras.layers.Convolution3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.compat.v2.keras.layers.Conv3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.compat.v2.keras.layers.Convolution3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose), [ `tf.keras.layers.Convolution3DTranspose` ](/api_docs/python/tf/keras/layers/Conv3DTranspose)
 
 The need for transposed convolutions generally arisesfrom the desire to use a transformation going in the opposite directionof a normal convolution, i.e., from something that has the shape of theoutput of some convolution to something that has the shape of its inputwhile maintaining a connectivity pattern that is compatible withsaid convolution.
 
 When using this layer as the first layer in a model,provide the keyword argument  `input_shape` (tuple of integers, does not include the sample axis),e.g.  `input_shape=(128, 128, 128, 3)`  for a 128x128x128 volume with 3 channelsif  `data_format="channels_last"` .
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 3 integers, specifying thedepth, height and width of the 3D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 3 integers,specifying the strides of the convolution along the depth, height  and width.Can be a single integer to specify the same value forall spatial dimensions.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -30,13 +30,13 @@ When using this layer as the first layer in a model,provide the keyword argument
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-#### Input shape:
+#### 输入形状：
 5D tensor with shape: `(batch, channels, depth, rows, cols)`  if data_format='channels_first'or 5D tensor with shape: `(batch, depth, rows, cols, channels)`  if data_format='channels_last'.
 
-#### Output shape:
+#### 输出形状：
 5D tensor with shape: `(batch, filters, new_depth, new_rows, new_cols)`  if  data_format='channels_first'or 5D tensor with shape: `(batch, new_depth, new_rows, new_cols, filters)`  if  data_format='channels_last'. `depth`  and  `rows`  and  `cols`  values might have changed due to padding.
 
-#### References:
+#### 参考文献：
 - [A guide to convolution arithmetic for deeplearning](https://arxiv.org/abs/1603.07285v1)
 - [DeconvolutionalNetworks](https://www.matthewzeiler.com/mattzeiler/deconvolutionalnetworks.pdf)
 

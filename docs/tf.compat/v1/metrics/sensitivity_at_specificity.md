@@ -1,4 +1,4 @@
-Computes the specificity at a given sensitivity.
+计算给定灵敏度下的特异性。
 
 ```
  tf.compat.v1.metrics.sensitivity_at_specificity(    labels,    predictions,    specificity,    weights=None,    num_thresholds=200,    metrics_collections=None,    updates_collections=None,    name=None) 
@@ -12,7 +12,7 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 
 For additional information about specificity and sensitivity, see thefollowing: https://en.wikipedia.org/wiki/Sensitivity_and_specificity
 
-#### Args:
+#### 参数：
 - **`labels`** : The ground truth values, a  `Tensor`  whose dimensions must match `predictions` . Will be cast to  `bool` .
 - **`predictions`** : A floating point  `Tensor`  of arbitrary shape and whose valuesare in the range  `[0, 1]` .
 - **`specificity`** : A scalar value in range  `[0, 1]` .
@@ -23,11 +23,11 @@ For additional information about specificity and sensitivity, see thefollowing: 
 - **`name`** : An optional variable_scope name.
 
 
-#### Returns:
+#### 返回：
 - **`sensitivity`** : A scalar  `Tensor`  representing the sensitivity at the given `specificity`  value.
 - **`update_op`** : An operation that increments the  `true_positives` , `true_negatives` ,  `false_positives`  and  `false_negatives`  variablesappropriately and whose value matches  `sensitivity` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `predictions`  and  `labels`  have mismatched shapes, if `weights`  is not  `None`  and its shape doesn't match  `predictions` , or if `specificity`  is not between 0 and 1, or if either  `metrics_collections` or  `updates_collections`  are not a list or tuple.
 - **`RuntimeError`** : If eager execution is enabled.

@@ -1,11 +1,11 @@
 
 
 ## Class  `Tokenizer` 
-Text tokenization utility class.
+文本标记化实用程序类。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer), [ `tf.compat.v2.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer)
+**别名** : [ `tf.compat.v1.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer), [ `tf.compat.v2.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
 This class allows to vectorize a text corpus, by turning eachtext into either a sequence of integers (each integer being the indexof a token in a dictionary) or into a vector where the coefficientfor each token could be binary, based on word count, based on tf-idf...
@@ -17,11 +17,11 @@ This class allows to vectorize a text corpus, by turning eachtext into either a 
  num_words: the maximum number of words to keep, based
     on word frequency. Only the most common `num_words-1` words will
     be kept.
-filters: a string where each element is a character that will be
+过滤器：一个字符串，其中每个元素都是
     filtered from the texts. The default is all punctuation, plus
     tabs and line breaks, minus the `'` character.
-lower: boolean. Whether to convert the texts to lowercase.
-split: str. Separator for word splitting.
+下：布尔值。是否将文本转换为小写。
+拆分：单词拆分的str分隔符。
 char_level: if True, every character will be treated as a token.
 oov_token: if given, it will be added to word_index and used to
     replace out-of-vocabulary words during text_to_sequence calls
@@ -51,7 +51,7 @@ By default, all punctuation is removed, turning the texts intospace-separated se
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `fit_on_sequences` 
@@ -62,7 +62,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Updates internal vocabulary based on a list of sequences.
+根据序列列表更新内部词汇表。
 
 Required before using  `sequences_to_matrix` (if  `fit_on_texts`  was never called).
 
@@ -70,7 +70,7 @@ Required before using  `sequences_to_matrix` (if  `fit_on_texts`  was never call
 
 
 ```
- sequences: A list of sequence.
+序列：序列的列表。
     A "sequence" is a list of integer word indices.
  
 ```
@@ -83,7 +83,7 @@ Required before using  `sequences_to_matrix` (if  `fit_on_texts`  was never call
  
 ```
 
-Updates internal vocabulary based on a list of texts.
+根据文本列表更新内部词汇。
 
 In the case where texts contains lists,we assume each entry of the lists to be a token.
 
@@ -113,7 +113,7 @@ Returns the tokenizer configuration as Python dictionary.The word count dictiona
 
 
 ```
- A Python dictionary with the tokenizer configuration.
+具有标记器配置的python字典。
  
 ```
 
@@ -128,13 +128,13 @@ Returns the tokenizer configuration as Python dictionary.The word count dictiona
  
 ```
 
-Converts a list of sequences into a Numpy matrix.
+将序列列表转换为numpy矩阵。
 
 # Arguments
 
 
 ```
- sequences: list of sequences
+序列：序列列表
     (a sequence is a list of integer word indices).
 mode: one of "binary", "count", "tfidf", "freq"
  
@@ -144,7 +144,7 @@ mode: one of "binary", "count", "tfidf", "freq"
 
 
 ```
- A Numpy matrix.
+纽米矩阵。
  
 ```
 
@@ -165,7 +165,7 @@ mode: one of "binary", "count", "tfidf", "freq"
  
 ```
 
-Transforms each sequence into a list of text.
+将每个序列转换为文本列表。
 
 Only top  `num_words-1`  most frequent words will be taken into account.Only words known by the tokenizer will be taken into account.
 
@@ -173,7 +173,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- sequences: A list of sequences (list of integers).
+序列：序列列表（整数列表）。
  
 ```
 
@@ -203,7 +203,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- sequences: A list of sequences.
+序列：序列列表。
  
 ```
 
@@ -211,7 +211,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- Yields individual texts.
+生成单个文本。
  
 ```
 
@@ -226,13 +226,13 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
  
 ```
 
-Convert a list of texts to a Numpy matrix.
+将文本列表转换为numpy矩阵。
 
 # Arguments
 
 
 ```
- texts: list of strings.
+文本：字符串列表。
 mode: one of "binary", "count", "tfidf", "freq".
  
 ```
@@ -241,7 +241,7 @@ mode: one of "binary", "count", "tfidf", "freq".
 
 
 ```
- A Numpy matrix.
+纽米矩阵。
  
 ```
 
@@ -253,7 +253,7 @@ mode: one of "binary", "count", "tfidf", "freq".
  
 ```
 
-Transforms each text in texts to a sequence of integers.
+将文本中的每个文本转换为一个整数序列。
 
 Only top  `num_words-1`  most frequent words will be taken into account.Only words known by the tokenizer will be taken into account.
 
@@ -261,7 +261,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- texts: A list of texts (strings).
+文本：文本（字符串）列表。
  
 ```
 
@@ -269,7 +269,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- A list of sequences.
+序列列表。
  
 ```
 
@@ -291,7 +291,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- texts: A list of texts (strings).
+文本：文本（字符串）列表。
  
 ```
 
@@ -299,7 +299,7 @@ Only top  `num_words-1`  most frequent words will be taken into account.Only wor
 
 
 ```
- Yields individual sequences.
+产生单个序列。
  
 ```
 
@@ -326,7 +326,7 @@ Returns a JSON string containing the tokenizer configuration.To load a tokenizer
 
 
 ```
- A JSON string containing the tokenizer configuration.
+包含标记器配置的json字符串。
  
 ```
 

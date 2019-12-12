@@ -1,6 +1,6 @@
 A  `CategoricalColumn`  with in-memory vocabulary.
 
-**Aliases** : [ `tf.compat.v1.feature_column.categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/categorical_column_with_vocabulary_list), [ `tf.compat.v2.feature_column.categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/categorical_column_with_vocabulary_list)
+**别名** : [ `tf.compat.v1.feature_column.categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/categorical_column_with_vocabulary_list), [ `tf.compat.v2.feature_column.categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/categorical_column_with_vocabulary_list)
 
 ```
  tf.feature_column.categorical_column_with_vocabulary_list(
@@ -13,11 +13,11 @@ A  `CategoricalColumn`  with in-memory vocabulary.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Boosted trees using Estimators](https://tensorflow.google.cn/tutorials/estimator/boosted_trees)
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
 - [Build a linear model with Estimators](https://tensorflow.google.cn/tutorials/estimator/linear)
@@ -49,7 +49,7 @@ linear_prediction, _, _ = linear_model(features, columns)
  
 ```
 
-And to make an embedding with either:
+并嵌入：
 
 ```
  columns = [embedding_column(colors, 3),...]
@@ -58,7 +58,7 @@ dense_tensor = input_layer(features, columns)
  
 ```
 
-#### Args:
+#### 参数：
 - **`key`** : A unique string identifying the input feature. It is used as the columnname and the dictionary key for feature parsing configs, feature  `Tensor` objects, and feature columns.
 - **`vocabulary_list`** : An ordered iterable defining the vocabulary. Each featureis mapped to the index of its value (if present) in  `vocabulary_list` .Must be castable to  `dtype` .
 - **`dtype`** : The type of features. Only string and integer types are supported. If `None` , it will be inferred from  `vocabulary_list` .
@@ -66,10 +66,10 @@ dense_tensor = input_layer(features, columns)
 - **`num_oov_buckets`** : Non-negative integer, the number of out-of-vocabularybuckets. All out-of-vocabulary inputs will be assigned IDs in the range `[len(vocabulary_list), len(vocabulary_list)+num_oov_buckets)`  based on ahash of the input value. A positive  `num_oov_buckets`  can not be specifiedwith  `default_value` .
 
 
-#### Returns:
+#### 返回：
 A  `CategoricalColumn`  with in-memory vocabulary.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `vocabulary_list`  is empty, or contains duplicate keys.
 - **`ValueError`** :  `num_oov_buckets`  is a negative integer.
 - **`ValueError`** :  `num_oov_buckets`  and  `default_value`  are both specified.

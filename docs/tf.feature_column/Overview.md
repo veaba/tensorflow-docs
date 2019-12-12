@@ -1,6 +1,6 @@
 Public API for tf.feature_column namespace.
 
-## Functions
+## 功能
 [ `bucketized_column(...)` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/bucketized_column): Represents discretized dense input.
 
 [ `categorical_column_with_hash_bucket(...)` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/categorical_column_with_hash_bucket): Represents sparse feature where ids are set by hashing.

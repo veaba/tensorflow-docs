@@ -1,6 +1,6 @@
 Adds sparse  `updates`  to an existing tensor according to  `indices` .
 
-**Aliases** : [ `tf.compat.v1.tensor_scatter_add` ](/api_docs/python/tf/tensor_scatter_nd_add), [ `tf.compat.v1.tensor_scatter_nd_add` ](/api_docs/python/tf/tensor_scatter_nd_add), [ `tf.compat.v2.tensor_scatter_nd_add` ](/api_docs/python/tf/tensor_scatter_nd_add)
+**别名** : [ `tf.compat.v1.tensor_scatter_add` ](/api_docs/python/tf/tensor_scatter_nd_add), [ `tf.compat.v1.tensor_scatter_nd_add` ](/api_docs/python/tf/tensor_scatter_nd_add), [ `tf.compat.v2.tensor_scatter_nd_add` ](/api_docs/python/tf/tensor_scatter_nd_add)
 
 ```
  tf.tensor_scatter_nd_add(
@@ -42,7 +42,7 @@ In Python, this scatter add operation would look like this:
  
 ```
 
-The resulting tensor would look like this:
+生成的张量如下所示：
 
 ```
  [1, 12, 1, 11, 10, 1, 1, 13]
@@ -66,7 +66,7 @@ In Python, this scatter add operation would look like this:
  
 ```
 
-The resulting tensor would look like this:
+生成的张量如下所示：
 
 ```
  [[[6, 6, 6, 6], [7, 7, 7, 7], [8, 8, 8, 8], [9, 9, 9, 9]],
@@ -78,13 +78,13 @@ The resulting tensor would look like this:
 
 Note that on CPU, if an out of bound index is found, an error is returned.On GPU, if an out of bound index is found, the index is ignored.
 
-#### Args:
+#### 参数：
 - **`tensor`** : A  `Tensor` . Tensor to copy/update.
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Index tensor.
 - **`updates`** : A  `Tensor` . Must have the same type as  `tensor` .Updates to scatter into output.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `tensor` .
 

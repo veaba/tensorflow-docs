@@ -1,9 +1,9 @@
 
 
 ## Class  `OptimizationOptions` 
-Represents options for dataset optimizations.
+表示数据集优化的选项。
 
-**Aliases** : [ `tf.compat.v1.data.experimental.OptimizationOptions` ](/api_docs/python/tf/data/experimental/OptimizationOptions), [ `tf.compat.v2.data.experimental.OptimizationOptions` ](/api_docs/python/tf/data/experimental/OptimizationOptions)
+**别名** : [ `tf.compat.v1.data.experimental.OptimizationOptions` ](/api_docs/python/tf/data/experimental/OptimizationOptions), [ `tf.compat.v2.data.experimental.OptimizationOptions` ](/api_docs/python/tf/data/experimental/OptimizationOptions)
 
 You can set the optimization options of a dataset through the `experimental_optimization`  property of [ `tf.data.Options` ](https://tensorflow.google.cn/api_docs/python/tf/data/Options); the property isan instance of [ `tf.data.experimental.OptimizationOptions` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/OptimizationOptions).
 
@@ -26,7 +26,7 @@ dataset = dataset.with_options(options)
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `apply_default_optimizations` 
@@ -77,7 +77,7 @@ Whether to parallelize copying of batch elements. If None, defaults to False.
 ###  `shuffle_and_repeat_fusion` 
 Whether to fuse shuffle and repeat transformations. If None, defaults to True.
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 

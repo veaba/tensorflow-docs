@@ -1,17 +1,17 @@
-Creates a tensor with all elements set to zero.
+创建所有元素都设置为零的张量。
 
 ```
  tf.zeros_like(    input,    dtype=None,    name=None) 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [CycleGAN](https://tensorflow.google.cn/tutorials/generative/cyclegan)
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 Given a single tensor ( `tensor` ), this operation returns a tensor of thesame type and shape as  `tensor`  with all elements set to zero. Optionally,you can use  `dtype`  to specify a new type for the returned tensor.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -29,12 +29,12 @@ dtype=int32
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .
 - **`dtype`** : A type for the returned  `Tensor` . Must be  `float16` ,  `float32` , `float64` ,  `int8` ,  `uint8` ,  `int16` ,  `uint16` ,  `int32` ,  `int64` , `complex64` ,  `complex128` ,  `bool`  or  `string` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with all elements set to zero.
 

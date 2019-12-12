@@ -1,6 +1,6 @@
-Concatenates tensors along one dimension.
+沿一维连接张量。
 
-**Aliases** : [ `tf.compat.v1.concat` ](/api_docs/python/tf/concat), [ `tf.compat.v2.concat` ](/api_docs/python/tf/concat)
+**别名** : [ `tf.compat.v1.concat` ](/api_docs/python/tf/concat), [ `tf.compat.v2.concat` ](/api_docs/python/tf/concat)
 
 ```
  tf.concat(
@@ -11,12 +11,12 @@ Concatenates tensors along one dimension.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Better performance with the tf.data API](https://tensorflow.google.cn/guide/data_performance)
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Unicode strings](https://tensorflow.google.cn/tutorials/load_data/unicode)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
@@ -40,7 +40,7 @@ That is, the data from the input tensors is joined along the  `axis` dimension.
 
 The number of dimensions of the input tensors must match, and all dimensionsexcept  `axis`  must be equal.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -58,7 +58,7 @@ tf.shape(tf.concat([t3, t4], 1))  # [2, 6]
 
 As in Python, the  `axis`  could also be negative numbers. Negative  `axis` are interpreted as counting from the end of the rank, i.e.,  `axis + rank(values)` -th dimension.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -68,7 +68,7 @@ tf.concat([t1, t2], -1)
  
 ```
 
-would produce:
+会产生：
 
 ```
  [[[ 1,  2,  7,  4],
@@ -88,19 +88,19 @@ would produce:
  
 ```
 
-can be rewritten as
+可以重写为
 
 ```
  tf.stack(tensors, axis=axis)
  
 ```
 
-#### Args:
+#### 参数：
 - **`values`** : A list of  `Tensor`  objects or a single  `Tensor` .
 - **`axis`** : 0-D  `int32`   `Tensor` .  Dimension along which to concatenate. Must bein the range  `[-rank(values), rank(values))` . As in Python, indexing foraxis is 0-based. Positive axis in the rage of  `[0, rank(values))`  refersto  `axis` -th dimension. And negative axis refers to  `axis +rank(values)` -th dimension.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  resulting from concatenation of the input tensors.
 

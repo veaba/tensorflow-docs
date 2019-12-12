@@ -1,12 +1,12 @@
 
 
 ## Class  `AttrValue` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class ListValue` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/AttrValue/ListValue)
 
-## Properties
+## 属性
 
 
 ###  `b` 

@@ -4,7 +4,7 @@ Rewrites  `computation`  for execution on a TPU system.
  tf.compat.v1.tpu.rewrite(    computation,    inputs=None,    infeed_queue=None,    device_assignment=None,    name=None) 
 ```
 
-#### Args:
+#### 参数：
 - **`computation`** : A Python function that builds a computation to apply to theinput. If the function takes n inputs, 'inputs' should be a list of ntensors.
 
  `computation`  may return a list of operations and tensors. Tensors mustcome before operations in the returned list.  The return value of `rewrite`  is a list of tensors corresponding to the tensors from theoutput of  `computation` .
@@ -24,6 +24,6 @@ All  `Operation` s constructed during  `computation`  will be executed whenevalu
 - **`name`** : (Deprecated) Does nothing.
 
 
-#### Returns:
+#### 返回：
 Same data structure as if computation(*inputs) is called directly with someexceptions for correctness. Exceptions include:  1) None output: a NoOp would be returned which control-depends on     computation.  2) Single value output: A tuple containing the value would be returned.  3) Operation-only outputs: a NoOp would be returned which     control-depends on computation.  TODO(b/121383831): Investigate into removing these special cases.
 

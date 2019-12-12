@@ -1,6 +1,6 @@
 Scatter  `updates`  into a new tensor according to  `indices` .
 
-**Aliases** : [ `tf.compat.v1.manip.scatter_nd` ](/api_docs/python/tf/scatter_nd), [ `tf.compat.v1.scatter_nd` ](/api_docs/python/tf/scatter_nd), [ `tf.compat.v2.scatter_nd` ](/api_docs/python/tf/scatter_nd)
+**别名** : [ `tf.compat.v1.manip.scatter_nd` ](/api_docs/python/tf/scatter_nd), [ `tf.compat.v1.scatter_nd` ](/api_docs/python/tf/scatter_nd), [ `tf.compat.v2.scatter_nd` ](/api_docs/python/tf/scatter_nd)
 
 ```
  tf.scatter_nd(
@@ -48,7 +48,7 @@ The simplest form of scatter is to insert individual elements in a tensor byinde
  
 ```
 
-The resulting tensor would look like this:
+生成的张量如下所示：
 
 ```
  [0, 11, 0, 10, 9, 0, 0, 12]
@@ -72,7 +72,7 @@ We can also, insert entire slices of a higher rank tensor all at once. Forexampl
  
 ```
 
-The resulting tensor would look like this:
+生成的张量如下所示：
 
 ```
  [[[5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7], [8, 8, 8, 8]],
@@ -84,13 +84,13 @@ The resulting tensor would look like this:
 
 Note that on CPU, if an out of bound index is found, an error is returned.On GPU, if an out of bound index is found, the index is ignored.
 
-#### Args:
+#### 参数：
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Index tensor.
 - **`updates`** : A  `Tensor` . Updates to scatter into output.
 - **`shape`** : A  `Tensor` . Must have the same type as  `indices` .1-D. The shape of the resulting tensor.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `updates` .
 

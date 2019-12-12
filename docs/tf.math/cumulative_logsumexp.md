@@ -1,6 +1,6 @@
 Compute the cumulative log-sum-exp of the tensor  `x`  along  `axis` .
 
-**Aliases** : [ `tf.compat.v1.math.cumulative_logsumexp` ](/api_docs/python/tf/math/cumulative_logsumexp), [ `tf.compat.v2.math.cumulative_logsumexp` ](/api_docs/python/tf/math/cumulative_logsumexp)
+**别名** : [ `tf.compat.v1.math.cumulative_logsumexp` ](/api_docs/python/tf/math/cumulative_logsumexp), [ `tf.compat.v2.math.cumulative_logsumexp` ](/api_docs/python/tf/math/cumulative_logsumexp)
 
 ```
  tf.math.cumulative_logsumexp(
@@ -34,7 +34,7 @@ it cannot be directly used here as there is no fast way of applying itto each pr
 
 However, reducing using the above operator leads to a different computationtree (logs are taken repeatedly instead of only at the end), and the maximumis only computed pairwise instead of over the entire prefix. In general, thisleads to a different and slightly less precise computation.
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float16` ,  `float32` , `float64` .
 - **`axis`** : A  `Tensor`  of type  `int32`  or  `int64`  (default: 0). Must be in therange  `[-rank(x), rank(x))` .
 - **`exclusive`** : If  `True` , perform exclusive cumulative log-sum-exp.
@@ -42,6 +42,6 @@ However, reducing using the above operator leads to a different computationtree 
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same shape and type as  `x` .
 

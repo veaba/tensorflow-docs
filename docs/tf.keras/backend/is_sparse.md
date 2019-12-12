@@ -1,20 +1,20 @@
-Returns whether a tensor is a sparse tensor.
+返回张量是否为稀疏张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse), [ `tf.compat.v2.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse)
+**别名** : [ `tf.compat.v1.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse), [ `tf.compat.v2.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse)
 
 ```
  tf.keras.backend.is_sparse(tensor)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`tensor`** : A tensor instance.
 
 
-#### Returns:
-A boolean.
+#### 返回：
+布尔值。
 
-#### Example:
+#### 示例：
 
 
 ```

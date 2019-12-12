@@ -18,7 +18,7 @@ Reduces  `input_tensor`  along the dimensions given in  `axis` .Unless  `keepdim
 
 If  `axis`  is None, all dimensions are reduced, and atensor with a single element is returned.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -29,7 +29,7 @@ tf.reduce_any(x, 1)  # [True, False]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The boolean tensor to reduce.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
@@ -38,9 +38,9 @@ tf.reduce_any(x, 1)  # [True, False]
 - **`keep_dims`** : Deprecated alias for  `keepdims` .
 
 
-#### Returns:
-The reduced tensor.
+#### 返回：
+简化张量。
 
-#### Numpy Compatibility
-Equivalent to np.any
+#### numpy兼容性
+相当于np.any
 

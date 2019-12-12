@@ -1,6 +1,6 @@
-Estimator: High level tools for working with models.
+估计器：处理模型的高级工具。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/experimental) module: Public API for tf.estimator.experimental namespace.
 
 [ `export` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/export) module: All public utility methods for exporting Estimator to SavedModel.
@@ -9,7 +9,7 @@ Estimator: High level tools for working with models.
 
 [ `tpu` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/tpu) module: Public API for tf.estimator.tpu namespace.
 
-## Classes
+## Class 
 [ `class BaselineClassifier` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/BaselineClassifier): A classifier that can establish a simple baseline.
 
 [ `class BaselineEstimator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/BaselineEstimator): An estimator that can establish a simple baseline.
@@ -114,7 +114,7 @@ Estimator: High level tools for working with models.
 
 [ `class WarmStartSettings` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/WarmStartSettings): Settings for warm-starting in  `tf.estimator.Estimators` .
 
-## Functions
+## 功能
 [ `add_metrics(...)` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/add_metrics): Creates a new [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) which has given metrics.
 
 [ `classifier_parse_example_spec(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/classifier_parse_example_spec): Generates parsing spec for tf.parse_example to be used with classifiers.

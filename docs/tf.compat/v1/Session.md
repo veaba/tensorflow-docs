@@ -1,7 +1,7 @@
 
 
 ## Class  `Session` 
-A class for running TensorFlow operations.
+运行tensorflow操作的类。
 
 A  `Session`  object encapsulates the environment in which  `Operation` objects are executed, and  `Tensor`  objects are evaluated. Forexample:
 
@@ -56,32 +56,32 @@ sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(
  
 ```
 
-Creates a new TensorFlow session.
+创建新的tensorflow会话。
 
 If no  `graph`  argument is specified when constructing the session,the default graph will be launched in the session. If you areusing more than one graph (created with [ `tf.Graph()` ](https://tensorflow.google.cn/api_docs/python/tf/Graph)) in the sameprocess, you will have to use different sessions for each graph,but each graph can be used in multiple sessions. In this case, itis often clearer to pass the graph to be launched explicitly tothe session constructor.
 
-#### Args:
+#### 参数：
 - **`target`** : (Optional.) The execution engine to connect to. Defaults to usingan in-process engine. See[Distributed TensorFlow](https://tensorflow.org/deploy/distributed) formore examples.
 - **`graph`** : (Optional.) The  `Graph`  to be launched (described above).
 - **`config`** : (Optional.) A[ `ConfigProto` ](https://tensorflow.google.cn/code/tensorflow/core/protobuf/config.proto)protocol buffer with configuration options for the session.
 
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-The graph that was launched in this session.
+在此会话中启动的图表。
 
 ###  `graph_def` 
-A serializable version of the underlying TensorFlow graph.
+底层tensorflow图的可序列化版本。
 
-#### Returns:
+#### 返回：
 A graph_pb2.GraphDef proto containing nodes for all of the Operations inthe underlying TensorFlow graph.
 
 ###  `sess_str` 
-The TensorFlow process to which this session will connect.
+此会话将连接到的tensorflow进程。
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -112,7 +112,7 @@ The TensorFlow process to which this session will connect.
  
 ```
 
-Returns a context manager that makes this object the default session.
+返回使此对象成为默认会话的上下文管理器。
 
 Use with the  `with`  keyword to specify that calls to[ `tf.Operation.run` ](https://tensorflow.google.cn/api_docs/python/tf/Operation#run) or [ `tf.Tensor.eval` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval) should be executed inthis session.
 
@@ -149,8 +149,8 @@ Alternatively, you can use  `with tf.compat.v1.Session():`  to create asession t
 
 *N.B.* Entering a  `with sess.as_default():`  block does not affectthe current default graph. If you are using multiple graphs, and `sess.graph`  is different from the value of[ `tf.compat.v1.get_default_graph` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/get_default_graph), you must explicitly enter a `with sess.graph.as_default():`  block to make  `sess.graph`  the defaultgraph.
 
-#### Returns:
-A context manager using this session as the default session.
+#### 返回：
+使用此会话作为默认会话的上下文管理器。
 
 ###  `close` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/client/session.py#L742-L753)
@@ -160,11 +160,11 @@ A context manager using this session as the default session.
  
 ```
 
-Closes this session.
+关闭此会话。
 
-Calling this method frees all resources associated with the session.
+调用此方法将释放与会话关联的所有资源。
 
-#### Raises:
+#### 加薪：
 - **[ `tf.errors.OpError` ](/api_docs/python/tf/errors/OpError)** : Or one of its subclasses if an error occurs whileclosing the TensorFlow session.
 
 
@@ -176,7 +176,7 @@ Calling this method frees all resources associated with the session.
  
 ```
 
-Lists available devices in this session.
+列出此会话中的可用设备。
 
 ```
  devices = sess.list_devices()
@@ -185,20 +185,20 @@ for d in devices:
  
 ```
 
-#### Where:
-Each element in the list has the following properties
+#### 其中：
+列表中的每个元素都具有以下属性
 
 - **`name`** : A string with the full name of the device. ex: `/job:worker/replica:0/task:3/device:CPU:0` 
 - **`device_type`** : The type of the device (e.g.  `CPU` ,  `GPU` ,  `TPU` .)
-- **`memory_limit`** : The maximum amount of memory available on the device.Note: depending on the device, it is possible the usable memory couldbe substantially less.
+- **`memory_limit`** : The maximum amount of memory available on the device.注意：depending on the device, it is possible the usable memory couldbe substantially less.
 
 
-#### Raises:
+#### 加薪：
 - **[ `tf.errors.OpError` ](/api_docs/python/tf/errors/OpError)** : If it encounters an error (e.g. session is in aninvalid state, or network errors occur).
 
 
-#### Returns:
-A list of devices in the session.
+#### 返回：
+会话中设备的列表。
 
 ###  `make_callable` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/client/session.py#L1185-L1309)
@@ -212,22 +212,22 @@ A list of devices in the session.
  
 ```
 
-Returns a Python callable that runs a particular step.
+返回运行特定步骤的可调用python。
 
 The returned callable will take  `len(feed_list)`  arguments whose typesmust be compatible feed values for the respective elements of  `feed_list` .For example, if element  `i`  of  `feed_list`  is a [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), the  `i` thargument to the returned callable must be a numpy ndarray (or somethingconvertible to an ndarray) with matching element type and shape. See `tf.Session.run`  for details of the allowable feed key and value types.
 
 The returned callable will have the same return type as `tf.Session.run(fetches, ...)` . For example, if  `fetches`  is a [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor),the callable will return a numpy ndarray; if  `fetches`  is a [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation),it will return  `None` .
 
-#### Args:
+#### 参数：
 - **`fetches`** : A value or list of values to fetch. See  `tf.Session.run`  fordetails of the allowable fetch types.
 - **`feed_list`** : (Optional.) A list of  `feed_dict`  keys. See  `tf.Session.run` for details of the allowable feed key types.
 - **`accept_options`** : (Optional.) If  `True` , the returned  `Callable`  will beable to accept [ `tf.compat.v1.RunOptions` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/RunOptions) and [ `tf.compat.v1.RunMetadata` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/RunMetadata)as optional keyword arguments  `options`  and  `run_metadata` ,respectively, with the same syntax and semantics as  `tf.Session.run` ,which is useful for certain use cases (profiling and debugging) but willresult in measurable slowdown of the  `Callable` 'sperformance. Default:  `False` .
 
 
-#### Returns:
+#### 返回：
 A function that when called will execute the step defined by `feed_list`  and  `fetches`  in this session.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `fetches`  or  `feed_list`  cannot be interpretedas arguments to  `tf.Session.run` .
 
 
@@ -243,15 +243,15 @@ A function that when called will execute the step defined by `feed_list`  and  `
  
 ```
 
-Continues the execution with more feeds and fetches.
+用更多的feed和fetch继续执行。
 
-This is EXPERIMENTAL and subject to change.
+这是实验性的，随时可能改变。
 
 To use partial execution, a user first calls  `partial_run_setup()`  andthen a sequence of  `partial_run()` .  `partial_run_setup`  specifies thelist of feeds and fetches that will be used in the subsequent `partial_run`  calls.
 
 The optional  `feed_dict`  argument allows the caller to overridethe value of tensors in the graph. See run() for more information.
 
-Below is a simple example:
+下面是一个简单的例子：
 
 ```
  a = array_ops.placeholder(dtypes.float32, shape=[])
@@ -266,16 +266,16 @@ res = sess.partial_run(h, r2, feed_dict={c: res})
  
 ```
 
-#### Args:
+#### 参数：
 - **`handle`** : A handle for a sequence of partial runs.
 - **`fetches`** : A single graph element, a list of graph elements, or a dictionarywhose values are graph elements or lists of graph elements (seedocumentation for  `run` ).
 - **`feed_dict`** : A dictionary that maps graph elements to values (describedabove).
 
 
-#### Returns:
+#### 返回：
 Either a single value if  `fetches`  is a single graph element, ora list of values if  `fetches`  is a list, or a dictionary with thesame keys as  `fetches`  if that is a dictionary(see documentation for  `run` ).
 
-#### Raises:
+#### 加薪：
 - **[ `tf.errors.OpError` ](/api_docs/python/tf/errors/OpError)** : Or one of its subclasses on error.
 
 
@@ -290,21 +290,21 @@ Either a single value if  `fetches`  is a single graph element, ora list of valu
  
 ```
 
-Sets up a graph with feeds and fetches for partial run.
+为部分运行设置带有源和获取的图形。
 
-This is EXPERIMENTAL and subject to change.
+这是实验性的，随时可能改变。
 
 Note that contrary to  `run` ,  `feeds`  only specifies the graph elements.The tensors will be supplied by the subsequent  `partial_run`  calls.
 
-#### Args:
+#### 参数：
 - **`fetches`** : A single graph element, or a list of graph elements.
 - **`feeds`** : A single graph element, or a list of graph elements.
 
 
-#### Returns:
-A handle for partial run.
+#### 返回：
+用于部分运行的句柄。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If this  `Session`  is in an invalid state (e.g. has beenclosed).
 - **`TypeError`** : If  `fetches`  or  `feed_dict`  keys are of an inappropriate type.
 - **[ `tf.errors.OpError` ](/api_docs/python/tf/errors/OpError)** : Or one of its subclasses if a TensorFlow error happens.
@@ -327,18 +327,18 @@ Resets resource containers on  `target` , and close all connected sessions.
 
 A resource container is distributed across all workers in thesame cluster as  `target` .  When a resource container on  `target` is reset, resources associated with that container will be cleared.In particular, all Variables in the container will become undefined:they lose their values and shapes.
 
-#### NOTE:
+#### 注：
 (i) reset() is currently only implemented for distributed sessions.(ii) Any sessions on the master named by  `target`  will be closed.
 
 If no resource containers are provided, all containers are reset.
 
-#### Args:
+#### 参数：
 - **`target`** : The execution engine to connect to.
 - **`containers`** : A list of resource container name strings, or  `None`  if all ofall the containers are to be reset.
 - **`config`** : (Optional.) Protocol buffer with configuration options.
 
 
-#### Raises:
+#### 加薪：
 - **[ `tf.errors.OpError` ](/api_docs/python/tf/errors/OpError)** : Or one of its subclasses if an error occurs whileresetting containers.
 
 
@@ -368,7 +368,7 @@ The  `fetches`  argument may be a single graph element, or an arbitrarilynested 
 - A  `string`  which is the name of a tensor or operation in the graph.
 The value returned by  `run()`  has the same shape as the  `fetches`  argument,where the leaves are replaced by the corresponding values returned byTensorFlow.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -403,17 +403,17 @@ The optional  `options`  argument expects a [ `RunOptions` ] proto. The optionsa
 
 The optional  `run_metadata`  argument expects a [ `RunMetadata` ] proto. Whenappropriate, the non-Tensor output of this step will be collected there. Forexample, when users turn on tracing in  `options` , the profiled info will becollected into this argument and passed back.
 
-#### Args:
+#### 参数：
 - **`fetches`** : A single graph element, a list of graph elements, or a dictionarywhose values are graph elements or lists of graph elements (describedabove).
 - **`feed_dict`** : A dictionary that maps graph elements to values (describedabove).
 - **`options`** : A [ `RunOptions` ] protocol buffer
 - **`run_metadata`** : A [ `RunMetadata` ] protocol buffer
 
 
-#### Returns:
+#### 返回：
 Either a single value if  `fetches`  is a single graph element, ora list of values if  `fetches`  is a list, or a dictionary with thesame keys as  `fetches`  if that is a dictionary (described above).Order in which  `fetches`  operations are evaluated inside the callis undefined.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If this  `Session`  is in an invalid state (e.g. has beenclosed).
 - **`TypeError`** : If  `fetches`  or  `feed_dict`  keys are of an inappropriate type.
 - **`ValueError`** : If  `fetches`  or  `feed_dict`  keys are invalid or refer to a `Tensor`  that doesn't exist.

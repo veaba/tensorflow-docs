@@ -26,7 +26,7 @@ J[m:, n:] = d(Im y)/d(Im x)
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : a tensor or list of tensors
 - **`x_shape`** : the dimensions of x as a tuple or an array of ints. If x is a list,then this is the list of shapes.
 - **`y`** : a tensor
@@ -37,6 +37,6 @@ J[m:, n:] = d(Im y)/d(Im x)
 - **`extra_feed_dict`** : dict that allows fixing specified tensor valuesduring the Jacobian calculation.
 
 
-#### Returns:
+#### 返回：
 Two 2-d numpy arrays representing the theoretical and numericalJacobian for dy/dx. Each has "x_size" rows and "y_size" columnswhere "x_size" is the number of elements in x and "y_size" is thenumber of elements in y. If x is a list, returns a list of two numpy arrays.
 

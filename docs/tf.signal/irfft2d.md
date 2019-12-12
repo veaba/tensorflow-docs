@@ -1,6 +1,6 @@
 Inverse 2D real-valued fast Fourier transform.
 
-**Aliases** : [ `tf.compat.v1.signal.irfft2d` ](/api_docs/python/tf/signal/irfft2d), [ `tf.compat.v1.spectral.irfft2d` ](/api_docs/python/tf/signal/irfft2d), [ `tf.compat.v2.signal.irfft2d` ](/api_docs/python/tf/signal/irfft2d)
+**别名** : [ `tf.compat.v1.signal.irfft2d` ](/api_docs/python/tf/signal/irfft2d), [ `tf.compat.v1.spectral.irfft2d` ](/api_docs/python/tf/signal/irfft2d), [ `tf.compat.v2.signal.irfft2d` ](/api_docs/python/tf/signal/irfft2d)
 
 ```
  tf.signal.irfft2d(
@@ -17,12 +17,12 @@ The inner-most 2 dimensions of  `input`  are assumed to be the result of  `RFFT2
 
 Along each axis  `IRFFT2D`  is computed on, if  `fft_length`  (or `fft_length / 2 + 1`  for the inner-most dimension) is smaller than thecorresponding dimension of  `input` , the dimension is cropped. If it is larger,the dimension is padded with zeros.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `complex64` . A complex64 tensor.
 - **`fft_length`** : A  `Tensor`  of type  `int32` .An int32 tensor of shape [2]. The FFT length for each dimension.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 

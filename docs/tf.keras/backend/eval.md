@@ -1,20 +1,20 @@
-Evaluates the value of a variable.
+计算变量的值。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.eval` ](/api_docs/python/tf/keras/backend/eval), [ `tf.compat.v2.keras.backend.eval` ](/api_docs/python/tf/keras/backend/eval)
+**别名** : [ `tf.compat.v1.keras.backend.eval` ](/api_docs/python/tf/keras/backend/eval), [ `tf.compat.v2.keras.backend.eval` ](/api_docs/python/tf/keras/backend/eval)
 
 ```
  tf.keras.backend.eval(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A variable.
 
 
-#### Returns:
-A Numpy array.
+#### 返回：
+一个核阵列。
 
-#### Examples:
+#### 示例：
 
 
 ```

@@ -29,7 +29,7 @@ Backpropagation will happen into both  `logits`  and  `labels` .  To disallowbac
 
 **Note that to avoid confusion, it is required to pass only named arguments tothis function.** 
 
-#### Args:
+#### 参数：
 - **`labels`** : Each vector along the class dimension should hold a validprobability distribution e.g. for the case in which labels are of shape `[batch_size, num_classes]` , each row of  `labels[i]`  must be a validprobability distribution.
 - **`logits`** : Unscaled log probabilities.
 - **`axis`** : The class dimension. Defaulted to -1 which is the last dimension.
@@ -37,6 +37,6 @@ Backpropagation will happen into both  `logits`  and  `labels` .  To disallowbac
 - **`dim`** : Deprecated alias for axis.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that contains the softmax cross entropy loss. Its type is thesame as  `logits`  and its shape is the same as  `labels`  except that it doesnot have the last dimension of  `labels` .
 

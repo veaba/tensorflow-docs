@@ -1,9 +1,9 @@
 
 
 ## Class  `TFRecordCompressionType` 
-The type of compression for the record.
+记录的压缩类型。
 
-## Class Members
+## Class 成员
 -  `GZIP = 2`  []()
 -  `NONE = 0`  []()
 -  `ZLIB = 1`  []()

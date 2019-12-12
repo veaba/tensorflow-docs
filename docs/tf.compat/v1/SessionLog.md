@@ -1,9 +1,9 @@
 
 
 ## Class  `SessionLog` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `checkpoint_path` 
@@ -15,7 +15,7 @@ A ProtocolMessage
 ###  `status` 
  `SessionStatus status` 
 
-## Class Members
+## Class 成员
 -  `CHECKPOINT = 3`  []()
 -  `START = 1`  []()
 -  `STATUS_UNSPECIFIED = 0`  []()

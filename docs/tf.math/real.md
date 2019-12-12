@@ -1,6 +1,6 @@
-Returns the real part of a complex (or real) tensor.
+返回复张量（或实张量）的实部。
 
-**Aliases** : [ `tf.compat.v1.math.real` ](/api_docs/python/tf/math/real), [ `tf.compat.v1.real` ](/api_docs/python/tf/math/real), [ `tf.compat.v2.math.real` ](/api_docs/python/tf/math/real)
+**别名** : [ `tf.compat.v1.math.real` ](/api_docs/python/tf/math/real), [ `tf.compat.v1.real` ](/api_docs/python/tf/math/real), [ `tf.compat.v2.math.real` ](/api_docs/python/tf/math/real)
 
 ```
  tf.math.real(    input,    name=None) 
@@ -8,7 +8,7 @@ Returns the real part of a complex (or real) tensor.
 
 Given a tensor  `input` , this operation returns a tensor of type  `float`  thatis the real part of each element in  `input`  considered as a complex number.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -17,11 +17,11 @@ Given a tensor  `input` , this operation returns a tensor of type  `float`  that
 
 If  `input`  is already real, it is returned unchanged.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must have numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32`  or  `float64` .
 

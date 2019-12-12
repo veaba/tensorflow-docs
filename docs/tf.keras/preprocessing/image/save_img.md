@@ -1,6 +1,6 @@
-Saves an image stored as a Numpy array to a path or file object.
+将存储为numpy数组的图像保存到path或file对象。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.save_img` ](/api_docs/python/tf/keras/preprocessing/image/save_img), [ `tf.compat.v2.keras.preprocessing.image.save_img` ](/api_docs/python/tf/keras/preprocessing/image/save_img)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.save_img` ](/api_docs/python/tf/keras/preprocessing/image/save_img), [ `tf.compat.v2.keras.preprocessing.image.save_img` ](/api_docs/python/tf/keras/preprocessing/image/save_img)
 
 ```
  tf.keras.preprocessing.image.save_img(
@@ -14,7 +14,7 @@ Saves an image stored as a Numpy array to a path or file object.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`path`** : Path or file object.
 - **`x`** : Numpy array.
 - **`data_format`** : Image data format,either "channels_first" or "channels_last".

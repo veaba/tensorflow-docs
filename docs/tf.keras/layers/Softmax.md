@@ -1,19 +1,19 @@
 
 
 ## Class  `Softmax` 
-Softmax activation function.
+SoftMax激活功能。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Softmax` ](/api_docs/python/tf/keras/layers/Softmax), [ `tf.compat.v2.keras.layers.Softmax` ](/api_docs/python/tf/keras/layers/Softmax)
+**别名** : [ `tf.compat.v1.keras.layers.Softmax` ](/api_docs/python/tf/keras/layers/Softmax), [ `tf.compat.v2.keras.layers.Softmax` ](/api_docs/python/tf/keras/layers/Softmax)
 
-#### Input shape:
+#### 输入形状：
 Arbitrary. Use the keyword argument  `input_shape` (tuple of integers, does not include the samples axis)when using this layer as the first layer in a model.
 
-#### Output shape:
-Same shape as the input.
+#### 输出形状：
+与输入形状相同。
 
-#### Arguments:
+#### 参数：
 - **`axis`** : Integer, axis along which the softmax normalization is applied.
 
 

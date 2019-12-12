@@ -1,9 +1,9 @@
-Public API for tf.io.gfile namespace.
+tf.io.gfile命名空间的公共API。
 
-## Classes
+## Class 
 [ `class GFile` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/GFile): File I/O wrappers without thread locking.
 
-## Functions
+## 功能
 [ `copy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/copy): Copies data from  `src`  to  `dst` .
 
 [ `exists(...)` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/exists): Determines whether a path exists or not.

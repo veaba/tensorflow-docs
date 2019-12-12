@@ -12,7 +12,7 @@ The  `tag`  in the outputted Summary.Value protobufs is generated based on thena
 - If  `max_outputs`  is greater than 1, the summary value tags aregenerated sequentially as '*name*/audio/0', '*name*/audio/1', etc
 
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the generated node. Will also serve as a series name inTensorBoard.
 - **`tensor`** : A 3-D  `float32`   `Tensor`  of shape  `[batch_size, frames, channels]` or a 2-D  `float32`   `Tensor`  of shape  `[batch_size, frames]` .
 - **`sample_rate`** : A Scalar  `float32`   `Tensor`  indicating the sample rate of thesignal in hertz.
@@ -21,6 +21,6 @@ The  `tag`  in the outputted Summary.Value protobufs is generated based on thena
 - **`family`** : Optional; if provided, used as the prefix of the summary tag name,which controls the tab name used for display on Tensorboard.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of type  `string` . The serialized  `Summary`  protocolbuffer.
 

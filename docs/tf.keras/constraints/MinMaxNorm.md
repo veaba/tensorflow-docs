@@ -1,15 +1,15 @@
 
 
 ## Class  `MinMaxNorm` 
-MinMaxNorm weight constraint.
+minmaxnorm权重约束。
 
 Inherits From: [ `Constraint` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/Constraint)
 
-**Aliases** : [ `tf.compat.v1.keras.constraints.MinMaxNorm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.compat.v1.keras.constraints.min_max_norm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.compat.v2.keras.constraints.MinMaxNorm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.compat.v2.keras.constraints.min_max_norm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.keras.constraints.min_max_norm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm)
+**别名** : [ `tf.compat.v1.keras.constraints.MinMaxNorm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.compat.v1.keras.constraints.min_max_norm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.compat.v2.keras.constraints.MinMaxNorm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.compat.v2.keras.constraints.min_max_norm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm), [ `tf.keras.constraints.min_max_norm` ](/api_docs/python/tf/keras/constraints/MinMaxNorm)
 
 Constrains the weights incident to each hidden unitto have the norm between a lower bound and an upper bound.
 
-#### Arguments:
+#### 参数：
 - **`min_value`** : the minimum norm for the incoming weights.
 - **`max_value`** : the maximum norm for the incoming weights.
 - **`rate`** : rate for enforcing the constraint: weights will berescaled to yield `(1 - rate) * norm + rate * norm.clip(min_value, max_value)` .Effectively, this means that rate=1.0 stands for strictenforcement of the constraint, while rate<1.0 means thatweights will be rescaled at each step to slowly movetowards a value inside the desired interval.
@@ -31,7 +31,7 @@ Constrains the weights incident to each hidden unitto have the norm between a lo
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -42,7 +42,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L165-L171)

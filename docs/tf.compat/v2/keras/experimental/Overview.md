@@ -1,6 +1,6 @@
-Public API for tf.keras.experimental namespace.
+tf.keras.experimental命名空间的公共api。
 
-## Classes
+## Class 
 [ `class CosineDecay` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/CosineDecay): A LearningRateSchedule that uses a cosine decay schedule.
 
 [ `class CosineDecayRestarts` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/CosineDecayRestarts): A LearningRateSchedule that uses a cosine decay schedule with restarts.
@@ -17,7 +17,7 @@ Public API for tf.keras.experimental namespace.
 
 [ `class WideDeepModel` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/WideDeepModel): Wide &amp; Deep Model for regression and classification problems.
 
-## Functions
+## 功能
 [ `export_saved_model(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/export_saved_model): Exports a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) as a Tensorflow SavedModel. (deprecated)
 
 [ `load_from_saved_model(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/load_from_saved_model): Loads a keras Model from a SavedModel created by  `export_saved_model()` . (deprecated)

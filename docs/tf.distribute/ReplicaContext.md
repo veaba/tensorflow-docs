@@ -3,7 +3,7 @@
 ## Class  `ReplicaContext` 
 [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) API when in a replica context.
 
-**Aliases** : [ `tf.compat.v1.distribute.ReplicaContext` ](/api_docs/python/tf/distribute/ReplicaContext), [ `tf.compat.v2.distribute.ReplicaContext` ](/api_docs/python/tf/distribute/ReplicaContext)
+**别名** : [ `tf.compat.v1.distribute.ReplicaContext` ](/api_docs/python/tf/distribute/ReplicaContext), [ `tf.compat.v2.distribute.ReplicaContext` ](/api_docs/python/tf/distribute/ReplicaContext)
 
 You can use [ `tf.distribute.get_replica_context` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/get_replica_context) to get an instance of `ReplicaContext` . This should be inside your replicated step function, suchas in a [ `tf.distribute.Strategy.experimental_run_v2` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy#experimental_run_v2) call.
 
@@ -20,24 +20,24 @@ You can use [ `tf.distribute.get_replica_context` ](https://tensorflow.google.cn
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `devices` 
 The devices this replica is to be executed on, as a tuple of strings.
 
 ###  `num_replicas_in_sync` 
-Returns number of replicas over which gradients are aggregated.
+返回聚合渐变的副本数。
 
 ###  `replica_id_in_sync_group` 
-Returns the id of the replica being defined.
+返回正在定义的副本的ID。
 
 This identifies the replica that is part of a sync group. Currently weassume that all sync groups contain the same number of replicas. The valueof the replica id can range from 0 to  `num_replica_in_sync`  - 1.
 
 ###  `strategy` 
 The current [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) object.
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -75,7 +75,7 @@ All-reduces the given  `value Tensor`  nest across replicas.
 
 If  `all_reduce`  is called in any replica, it must be called in all replicas.The nested structure and  `Tensor`  shapes must be identical in all replicas.
 
-IMPORTANT: The ordering of communications must be identical in all replicas.
+重要提示：所有副本中的通信顺序必须相同。
 
 Example with two replicas:  Replica 0  `value` : {'a': 1, 'b': [40, 1]}  Replica 1  `value` : {'a': 3, 'b': [ 2, 98]}
 
@@ -83,12 +83,12 @@ If  `reduce_op`  ==  `SUM` :    Result (on all replicas): {'a': 4, 'b': [42, 99]
 
 If  `reduce_op`  ==  `MEAN` :    Result (on all replicas): {'a': 2, 'b': [21, 49.5]}
 
-#### Args:
+#### 参数：
 - **`reduce_op`** : Reduction type, an instance of [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) enum.
 - **`value`** : The nested structure of  `Tensor` s to all-reduce. The structure mustbe compatible with [ `tf.nest` ](https://tensorflow.google.cn/api_docs/python/tf/nest).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  nest with the reduced  `value` s from each replica.
 
 ###  `merge_call` 
@@ -118,12 +118,12 @@ with cross-replica-context(strategy):
  
 ```
 
-#### Args:
+#### 参数：
 - **`merge_fn`** : Function that joins arguments from threads that are given asPerReplica. It accepts [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) object asthe first argument.
 - **`args`** : List or tuple with positional per-thread arguments for  `merge_fn` .
 - **`kwargs`** : Dict with keyword per-thread arguments for  `merge_fn` .
 
 
-#### Returns:
+#### 返回：
 The return value of  `merge_fn` , except for  `PerReplica`  values which areunpacked.
 

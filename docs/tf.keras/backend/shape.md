@@ -1,20 +1,20 @@
-Returns the symbolic shape of a tensor or variable.
+返回张量或变量的符号形状。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.shape` ](/api_docs/python/tf/keras/backend/shape), [ `tf.compat.v2.keras.backend.shape` ](/api_docs/python/tf/keras/backend/shape)
+**别名** : [ `tf.compat.v1.keras.backend.shape` ](/api_docs/python/tf/keras/backend/shape), [ `tf.compat.v2.keras.backend.shape` ](/api_docs/python/tf/keras/backend/shape)
 
 ```
  tf.keras.backend.shape(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable.
 
 
-#### Returns:
-A symbolic shape (which is itself a tensor).
+#### 返回：
+一种符号形状（它本身就是张量）。
 
-#### Examples:
+#### 示例：
 
 
 ```

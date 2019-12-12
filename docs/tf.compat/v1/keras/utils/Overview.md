@@ -1,6 +1,6 @@
-Keras utilities.
+凯拉斯公用事业公司。
 
-## Classes
+## Class 
 [ `class CustomObjectScope` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/CustomObjectScope): Provides a scope that changes to  `_GLOBAL_CUSTOM_OBJECTS`  cannot escape.
 
 [ `class GeneratorEnqueuer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/GeneratorEnqueuer): Builds a queue out of a data generator.
@@ -15,7 +15,7 @@ Keras utilities.
 
 [ `class SequenceEnqueuer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/SequenceEnqueuer): Base class to enqueue inputs.
 
-## Functions
+## 功能
 [ `convert_all_kernels_in_model(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/convert_all_kernels_in_model): Converts all convolution kernels in a model from Theano to TensorFlow.
 
 [ `custom_object_scope(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/custom_object_scope): Provides a scope that changes to  `_GLOBAL_CUSTOM_OBJECTS`  cannot escape.

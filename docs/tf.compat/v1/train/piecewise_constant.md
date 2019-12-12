@@ -1,4 +1,4 @@
-Piecewise constant from boundaries and interval values.
+从边界值和区间值中分段常数。
 
 ```
  tf.compat.v1.train.piecewise_constant(    x,    boundaries,    values,    name=None) 
@@ -17,20 +17,20 @@ values)
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A 0-D scalar  `Tensor` . Must be one of the following types:  `float32` , `float64` ,  `uint8` ,  `int8` ,  `int16` ,  `int32` ,  `int64` .
 - **`boundaries`** : A list of  `Tensor` s or  `int` s or  `float` s with strictlyincreasing entries, and with all elements having the same type as  `x` .
 - **`values`** : A list of  `Tensor` s or  `float` s or  `int` s that specifies the valuesfor the intervals defined by  `boundaries` . It should have one more elementthan  `boundaries` , and all elements should have the same type.
 - **`name`** : A string. Optional name of the operation. Defaults to'PiecewiseConstant'.
 
 
-#### Returns:
+#### 返回：
 A 0-D Tensor. Its value is  `values[0]`  when  `x <= boundaries[0]` , `values[1]`  when  `x > boundaries[0]`  and  `x <= boundaries[1]` , ...,and values[-1] when  `x > boundaries[-1]` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if types of  `x`  and  `boundaries`  do not match, or types of all `values`  do not match orthe number of elements in the lists does not match.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled, this function returns a function which inturn returns the decayed learning rate Tensor. This can be useful for changingthe learning rate value across different invocations of optimizer functions.
 

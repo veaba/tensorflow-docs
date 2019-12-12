@@ -1,6 +1,6 @@
-Computes the matrix exponential of one or more square matrices.
+计算一个或多个方阵的矩阵指数。
 
-**Aliases** : [ `tf.compat.v1.linalg.expm` ](/api_docs/python/tf/linalg/expm), [ `tf.compat.v2.linalg.expm` ](/api_docs/python/tf/linalg/expm)
+**别名** : [ `tf.compat.v1.linalg.expm` ](/api_docs/python/tf/linalg/expm), [ `tf.compat.v2.linalg.expm` ](/api_docs/python/tf/linalg/expm)
 
 ```
  tf.linalg.expm(
@@ -16,18 +16,18 @@ The exponential is computed using a combination of the scaling and squaringmetho
 
 The input is a tensor of shape  `[..., M, M]`  whose inner-most 2 dimensionsform square matrices. The output is a tensor of the same shape as the inputcontaining the exponential for all input submatrices  `[..., :, :]` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be  `float16` ,  `float32` ,  `float64` ,  `complex64` , or `complex128`  with shape  `[..., M, M]` .
 - **`name`** :  A name to give this  `Op`  (optional).
 
 
-#### Returns:
-the matrix exponential of the input.
+#### 返回：
+输入的矩阵指数。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : An unsupported type is provided as input.
 
 
-#### Scipy Compatibility
-Equivalent to scipy.linalg.expm
+#### scipy兼容性
+相当于scipy.linalg.expm
 

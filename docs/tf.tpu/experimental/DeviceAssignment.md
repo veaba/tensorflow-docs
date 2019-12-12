@@ -1,9 +1,9 @@
 
 
 ## Class  `DeviceAssignment` 
-Mapping from logical cores in a computation to the physical TPU topology.
+从计算中的逻辑核心到物理tpu拓扑的映射。
 
-**Aliases** : [ `tf.compat.v1.tpu.experimental.DeviceAssignment` ](/api_docs/python/tf/tpu/experimental/DeviceAssignment), [ `tf.compat.v2.tpu.experimental.DeviceAssignment` ](/api_docs/python/tf/tpu/experimental/DeviceAssignment)
+**别名** : [ `tf.compat.v1.tpu.experimental.DeviceAssignment` ](/api_docs/python/tf/tpu/experimental/DeviceAssignment), [ `tf.compat.v2.tpu.experimental.DeviceAssignment` ](/api_docs/python/tf/tpu/experimental/DeviceAssignment)
 
 Prefer to use the [ `DeviceAssignment.build()` ](https://tensorflow.google.cn/api_docs/python/tf/tpu/experimental/DeviceAssignment#build) helper to construct a `DeviceAssignment` ; it is easier if less flexible than constructing a `DeviceAssignment`  directly.
 
@@ -20,35 +20,35 @@ Prefer to use the [ `DeviceAssignment.build()` ](https://tensorflow.google.cn/ap
 
 Constructs a  `DeviceAssignment`  object.
 
-#### Args:
+#### 参数：
 - **`topology`** : A  `Topology`  object that describes the physical TPU topology.
 - **`core_assignment`** : A logical to physical core mapping, represented as arank 3 numpy array. See the description of the  `core_assignment` property for more details.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `topology`  is not  `Topology`  object.
 - **`ValueError`** : If  `core_assignment`  is not a rank 3 numpy array.
 
 
-## Properties
+## 属性
 
 
 ###  `core_assignment` 
-The logical to physical core mapping.
+逻辑到物理核心的映射。
 
-#### Returns:
+#### 返回：
 An integer numpy array of rank 3, with shape `[num_replicas, num_cores_per_replica, topology_rank]` . Maps(replica, logical core) pairs to physical topology coordinates.
 
 ###  `num_cores_per_replica` 
-The number of cores per replica.
+每个副本的核心数。
 
 ###  `num_replicas` 
-The number of replicas of the computation.
+计算的副本数。
 
 ###  `topology` 
 A  `Topology`  that describes the TPU topology.
 
-## Methods
+## 方法
 
 
 ###  `build` 
@@ -76,7 +76,7 @@ build(
  
 ```
 
-Returns the physical topology coordinates of a logical core.
+返回逻辑核心的物理拓扑坐标。
 
 ###  `host_device` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/tpu/device_assignment.py#L159-L162)
@@ -90,7 +90,7 @@ Returns the physical topology coordinates of a logical core.
  
 ```
 
-Returns the CPU device attached to a logical core.
+返回连接到逻辑核心的CPU设备。
 
 ###  `lookup_replicas` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/tpu/device_assignment.py#L134-L152)
@@ -103,17 +103,17 @@ Returns the CPU device attached to a logical core.
  
 ```
 
-Lookup replica ids by task number and logical core.
+按任务号和逻辑核心查找副本ID。
 
-#### Args:
+#### 参数：
 - **`task_id`** : TensorFlow task number.
 - **`logical_core`** : An integer, identifying a logical core.
 
 
-#### Returns:
+#### 返回：
 A sorted list of the replicas that are attached to that task andlogical_core.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If no replica exists in the task which contains the logicalcore.
 
 
@@ -129,7 +129,7 @@ A sorted list of the replicas that are attached to that task andlogical_core.
  
 ```
 
-Returns the name of the TPU device assigned to a logical core.
+返回分配给逻辑核心的TPU设备的名称。
 
 ###  `tpu_ordinal` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/tpu/device_assignment.py#L154-L157)
@@ -142,5 +142,5 @@ Returns the name of the TPU device assigned to a logical core.
  
 ```
 
-Returns the ordinal of the TPU device assigned to a logical core.
+返回分配给逻辑核心的TPU设备的序号。
 

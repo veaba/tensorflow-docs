@@ -1,6 +1,6 @@
-Wraps a python function into a TensorFlow op that executes it eagerly.
+将python函数包装成tensorflow op，tensorflow op急切地执行它。
 
-**Aliases** : [ `tf.compat.v1.py_function` ](/api_docs/python/tf/py_function), [ `tf.compat.v2.py_function` ](/api_docs/python/tf/py_function)
+**别名** : [ `tf.compat.v1.py_function` ](/api_docs/python/tf/py_function), [ `tf.compat.v2.py_function` ](/api_docs/python/tf/py_function)
 
 ```
  tf.py_function(
@@ -12,12 +12,12 @@ Wraps a python function into a TensorFlow op that executes it eagerly.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Better performance with the tf.data API](https://tensorflow.google.cn/guide/data_performance)
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Load text](https://tensorflow.google.cn/tutorials/load_data/text)
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
@@ -59,13 +59,13 @@ Like [ `tf.compat.v1.py_func` ](https://tensorflow.google.cn/api_docs/python/tf/
 - The operation must run in the same address space as the Python programthat calls [ `tf.py_function()` ](https://tensorflow.google.cn/api_docs/python/tf/py_function). If you are using distributedTensorFlow, you must run a [ `tf.distribute.Server` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Server) in the same process as theprogram that calls [ `tf.py_function()` ](https://tensorflow.google.cn/api_docs/python/tf/py_function) and you must pin the createdoperation to a device in that server (e.g. using  `with tf.device():` ).
 
 
-#### Args:
+#### 参数：
 - **`func`** : A Python function which accepts a list of  `Tensor`  objects havingelement types that match the corresponding [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects in  `inp` and returns a list of  `Tensor`  objects (or a single  `Tensor` , or  `None` )having element types that match the corresponding values in  `Tout` .
 - **`inp`** : A list of  `Tensor`  objects.
 - **`Tout`** : A list or tuple of tensorflow data types or a single tensorflow datatype if there is only one, indicating what  `func`  returns; an empty listif no value is returned (i.e., if the return value is  `None` ).
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A list of  `Tensor`  or a single  `Tensor`  which  `func`  computes; an empty listif  `func`  returns None.
 

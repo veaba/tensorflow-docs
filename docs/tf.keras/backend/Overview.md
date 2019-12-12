@@ -1,6 +1,6 @@
-Keras backend API.
+Keras后端API。
 
-## Functions
+## 功能
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/abs): Element-wise absolute value.
 
 [ `all(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/all): Bitwise reduction (logical AND).

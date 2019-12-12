@@ -1,6 +1,6 @@
 
 
-Distributed version of Stochastic Dual Coordinate Ascent (SDCA) optimizer for
+分布式随机双坐标上升优化器
 
 ```
  tf.compat.v1.train.sdca_optimizer(
@@ -35,7 +35,7 @@ LossObjective=∑fi(wxi)+(l2/2)∗|w|2+l1∗|w|
 
 [Stochastic Dual Coordinate Ascent with Adaptive Probabilities](https://arxiv.org/abs/1502.08053).Dominik Csiba, Zheng Qu, Peter Richtarik. 2015
 
-#### Args:
+#### 参数：
 - **`sparse_example_indices`** : A list of  `Tensor`  objects with type  `int64` .a list of vectors which contain example indices.
 - **`sparse_feature_indices`** : A list with the same length as  `sparse_example_indices`  of  `Tensor`  objects with type  `int64` .a list of vectors which contain feature indices.
 - **`sparse_feature_values`** : A list of  `Tensor`  objects with type  `float32` .a list of vectors which contains feature valueassociated with each feature group.
@@ -55,7 +55,7 @@ LossObjective=∑fi(wxi)+(l2/2)∗|w|2+l1∗|w|
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (out_example_state_data, out_delta_sparse_weights, out_delta_dense_weights).
 
 - **`out_example_state_data`** : A  `Tensor`  of type  `float32` .

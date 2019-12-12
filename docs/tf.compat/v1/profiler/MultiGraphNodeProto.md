@@ -1,9 +1,9 @@
 
 
 ## Class  `MultiGraphNodeProto` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `accelerator_exec_micros` 

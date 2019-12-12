@@ -1,6 +1,6 @@
-Reverses specific dimensions of a tensor.
+反转张量的特定维度。
 
-**Aliases** : [ `tf.compat.v1.manip.reverse` ](/api_docs/python/tf/reverse), [ `tf.compat.v1.reverse` ](/api_docs/python/tf/reverse), [ `tf.compat.v1.reverse_v2` ](/api_docs/python/tf/reverse), [ `tf.compat.v2.reverse` ](/api_docs/python/tf/reverse)
+**别名** : [ `tf.compat.v1.manip.reverse` ](/api_docs/python/tf/reverse), [ `tf.compat.v1.reverse` ](/api_docs/python/tf/reverse), [ `tf.compat.v1.reverse_v2` ](/api_docs/python/tf/reverse), [ `tf.compat.v2.reverse` ](/api_docs/python/tf/reverse)
 
 ```
  tf.reverse(
@@ -17,7 +17,7 @@ Given a  `tensor` , and a  `int32`  tensor  `axis`  representing the set ofdimen
 
  `tensor`  can have up to 8 dimensions. The number of dimensions specifiedin  `axis`  may be 0 or more entries. If an index is specified more thanonce, a InvalidArgument error is raised.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -55,12 +55,12 @@ reverse(t, dims) ==> [[[[8, 9, 10, 11],
  
 ```
 
-#### Args:
+#### 参数：
 - **`tensor`** : A  `Tensor` . Must be one of the following types:  `uint8` ,  `int8` ,  `uint16` ,  `int16` ,  `int32` ,  `int64` ,  `bool` ,  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `complex64` ,  `complex128` ,  `string` .Up to 8-D.
 - **`axis`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .1-D. The indices of the dimensions to reverse. Must be in the range `[-rank(tensor), rank(tensor))` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `tensor` .
 

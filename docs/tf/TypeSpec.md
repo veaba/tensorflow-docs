@@ -1,9 +1,9 @@
 
 
 ## Class  `TypeSpec` 
-Specifies a TensorFlow value type.
+指定TensorFlow值类型。
 
-**Aliases** : [ `tf.compat.v1.TypeSpec` ](/api_docs/python/tf/TypeSpec), [ `tf.compat.v1.data.experimental.Structure` ](/api_docs/python/tf/TypeSpec), [ `tf.compat.v2.TypeSpec` ](/api_docs/python/tf/TypeSpec)
+**别名** : [ `tf.compat.v1.TypeSpec` ](/api_docs/python/tf/TypeSpec), [ `tf.compat.v1.data.experimental.Structure` ](/api_docs/python/tf/TypeSpec), [ `tf.compat.v2.TypeSpec` ](/api_docs/python/tf/TypeSpec)
 
 A [ `tf.TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TypeSpec) provides metadata describing an object accepted or returnedby TensorFlow APIs.  Concrete subclasses, such as [ `tf.TensorSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TensorSpec) and[ `tf.RaggedTensorSpec` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensorSpec), are used to describe different value types.
 
@@ -11,13 +11,13 @@ For example, [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/f
 
 Creating new subclasses of TypeSpec (outside of TensorFlow core) is notcurrently supported.  In particular, we may make breaking changes to theprivate methods and properties defined by this base class.
 
-## Properties
+## 属性
 
 
 ###  `value_type` 
-The Python type for values that are compatible with this TypeSpec.
+与此类型规范兼容的值的python类型。
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -60,9 +60,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

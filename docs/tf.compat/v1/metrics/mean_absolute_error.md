@@ -1,4 +1,4 @@
-Computes the mean absolute error between the labels and predictions.
+计算标签和预测之间的平均绝对误差。
 
 ```
  tf.compat.v1.metrics.mean_absolute_error(
@@ -18,7 +18,7 @@ For estimation of the metric over a stream of data, the function creates an `upd
 
 If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask values.
 
-#### Args:
+#### 参数：
 - **`labels`** : A  `Tensor`  of the same shape as  `predictions` .
 - **`predictions`** : A  `Tensor`  of arbitrary shape.
 - **`weights`** : Optional  `Tensor`  whose rank is either 0, or the same rank as `labels` , and must be broadcastable to  `labels`  (i.e., all dimensions mustbe either  `1` , or the same as the corresponding  `labels`  dimension).
@@ -27,11 +27,11 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 - **`name`** : An optional variable_scope name.
 
 
-#### Returns:
+#### 返回：
 - **`mean_absolute_error`** : A  `Tensor`  representing the current mean, the value of `total`  divided by  `count` .
 - **`update_op`** : An operation that increments the  `total`  and  `count`  variablesappropriately and whose value matches  `mean_absolute_error` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `predictions`  and  `labels`  have mismatched shapes, or if `weights`  is not  `None`  and its shape doesn't match  `predictions` , or ifeither  `metrics_collections`  or  `updates_collections`  are not a list ortuple.
 - **`RuntimeError`** : If eager execution is enabled.

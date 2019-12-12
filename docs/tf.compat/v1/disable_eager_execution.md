@@ -1,4 +1,4 @@
-Disables eager execution.
+禁用紧急执行。
 
 ```
  tf.compat.v1.disable_eager_execution()

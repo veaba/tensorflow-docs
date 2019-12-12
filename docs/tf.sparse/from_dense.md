@@ -1,6 +1,6 @@
-Converts a dense tensor into a sparse tensor.
+将密集张量转换为稀疏张量。
 
-**Aliases** : [ `tf.compat.v1.sparse.from_dense` ](/api_docs/python/tf/sparse/from_dense), [ `tf.compat.v2.sparse.from_dense` ](/api_docs/python/tf/sparse/from_dense)
+**别名** : [ `tf.compat.v1.sparse.from_dense` ](/api_docs/python/tf/sparse/from_dense), [ `tf.compat.v2.sparse.from_dense` ](/api_docs/python/tf/sparse/from_dense)
 
 ```
  tf.sparse.from_dense(
@@ -12,11 +12,11 @@ Converts a dense tensor into a sparse tensor.
 
 Only elements not equal to zero will be present in the result. The resulting `SparseTensor`  has the same dtype and shape as the input.
 
-#### Args:
+#### 参数：
 - **`tensor`** : A dense  `Tensor`  to be converted to a  `SparseTensor` .
 - **`name`** : Optional name for the op.
 
 
-#### Returns:
+#### 返回：
 The  `SparseTensor` .
 

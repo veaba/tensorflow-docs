@@ -1,6 +1,6 @@
-Returns the diagonal part of the tensor.
+返回张量的对角线部分。
 
-**Aliases** : [ `tf.compat.v1.diag_part` ](/api_docs/python/tf/linalg/tensor_diag_part), [ `tf.compat.v1.linalg.tensor_diag_part` ](/api_docs/python/tf/linalg/tensor_diag_part), [ `tf.compat.v2.linalg.tensor_diag_part` ](/api_docs/python/tf/linalg/tensor_diag_part)
+**别名** : [ `tf.compat.v1.diag_part` ](/api_docs/python/tf/linalg/tensor_diag_part), [ `tf.compat.v1.linalg.tensor_diag_part` ](/api_docs/python/tf/linalg/tensor_diag_part), [ `tf.compat.v2.linalg.tensor_diag_part` ](/api_docs/python/tf/linalg/tensor_diag_part)
 
 ```
  tf.linalg.tensor_diag_part(
@@ -16,7 +16,7 @@ Assume  `input`  has dimensions  `[D1,..., Dk, D1,..., Dk]` , then the output is
 
  `diagonal[i1,..., ik] = input[i1, ..., ik, i1,..., ik]` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -29,11 +29,11 @@ tf.diag_part(input) ==> [1, 2, 3, 4]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .Rank k tensor where k is even and not zero.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

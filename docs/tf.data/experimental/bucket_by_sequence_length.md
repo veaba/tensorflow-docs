@@ -1,6 +1,6 @@
 A transformation that buckets elements in a  `Dataset`  by length.
 
-**Aliases** : [ `tf.compat.v1.data.experimental.bucket_by_sequence_length` ](/api_docs/python/tf/data/experimental/bucket_by_sequence_length), [ `tf.compat.v2.data.experimental.bucket_by_sequence_length` ](/api_docs/python/tf/data/experimental/bucket_by_sequence_length)
+**别名** : [ `tf.compat.v1.data.experimental.bucket_by_sequence_length` ](/api_docs/python/tf/data/experimental/bucket_by_sequence_length), [ `tf.compat.v2.data.experimental.bucket_by_sequence_length` ](/api_docs/python/tf/data/experimental/bucket_by_sequence_length)
 
 ```
  tf.data.experimental.bucket_by_sequence_length(
@@ -20,7 +20,7 @@ Elements of the  `Dataset`  are grouped together by length and then are paddedan
 
 This is useful for sequence tasks in which the elements have variable length.Grouping together elements that have similar lengths reduces the totalfraction of padding in a batch which increases training step efficiency.
 
-#### Args:
+#### 参数：
 - **`element_length_func`** : function from element in  `Dataset`  to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32),determines the length of the element, which will determine the bucket itgoes into.
 - **`bucket_boundaries`** :  `list<int>` , upper length boundaries of the buckets.
 - **`bucket_batch_sizes`** :  `list<int>` , batch size per bucket. Length should be `len(bucket_boundaries) + 1` .
@@ -31,8 +31,8 @@ This is useful for sequence tasks in which the elements have variable length.Gro
 - **`drop_remainder`** : (Optional.) A [ `tf.bool` ](https://tensorflow.google.cn/api_docs/python/tf#bool) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representingwhether the last batch should be dropped in the case it has fewer than `batch_size`  elements; the default behavior is not to drop the smallerbatch.
 
 
-#### Returns:
+#### 返回：
 A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `len(bucket_batch_sizes) != len(bucket_boundaries) + 1` .

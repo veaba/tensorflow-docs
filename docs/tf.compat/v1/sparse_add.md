@@ -14,7 +14,7 @@ Adds two tensors, at least one of each is a  `SparseTensor` . (deprecated argume
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(thresh)` . They will be removed in a future version.Instructions for updating:thresh is deprecated, use threshold instead
 If one  `SparseTensor`  and one  `Tensor`  are passed in, returns a  `Tensor` .  Ifboth arguments are  `SparseTensor` s, this returns a  `SparseTensor` .  The orderof arguments does not matter.  Use vanilla [ `tf.add()` ](https://tensorflow.google.cn/api_docs/python/tf/math/add) for adding two dense `Tensor` s.
 
-The shapes of the two operands must match: broadcasting is not supported.
+两个操作数的形状必须匹配：不支持广播。
 
 The indices of any input  `SparseTensor`  are assumed ordered in standardlexicographic order.  If this is not the case, before this step run `SparseReorder`  to restore index ordering.
 
@@ -36,15 +36,15 @@ Then,
 -  `thresh == 0.21` : .1, 0, and -.2 will vanish.
 
 
-#### Args:
+#### 参数：
 - **`a`** : The first operand;  `SparseTensor`  or  `Tensor` .
 - **`b`** : The second operand;  `SparseTensor`  or  `Tensor` . At least one operandmust be sparse.
 - **`threshold`** : An optional 0-D  `Tensor`  (defaults to  `0` ). The magnitudethreshold that determines if an output value/index pair takes space. Itsdtype should match that of the values if they are real; if the latter arecomplex64/complex128, then the dtype should be float32/float64,correspondingly.
 - **`thresh`** : Deprecated alias for  `threshold` .
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  or a  `Tensor` , representing the sum.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If both  `a`  and  `b`  are  `Tensor` s.  Use [ `tf.add()` ](https://tensorflow.google.cn/api_docs/python/tf/math/add) instead.

@@ -1,20 +1,20 @@
-Converts a sparse tensor into a dense tensor and returns it.
+将稀疏张量转换为密集张量并返回它。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.to_dense` ](/api_docs/python/tf/keras/backend/to_dense), [ `tf.compat.v2.keras.backend.to_dense` ](/api_docs/python/tf/keras/backend/to_dense)
+**别名** : [ `tf.compat.v1.keras.backend.to_dense` ](/api_docs/python/tf/keras/backend/to_dense), [ `tf.compat.v2.keras.backend.to_dense` ](/api_docs/python/tf/keras/backend/to_dense)
 
 ```
  tf.keras.backend.to_dense(tensor)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`tensor`** : A tensor instance (potentially sparse).
 
 
-#### Returns:
-A dense tensor.
+#### 返回：
+密集的张量。
 
-#### Examples:
+#### 示例：
 
 
 ```

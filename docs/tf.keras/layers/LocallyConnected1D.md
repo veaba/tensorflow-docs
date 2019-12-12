@@ -5,11 +5,11 @@ Locally-connected layer for 1D inputs.
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.LocallyConnected1D` ](/api_docs/python/tf/keras/layers/LocallyConnected1D), [ `tf.compat.v2.keras.layers.LocallyConnected1D` ](/api_docs/python/tf/keras/layers/LocallyConnected1D)
+**别名** : [ `tf.compat.v1.keras.layers.LocallyConnected1D` ](/api_docs/python/tf/keras/layers/LocallyConnected1D), [ `tf.compat.v2.keras.layers.LocallyConnected1D` ](/api_docs/python/tf/keras/layers/LocallyConnected1D)
 
 The  `LocallyConnected1D`  layer works similarly tothe  `Conv1D`  layer, except that weights are unshared,that is, a different set of filters is applied at each different patchof the input.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -24,7 +24,7 @@ The  `LocallyConnected1D`  layer works similarly tothe  `Conv1D`  layer, except 
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of a single integer,specifying the length of the 1D convolution window.
 - **`strides`** : An integer or tuple/list of a single integer,specifying the stride length of the convolution.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -45,7 +45,7 @@ The  `LocallyConnected1D`  layer works similarly tothe  `Conv1D`  layer, except 
 
  `3`  stores layer weights in a sparse tensor and implements the forwardpass as a single sparse matrix-multiply.
 
-How to choose:
+如何选择：
 
  `1` : large, dense models, `2` : small models, `3` : large, sparse models,
 
@@ -56,10 +56,10 @@ It is recommended to benchmark each in the setting of interest to pickthe most e
 Also, only  `padding="valid"`  is supported by  `implementation=1` .
 
 
-#### Input shape:
+#### 输入形状：
 3D tensor with shape:  `(batch_size, steps, input_dim)` 
 
-#### Output shape:
+#### 输出形状：
 3D tensor with shape:  `(batch_size, new_steps, filters)`  `steps`  value might have changed due to padding or strides.
 
 ##  `__init__` 

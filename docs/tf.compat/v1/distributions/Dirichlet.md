@@ -1,13 +1,13 @@
 
 
 ## Class  `Dirichlet` 
-Dirichlet distribution.
+dirichlet分布。
 
 Inherits From: [ `Distribution` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distributions/Distribution)
 
 The Dirichlet distribution is defined over the[ `(k-1)` -simplex](https://en.wikipedia.org/wiki/Simplex) using a positive,length- `k`  vector  `concentration`  ( `k > 1` ). The Dirichlet is identically theBeta distribution when  `k = 2` .
 
-#### Mathematical Details
+#### 数学细节
 The Dirichlet is a distribution over the open  `(k-1)` -simplex, i.e.,
 
 ```
@@ -42,7 +42,7 @@ Samples of this distribution are reparameterized (pathwise differentiable).The d
 
 [Michael Figurnov, Shakir Mohamed, Andriy Mnih.Implicit Reparameterization Gradients, 2018](https://arxiv.org/abs/1805.08498)
 
-#### Examples
+#### 实例
 
 
 ```
@@ -87,7 +87,7 @@ dist.prob(x)         # shape: [2]
  
 ```
 
-Compute the gradients of samples w.r.t. the parameters:
+计算样品的梯度w.r.t.参数：
 
 ```
  alpha = tf.constant([1.0, 2.0, 3.0])
@@ -118,14 +118,14 @@ Initialize a batch of Dirichlet distributions. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed after 2019-01-01.Instructions for updating:The TensorFlow Distributions library has moved to TensorFlow Probability (https://github.com/tensorflow/probability). You should update all references to use [ `tfp.distributions` ](/probability/api_docs/python/tfp/distributions) instead of  `tf.distributions` .
 
 
-#### Args:
+#### 参数：
 - **`concentration`** : Positive floating-point  `Tensor`  indicating mean numberof class occurrences; aka "alpha". Implies  `self.dtype` , and `self.batch_shape` ,  `self.event_shape` , i.e., if `concentration.shape = [N1, N2, ..., Nm, k]`  then `batch_shape = [N1, N2, ..., Nm]`  and `event_shape = [k]` .
 - **`validate_args`** : Python  `bool` , default  `False` . When  `True`  distributionparameters are checked for validity despite possibly degrading runtimeperformance. When  `False`  invalid inputs may silently render incorrectoutputs.
 - **`allow_nan_stats`** : Python  `bool` , default  `True` . When  `True` , statistics(e.g., mean, mode, variance) use the value " `NaN` " to indicate theresult is undefined. When  `False` , an exception is raised if one ormore of the statistic's batch members are undefined.
 - **`name`** : Python  `str`  name prefixed to Ops created by this class.
 
 
-## Properties
+## 属性
 
 
 ###  `allow_nan_stats` 
@@ -133,23 +133,23 @@ Python  `bool`  describing behavior when a stat is undefined.
 
 Stats return +/- infinity when it makes sense. E.g., the variance of aCauchy distribution is infinity. However, sometimes the statistic isundefined, e.g., if a distribution's pdf does not achieve a maximum withinthe support of the distribution, the mode is undefined. If the mean isundefined, then by definition the variance is undefined. E.g. the mean forStudent's T for df = 1 is undefined (no clear way to say it is either + or -infinity), so the variance = E[(X - mean)**2] is also undefined.
 
-#### Returns:
+#### 返回：
 - **`allow_nan_stats`** : Python  `bool` .
 
 
 ###  `batch_shape` 
 Shape of a single sample from a single event index as a  `TensorShape` .
 
-May be partially defined or unknown.
+可能部分定义或未知。
 
 The batch dimensions are indexes into independent, non-identicalparameterizations of this distribution.
 
-#### Returns:
+#### 返回：
 - **`batch_shape`** :  `TensorShape` , possibly unknown.
 
 
 ###  `concentration` 
-Concentration parameter; expected counts for that coordinate.
+浓度参数；该坐标的预期计数。
 
 ###  `dtype` 
 The  `DType`  of  `Tensor` s handled by this  `Distribution` .
@@ -157,9 +157,9 @@ The  `DType`  of  `Tensor` s handled by this  `Distribution` .
 ###  `event_shape` 
 Shape of a single sample from a single batch as a  `TensorShape` .
 
-May be partially defined or unknown.
+可能部分定义或未知。
 
-#### Returns:
+#### 返回：
 - **`event_shape`** :  `TensorShape` , possibly unknown.
 
 
@@ -170,20 +170,20 @@ Name prepended to all ops created by this  `Distribution` .
 Dictionary of parameters used to instantiate this  `Distribution` .
 
 ###  `reparameterization_type` 
-Describes how samples from the distribution are reparameterized.
+描述如何重新参数化分布中的样本。
 
 Currently this is one of the static instances[ `distributions.FULLY_REPARAMETERIZED` ](/probability/api_docs/python/tfp/distributions#FULLY_REPARAMETERIZED)or [ `distributions.NOT_REPARAMETERIZED` ](/probability/api_docs/python/tfp/distributions#NOT_REPARAMETERIZED).
 
-#### Returns:
+#### 返回：
 An instance of  `ReparameterizationType` .
 
 ###  `total_concentration` 
-Sum of last dim of concentration parameter.
+浓度参数最后一个维度的总和。
 
 ###  `validate_args` 
 Python  `bool`  indicating possibly expensive checks are enabled.
 
-## Methods
+## 方法
 
 
 ###  `batch_shape_tensor` 
@@ -198,11 +198,11 @@ Shape of a single sample from a single event index as a 1-D  `Tensor` .
 
 The batch dimensions are indexes into independent, non-identicalparameterizations of this distribution.
 
-#### Args:
+#### 参数：
 - **`name`** : name to give to the op
 
 
-#### Returns:
+#### 返回：
 - **`batch_shape`** :  `Tensor` .
 
 
@@ -217,7 +217,7 @@ The batch dimensions are indexes into independent, non-identicalparameterization
  
 ```
 
-Cumulative distribution function.
+累积分布函数。
 
 Given random variable  `X` , the cumulative distribution function  `cdf`  is:
 
@@ -225,12 +225,12 @@ Given random variable  `X` , the cumulative distribution function  `cdf`  is:
  cdf(x) := P[X <= x] 
 ```
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`cdf`** : a  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  withvalues of type  `self.dtype` .
 
 
@@ -242,17 +242,17 @@ Given random variable  `X` , the cumulative distribution function  `cdf`  is:
  
 ```
 
-Creates a deep copy of the distribution.
+创建分发的深层副本。
 
 
 **Note:**  the copy distribution may continue to depend on the originalinitialization arguments.
 
 
-#### Args:
+#### 参数：
 - **`**override_parameters_kwargs`** : String/value dictionary of initializationarguments to override with new values.
 
 
-#### Returns:
+#### 返回：
 - **`distribution`** : A new instance of  `type(self)`  initialized from the unionof self.parameters and override_parameters_kwargs, i.e., `dict(self.parameters, **override_parameters_kwargs)` .
 
 
@@ -264,7 +264,7 @@ Creates a deep copy of the distribution.
  
 ```
 
-Covariance.
+协方差。
 
 Covariance is (possibly) defined only for non-scalar-event distributions.
 
@@ -284,11 +284,11 @@ Alternatively, for non-vector, multivariate distributions (e.g.,matrix-valued, W
 
 where  `Cov`  is a (batch of)  `k' x k'`  matrices, `0 <= (i, j) < k' = reduce_prod(event_shape)` , and  `Vec`  is some functionmapping indices of this distribution's event dimensions to indices of alength- `k'`  vector.
 
-#### Args:
+#### 参数：
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`covariance`** : Floating-point  `Tensor`  with shape  `[B1, ..., Bn, k', k']` where the first  `n`  dimensions are batch coordinates and `k' = reduce_prod(self.event_shape)` .
 
 
@@ -303,7 +303,7 @@ where  `Cov`  is a (batch of)  `k' x k'`  matrices, `0 <= (i, j) < k' = reduce_p
  
 ```
 
-Computes the (Shannon) cross entropy.
+计算（香农）交叉熵。
 
 Denote this distribution ( `self` ) by  `P`  and the  `other`  distribution by `Q` . Assuming  `P, Q`  are absolutely continuous with respect toone another and permit densities  `p(x) dr(x)`  and  `q(x) dr(x)` , (Shanon)cross entropy is defined as:
 
@@ -313,12 +313,12 @@ Denote this distribution ( `self` ) by  `P`  and the  `other`  distribution by `
 
 where  `F`  denotes the support of the random variable  `X ~ P` .
 
-#### Args:
+#### 参数：
 - **`other`** : [ `tfp.distributions.Distribution` ](/probability/api_docs/python/tfp/distributions/Distribution) instance.
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`cross_entropy`** :  `self.dtype`   `Tensor`  with shape  `[B1, ..., Bn]` representing  `n`  different calculations of (Shanon) cross entropy.
 
 
@@ -330,7 +330,7 @@ where  `F`  denotes the support of the random variable  `X ~ P` .
  
 ```
 
-Shannon entropy in nats.
+nats中的香农熵。
 
 ###  `event_shape_tensor` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/distributions/distribution.py#L677-L691)
@@ -342,11 +342,11 @@ Shannon entropy in nats.
 
 Shape of a single sample from a single batch as a 1-D int32  `Tensor` .
 
-#### Args:
+#### 参数：
 - **`name`** : name to give to the op
 
 
-#### Returns:
+#### 返回：
 - **`event_shape`** :  `Tensor` .
 
 
@@ -360,11 +360,11 @@ Shape of a single sample from a single batch as a 1-D int32  `Tensor` .
 
 Indicates that  `batch_shape == []` .
 
-#### Args:
+#### 参数：
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`is_scalar_batch`** :  `bool`  scalar  `Tensor` .
 
 
@@ -378,11 +378,11 @@ Indicates that  `batch_shape == []` .
 
 Indicates that  `event_shape == []` .
 
-#### Args:
+#### 参数：
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`is_scalar_event`** :  `bool`  scalar  `Tensor` .
 
 
@@ -407,12 +407,12 @@ Denote this distribution ( `self` ) by  `p`  and the  `other`  distribution by `
 
 where  `F`  denotes the support of the random variable  `X ~ p` ,  `H[., .]` denotes (Shanon) cross entropy, and  `H[.]`  denotes (Shanon) entropy.
 
-#### Args:
+#### 参数：
 - **`other`** : [ `tfp.distributions.Distribution` ](/probability/api_docs/python/tfp/distributions/Distribution) instance.
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`kl_divergence`** :  `self.dtype`   `Tensor`  with shape  `[B1, ..., Bn]` representing  `n`  different calculations of the Kullback-Leiblerdivergence.
 
 
@@ -427,7 +427,7 @@ where  `F`  denotes the support of the random variable  `X ~ p` ,  `H[., .]` den
  
 ```
 
-Log cumulative distribution function.
+对数累积分布函数。
 
 Given random variable  `X` , the cumulative distribution function  `cdf`  is:
 
@@ -437,12 +437,12 @@ Given random variable  `X` , the cumulative distribution function  `cdf`  is:
 
 Often, a numerical approximation can be used for  `log_cdf(x)`  that yieldsa more accurate answer than simply taking the logarithm of the  `cdf`  when `x << -1` .
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`logcdf`** : a  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  withvalues of type  `self.dtype` .
 
 
@@ -457,7 +457,7 @@ Often, a numerical approximation can be used for  `log_cdf(x)`  that yieldsa mor
  
 ```
 
-Log probability density/mass function.
+对数概率密度/质量函数。
 
 Additional documentation from  `Dirichlet` :
 
@@ -465,12 +465,12 @@ Additional documentation from  `Dirichlet` :
 **Note:**   `value`  must be a non-negative tensor withdtype  `self.dtype`  and be in the  `(self.event_shape() - 1)` -simplex, i.e., `tf.reduce_sum(value, -1) = 1` . It must have a shape compatible with `self.batch_shape() + self.event_shape()` .
 
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`log_prob`** : a  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  withvalues of type  `self.dtype` .
 
 
@@ -485,7 +485,7 @@ Additional documentation from  `Dirichlet` :
  
 ```
 
-Log survival function.
+日志生存函数。
 
 Given random variable  `X` , the survival function is defined:
 
@@ -495,12 +495,12 @@ Given random variable  `X` , the survival function is defined:
 
 Typically, different numerical approximations can be used for the logsurvival function, which are more accurate than  `1 - cdf(x)`  when  `x >> 1` .
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  with values of type   `self.dtype` .
 
 ###  `mean` 
@@ -511,7 +511,7 @@ Typically, different numerical approximations can be used for the logsurvival fu
  
 ```
 
-Mean.
+卑鄙。
 
 ###  `mode` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/distributions/distribution.py#L1137-L1140)
@@ -521,7 +521,7 @@ Mean.
  
 ```
 
-Mode.
+模式。
 
 Additional documentation from  `Dirichlet` :
 
@@ -547,12 +547,12 @@ This is a class method that describes what key/value arguments are requiredto in
 
 Subclasses should override class method  `_param_shapes` .
 
-#### Args:
+#### 参数：
 - **`sample_shape`** :  `Tensor`  or python list/tuple. Desired shape of a call to `sample()` .
 - **`name`** : name to prepend ops with.
 
 
-#### Returns:
+#### 返回：
  `dict`  of parameter name to  `Tensor`  shapes.
 
 ###  `param_static_shapes` 
@@ -572,14 +572,14 @@ This is a class method that describes what key/value arguments are requiredto in
 
 Subclasses should override class method  `_param_shapes`  to returnconstant-valued tensors when constant values are fed.
 
-#### Args:
+#### 参数：
 - **`sample_shape`** :  `TensorShape`  or python list/tuple. Desired shape of a callto  `sample()` .
 
 
-#### Returns:
+#### 返回：
  `dict`  of parameter name to  `TensorShape` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `sample_shape`  is a  `TensorShape`  and is not fully defined.
 
 
@@ -594,7 +594,7 @@ Subclasses should override class method  `_param_shapes`  to returnconstant-valu
  
 ```
 
-Probability density/mass function.
+概率密度/质量函数。
 
 Additional documentation from  `Dirichlet` :
 
@@ -602,12 +602,12 @@ Additional documentation from  `Dirichlet` :
 **Note:**   `value`  must be a non-negative tensor withdtype  `self.dtype`  and be in the  `(self.event_shape() - 1)` -simplex, i.e., `tf.reduce_sum(value, -1) = 1` . It must have a shape compatible with `self.batch_shape() + self.event_shape()` .
 
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`prob`** : a  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  withvalues of type  `self.dtype` .
 
 
@@ -622,7 +622,7 @@ Additional documentation from  `Dirichlet` :
  
 ```
 
-Quantile function. Aka "inverse cdf" or "percent point function".
+分位数函数。又称“逆CDF”或“百分点函数”。
 
 Given random variable  `X`  and  `p in [0, 1]` , the  `quantile`  is:
 
@@ -630,12 +630,12 @@ Given random variable  `X`  and  `p in [0, 1]` , the  `quantile`  is:
  quantile(p) := x such that P[X <= x] == p 
 ```
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`quantile`** : a  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  withvalues of type  `self.dtype` .
 
 
@@ -651,17 +651,17 @@ Given random variable  `X`  and  `p in [0, 1]` , the  `quantile`  is:
  
 ```
 
-Generate samples of the specified shape.
+生成指定形状的示例。
 
 Note that a call to  `sample()`  without arguments will generate a singlesample.
 
-#### Args:
+#### 参数：
 - **`sample_shape`** : 0D or 1D  `int32`   `Tensor` . Shape of the generated samples.
 - **`seed`** : Python integer seed for RNG
 - **`name`** : name to give to the op.
 
 
-#### Returns:
+#### 返回：
 - **`samples`** : a  `Tensor`  with prepended dimensions  `sample_shape` .
 
 
@@ -673,7 +673,7 @@ Note that a call to  `sample()`  without arguments will generate a singlesample.
  
 ```
 
-Standard deviation.
+标准偏差。
 
 Standard deviation is defined as,
 
@@ -683,11 +683,11 @@ Standard deviation is defined as,
 
 where  `X`  is the random variable associated with this distribution,  `E` denotes expectation, and  `stddev.shape = batch_shape + event_shape` .
 
-#### Args:
+#### 参数：
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`stddev`** : Floating-point  `Tensor`  with shape identical to `batch_shape + event_shape` , i.e., the same shape as  `self.mean()` .
 
 
@@ -702,7 +702,7 @@ where  `X`  is the random variable associated with this distribution,  `E` denot
  
 ```
 
-Survival function.
+生存功能。
 
 Given random variable  `X` , the survival function is defined:
 
@@ -710,12 +710,12 @@ Given random variable  `X` , the survival function is defined:
  survival_function(x) = P[X > x]                     = 1 - P[X <= x]                     = 1 - cdf(x). 
 ```
 
-#### Args:
+#### 参数：
 - **`value`** :  `float`  or  `double`   `Tensor` .
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
  `Tensor`  of shape  `sample_shape(x) + self.batch_shape`  with values of type   `self.dtype` .
 
 ###  `variance` 
@@ -726,7 +726,7 @@ Given random variable  `X` , the survival function is defined:
  
 ```
 
-Variance.
+方差。
 
 Variance is defined as,
 
@@ -736,9 +736,9 @@ Variance is defined as,
 
 where  `X`  is the random variable associated with this distribution,  `E` denotes expectation, and  `Var.shape = batch_shape + event_shape` .
 
-#### Args:
+#### 参数：
 - **`name`** : Python  `str`  prepended to names of ops created by this function.
 
 
-#### Returns:
+#### 返回：
 - **`variance`** : Floating-point  `Tensor`  with shape identical to `batch_shape + event_shape` , i.e., the same shape as  `self.mean()` .

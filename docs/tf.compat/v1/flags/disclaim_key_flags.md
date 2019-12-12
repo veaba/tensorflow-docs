@@ -1,4 +1,4 @@
-Declares that the current module will not define any more key flags.
+声明当前模块将不再定义任何键标志。
 
 ```
  tf.compat.v1.flags.disclaim_key_flags()

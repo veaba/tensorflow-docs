@@ -12,13 +12,13 @@ An iterator that read the records from a TFRecords file. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use eager execution and: [ `tf.data.TFRecordDataset(path)` ](https://tensorflow.google.cn/api_docs/python/tf/data/TFRecordDataset)
 
 
-#### Args:
+#### 参数：
 - **`path`** : The path to the TFRecords file.
 - **`options`** : (optional) A TFRecordOptions object.
 
 
-#### Yields:
-Strings.
+#### 收益率：
+串。
 
-#### Raises:
+#### 加薪：
 - **`IOError`** : If  `path`  cannot be opened for reading.

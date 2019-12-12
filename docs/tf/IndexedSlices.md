@@ -1,9 +1,9 @@
 
 
 ## Class  `IndexedSlices` 
-A sparse representation of a set of tensor slices at given indices.
+给定索引处一组张量切片的稀疏表示。
 
-**Aliases** : [ `tf.compat.v1.IndexedSlices` ](/api_docs/python/tf/IndexedSlices), [ `tf.compat.v2.IndexedSlices` ](/api_docs/python/tf/IndexedSlices)
+**别名** : [ `tf.compat.v1.IndexedSlices` ](/api_docs/python/tf/IndexedSlices), [ `tf.compat.v2.IndexedSlices` ](/api_docs/python/tf/IndexedSlices)
 
 This class is a simple wrapper for a pair of  `Tensor`  objects:
 
@@ -36,7 +36,7 @@ Contrast this representation with[ `tf.SparseTensor` ](https://tensorflow.google
 
 Creates an  `IndexedSlices` .
 
-## Properties
+## 属性
 
 
 ###  `dense_shape` 
@@ -63,7 +63,7 @@ The  `Operation`  that produces  `values`  as an output.
 ###  `values` 
 A  `Tensor`  containing the values of the slices.
 
-## Methods
+## 方法
 
 
 ###  `__neg__` 

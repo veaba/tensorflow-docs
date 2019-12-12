@@ -5,7 +5,7 @@ Initializer that generates tensors initialized to 0.
 
 Inherits From: [ `Initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Initializer)
 
-**Aliases** : [ `tf.compat.v1.initializers.zeros` ](/api_docs/python/tf/compat/v1/keras/initializers/Zeros), [ `tf.compat.v1.keras.initializers.zeros` ](/api_docs/python/tf/compat/v1/keras/initializers/Zeros), [ `tf.compat.v1.zeros_initializer` ](/api_docs/python/tf/compat/v1/keras/initializers/Zeros)
+**别名** : [ `tf.compat.v1.initializers.zeros` ](/api_docs/python/tf/compat/v1/keras/initializers/Zeros), [ `tf.compat.v1.keras.initializers.zeros` ](/api_docs/python/tf/compat/v1/keras/initializers/Zeros), [ `tf.compat.v1.zeros_initializer` ](/api_docs/python/tf/compat/v1/keras/initializers/Zeros)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L105-L109)
@@ -15,13 +15,13 @@ Inherits From: [ `Initializer` ](https://tensorflow.google.cn/api_docs/python/tf
  
 ```
 
-DEPRECATED FUNCTION ARGUMENTS
+不推荐使用的函数参数
 
 
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(dtype)` . They will be removed in a future version.Instructions for updating:Call initializer instance with the dtype argument instead of passing it to the constructor
 
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -36,9 +36,9 @@ DEPRECATED FUNCTION ARGUMENTS
  
 ```
 
-Returns a tensor object initialized as specified by the initializer.
+返回按初始值设定项指定初始化的张量对象。
 
-#### Args:
+#### 参数：
 - **`shape`** : Shape of the tensor.
 - **`dtype`** : Optional dtype of the tensor. If not provided use the initializerdtype.
 - **`partition_info`** : Optional information about the possible partitioning of atensor.
@@ -55,9 +55,9 @@ Returns a tensor object initialized as specified by the initializer.
  
 ```
 
-Instantiates an initializer from a configuration dictionary.
+从配置字典实例化初始值设定项。
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -67,12 +67,12 @@ initializer = RandomUniform.from_config(config)
  
 ```
 
-#### Args:
+#### 参数：
 - **`config`** : A Python dictionary. It will typically be the output of `get_config` .
 
 
-#### Returns:
-An Initializer instance.
+#### 返回：
+初始化器实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L116-L117)
@@ -84,6 +84,6 @@ An Initializer instance.
 
 Returns the configuration of the initializer as a JSON-serializable dict.
 
-#### Returns:
+#### 返回：
 A JSON-serializable Python dict.
 

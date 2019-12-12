@@ -1,9 +1,9 @@
 
 
 ## Class  `SessionCreator` 
-A factory for tf.Session.
+一个训练营的工厂。
 
-## Methods
+## 方法
 
 
 ###  `create_session` 

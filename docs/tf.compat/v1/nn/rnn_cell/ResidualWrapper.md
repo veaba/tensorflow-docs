@@ -1,7 +1,7 @@
 
 
 ## Class  `ResidualWrapper` 
-RNNCell wrapper that ensures cell inputs are added to the outputs.
+RNNCell包装器，确保单元输入添加到输出。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/rnn_cell_impl.py#L1181-L1182)
@@ -16,17 +16,17 @@ RNNCell wrapper that ensures cell inputs are added to the outputs.
 
 Constructs a  `ResidualWrapper`  for  `cell` .
 
-#### Args:
+#### 参数：
 - **`cell`** : An instance of  `RNNCell` .
 - **`residual_fn`** : (Optional) The function to map raw cell inputs and raw celloutputs to the actual cell outputs of the residual network.Defaults to calling nest.map_structure on (lambda i, o: i + o), inputsand outputs.
 - **`**kwargs`** : dict of keyword arguments for base layer.
 
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -41,7 +41,7 @@ DEPRECATED FUNCTION
 ###  `state_size` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

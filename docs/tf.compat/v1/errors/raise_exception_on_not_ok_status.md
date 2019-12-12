@@ -1,9 +1,9 @@
 
 
 ## Class  `raise_exception_on_not_ok_status` 
-Context manager to check for C API status.
+上下文管理器检查C API状态。
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

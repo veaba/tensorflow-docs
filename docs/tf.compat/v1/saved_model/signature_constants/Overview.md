@@ -1,6 +1,6 @@
-Signature constants for SavedModel save and restore operations.
+savedModel保存和还原操作的签名常量。
 
-## Other Members
+## 其他成员
 -  `CLASSIFY_INPUTS = 'inputs'`  []()
 -  `CLASSIFY_METHOD_NAME = 'tensorflow/serving/classify'`  []()
 -  `CLASSIFY_OUTPUT_CLASSES = 'classes'`  []()

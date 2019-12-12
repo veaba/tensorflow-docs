@@ -14,7 +14,7 @@ Creates a recurrent neural network specified by RNNCell  `cell` . (deprecated)
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Please use [ `keras.layers.RNN(cell, unroll=True)` ](/api_docs/python/tf/keras/layers/RNN), which is equivalent to this API
-The simplest form of RNN network generated is:
+生成的RNN网络的最简单形式是：
 
 ```
    state = cell.zero_state(...)
@@ -40,7 +40,7 @@ The dynamic calculation performed is, at time  `t`  for batch row  `b` ,
  
 ```
 
-#### Args:
+#### 参数：
 - **`cell`** : An instance of RNNCell.
 - **`inputs`** : A length T list of inputs, each a  `Tensor`  of shape  `[batch_size,input_size]` , or a nested tuple of such elements.
 - **`initial_state`** : (optional) An initial state for the RNN. If  `cell.state_size` is an integer, this must be a  `Tensor`  of appropriate type and shape `[batch_size, cell.state_size]` . If  `cell.state_size`  is a tuple, thisshould be a tuple of tensors having shapes  `[batch_size, s] for s incell.state_size` .
@@ -49,13 +49,13 @@ The dynamic calculation performed is, at time  `t`  for batch row  `b` ,
 - **`scope`** : VariableScope for the created subgraph; defaults to "rnn".
 
 
-#### Returns:
+#### 返回：
 A pair (outputs, state) where:
 
 - outputs is a length T list of outputs (one for each input), or a nestedtuple of such elements.
 - state is the final state
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `cell`  is not an instance of RNNCell.
 - **`ValueError`** : If  `inputs`  is  `None`  or an empty list, or if the input depth(column size) cannot be inferred from inputs via shape inference.

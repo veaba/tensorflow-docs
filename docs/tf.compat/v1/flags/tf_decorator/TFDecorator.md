@@ -1,7 +1,7 @@
 
 
 ## Class  `TFDecorator` 
-Base class for all TensorFlow decorators.
+所有TensorFlow装饰程序的基类。
 
 TFDecorator captures and exposes the wrapped target, and provides detailsabout the current decorator.
 
@@ -20,7 +20,7 @@ TFDecorator captures and exposes the wrapped target, and provides detailsabout t
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `decorated_target` 
@@ -35,7 +35,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ###  `decorator_name` 
 
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -49,5 +49,5 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Call self as a function.
+作为函数调用self。
 

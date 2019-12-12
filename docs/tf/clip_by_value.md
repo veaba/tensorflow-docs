@@ -1,12 +1,12 @@
-Clips tensor values to a specified min and max.
+将张量值剪裁为指定的最小值和最大值。
 
-**Aliases** : [ `tf.compat.v1.clip_by_value` ](/api_docs/python/tf/clip_by_value), [ `tf.compat.v2.clip_by_value` ](/api_docs/python/tf/clip_by_value)
+**别名** : [ `tf.compat.v1.clip_by_value` ](/api_docs/python/tf/clip_by_value), [ `tf.compat.v2.clip_by_value` ](/api_docs/python/tf/clip_by_value)
 
 ```
  tf.clip_by_value(    t,    clip_value_min,    clip_value_max,    name=None) 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
 - [Adversarial example using FGSM](https://tensorflow.google.cn/tutorials/generative/adversarial_fgsm)
 - [Neural style transfer](https://tensorflow.google.cn/tutorials/generative/style_transfer)
@@ -16,7 +16,7 @@ Given a tensor  `t` , this operation returns a tensor of the same type andshape 
 **Note:**   `clip_value_min`  needs to be smaller or equal to  `clip_value_max`  forcorrect results.
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -27,16 +27,16 @@ as input and clip_values are of different dtype
  
 ```
 
-#### Args:
+#### 参数：
 - **`t`** : A  `Tensor`  or  `IndexedSlices` .
 - **`clip_value_min`** : A 0-D (scalar)  `Tensor` , or a  `Tensor`  with the same shapeas  `t` . The minimum value to clip by.
 - **`clip_value_max`** : A 0-D (scalar)  `Tensor` , or a  `Tensor`  with the same shapeas  `t` . The maximum value to clip by.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A clipped  `Tensor`  or  `IndexedSlices` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the clip tensors would trigger array broadcastingthat would make the returned tensor larger than the input.
 - **`TypeError`** : If dtype of the input is  `int32`  and dtype ofthe  `clip_value_min' or` clip_value_max `is` float32`

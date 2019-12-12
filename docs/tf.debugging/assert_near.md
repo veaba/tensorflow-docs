@@ -10,7 +10,7 @@ If any elements of  `x`  and  `y`  are not close,  `message` , as well as the fi
 
 The default  `atol`  and  `rtol`  is  `10 * eps` , where  `eps`  is the smallestrepresentable positive number such that  `1 + eps != 1` .  This is about `1.2e-6`  in  `32bit` ,  `2.22e-15`  in  `64bit` , and  `0.00977`  in  `16bit` .See  `numpy.finfo` .
 
-#### Args:
+#### 参数：
 - **`x`** : Float or complex  `Tensor` .
 - **`y`** : Float or complex  `Tensor` , same dtype as and broadcastable to  `x` .
 - **`rtol`** :   `Tensor` .  Same  `dtype`  as, and broadcastable to,  `x` .The relative tolerance.  Default is  `10 * eps` .
@@ -20,16 +20,16 @@ The default  `atol`  and  `rtol`  is  `10 * eps` , where  `eps`  is the smallest
 - **`name`** : A name for this operation (optional).  Defaults to "assert_near".
 
 
-#### Returns:
+#### 返回：
 Op that raises  `InvalidArgumentError`  if  `x`  and  `y`  are not close enough.  This can be used with [ `tf.control_dependencies` ](https://tensorflow.google.cn/api_docs/python/tf/control_dependencies) inside of [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/function)s  to block followup computation until the check has executed.
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : if the check can be performed immediately and `x != y`  is False for any pair of elements in  `x`  and  `y` . The check canbe performed immediately during eager execution or if  `x`  and  `y`  arestatically known.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 returns None
 
-#### Numpy Compatibility
+#### numpy兼容性
 Similar to  `numpy.assert_allclose` , except tolerance depends on data type.This is due to the fact that  `TensorFlow`  is often used with  `32bit` ,  `64bit` ,and even  `16bit`  data.
 

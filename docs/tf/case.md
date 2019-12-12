@@ -1,4 +1,4 @@
-Create a case operation.
+创建案例操作。
 
 ```
  tf.case(    pred_fn_pairs,    default=None,    exclusive=False,    strict=False,    name='case') 
@@ -14,7 +14,7 @@ If  `exclusive==True` , all predicates are evaluated, and an exception isthrown 
 
 **Example 1:** 
 
-#### Pseudocode:
+#### 伪码：
 
 
 ```
@@ -23,7 +23,7 @@ else return 23;
  
 ```
 
-#### Expressions:
+#### 表达式：
 
 
 ```
@@ -35,7 +35,7 @@ r = tf.case([(tf.less(x, y), f1)], default=f2)
 
 **Example 2:** 
 
-#### Pseudocode:
+#### 伪码：
 
 
 ```
@@ -46,7 +46,7 @@ else return -1;
  
 ```
 
-#### Expressions:
+#### 表达式：
 
 
 ```
@@ -58,7 +58,7 @@ r = tf.case([(tf.less(x, y), f1), (tf.greater(x, z), f2)],
  
 ```
 
-#### Args:
+#### 参数：
 - **`pred_fn_pairs`** : List of pairs of a boolean scalar tensor and a callable whichreturns a list of tensors.
 - **`default`** : Optional callable that returns a list of tensors.
 - **`exclusive`** : True iff at most one predicate is allowed to evaluate to  `True` .
@@ -66,15 +66,15 @@ r = tf.case([(tf.less(x, y), f1), (tf.greater(x, z), f2)],
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 The tensors returned by the first pair whose predicate evaluated to True, orthose returned by  `default`  if none does.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `pred_fn_pairs`  is not a list/tuple.
 - **`TypeError`** : If  `pred_fn_pairs`  is a list but does not contain 2-tuples.
 - **`TypeError`** : If  `fns[i]`  is not callable for any i, or  `default`  is not       callable.
 
 
-#### V2 Compatibility
+#### v2兼容性
  `pred_fn_pairs`  could be a dictionary in v1. However, tf.Tensor andtf.Variable are no longer hashable in v2, so cannot be used as a key for adictionary.  Please use a list or a tuple instead.
 

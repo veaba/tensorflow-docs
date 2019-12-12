@@ -1,6 +1,6 @@
 Computes sine of x element-wise.
 
-**Aliases** : [ `tf.compat.v1.math.sin` ](/api_docs/python/tf/math/sin), [ `tf.compat.v1.sin` ](/api_docs/python/tf/math/sin), [ `tf.compat.v2.math.sin` ](/api_docs/python/tf/math/sin), [ `tf.compat.v2.sin` ](/api_docs/python/tf/math/sin), [ `tf.sin` ](/api_docs/python/tf/math/sin)
+**别名** : [ `tf.compat.v1.math.sin` ](/api_docs/python/tf/math/sin), [ `tf.compat.v1.sin` ](/api_docs/python/tf/math/sin), [ `tf.compat.v2.math.sin` ](/api_docs/python/tf/math/sin), [ `tf.compat.v2.sin` ](/api_docs/python/tf/math/sin), [ `tf.sin` ](/api_docs/python/tf/math/sin)
 
 ```
  tf.math.sin(
@@ -18,11 +18,11 @@ tf.math.sin(x) ==> [nan -0.4121185 -0.47942555 0.84147096 0.9320391 -0.87329733 
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

@@ -1,6 +1,6 @@
-Public API for tf.profiler namespace.
+tf.profiler命名空间的公共API。
 
-## Classes
+## Class 
 [ `class AdviceProto` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/AdviceProto): A ProtocolMessage
 
 [ `class GraphNodeProto` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/GraphNodeProto): A ProtocolMessage
@@ -13,7 +13,7 @@ Public API for tf.profiler namespace.
 
 [ `class Profiler` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/Profiler): TensorFlow multi-step profiler.
 
-## Functions
+## 功能
 [ `advise(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/advise): Auto profile and advise.
 
 [ `profile(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/profile): Profile model.

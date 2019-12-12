@@ -86,5 +86,5 @@ with tf.compat.v1.Session() as sess2:
  
 ```
 
-#### Args:
+#### 参数：
 - **`seed`** : integer.

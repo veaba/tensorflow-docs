@@ -1,11 +1,11 @@
-Support for training models.
+支持培训模式。
 
 See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/train/experimental) module: Public API for tf.train.experimental namespace.
 
-## Classes
+## Class 
 [ `class BytesList` ](https://tensorflow.google.cn/api_docs/python/tf/train/BytesList): A ProtocolMessage
 
 [ `class Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint): Groups trackable objects, saving and restoring them.
@@ -40,7 +40,7 @@ See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 
 [ `class ServerDef` ](https://tensorflow.google.cn/api_docs/python/tf/train/ServerDef): A ProtocolMessage
 
-## Functions
+## 功能
 [ `checkpoints_iterator(...)` ](https://tensorflow.google.cn/api_docs/python/tf/train/checkpoints_iterator): Continuously yield new checkpoint files as they appear.
 
 [ `get_checkpoint_state(...)` ](https://tensorflow.google.cn/api_docs/python/tf/train/get_checkpoint_state): Returns CheckpointState proto from the "checkpoint" file.

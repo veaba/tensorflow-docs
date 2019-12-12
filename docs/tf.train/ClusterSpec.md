@@ -3,7 +3,7 @@
 ## Class  `ClusterSpec` 
 Represents a cluster as a set of "tasks", organized into "jobs".
 
-**Aliases** : [ `tf.compat.v1.train.ClusterSpec` ](/api_docs/python/tf/train/ClusterSpec), [ `tf.compat.v2.train.ClusterSpec` ](/api_docs/python/tf/train/ClusterSpec)
+**别名** : [ `tf.compat.v1.train.ClusterSpec` ](/api_docs/python/tf/train/ClusterSpec), [ `tf.compat.v2.train.ClusterSpec` ](/api_docs/python/tf/train/ClusterSpec)
 
 A [ `tf.train.ClusterSpec` ](https://tensorflow.google.cn/api_docs/python/tf/train/ClusterSpec) represents the set of processes thatparticipate in a distributed TensorFlow computation. Every[ `tf.distribute.Server` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Server) is constructed in a particular cluster.
 
@@ -37,24 +37,24 @@ Each job may also be specified as a sparse mapping from task indicesto network a
 
 Creates a  `ClusterSpec` .
 
-#### Args:
+#### 参数：
 - **`cluster`** : A dictionary mapping one or more job names to (i) a list ofnetwork addresses, or (ii) a dictionary mapping integer task indices tonetwork addresses; or a [ `tf.train.ClusterDef` ](https://tensorflow.google.cn/api_docs/python/tf/train/ClusterDef) protocol buffer.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `cluster`  is not a dictionary mapping strings to listsof strings, and not a [ `tf.train.ClusterDef` ](https://tensorflow.google.cn/api_docs/python/tf/train/ClusterDef) protobuf.
 
 
-## Properties
+## 属性
 
 
 ###  `jobs` 
-Returns a list of job names in this cluster.
+返回此群集中作业名称的列表。
 
-#### Returns:
+#### 返回：
 A list of strings, corresponding to the names of jobs in this cluster.
 
-## Methods
+## 方法
 
 
 ###  `__bool__` 
@@ -111,11 +111,11 @@ Returns a [ `tf.train.ClusterDef` ](https://tensorflow.google.cn/api_docs/python
  
 ```
 
-Returns a dictionary from job names to their tasks.
+返回从作业名称到其任务的字典。
 
 For each job, if the task index space is dense, the correspondingvalue will be a list of network addresses; otherwise it will be adictionary mapping (sparse) task indices to the correspondingaddresses.
 
-#### Returns:
+#### 返回：
 A dictionary mapping job names to lists or dictionariesdescribing the tasks in those jobs.
 
 ###  `job_tasks` 
@@ -126,18 +126,18 @@ A dictionary mapping job names to lists or dictionariesdescribing the tasks in t
  
 ```
 
-Returns a mapping from task ID to address in the given job.
+返回从任务ID到给定作业中地址的映射。
 
-NOTE: For backwards compatibility, this method returns a list. Ifthe given job was defined with a sparse set of task indices, thelength of this list may not reflect the number of tasks defined inthis job. Use the [ `tf.train.ClusterSpec.num_tasks` ](https://tensorflow.google.cn/api_docs/python/tf/train/ClusterSpec#num_tasks) methodto find the number of tasks defined in a particular job.
+注意：For backwards compatibility, this method returns a list. Ifthe given job was defined with a sparse set of task indices, thelength of this list may not reflect the number of tasks defined inthis job. Use the [ `tf.train.ClusterSpec.num_tasks` ](https://tensorflow.google.cn/api_docs/python/tf/train/ClusterSpec#num_tasks) methodto find the number of tasks defined in a particular job.
 
-#### Args:
+#### 参数：
 - **`job_name`** : The string name of a job in this cluster.
 
 
-#### Returns:
+#### 返回：
 A list of task addresses, where the index in the listcorresponds to the task index of each task. The list may contain `None`  if the job was defined with a sparse set of task indices.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `job_name`  does not name a job in this cluster.
 
 
@@ -149,16 +149,16 @@ A list of task addresses, where the index in the listcorresponds to the task ind
  
 ```
 
-Returns the number of tasks defined in the given job.
+返回在给定作业中定义的任务数。
 
-#### Args:
+#### 参数：
 - **`job_name`** : The string name of a job in this cluster.
 
 
-#### Returns:
-The number of tasks defined in the given job.
+#### 返回：
+在给定作业中定义的任务数。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `job_name`  does not name a job in this cluster.
 
 
@@ -173,17 +173,17 @@ The number of tasks defined in the given job.
  
 ```
 
-Returns the address of the given task in the given job.
+返回给定作业中给定任务的地址。
 
-#### Args:
+#### 参数：
 - **`job_name`** : The string name of a job in this cluster.
 - **`task_index`** : A non-negative integer.
 
 
-#### Returns:
-The address of the given task in the given job.
+#### 返回：
+给定作业中给定任务的地址。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `job_name`  does not name a job in this cluster,or no task with index  `task_index`  is defined in that job.
 
 
@@ -195,14 +195,14 @@ The address of the given task in the given job.
  
 ```
 
-Returns a list of valid task indices in the given job.
+返回给定作业中有效任务索引的列表。
 
-#### Args:
+#### 参数：
 - **`job_name`** : The string name of a job in this cluster.
 
 
-#### Returns:
-A list of valid task indices in the given job.
+#### 返回：
+给定作业中有效任务索引的列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `job_name`  does not name a job in this cluster,or no task with index  `task_index`  is defined in that job.

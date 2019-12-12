@@ -1,11 +1,11 @@
 
 
 ## Class  `Iterator` 
-Base class for image data iterators.
+图像数据迭代器的基类。
 
 Inherits From: [ `Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator), [ `tf.compat.v2.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator), [ `tf.compat.v2.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator)
 
 Every  `Iterator`  must implement the  `_get_batches_of_transformed_samples` method.
 
@@ -16,7 +16,7 @@ Every  `Iterator`  must implement the  `_get_batches_of_transformed_samples` met
  n: Integer, total number of samples in the dataset to loop over.
 batch_size: Integer, size of a batch.
 shuffle: Boolean, whether to shuffle the data between epochs.
-seed: Random seeding for data shuffling.
+种子：随机种子数据洗牌。
  
 ```
 
@@ -35,7 +35,7 @@ seed: Random seeding for data shuffling.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__getitem__` 
@@ -48,12 +48,12 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Gets batch at position  `index` .
 
-#### Arguments:
+#### 参数：
 - **`index`** : position of the batch in the Sequence.
 
 
-#### Returns:
-A batch
+#### 返回：
+一批
 
 ###  `__iter__` 
 
@@ -63,7 +63,7 @@ A batch
  
 ```
 
-Create a generator that iterate over the Sequence.
+创建一个遍历序列的生成器。
 
 ###  `__len__` 
 
@@ -73,10 +73,10 @@ Create a generator that iterate over the Sequence.
  
 ```
 
-Number of batch in the Sequence.
+序列中的批数。
 
-#### Returns:
-The number of batches in the Sequence.
+#### 返回：
+序列中的批数。
 
 ###  `next` 
 
@@ -86,13 +86,13 @@ The number of batches in the Sequence.
  
 ```
 
-For python 2.x.
+对于Python2.x。
 
 # Returns
 
 
 ```
- The next batch.
+下一批。
  
 ```
 
@@ -104,7 +104,7 @@ For python 2.x.
  
 ```
 
-Method called at the end of every epoch.
+方法在每个纪元结束时调用。
 
 ###  `reset` 
 
@@ -114,5 +114,5 @@ Method called at the end of every epoch.
  
 ```
 
-## Class Members
+## Class 成员
 -  `white_list_formats`  []()

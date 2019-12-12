@@ -5,7 +5,7 @@ Runs  `feed_fn`  and sets the  `feed_dict`  accordingly.
 
 Inherits From: [ `SessionRunHook` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/SessionRunHook)
 
-**Aliases** : [ `tf.compat.v1.estimator.FeedFnHook` ](/api_docs/python/tf/estimator/FeedFnHook), [ `tf.compat.v1.train.FeedFnHook` ](/api_docs/python/tf/estimator/FeedFnHook), [ `tf.compat.v2.estimator.FeedFnHook` ](/api_docs/python/tf/estimator/FeedFnHook)
+**别名** : [ `tf.compat.v1.estimator.FeedFnHook` ](/api_docs/python/tf/estimator/FeedFnHook), [ `tf.compat.v1.train.FeedFnHook` ](/api_docs/python/tf/estimator/FeedFnHook), [ `tf.compat.v2.estimator.FeedFnHook` ](/api_docs/python/tf/estimator/FeedFnHook)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/basic_session_run_hooks.py#L974-L981)
@@ -17,11 +17,11 @@ Inherits From: [ `SessionRunHook` ](https://tensorflow.google.cn/api_docs/python
 
 Initializes a  `FeedFnHook` .
 
-#### Args:
+#### 参数：
 - **`feed_fn`** : function that takes no arguments and returns  `dict`  of  `Tensor` to feed.
 
 
-## Methods
+## 方法
 
 
 ###  `after_create_session` 
@@ -35,7 +35,7 @@ Initializes a  `FeedFnHook` .
  
 ```
 
-Called when new TensorFlow session is created.
+在创建新的tensorflow会话时调用。
 
 This is called to signal the hooks that a new session has been created. Thishas two essential differences with the situation in which  `begin`  is called:
 
@@ -43,7 +43,7 @@ This is called to signal the hooks that a new session has been created. Thishas 
 - This method will also be called as a result of recovering a wrappedsession, not only at the beginning of the overall session.
 
 
-#### Args:
+#### 参数：
 - **`session`** : A TensorFlow Session that has been created.
 - **`coord`** : A Coordinator object which keeps track of all threads.
 
@@ -59,7 +59,7 @@ This is called to signal the hooks that a new session has been created. Thishas 
  
 ```
 
-Called after each call to run().
+每次调用run（）后调用。
 
 The  `run_values`  argument contains results of requested ops/tensors by `before_run()` .
 
@@ -67,7 +67,7 @@ The  `run_context`  argument is the same one send to  `before_run`  call. `run_c
 
 If  `session.run()`  raises any exceptions then  `after_run()`  is not called.
 
-#### Args:
+#### 参数：
 - **`run_context`** : A  `SessionRunContext`  object.
 - **`run_values`** : A SessionRunValues object.
 
@@ -80,19 +80,19 @@ If  `session.run()`  raises any exceptions then  `after_run()`  is not called.
  
 ```
 
-Called before each call to run().
+在每次调用run（）之前调用。
 
 You can return from this call a  `SessionRunArgs`  object indicating ops ortensors to add to the upcoming  `run()`  call.  These ops/tensors will be runtogether with the ops/tensors originally passed to the original run() call.The run args you return can also contain feeds to be added to the run()call.
 
 The  `run_context`  argument is a  `SessionRunContext`  that providesinformation about the upcoming  `run()`  call: the originally requestedop/tensors, the TensorFlow Session.
 
-At this point graph is finalized and you can not add ops.
+此时图表已完成，无法添加操作。
 
-#### Args:
+#### 参数：
 - **`run_context`** : A  `SessionRunContext`  object.
 
 
-#### Returns:
+#### 返回：
 None or a  `SessionRunArgs`  object.
 
 ###  `begin` 
@@ -103,7 +103,7 @@ None or a  `SessionRunArgs`  object.
  
 ```
 
-Called once before using the session.
+在使用会话之前调用一次。
 
 When called, the default graph is the one that will be launched in thesession.  The hook can modify the graph by adding new operations to it.After the  `begin()`  call the graph will be finalized and the other callbackscan not modify the graph anymore. Second call of  `begin()`  on the samegraph, should not change the graph.
 
@@ -115,11 +115,11 @@ When called, the default graph is the one that will be launched in thesession.  
  
 ```
 
-Called at the end of session.
+在会话结束时调用。
 
 The  `session`  argument can be used in case the hook wants to run final ops,such as saving a last checkpoint.
 
 If  `session.run()`  raises exception other than OutOfRangeError orStopIteration then  `end()`  is not called.Note the difference between  `end()`  and  `after_run()`  behavior when `session.run()`  raises OutOfRangeError or StopIteration. In that case `end()`  is called but  `after_run()`  is not called.
 
-#### Args:
+#### 参数：
 - **`session`** : A TensorFlow Session that will be soon closed.

@@ -6,7 +6,7 @@ Split elements of  `input`  based on  `sep` .
 
 Let N be the size of  `input`  (typically N will be the batch size). Split eachelement of  `input`  based on  `sep`  and return a  `SparseTensor`  or `RaggedTensor`  containing the split tokens. Empty tokens are ignored.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -28,12 +28,12 @@ If `sep` is given, consecutive delimiters are not grouped together and are
 deemed to delimit empty strings. For example, `input` of `"1<>2<><>3"` and
 `sep` of `"<>"` returns `["1", "2", "", "3"]`. If `sep` is None or an empty
 string, consecutive whitespace are regarded as a single separator, and the
-result will contain no empty strings at the start or end if the string has
-leading or trailing whitespace.
+如果字符串有
+前导或尾随空白。
 
-Note that the above mentioned behavior matches python's str.split.
+注意，上面提到的行为与python的str.split匹配。
 
-#### Args:
+#### 参数：
 
 
 * **`input`**: A string `Tensor` of rank `N`, the strings to split.  If
@@ -46,16 +46,16 @@ Note that the above mentioned behavior matches python's str.split.
 * **`name`**: A name for the operation (optional).
 
 
-#### Raises:
+#### 加薪：
 
 
 * **`ValueError`**: If sep is not a string.
 
 
-#### Returns:
+#### 返回：
 
 A `SparseTensor` or `RaggedTensor` of rank `N+1`, the strings split
-according to the delimiter.
+根据分隔符。
  
 ```
 

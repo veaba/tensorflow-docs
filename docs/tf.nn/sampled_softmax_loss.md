@@ -1,4 +1,4 @@
-Computes and returns the sampled softmax training loss.
+计算并返回采样的SoftMax训练损失。
 
 ```
  tf.nn.sampled_softmax_loss(
@@ -49,7 +49,7 @@ Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007)([pdf](
 **Note:**  when doing embedding lookup on  `weights`  and  `bias` , "div" partitionstrategy will be used. Support for other partition strategy will be addedlater.
 
 
-#### Args:
+#### 参数：
 - **`weights`** : A  `Tensor`  of shape  `[num_classes, dim]` , or a list of  `Tensor` objects whose concatenation along dimension 0 has shape [num_classes,dim].  The (possibly-sharded) class embeddings.
 - **`biases`** : A  `Tensor`  of shape  `[num_classes]` .  The class biases.
 - **`labels`** : A  `Tensor`  of type  `int64`  and shape  `[batch_size, num_true]` . Thetarget classes.  Note that this format differs from the  `labels`  argumentof [ `nn.softmax_cross_entropy_with_logits` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax_cross_entropy_with_logits).
@@ -63,6 +63,6 @@ Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007)([pdf](
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `batch_size`  1-D tensor of per-example sampled softmax losses.
 

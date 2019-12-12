@@ -19,7 +19,7 @@ If  `label_smoothing`  is nonzero, smooth the labels towards 1/num_classes:    n
 
 Note that  `onehot_labels`  and  `logits`  must have the same shape,e.g.  `[batch_size, num_classes]` . The shape of  `weights`  must bebroadcastable to loss, whose shape is decided by the shape of  `logits` .In case the shape of  `logits`  is  `[batch_size, num_classes]` , loss isa  `Tensor`  of shape  `[batch_size]` .
 
-#### Args:
+#### 参数：
 - **`onehot_labels`** : One-hot-encoded labels.
 - **`logits`** : Logits outputs of the network.
 - **`weights`** : Optional  `Tensor`  that is broadcastable to loss.
@@ -29,13 +29,13 @@ Note that  `onehot_labels`  and  `logits`  must have the same shape,e.g.  `[batc
 - **`reduction`** : Type of reduction to apply to loss.
 
 
-#### Returns:
+#### 返回：
 Weighted loss  `Tensor`  of the same type as  `logits` . If  `reduction`  is `NONE` , this has shape  `[batch_size]` ; otherwise, it is scalar.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `logits`  doesn't match that of  `onehot_labels` or if the shape of  `weights`  is invalid or if  `weights`  is None.  Also if `onehot_labels`  or  `logits`  is None.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 The  `loss_collection`  argument is ignored when executing eagerly. Considerholding on to the return value or collecting losses via a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model).
 

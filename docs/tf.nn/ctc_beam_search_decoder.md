@@ -1,6 +1,6 @@
-Performs beam search decoding on the logits given in input.
+对输入中给定的登录执行波束搜索解码。
 
-**Aliases** : [ `tf.compat.v1.nn.ctc_beam_search_decoder_v2` ](/api_docs/python/tf/nn/ctc_beam_search_decoder), [ `tf.compat.v2.nn.ctc_beam_search_decoder` ](/api_docs/python/tf/nn/ctc_beam_search_decoder)
+**别名** : [ `tf.compat.v1.nn.ctc_beam_search_decoder_v2` ](/api_docs/python/tf/nn/ctc_beam_search_decoder), [ `tf.compat.v2.nn.ctc_beam_search_decoder` ](/api_docs/python/tf/nn/ctc_beam_search_decoder)
 
 ```
  tf.nn.ctc_beam_search_decoder(
@@ -14,14 +14,14 @@ Performs beam search decoding on the logits given in input.
 
 **Note**  The  `ctc_greedy_decoder`  is a special case of the `ctc_beam_search_decoder`  with  `top_paths=1`  and  `beam_width=1`  (butthat decoder is faster for this special case).
 
-#### Args:
+#### 参数：
 - **`inputs`** : 3-D  `float`   `Tensor` , size  `[max_time, batch_size, num_classes]` .The logits.
 - **`sequence_length`** : 1-D  `int32`  vector containing sequence lengths, having size `[batch_size]` .
 - **`beam_width`** : An int scalar >= 0 (beam search beam width).
 - **`top_paths`** : An int scalar >= 0, <= beam_width (controls output size).
 
 
-#### Returns:
+#### 返回：
 A tuple  `(decoded, log_probabilities)`  where
 
 - **`decoded`** : A list of length top_paths, where  `decoded[j]` is a  `SparseTensor`  containing the decoded outputs:

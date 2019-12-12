@@ -1,10 +1,10 @@
-Registers a flag whose value can be the name of enum members.
+注册一个标志，其值可以是枚举成员的名称。
 
 ```
  tf.compat.v1.flags.DEFINE_enum_class(    name,    default,    enum_class,    help,    flag_values=_flagvalues.FLAGS,    module_name=None,    **args) 
 ```
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : Enum|str|None, the default value of the flag.
 - **`enum_class`** : class, the Enum class with all the possible values for the flag.

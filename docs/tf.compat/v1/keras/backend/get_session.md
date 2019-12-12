@@ -1,4 +1,4 @@
-Returns the TF session to be used by the backend.
+返回要由后端使用的tf会话。
 
 ```
  tf.compat.v1.keras.backend.get_session(op_input_list=())
@@ -13,10 +13,10 @@ If no global Keras session exists at this point:we will create a new global sess
 
 Note that you can manually set the global sessionvia  `K.set_session(sess)` .
 
-#### Arguments:
+#### 参数：
 - **`op_input_list`** : An option sequence of tensors or ops, which will be usedto determine the current graph. Otherwise the default graph will beused.
 
 
-#### Returns:
-A TensorFlow session.
+#### 返回：
+Tensorflow 会话。
 

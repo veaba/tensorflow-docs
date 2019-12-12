@@ -22,7 +22,7 @@ If  `partition_strategy`  is  `"div"` , we assign ids to partitions in acontiguo
 
 The results of the lookup are concatenated into a densetensor. The returned tensor has shape  `shape(ids) + shape(params)[1:]` .
 
-#### Args:
+#### 参数：
 - **`params`** : A single tensor representing the complete embedding tensor, or alist of P tensors all of same shape except for the first dimension,representing sharded embedding tensors.  Alternatively, a `PartitionedVariable` , created by partitioning along dimension 0. Eachelement must be appropriately sized for the given  `partition_strategy` .
 - **`ids`** : A  `Tensor`  with type  `int32`  or  `int64`  containing the ids to be lookedup in  `params` .
 - **`partition_strategy`** : A string specifying the partitioning strategy, relevantif  `len(params) > 1` . Currently  `"div"`  and  `"mod"`  are supported. Defaultis  `"mod"` .
@@ -31,8 +31,8 @@ The results of the lookup are concatenated into a densetensor. The returned tens
 - **`max_norm`** : If not  `None` , each embedding is clipped if its l2-norm is largerthan this value.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as the tensors in  `params` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `params`  is empty.

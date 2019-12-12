@@ -9,10 +9,10 @@ Callers often only require filenames and line numbers, and do not need theadditi
 
 As a further optimisation, we allow users to specify a limit on the number offrames examined.
 
-#### Args:
+#### 参数：
 - **`max_length`** : The maximum length of stack to extract.
 
 
-#### Returns:
+#### 返回：
 A list of FileAndLine objects corresponding to the call stack of the currentthread.
 

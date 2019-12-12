@@ -1,6 +1,6 @@
 Inception-ResNet V2 model for Keras.
 
-## Functions
+## 功能
 [ `InceptionResNetV2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/InceptionResNetV2)
 
 [ `decode_predictions(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/inception_resnet_v2/decode_predictions)

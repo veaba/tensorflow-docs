@@ -1,11 +1,11 @@
 
 
 ## Class  `TFRecordWriter` 
-A class to write records to a TFRecords file.
+将记录写入tfrecords文件的类。
 
-**Aliases** : [ `tf.compat.v1.io.TFRecordWriter` ](/api_docs/python/tf/io/TFRecordWriter), [ `tf.compat.v1.python_io.TFRecordWriter` ](/api_docs/python/tf/io/TFRecordWriter), [ `tf.compat.v2.io.TFRecordWriter` ](/api_docs/python/tf/io/TFRecordWriter)
+**别名** : [ `tf.compat.v1.io.TFRecordWriter` ](/api_docs/python/tf/io/TFRecordWriter), [ `tf.compat.v1.python_io.TFRecordWriter` ](/api_docs/python/tf/io/TFRecordWriter), [ `tf.compat.v2.io.TFRecordWriter` ](/api_docs/python/tf/io/TFRecordWriter)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
 This class implements  `__enter__`  and  `__exit__` , and can be usedin  `with`  blocks like a normal file.
 
@@ -22,17 +22,17 @@ This class implements  `__enter__`  and  `__exit__` , and can be usedin  `with` 
 
 Opens file  `path`  and creates a  `TFRecordWriter`  writing to it.
 
-#### Args:
+#### 参数：
 - **`path`** : The path to the TFRecords file.
 - **`options`** : (optional) String specifying compression type, `TFRecordCompressionType` , or  `TFRecordOptions`  object.
 
 
-#### Raises:
+#### 加薪：
 - **`IOError`** : If  `path`  cannot be opened for writing.
 - **`ValueError`** : If valid compression_type can't be determined from  `options` .
 
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -67,7 +67,7 @@ Exit a  `with`  block, closing the file.
  
 ```
 
-Close the file.
+关闭文件。
 
 ###  `flush` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/tf_record.py#L238-L241)
@@ -77,7 +77,7 @@ Close the file.
  
 ```
 
-Flush the file.
+刷新文件。
 
 ###  `write` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/tf_record.py#L229-L236)
@@ -87,7 +87,7 @@ Flush the file.
  
 ```
 
-Write a string record to the file.
+将字符串记录写入文件。
 
-#### Args:
+#### 参数：
 - **`record`** : str

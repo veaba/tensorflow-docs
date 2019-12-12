@@ -5,11 +5,11 @@ In TensorFlow 2.0, iterating over a TensorShape instance returns values.
  
 ```
 
-This enables the new behavior.
+这将启用新行为。
 
 Concretely,  `tensor_shape[i]`  returned a Dimension instance in V1, butit V2 it returns either an integer, or None.
 
-#### Examples:
+#### 示例：
 
 
 ```

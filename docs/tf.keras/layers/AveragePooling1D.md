@@ -1,23 +1,23 @@
 
 
 ## Class  `AveragePooling1D` 
-Average pooling for temporal data.
+时态数据的平均池。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.AveragePooling1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.compat.v1.keras.layers.AvgPool1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.compat.v2.keras.layers.AveragePooling1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.compat.v2.keras.layers.AvgPool1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.keras.layers.AvgPool1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D)
+**别名** : [ `tf.compat.v1.keras.layers.AveragePooling1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.compat.v1.keras.layers.AvgPool1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.compat.v2.keras.layers.AveragePooling1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.compat.v2.keras.layers.AvgPool1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D), [ `tf.keras.layers.AvgPool1D` ](/api_docs/python/tf/keras/layers/AveragePooling1D)
 
-#### Arguments:
+#### 参数：
 - **`pool_size`** : Integer, size of the average pooling windows.
 - **`strides`** : Integer, or None. Factor by which to downscale.E.g. 2 will halve the input.If None, it will default to  `pool_size` .
 - **`padding`** : One of  `"valid"`  or  `"same"`  (case-insensitive).
 - **`data_format`** : A string,one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, steps, features)`  while  `channels_first` corresponds to inputs with shape `(batch, features, steps)` .
 
 
-#### Input shape:
+#### 输入形状：
 - If  `data_format='channels_last'` :3D tensor with shape  `(batch_size, steps, features)` .
 - If  `data_format='channels_first'` :3D tensor with shape  `(batch_size, features, steps)` .
 
 
-#### Output shape:
+#### 输出形状：
 - If  `data_format='channels_last'` :3D tensor with shape  `(batch_size, downsampled_steps, features)` .
 - If  `data_format='channels_first'` :3D tensor with shape  `(batch_size, features, downsampled_steps)` .
 

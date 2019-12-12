@@ -1,11 +1,11 @@
 
 
 ## Class  `UnionResolver` 
-Performs a union on underlying ClusterResolvers.
+在底层的ClusterResolver上执行联合。
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.UnionResolver` ](/api_docs/python/tf/distribute/cluster_resolver/UnionResolver), [ `tf.compat.v2.distribute.cluster_resolver.UnionResolver` ](/api_docs/python/tf/distribute/cluster_resolver/UnionResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.UnionResolver` ](/api_docs/python/tf/distribute/cluster_resolver/UnionResolver), [ `tf.compat.v2.distribute.cluster_resolver.UnionResolver` ](/api_docs/python/tf/distribute/cluster_resolver/UnionResolver)
 
 This class performs a union given two or more existing ClusterResolvers. Itmerges the underlying ClusterResolvers, and returns one unified ClusterSpecwhen cluster_spec is called. The details of the merge function isdocumented in the cluster_spec function.
 
@@ -22,23 +22,23 @@ For additional ClusterResolver properties such as task type, task index,rpc laye
  
 ```
 
-Initializes a UnionClusterResolver with other ClusterResolvers.
+使用其他ClusterResolver初始化UnionClusterResolver。
 
-#### Args:
+#### 参数：
 - **`*args`** :  `ClusterResolver`  objects to be unionized.
 - **`**kwargs`** :   rpc_layer - (Optional) Override value for the RPC layer used byTensorFlow.task_type - (Optional) Override value for the current task type.task_id - (Optional) Override value for the current task index.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If any argument is not a subclass of  `ClusterResolvers` .
 - **`ValueError`** : If there are no arguments passed.
 
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
 There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
@@ -55,7 +55,7 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
 ###  `task_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -66,12 +66,12 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
  
 ```
 
-Returns a union of all the ClusterSpecs from the ClusterResolvers.
+从ClusterResolver返回所有ClusterSpec的并集。
 
-#### Returns:
+#### 返回：
 A ClusterSpec containing host information merged from all the underlyingClusterResolvers.
 
-#### Raises:
+#### 加薪：
 - **`KeyError`** : If there are conflicting keys detected when merging two ormore dictionaries, this exception is raised.
 
 **Note:**  If there are multiple ClusterResolvers exposing ClusterSpecs with thesame job name, we will merge the list/dict of workers.
@@ -91,18 +91,18 @@ If *any* of the ClusterSpecs expose the set of workers as a dict, we willtreat a
  
 ```
 
-Returns the master address to use when creating a session.
+返回创建会话时要使用的主地址。
 
 This usually returns the master from the first ClusterResolver passed in,but you can override this by specifying the task_type and task_id.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the master.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the master.
 - **`rpc_layer`** : (Optional) The RPC protocol for the given cluster.
 
 
-#### Returns:
-The name or URL of the session master.
+#### 返回：
+会话主机的名称或url。
 
 ###  `num_accelerators` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/cluster_resolver.py#L443-L448)
@@ -116,18 +116,18 @@ The name or URL of the session master.
  
 ```
 
-Returns the number of accelerator cores per worker.
+返回每个工作进程的加速器核心数。
 
 This returns the number of accelerator cores (such as GPUs and TPUs)available per worker.
 
 Optionally, we allow callers to specify the task_type, and task_id, forif they want to target a specific TensorFlow process to querythe number of accelerators. This is to support heterogenous environments,where the number of accelerators cores per host is different.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the machine wewant to query.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the machine wewant to query.
 - **`config_proto`** : (Optional) Configuration for starting a new session toquery how many accelerator cores it has.
 
 
-#### Returns:
-A map of accelerator types to number of cores.
+#### 返回：
+加速器类型与核心数的映射。
 

@@ -1,6 +1,6 @@
-Applies an affine transformation specified by the parameters given.
+应用由给定参数指定的仿射变换。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.apply_affine_transform` ](/api_docs/python/tf/keras/preprocessing/image/apply_affine_transform), [ `tf.compat.v2.keras.preprocessing.image.apply_affine_transform` ](/api_docs/python/tf/keras/preprocessing/image/apply_affine_transform)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.apply_affine_transform` ](/api_docs/python/tf/keras/preprocessing/image/apply_affine_transform), [ `tf.compat.v2.keras.preprocessing.image.apply_affine_transform` ](/api_docs/python/tf/keras/preprocessing/image/apply_affine_transform)
 
 ```
  tf.keras.preprocessing.image.apply_affine_transform(
@@ -26,19 +26,19 @@ Applies an affine transformation specified by the parameters given.
 
 ```
  x: 2D numpy array, single image.
-theta: Rotation angle in degrees.
+θ：旋转角度，单位为度。
 tx: Width shift.
 ty: Heigh shift.
-shear: Shear angle in degrees.
-zx: Zoom in x direction.
-zy: Zoom in y direction
+剪切：以度为单位的剪切角。
+zx：沿x方向缩放。
+zy：沿y方向缩放
 row_axis: Index of axis for rows in the input image.
 col_axis: Index of axis for columns in the input image.
 channel_axis: Index of axis for channels in the input image.
 fill_mode: Points outside the boundaries of the input
     are filled according to the given mode
     (one of `{'constant', 'nearest', 'reflect', 'wrap'}`).
-cval: Value used for points outside the boundaries
+cval：用于边界外点的值
     of the input if `mode='constant'`.
 order: int, order of interpolation
  
@@ -48,7 +48,7 @@ order: int, order of interpolation
 
 
 ```
- The transformed version of the input.
+输入的转换版本。
  
 ```
 

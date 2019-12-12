@@ -1,6 +1,6 @@
-Instantiates a variable with values drawn from a uniform distribution.
+使用从统一分布中提取的值实例化变量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.random_uniform_variable` ](/api_docs/python/tf/keras/backend/random_uniform_variable), [ `tf.compat.v2.keras.backend.random_uniform_variable` ](/api_docs/python/tf/keras/backend/random_uniform_variable)
+**别名** : [ `tf.compat.v1.keras.backend.random_uniform_variable` ](/api_docs/python/tf/keras/backend/random_uniform_variable), [ `tf.compat.v2.keras.backend.random_uniform_variable` ](/api_docs/python/tf/keras/backend/random_uniform_variable)
 
 ```
  tf.keras.backend.random_uniform_variable(
@@ -14,7 +14,7 @@ Instantiates a variable with values drawn from a uniform distribution.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`shape`** : Tuple of integers, shape of returned Keras variable.
 - **`low`** : Float, lower boundary of the output interval.
 - **`high`** : Float, upper boundary of the output interval.
@@ -23,10 +23,10 @@ Instantiates a variable with values drawn from a uniform distribution.
 - **`seed`** : Integer, random seed.
 
 
-#### Returns:
+#### 返回：
 A Keras variable, filled with drawn samples.
 
-#### Example:
+#### 示例：
 
 
 ```

@@ -11,14 +11,14 @@ Connect a [ `tf.debugging.check_numerics` ](https://tensorflow.google.cn/api_doc
 **Note:**  This API is not compatible with the use of [ `tf.cond` ](https://tensorflow.google.cn/api_docs/python/tf/cond) or[ `tf.while_loop` ](https://tensorflow.google.cn/api_docs/python/tf/while_loop), and will raise a  `ValueError`  if you attempt to call itin such a graph.
 
 
-#### Returns:
+#### 返回：
 A  `group`  op depending on all  `check_numerics`  ops added.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the graph contains any numeric operations in a control flowstructure.
 - **`RuntimeError`** : If called with eager execution enabled.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Not compatible with eager execution. To check for  `Inf` s and  `NaN` s undereager execution, call  `tfe.seterr(inf_or_nan='raise')`  once before executingthe checked operations.
 

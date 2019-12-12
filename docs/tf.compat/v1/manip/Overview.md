@@ -1,6 +1,6 @@
-Operators for manipulating tensors.
+操纵张量的算符。
 
-## Functions
+## 功能
 [ `batch_to_space_nd(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/batch_to_space_nd): BatchToSpace for N-D tensors of type T.
 
 [ `gather_nd(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/gather_nd): Gather slices from  `params`  into a Tensor with shape specified by  `indices` .

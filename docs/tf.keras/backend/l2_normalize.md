@@ -1,6 +1,6 @@
-Normalizes a tensor wrt the L2 norm alongside the specified axis.
+规范化与指定轴的l2范数相关的张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.l2_normalize` ](/api_docs/python/tf/keras/backend/l2_normalize), [ `tf.compat.v2.keras.backend.l2_normalize` ](/api_docs/python/tf/keras/backend/l2_normalize)
+**别名** : [ `tf.compat.v1.keras.backend.l2_normalize` ](/api_docs/python/tf/keras/backend/l2_normalize), [ `tf.compat.v2.keras.backend.l2_normalize` ](/api_docs/python/tf/keras/backend/l2_normalize)
 
 ```
  tf.keras.backend.l2_normalize(
@@ -10,11 +10,11 @@ Normalizes a tensor wrt the L2 norm alongside the specified axis.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`axis`** : axis along which to perform normalization.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

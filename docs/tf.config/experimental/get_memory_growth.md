@@ -1,6 +1,6 @@
-Get if memory growth is enabled for a PhysicalDevice.
+如果物理设备启用了内存增长，则获取。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth), [ `tf.compat.v2.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth)
+**别名** : [ `tf.compat.v1.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth), [ `tf.compat.v2.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth)
 
 ```
  tf.config.experimental.get_memory_growth(device)
@@ -9,7 +9,7 @@ Get if memory growth is enabled for a PhysicalDevice.
 
 A PhysicalDevice with memory growth set will not allocate all memory on thedevice upfront.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -20,10 +20,10 @@ assert tf.config.experimental.get_memory_growth(physical_devices[0]) == True
  
 ```
 
-#### Args:
+#### 参数：
 - **`device`** : PhysicalDevice to query
 
 
-#### Returns:
-Current memory growth setting.
+#### 返回：
+当前内存增长设置。
 

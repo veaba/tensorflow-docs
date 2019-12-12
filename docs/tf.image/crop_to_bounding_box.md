@@ -1,6 +1,6 @@
-Crops an image to a specified bounding box.
+将图像裁剪到指定的边界框。
 
-**Aliases** : [ `tf.compat.v1.image.crop_to_bounding_box` ](/api_docs/python/tf/image/crop_to_bounding_box), [ `tf.compat.v2.image.crop_to_bounding_box` ](/api_docs/python/tf/image/crop_to_bounding_box)
+**别名** : [ `tf.compat.v1.image.crop_to_bounding_box` ](/api_docs/python/tf/image/crop_to_bounding_box), [ `tf.compat.v2.image.crop_to_bounding_box` ](/api_docs/python/tf/image/crop_to_bounding_box)
 
 ```
  tf.image.crop_to_bounding_box(
@@ -15,7 +15,7 @@ Crops an image to a specified bounding box.
 
 This op cuts a rectangular part out of  `image` . The top-left corner of thereturned image is at  `offset_height, offset_width`  in  `image` , and itslower-right corner is at `offset_height + target_height, offset_width + target_width` .
 
-#### Args:
+#### 参数：
 - **`image`** : 4-D Tensor of shape  `[batch, height, width, channels]`  or 3-D Tensorof shape  `[height, width, channels]` .
 - **`offset_height`** : Vertical coordinate of the top-left corner of the result inthe input.
 - **`offset_width`** : Horizontal coordinate of the top-left corner of the result inthe input.
@@ -23,8 +23,8 @@ This op cuts a rectangular part out of  `image` . The top-left corner of theretu
 - **`target_width`** : Width of the result.
 
 
-#### Returns:
+#### 返回：
 If  `image`  was 4-D, a 4-D float Tensor of shape `[batch, target_height, target_width, channels]` If  `image`  was 3-D, a 3-D float Tensor of shape `[target_height, target_width, channels]` 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `image`  is incompatible with the  `offset_*`  or `target_*`  arguments, or either  `offset_height`  or  `offset_width`  isnegative, or either  `target_height`  or  `target_width`  is not positive.

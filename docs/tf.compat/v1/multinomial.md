@@ -8,7 +8,7 @@ Draws samples from a multinomial distribution. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.random.categorical` ](https://tensorflow.google.cn/api_docs/python/tf/random/categorical) instead.
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -18,7 +18,7 @@ samples = tf.random.categorical(tf.math.log([[0.5, 0.5]]), 5)
  
 ```
 
-#### Args:
+#### 参数：
 - **`logits`** : 2-D Tensor with shape  `[batch_size, num_classes]` .  Each slice `[i, :]`  represents the unnormalized log-probabilities for all classes.
 - **`num_samples`** : 0-D.  Number of independent samples to draw for each row slice.
 - **`seed`** : A Python integer. Used to create a random seed for the distribution.See [ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed) for behavior.
@@ -26,6 +26,6 @@ samples = tf.random.categorical(tf.math.log([[0.5, 0.5]]), 5)
 - **`output_dtype`** : integer type to use for the output. Defaults to int64.
 
 
-#### Returns:
+#### 返回：
 The drawn samples of shape  `[batch_size, num_samples]` .
 

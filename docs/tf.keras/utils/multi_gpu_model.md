@@ -1,6 +1,6 @@
 Replicates a model on different GPUs. (deprecated)
 
-**Aliases** : [ `tf.compat.v1.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model), [ `tf.compat.v2.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model)
+**别名** : [ `tf.compat.v1.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model), [ `tf.compat.v2.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model)
 
 ```
  tf.keras.utils.multi_gpu_model(
@@ -25,17 +25,17 @@ This induces quasi-linear speedup on up to 8 GPUs.
 
 This function is only available with the TensorFlow backendfor the time being.
 
-#### Arguments:
+#### 参数：
 - **`model`** : A Keras model instance. To avoid OOM errors,this model could have been built on CPU, for instance(see usage example below).
 - **`gpus`** : Integer >= 2, number of on GPUs on which to createmodel replicas.
 - **`cpu_merge`** : A boolean value to identify whether to forcemerging model weights under the scope of the CPU or not.
 - **`cpu_relocation`** : A boolean value to identify whether tocreate the model's weights under the scope of the CPU.If the model is not defined under any preceding devicescope, you can still rescue it by activating this option.
 
 
-#### Returns:
+#### 返回：
 A Keras  `Model`  instance which can be used just like the initial `model`  argument, but which distributes its workload on multiple GPUs.
 
-Example 1: Training models with weights merge on CPU
+示例1：在CPU上合并权重的训练模型
 
 ```
      import tensorflow as tf
@@ -112,5 +112,5 @@ Example 3: Training models with weights merge on GPU (recommended for NV-link)
  
 ```
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the  `gpus`  argument does not match available devices.

@@ -1,6 +1,6 @@
 2D Pooling.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.pool2d` ](/api_docs/python/tf/keras/backend/pool2d), [ `tf.compat.v2.keras.backend.pool2d` ](/api_docs/python/tf/keras/backend/pool2d)
+**别名** : [ `tf.compat.v1.keras.backend.pool2d` ](/api_docs/python/tf/keras/backend/pool2d), [ `tf.compat.v2.keras.backend.pool2d` ](/api_docs/python/tf/keras/backend/pool2d)
 
 ```
  tf.keras.backend.pool2d(
@@ -14,7 +14,7 @@
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`pool_size`** : tuple of 2 integers.
 - **`strides`** : tuple of 2 integers.
@@ -23,10 +23,10 @@
 - **`pool_mode`** : string,  `"max"`  or  `"avg"` .
 
 
-#### Returns:
+#### 返回：
 A tensor, result of 2D pooling.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `data_format`  is neither  `"channels_last"`  or `"channels_first"` .
 - **`ValueError`** : if  `pool_size`  is not a tuple of 2 integers.
 - **`ValueError`** : if  `strides`  is not a tuple of 2 integers.

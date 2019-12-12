@@ -33,7 +33,7 @@ For example,
 
 Note that if no bounding box information is available, setting `use_image_if_no_bounding_boxes = True`  will assume there is a single implicitbounding box covering the whole image. If  `use_image_if_no_bounding_boxes`  isfalse and no bounding boxes are supplied, an error is raised.
 
-#### Args:
+#### 参数：
 - **`image_size`** : A  `Tensor` . Must be one of the following types:  `uint8` ,  `int8` , `int16` ,  `int32` ,  `int64` . 1-D, containing  `[height, width, channels]` .
 - **`bounding_boxes`** : A  `Tensor`  of type  `float32` . 3-D with shape  `[batch, N, 4]` describing the N bounding boxes associated with the image.
 - **`seed`** : An optional  `int` . Defaults to  `0` . If either  `seed`  or  `seed2`  areset to non-zero, the random number generator is seeded by the given `seed` .  Otherwise, it is seeded by a random seed.
@@ -46,7 +46,7 @@ Note that if no bounding box information is available, setting `use_image_if_no_
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (begin, size, bboxes).
 
 - **`begin`** : A  `Tensor` . Has the same type as  `image_size` . 1-D, containing `[offset_height, offset_width, 0]` . Provide as input to[ `tf.slice` ](https://tensorflow.google.cn/api_docs/python/tf/slice).

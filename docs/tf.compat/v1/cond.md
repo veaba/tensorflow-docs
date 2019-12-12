@@ -33,7 +33,7 @@ Note that  `cond`  calls  `true_fn`  and  `false_fn`  *exactly once* (inside the
 
 [ `tf.cond` ](https://tensorflow.google.cn/api_docs/python/tf/cond) supports nested structures as implemented in `tensorflow.python.util.nest` . Both  `true_fn`  and  `false_fn`  must return thesame (possibly nested) value structure of lists, tuples, and/or named tuples.Singleton lists and tuples form the only exceptions to this: when returned by `true_fn`  and/or  `false_fn` , they are implicitly unpacked to single values.This behavior is disabled by passing  `strict=True` .
 
-#### Args:
+#### 参数：
 - **`pred`** : A scalar determining whether to return the result of  `true_fn`  or `false_fn` .
 - **`true_fn`** : The callable to be performed if pred is true.
 - **`false_fn`** : The callable to be performed if pred is false.
@@ -41,15 +41,15 @@ Note that  `cond`  calls  `true_fn`  and  `false_fn`  *exactly once* (inside the
 - **`name`** : Optional name prefix for the returned tensors.
 
 
-#### Returns:
+#### 返回：
 Tensors returned by the call to either  `true_fn`  or  `false_fn` . If thecallables return a singleton list, the element is extracted from the list.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `true_fn`  or  `false_fn`  is not callable.
 - **`ValueError`** : if  `true_fn`  and  `false_fn`  do not return the same number oftensors, or return tensors of different types.
 
 
-#### Example:
+#### 示例：
 
 
 ```

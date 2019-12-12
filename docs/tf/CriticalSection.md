@@ -1,9 +1,9 @@
 
 
 ## Class  `CriticalSection` 
-Critical section.
+关键部分。
 
-**Aliases** : [ `tf.compat.v1.CriticalSection` ](/api_docs/python/tf/CriticalSection), [ `tf.compat.v2.CriticalSection` ](/api_docs/python/tf/CriticalSection)
+**别名** : [ `tf.compat.v1.CriticalSection` ](/api_docs/python/tf/CriticalSection), [ `tf.compat.v2.CriticalSection` ](/api_docs/python/tf/CriticalSection)
 
 A  `CriticalSection`  object is a resource in the graph which executes subgraphsin **serial**  order.  A common example of a subgraph one may wish to runexclusively is the one given by the following function:
 
@@ -73,15 +73,15 @@ sess.run(bad_sum)  # May return 0.0
  
 ```
 
-Creates a critical section.
+创建关键节。
 
-## Properties
+## 属性
 
 
 ###  `name` 
 
 
-## Methods
+## 方法
 
 
 ###  `execute` 
@@ -105,15 +105,15 @@ Execute function  `fn()`  inside the critical section.
  
 ```
 
-#### Args:
+#### 参数：
 - **`fn`** : The function to execute.  Must return at least one tensor.
 - **`exclusive_resource_access`** : Whether the resources required by `fn`  should be exclusive to this  `CriticalSection` .  Default:  `True` .You may want to set this to  `False`  if you will be accessing aresource in read-only mode in two different CriticalSections.
 - **`name`** : The name to use when creating the execute operation.
 
 
-#### Returns:
+#### 返回：
 The tensors returned from  `fn()` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `fn`  attempts to lock this  `CriticalSection`  in any nestedor lazy way that may cause a deadlock.
 - **`ValueError`** : If  `exclusive_resource_access == True`  andanother  `CriticalSection`  has an execution requesting the sameresources as  `fn`  `.  Note, even if` exclusive_resource_access `is` True `, if another execution in another` CriticalSection `was createdwithout` exclusive_resource_access=True `, a` ValueError` will be raised.

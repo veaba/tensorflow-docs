@@ -1,11 +1,11 @@
 
 
 ## Class  `PolynomialDecay` 
-A LearningRateSchedule that uses a polynomial decay schedule.
+使用多项式衰减时间表的LearningRateSchedule。
 
 Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
 
-**Aliases** : [ `tf.compat.v1.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.compat.v2.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.compat.v2.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
+**别名** : [ `tf.compat.v1.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.compat.v2.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.compat.v2.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L270-L367)
@@ -22,7 +22,7 @@ Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/
  
 ```
 
-Applies a polynomial decay to the learning rate.
+对学习率应用多项式衰减。
 
 It is commonly observed that a monotonically decreasing learning rate, whosedegree of change is carefully chosen, results in a better performing model.This schedule applies a polynomial decay function to an optimizer step,given a provided  `initial_learning_rate` , to reach an  `end_learning_rate` in the given  `decay_steps` .
 
@@ -74,7 +74,7 @@ model.fit(data, labels, epochs=5)
 
 The learning rate schedule is also serializable and deserializable using[ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
 
-#### Args:
+#### 参数：
 - **`initial_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The initial learning rate.
 - **`decay_steps`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number.Must be positive.  See the decay computation above.
 - **`end_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The minimal end learning rate.
@@ -83,10 +83,10 @@ The learning rate schedule is also serializable and deserializable using[ `tf.ke
 - **`name`** : String.  Optional name of the operation. Defaults to'PolynomialDecay'.
 
 
-#### Returns:
+#### 返回：
 A 1-arg callable learning rate schedule that takes the current optimizerstep and outputs the decayed learning rate, a scalar  `Tensor`  of the sametype as  `initial_learning_rate` .
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -97,7 +97,7 @@ A 1-arg callable learning rate schedule that takes the current optimizerstep and
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
@@ -112,11 +112,11 @@ Call self as a function.
 
 Instantiates a  `LearningRateSchedule`  from its config.
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `LearningRateSchedule`  instance.
 
 ###  `get_config` 

@@ -5,7 +5,7 @@ Variable scope object to carry defaults to provide to  `get_variable` .
 
 Many of the arguments we need for  `get_variable`  in a variable store are mosteasily handled with a context. This object is used for the defaults.
 
-#### Attributes:
+#### 属性：
 - **`name`** : name of the current scope, used as prefix in get_variable.
 - **`initializer`** : default initializer passed to get_variable.
 - **`regularizer`** : default regularizer passed to get_variable.
@@ -26,9 +26,9 @@ Many of the arguments we need for  `get_variable`  in a variable store are moste
  __init__(    reuse,    name='',    initializer=None,    regularizer=None,    caching_device=None,    partitioner=None,    custom_getter=None,    name_scope='',    dtype=tf.dtypes.float32,    use_resource=None,    constraint=None) 
 ```
 
-Creates a new VariableScope with the given properties.
+创建具有给定属性的新variablescope。
 
-## Properties
+## 属性
 
 
 ###  `caching_device` 
@@ -64,7 +64,7 @@ Creates a new VariableScope with the given properties.
 ###  `use_resource` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_collection` 
@@ -75,7 +75,7 @@ Creates a new VariableScope with the given properties.
  
 ```
 
-Get this scope's variables.
+获取此作用域的变量。
 
 ###  `get_variable` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1177-L1247)
@@ -103,7 +103,7 @@ Get this scope's variables.
  
 ```
 
-Gets an existing variable with this name or create a new one.
+获取具有此名称的现有变量或创建新变量。
 
 ###  `global_variables` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1169-L1171)
@@ -113,7 +113,7 @@ Gets an existing variable with this name or create a new one.
  
 ```
 
-Get this scope's global variables.
+获取此作用域的全局变量。
 
 ###  `local_variables` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1173-L1175)
@@ -123,7 +123,7 @@ Get this scope's global variables.
  
 ```
 
-Get this scope's local variables.
+获取此作用域的局部变量。
 
 ###  `reuse_variables` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1122-L1124)
@@ -133,7 +133,7 @@ Get this scope's local variables.
  
 ```
 
-Reuse variables in this scope.
+在此范围内重用变量。
 
 ###  `set_caching_device` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1145-L1150)
@@ -153,7 +153,7 @@ Set caching_device for this scope.
  
 ```
 
-Set custom getter for this scope.
+为此作用域设置自定义getter。
 
 ###  `set_dtype` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1130-L1132)
@@ -163,7 +163,7 @@ Set custom getter for this scope.
  
 ```
 
-Set data type for this scope.
+为此作用域设置数据类型。
 
 ###  `set_initializer` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1126-L1128)
@@ -173,7 +173,7 @@ Set data type for this scope.
  
 ```
 
-Set initializer for this scope.
+为此作用域设置初始值设定项。
 
 ###  `set_partitioner` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1152-L1154)
@@ -183,7 +183,7 @@ Set initializer for this scope.
  
 ```
 
-Set partitioner for this scope.
+为此作用域设置分区程序。
 
 ###  `set_regularizer` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1141-L1143)
@@ -193,7 +193,7 @@ Set partitioner for this scope.
  
 ```
 
-Set regularizer for this scope.
+为此范围设置正则化器。
 
 ###  `set_use_resource` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1134-L1139)
@@ -203,7 +203,7 @@ Set regularizer for this scope.
  
 ```
 
-Sets whether to use ResourceVariables for this scope.
+设置是否为此作用域使用资源变量。
 
 ###  `trainable_variables` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/variable_scope.py#L1165-L1167)
@@ -213,5 +213,5 @@ Sets whether to use ResourceVariables for this scope.
  
 ```
 
-Get this scope's trainable variables.
+获取此作用域的可训练变量。
 

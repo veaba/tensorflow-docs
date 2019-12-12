@@ -29,7 +29,7 @@ Note on supported columns:  `linear_model`  treats categorical columns as `indic
 
  `linear_model`  assigns weights for the presence of "a", "b", "c' implicitly,just like  `indicator_column` , while  `input_layer`  explicitly requires wrappingeach of categorical columns with an  `embedding_column`  or an `indicator_column` .
 
-#### Example of usage:
+#### 用法示例：
 
 
 ```
@@ -77,7 +77,7 @@ with  `sparse_combiner`  as "mean", the linear model outputs consequentlyare:
 
 where  `y_i`  is the output,  `b`  is the bias, and  `w_x`  is the weightassigned to the presence of  `x`  in the input features.
 
-#### Args:
+#### 参数：
 - **`features`** : A mapping from key to tensors.  `_FeatureColumn` s look up via thesekeys. For example  `numeric_column('price')`  will look at 'price' key inthis dict. Values are  `Tensor`  or  `SparseTensor`  depending oncorresponding  `_FeatureColumn` .
 - **`feature_columns`** : An iterable containing the FeatureColumns to use as inputsto your model. All items should be instances of classes derived from `_FeatureColumn` s.
 - **`units`** : An integer, dimensionality of the output space. Default value is 1.
@@ -90,8 +90,8 @@ where  `y_i`  is the output,  `b`  is the bias, and  `w_x`  is the weightassigne
     - "sqrtn": do l2 normalization on features in the column
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  which represents predictions/logits of a linear model. Its shapeis (batch_size, units) and its dtype is  `float32` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if an item in  `feature_columns`  is neither a  `_DenseColumn` nor  `_CategoricalColumn` .

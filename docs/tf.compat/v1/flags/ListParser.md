@@ -15,7 +15,7 @@ Inherits From: [ `BaseListParser` ](https://tensorflow.google.cn/api_docs/python
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `flag_type` 
@@ -26,7 +26,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-See base class.
+见基类。
 
 ###  `parse` 
 

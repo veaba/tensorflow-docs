@@ -4,25 +4,25 @@ Return the handle of  `data` .
  tf.compat.v1.get_session_handle(    data,    name=None) 
 ```
 
-This is EXPERIMENTAL and subject to change.
+这是实验性的，随时可能改变。
 
 Keep  `data`  "in-place" in the runtime and create a handle that can beused to retrieve  `data`  in a subsequent run().
 
 Combined with  `get_session_tensor` , we can keep a tensor produced inone run call in place, and use it as the input in a future run call.
 
-#### Args:
+#### 参数：
 - **`data`** : A tensor to be stored in the session.
 - **`name`** : Optional name prefix for the return tensor.
 
 
-#### Returns:
+#### 返回：
 A scalar string tensor representing a unique handle for  `data` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `data`  is not a Tensor.
 
 
-#### Example:
+#### 示例：
 
 
 ```

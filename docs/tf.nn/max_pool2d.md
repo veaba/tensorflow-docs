@@ -1,6 +1,6 @@
-Performs the max pooling on the input.
+对输入执行最大池。
 
-**Aliases** : [ `tf.compat.v1.nn.max_pool2d` ](/api_docs/python/tf/nn/max_pool2d), [ `tf.compat.v2.nn.max_pool2d` ](/api_docs/python/tf/nn/max_pool2d)
+**别名** : [ `tf.compat.v1.nn.max_pool2d` ](/api_docs/python/tf/nn/max_pool2d), [ `tf.compat.v2.nn.max_pool2d` ](/api_docs/python/tf/nn/max_pool2d)
 
 ```
  tf.nn.max_pool2d(
@@ -14,7 +14,7 @@ Performs the max pooling on the input.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A 4-D  `Tensor`  of the format specified by  `data_format` .
 - **`ksize`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` . The size ofthe window for each dimension of the input tensor.
 - **`strides`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` . Thestride of the sliding window for each dimension of the input tensor.
@@ -23,6 +23,6 @@ Performs the max pooling on the input.
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of format specified by  `data_format` .The max pooled output tensor.
 

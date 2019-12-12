@@ -1,6 +1,6 @@
 Computes log Poisson loss given  `log_input` .
 
-**Aliases** : [ `tf.compat.v1.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss), [ `tf.compat.v2.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss)
+**别名** : [ `tf.compat.v1.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss), [ `tf.compat.v2.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss)
 
 ```
  tf.nn.log_poisson_loss(
@@ -29,15 +29,15 @@ For brevity, let  `c = log(x) = log_input` ,  `z = targets` .  The log Poissonlo
  
 ```
 
-#### Args:
+#### 参数：
 - **`targets`** : A  `Tensor`  of the same type and shape as  `log_input` .
 - **`log_input`** : A  `Tensor`  of type  `float32`  or  `float64` .
 - **`compute_full_loss`** : whether to compute the full loss. If false, a constantterm is dropped in favor of more efficient optimization.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same shape as  `log_input`  with the componentwiselogistic losses.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `log_input`  and  `targets`  do not have the same shape.

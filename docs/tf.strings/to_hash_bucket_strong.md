@@ -1,6 +1,6 @@
-Converts each string in the input Tensor to its hash mod by a number of buckets.
+将输入张量中的每个字符串转换为其hash mod（按桶数）。
 
-**Aliases** : [ `tf.compat.v1.string_to_hash_bucket_strong` ](/api_docs/python/tf/strings/to_hash_bucket_strong), [ `tf.compat.v1.strings.to_hash_bucket_strong` ](/api_docs/python/tf/strings/to_hash_bucket_strong), [ `tf.compat.v2.strings.to_hash_bucket_strong` ](/api_docs/python/tf/strings/to_hash_bucket_strong)
+**别名** : [ `tf.compat.v1.string_to_hash_bucket_strong` ](/api_docs/python/tf/strings/to_hash_bucket_strong), [ `tf.compat.v1.strings.to_hash_bucket_strong` ](/api_docs/python/tf/strings/to_hash_bucket_strong), [ `tf.compat.v2.strings.to_hash_bucket_strong` ](/api_docs/python/tf/strings/to_hash_bucket_strong)
 
 ```
  tf.strings.to_hash_bucket_strong(
@@ -18,13 +18,13 @@ A strong hash is important when inputs may be malicious, e.g. URLs withadditiona
 
 The additional robustness comes at a cost of roughly 4x higher computetime than  `tf.string_to_hash_bucket_fast` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `string` . The strings to assign a hash bucket.
 - **`num_buckets`** : An  `int`  that is  `>= 1` . The number of buckets.
 - **`key`** : A list of  `ints` .The key used to seed the hash function, passed as a list of two uint64elements.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `int64` .
 

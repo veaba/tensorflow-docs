@@ -1,6 +1,6 @@
-Public API for tf.quantization namespace.
+tf.quantization命名空间的公共api。
 
-## Functions
+## 功能
 [ `dequantize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/quantization/dequantize): Dequantize the 'input' tensor into a float Tensor.
 
 [ `fake_quant_with_min_max_args(...)` ](https://tensorflow.google.cn/api_docs/python/tf/quantization/fake_quant_with_min_max_args): Fake-quantize the 'inputs' tensor, type float to 'outputs' tensor of same type.

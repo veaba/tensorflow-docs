@@ -1,13 +1,13 @@
 
 
 ## Class  `TargetSpec` 
-Specification of target device.
+目标设备规范。
 
-**Aliases** : [ `tf.compat.v1.lite.TargetSpec` ](/api_docs/python/tf/lite/TargetSpec), [ `tf.compat.v2.lite.TargetSpec` ](/api_docs/python/tf/lite/TargetSpec)
+**别名** : [ `tf.compat.v1.lite.TargetSpec` ](/api_docs/python/tf/lite/TargetSpec), [ `tf.compat.v2.lite.TargetSpec` ](/api_docs/python/tf/lite/TargetSpec)
 
 Details about target device. Converter optimizes the generated model forspecific device.
 
-#### Attributes:
+#### 属性：
 - **`supported_ops`** : Experimental flag, subject to change. Set of OpsSet optionssupported by the device. (default set([OpsSet.TFLITE_BUILTINS]))
 - **`supported_types`** : List of types for constant values on the target device.Supported values are types exported by lite.constants. Frequently, anoptimization choice is driven by the most compact (i.e. smallest)type in this list (default [constants.FLOAT])
 

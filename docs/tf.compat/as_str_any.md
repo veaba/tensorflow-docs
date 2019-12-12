@@ -1,6 +1,6 @@
 Converts input to  `str`  type.
 
-**Aliases** : [ `tf.compat.v1.compat.as_str_any` ](/api_docs/python/tf/compat/as_str_any), [ `tf.compat.v2.compat.as_str_any` ](/api_docs/python/tf/compat/as_str_any)
+**别名** : [ `tf.compat.v1.compat.as_str_any` ](/api_docs/python/tf/compat/as_str_any), [ `tf.compat.v2.compat.as_str_any` ](/api_docs/python/tf/compat/as_str_any)
 
 ```
  tf.compat.as_str_any(value)
@@ -9,10 +9,10 @@ Converts input to  `str`  type.
 
 Uses  `str(value)` , except for  `bytes`  typed inputs, which are converted   using  `as_str` .
 
-#### Args:
+#### 参数：
 - **`value`** : A object that can be converted to  `str` .
 
 
-#### Returns:
+#### 返回：
 A  `str`  object.
 

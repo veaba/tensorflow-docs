@@ -14,7 +14,7 @@ Returns a dense  `Tensor`  as input layer based on given  `feature_columns` .
 
 Generally a single example in training data is described with FeatureColumns.At the first layer of the model, this column oriented data should be convertedto a single  `Tensor` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -30,7 +30,7 @@ prediction = tf.compat.v1.layers.dense(dense_tensor, 1)
  
 ```
 
-#### Args:
+#### 参数：
 - **`features`** : A mapping from key to tensors.  `_FeatureColumn` s look up via thesekeys. For example  `numeric_column('price')`  will look at 'price' key inthis dict. Values can be a  `SparseTensor`  or a  `Tensor`  depends oncorresponding  `_FeatureColumn` .
 - **`feature_columns`** : An iterable containing the FeatureColumns to use as inputsto your model. All items should be instances of classes derived from `_DenseColumn`  such as  `numeric_column` ,  `embedding_column` , `bucketized_column` ,  `indicator_column` . If you have categorical features,you can wrap them with an  `embedding_column`  or  `indicator_column` .
 - **`weight_collections`** : A list of collection names to which the Variable will beadded. Note that variables will also be added to collections `tf.GraphKeys.GLOBAL_VARIABLES`  and  `ops.GraphKeys.MODEL_VARIABLES` .
@@ -39,8 +39,8 @@ prediction = tf.compat.v1.layers.dense(dense_tensor, 1)
 - **`cols_to_output_tensors`** : If not  `None` , must be a dictionary that will befilled with a mapping from '_FeatureColumn' to the associatedoutput  `Tensor` s.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  which represents input layer of a model. Its shapeis (batch_size, first_layer_dimension) and its dtype is  `float32` .first_layer_dimension is determined based on given  `feature_columns` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if an item in  `feature_columns`  is not a  `_DenseColumn` .

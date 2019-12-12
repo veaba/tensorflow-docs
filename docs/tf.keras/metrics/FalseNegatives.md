@@ -1,11 +1,11 @@
 
 
 ## Class  `FalseNegatives` 
-Calculates the number of false negatives.
+计算假阴性的数目。
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives), [ `tf.compat.v2.keras.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives), [ `tf.compat.v2.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives), [ `tf.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives)
+**别名** : [ `tf.compat.v1.keras.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives), [ `tf.compat.v2.keras.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives), [ `tf.compat.v2.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives), [ `tf.metrics.FalseNegatives` ](/api_docs/python/tf/keras/metrics/FalseNegatives)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classification on imbalanced data](https://tensorflow.google.cn/tutorials/structured_data/imbalanced_data)
 For example, if  `y_true`  is [0, 1, 1, 1] and  `y_pred`  is [0, 1, 0, 0]then the false negatives value is 2.  If the weights were specified as[0, 0, 1, 0] then the false negatives value would be 1.
 
@@ -13,7 +13,7 @@ If  `sample_weight`  is given, calculates the sum of the weights offalse negativ
 
 If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -23,7 +23,7 @@ print('Final result: ', m.result().numpy())  # Final result: 2
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -45,7 +45,7 @@ model.compile('sgd', loss='mse', metrics=[tf.keras.metrics.FalseNegatives()])
 
 Creates a  `FalseNegatives`  instance.
 
-#### Args:
+#### 参数：
 - **`thresholds`** : (Optional) Defaults to 0.5. A float value or a pythonlist/tuple of float threshold values in [0, 1]. A threshold is comparedwith prediction values to determine the truth value of predictions(i.e., above the threshold is  `true` , below is  `false` ). One metricvalue is generated for each threshold value.
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
@@ -65,7 +65,7 @@ Creates a  `FalseNegatives`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -76,7 +76,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -88,7 +88,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -104,14 +104,14 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates the given confusion matrix condition statistics.
+累积给定的混淆矩阵条件统计量。
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

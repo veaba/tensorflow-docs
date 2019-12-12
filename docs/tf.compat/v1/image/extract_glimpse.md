@@ -1,4 +1,4 @@
-Extracts a glimpse from the input tensor.
+从输入张量中提取一瞥。
 
 ```
  tf.compat.v1.image.extract_glimpse(    input,    size,    offsets,    centered=True,    normalized=True,    uniform_noise=True,    name=None) 
@@ -15,7 +15,7 @@ The argument  `normalized`  and  `centered`  controls how the windows are built:
 - If the coordinates are not normalized they are interpreted asnumbers of pixels.
 
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `float32` . A 4-D float tensor of shape `[batch_size, height, width, channels]` .
 - **`size`** : A  `Tensor`  of type  `int32` . A 1-D tensor of 2 elements containing thesize of the glimpses to extract.  The glimpse height must be specifiedfirst, following by the glimpse width.
 - **`offsets`** : A  `Tensor`  of type  `float32` . A 2-D integer tensor of shape `[batch_size, 2]`  containing the y, x locations of the center of eachwindow.
@@ -25,10 +25,10 @@ The argument  `normalized`  and  `centered`  controls how the windows are built:
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 
-#### Usage Example:
+#### 用法示例：
 
 
 ```

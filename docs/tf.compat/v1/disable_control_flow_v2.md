@@ -1,4 +1,4 @@
-Opts out of control flow v2.
+选择脱离控制流v2。
 
 ```
  tf.compat.v1.disable_control_flow_v2()

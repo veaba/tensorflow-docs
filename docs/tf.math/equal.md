@@ -1,6 +1,6 @@
 Returns the truth value of (x == y) element-wise.
 
-**Aliases** : [ `tf.compat.v1.equal` ](/api_docs/python/tf/math/equal), [ `tf.compat.v1.math.equal` ](/api_docs/python/tf/math/equal), [ `tf.compat.v2.equal` ](/api_docs/python/tf/math/equal), [ `tf.compat.v2.math.equal` ](/api_docs/python/tf/math/equal), [ `tf.equal` ](/api_docs/python/tf/math/equal)
+**别名** : [ `tf.compat.v1.equal` ](/api_docs/python/tf/math/equal), [ `tf.compat.v1.math.equal` ](/api_docs/python/tf/math/equal), [ `tf.compat.v2.equal` ](/api_docs/python/tf/math/equal), [ `tf.compat.v2.math.equal` ](/api_docs/python/tf/math/equal), [ `tf.equal` ](/api_docs/python/tf/math/equal)
 
 ```
  tf.math.equal(
@@ -11,14 +11,14 @@ Returns the truth value of (x == y) element-wise.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
 
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -34,12 +34,12 @@ tf.math.equal(x, y) ==> array([True,  True])
 
 **NOTE** :  `Equal`  supports broadcasting. More about broadcasting [here](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  or  `SparseTensor`  or  `IndexedSlices` .
 - **`y`** : A  `Tensor`  or  `SparseTensor`  or  `IndexedSlices` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type bool with the same size as that of x or y.
 

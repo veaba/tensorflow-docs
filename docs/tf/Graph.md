@@ -3,7 +3,7 @@
 ## Class  `Graph` 
 A TensorFlow computation, represented as a dataflow graph.
 
-**Aliases** : [ `tf.compat.v1.Graph` ](/api_docs/python/tf/Graph), [ `tf.compat.v2.Graph` ](/api_docs/python/tf/Graph)
+**别名** : [ `tf.compat.v1.Graph` ](/api_docs/python/tf/Graph), [ `tf.compat.v2.Graph` ](/api_docs/python/tf/Graph)
 
 A  `Graph`  contains a set of[ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) objects,which represent units of computation; and[ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects, which representthe units of data that flow between operations.
 
@@ -26,7 +26,7 @@ with g.as_default():
  
 ```
 
-Important note: This class *is not* thread-safe for graph construction. Alloperations should be created from a single thread, or externalsynchronization must be provided. Unless otherwise specified, all methodsare not thread-safe.
+Important 注意：This class *is not* thread-safe for graph construction. Alloperations should be created from a single thread, or externalsynchronization must be provided. Unless otherwise specified, all methodsare not thread-safe.
 
 A  `Graph`  instance supports an arbitrary number of "collections"that are identified by name. For convenience when building a largegraph, collections can store groups of related objects: forexample, the [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) uses a collection (named `tf.GraphKeys.GLOBAL_VARIABLES` ) forall variables that are created during the construction of a graph. The callermay define additional collections by specifying a new name.
 
@@ -40,38 +40,38 @@ A  `Graph`  instance supports an arbitrary number of "collections"that are ident
 
 Creates a new, empty Graph.
 
-## Properties
+## 属性
 
 
 ###  `building_function` 
-Returns True iff this graph represents a function.
+如果此图表示函数，则返回true。
 
 ###  `collections` 
-Returns the names of the collections known to this graph.
+返回此图已知的集合的名称。
 
 ###  `finalized` 
-True if this graph has been finalized.
+如果此图已完成，则为true。
 
 ###  `graph_def_versions` 
-The GraphDef version information of this graph.
+此图的graphdef版本信息。
 
 For details on the meaning of each version, see[ `GraphDef` ](https://tensorflow.google.cn/code/tensorflow/core/framework/graph.proto).
 
-#### Returns:
+#### 返回：
 A  `VersionDef` .
 
 ###  `seed` 
 The graph-level random seed of this graph.
 
 ###  `version` 
-Returns a version number that increases as ops are added to the graph.
+返回一个版本号，该版本号随着操作添加到图中而增加。
 
 Note that this is unrelated to the[ `tf.Graph.graph_def_versions` ](https://tensorflow.google.cn/api_docs/python/tf/Graph#graph_def_versions).
 
-#### Returns:
-An integer version that increases as ops are added to the graph.
+#### 返回：
+一个整数版本，当操作添加到图中时会增加。
 
-## Methods
+## 方法
 
 
 ###  `add_to_collection` 
@@ -89,7 +89,7 @@ Stores  `value`  in the collection with the given  `name` .
 
 Note that collections are not sets, so it is possible to add a value toa collection several times.
 
-#### Args:
+#### 参数：
 - **`name`** : The key for the collection. The  `GraphKeys`  class contains manystandard names for collections.
 - **`value`** : The value to add to the collection.
 
@@ -111,7 +111,7 @@ Note that collections are not sets, so it is possible to add a value toa collect
 
  `names`  can be any iterable, but if  `names`  is a string, it is treated as asingle collection name.
 
-#### Args:
+#### 参数：
 - **`names`** : The keys for the collections to add to. The  `GraphKeys`  classcontains many standard names for collections.
 - **`value`** : The value to add to the collections.
 
@@ -132,7 +132,7 @@ Use this method with the  `with`  keyword to specify that ops created withinthe 
 
 The default graph is a property of the current thread. If youcreate a new thread, and wish to use the default graph in thatthread, you must explicitly add a  `with g.as_default():`  in thatthread's function.
 
-The following code examples are equivalent:
+以下代码示例是等效的：
 
 ```
  # 1. Using Graph.as_default():
@@ -150,8 +150,8 @@ with tf.Graph().as_default() as g:
 
 If eager execution is enabled ops created under this context manager will beadded to the graph instead of executed eagerly.
 
-#### Returns:
-A context manager for using this graph as the default graph.
+#### 返回：
+用于将此图用作默认图的上下文管理器。
 
 ###  `as_graph_def` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L3215-L3242)
@@ -170,15 +170,15 @@ The serialized  `GraphDef`  can be imported into another  `Graph` (using [ `tf.i
 
 This method is thread-safe.
 
-#### Args:
+#### 参数：
 - **`from_version`** : Optional.  If this is set, returns a  `GraphDef`  containingonly the nodes that were added to this graph since its  `version` property had the given value.
 - **`add_shapes`** : If true, adds an "_output_shapes" list attr to each node withthe inferred shapes of each of its outputs.
 
 
-#### Returns:
+#### 返回：
 A[ `GraphDef` ](https://tensorflow.google.cn/code/tensorflow/core/framework/graph.proto)protocol buffer.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `graph_def`  would be too large.
 
 
@@ -200,18 +200,18 @@ This function validates that  `obj`  represents an element of thisgraph, and giv
 
 This function is the canonical way to get/validate an object ofone of the allowed types from an external argument reference in theSession API.
 
-This method may be called concurrently from multiple threads.
+此方法可以从多个线程并发调用。
 
-#### Args:
-- **`obj`** : A  `Tensor` , an  `Operation` , or the name of a tensor or operation. Canalso be any object with an  `_as_graph_element()`  method that returns avalue of one of these types. Note:  `_as_graph_element`  will be calledinside the graph's lock and so may not modify the graph.
+#### 参数：
+- **`obj`** : A  `Tensor` , an  `Operation` , or the name of a tensor or operation. Canalso be any object with an  `_as_graph_element()`  method that returns avalue of one of these types. 注意： `_as_graph_element`  will be calledinside the graph's lock and so may not modify the graph.
 - **`allow_tensor`** : If true,  `obj`  may refer to a  `Tensor` .
 - **`allow_operation`** : If true,  `obj`  may refer to an  `Operation` .
 
 
-#### Returns:
+#### 返回：
 The  `Tensor`  or  `Operation`  in the Graph corresponding to  `obj` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `obj`  is not a type we support attempting to convertto types.
 - **`ValueError`** : If  `obj`  is of an appropriate type but invalid. Forexample, an invalid string.
 - **`KeyError`** : If  `obj`  is not an object in the graph.
@@ -225,9 +225,9 @@ The  `Tensor`  or  `Operation`  in the Graph corresponding to  `obj` .
  
 ```
 
-Clears all values in a collection.
+清除集合中的所有值。
 
-#### Args:
+#### 参数：
 - **`name`** : The key for the collection. The  `GraphKeys`  class contains manystandard names for collections.
 
 
@@ -242,13 +242,13 @@ Clears all values in a collection.
  
 ```
 
-Returns a context manager that specifies an op to colocate with.
+返回一个上下文管理器，该上下文管理器指定要与之并置的操作。
 
 
 **Note:**  this function is not for public use, only for internal libraries.
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -265,16 +265,16 @@ with g.colocate_with(a):
 
 If  `op`  is  `None`  then  `ignore_existing`  must be  `True`  and the newscope resets all colocation and device constraints.
 
-#### Args:
+#### 参数：
 - **`op`** : The op to colocate all created ops with, or  `None` .
 - **`ignore_existing`** : If true, only applies colocation of this op within thecontext, rather than applying all colocation properties on the stack.If  `op`  is  `None` , this value must be  `True` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if op is None but ignore_existing is False.
 
 
-#### Yields:
+#### 收益率：
 A context manager that specifies the op with which to colocatenewly created ops.
 
 ###  `container` 
@@ -285,11 +285,11 @@ A context manager that specifies the op with which to colocatenewly created ops.
  
 ```
 
-Returns a context manager that specifies the resource container to use.
+返回指定要使用的资源容器的上下文管理器。
 
 Stateful operations, such as variables and queues, can maintain theirstates on devices so that they can be shared by multiple processes.A resource container is a string name under which these statefuloperations are tracked. These resources can be released or clearedwith  `tf.Session.reset()` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -319,11 +319,11 @@ tf.Session.reset(target, ["experiment0"])
  
 ```
 
-#### Args:
+#### 参数：
 - **`container_name`** : container name string.
 
 
-#### Returns:
+#### 返回：
 A context manager for defining resource containers for stateful ops,  yields the container name.
 
 ###  `control_dependencies` 
@@ -334,7 +334,7 @@ A context manager for defining resource containers for stateful ops,  yields the
  
 ```
 
-Returns a context manager that specifies control dependencies.
+返回指定控件依赖项的上下文管理器。
 
 Use with the  `with`  keyword to specify that all operations constructedwithin the context should have control dependencies on `control_inputs` . For example:
 
@@ -356,7 +356,7 @@ Multiple calls to  `control_dependencies()`  can be nested, and inthat case a ne
  
 ```
 
-You can pass None to clear the control dependencies:
+您可以传递“无”以清除控件依赖项：
 
 ```
  with g.control_dependencies([a, b]):
@@ -394,7 +394,7 @@ Also note that though execution of ops created under this scope will triggerexec
 ```
    loss = model.loss()
   with tf.control_dependencies(dependencies):
-    loss = loss + tf.constant(1)  # note: dependencies ignored in the
+    loss = loss + tf.constant(1)  # 注意：dependencies ignored in the
                                   # backward pass
   return tf.gradients(loss, model.variables)
  
@@ -402,14 +402,14 @@ Also note that though execution of ops created under this scope will triggerexec
 
 This is because evaluating the gradient graph does not require evaluatingthe constant(1) op created in the forward pass.
 
-#### Args:
+#### 参数：
 - **`control_inputs`** : A list of  `Operation`  or  `Tensor`  objects which must beexecuted or computed before running the operations defined in thecontext.  Can also be  `None`  to clear the control dependencies.
 
 
-#### Returns:
+#### 返回：
 A context manager that specifies control dependencies for alloperations constructed within the context.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `control_inputs`  is not a list of  `Operation`  or `Tensor`  objects.
 
 
@@ -437,7 +437,7 @@ Creates an  `Operation`  in this graph. (deprecated arguments)
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(compute_shapes)` . They will be removed in a future version.Instructions for updating:Shapes are always computed; don't use the compute_shapes as it has no effect.
 This is a low-level interface for creating an  `Operation` . Mostprograms will not call this method directly, and instead use thePython op constructors, such as [ `tf.constant()` ](https://tensorflow.google.cn/api_docs/python/tf/constant), which add ops tothe default graph.
 
-#### Args:
+#### 参数：
 - **`op_type`** : The  `Operation`  type to create. This corresponds to the `OpDef.name`  field for the proto that defines the operation.
 - **`inputs`** : A list of  `Tensor`  objects that will be inputs to the  `Operation` .
 - **`dtypes`** : (Optional) A list of  `DType`  objects that will be the types of thetensors that the operation produces.
@@ -449,12 +449,12 @@ This is a low-level interface for creating an  `Operation` . Mostprograms will n
 - **`compute_device`** : (Optional.) If True, device functions will be executed tocompute the device property of the Operation.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if any of the inputs is not a  `Tensor` .
 - **`ValueError`** : if colocation conflicts with existing device assignment.
 
 
-#### Returns:
+#### 返回：
 An  `Operation`  object.
 
 ###  `device` 
@@ -465,7 +465,7 @@ An  `Operation`  object.
  
 ```
 
-Returns a context manager that specifies the default device to use.
+返回指定要使用的默认设备的上下文管理器。
 
 The  `device_name_or_function`  argument may either be a device namestring, a device function, or None:
 
@@ -474,7 +474,7 @@ The  `device_name_or_function`  argument may either be a device namestring, a de
 - If it is None, all  `device()`  invocations from the enclosing contextwill be ignored.
 For information about the valid syntax of device name strings, seethe documentation in[ `DeviceNameUtils` ](https://tensorflow.google.cn/code/tensorflow/core/util/device_name_utils.h).
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -501,14 +501,14 @@ with g.device(matmul_on_gpu):
 
 **N.B.**  The device scope may be overridden by op wrappers orother library code. For example, a variable assignment op `v.assign()`  must be colocated with the [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable)  `v` , andincompatible device scopes will be ignored.
 
-#### Args:
+#### 参数：
 - **`device_name_or_function`** : The device name or function to use in thecontext.
 
 
-#### Yields:
+#### 收益率：
 A context manager that specifies the default device to use for newlycreated ops.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If device scopes are not properly nested.
 
 
@@ -532,7 +532,7 @@ After calling  `g.finalize()` , no new operations can be added to `g` .  This me
  
 ```
 
-Returns a list of collections used in this graph.
+返回此图中使用的集合的列表。
 
 ###  `get_collection` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L3943-L3977)
@@ -549,12 +549,12 @@ Returns a list of values in the collection with the given  `name` .
 
 This is different from  `get_collection_ref()`  which always returns theactual collection list if it exists in that it returns a new list each timeit is called.
 
-#### Args:
+#### 参数：
 - **`name`** : The key for the collection. For example, the  `GraphKeys`  classcontains many standard names for collections.
 - **`scope`** : (Optional.) A string. If supplied, the resulting list is filteredto include only items whose  `name`  attribute matches  `scope`  using `re.match` . Items without a  `name`  attribute are never returned if ascope is supplied. The choice of  `re.match`  means that a  `scope`  withoutspecial tokens filters by prefix.
 
 
-#### Returns:
+#### 返回：
 The list of values in the collection with the given  `name` , oran empty list if no value has been added to that collection. Thelist contains the values in the order under which they werecollected.
 
 ###  `get_collection_ref` 
@@ -571,11 +571,11 @@ If the collection exists, this returns the list itself, which canbe modified in 
 
 This is different from  `get_collection()`  which always returns a copy ofthe collection list if it exists and never creates an empty collection.
 
-#### Args:
+#### 参数：
 - **`name`** : The key for the collection. For example, the  `GraphKeys`  classcontains many standard names for collections.
 
 
-#### Returns:
+#### 返回：
 The list of values in the collection with the given  `name` , or an emptylist if no value has been added to that collection.
 
 ###  `get_name_scope` 
@@ -586,9 +586,9 @@ The list of values in the collection with the given  `name` , or an emptylist if
  
 ```
 
-Returns the current name scope.
+返回当前名称范围。
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -600,8 +600,8 @@ Returns the current name scope.
 
 would print the string  `scope1/scope2` .
 
-#### Returns:
-A string representing the current name scope.
+#### 返回：
+表示当前名称作用域的字符串。
 
 ###  `get_operation_by_name` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L3719-L3738)
@@ -613,16 +613,16 @@ A string representing the current name scope.
 
 Returns the  `Operation`  with the given  `name` .
 
-This method may be called concurrently from multiple threads.
+此方法可以从多个线程并发调用。
 
-#### Args:
+#### 参数：
 - **`name`** : The name of the  `Operation`  to return.
 
 
-#### Returns:
+#### 返回：
 The  `Operation`  with the given  `name` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `name`  is not a string.
 - **`KeyError`** : If  `name`  does not correspond to an operation in this graph.
 
@@ -635,14 +635,14 @@ The  `Operation`  with the given  `name` .
  
 ```
 
-Return the list of operations in the graph.
+返回图形中的操作列表。
 
 You can modify the operations in place, but modificationsto the list such as inserts/delete have no effect on thelist of operations known to the graph.
 
-This method may be called concurrently from multiple threads.
+此方法可以从多个线程并发调用。
 
-#### Returns:
-A list of Operations.
+#### 返回：
+操作列表。
 
 ###  `get_tensor_by_name` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L3767-L3786)
@@ -654,16 +654,16 @@ A list of Operations.
 
 Returns the  `Tensor`  with the given  `name` .
 
-This method may be called concurrently from multiple threads.
+此方法可以从多个线程并发调用。
 
-#### Args:
+#### 参数：
 - **`name`** : The name of the  `Tensor`  to return.
 
 
-#### Returns:
+#### 返回：
 The  `Tensor`  with the given  `name` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `name`  is not a string.
 - **`KeyError`** : If  `name`  does not correspond to a tensor in this graph.
 
@@ -676,11 +676,11 @@ The  `Tensor`  with the given  `name` .
  
 ```
 
-EXPERIMENTAL: A context manager for overriding gradient functions.
+实验性的：用于覆盖渐变函数的上下文管理器。
 
 This context manager can be used to override the gradient functionthat will be used for ops within the scope of the context.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -697,14 +697,14 @@ with tf.Graph().as_default() as g:
  
 ```
 
-#### Args:
+#### 参数：
 - **`op_type_map`** : A dictionary mapping op type strings to alternative op typestrings.
 
 
-#### Returns:
+#### 返回：
 A context manager that sets the alternative op type to be used for oneor more ops created in that context.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `op_type_map`  is not a dictionary mapping strings tostrings.
 
 
@@ -736,7 +736,7 @@ Returns  `True`  if and only if  `tensor_or_op`  is fetchable.
  
 ```
 
-Returns a context manager that creates hierarchical names for operations.
+返回为操作创建分层名称的上下文管理器。
 
 A graph maintains a stack of name scopes. A  `with name_scope(...):` statement pushes a new name onto the stack for the lifetime of the context.
 
@@ -747,7 +747,7 @@ The  `name`  argument will be interpreted as follows:
 - A value of  `None`  or the empty string will reset the current name scopeto the top-level (empty) name scope.
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -772,7 +772,7 @@ The name of the scope itself can be captured by  `withg.name_scope(...) as scope
  
 ```
 
-NOTE: This constructor validates the given  `name` . Valid scopenames match one of the following regular expressions:
+注意：This constructor validates the given  `name` . Valid scopenames match one of the following regular expressions:
 
 ```
  [A-Za-z0-9.][A-Za-z0-9_.\-/]* (for scopes at the root)
@@ -780,14 +780,14 @@ NOTE: This constructor validates the given  `name` . Valid scopenames match one 
  
 ```
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the scope.
 
 
-#### Returns:
+#### 返回：
 A context manager that installs  `name`  as a new name scope.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `name`  is not a valid scope name, according to the rulesabove.
 
 
@@ -846,11 +846,11 @@ Return a unique operation name for  `name` .
 
 If  `mark_as_used`  is set to  `True` , which is the default, a newunique name is created and marked as in use. If it's set to  `False` ,the unique name is returned without actually being marked as used.This is useful when the caller simply wants to know what the nameto be created will be.
 
-#### Args:
+#### 参数：
 - **`name`** : The name for an operation.
 - **`mark_as_used`** : Whether to mark this name as being used.
 
 
-#### Returns:
+#### 返回：
 A string to be passed to  `create_op()`  that will be usedto name the operation being created.
 

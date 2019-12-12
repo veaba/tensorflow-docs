@@ -1,6 +1,6 @@
  `DenseColumn`  that converts from sparse, categorical input.
 
-**Aliases** : [ `tf.compat.v1.feature_column.embedding_column` ](/api_docs/python/tf/feature_column/embedding_column), [ `tf.compat.v2.feature_column.embedding_column` ](/api_docs/python/tf/feature_column/embedding_column)
+**别名** : [ `tf.compat.v1.feature_column.embedding_column` ](/api_docs/python/tf/feature_column/embedding_column), [ `tf.compat.v2.feature_column.embedding_column` ](/api_docs/python/tf/feature_column/embedding_column)
 
 ```
  tf.feature_column.embedding_column(
@@ -16,7 +16,7 @@
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
 Use this when your inputs are sparse, but you want to convert them to a denserepresentation (e.g., to feed to a DNN).
 
@@ -53,7 +53,7 @@ Here is an example using  `embedding_column`  with model_fn:
  
 ```
 
-#### Args:
+#### 参数：
 - **`categorical_column`** : A  `CategoricalColumn`  created by a `categorical_column_with_*`  function. This column produces the sparse IDsthat are inputs to the embedding lookup.
 - **`dimension`** : An integer specifying dimension of the embedding, must be > 0.
 - **`combiner`** : A string specifying how to reduce if there are multiple entries ina single row. Currently 'mean', 'sqrtn' and 'sum' are supported, with'mean' the default. 'sqrtn' often achieves good accuracy, in particularwith bag-of-words columns. Each of this can be thought as example levelnormalizations on the column. For more information, see `tf.embedding_lookup_sparse` .
@@ -64,10 +64,10 @@ Here is an example using  `embedding_column`  with model_fn:
 - **`trainable`** : Whether or not the embedding is trainable. Default is True.
 
 
-#### Returns:
+#### 返回：
  `DenseColumn`  that converts from sparse input.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `dimension`  not > 0.
 - **`ValueError`** : if exactly one of  `ckpt_to_load_from`  and  `tensor_name_in_ckpt` is specified.
 - **`ValueError`** : if  `initializer`  is specified and is not callable.

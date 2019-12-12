@@ -40,7 +40,7 @@ linear_prediction, _, _ = linear_model(features, columns)
  
 ```
 
-And to make an embedding with either:
+并嵌入：
 
 ```
  columns = [embedding_column(states, 3),...]
@@ -49,7 +49,7 @@ dense_tensor = input_layer(features, columns)
  
 ```
 
-#### Args:
+#### 参数：
 - **`key`** : A unique string identifying the input feature. It is used as thecolumn name and the dictionary key for feature parsing configs, feature `Tensor`  objects, and feature columns.
 - **`vocabulary_file`** : The vocabulary file name.
 - **`vocabulary_size`** : Number of the elements in the vocabulary. This must be nogreater than length of  `vocabulary_file` , if less than length, latervalues are ignored. If None, it is set to the length of  `vocabulary_file` .
@@ -58,10 +58,10 @@ dense_tensor = input_layer(features, columns)
 - **`dtype`** : The type of features. Only string and integer types are supported.
 
 
-#### Returns:
+#### 返回：
 A  `CategoricalColumn`  with a vocabulary file.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :  `vocabulary_file`  is missing or cannot be opened.
 - **`ValueError`** :  `vocabulary_size`  is missing or < 1.
 - **`ValueError`** :  `num_oov_buckets`  is a negative integer.

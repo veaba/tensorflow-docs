@@ -1,4 +1,4 @@
-Returns operations potentially supported by TensorFlow Lite.
+返回TensorFlow Lite可能支持的操作。
 
 ```
  tf.compat.v1.lite.experimental.get_potentially_supported_ops()
@@ -9,6 +9,6 @@ The potentially support list contains a list of ops that are partially orfully s
 
 Given that some ops may be partially supported, the optimal way to determineif a model's operations are supported is by converting using the TensorFlowLite converter.
 
-#### Returns:
-A list of SupportedOp.
+#### 返回：
+支持的名单。
 

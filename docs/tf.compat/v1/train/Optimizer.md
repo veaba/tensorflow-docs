@@ -1,11 +1,11 @@
 
 
 ## Class  `Optimizer` 
-Base class for optimizers.
+优化器的基类。
 
 This class defines the API to add Ops to train a model.  You never use thisclass directly, but instead instantiate one of its subclasses such as `GradientDescentOptimizer` ,  `AdagradOptimizer` , or  `MomentumOptimizer` .
 
-### Usage
+### 用法
 
 
 ```
@@ -18,7 +18,7 @@ opt_op = opt.minimize(cost, var_list=<list of variables>)
  
 ```
 
-In the training program you will just have to run the returned Op.
+在训练计划中，你只需要运行返回的操作。
 
 ```
  # Execute opt_op to do one step of training:
@@ -26,7 +26,7 @@ opt_op.run()
  
 ```
 
-### Processing gradients before applying them.
+### 在应用渐变之前处理渐变。
 Calling  `minimize()`  takes care of both computing the gradients andapplying them to the variables.  If you want to process the gradientsbefore applying them you can instead use the optimizer in three steps:
 
 1. Compute the gradients with  `compute_gradients()` .
@@ -34,7 +34,7 @@ Calling  `minimize()`  takes care of both computing the gradients andapplying th
 3. Apply the processed gradients with  `apply_gradients()` .
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -53,7 +53,7 @@ opt.apply_gradients(capped_grads_and_vars)
  
 ```
 
-### Gating Gradients
+### 选通梯度
 Both  `minimize()`  and  `compute_gradients()`  accept a  `gate_gradients` argument that controls the degree of parallelism during the application ofthe gradients.
 
 The possible values are:  `GATE_NONE` ,  `GATE_OP` , and  `GATE_GRAPH` .
@@ -64,7 +64,7 @@ The possible values are:  `GATE_NONE` ,  `GATE_OP` , and  `GATE_GRAPH` .
 
 **`GATE_GRAPH`** : Make sure all gradients for all variables are computedbefore any one of them is used.  This provides the least parallelism but canbe useful if you want to process all gradients before applying any of them.
 
-### Slots
+### 插槽
 Some optimizer subclasses, such as  `MomentumOptimizer`  and  `AdagradOptimizer` allocate and manage additional variables associated with the variables totrain.  These are called <i>Slots</i>.  Slots have names and you can ask theoptimizer for the names of the slots that it uses.  Once you have a slot nameyou can ask the optimizer for the variable it created to hold the slot value.
 
 This can be useful if you want to log debug a training algorithm, report statsabout the slots, etc.
@@ -80,20 +80,20 @@ This can be useful if you want to log debug a training algorithm, report statsab
  
 ```
 
-Create a new Optimizer.
+创建新的优化器。
 
-This must be called by the constructors of subclasses.
+这必须由子类的构造函数调用。
 
-#### Args:
+#### 参数：
 - **`use_locking`** : Bool. If True apply use locks to prevent concurrent updatesto variables.
 - **`name`** : A non-empty string.  The name to use for accumulators createdfor the optimizer.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If name is malformed.
 
 
-## Methods
+## 方法
 
 
 ###  `apply_gradients` 
@@ -108,20 +108,20 @@ This must be called by the constructors of subclasses.
  
 ```
 
-Apply gradients to variables.
+对变量应用渐变。
 
 This is the second part of  `minimize()` . It returns an  `Operation`  thatapplies gradients.
 
-#### Args:
+#### 参数：
 - **`grads_and_vars`** : List of (gradient, variable) pairs as returned by `compute_gradients()` .
 - **`global_step`** : Optional  `Variable`  to increment by one after thevariables have been updated.
 - **`name`** : Optional name for the returned operation.  Default to thename passed to the  `Optimizer`  constructor.
 
 
-#### Returns:
+#### 返回：
 An  `Operation`  that applies the specified gradients. If  `global_step` was not None, that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `grads_and_vars`  is malformed.
 - **`ValueError`** : If none of the variables have gradients.
 - **`RuntimeError`** : If you should use  `_distributed_apply()`  instead.
@@ -146,7 +146,7 @@ Compute gradients of  `loss`  for the variables in  `var_list` .
 
 This is the first part of  `minimize()` .  It returns a listof (gradient, variable) pairs where "gradient" is the gradientfor "variable".  Note that "gradient" can be a  `Tensor` , an `IndexedSlices` , or  `None`  if there is no gradient for thegiven variable.
 
-#### Args:
+#### 参数：
 - **`loss`** : A Tensor containing the value to minimize or a callable takingno arguments which returns the value to minimize. When eager executionis enabled it must be a callable.
 - **`var_list`** : Optional list or tuple of [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) to update to minimize `loss` .  Defaults to the list of variables collected in the graphunder the key  `GraphKeys.TRAINABLE_VARIABLES` .
 - **`gate_gradients`** : How to gate the computation of gradients.  Can be `GATE_NONE` ,  `GATE_OP` , or  `GATE_GRAPH` .
@@ -155,16 +155,16 @@ This is the first part of  `minimize()` .  It returns a listof (gradient, variab
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 
 
-#### Returns:
+#### 返回：
 A list of (gradient, variable) pairs. Variable is always present, butgradient can be  `None` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `var_list`  contains anything else than  `Variable`  objects.
 - **`ValueError`** : If some arguments are invalid.
 - **`RuntimeError`** : If called with eager execution enabled and  `loss`  isnot callable.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled,  `gate_gradients` ,  `aggregation_method` ,and  `colocate_gradients_with_ops`  are ignored.
 
 ###  `get_name` 
@@ -192,12 +192,12 @@ Some  `Optimizer`  subclasses use additional variables.  For example `Momentum` 
 
 Use  `get_slot_names()`  to get the list of slot names created by the `Optimizer` .
 
-#### Args:
+#### 参数：
 - **`var`** : A variable passed to  `minimize()`  or  `apply_gradients()` .
 - **`name`** : A string.
 
 
-#### Returns:
+#### 返回：
 The  `Variable`  for the slot if it was created,  `None`  otherwise.
 
 ###  `get_slot_names` 
@@ -212,8 +212,8 @@ Return a list of the names of slots created by the  `Optimizer` .
 
 See  `get_slot()` .
 
-#### Returns:
-A list of strings.
+#### 返回：
+字符串列表。
 
 ###  `minimize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/optimizer.py#L355-L413)
@@ -236,7 +236,7 @@ Add operations to minimize  `loss`  by updating  `var_list` .
 
 This method simply combines calls  `compute_gradients()`  and `apply_gradients()` . If you want to process the gradient before applyingthem call  `compute_gradients()`  and  `apply_gradients()`  explicitly insteadof using this function.
 
-#### Args:
+#### 参数：
 - **`loss`** : A  `Tensor`  containing the value to minimize.
 - **`global_step`** : Optional  `Variable`  to increment by one after thevariables have been updated.
 - **`var_list`** : Optional list or tuple of  `Variable`  objects to update tominimize  `loss` .  Defaults to the list of variables collected inthe graph under the key  `GraphKeys.TRAINABLE_VARIABLES` .
@@ -247,14 +247,14 @@ This method simply combines calls  `compute_gradients()`  and `apply_gradients()
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 
 
-#### Returns:
+#### 返回：
 An Operation that updates the variables in  `var_list` .  If  `global_step` was not  `None` , that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If some of the variables are not  `Variable`  objects.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled,  `loss`  should be a Python function thattakes no arguments and computes the value to be minimized. Minimization (andgradient computation) is done with respect to the elements of  `var_list`  ifnot None, else with respect to any trainable variables created during theexecution of the  `loss`  function.  `gate_gradients` ,  `aggregation_method` , `colocate_gradients_with_ops`  and  `grad_loss`  are ignored when eagerexecution is enabled.
 
 ###  `variables` 
@@ -269,10 +269,10 @@ A list of variables which encode the current state of  `Optimizer` .
 
 Includes slot variables and additional global variables created by theoptimizer in the current default graph.
 
-#### Returns:
-A list of variables.
+#### 返回：
+变量列表。
 
-## Class Members
+## Class 成员
 -  `GATE_GRAPH = 2`  []()
 -  `GATE_NONE = 0`  []()
 -  `GATE_OP = 1`  []()

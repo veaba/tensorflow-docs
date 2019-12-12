@@ -12,7 +12,7 @@ Computes Quantized Rectified Linear X:  `min(max(features, 0), max_value)`
  
 ```
 
-#### Args:
+#### 参数：
 - **`features`** : A  `Tensor` . Must be one of the following types:  `qint8` ,  `quint8` ,  `qint32` ,  `qint16` ,  `quint16` .
 - **`max_value`** : A  `Tensor`  of type  `float32` .
 - **`min_features`** : A  `Tensor`  of type  `float32` .The float value that the lowest quantized value represents.
@@ -21,7 +21,7 @@ Computes Quantized Rectified Linear X:  `min(max(features, 0), max_value)`
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (activations, min_activations, max_activations).
 
 - **`activations`** : A  `Tensor`  of type  `out_type` .

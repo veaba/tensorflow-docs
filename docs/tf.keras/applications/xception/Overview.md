@@ -1,6 +1,6 @@
-Xception V1 model for Keras.
+Keras的例外v1模型。
 
-## Functions
+## 功能
 [ `Xception(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/Xception)
 
 [ `decode_predictions(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/xception/decode_predictions)

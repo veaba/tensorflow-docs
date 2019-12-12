@@ -8,7 +8,7 @@ If users keep data in tf.Example format, they need to call tf.parse_examplewith 
 
 - Users need to combine parsing spec of features with labels and weights(if any) since they are all parsed from same tf.Example instance. Thisutility combines these specs.
 - It is difficult to map expected label by a regressor such as  `DNNRegressor` to corresponding tf.parse_example spec. This utility encodes it by gettingrelated information from users (key, dtype).
-Example output of parsing spec:
+解析规范的示例输出：
 
 ```
  # Define features and transformations
@@ -32,7 +32,7 @@ assert parsing_spec == {
  
 ```
 
-Example usage with a regressor:
+使用回归器的示例：
 
 ```
  feature_columns = # define features via tf.feature_column
@@ -65,7 +65,7 @@ estimator.train(input_fn=input_fn_train)
  
 ```
 
-#### Args:
+#### 参数：
 - **`feature_columns`** : An iterable containing all feature columns. All itemsshould be instances of classes derived from  `_FeatureColumn` .
 - **`label_key`** : A string identifying the label. It means tf.Example stores labelswith this key.
 - **`label_dtype`** : A  `tf.dtype`  identifies the type of labels. By default it is[ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32).
@@ -74,10 +74,10 @@ estimator.train(input_fn=input_fn_train)
 - **`weight_column`** : A string or a  `NumericColumn`  created by[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representingweights. It is used to down weight or boost examples during training. Itwill be multiplied by the loss of the example. If it is a string, it isused as a key to fetch weight tensor from the  `features` . If it is a `NumericColumn` , raw tensor is fetched by key  `weight_column.key` ,then weight_column.normalizer_fn is applied on it to get weight tensor.
 
 
-#### Returns:
+#### 返回：
 A dict mapping each feature key to a  `FixedLenFeature`  or  `VarLenFeature` value.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If label is used in  `feature_columns` .
 - **`ValueError`** : If weight_column is used in  `feature_columns` .
 - **`ValueError`** : If any of the given  `feature_columns`  is not a  `_FeatureColumn` instance.

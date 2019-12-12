@@ -1,6 +1,6 @@
-Computes the elementwise value of a polynomial.
+计算多项式的元素值。
 
-**Aliases** : [ `tf.compat.v1.math.polyval` ](/api_docs/python/tf/math/polyval), [ `tf.compat.v2.math.polyval` ](/api_docs/python/tf/math/polyval)
+**别名** : [ `tf.compat.v1.math.polyval` ](/api_docs/python/tf/math/polyval), [ `tf.compat.v2.math.polyval` ](/api_docs/python/tf/math/polyval)
 
 ```
  tf.math.polyval(
@@ -19,15 +19,15 @@ evaluated using Horner's method, i.e.
 
 p(x) = coeffs[n-1] + x * (coeffs[n-2] + ... + x * (coeffs[1] +          x * coeffs[0]))
 
-#### Args:
+#### 参数：
 - **`coeffs`** : A list of  `Tensor`  representing the coefficients of the polynomial.
 - **`x`** : A  `Tensor`  representing the variable of the polynomial.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `tensor`  of the shape as the expression p(x) with usual broadcasting rulesfor element-wise addition and multiplication applied.
 
-#### Numpy Compatibility
-Equivalent to numpy.polyval.
+#### numpy兼容性
+相当于numpy.polyval。
 

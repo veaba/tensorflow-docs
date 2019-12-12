@@ -1,11 +1,11 @@
 
 
 ## Class  `TextFileInitializer` 
-Table initializers from a text file.
+文本文件中的表初始值设定项。
 
-**Aliases** : [ `tf.compat.v1.lookup.TextFileInitializer` ](/api_docs/python/tf/lookup/TextFileInitializer), [ `tf.compat.v2.lookup.TextFileInitializer` ](/api_docs/python/tf/lookup/TextFileInitializer)
+**别名** : [ `tf.compat.v1.lookup.TextFileInitializer` ](/api_docs/python/tf/lookup/TextFileInitializer), [ `tf.compat.v2.lookup.TextFileInitializer` ](/api_docs/python/tf/lookup/TextFileInitializer)
 
-This initializer assigns one entry in the table for each line in the file.
+此初始值设定项为文件中的每一行在表中分配一个条目。
 
 The key and value type of the table to initialize is given by  `key_dtype`  and `value_dtype` .
 
@@ -14,7 +14,7 @@ The key and value content to get from each line is specified bythe  `key_index` 
 - [ `TextFileIndex.LINE_NUMBER` ](https://tensorflow.google.cn/api_docs/python/tf/lookup/TextFileIndex#LINE_NUMBER) means use the line number starting from zero,expects data type int64.
 - [ `TextFileIndex.WHOLE_LINE` ](https://tensorflow.google.cn/api_docs/python/tf/lookup/TextFileIndex#WHOLE_LINE) means use the whole line content, expects datatype string.
 - A value  `>=0`  means use the index (starting at zero) of the split line basedon  `delimiter` .
-For example if we have a file with the following content:
+例如，如果我们有一个包含以下内容的文件：
 
 ```
  emerson 10lake 20palmer 30 
@@ -31,7 +31,7 @@ The following snippet initializes a table with the first column as keys andsecon
  table), -1)...table.init.run() 
 ```
 
-Similarly to initialize the whole line as keys and the line number as values.
+类似地，将整行初始化为键，将行号初始化为值。
 
 -  `emerson 10 -> 0` 
 -  `lake 20 -> 1` 
@@ -49,7 +49,7 @@ Similarly to initialize the whole line as keys and the line number as values.
  __init__(    filename,    key_dtype,    key_index,    value_dtype,    value_index,    vocab_size=None,    delimiter='\t',    name=None) 
 ```
 
-Constructs a table initializer object to populate from a text file.
+构造要从文本文件填充的表初始值设定项对象。
 
 It generates one key-value pair per line. The type of table key andvalue are specified by  `key_dtype`  and  `value_dtype` , respectively.Similarly the content of the key and value are specified by the key_indexand value_index.
 
@@ -58,7 +58,7 @@ It generates one key-value pair per line. The type of table key andvalue are spe
 - A value >=0 means use the index (starting at zero) of the split line basedon  `delimiter` .
 
 
-#### Args:
+#### 参数：
 - **`filename`** : The filename of the text file to be used for initialization. Thepath must be accessible from wherever the graph is initialized (eg.trainer or eval workers). The filename may be a scalar  `Tensor` .
 - **`key_dtype`** : The  `key`  data type.
 - **`key_index`** : the index that represents information of a line to get thetable 'key' values from.
@@ -69,20 +69,20 @@ It generates one key-value pair per line. The type of table key andvalue are spe
 - **`name`** : A name for the operation (optional).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : when the filename is empty, or when the table key and valuedata types do not match the expected data types.
 
 
-## Properties
+## 属性
 
 
 ###  `key_dtype` 
-The expected table key dtype.
+所需的表键dtype。
 
 ###  `value_dtype` 
-The expected table value dtype.
+所需的表值DTYPE。
 
-## Methods
+## 方法
 
 
 ###  `initialize` 
@@ -92,14 +92,14 @@ The expected table value dtype.
  initialize(table) 
 ```
 
-Initializes the table from a text file.
+从文本文件初始化表。
 
-#### Args:
+#### 参数：
 - **`table`** : The table to be initialized.
 
 
-#### Returns:
-The operation that initializes the table.
+#### 返回：
+初始化表的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when the keys and values data types do not match the tablekey and value data types.

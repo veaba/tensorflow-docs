@@ -1,11 +1,11 @@
 
 
 ## Class  `MaxPooling2D` 
-Max pooling layer for 2D inputs (e.g. images).
+二维输入（如图像）的最大池层。
 
 Inherits From: [ `MaxPool2D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/MaxPool2D), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
-#### Arguments:
+#### 参数：
 - **`pool_size`** : An integer or tuple/list of 2 integers: (pool_height, pool_width)specifying the size of the pooling window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 2 integers,specifying the strides of the pooling operation.Can be a single integer to specify the same value forall spatial dimensions.
 - **`padding`** : A string. The padding method, either 'valid' or 'same'.Case-insensitive.
@@ -28,11 +28,11 @@ Inherits From: [ `MaxPool2D` ](https://tensorflow.google.cn/api_docs/python/tf/k
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

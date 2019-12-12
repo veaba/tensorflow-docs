@@ -1,6 +1,6 @@
-Set if memory growth should be enabled for a PhysicalDevice.
+设置是否应为物理设备启用内存增长。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.set_memory_growth` ](/api_docs/python/tf/config/experimental/set_memory_growth), [ `tf.compat.v2.config.experimental.set_memory_growth` ](/api_docs/python/tf/config/experimental/set_memory_growth)
+**别名** : [ `tf.compat.v1.config.experimental.set_memory_growth` ](/api_docs/python/tf/config/experimental/set_memory_growth), [ `tf.compat.v2.config.experimental.set_memory_growth` ](/api_docs/python/tf/config/experimental/set_memory_growth)
 
 ```
  tf.config.experimental.set_memory_growth(
@@ -10,12 +10,12 @@ Set if memory growth should be enabled for a PhysicalDevice.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 A PhysicalDevice with memory growth set will not allocate all memory on thedevice upfront. Memory growth cannot be configured on a PhysicalDevice withvirtual devices configured.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -25,6 +25,6 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
  
 ```
 
-#### Args:
+#### 参数：
 - **`device`** : PhysicalDevice to configure
 - **`enable`** : Whether to enable or disable memory growth

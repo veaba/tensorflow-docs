@@ -1,4 +1,4 @@
-Subtracts sparse updates to a variable reference.
+减去对变量引用的稀疏更新。
 
 ```
  tf.compat.v1.scatter_sub(    ref,    indices,    updates,    use_locking=False,    name=None) 
@@ -24,7 +24,7 @@ Requires  `updates.shape = indices.shape + ref.shape[1:]`  or `updates.shape = [
 
 ![](https://tensorflow.google.cn/images/ScatterSub.png)
 
-#### Args:
+#### 参数：
 - **`ref`** : A mutable  `Tensor` . Must be one of the following types:  `float32` , `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `complex64` ,  `int64` , `qint8` ,  `quint8` ,  `qint32` ,  `bfloat16` ,  `uint16` ,  `complex128` ,  `half` , `uint32` ,  `uint64` . Should be from a  `Variable`  node.
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor of indices into the first dimension of  `ref` .
 - **`updates`** : A  `Tensor` . Must have the same type as  `ref` .A tensor of updated values to subtract from  `ref` .
@@ -32,6 +32,6 @@ Requires  `updates.shape = indices.shape + ref.shape[1:]`  or `updates.shape = [
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A mutable  `Tensor` . Has the same type as  `ref` .
 

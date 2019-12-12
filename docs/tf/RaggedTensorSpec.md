@@ -3,7 +3,7 @@
 ## Class  `RaggedTensorSpec` 
 Type specification for a [ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor).
 
-**Aliases** : [ `tf.compat.v1.RaggedTensorSpec` ](/api_docs/python/tf/RaggedTensorSpec), [ `tf.compat.v2.RaggedTensorSpec` ](/api_docs/python/tf/RaggedTensorSpec)
+**别名** : [ `tf.compat.v1.RaggedTensorSpec` ](/api_docs/python/tf/RaggedTensorSpec), [ `tf.compat.v2.RaggedTensorSpec` ](/api_docs/python/tf/RaggedTensorSpec)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/ragged/ragged_tensor.py#L1934-L1963)
@@ -20,20 +20,20 @@ Type specification for a [ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_
 
 Constructs a type specification for a [ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor).
 
-#### Args:
+#### 参数：
 - **`shape`** : The shape of the RaggedTensor, or  `None`  to allow any shape.  Ifa shape is specified, then all ragged dimensions must have size  `None` .
 - **`dtype`** : [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) of values in the RaggedTensor.
 - **`ragged_rank`** : Python integer, the ragged rank of the RaggedTensorto be described.  Defaults to  `shape.ndims - 1` .
 - **`row_splits_dtype`** :  `dtype`  for the RaggedTensor's  `row_splits`  tensor.One of [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
 
 
-## Properties
+## 属性
 
 
 ###  `value_type` 
-The Python type for values that are compatible with this TypeSpec.
+与此类型规范兼容的值的python类型。
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -88,9 +88,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

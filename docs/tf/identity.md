@@ -1,6 +1,6 @@
-Return a tensor with the same shape and contents as input.
+返回与输入形状和内容相同的张量。
 
-**Aliases** : [ `tf.compat.v1.identity` ](/api_docs/python/tf/identity), [ `tf.compat.v2.identity` ](/api_docs/python/tf/identity)
+**别名** : [ `tf.compat.v1.identity` ](/api_docs/python/tf/identity), [ `tf.compat.v2.identity` ](/api_docs/python/tf/identity)
 
 ```
  tf.identity(
@@ -10,11 +10,11 @@ Return a tensor with the same shape and contents as input.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -27,11 +27,11 @@ print(a_identity.numpy()) #[0.7853982]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

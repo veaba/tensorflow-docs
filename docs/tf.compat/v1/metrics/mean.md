@@ -1,4 +1,4 @@
-Computes the (weighted) mean of the given values.
+计算给定值的（加权）平均值。
 
 ```
  tf.compat.v1.metrics.mean(
@@ -17,7 +17,7 @@ For estimation of the metric over a stream of data, the function creates an `upd
 
 If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask values.
 
-#### Args:
+#### 参数：
 - **`values`** : A  `Tensor`  of arbitrary dimensions.
 - **`weights`** : Optional  `Tensor`  whose rank is either 0, or the same rank as `values` , and must be broadcastable to  `values`  (i.e., all dimensions mustbe either  `1` , or the same as the corresponding  `values`  dimension).
 - **`metrics_collections`** : An optional list of collections that  `mean` should be added to.
@@ -25,11 +25,11 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 - **`name`** : An optional variable_scope name.
 
 
-#### Returns:
+#### 返回：
 - **`mean`** : A  `Tensor`  representing the current mean, the value of  `total`  dividedby  `count` .
 - **`update_op`** : An operation that increments the  `total`  and  `count`  variablesappropriately and whose value matches  `mean_value` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `weights`  is not  `None`  and its shape doesn't match  `values` ,or if either  `metrics_collections`  or  `updates_collections`  are not a listor tuple.
 - **`RuntimeError`** : If eager execution is enabled.

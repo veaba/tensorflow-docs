@@ -5,7 +5,7 @@ Creates a  `Head`  for poisson regression using [ `tf.nn.log_poisson_loss` ](htt
 
 Inherits From: [ `RegressionHead` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/RegressionHead)
 
-**Aliases** : [ `tf.compat.v1.estimator.PoissonRegressionHead` ](/api_docs/python/tf/estimator/PoissonRegressionHead), [ `tf.compat.v2.estimator.PoissonRegressionHead` ](/api_docs/python/tf/estimator/PoissonRegressionHead)
+**别名** : [ `tf.compat.v1.estimator.PoissonRegressionHead` ](/api_docs/python/tf/estimator/PoissonRegressionHead), [ `tf.compat.v2.estimator.PoissonRegressionHead` ](/api_docs/python/tf/estimator/PoissonRegressionHead)
 
 The loss is the weighted sum over all input dimensions. Namely, if the inputlabels have shape  `[batch_size, label_dimension]` , the loss is the weightedsum over both  `batch_size`  and  `label_dimension` .
 
@@ -17,7 +17,7 @@ If  `weight_column`  is specified, weights must be of shape `[D0, D1, ... DN]` ,
 
 This is implemented as a generalized linear model, seehttps://en.wikipedia.org/wiki/Generalized_linear_model.
 
-The head can be used with a canned estimator. Example:
+头部可以与罐头估计器一起使用。例子：
 
 ```
  my_head = tf.estimator.PoissonRegressionHead()
@@ -46,7 +46,7 @@ my_estimator = tf.estimator.Estimator(model_fn=_my_model_fn)
  
 ```
 
-#### Args:
+#### 参数：
 - **`weight_column`** : A string or a  `NumericColumn`  created by[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representingweights. It is used to down weight or boost examples during training. Itwill be multiplied by the loss of the example.
 - **`label_dimension`** : Number of regression labels per example. This is the sizeof the last dimension of the labels  `Tensor`  (typically, this has shape `[batch_size, label_dimension]` ).
 - **`loss_reduction`** : One of [ `tf.losses.Reduction` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/Reduction) except  `NONE` . Decides how toreduce training loss over batch and label dimension. Defaults to `SUM_OVER_BATCH_SIZE` , namely weighted sum of losses divided by `batch size * label_dimension` .
@@ -70,7 +70,7 @@ my_estimator = tf.estimator.Estimator(model_fn=_my_model_fn)
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `logits_dimension` 
@@ -82,7 +82,7 @@ See  `base_head.Head`  for details.
 ###  `name` 
 See  `base_head.Head`  for details.
 
-## Methods
+## 方法
 
 
 ###  `create_estimator_spec` 
@@ -105,9 +105,9 @@ See  `base_head.Head`  for details.
 
 Returns  `EstimatorSpec`  that a model_fn can return.
 
-It is recommended to pass all args via name.
+建议通过名称传递所有参数。
 
-#### Args:
+#### 参数：
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
 - **`mode`** : Estimator's  `ModeKeys` .
 - **`logits`** : Logits  `Tensor`  to be used by the head.
@@ -119,7 +119,7 @@ It is recommended to pass all args via name.
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
  `EstimatorSpec` .
 
 ###  `loss` 
@@ -158,12 +158,12 @@ Creates metrics. See  `base_head.Head`  for details.
 
 Return predictions based on keys.  See  `base_head.Head`  for details.
 
-#### Args:
+#### 参数：
 - **`logits`** : logits  `Tensor`  with shape  `[D0, D1, ... DN, logits_dimension]` .For many applications, the shape is  `[batch_size, logits_dimension]` .
 
 
-#### Returns:
-A dict of predictions.
+#### 返回：
+预言的名言
 
 ###  `update_metrics` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/regression_head.py)

@@ -1,4 +1,4 @@
-Computes embeddings for the given ids and weights.
+计算给定ID和权重的嵌入。
 
 ```
  tf.compat.v1.nn.embedding_lookup_sparse(
@@ -17,7 +17,7 @@ This op assumes that there is at least one id for each row in the dense tensorre
 
 It also assumes that all id values lie in the range [0, p0), where p0is the sum of the size of params along dimension 0.
 
-#### Args:
+#### 参数：
 - **`params`** : A single tensor representing the complete embedding tensor, or alist of P tensors all of same shape except for the first dimension,representing sharded embedding tensors.  Alternatively, a `PartitionedVariable` , created by partitioning along dimension 0. Eachelement must be appropriately sized for the given  `partition_strategy` .
 - **`sp_ids`** : N x M  `SparseTensor`  of int64 ids where N is typically batch sizeand M is arbitrary.
 - **`sp_weights`** : either a  `SparseTensor`  of float / double weights, or  `None`  toindicate all weights should be taken to be 1. If specified,  `sp_weights` must have exactly the same shape and indices as  `sp_ids` .
@@ -27,7 +27,7 @@ It also assumes that all id values lie in the range [0, p0), where p0is the sum 
 - **`max_norm`** : If not  `None` , each embedding is clipped if its l2-norm is largerthan this value, before combining.
 
 
-#### Returns:
+#### 返回：
 A dense tensor representing the combined embeddings for thesparse ids. For each row in the dense tensor represented by  `sp_ids` , the oplooks up the embeddings for all ids in that row, multiplies them by thecorresponding weight, and combines these embeddings as specified.
 
 In other words, if
@@ -38,7 +38,7 @@ and
 
  `shape(sp_ids) = shape(sp_weights) = [d0, d1, ..., dn]` 
 
-then
+然后
 
  `shape(output) = [d0, d1, ..., dn-1, p1, ..., pm]` .
 
@@ -61,6 +61,6 @@ output[2, :] = (params[1, :] * 3.0) / 3.0
  
 ```
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_ids`  is not a  `SparseTensor` , or if  `sp_weights`  isneither  `None`  nor  `SparseTensor` .
 - **`ValueError`** : If  `combiner`  is not one of {"mean", "sqrtn", "sum"}.

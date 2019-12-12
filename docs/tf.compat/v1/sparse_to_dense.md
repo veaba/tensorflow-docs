@@ -24,7 +24,7 @@ All other values in  `dense`  are set to  `default_value` .  If  `sparse_values`
 
 Indices should be sorted in lexicographic order, and indices must notcontain any repeats. If  `validate_indices`  is True, these propertiesare checked during execution.
 
-#### Args:
+#### 参数：
 - **`sparse_indices`** : A 0-D, 1-D, or 2-D  `Tensor`  of type  `int32`  or  `int64` . `sparse_indices[i]`  contains the complete index where  `sparse_values[i]` will be placed.
 - **`output_shape`** : A 1-D  `Tensor`  of the same type as  `sparse_indices` .  Shapeof the dense output tensor.
 - **`sparse_values`** : A 0-D or 1-D  `Tensor` .  Values corresponding to each row of `sparse_indices` , or a scalar value to be used for all sparse indices.
@@ -33,6 +33,6 @@ Indices should be sorted in lexicographic order, and indices must notcontain any
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 Dense  `Tensor`  of shape  `output_shape` .  Has the same type as `sparse_values` .
 

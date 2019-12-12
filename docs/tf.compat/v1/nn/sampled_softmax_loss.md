@@ -1,4 +1,4 @@
-Computes and returns the sampled softmax training loss.
+计算并返回采样的SoftMax训练损失。
 
 ```
  tf.compat.v1.nn.sampled_softmax_loss(
@@ -40,7 +40,7 @@ See our [Candidate Sampling Algorithms Reference](https://tensorflow.google.cn/e
 
 Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007)([pdf](http://arxiv.org/pdf/1412.2007.pdf)) for the math.
 
-#### Args:
+#### 参数：
 - **`weights`** : A  `Tensor`  of shape  `[num_classes, dim]` , or a list of  `Tensor` objects whose concatenation along dimension 0 has shape[num_classes, dim].  The (possibly-sharded) class embeddings.
 - **`biases`** : A  `Tensor`  of shape  `[num_classes]` .  The class biases.
 - **`labels`** : A  `Tensor`  of type  `int64`  and shape  `[batch_size,num_true]` . The target classes.  Note that this format differs fromthe  `labels`  argument of [ `nn.softmax_cross_entropy_with_logits` ](/api_docs/python/tf/nn/softmax_cross_entropy_with_logits).
@@ -55,6 +55,6 @@ Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007)([pdf](
 - **`seed`** : random seed for candidate sampling. Default to None, which doesn't setthe op-level random seed for candidate sampling.
 
 
-#### Returns:
+#### 返回：
 A  `batch_size`  1-D tensor of per-example sampled softmax losses.
 

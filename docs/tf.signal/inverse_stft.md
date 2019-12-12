@@ -1,6 +1,6 @@
 Computes the inverse [Short-time Fourier Transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) of  `stfts` .
 
-**Aliases** : [ `tf.compat.v1.signal.inverse_stft` ](/api_docs/python/tf/signal/inverse_stft), [ `tf.compat.v2.signal.inverse_stft` ](/api_docs/python/tf/signal/inverse_stft)
+**别名** : [ `tf.compat.v1.signal.inverse_stft` ](/api_docs/python/tf/signal/inverse_stft), [ `tf.compat.v2.signal.inverse_stft` ](/api_docs/python/tf/signal/inverse_stft)
 
 ```
  tf.signal.inverse_stft(
@@ -16,7 +16,7 @@ Computes the inverse [Short-time Fourier Transform](https://en.wikipedia.org/wik
 
 To reconstruct an original waveform, a complimentary window function shouldbe used in inverse_stft. Such a window function can be constructed withtf.signal.inverse_stft_window_fn.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -48,7 +48,7 @@ inverse_stft = tf.signal.inverse_stft(
 
 Implemented with GPU-compatible ops and supports gradients.
 
-#### Args:
+#### 参数：
 - **`stfts`** : A  `complex64`   `[..., frames, fft_unique_bins]`   `Tensor`  of STFT binsrepresenting a batch of  `fft_length` -point STFTs where  `fft_unique_bins` is  `fft_length // 2 + 1` 
 - **`frame_length`** : An integer scalar  `Tensor` . The window length in samples.
 - **`frame_step`** : An integer scalar  `Tensor` . The number of samples to step.
@@ -57,8 +57,8 @@ Implemented with GPU-compatible ops and supports gradients.
 - **`name`** : An optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `[..., samples]`   `Tensor`  of  `float32`  signals representing the inverseSTFT for each input STFT in  `stfts` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `stfts`  is not at least rank 2,  `frame_length`  is not scalar, `frame_step`  is not scalar, or  `fft_length`  is not scalar.

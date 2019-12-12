@@ -5,7 +5,7 @@ Creates a  `Head`  for multi class classification.
 
 Inherits From: [ `Head` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Head)
 
-**Aliases** : [ `tf.compat.v1.estimator.MultiClassHead` ](/api_docs/python/tf/estimator/MultiClassHead), [ `tf.compat.v2.estimator.MultiClassHead` ](/api_docs/python/tf/estimator/MultiClassHead)
+**别名** : [ `tf.compat.v1.estimator.MultiClassHead` ](/api_docs/python/tf/estimator/MultiClassHead), [ `tf.compat.v2.estimator.MultiClassHead` ](/api_docs/python/tf/estimator/MultiClassHead)
 
 Uses  `sparse_softmax_cross_entropy`  loss.
 
@@ -19,7 +19,7 @@ The loss is the weighted sum over the input dimensions. Namely, if the inputlabe
 
 Also supports custom  `loss_fn` .  `loss_fn`  takes  `(labels, logits)`  or `(labels, logits, features, loss_reduction)`  as arguments and returnsunreduced loss with shape  `[D0, D1, ... DN, 1]` .  `loss_fn`  must supportinteger  `labels`  with shape  `[D0, D1, ... DN, 1]` . Namely, the head applies `label_vocabulary`  to the input labels before passing them to  `loss_fn` .
 
-The head can be used with a canned estimator. Example:
+头部可以与罐头估计器一起使用。例子：
 
 ```
  my_head = tf.estimator.MultiClassHead(n_classes=3)
@@ -48,7 +48,7 @@ my_estimator = tf.estimator.Estimator(model_fn=_my_model_fn)
  
 ```
 
-#### Args:
+#### 参数：
 - **`n_classes`** : Number of classes, must be greater than 2 (for 2 classes, use `BinaryClassHead` ).
 - **`weight_column`** : A string or a  `NumericColumn`  created by[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representingweights. It is used to down weight or boost examples during training. Itwill be multiplied by the loss of the example.
 - **`label_vocabulary`** : A list or tuple of strings representing possible labelvalues. If it is not given, that means labels are already encoded as aninteger within [0, n_classes). If given, labels must be of string type andhave any value in  `label_vocabulary` . Note that errors will be raised if `label_vocabulary`  is not provided but labels are strings. If both `n_classes`  and  `label_vocabulary`  are provided,  `label_vocabulary`  shouldcontain exactly  `n_classes`  items.
@@ -74,7 +74,7 @@ my_estimator = tf.estimator.Estimator(model_fn=_my_model_fn)
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `logits_dimension` 
@@ -86,7 +86,7 @@ See  `base_head.Head`  for details.
 ###  `name` 
 See  `base_head.Head`  for details.
 
-## Methods
+## 方法
 
 
 ###  `create_estimator_spec` 
@@ -109,9 +109,9 @@ See  `base_head.Head`  for details.
 
 Returns  `EstimatorSpec`  that a model_fn can return.
 
-It is recommended to pass all args via name.
+建议通过名称传递所有参数。
 
-#### Args:
+#### 参数：
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
 - **`mode`** : Estimator's  `ModeKeys` .
 - **`logits`** : Logits  `Tensor`  to be used by the head.
@@ -123,7 +123,7 @@ It is recommended to pass all args via name.
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
  `EstimatorSpec` .
 
 ###  `loss` 
@@ -165,13 +165,13 @@ Creates metrics. See  `base_head.Head`  for details.
 
 Return predictions based on keys. See  `base_head.Head`  for details.
 
-#### Args:
+#### 参数：
 - **`logits`** : logits  `Tensor`  with shape  `[D0, D1, ... DN, logits_dimension]` .For many applications, the shape is  `[batch_size, logits_dimension]` .
 - **`keys`** : a list or tuple of prediction keys. Each key can be either the classvariable of prediction_keys.PredictionKeys or its string value, such as:prediction_keys.PredictionKeys.CLASSES or 'classes'. If not specified,it will return the predictions for all valid keys.
 
 
-#### Returns:
-A dict of predictions.
+#### 返回：
+预言的名言
 
 ###  `update_metrics` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_class_head.py)

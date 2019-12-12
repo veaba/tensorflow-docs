@@ -1,6 +1,6 @@
-Performs a random brightness shift.
+执行随机亮度偏移。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness), [ `tf.compat.v2.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness), [ `tf.compat.v2.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
 
 ```
  tf.keras.preprocessing.image.random_brightness(
@@ -14,7 +14,7 @@ Performs a random brightness shift.
 
 
 ```
- x: Input tensor. Must be 3D.
+x：输入张量。必须是三维的。
 brightness_range: Tuple of floats; brightness range.
 channel_axis: Index of axis for channels in the input tensor.
  
@@ -24,7 +24,7 @@ channel_axis: Index of axis for channels in the input tensor.
 
 
 ```
- Numpy image tensor.
+纽米图像张量。
  
 ```
 

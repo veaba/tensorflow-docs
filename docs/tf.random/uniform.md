@@ -1,6 +1,6 @@
-Outputs random values from a uniform distribution.
+从均匀分布中输出随机值。
 
-**Aliases** : [ `tf.compat.v1.random.uniform` ](/api_docs/python/tf/random/uniform), [ `tf.compat.v1.random_uniform` ](/api_docs/python/tf/random/uniform), [ `tf.compat.v2.random.uniform` ](/api_docs/python/tf/random/uniform)
+**别名** : [ `tf.compat.v1.random.uniform` ](/api_docs/python/tf/random/uniform), [ `tf.compat.v1.random_uniform` ](/api_docs/python/tf/random/uniform), [ `tf.compat.v2.random.uniform` ](/api_docs/python/tf/random/uniform)
 
 ```
  tf.random.uniform(
@@ -14,12 +14,12 @@ Outputs random values from a uniform distribution.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 - [Customization basics: tensors and operations](https://tensorflow.google.cn/tutorials/customization/basics)
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
@@ -31,7 +31,7 @@ For floats, the default range is  `[0, 1)` .  For ints, at least  `maxval`  must
 
 In the integer case, the random integers are slightly biased unless `maxval - minval`  is an exact power of two.  The bias is small for values of `maxval - minval`  significantly smaller than the range of the output (either `2**32`  or  `2**64` ).
 
-#### Args:
+#### 参数：
 - **`shape`** : A 1-D integer Tensor or Python array. The shape of the output tensor.
 - **`minval`** : A 0-D Tensor or Python value of type  `dtype` . The lower bound on therange of random values to generate.  Defaults to 0.
 - **`maxval`** : A 0-D Tensor or Python value of type  `dtype` . The upper bound onthe range of random values to generate.  Defaults to 1 if  `dtype`  isfloating point.
@@ -40,8 +40,8 @@ In the integer case, the random integers are slightly biased unless `maxval - mi
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-A tensor of the specified shape filled with random uniform values.
+#### 返回：
+由随机均匀值填充的指定形状的张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `dtype`  is integral and  `maxval`  is not specified.

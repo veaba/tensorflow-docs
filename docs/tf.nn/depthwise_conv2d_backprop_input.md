@@ -1,12 +1,12 @@
-Computes the gradients of depthwise convolution with respect to the input.
+计算相对于输入的深度卷积的梯度。
 
-**Aliases** : [ `tf.compat.v1.nn.depthwise_conv2d_backprop_input` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_input), [ `tf.compat.v1.nn.depthwise_conv2d_native_backprop_input` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_input), [ `tf.compat.v2.nn.depthwise_conv2d_backprop_input` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_input)
+**别名** : [ `tf.compat.v1.nn.depthwise_conv2d_backprop_input` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_input), [ `tf.compat.v1.nn.depthwise_conv2d_native_backprop_input` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_input), [ `tf.compat.v2.nn.depthwise_conv2d_backprop_input` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_input)
 
 ```
  tf.nn.depthwise_conv2d_backprop_input(    input_sizes,    filter,    out_backprop,    strides,    padding,    data_format='NHWC',    dilations=[1, 1, 1, 1],    name=None) 
 ```
 
-#### Args:
+#### 参数：
 - **`input_sizes`** : A  `Tensor`  of type  `int32` .An integer vector representing the shape of  `input` , basedon  `data_format` .  For example, if  `data_format`  is 'NHWC' then `input`  is a 4-D  `[batch, height, width, channels]`  tensor.
 - **`filter`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` ,  `float64` .4-D with shape `[filter_height, filter_width, in_channels, depthwise_multiplier]` .
 - **`out_backprop`** : A  `Tensor` . Must have the same type as  `filter` .4-D with shape  based on  `data_format` .For example, if  `data_format`  is 'NHWC' thenout_backprop shape is  `[batch, out_height, out_width, out_channels]` .Gradients w.r.t. the output of the convolution.
@@ -17,6 +17,6 @@ Computes the gradients of depthwise convolution with respect to the input.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `filter` .
 

@@ -1,9 +1,9 @@
 
 
 ## Class  `Feature` 
-This enumeration represents optional conversion options.
+此枚举表示可选的转换选项。
 
-**Aliases** : [ `tf.compat.v1.autograph.experimental.Feature` ](/api_docs/python/tf/autograph/experimental/Feature), [ `tf.compat.v2.autograph.experimental.Feature` ](/api_docs/python/tf/autograph/experimental/Feature)
+**别名** : [ `tf.compat.v1.autograph.experimental.Feature` ](/api_docs/python/tf/autograph/experimental/Feature), [ `tf.compat.v2.autograph.experimental.Feature` ](/api_docs/python/tf/autograph/experimental/Feature)
 
 These conversion options are experimental. They are subject to change withoutnotice and offer no guarantees.
 
@@ -18,7 +18,7 @@ def f(i):
  
 ```
 
-#### Attributes:
+#### 属性：
 - **`ALL`** : Enable all features.
 - **`AUTO_CONTROL_DEPS`** : Insert of control dependencies in the generated code.
 - **`ASSERT_STATEMENTS`** : Convert Tensor-dependent assert statements to tf.Assert.
@@ -28,7 +28,7 @@ def f(i):
 - **`NAME_SCOPES`** : Insert name scopes that name ops according to context, like thefunction they were defined in.
 
 
-## Class Members
+## Class 成员
 -  `ALL`  []()
 -  `ASSERT_STATEMENTS`  []()
 -  `AUTO_CONTROL_DEPS`  []()

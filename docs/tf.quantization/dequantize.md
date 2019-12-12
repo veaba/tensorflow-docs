@@ -1,6 +1,6 @@
-Dequantize the 'input' tensor into a float Tensor.
+将“input”张量反量化为浮点张量。
 
-**Aliases** : [ `tf.compat.v1.dequantize` ](/api_docs/python/tf/quantization/dequantize), [ `tf.compat.v1.quantization.dequantize` ](/api_docs/python/tf/quantization/dequantize), [ `tf.compat.v2.quantization.dequantize` ](/api_docs/python/tf/quantization/dequantize)
+**别名** : [ `tf.compat.v1.dequantize` ](/api_docs/python/tf/quantization/dequantize), [ `tf.compat.v1.quantization.dequantize` ](/api_docs/python/tf/quantization/dequantize), [ `tf.compat.v2.quantization.dequantize` ](/api_docs/python/tf/quantization/dequantize)
 
 ```
  tf.quantization.dequantize(    input,    min_range,    max_range,    mode='MIN_COMBINED',    name=None) 
@@ -58,13 +58,13 @@ From this we compute our scaling factor, s:
    s = (2 * m) / (max_fixed - min_fixed) 
 ```
 
-Now we can dequantize the elements of our tensor:
+现在我们可以去量化张量的元素：
 
 ```
  result = input * s 
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `qint8` ,  `quint8` ,  `qint32` ,  `qint16` ,  `quint16` .
 - **`min_range`** : A  `Tensor`  of type  `float32` .The minimum scalar value possibly produced for the input.
 - **`max_range`** : A  `Tensor`  of type  `float32` .The maximum scalar value possibly produced for the input.
@@ -72,6 +72,6 @@ Now we can dequantize the elements of our tensor:
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 

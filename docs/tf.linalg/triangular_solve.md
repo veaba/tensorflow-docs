@@ -1,6 +1,6 @@
-Solves systems of linear equations with upper or lower triangular matrices by backsubstitution.
+用反代换法求解上下三角矩阵线性方程组。
 
-**Aliases** : [ `tf.compat.v1.linalg.triangular_solve` ](/api_docs/python/tf/linalg/triangular_solve), [ `tf.compat.v1.matrix_triangular_solve` ](/api_docs/python/tf/linalg/triangular_solve), [ `tf.compat.v2.linalg.triangular_solve` ](/api_docs/python/tf/linalg/triangular_solve)
+**别名** : [ `tf.compat.v1.linalg.triangular_solve` ](/api_docs/python/tf/linalg/triangular_solve), [ `tf.compat.v1.matrix_triangular_solve` ](/api_docs/python/tf/linalg/triangular_solve), [ `tf.compat.v2.linalg.triangular_solve` ](/api_docs/python/tf/linalg/triangular_solve)
 
 ```
  tf.linalg.triangular_solve(
@@ -17,7 +17,7 @@ Solves systems of linear equations with upper or lower triangular matrices by ba
 
 The output is a tensor of shape  `[..., M, K]` . If  `adjoint`  is `True`  then the innermost matrices in  `output`  satisfy matrix equations `matrix[..., :, :] * output[..., :, :] = rhs[..., :, :]` .If  `adjoint`  is  `False`  then the strictly then the  innermost matrices in `output`  satisfy matrix equations `adjoint(matrix[..., i, k]) * output[..., k, j] = rhs[..., i, j]` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -50,7 +50,7 @@ tf.matmul(a, x)
  
 ```
 
-#### Args:
+#### 参数：
 - **`matrix`** : A  `Tensor` . Must be one of the following types:  `float64` ,  `float32` ,  `half` ,  `complex64` ,  `complex128` .Shape is  `[..., M, M]` .
 - **`rhs`** : A  `Tensor` . Must have the same type as  `matrix` .Shape is  `[..., M, K]` .
 - **`lower`** : An optional  `bool` . Defaults to  `True` .Boolean indicating whether the innermost matrices in  `matrix`  arelower or upper triangular.
@@ -60,9 +60,9 @@ tf.matmul(a, x)
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `matrix` .
 
-#### Numpy Compatibility
+#### numpy兼容性
 Equivalent to scipy.linalg.solve_triangular
 

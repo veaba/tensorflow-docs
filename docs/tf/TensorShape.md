@@ -3,14 +3,14 @@
 ## Class  `TensorShape` 
 Represents the shape of a  `Tensor` .
 
-**Aliases** : [ `tf.compat.v1.TensorShape` ](/api_docs/python/tf/TensorShape), [ `tf.compat.v2.TensorShape` ](/api_docs/python/tf/TensorShape)
+**别名** : [ `tf.compat.v1.TensorShape` ](/api_docs/python/tf/TensorShape), [ `tf.compat.v2.TensorShape` ](/api_docs/python/tf/TensorShape)
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Text generation with an RNN](https://tensorflow.google.cn/tutorials/text/text_generation)
 A  `TensorShape`  represents a possibly-partial shape specification for a `Tensor` . It may be one of the following:
 
@@ -27,17 +27,17 @@ If a tensor is produced by an operation of type  `"Foo"` , its shapemay be infer
  
 ```
 
-Creates a new TensorShape with the given dimensions.
+创建具有给定维度的新张量形状。
 
-#### Args:
+#### 参数：
 - **`dims`** : A list of Dimensions, or None if the shape is unspecified.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If dims cannot be converted to a list of dimensions.
 
 
-## Properties
+## 属性
 
 
 ###  `dims` 
@@ -49,7 +49,7 @@ Deprecated accessor for  `rank` .
 ###  `rank` 
 Returns the rank of this shape, or None if it is unspecified.
 
-## Methods
+## 方法
 
 
 ###  `__add__` 
@@ -98,14 +98,14 @@ Returns True if  `self`  is equivalent to  `other` .
 
 Returns the value of a dimension or a shape, depending on the key.
 
-#### Args:
+#### 参数：
 - **`key`** : If  `key`  is an integer, returns the dimension at that index;otherwise if  `key`  is a slice, returns a TensorShape whose dimensionsare those selected by the slice from  `self` .
 
 
-#### Returns:
+#### 返回：
 An integer if  `key`  is an integer, or a  `TensorShape`  if  `key`  is aslice.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `key`  is a slice and  `self`  is completely unknown andthe step is set.
 
 
@@ -167,10 +167,10 @@ Returns True if this shape contains non-zero information.
 
 Returns a list of integers or  `None`  for each dimension.
 
-#### Returns:
+#### 返回：
 A list of integers or  `None`  for each dimension.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  is an unknown shape with an unknown rank.
 
 
@@ -194,11 +194,11 @@ Returns this shape as a  `TensorShapeProto` .
 
 Raises an exception if  `self`  is not compatible with the given  `rank` .
 
-#### Args:
+#### 参数：
 - **`rank`** : An integer.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  does not represent a shape with the given  `rank` .
 
 
@@ -214,11 +214,11 @@ Raises exception if  `self`  and  `other`  do not represent the same shape.
 
 This method can be used to assert that there exists a shape that both `self`  and  `other`  represent.
 
-#### Args:
+#### 参数：
 - **`other`** : Another TensorShape.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  and  `other`  do not represent the same shape.
 
 
@@ -232,7 +232,7 @@ This method can be used to assert that there exists a shape that both `self`  an
 
 Raises an exception if  `self`  is not fully defined in every dimension.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  does not have a known value for every dimension.
 
 
@@ -246,11 +246,11 @@ Raises an exception if  `self`  is not fully defined in every dimension.
 
 Raises an exception if  `self`  and  `other`  do not have compatible ranks.
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `TensorShape` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  and  `other`  do not represent shapes with thesame rank.
 
 
@@ -266,11 +266,11 @@ Returns the concatenation of the dimension in  `self`  and  `other` .
 
 *N.B.* If either  `self`  or  `other`  is completely unknown,concatenation will discard information about the other shape. Infuture, we might support concatenation that preserves thisinformation for use with slicing.
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `TensorShape` .
 
 
-#### Returns:
+#### 返回：
 A  `TensorShape`  whose dimensions are the concatenation of thedimensions in  `self`  and  `other` .
 
 ###  `is_compatible_with` 
@@ -299,11 +299,11 @@ Two possibly-partially-defined shapes are compatible if thereexists a fully-defi
 
 The compatibility relation is reflexive and symmetric, but nottransitive. For example, TensorShape([32, 784]) is compatible withTensorShape(None), and TensorShape(None) is compatible withTensorShape([4, 4]), but TensorShape([32, 784]) is not compatible withTensorShape([4, 4]).
 
-#### Args:
+#### 参数：
 - **`other`** : Another TensorShape.
 
 
-#### Returns:
+#### 返回：
 True iff  `self`  is compatible with  `other` .
 
 ###  `is_fully_defined` 
@@ -328,14 +328,14 @@ Returns a  `TensorShape`  combining the information in  `self`  and  `other` .
 
 The dimensions in  `self`  and  `other`  are merged elementwise,according to the rules defined for  `Dimension.merge_with()` .
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `TensorShape` .
 
 
-#### Returns:
+#### 返回：
 A  `TensorShape`  containing the combined information of  `self`  and `other` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  and  `other`  are not compatible.
 
 
@@ -355,11 +355,11 @@ Returns the most specific TensorShape compatible with  `self`  and  `other` .
 - TensorShape([1, 2, 3]) is the most specific TensorShape compatible withboth TensorShape([1, 2, 3]) and TensorShape([1, 2, 3]). There are moreless specific TensorShapes compatible with above mentioned TensorShapes,e.g. TensorShape([1, 2, None]), TensorShape(None).
 
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `TensorShape` .
 
 
-#### Returns:
+#### 返回：
 A  `TensorShape`  which is the most specific compatible shape of  `self` and  `other` .
 
 ###  `num_elements` 
@@ -384,14 +384,14 @@ Returns a shape based on  `self`  with the given rank.
 
 This method promotes a completely unknown shape to one with aknown rank.
 
-#### Args:
+#### 参数：
 - **`rank`** : An integer.
 
 
-#### Returns:
+#### 返回：
 A shape that is at least as specific as  `self`  with the given rank.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  does not represent a shape with the given  `rank` .
 
 
@@ -405,14 +405,14 @@ A shape that is at least as specific as  `self`  with the given rank.
 
 Returns a shape based on  `self`  with at least the given rank.
 
-#### Args:
+#### 参数：
 - **`rank`** : An integer.
 
 
-#### Returns:
+#### 返回：
 A shape that is at least as specific as  `self`  with at least the givenrank.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  does not represent a shape with at least the given `rank` .
 
 
@@ -426,12 +426,12 @@ A shape that is at least as specific as  `self`  with at least the givenrank.
 
 Returns a shape based on  `self`  with at most the given rank.
 
-#### Args:
+#### 参数：
 - **`rank`** : An integer.
 
 
-#### Returns:
+#### 返回：
 A shape that is at least as specific as  `self`  with at most the givenrank.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  does not represent a shape with at most the given `rank` .

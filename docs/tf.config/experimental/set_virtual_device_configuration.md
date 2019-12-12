@@ -1,6 +1,6 @@
-Set the virtual device configuration for a PhysicalDevice.
+为物理设备设置虚拟设备配置。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration), [ `tf.compat.v2.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration)
+**别名** : [ `tf.compat.v1.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration), [ `tf.compat.v2.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration)
 
 ```
  tf.config.experimental.set_virtual_device_configuration(
@@ -10,11 +10,11 @@ Set the virtual device configuration for a PhysicalDevice.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 A PhysicalDevice marked as visible will by default have a single LogicalDeviceallocated to it once the runtime is configured. Specifying a list oftf.config.experimental.VirtualDeviceConfiguration objects allows multipledevices to be configured that utilize the same PhysicalDevice.
 
-The following example splits the CPU into 2 virtual devices:
+以下示例将CPU拆分为两个虚拟设备：
 
 ```
  physical_devices = tf.config.experimental.list_physical_devices('CPU')
@@ -34,7 +34,7 @@ try:
      tf.config.experimental.VirtualDeviceConfiguration(),
      tf.config.experimental.VirtualDeviceConfiguration(),
      tf.config.experimental.VirtualDeviceConfiguration()])
-except:
+除外：
   print('Cannot modify the virtual devices once they have been initialized.')
  
 ```
@@ -51,7 +51,7 @@ tf.config.experimental.set_virtual_device_configuration(
 
 try:
   tf.config.experimental.set_memory_growth(physical_devices[0], True)
-except:
+除外：
   print('Cannot set memory growth when virtual devices configured')
 
 logical_devices = tf.config.experimental.list_logical_devices('GPU')
@@ -62,11 +62,11 @@ try:
     physical_devices[0],
     [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=10),
      tf.config.experimental.VirtualDeviceConfiguration(memory_limit=10)])
-except:
+除外：
   print('Cannot modify the virtual devices once they have been initialized.')
  
 ```
 
-#### Args:
+#### 参数：
 - **`device`** : (optional) Need to update
 - **`virtual_devices`** : (optional) Need to update

@@ -1,15 +1,15 @@
 
 
 ## Class  `DenseHashTable` 
-A generic mutable hash table implementation using tensors as backing store.
+使用张量作为后备存储的通用可变哈希表实现。
 
-**Aliases** : [ `tf.compat.v1.lookup.experimental.DenseHashTable` ](/api_docs/python/tf/lookup/experimental/DenseHashTable), [ `tf.compat.v2.lookup.experimental.DenseHashTable` ](/api_docs/python/tf/lookup/experimental/DenseHashTable)
+**别名** : [ `tf.compat.v1.lookup.experimental.DenseHashTable` ](/api_docs/python/tf/lookup/experimental/DenseHashTable), [ `tf.compat.v2.lookup.experimental.DenseHashTable` ](/api_docs/python/tf/lookup/experimental/DenseHashTable)
 
 Data can be inserted by calling the insert method and removed by calling theremove method. It does not support initialization via the init method.
 
 It uses "open addressing" with quadratic reprobing to resolve collisions.Compared to  `MutableHashTable`  the insert, remove and lookup operations in a `DenseHashTable`  are typically faster, but memory usage can be higher.However,  `DenseHashTable`  does not require additional memory fortemporary tensors created during checkpointing and restore operations.
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -46,7 +46,7 @@ Creates an empty  `DenseHashTable`  object.
 
 Creates a table, the type of its keys and values are specified by key_dtypeand value_dtype, respectively.
 
-#### Args:
+#### 参数：
 - **`key_dtype`** : the type of the key tensors.
 - **`value_dtype`** : the type of the value tensors.
 - **`default_value`** : The value to use if a key is missing in the table.
@@ -57,29 +57,29 @@ Creates a table, the type of its keys and values are specified by key_dtypeand v
 - **`checkpoint`** : if True, the contents of the table are saved to and restoredfrom checkpoints. If  `shared_name`  is empty for a checkpointed table, itis shared using the table node name.
 
 
-#### Returns:
+#### 返回：
 A  `DenseHashTable`  object.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If checkpoint is True and no name was specified.
 
 
-## Properties
+## 属性
 
 
 ###  `key_dtype` 
-The table key dtype.
+表键dtype。
 
 ###  `name` 
-The name of the table.
+表的名称。
 
 ###  `resource_handle` 
-Returns the resource handle associated with this Resource.
+返回与此资源关联的资源句柄。
 
 ###  `value_dtype` 
-The table value dtype.
+表值dtype。
 
-## Methods
+## 方法
 
 
 ###  `erase` 
@@ -97,15 +97,15 @@ Removes  `keys`  and its associated values from the table.
 
 If a key is not present in the table, it is silently ignored.
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to remove. Can be a tensor of any shape. Must match the table'skey type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The created Operation.
+#### 返回：
+创建的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  do not match the table data types.
 
 
@@ -117,13 +117,13 @@ The created Operation.
  
 ```
 
-Returns tensors of all keys and values in the table.
+返回表中所有键和值的张量。
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A pair of tensors with the first tensor containing all keys and the  second tensors containing all values in the table.
 
 ###  `insert` 
@@ -140,16 +140,16 @@ A pair of tensors with the first tensor containing all keys and the  second tens
 
 Associates  `keys`  with  `values` .
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to insert. Can be a tensor of any shape. Must match the table'skey type.
 - **`values`** : Values to be associated with keys. Must be a tensor of the sameshape as  `keys`  and match the table's value type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The created Operation.
+#### 返回：
+创建的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  or  `values`  doesn't match the table datatypes.
 
 
@@ -167,16 +167,16 @@ The created Operation.
 
 Associates  `keys`  with  `values` .
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to insert. Can be a tensor of any shape. Must match the table'skey type.
 - **`values`** : Values to be associated with keys. Must be a tensor of the sameshape as  `keys`  and match the table's value type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The created Operation.
+#### 返回：
+创建的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  or  `values`  doesn't match the table datatypes.
 
 
@@ -195,15 +195,15 @@ Looks up  `keys`  in a table, outputs the corresponding values.
 
 The  `default_value`  is used for keys not present in the table.
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to look up. Can be a tensor of any shape. Must match thetable's key_dtype.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tensor containing the values in the same shape as  `keys`  using the  table's value type.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  do not match the table data types.
 
 
@@ -222,15 +222,15 @@ Removes  `keys`  and its associated values from the table.
 
 If a key is not present in the table, it is silently ignored.
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to remove. Can be a tensor of any shape. Must match the table'skey type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The created Operation.
+#### 返回：
+创建的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  do not match the table data types.
 
 
@@ -242,12 +242,12 @@ The created Operation.
  
 ```
 
-Compute the number of elements in this table.
+计算此表中的元素数。
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-A scalar tensor containing the number of elements in this table.
+#### 返回：
+包含此表中元素数的标量张量。
 

@@ -8,7 +8,7 @@ Adds a cosine-distance loss to the training procedure. (deprecated arguments)
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(dim)` . They will be removed in a future version.Instructions for updating:dim is deprecated, use axis instead
 Note that the function assumes that  `predictions`  and  `labels`  are alreadyunit-normalized.
 
-#### Args:
+#### 参数：
 - **`labels`** :  `Tensor`  whose shape matches 'predictions'
 - **`predictions`** : An arbitrary matrix.
 - **`axis`** : The dimension along which the cosine distance is computed.
@@ -19,13 +19,13 @@ Note that the function assumes that  `predictions`  and  `labels`  are alreadyun
 - **`dim`** : The old (deprecated) name for  `axis` .
 
 
-#### Returns:
+#### 返回：
 Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has the sameshape as  `labels` ; otherwise, it is scalar.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `predictions`  shape doesn't match  `labels`  shape, or `axis` ,  `labels` ,  `predictions`  or  `weights`  is  `None` .
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 The  `loss_collection`  argument is ignored when executing eagerly. Considerholding on to the return value or collecting losses via a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model).
 

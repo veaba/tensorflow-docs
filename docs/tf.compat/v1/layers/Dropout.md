@@ -1,13 +1,13 @@
 
 
 ## Class  `Dropout` 
-Applies Dropout to the input.
+对输入应用辍学。
 
 Inherits From: [ `Dropout` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Dropout), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
 Dropout consists in randomly setting a fraction  `rate`  of input units to 0at each update during training time, which helps prevent overfitting.The units that are kept are scaled by  `1 / (1 - rate)` , so that theirsum is unchanged at training time and inference time.
 
-#### Arguments:
+#### 参数：
 - **`rate`** : The dropout rate, between 0 and 1. E.g.  `rate=0.1`  would drop out10% of input units.
 - **`noise_shape`** : 1D tensor of type  `int32`  representing the shape of thebinary dropout mask that will be multiplied with the input.For instance, if your inputs have shape `(batch_size, timesteps, features)` , and you want the dropout maskto be the same for all timesteps, you can use `noise_shape=[batch_size, 1, features]` .
 - **`seed`** : A Python integer. Used to create random seeds. See[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed).for behavior.
@@ -28,11 +28,11 @@ Dropout consists in randomly setting a fraction  `rate`  of input units to 0at e
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -57,7 +57,7 @@ Applies Dropout to the input. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use keras.layers.dropout instead.
 Dropout consists in randomly setting a fraction  `rate`  of input units to 0at each update during training time, which helps prevent overfitting.The units that are kept are scaled by  `1 / (1 - rate)` , so that theirsum is unchanged at training time and inference time.
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Tensor input.
 - **`rate`** : The dropout rate, between 0 and 1. E.g. "rate=0.1" would drop out10% of input units.
 - **`noise_shape`** : 1D tensor of type  `int32`  representing the shape of thebinary dropout mask that will be multiplied with the input.For instance, if your inputs have shape `(batch_size, timesteps, features)` , and you want the dropout maskto be the same for all timesteps, you can use `noise_shape=[batch_size, 1, features]` .
@@ -66,8 +66,8 @@ Dropout consists in randomly setting a fraction  `rate`  of input units to 0at e
 - **`name`** : The name of the layer (string).
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

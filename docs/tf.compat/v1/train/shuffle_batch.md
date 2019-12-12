@@ -19,7 +19,7 @@ The  `capacity`  argument controls the how long the prefetching is allowed togro
 
 The returned operation is a dequeue operation and will throw[ `tf.errors.OutOfRangeError` ](https://tensorflow.google.cn/api_docs/python/tf/errors/OutOfRangeError) if the input queue is exhausted. If thisoperation is feeding another input queue, its queue runner will catchthis exception, however, if this operation is used in your main threadyou are responsible for catching this yourself.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -37,7 +37,7 @@ image_batch, label_batch = tf.compat.v1.train.shuffle_batch(
 
 If  `allow_smaller_final_batch`  is  `True` , a smaller batch value than `batch_size`  is returned when the queue is closed and there are not enoughelements to fill the batch, otherwise the pending elements are discarded.In addition, all output tensors' static shapes, as accessed via the `shape`  property will have a first  `Dimension`  value of  `None` , andoperations that depend on fixed batch_size would fail.
 
-#### Args:
+#### 参数：
 - **`tensors`** : The list or dictionary of tensors to enqueue.
 - **`batch_size`** : The new batch size pulled from the queue.
 - **`capacity`** : An integer. The maximum number of elements in the queue.
@@ -51,13 +51,13 @@ If  `allow_smaller_final_batch`  is  `True` , a smaller batch value than `batch_
 - **`name`** : (Optional) A name for the operations.
 
 
-#### Returns:
+#### 返回：
 A list or dictionary of tensors with the types as  `tensors` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `shapes`  are not specified, and cannot beinferred from the elements of  `tensors` .
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Input pipelines based on Queues are not supported when eager execution isenabled. Please use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API to ingest data under eager execution.
 

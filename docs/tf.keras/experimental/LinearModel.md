@@ -5,7 +5,7 @@ Linear Model for regression and classification problems.
 
 Inherits From: [ `Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model)
 
-**Aliases** : [ `tf.compat.v1.keras.experimental.LinearModel` ](/api_docs/python/tf/keras/experimental/LinearModel), [ `tf.compat.v2.keras.experimental.LinearModel` ](/api_docs/python/tf/keras/experimental/LinearModel)
+**别名** : [ `tf.compat.v1.keras.experimental.LinearModel` ](/api_docs/python/tf/keras/experimental/LinearModel), [ `tf.compat.v2.keras.experimental.LinearModel` ](/api_docs/python/tf/keras/experimental/LinearModel)
 
 This model approximates the following function:
 
@@ -17,7 +17,7 @@ y=β+∑Ni=1wi∗xi
 wi
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -29,7 +29,7 @@ model.fit(x, y, epochs)
 
 This model accepts sparse float inputs as well:
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -63,7 +63,7 @@ opt.apply_gradients(zip(grads, model.weights))
 
 Create a Linear Model.
 
-#### Args:
+#### 参数：
 - **`units`** : Positive integer, output dimension without the batch size.
 - **`activation`** : Activation function to use.If you don't specify anything, no activation is applied.
 - **`use_bias`** : whether to calculate the bias/intercept for this model. If setto False, no bias/intercept will be used in calculations, e.g., the datais already centered.
@@ -74,23 +74,23 @@ Create a Linear Model.
 - **`**kwargs`** : The keyword arguments that are passed on to BaseLayer.**init** .
 
 
-## Properties
+## 属性
 
 
 ###  `layers` 
 
 
 ###  `metrics_names` 
-Returns the model's display labels for all outputs.
+返回所有输出的模型显示标签。
 
 ###  `run_eagerly` 
-Settable attribute indicating whether the model should run eagerly.
+可设置属性，指示模型是否应立即运行。
 
 Running eagerly means that your model will be run step by step,like Python code. Your model might run slower, but it should become easierfor you to debug it by stepping into individual layer calls.
 
 By default, we will attempt to compile your model to a static graph todeliver the best execution performance.
 
-#### Returns:
+#### 返回：
 Boolean, whether the model should run eagerly.
 
 ###  `sample_weights` 
@@ -101,13 +101,13 @@ Returns the  `updates`  from all layers that are stateful.
 
 This is useful for separating training updates andstate updates, e.g. when we need to update a layer's internal stateduring prediction.
 
-#### Returns:
-A list of update ops.
+#### 返回：
+更新操作列表。
 
 ###  `stateful` 
 
 
-## Methods
+## 方法
 
 
 ###  `compile` 
@@ -128,9 +128,9 @@ A list of update ops.
  
 ```
 
-Configures the model for training.
+配置用于培训的模型。
 
-#### Arguments:
+#### 参数：
 - **`optimizer`** : String (name of optimizer) or optimizer instance.See [ `tf.keras.optimizers` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers).
 - **`loss`** : String (name of objective function), objective function or[ `tf.losses.Loss` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/Loss) instance. See [ `tf.losses` ](https://tensorflow.google.cn/api_docs/python/tf/losses). If the model hasmultiple outputs, you can use a different loss on each output bypassing a dictionary or a list of losses. The loss value that willbe minimized by the model will then be the sum of all individuallosses.
 - **`metrics`** : List of metrics to be evaluated by the model during trainingand testing. Typically you will use  `metrics=['accuracy']` .To specify different metrics for different outputs of amulti-output model, you could also pass a dictionary, such as `metrics={'output_a': 'accuracy', 'output_b': ['accuracy', 'mse']}` .You can also pass a list (len = len(outputs)) of lists of metricssuch as  `metrics=[['accuracy'], ['accuracy', 'mse']]`  or `metrics=['accuracy', ['accuracy', 'mse']]` .
@@ -142,7 +142,7 @@ Configures the model for training.
 - **`**kwargs`** : Any additional arguments.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of invalid arguments for `optimizer` ,  `loss` ,  `metrics`  or  `sample_weight_mode` .
 
 
@@ -167,9 +167,9 @@ Configures the model for training.
 
 Returns the loss value &amp; metrics values for the model in test mode.
 
-Computation is done in batches.
+计算是分批进行的。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input data. It could be:
 - **`y`** : Target data. Like the input data  `x` ,it could be either Numpy array(s) or TensorFlow tensor(s).It should be consistent with  `x`  (you cannot have Numpy inputs andtensor targets, or inversely).If  `x`  is a dataset, generator or[ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instance,  `y`  should not be specified (sincetargets will be obtained from the iterator/dataset).
 - **`batch_size`** : Integer or  `None` .Number of samples per gradient update.If unspecified,  `batch_size`  will default to 32.Do not specify the  `batch_size`  is your data is in theform of symbolic tensors, dataset,generators, or [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instances (since they generatebatches).
@@ -187,10 +187,10 @@ Computation is done in batches.
     - A generator or [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instance.
 
 
-#### Returns:
+#### 返回：
 Scalar test loss (if the model has a single output and no metrics)or list of scalars (if the model has multiple outputsand/or metrics). The attribute  `model.metrics_names`  will give youthe display labels for the scalar outputs.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : in case of invalid arguments.
 
 
@@ -210,11 +210,11 @@ Scalar test loss (if the model has a single output and no metrics)or list of sca
  
 ```
 
-Evaluates the model on a data generator.
+在数据生成器上计算模型。
 
 The generator should return the same kind of dataas accepted by  `test_on_batch` .
 
-#### Arguments:
+#### 参数：
 - **`generator`** : Generator yielding tuples (inputs, targets)or (inputs, targets, sample_weights)or an instance of [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)object in order to avoid duplicate datawhen using multiprocessing.
 - **`steps`** : Total number of steps (batches of samples)to yield from  `generator`  before stopping.Optional for  `Sequence` : if unspecified, will usethe  `len(generator)`  as a number of steps.
 - **`callbacks`** : List of [ `keras.callbacks.Callback` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/Callback) instances.List of callbacks to apply during evaluation.See [callbacks](/api_docs/python/tf/keras/callbacks).
@@ -224,14 +224,14 @@ The generator should return the same kind of dataas accepted by  `test_on_batch`
 - **`verbose`** : Verbosity mode, 0 or 1.
 
 
-#### Returns:
+#### 返回：
 Scalar test loss (if the model has a single output and no metrics)or list of scalars (if the model has multiple outputsand/or metrics). The attribute  `model.metrics_names`  will give youthe display labels for the scalar outputs.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : in case of invalid arguments.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case the generator yields data in an invalid format.
 
 
@@ -263,9 +263,9 @@ Scalar test loss (if the model has a single output and no metrics)or list of sca
  
 ```
 
-Trains the model for a fixed number of epochs (iterations on a dataset).
+为固定数量的阶段（数据集上的迭代）训练模型。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input data. It could be:
 - **`y`** : Target data. Like the input data  `x` ,it could be either Numpy array(s) or TensorFlow tensor(s).It should be consistent with  `x`  (you cannot have Numpy inputs andtensor targets, or inversely). If  `x`  is a dataset, generator,or [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instance,  `y`  shouldnot be specified (since targets will be obtained from  `x` ).
 - **`batch_size`** : Integer or  `None` .Number of samples per gradient update.If unspecified,  `batch_size`  will default to 32.Do not specify the  `batch_size`  if your data is in theform of symbolic tensors, datasets,generators, or [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instances (since they generatebatches).
@@ -295,10 +295,10 @@ Trains the model for a fixed number of epochs (iterations on a dataset).
     - datasetFor the first two cases,  `batch_size`  must be provided.For the last case,  `validation_steps`  must be provided.
 
 
-#### Returns:
+#### 返回：
 A  `History`  object. Its  `History.history`  attribute isa record of training loss values and metrics valuesat successive epochs, as well as validation loss valuesand validation metrics values (if applicable).
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If the model was never compiled.
 - **`ValueError`** : In case of mismatch between the provided input dataand what the model expects.
 
@@ -332,7 +332,7 @@ The generator is run in parallel to the model, for efficiency.For instance, this
 
 The use of [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) guarantees the orderingand guarantees the single use of every input per epoch whenusing  `use_multiprocessing=True` .
 
-#### Arguments:
+#### 参数：
 - **`generator`** : A generator or an instance of  `Sequence` ([ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence))object in order to avoid duplicate datawhen using multiprocessing.The output of the generator must be either
 - **`steps_per_epoch`** : Total number of steps (batches of samples)to yield from  `generator`  before declaring one epochfinished and starting the next epoch. It should typicallybe equal to the number of samples of your datasetdivided by the batch size.Optional for  `Sequence` : if unspecified, will usethe  `len(generator)`  as a number of steps.
 - **`epochs`** : Integer, total number of iterations on the data.
@@ -354,10 +354,10 @@ The use of [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/pyth
     - a tuple (inputs, targets, sample_weights).
 
 
-#### Returns:
+#### 返回：
 A  `History`  object.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -389,19 +389,19 @@ Raises:    ValueError: In case the generator yields data in an invalid format.
  
 ```
 
-Retrieves a layer based on either its name (unique) or index.
+根据层的名称（唯一）或索引检索层。
 
 If  `name`  and  `index`  are both provided,  `index`  will take precedence.Indices are based on order of horizontal graph traversal (bottom-up).
 
-#### Arguments:
+#### 参数：
 - **`name`** : String, name of layer.
 - **`index`** : Integer, index of layer.
 
 
-#### Returns:
-A layer instance.
+#### 返回：
+层实例。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of invalid layer name or index.
 
 
@@ -435,11 +435,11 @@ Loads all layer weights, either from a TensorFlow or an HDF5 file.
  
 ```
 
-Generates output predictions for the input samples.
+为输入样本生成输出预测。
 
-Computation is done in batches.
+计算是分批进行的。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input samples. It could be:
 - **`batch_size`** : Integer or  `None` .Number of samples per gradient update.If unspecified,  `batch_size`  will default to 32.Do not specify the  `batch_size`  is your data is in theform of symbolic tensors, dataset,generators, or [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instances (since they generatebatches).
 - **`verbose`** : Verbosity mode, 0 or 1.
@@ -454,10 +454,10 @@ Computation is done in batches.
     - A generator or [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) instance.
 
 
-#### Returns:
-Numpy array(s) of predictions.
+#### 返回：
+预测的numpy数组。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of mismatch between the providedinput data and the model's expectations,or in case a stateful model receives a number of samplesthat is not a multiple of the batch size.
 
 
@@ -477,11 +477,11 @@ Numpy array(s) of predictions.
  
 ```
 
-Generates predictions for the input samples from a data generator.
+从数据生成器生成输入样本的预测。
 
 The generator should return the same kind of data as accepted by `predict_on_batch` .
 
-#### Arguments:
+#### 参数：
 - **`generator`** : Generator yielding batches of input samplesor an instance of [ `keras.utils.Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence) object in order toavoid duplicate data when using multiprocessing.
 - **`steps`** : Total number of steps (batches of samples)to yield from  `generator`  before stopping.Optional for  `Sequence` : if unspecified, will usethe  `len(generator)`  as a number of steps.
 - **`callbacks`** : List of [ `keras.callbacks.Callback` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/Callback) instances.List of callbacks to apply during prediction.See [callbacks](/api_docs/python/tf/keras/callbacks).
@@ -491,10 +491,10 @@ The generator should return the same kind of data as accepted by `predict_on_bat
 - **`verbose`** : verbosity mode, 0 or 1.
 
 
-#### Returns:
-Numpy array(s) of predictions.
+#### 返回：
+预测的numpy数组。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case the generator yields data in an invalid format.
 
 
@@ -506,19 +506,19 @@ Numpy array(s) of predictions.
  
 ```
 
-Returns predictions for a single batch of samples.
+返回一批样本的预测。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input data. It could be:
     - A Numpy array (or array-like), or a list of arrays(in case the model has multiple inputs).
     - A TensorFlow tensor, or a list of tensors(in case the model has multiple inputs).
     - A [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) dataset.
 
 
-#### Returns:
-Numpy array(s) of predictions.
+#### 返回：
+预测的numpy数组。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of mismatch between given number of inputs andexpectations of the model.
 
 
@@ -530,7 +530,7 @@ Numpy array(s) of predictions.
  
 ```
 
-Resets the state of metrics.
+重置度量的状态。
 
 ###  `reset_states` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/network.py#L446-L449)
@@ -555,9 +555,9 @@ Resets the state of metrics.
  
 ```
 
-Saves the model to Tensorflow SavedModel or a single HDF5 file.
+将模型保存到tensorflow savedmodel或单个hdf5文件。
 
-#### The savefile includes:
+#### 保存文件包括：
 - The model architecture, allowing to re-instantiate the model.
 - The model weights.
 - The state of the optimizer, allowing to resume trainingexactly where you left off.
@@ -565,21 +565,21 @@ This allows you to save the entirety of the state of a modelin a single file.
 
 Saved models can be reinstantiated via [ `keras.models.load_model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/models/load_model).The model returned by  `load_model` is a compiled model ready to be used (unless the saved modelwas never compiled in the first place).
 
-#### Arguments:
+#### 参数：
 filepath: String, path to SavedModel or H5 file to save the model.overwrite: Whether to silently overwrite any existing file at the    target location, or provide the user with a manual prompt.include_optimizer: If True, save optimizer's state together.save_format: Either 'tf' or 'h5', indicating whether to save the model  to Tensorflow SavedModel or HDF5. The default is currently 'h5', but  will switch to 'tf' in TensorFlow 2.0. The 'tf' option is currently  disabled (use [ `tf.keras.experimental.export_saved_model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/export_saved_model) instead).
 
 - **`signatures`** : Signatures to save with the SavedModel. Applicable to the 'tf'format only. Please see the  `signatures`  argument in[ `tf.saved_model.save` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/save) for details.
 - **`options`** : Optional [ `tf.saved_model.SaveOptions` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/SaveOptions) object that specifiesoptions for saving to SavedModel.
 
 
-#### Example:
+#### 示例：
 
 
 ```
  from keras.models import load_model
 
 model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
-del model  # deletes the existing model
+del model删除现有模型
 
 # returns a compiled model
 # identical to the previous one
@@ -599,7 +599,7 @@ model = load_model('my_model.h5')
  
 ```
 
-Saves all layer weights.
+保存所有层权重。
 
 Either saves in HDF5 or in TensorFlow format based on the  `save_format` argument.
 
@@ -611,13 +611,13 @@ While the formats are the same, do not mix  `save_weights`  and[ `tf.train.Check
 
 The TensorFlow format matches objects and variables by starting at a rootobject,  `self`  for  `save_weights` , and greedily matching attributenames. For [ `Model.save` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model#save) this is the  `Model` , and for [ `Checkpoint.save` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint#save) thisis the  `Checkpoint`  even if the  `Checkpoint`  has a model attached. Thismeans saving a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) using  `save_weights`  and loading into a[ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint) with a  `Model`  attached (or vice versa) will not matchthe  `Model` 's variables. See the [guide to trainingcheckpoints](https://tensorflow.google.cn/alpha/guide/checkpoints) for detailson the TensorFlow format.
 
-#### Arguments:
+#### 参数：
 - **`filepath`** : String, path to the file to save the weights to. When savingin TensorFlow format, this is the prefix used for checkpoint files(multiple files are generated). Note that the '.h5' suffix causesweights to be saved in HDF5 format.
 - **`overwrite`** : Whether to silently overwrite any existing file at thetarget location, or provide the user with a manual prompt.
 - **`save_format`** : Either 'tf' or 'h5'. A  `filepath`  ending in '.h5' or'.keras' will default to HDF5 if  `save_format`  is  `None` . Otherwise `None`  defaults to 'tf'.
 
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : If h5py is not available when attempting to save in HDF5format.
 - **`ValueError`** : For invalid/unknown format arguments.
 
@@ -634,15 +634,15 @@ The TensorFlow format matches objects and variables by starting at a rootobject,
  
 ```
 
-Prints a string summary of the network.
+打印网络的字符串摘要。
 
-#### Arguments:
+#### 参数：
 - **`line_length`** : Total length of printed lines(e.g. set this to adapt the display to differentterminal window sizes).
 - **`positions`** : Relative or absolute positions of log elementsin each line. If not provided,defaults to  `[.33, .55, .67, 1.]` .
 - **`print_fn`** : Print function to use. Defaults to  `print` .It will be called on each line of the summary.You can set it to a custom functionin order to capture the string summary.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `summary()`  is called before the model is built.
 
 
@@ -659,9 +659,9 @@ Prints a string summary of the network.
  
 ```
 
-Test the model on a single batch of samples.
+在一批样品上测试模型。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input data. It could be:
 - **`y`** : Target data. Like the input data  `x` ,it could be either Numpy array(s) or TensorFlow tensor(s).It should be consistent with  `x`  (you cannot have Numpy inputs andtensor targets, or inversely). If  `x`  is a dataset  `y`  shouldnot be specified (since targets will be obtained from the iterator).
 - **`sample_weight`** : Optional array of the same length as x, containingweights to apply to the model's loss for each sample.In the case of temporal data, you can pass a 2D arraywith shape (samples, sequence_length),to apply a different weight to every timestep of every sample.In this case you should make sure to specifysample_weight_mode="temporal" in compile(). This argument is notsupported when  `x`  is a dataset.
@@ -672,10 +672,10 @@ Test the model on a single batch of samples.
     - A [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) dataset.
 
 
-#### Returns:
+#### 返回：
 Scalar test loss (if the model has a single output and no metrics)or list of scalars (if the model has multiple outputsand/or metrics). The attribute  `model.metrics_names`  will give youthe display labels for the scalar outputs.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of invalid user-provided arguments.
 
 
@@ -687,16 +687,16 @@ Scalar test loss (if the model has a single output and no metrics)or list of sca
  
 ```
 
-Returns a JSON string containing the network configuration.
+返回包含网络配置的json字符串。
 
 To load a network from a JSON save file, use[ `keras.models.model_from_json(json_string, custom_objects={})` ](https://tensorflow.google.cn/api_docs/python/tf/keras/models/model_from_json).
 
-#### Arguments:
+#### 参数：
 - **`**kwargs`** : Additional keyword argumentsto be passed to  `json.dumps()` .
 
 
-#### Returns:
-A JSON string.
+#### 返回：
+一个json字符串。
 
 ###  `to_yaml` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/network.py#L1213-L1236)
@@ -706,20 +706,20 @@ A JSON string.
  
 ```
 
-Returns a yaml string containing the network configuration.
+返回包含网络配置的yaml字符串。
 
 To load a network from a yaml save file, use[ `keras.models.model_from_yaml(yaml_string, custom_objects={})` ](https://tensorflow.google.cn/api_docs/python/tf/keras/models/model_from_yaml).
 
  `custom_objects`  should be a dictionary mappingthe names of custom losses / layers / etc to the correspondingfunctions / classes.
 
-#### Arguments:
+#### 参数：
 - **`**kwargs`** : Additional keyword argumentsto be passed to  `yaml.dump()` .
 
 
-#### Returns:
-A YAML string.
+#### 返回：
+一根山药线。
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : if yaml module is not found.
 
 
@@ -737,9 +737,9 @@ A YAML string.
  
 ```
 
-Runs a single gradient update on a single batch of data.
+对一批数据运行单一渐变更新。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input data. It could be:
 - **`y`** : Target data. Like the input data  `x` , it could be either Numpyarray(s) or TensorFlow tensor(s). It should be consistent with  `x` (you cannot have Numpy inputs and tensor targets, or inversely). If `x`  is a dataset,  `y`  should not be specified(since targets will be obtained from the iterator).
 - **`sample_weight`** : Optional array of the same length as x, containingweights to apply to the model's loss for each sample. In the case oftemporal data, you can pass a 2D array with shape (samples,sequence_length), to apply a different weight to every timestep ofevery sample. In this case you should make sure to specifysample_weight_mode="temporal" in compile(). This argument is notsupported when  `x`  is a dataset.
@@ -751,8 +751,8 @@ Runs a single gradient update on a single batch of data.
     - A [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) dataset.
 
 
-#### Returns:
+#### 返回：
 Scalar training loss(if the model has a single output and no metrics)or list of scalars (if the model has multiple outputsand/or metrics). The attribute  `model.metrics_names`  will give youthe display labels for the scalar outputs.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of invalid user-provided arguments.

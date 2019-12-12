@@ -1,6 +1,6 @@
-Performs a random channel shift.
+执行随机信道移位。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_channel_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_channel_shift), [ `tf.compat.v2.keras.preprocessing.image.random_channel_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_channel_shift)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.random_channel_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_channel_shift), [ `tf.compat.v2.keras.preprocessing.image.random_channel_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_channel_shift)
 
 ```
  tf.keras.preprocessing.image.random_channel_shift(
@@ -15,7 +15,7 @@ Performs a random channel shift.
 
 
 ```
- x: Input tensor. Must be 3D.
+x：输入张量。必须是三维的。
 intensity_range: Transformation intensity.
 channel_axis: Index of axis for channels in the input tensor.
  
@@ -25,7 +25,7 @@ channel_axis: Index of axis for channels in the input tensor.
 
 
 ```
- Numpy image tensor.
+纽米图像张量。
  
 ```
 

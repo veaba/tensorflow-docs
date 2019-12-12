@@ -1,6 +1,6 @@
-Set the list of visible devices.
+设置可见设备的列表。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.set_visible_devices` ](/api_docs/python/tf/config/experimental/set_visible_devices), [ `tf.compat.v2.config.experimental.set_visible_devices` ](/api_docs/python/tf/config/experimental/set_visible_devices)
+**别名** : [ `tf.compat.v1.config.experimental.set_visible_devices` ](/api_docs/python/tf/config/experimental/set_visible_devices), [ `tf.compat.v2.config.experimental.set_visible_devices` ](/api_docs/python/tf/config/experimental/set_visible_devices)
 
 ```
  tf.config.experimental.set_visible_devices(
@@ -10,11 +10,11 @@ Set the list of visible devices.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 Sets the list of PhysicalDevices to be marked as visible to the runtime. Anydevices that are not marked as visible means TensorFlow will not allocatememory on it and will not be able to place any operations on it as noLogicalDevice will be created on it. By default all discovered devices aremarked as visible.
 
-The following example demonstrates disabling the first GPU on the machine.
+下面的示例演示如何禁用计算机上的第一个GPU。
 
 ```
  physical_devices = config.experimental.list_physical_devices('GPU')
@@ -27,6 +27,6 @@ assert len(logical_devices) == len(physical_devices) - 1
  
 ```
 
-#### Args:
+#### 参数：
 - **`devices`** : (optional) List of PhysicalDevice objects to make visible
 - **`device_type`** : (optional) Device types to limit visibility configuration to.Other device types will be left unaltered.

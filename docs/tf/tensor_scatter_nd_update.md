@@ -1,6 +1,6 @@
 Scatter  `updates`  into an existing tensor according to  `indices` .
 
-**Aliases** : [ `tf.compat.v1.tensor_scatter_nd_update` ](/api_docs/python/tf/tensor_scatter_nd_update), [ `tf.compat.v1.tensor_scatter_update` ](/api_docs/python/tf/tensor_scatter_nd_update), [ `tf.compat.v2.tensor_scatter_nd_update` ](/api_docs/python/tf/tensor_scatter_nd_update)
+**别名** : [ `tf.compat.v1.tensor_scatter_nd_update` ](/api_docs/python/tf/tensor_scatter_nd_update), [ `tf.compat.v1.tensor_scatter_update` ](/api_docs/python/tf/tensor_scatter_nd_update), [ `tf.compat.v2.tensor_scatter_nd_update` ](/api_docs/python/tf/tensor_scatter_nd_update)
 
 ```
  tf.tensor_scatter_nd_update(
@@ -46,7 +46,7 @@ The simplest form of scatter is to insert individual elements in a tensor byinde
  
 ```
 
-The resulting tensor would look like this:
+生成的张量如下所示：
 
 ```
  [1, 11, 1, 10, 9, 1, 1, 12]
@@ -70,7 +70,7 @@ In Python, this scatter operation would look like this:
  
 ```
 
-The resulting tensor would look like this:
+生成的张量如下所示：
 
 ```
  [[[5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7], [8, 8, 8, 8]],
@@ -82,13 +82,13 @@ The resulting tensor would look like this:
 
 Note that on CPU, if an out of bound index is found, an error is returned.On GPU, if an out of bound index is found, the index is ignored.
 
-#### Args:
+#### 参数：
 - **`tensor`** : A  `Tensor` . Tensor to copy/update.
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Index tensor.
 - **`updates`** : A  `Tensor` . Must have the same type as  `tensor` .Updates to scatter into output.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `tensor` .
 

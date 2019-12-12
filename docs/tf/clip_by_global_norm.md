@@ -1,6 +1,6 @@
-Clips values of multiple tensors by the ratio of the sum of their norms.
+将多个张量的值按其范数之和的比率截取。
 
-**Aliases** : [ `tf.compat.v1.clip_by_global_norm` ](/api_docs/python/tf/clip_by_global_norm), [ `tf.compat.v2.clip_by_global_norm` ](/api_docs/python/tf/clip_by_global_norm)
+**别名** : [ `tf.compat.v1.clip_by_global_norm` ](/api_docs/python/tf/clip_by_global_norm), [ `tf.compat.v2.clip_by_global_norm` ](/api_docs/python/tf/clip_by_global_norm)
 
 ```
  tf.clip_by_global_norm(
@@ -38,17 +38,17 @@ This is the correct way to perform gradient clipping (for example, see[Pascanu e
 
 However, it is slower than  `clip_by_norm()`  because all the parameters must beready before the clipping operation can be performed.
 
-#### Args:
+#### 参数：
 - **`t_list`** : A tuple or list of mixed  `Tensors` ,  `IndexedSlices` , or None.
 - **`clip_norm`** : A 0-D (scalar)  `Tensor`  > 0. The clipping ratio.
 - **`use_norm`** : A 0-D (scalar)  `Tensor`  of type  `float`  (optional). The globalnorm to use. If not provided,  `global_norm()`  is used to compute the norm.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`list_clipped`** : A list of  `Tensors`  of the same type as  `list_t` .
 - **`global_norm`** : A 0-D (scalar)  `Tensor`  representing the global norm.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `t_list`  is not a sequence.

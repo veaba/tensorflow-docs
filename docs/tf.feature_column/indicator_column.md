@@ -1,12 +1,12 @@
 Represents multi-hot representation of given categorical column.
 
-**Aliases** : [ `tf.compat.v1.feature_column.indicator_column` ](/api_docs/python/tf/feature_column/indicator_column), [ `tf.compat.v2.feature_column.indicator_column` ](/api_docs/python/tf/feature_column/indicator_column)
+**别名** : [ `tf.compat.v1.feature_column.indicator_column` ](/api_docs/python/tf/feature_column/indicator_column), [ `tf.compat.v2.feature_column.indicator_column` ](/api_docs/python/tf/feature_column/indicator_column)
 
 ```
  tf.feature_column.indicator_column(categorical_column) 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
 - [Boosted trees using Estimators](https://tensorflow.google.cn/tutorials/estimator/boosted_trees)
 - [Build a linear model with Estimators](https://tensorflow.google.cn/tutorials/estimator/linear)
@@ -32,10 +32,10 @@ dense_tensor == [[2, 0, 0]]  # If "name" bytes_list is ["bob", "bob"]
  
 ```
 
-#### Args:
+#### 参数：
 - **`categorical_column`** : A  `CategoricalColumn`  which is created by `categorical_column_with_*`  or  `crossed_column`  functions.
 
 
-#### Returns:
+#### 返回：
 An  `IndicatorColumn` .
 

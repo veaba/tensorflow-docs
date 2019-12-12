@@ -1,14 +1,14 @@
 
 
 ## Class  `JobDef` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.JobDef` ](/api_docs/python/tf/train/JobDef), [ `tf.compat.v2.train.JobDef` ](/api_docs/python/tf/train/JobDef)
+**别名** : [ `tf.compat.v1.train.JobDef` ](/api_docs/python/tf/train/JobDef), [ `tf.compat.v2.train.JobDef` ](/api_docs/python/tf/train/JobDef)
 
-## Child Classes
+## 子类
 [ `class TasksEntry` ](https://tensorflow.google.cn/api_docs/python/tf/train/JobDef/TasksEntry)
 
-## Properties
+## 属性
 
 
 ###  `name` 

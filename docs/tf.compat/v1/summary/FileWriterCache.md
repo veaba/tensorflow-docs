@@ -1,11 +1,11 @@
 
 
 ## Class  `FileWriterCache` 
-Cache for file writers.
+文件写入程序的缓存。
 
 This class caches file writers, one per directory.
 
-## Methods
+## 方法
 
 
 ###  `clear` 
@@ -17,7 +17,7 @@ clear()
  
 ```
 
-Clear cached summary writers. Currently only used for unit tests.
+清除缓存的摘要编写器。目前只用于单元测试。
 
 ###  `get` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/summary/writer/writer_cache.py#L50-L64)
@@ -28,12 +28,12 @@ get(logdir)
  
 ```
 
-Returns the FileWriter for the specified directory.
+返回指定目录的文件写入程序。
 
-#### Args:
+#### 参数：
 - **`logdir`** : str, name of the directory.
 
 
-#### Returns:
+#### 返回：
 A  `FileWriter` .
 

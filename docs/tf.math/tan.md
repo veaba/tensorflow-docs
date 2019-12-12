@@ -1,6 +1,6 @@
 Computes tan of x element-wise.
 
-**Aliases** : [ `tf.compat.v1.math.tan` ](/api_docs/python/tf/math/tan), [ `tf.compat.v1.tan` ](/api_docs/python/tf/math/tan), [ `tf.compat.v2.math.tan` ](/api_docs/python/tf/math/tan), [ `tf.compat.v2.tan` ](/api_docs/python/tf/math/tan), [ `tf.tan` ](/api_docs/python/tf/math/tan)
+**别名** : [ `tf.compat.v1.math.tan` ](/api_docs/python/tf/math/tan), [ `tf.compat.v1.tan` ](/api_docs/python/tf/math/tan), [ `tf.compat.v2.math.tan` ](/api_docs/python/tf/math/tan), [ `tf.compat.v2.tan` ](/api_docs/python/tf/math/tan), [ `tf.tan` ](/api_docs/python/tf/math/tan)
 
 ```
  tf.math.tan(
@@ -18,11 +18,11 @@ tf.math.tan(x) ==> [nan 0.45231566 -0.5463025 1.5574077 2.572152 -1.7925274 0.32
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

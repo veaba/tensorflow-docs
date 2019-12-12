@@ -3,7 +3,7 @@
 ## Class  `DType` 
 Represents the type of the elements in a  `Tensor` .
 
-**Aliases** : [ `tf.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v1.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v1.dtypes.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v2.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v2.dtypes.DType` ](/api_docs/python/tf/dtypes/DType)
+**别名** : [ `tf.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v1.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v1.dtypes.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v2.DType` ](/api_docs/python/tf/dtypes/DType), [ `tf.compat.v2.dtypes.DType` ](/api_docs/python/tf/dtypes/DType)
 
 The following  `DType`  objects are defined:
 
@@ -44,15 +44,15 @@ Creates a new  `DataType` .
 
 NOTE(mrry): In normal circumstances, you should not need toconstruct a  `DataType`  object directly. Instead, use the[ `tf.as_dtype()` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/as_dtype) function.
 
-#### Args:
+#### 参数：
 - **`type_enum`** : A  `types_pb2.DataType`  enum value.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `type_enum`  is not a value  `types_pb2.DataType` .
 
 
-## Properties
+## 属性
 
 
 ###  `as_datatype_enum` 
@@ -65,10 +65,10 @@ Returns a  `numpy.dtype`  based on this  `DType` .
 Returns a non-reference  `DType`  based on this  `DType` .
 
 ###  `is_bool` 
-Returns whether this is a boolean data type
+返回是否为布尔数据类型
 
 ###  `is_complex` 
-Returns whether this is a complex floating point type.
+返回这是否为复杂浮点类型。
 
 ###  `is_floating` 
 Returns whether this is a (non-quantized, real) floating point type.
@@ -80,14 +80,14 @@ Returns whether this is a (non-quantized) integer type.
 
 
 ###  `is_quantized` 
-Returns whether this is a quantized data type.
+返回这是否是量化数据类型。
 
 ###  `is_unsigned` 
-Returns whether this type is unsigned.
+返回此类型是否无符号。
 
 Non-numeric, unordered, and quantized types are not considered unsigned, andthis function returns  `False` .
 
-#### Returns:
+#### 返回：
 Whether a  `DType`  is unsigned.
 
 ###  `limits` 
@@ -96,16 +96,16 @@ Return intensity limits, i.e.
 (min, max) tuple, of the dtype.Args:  clip_negative : bool, optional If True, clip the negative range (i.e.    return 0 for min intensity) even if the image dtype allows negative    values. Returns  min, max : tuple Lower and upper intensity limits.
 
 ###  `max` 
-Returns the maximum representable value in this data type.
+返回此数据类型中可表示的最大值。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if this is a non-numeric, unordered, or quantized type.
 
 
 ###  `min` 
-Returns the minimum representable value in this data type.
+返回此数据类型中可表示的最小值。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if this is a non-numeric, unordered, or quantized type.
 
 
@@ -113,12 +113,12 @@ Returns the minimum representable value in this data type.
 Returns the string name for this  `DType` .
 
 ###  `real_dtype` 
-Returns the dtype correspond to this dtype's real part.
+返回与此数据类型的实际部分相对应的数据类型。
 
 ###  `size` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -151,17 +151,17 @@ Returns True iff self != other.
 
 Returns True if the  `other`  DType will be converted to this DType.
 
-The conversion rules are as follows:
+转换规则如下：
 
 ```
  DType(T)       .is_compatible_with(DType(T))        == True
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : A  `DType`  (or object that may be converted to a  `DType` ).
 
 
-#### Returns:
+#### 返回：
 True if a Tensor of the  `other`   `DType`  will be implicitly converted tothis  `DType` .
 

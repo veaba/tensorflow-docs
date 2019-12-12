@@ -1,6 +1,6 @@
-Map the function fn over the elements elems and return the outputs.
+将函数fn映射到元素元素上并返回输出。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.map_fn` ](/api_docs/python/tf/keras/backend/map_fn), [ `tf.compat.v2.keras.backend.map_fn` ](/api_docs/python/tf/keras/backend/map_fn)
+**别名** : [ `tf.compat.v1.keras.backend.map_fn` ](/api_docs/python/tf/keras/backend/map_fn), [ `tf.compat.v2.keras.backend.map_fn` ](/api_docs/python/tf/keras/backend/map_fn)
 
 ```
  tf.keras.backend.map_fn(
@@ -12,13 +12,13 @@ Map the function fn over the elements elems and return the outputs.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`fn`** : Callable that will be called upon each element in elems
 - **`elems`** : tensor
 - **`name`** : A string name for the map node in the graph
 - **`dtype`** : Output data type.
 
 
-#### Returns:
+#### 返回：
 Tensor with dtype  `dtype` .
 

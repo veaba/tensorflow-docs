@@ -8,10 +8,10 @@ Given operation-specific seed,  `op_seed` , this helper function returns twoseed
 
 For details on how the graph-level seed interacts with op seeds, see[ `tf.compat.v1.random.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed).
 
-#### Args:
+#### 参数：
 - **`op_seed`** : integer.
 
 
-#### Returns:
+#### 返回：
 A tuple of two integers that should be used for the local seed of thisoperation.
 

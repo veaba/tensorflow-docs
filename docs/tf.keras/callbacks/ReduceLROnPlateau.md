@@ -1,15 +1,15 @@
 
 
 ## Class  `ReduceLROnPlateau` 
-Reduce learning rate when a metric has stopped improving.
+当指标停止改善时，降低学习率。
 
 Inherits From: [ `Callback` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/Callback)
 
-**Aliases** : [ `tf.compat.v1.keras.callbacks.ReduceLROnPlateau` ](/api_docs/python/tf/keras/callbacks/ReduceLROnPlateau), [ `tf.compat.v2.keras.callbacks.ReduceLROnPlateau` ](/api_docs/python/tf/keras/callbacks/ReduceLROnPlateau)
+**别名** : [ `tf.compat.v1.keras.callbacks.ReduceLROnPlateau` ](/api_docs/python/tf/keras/callbacks/ReduceLROnPlateau), [ `tf.compat.v2.keras.callbacks.ReduceLROnPlateau` ](/api_docs/python/tf/keras/callbacks/ReduceLROnPlateau)
 
 Models often benefit from reducing the learning rate by a factorof 2-10 once learning stagnates. This callback monitors aquantity and if no improvement is seen for a 'patience' numberof epochs, the learning rate is reduced.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -19,7 +19,7 @@ model.fit(X_train, Y_train, callbacks=[reduce_lr])
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`monitor`** : quantity to be monitored.
 - **`factor`** : factor by which the learning rate will be reduced. new_lr = lr *factor
 - **`patience`** : number of epochs with no improvement after which learning ratewill be reduced.
@@ -50,7 +50,7 @@ model.fit(X_train, Y_train, callbacks=[reduce_lr])
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `in_cooldown` 
@@ -98,11 +98,11 @@ A backwards compatibility alias for  `on_train_batch_end` .
  
 ```
 
-Called at the start of an epoch.
+在一个新纪元开始时被召唤。
 
 Subclasses should override for any actions to run. This function should onlybe called during TRAIN mode.
 
-#### Arguments:
+#### 参数：
 - **`epoch`** : integer, index of epoch.
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
@@ -118,11 +118,11 @@ Subclasses should override for any actions to run. This function should onlybe c
  
 ```
 
-Called at the end of an epoch.
+在一个时代结束时被召唤。
 
 Subclasses should override for any actions to run. This function should onlybe called during TRAIN mode.
 
-#### Arguments:
+#### 参数：
 - **`epoch`** : integer, index of epoch.
 - **`logs`** : dict, metric results for this training epoch, and for thevalidation epoch if validation is performed. Validation result keysare prefixed with  `val_` .
 
@@ -140,9 +140,9 @@ Subclasses should override for any actions to run. This function should onlybe c
 
 Called at the beginning of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -160,9 +160,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -175,11 +175,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of prediction.
+在预测开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -191,11 +191,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of prediction.
+在预测结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -214,9 +214,9 @@ Called at the beginning of a batch in  `evaluate`  methods.
 
 Also called at the beginning of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -236,9 +236,9 @@ Called at the end of a batch in  `evaluate`  methods.
 
 Also called at the end of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -251,11 +251,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of evaluation or validation.
+在评估或验证开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -267,11 +267,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of evaluation or validation.
+在评估或验证结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -288,9 +288,9 @@ Subclasses should override for any actions to run.
 
 Called at the beginning of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -308,9 +308,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -323,11 +323,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of training.
+在训练开始时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -339,11 +339,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of training.
+训练结束时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 

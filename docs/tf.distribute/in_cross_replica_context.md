@@ -1,6 +1,6 @@
 Returns  `True`  if in a cross-replica context.
 
-**Aliases** : [ `tf.compat.v1.distribute.in_cross_replica_context` ](/api_docs/python/tf/distribute/in_cross_replica_context), [ `tf.compat.v2.distribute.in_cross_replica_context` ](/api_docs/python/tf/distribute/in_cross_replica_context)
+**别名** : [ `tf.compat.v1.distribute.in_cross_replica_context` ](/api_docs/python/tf/distribute/in_cross_replica_context), [ `tf.compat.v2.distribute.in_cross_replica_context` ](/api_docs/python/tf/distribute/in_cross_replica_context)
 
 ```
  tf.distribute.in_cross_replica_context()
@@ -21,6 +21,6 @@ with strategy.scope():
  
 ```
 
-#### Returns:
+#### 返回：
  `True`  if in a cross-replica context ( `get_replica_context()`  returns `None` ), or  `False`  if in a replica context ( `get_replica_context()`  returnsnon- `None` ).
 

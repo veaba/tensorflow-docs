@@ -1,16 +1,16 @@
-Reads and outputs the entire contents of the input filename.
+读取并输出输入文件名的全部内容。
 
-**Aliases** : [ `tf.compat.v1.io.read_file` ](/api_docs/python/tf/io/read_file), [ `tf.compat.v1.read_file` ](/api_docs/python/tf/io/read_file), [ `tf.compat.v2.io.read_file` ](/api_docs/python/tf/io/read_file)
+**别名** : [ `tf.compat.v1.io.read_file` ](/api_docs/python/tf/io/read_file), [ `tf.compat.v1.read_file` ](/api_docs/python/tf/io/read_file), [ `tf.compat.v2.io.read_file` ](/api_docs/python/tf/io/read_file)
 
 ```
  tf.io.read_file(    filename,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Adversarial example using FGSM](https://tensorflow.google.cn/tutorials/generative/adversarial_fgsm)
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 - [Neural style transfer](https://tensorflow.google.cn/tutorials/generative/style_transfer)
@@ -18,11 +18,11 @@ Reads and outputs the entire contents of the input filename.
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 
 
-#### Args:
+#### 参数：
 - **`filename`** : A  `Tensor`  of type  `string` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

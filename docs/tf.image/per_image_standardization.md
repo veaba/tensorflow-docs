@@ -1,6 +1,6 @@
 Linearly scales each image in  `image`  to have mean 0 and variance 1.
 
-**Aliases** : [ `tf.compat.v1.image.per_image_standardization` ](/api_docs/python/tf/image/per_image_standardization), [ `tf.compat.v2.image.per_image_standardization` ](/api_docs/python/tf/image/per_image_standardization)
+**别名** : [ `tf.compat.v1.image.per_image_standardization` ](/api_docs/python/tf/image/per_image_standardization), [ `tf.compat.v2.image.per_image_standardization` ](/api_docs/python/tf/image/per_image_standardization)
 
 ```
  tf.image.per_image_standardization(image)
@@ -15,12 +15,12 @@ For each 3-D image  `x`  in  `image` , computes  `(x - mean) / adjusted_stddev` 
     -  `stddev`  is the standard deviation of all values in  `x` 
 
 
-#### Args:
+#### 参数：
 - **`image`** : An n-D Tensor with at least 3 dimensions, the last 3 of which are thedimensions of each image.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with same shape and dtype as  `image` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the shape of 'image' is incompatible with this function.

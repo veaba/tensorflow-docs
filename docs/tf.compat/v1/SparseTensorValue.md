@@ -19,7 +19,7 @@ __new__(
 
 Create new instance of SparseTensorValue(indices, values, dense_shape)
 
-## Properties
+## 属性
 
 
 ###  `indices` 

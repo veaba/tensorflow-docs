@@ -1,4 +1,4 @@
-Disables the V2 TensorShape behavior and reverts to V1 behavior.
+禁用v2 tensorShape行为并还原为v1行为。
 
 ```
  tf.compat.v1.disable_v2_tensorshape()

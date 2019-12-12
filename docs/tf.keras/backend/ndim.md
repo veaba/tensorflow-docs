@@ -1,19 +1,19 @@
 Returns the number of axes in a tensor, as an integer.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.ndim` ](/api_docs/python/tf/keras/backend/ndim), [ `tf.compat.v2.keras.backend.ndim` ](/api_docs/python/tf/keras/backend/ndim)
+**别名** : [ `tf.compat.v1.keras.backend.ndim` ](/api_docs/python/tf/keras/backend/ndim), [ `tf.compat.v2.keras.backend.ndim` ](/api_docs/python/tf/keras/backend/ndim)
 
 ```
  tf.keras.backend.ndim(x) 
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 
 
-#### Returns:
+#### 返回：
 Integer (scalar), number of axes.
 
-#### Examples:
+#### 示例：
 
 
 ```

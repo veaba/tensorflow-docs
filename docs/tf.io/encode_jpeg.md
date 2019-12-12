@@ -1,6 +1,6 @@
 JPEG-encode an image.
 
-**Aliases** : [ `tf.compat.v1.image.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.compat.v1.io.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.compat.v2.image.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.compat.v2.io.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.image.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg)
+**别名** : [ `tf.compat.v1.image.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.compat.v1.io.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.compat.v2.image.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.compat.v2.io.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg), [ `tf.image.encode_jpeg` ](/api_docs/python/tf/io/encode_jpeg)
 
 ```
  tf.io.encode_jpeg(
@@ -32,7 +32,7 @@ If  `format`  is not specified or is the empty string, a default format is picke
 - 3: Output an RGB image.
 
 
-#### Args:
+#### 参数：
 - **`image`** : A  `Tensor`  of type  `uint8` .3-D with shape  `[height, width, channels]` .
 - **`format`** : An optional  `string`  from:  `"", "grayscale", "rgb"` . Defaults to  `""` .Per pixel image format.
 - **`quality`** : An optional  `int` . Defaults to  `95` .Quality of the compression from 0 to 100 (higher is better and slower).
@@ -46,6 +46,6 @@ If  `format`  is not specified or is the empty string, a default format is picke
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

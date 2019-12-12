@@ -22,7 +22,7 @@ Max-pooling is a special case when the filter has size equal to the poolingkerne
 
 Note on duality: The dilation of  `input`  by the  `filters`  is equal to thenegation of the erosion of  `-input`  by the reflected  `filters` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` , `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` , `uint32` ,  `uint64` .4-D with shape  `[batch, in_height, in_width, depth]` .
 - **`filters`** : A  `Tensor` . Must have the same type as  `input` .3-D with shape  `[filter_height, filter_width, depth]` .
 - **`strides`** : A list of  `ints`  that has length  `>= 4` .The stride of the sliding window for each dimension of the inputtensor. Must be:  `[1, stride_height, stride_width, 1]` .
@@ -32,6 +32,6 @@ Note on duality: The dilation of  `input`  by the  `filters`  is equal to theneg
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

@@ -5,18 +5,18 @@ Zero-padding layer for 1D input (e.g. temporal sequence).
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.ZeroPadding1D` ](/api_docs/python/tf/keras/layers/ZeroPadding1D), [ `tf.compat.v2.keras.layers.ZeroPadding1D` ](/api_docs/python/tf/keras/layers/ZeroPadding1D)
+**别名** : [ `tf.compat.v1.keras.layers.ZeroPadding1D` ](/api_docs/python/tf/keras/layers/ZeroPadding1D), [ `tf.compat.v2.keras.layers.ZeroPadding1D` ](/api_docs/python/tf/keras/layers/ZeroPadding1D)
 
-#### Arguments:
+#### 参数：
 - **`padding`** : Int, or tuple of int (length 2), or dictionary.
     - If int:How many zeros to add at the beginning and end ofthe padding dimension (axis 1).
     - If tuple of int (length 2):How many zeros to add at the beginning and at the end ofthe padding dimension ( `(left_pad, right_pad)` ).
 
 
-#### Input shape:
+#### 输入形状：
 3D tensor with shape  `(batch, axis_to_pad, features)` 
 
-#### Output shape:
+#### 输出形状：
 3D tensor with shape  `(batch, padded_axis, features)` 
 
 ##  `__init__` 

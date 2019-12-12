@@ -1,6 +1,6 @@
 Normalizes along dimension  `axis`  using an L2 norm.
 
-**Aliases** : [ `tf.compat.v2.linalg.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.compat.v2.math.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.compat.v2.nn.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.linalg.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.nn.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
+**别名** : [ `tf.compat.v2.linalg.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.compat.v2.math.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.compat.v2.nn.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.linalg.l2_normalize` ](/api_docs/python/tf/math/l2_normalize), [ `tf.nn.l2_normalize` ](/api_docs/python/tf/math/l2_normalize)
 
 ```
  tf.math.l2_normalize(
@@ -21,13 +21,13 @@ For a 1-D tensor with  `axis = 0` , computes
 
 For  `x`  with more dimensions, independently normalizes each 1-D slice alongdimension  `axis` .
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` .
 - **`axis`** : Dimension along which to normalize.  A scalar or a vector ofintegers.
 - **`epsilon`** : A lower bound value for the norm. Will use  `sqrt(epsilon)`  as thedivisor if  `norm < sqrt(epsilon)` .
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same shape as  `x` .
 

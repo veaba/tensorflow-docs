@@ -1,9 +1,9 @@
 
 
 ## Class  `ArgumentSerializer` 
-Base class for generating string representations of a flag value.
+用于生成标志值的字符串表示形式的基类。
 
-## Methods
+## 方法
 
 
 ###  `serialize` 
@@ -14,5 +14,5 @@ Base class for generating string representations of a flag value.
  
 ```
 
-Returns a serialized string of the value.
+返回值的序列化字符串。
 

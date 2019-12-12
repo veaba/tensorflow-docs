@@ -1,11 +1,11 @@
 
 
 ## Class  `CuDNNGRU` 
-Fast GRU implementation backed by cuDNN.
+由cudnn支持的快速gru实现。
 
 More information about cuDNN can be found on the [NVIDIAdeveloper website](https://developer.nvidia.com/cudnn).Can only be run on GPU.
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`kernel_initializer`** : Initializer for the  `kernel`  weights matrix, used forthe linear transformation of the inputs.
 - **`recurrent_initializer`** : Initializer for the  `recurrent_kernel`  weightsmatrix, used for the linear transformation of the recurrent state.
@@ -48,7 +48,7 @@ More information about cuDNN can be found on the [NVIDIAdeveloper website](https
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `cell` 
@@ -57,7 +57,7 @@ More information about cuDNN can be found on the [NVIDIAdeveloper website](https
 ###  `states` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

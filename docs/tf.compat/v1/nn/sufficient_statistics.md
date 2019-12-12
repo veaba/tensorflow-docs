@@ -14,7 +14,7 @@ Calculate the sufficient statistics for the mean and variance of  `x` .
 
 These sufficient statistics are computed using the one pass algorithm onan input that's optionally shifted. See:https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Computing_shifted_data
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` .
 - **`axes`** : Array of ints. Axes along which to compute mean and variance.
 - **`shift`** : A  `Tensor`  containing the value by which to shift the data fornumerical stability, or  `None`  if no shift is to be performed. A shiftclose to the true mean provides the most numerically stable results.
@@ -23,7 +23,7 @@ These sufficient statistics are computed using the one pass algorithm onan input
 - **`keepdims`** : Alias for keep_dims.
 
 
-#### Returns:
+#### 返回：
 Four  `Tensor`  objects of the same type as  `x` :
 
 - the count (number of elements to average over).

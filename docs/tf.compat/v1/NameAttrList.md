@@ -1,12 +1,12 @@
 
 
 ## Class  `NameAttrList` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class AttrEntry` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/NameAttrList/AttrEntry)
 
-## Properties
+## 属性
 
 
 ###  `attr` 

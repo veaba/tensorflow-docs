@@ -1,6 +1,6 @@
 Set a [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) as current without  `with strategy.scope()` .
 
-**Aliases** : [ `tf.compat.v1.distribute.experimental_set_strategy` ](/api_docs/python/tf/distribute/experimental_set_strategy), [ `tf.compat.v2.distribute.experimental_set_strategy` ](/api_docs/python/tf/distribute/experimental_set_strategy)
+**别名** : [ `tf.compat.v1.distribute.experimental_set_strategy` ](/api_docs/python/tf/distribute/experimental_set_strategy), [ `tf.compat.v2.distribute.experimental_set_strategy` ](/api_docs/python/tf/distribute/experimental_set_strategy)
 
 ```
  tf.distribute.experimental_set_strategy(strategy)
@@ -17,7 +17,7 @@ h()
  
 ```
 
-is equivalent to:
+相当于：
 
 ```
  with strategy1.scope():
@@ -34,9 +34,9 @@ In general, you should use the  `with strategy.scope():`  API, but thisalternati
 **Note:**  This should only be called outside of any TensorFlow scope toavoid improper nesting.
 
 
-#### Args:
+#### 参数：
 - **`strategy`** : A [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) object or None.
 
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called inside a  `with strategy.scope():` .

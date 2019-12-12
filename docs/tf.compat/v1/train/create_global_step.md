@@ -1,16 +1,16 @@
-Create global step tensor in graph.
+在图中创建全局阶跃张量。
 
 ```
  tf.compat.v1.train.create_global_step(graph=None)
  
 ```
 
-#### Args:
+#### 参数：
 - **`graph`** : The graph in which to create the global step tensor. If missing, usedefault graph.
 
 
-#### Returns:
-Global step tensor.
+#### 返回：
+全局阶跃张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if global step tensor is already defined.

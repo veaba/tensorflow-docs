@@ -5,7 +5,7 @@ Type specification for a [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api
 
 Inherits From: [ `TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TypeSpec)
 
-**Aliases** : [ `tf.compat.v1.IndexedSlicesSpec` ](/api_docs/python/tf/IndexedSlicesSpec), [ `tf.compat.v2.IndexedSlicesSpec` ](/api_docs/python/tf/IndexedSlicesSpec)
+**别名** : [ `tf.compat.v1.IndexedSlicesSpec` ](/api_docs/python/tf/IndexedSlicesSpec), [ `tf.compat.v2.IndexedSlicesSpec` ](/api_docs/python/tf/IndexedSlicesSpec)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/indexed_slices.py#L191-L215)
@@ -23,7 +23,7 @@ Inherits From: [ `TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/Ty
 
 Constructs a type specification for a [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices).
 
-#### Args:
+#### 参数：
 - **`shape`** : The dense shape of the  `IndexedSlices` , or  `None`  to allow anydense shape.
 - **`dtype`** : [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) of values in the  `IndexedSlices` .
 - **`indices_dtype`** : [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) of the  `indices`  in the  `IndexedSlices` .  Oneof [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
@@ -31,13 +31,13 @@ Constructs a type specification for a [ `tf.IndexedSlices` ](https://tensorflow.
 - **`indices_shape`** : The shape of the  `indices`  component, which indicateshow many slices are in the  `IndexedSlices` .
 
 
-## Properties
+## 属性
 
 
 ###  `value_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -80,9 +80,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

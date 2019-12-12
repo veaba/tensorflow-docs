@@ -1,6 +1,6 @@
-Downloads a file from a URL if it not already in the cache.
+如果文件不在缓存中，则从url下载该文件。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.get_file` ](/api_docs/python/tf/keras/utils/get_file), [ `tf.compat.v2.keras.utils.get_file` ](/api_docs/python/tf/keras/utils/get_file)
+**别名** : [ `tf.compat.v1.keras.utils.get_file` ](/api_docs/python/tf/keras/utils/get_file), [ `tf.compat.v2.keras.utils.get_file` ](/api_docs/python/tf/keras/utils/get_file)
 
 ```
  tf.keras.utils.get_file(
@@ -18,13 +18,13 @@ Downloads a file from a URL if it not already in the cache.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Transfer learning with TensorFlow Hub](https://tensorflow.google.cn/tutorials/images/transfer_learning_with_hub)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 - [Custom training: walkthrough](https://tensorflow.google.cn/tutorials/customization/custom_training_walkthrough)
@@ -34,7 +34,7 @@ By default the file at the url  `origin`  is downloaded to thecache_dir  `~/.ker
 
 Files in tar, tar.gz, tar.bz, and zip formats can also be extracted.Passing a hash will verify the file after download. The command lineprograms  `shasum`  and  `sha256sum`  can compute the hash.
 
-#### Arguments:
+#### 参数：
 - **`fname`** : Name of the file. If an absolute path  `/path/to/file.txt`  isspecified the file will be saved at that location.
 - **`origin`** : Original URL of the file.
 - **`untar`** : Deprecated in favor of 'extract'.boolean, whether the file should be decompressed
@@ -47,6 +47,6 @@ Files in tar, tar.gz, tar.bz, and zip formats can also be extracted.Passing a ha
 - **`cache_dir`** : Location to store cached files, when None itdefaults to the [Keras  Directory](/faq/#where_is_the_keras_configuration_filed_stored).
 
 
-#### Returns:
-Path to the downloaded file
+#### 返回：
+下载文件的路径
 

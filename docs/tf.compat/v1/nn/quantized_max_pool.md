@@ -1,4 +1,4 @@
-Produces the max pool of the input tensor for quantized types.
+生成量化类型的输入张量的最大池。
 
 ```
  tf.compat.v1.nn.quantized_max_pool(
@@ -13,7 +13,7 @@ Produces the max pool of the input tensor for quantized types.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `qint8` ,  `quint8` ,  `qint32` ,  `qint16` ,  `quint16` .The 4D (batch x rows x cols x depth) Tensor to MaxReduce over.
 - **`min_input`** : A  `Tensor`  of type  `float32` .The float value that the lowest quantized input value represents.
 - **`max_input`** : A  `Tensor`  of type  `float32` .The float value that the highest quantized input value represents.
@@ -23,7 +23,7 @@ Produces the max pool of the input tensor for quantized types.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (output, min_output, max_output).
 
 - **`output`** : A  `Tensor` . Has the same type as  `input` .

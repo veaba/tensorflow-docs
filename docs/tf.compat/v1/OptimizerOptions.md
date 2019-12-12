@@ -1,9 +1,9 @@
 
 
 ## Class  `OptimizerOptions` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `do_common_subexpression_elimination` 
@@ -24,7 +24,7 @@ A ProtocolMessage
 ###  `opt_level` 
  `Level opt_level` 
 
-## Class Members
+## Class 成员
 -  `DEFAULT = 0`  []()
 -  `GlobalJitLevel`  []()
 -  `L0 = -1`  []()

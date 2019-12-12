@@ -1,7 +1,7 @@
 
 
 ## Class  `FtrlOptimizer` 
-Optimizer that implements the FTRL algorithm.
+实现ftrl算法的优化器。
 
 Inherits From: [ `Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Optimizer)
 
@@ -26,9 +26,9 @@ See this [paper](https://www.eecs.tufts.edu/%7Edsculley/papers/ad-click-predicti
  
 ```
 
-Construct a new FTRL optimizer.
+构造一个新的ftrl优化器。
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : A float value or a constant float  `Tensor` .
 - **`learning_rate_power`** : A float value, must be less or equal to zero.Controls how the learning rate decreases during training. Use zero fora fixed learning rate. See section 3.1 in the[paper](https://www.eecs.tufts.edu/%7Edsculley/papers/ad-click-prediction.pdf).
 - **`initial_accumulator_value`** : The starting value for accumulators.Only zero or positive values are allowed.
@@ -41,11 +41,11 @@ Construct a new FTRL optimizer.
 - **`l2_shrinkage_regularization_strength`** : A float value, must be greater thanor equal to zero. This differs from L2 above in that the L2 above is astabilization penalty, whereas this L2 shrinkage is a magnitude penalty.The FTRL formulation can be written as:w_{t+1} = argmin*w(\hat{g}*{1:t}w + L1*||w||_1 + L2*||w||_2^2), where\hat{g} = g + (2*L2_shrinkage*w), and g is the gradient of the lossfunction w.r.t. the weights w.Specifically, in the absence of L1 regularization, it is equivalent tothe following update rule:w_{t+1} = w_t - lr_t / (1 + 2*L2*lr_t) * g_t -        2*L2_shrinkage*lr_t / (1 + 2*L2*lr_t) * w_twhere lr_t is the learning rate at t.When input is sparse shrinkage will only happen on the active weights.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If one of the arguments is invalid.
 
 
-## Methods
+## 方法
 
 
 ###  `apply_gradients` 
@@ -60,20 +60,20 @@ Construct a new FTRL optimizer.
  
 ```
 
-Apply gradients to variables.
+对变量应用渐变。
 
 This is the second part of  `minimize()` . It returns an  `Operation`  thatapplies gradients.
 
-#### Args:
+#### 参数：
 - **`grads_and_vars`** : List of (gradient, variable) pairs as returned by `compute_gradients()` .
 - **`global_step`** : Optional  `Variable`  to increment by one after thevariables have been updated.
 - **`name`** : Optional name for the returned operation.  Default to thename passed to the  `Optimizer`  constructor.
 
 
-#### Returns:
+#### 返回：
 An  `Operation`  that applies the specified gradients. If  `global_step` was not None, that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `grads_and_vars`  is malformed.
 - **`ValueError`** : If none of the variables have gradients.
 - **`RuntimeError`** : If you should use  `_distributed_apply()`  instead.
@@ -98,7 +98,7 @@ Compute gradients of  `loss`  for the variables in  `var_list` .
 
 This is the first part of  `minimize()` .  It returns a listof (gradient, variable) pairs where "gradient" is the gradientfor "variable".  Note that "gradient" can be a  `Tensor` , an `IndexedSlices` , or  `None`  if there is no gradient for thegiven variable.
 
-#### Args:
+#### 参数：
 - **`loss`** : A Tensor containing the value to minimize or a callable takingno arguments which returns the value to minimize. When eager executionis enabled it must be a callable.
 - **`var_list`** : Optional list or tuple of [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) to update to minimize `loss` .  Defaults to the list of variables collected in the graphunder the key  `GraphKeys.TRAINABLE_VARIABLES` .
 - **`gate_gradients`** : How to gate the computation of gradients.  Can be `GATE_NONE` ,  `GATE_OP` , or  `GATE_GRAPH` .
@@ -107,16 +107,16 @@ This is the first part of  `minimize()` .  It returns a listof (gradient, variab
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 
 
-#### Returns:
+#### 返回：
 A list of (gradient, variable) pairs. Variable is always present, butgradient can be  `None` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `var_list`  contains anything else than  `Variable`  objects.
 - **`ValueError`** : If some arguments are invalid.
 - **`RuntimeError`** : If called with eager execution enabled and  `loss`  isnot callable.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled,  `gate_gradients` ,  `aggregation_method` ,and  `colocate_gradients_with_ops`  are ignored.
 
 ###  `get_name` 
@@ -144,12 +144,12 @@ Some  `Optimizer`  subclasses use additional variables.  For example `Momentum` 
 
 Use  `get_slot_names()`  to get the list of slot names created by the `Optimizer` .
 
-#### Args:
+#### 参数：
 - **`var`** : A variable passed to  `minimize()`  or  `apply_gradients()` .
 - **`name`** : A string.
 
 
-#### Returns:
+#### 返回：
 The  `Variable`  for the slot if it was created,  `None`  otherwise.
 
 ###  `get_slot_names` 
@@ -164,8 +164,8 @@ Return a list of the names of slots created by the  `Optimizer` .
 
 See  `get_slot()` .
 
-#### Returns:
-A list of strings.
+#### 返回：
+字符串列表。
 
 ###  `minimize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/optimizer.py#L355-L413)
@@ -188,7 +188,7 @@ Add operations to minimize  `loss`  by updating  `var_list` .
 
 This method simply combines calls  `compute_gradients()`  and `apply_gradients()` . If you want to process the gradient before applyingthem call  `compute_gradients()`  and  `apply_gradients()`  explicitly insteadof using this function.
 
-#### Args:
+#### 参数：
 - **`loss`** : A  `Tensor`  containing the value to minimize.
 - **`global_step`** : Optional  `Variable`  to increment by one after thevariables have been updated.
 - **`var_list`** : Optional list or tuple of  `Variable`  objects to update tominimize  `loss` .  Defaults to the list of variables collected inthe graph under the key  `GraphKeys.TRAINABLE_VARIABLES` .
@@ -199,14 +199,14 @@ This method simply combines calls  `compute_gradients()`  and `apply_gradients()
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 
 
-#### Returns:
+#### 返回：
 An Operation that updates the variables in  `var_list` .  If  `global_step` was not  `None` , that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If some of the variables are not  `Variable`  objects.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled,  `loss`  should be a Python function thattakes no arguments and computes the value to be minimized. Minimization (andgradient computation) is done with respect to the elements of  `var_list`  ifnot None, else with respect to any trainable variables created during theexecution of the  `loss`  function.  `gate_gradients` ,  `aggregation_method` , `colocate_gradients_with_ops`  and  `grad_loss`  are ignored when eagerexecution is enabled.
 
 ###  `variables` 
@@ -221,10 +221,10 @@ A list of variables which encode the current state of  `Optimizer` .
 
 Includes slot variables and additional global variables created by theoptimizer in the current default graph.
 
-#### Returns:
-A list of variables.
+#### 返回：
+变量列表。
 
-## Class Members
+## Class 成员
 -  `GATE_GRAPH = 2`  []()
 -  `GATE_NONE = 0`  []()
 -  `GATE_OP = 1`  []()

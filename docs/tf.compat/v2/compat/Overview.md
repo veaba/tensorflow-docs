@@ -1,10 +1,10 @@
-Functions for Python 2 vs. 3 compatibility.
+与Python2和Python3兼容的函数。
 
-## Conversion routines
+## 转换例程
 In addition to the functions below,  `as_str`  converts an object to a  `str` .
 
-## Types
-The compatibility module also provides the following types:
+## 类型
+兼容性模块还提供以下类型：
 
 -  `bytes_or_text_types` 
 -  `complex_types` 
@@ -12,7 +12,7 @@ The compatibility module also provides the following types:
 -  `real_types` 
 
 
-## Functions
+## 功能
 [ `as_bytes(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/as_bytes): Converts  `bytearray` ,  `bytes` , or unicode python input types to  `bytes` .
 
 [ `as_str(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/as_text): Converts any string-like python input types to unicode.
@@ -31,7 +31,7 @@ The compatibility module also provides the following types:
 
 [ `path_to_str(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/path_to_str): Converts input which is a  `PathLike`  object to  `str`  type.
 
-## Other Members
+## 其他成员
 -  `bytes_or_text_types`  []()
 -  `complex_types`  []()
 -  `integral_types`  []()

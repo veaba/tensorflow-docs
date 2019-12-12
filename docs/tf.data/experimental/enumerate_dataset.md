@@ -1,6 +1,6 @@
 A transformation that enumerates the elements of a dataset. (deprecated)
 
-**Aliases** : [ `tf.compat.v1.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset), [ `tf.compat.v2.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset)
+**别名** : [ `tf.compat.v1.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset), [ `tf.compat.v2.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset)
 
 ```
  tf.data.experimental.enumerate_dataset(start=0)
@@ -12,7 +12,7 @@ A transformation that enumerates the elements of a dataset. (deprecated)
 It is similar to python's  `enumerate` .For example:
 
 ```
- # NOTE: The following examples use `{ ... }` to represent the
+ # 注意：The following examples use `{ ... }` to represent the
 # contents of a dataset.
 a = { 1, 2, 3 }
 b = { (7, 8), (9, 10) }
@@ -26,10 +26,10 @@ b.apply(tf.data.experimental.enumerate_dataset())
  
 ```
 
-#### Args:
+#### 参数：
 - **`start`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the start value forenumeration.
 
 
-#### Returns:
+#### 返回：
 A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 

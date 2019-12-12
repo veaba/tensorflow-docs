@@ -1,13 +1,13 @@
-Converts all convolution kernels in a model from Theano to TensorFlow.
+将模型中的所有卷积核从ano转换为tensorflow。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.convert_all_kernels_in_model` ](/api_docs/python/tf/keras/utils/convert_all_kernels_in_model), [ `tf.compat.v2.keras.utils.convert_all_kernels_in_model` ](/api_docs/python/tf/keras/utils/convert_all_kernels_in_model)
+**别名** : [ `tf.compat.v1.keras.utils.convert_all_kernels_in_model` ](/api_docs/python/tf/keras/utils/convert_all_kernels_in_model), [ `tf.compat.v2.keras.utils.convert_all_kernels_in_model` ](/api_docs/python/tf/keras/utils/convert_all_kernels_in_model)
 
 ```
  tf.keras.utils.convert_all_kernels_in_model(model)
  
 ```
 
-Also works from TensorFlow to Theano.
+也可以从tensorflow到theano。
 
-#### Arguments:
+#### 参数：
 - **`model`** : target model for the conversion.

@@ -19,11 +19,11 @@ Returns  `MetaGraphDef`  proto.
  
 ```
 
-Optionally writes it to filename.
+可以选择将其写入文件名。
 
 This function exports the graph, saver, and collection objects into `MetaGraphDef`  protocol buffer with the intention of it being importedat a later time or location to restart training, run inference, or bea subgraph.
 
-#### Args:
+#### 参数：
 - **`filename`** : Optional filename including the path for writing the generated `MetaGraphDef`  protocol buffer.
 - **`meta_info_def`** :  `MetaInfoDef`  protocol buffer.
 - **`graph_def`** :  `GraphDef`  protocol buffer.
@@ -39,14 +39,14 @@ This function exports the graph, saver, and collection objects into `MetaGraphDe
 - **`**kwargs`** : Optional keyed arguments.
 
 
-#### Returns:
+#### 返回：
 A  `MetaGraphDef`  proto.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : When the  `GraphDef`  is larger than 2GB.
 - **`RuntimeError`** : If called with eager execution enabled.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Exporting/importing meta graphs is not supported unless both  `graph_def`  and `graph`  are provided. No graph exists when eager execution is enabled.
 

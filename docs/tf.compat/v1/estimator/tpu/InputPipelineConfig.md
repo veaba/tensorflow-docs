@@ -1,9 +1,9 @@
 
 
 ## Class  `InputPipelineConfig` 
-Please see the definition of these values in TPUConfig.
+请参阅tpuconfig中这些值的定义。
 
-## Class Members
+## Class 成员
 -  `BROADCAST = 4`  []()
 -  `PER_HOST_V1 = 2`  []()
 -  `PER_HOST_V2 = 3`  []()

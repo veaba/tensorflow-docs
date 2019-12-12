@@ -2,7 +2,7 @@
 
 Computes \(ln(|Beta(x)|)\), reducing along the last dimension.
 
-**Aliases** : [ `tf.compat.v1.lbeta` ](/api_docs/python/tf/math/lbeta), [ `tf.compat.v1.math.lbeta` ](/api_docs/python/tf/math/lbeta), [ `tf.compat.v2.math.lbeta` ](/api_docs/python/tf/math/lbeta)
+**别名** : [ `tf.compat.v1.lbeta` ](/api_docs/python/tf/math/lbeta), [ `tf.compat.v1.math.lbeta` ](/api_docs/python/tf/math/lbeta), [ `tf.compat.v2.math.lbeta` ](/api_docs/python/tf/math/lbeta)
 
 ```
  tf.math.lbeta(
@@ -28,11 +28,11 @@ Note that if  `z = [u, v]` , thenBeta(z)=int10tu−1(1−t)v−1dt, which define
 
 If the last dimension is empty, we follow the convention that the sum overthe empty set is zero, and the product is one.
 
-#### Args:
+#### 参数：
 - **`x`** : A rank  `n + 1`   `Tensor` ,  `n >= 0`  with type  `float` , or  `double` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The logarithm of |Beta(x)| reducing along the last dimension.
 

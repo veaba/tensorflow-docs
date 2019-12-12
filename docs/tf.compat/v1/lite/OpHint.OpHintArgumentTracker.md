@@ -1,7 +1,7 @@
 
 
 ## Class  `OpHintArgumentTracker` 
-Conceptually tracks indices of arguments of "OpHint functions".
+概念上跟踪“ophint函数”参数的索引。
 
 The inputs and arguments of these functions both use an instanceof the class so they can have independent numbering.
 
@@ -20,9 +20,9 @@ The inputs and arguments of these functions both use an instanceof the class so 
  
 ```
 
-Initialize ophint argument.
+初始化ophint参数。
 
-#### Args:
+#### 参数：
 - **`function_name`** : Name of the function that this tracks arguments for.
 - **`unique_function_id`** : UUID of function that this tracks arguments for.
 - **`node_name_prefix`** : How identities that are created are named.
@@ -31,7 +31,7 @@ Initialize ophint argument.
 - **`children_inputs_mappings`** : Inputs/Outputs mapping for children hints.
 
 
-## Methods
+## 方法
 
 
 ###  `add` 
@@ -48,9 +48,9 @@ Initialize ophint argument.
  
 ```
 
-Return a wrapped tensor of an input tensor as an argument.
+返回输入张量的换行张量作为参数。
 
-#### Args:
+#### 参数：
 - **`arg`** : A TensorFlow tensor that should be considered an argument.
 - **`tag`** : String tag to identify arguments that should be packed.
 - **`name`** : Name of argument. This is included in the Identity hint op names.
@@ -58,8 +58,8 @@ Return a wrapped tensor of an input tensor as an argument.
 - **`index_override`** : Specify what input/output index should this be in thefinal stub. i.e. add(arg0, index=1); add(arg1, index=0) will make thefinal stub be as stub_func(inputs[arg1, arg0], outputs=[]) rather thanthe default call order based ordering.
 
 
-#### Returns:
-A tensor representing the wrapped argument.
+#### 返回：
+表示包装参数的张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : When indices are not consistent.

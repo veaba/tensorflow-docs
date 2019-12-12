@@ -1,6 +1,6 @@
-Returns a tensor with uniform distribution of values.
+返回值均匀分布的张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.random_uniform` ](/api_docs/python/tf/keras/backend/random_uniform), [ `tf.compat.v2.keras.backend.random_uniform` ](/api_docs/python/tf/keras/backend/random_uniform)
+**别名** : [ `tf.compat.v1.keras.backend.random_uniform` ](/api_docs/python/tf/keras/backend/random_uniform), [ `tf.compat.v2.keras.backend.random_uniform` ](/api_docs/python/tf/keras/backend/random_uniform)
 
 ```
  tf.keras.backend.random_uniform(
@@ -13,7 +13,7 @@ Returns a tensor with uniform distribution of values.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`shape`** : A tuple of integers, the shape of tensor to create.
 - **`minval`** : A float, lower boundary of the uniform distributionto draw samples.
 - **`maxval`** : A float, upper boundary of the uniform distributionto draw samples.
@@ -21,6 +21,6 @@ Returns a tensor with uniform distribution of values.
 - **`seed`** : Integer, random seed.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

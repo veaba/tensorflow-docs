@@ -1,4 +1,4 @@
-Disables the mixed precision graph rewrite.
+禁用混合精度图形重写。
 
 ```
  tf.compat.v1.train.experimental.disable_mixed_precision_graph_rewrite() 

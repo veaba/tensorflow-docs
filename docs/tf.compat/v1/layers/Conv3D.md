@@ -7,7 +7,7 @@ Inherits From: [ `Conv3D` ](https://tensorflow.google.cn/api_docs/python/tf/kera
 
 This layer creates a convolution kernel that is convolved(actually cross-correlated) with the layer input to produce a tensor ofoutputs. If  `use_bias`  is True (and a  `bias_initializer`  is provided),a bias vector is created and added to the outputs. Finally, if `activation`  is not  `None` , it is applied to the outputs as well.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 3 integers, specifying thedepth, height and width of the 3D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 3 integers,specifying the strides of the convolution along the depth,height and width.Can be a single integer to specify the same value forall spatial dimensions.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -54,11 +54,11 @@ This layer creates a convolution kernel that is convolved(actually cross-correla
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -96,7 +96,7 @@ Functional interface for the 3D convolution layer. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.keras.layers.Conv3D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv3D) instead.
 This layer creates a convolution kernel that is convolved(actually cross-correlated) with the layer input to produce a tensor ofoutputs. If  `use_bias`  is True (and a  `bias_initializer`  is provided),a bias vector is created and added to the outputs. Finally, if `activation`  is not  `None` , it is applied to the outputs as well.
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Tensor input.
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 3 integers, specifying thedepth, height and width of the 3D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
@@ -118,8 +118,8 @@ This layer creates a convolution kernel that is convolved(actually cross-correla
 - **`reuse`** : Boolean, whether to reuse the weights of a previous layerby the same name.
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

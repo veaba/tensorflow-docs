@@ -1,6 +1,6 @@
 Generates a word rank-based probabilistic sampling table.
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table), [ `tf.compat.v2.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table)
+**别名** : [ `tf.compat.v1.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table), [ `tf.compat.v2.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table)
 
 ```
  tf.keras.preprocessing.sequence.make_sampling_table(
@@ -37,8 +37,8 @@ sampling_factor: The sampling factor in the word2vec formula.
 
 
 ```
- A 1D Numpy array of length `size` where the ith entry
-is the probability that a word of rank i should be sampled.
+长度为“size”的1d numpy数组，其中第i个条目
+是一个等级i的单词被抽样的概率。
  
 ```
 

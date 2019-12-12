@@ -1,6 +1,6 @@
 Creates a new [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) which has given metrics.
 
-**Aliases** : [ `tf.compat.v1.estimator.add_metrics` ](/api_docs/python/tf/estimator/add_metrics), [ `tf.compat.v2.estimator.add_metrics` ](/api_docs/python/tf/estimator/add_metrics)
+**别名** : [ `tf.compat.v1.estimator.add_metrics` ](/api_docs/python/tf/estimator/add_metrics), [ `tf.compat.v2.estimator.add_metrics` ](/api_docs/python/tf/estimator/add_metrics)
 
 ```
  tf.estimator.add_metrics(
@@ -10,7 +10,7 @@ Creates a new [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs
  
 ```
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -25,7 +25,7 @@ Creates a new [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs
  
 ```
 
-Example usage of custom metric which uses features:
+使用特性的自定义度量的示例用法：
 
 ```
   )
@@ -40,7 +40,7 @@ Example usage of custom metric which uses features:
  
 ```
 
-#### Args:
+#### 参数：
 - **`estimator`** : A [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) object.
 - **`metric_fn`** : A function which should obey the following signature:
     - Args: can only have following four arguments in any order:
@@ -51,6 +51,6 @@ Example usage of custom metric which uses features:
     - Returns:Dict of metric results keyed by name. Final metrics are a union of thisand  `estimator's`  existing metrics. If there is a name conflict betweenthis and  `estimator` s existing metrics, this will override the existingone. The values of the dict are the results of calling a metricfunction, namely a  `(metric_tensor, update_op)`  tuple.
 
 
-#### Returns:
+#### 返回：
 A new [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) which has a union of original metrics with  given ones.
 

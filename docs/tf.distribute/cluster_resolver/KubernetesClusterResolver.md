@@ -5,7 +5,7 @@ ClusterResolver for Kubernetes.
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.KubernetesClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/KubernetesClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.KubernetesClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/KubernetesClusterResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.KubernetesClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/KubernetesClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.KubernetesClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/KubernetesClusterResolver)
 
 This is an implementation of cluster resolvers for Kubernetes. When given thethe Kubernetes namespace and label selector for pods, we will retrieve thepod IP addresses of all running pods matching the selector, and return aClusterSpec based on that information.
 
@@ -22,11 +22,11 @@ This is an implementation of cluster resolvers for Kubernetes. When given thethe
  
 ```
 
-Initializes a new KubernetesClusterResolver.
+初始化新的KubernetesClusterResolver。
 
 This initializes a new Kubernetes ClusterResolver. The ClusterResolverwill attempt to talk to the Kubernetes master to retrieve all the instancesof pods matching a label selector.
 
-#### Args:
+#### 参数：
 - **`job_to_label_mapping`** : A mapping of TensorFlow jobs to label selectors.This allows users to specify many TensorFlow jobs in one ClusterResolver, and each job can have pods belong with different labelselectors. For example, a sample mapping might be
 
 
@@ -41,16 +41,16 @@ This initializes a new Kubernetes ClusterResolver. The ClusterResolverwill attem
 - **`override_client`** : The Kubernetes client (usually automatically retrievedusing  `from kubernetes import client as k8sclient` ). If you pass thisin, you are responsible for setting Kubernetes credentials manually.
 
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : If the Kubernetes Python client is not installed and no `override_client`  is passed in.
 - **`RuntimeError`** : If autoresolve_task is not a boolean or a callable.
 
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
 There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
@@ -58,7 +58,7 @@ If you are implementing a ClusterResolver that works in both the Googleenvironme
 
 Otherwise, if you are implementing a ClusterResolver that will only workin open-source TensorFlow, you do not need to implement this property.
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -69,14 +69,14 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
  
 ```
 
-Returns a ClusterSpec object based on the latest info from Kubernetes.
+根据来自kubernetes的最新信息返回clusterspec对象。
 
 We retrieve the information from the Kubernetes master every time thismethod is called.
 
-#### Returns:
-A ClusterSpec containing host information returned from Kubernetes.
+#### 返回：
+包含从kubernetes返回的主机信息的clusterspec。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If any of the pods returned by the master is not in the `Running`  phase.
 
 
@@ -92,18 +92,18 @@ A ClusterSpec containing host information returned from Kubernetes.
  
 ```
 
-Returns the master address to use when creating a session.
+返回创建会话时要使用的主地址。
 
 You must have set the task_type and task_id object properties beforecalling this function, or pass in the  `task_type`  and  `task_id` parameters when using this function. If you do both, the function parameterswill override the object properties.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the master.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the master.
 - **`rpc_layer`** : (Optional) The RPC protocol for the given cluster.
 
 
-#### Returns:
-The name or URL of the session master.
+#### 返回：
+会话主机的名称或url。
 
 ###  `num_accelerators` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/cluster_resolver.py#L125-L160)
@@ -117,18 +117,18 @@ The name or URL of the session master.
  
 ```
 
-Returns the number of accelerator cores per worker.
+返回每个工作进程的加速器核心数。
 
 This returns the number of accelerator cores (such as GPUs and TPUs)available per worker.
 
 Optionally, we allow callers to specify the task_type, and task_id, forif they want to target a specific TensorFlow process to querythe number of accelerators. This is to support heterogenous environments,where the number of accelerators cores per host is different.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the machine wewant to query.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the machine wewant to query.
 - **`config_proto`** : (Optional) Configuration for starting a new session toquery how many accelerator cores it has.
 
 
-#### Returns:
-A map of accelerator types to number of cores.
+#### 返回：
+加速器类型与核心数的映射。
 

@@ -1,4 +1,4 @@
-Batch normalization.
+批量标准化。
 
 ```
  tf.nn.batch_norm_with_global_normalization(    input,    mean,    variance,    beta,    gamma,    variance_epsilon,    scale_after_normalization,    name=None) 
@@ -6,7 +6,7 @@ Batch normalization.
 
 This op is deprecated. See [ `tf.nn.batch_normalization` ](https://tensorflow.google.cn/api_docs/python/tf/nn/batch_normalization).
 
-#### Args:
+#### 参数：
 - **`input`** : A 4D input Tensor.
 - **`mean`** : A 1D mean Tensor with size matching the last dimension of t.This is the first output from tf.nn.moments,or a saved moving average thereof.
 - **`variance`** : A 1D variance Tensor with size matching the last dimension of t.This is the second output from tf.nn.moments,or a saved moving average thereof.
@@ -17,6 +17,6 @@ This op is deprecated. See [ `tf.nn.batch_normalization` ](https://tensorflow.go
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 A batch-normalized  `t` .
 

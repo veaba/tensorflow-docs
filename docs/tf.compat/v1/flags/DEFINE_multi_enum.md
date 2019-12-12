@@ -6,7 +6,7 @@ Registers a flag whose value can be a list strings from enum_values.
 
 Use the flag on the command line multiple times to place multipleenum values into the list.  The 'default' may be a single string(which will be converted into a single-element list) or a list ofstrings.
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : Union[Iterable[Text], Text, None], the default value of the flag;see  `DEFINE_multi` .
 - **`enum_values`** : [str], a non-empty list of strings with the possible values forthe flag.

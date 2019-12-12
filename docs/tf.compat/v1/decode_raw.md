@@ -8,7 +8,7 @@ Convert raw byte strings into tensors. (deprecated arguments)
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(bytes)` . They will be removed in a future version.Instructions for updating:bytes is deprecated, use input_bytes instead
 
 
-#### Args:
+#### 参数：
 - **`input_bytes`** :   Each element of the input Tensor is converted to an array of bytes.
 - **`out_type`** :    `DType`  of the output. Acceptable types are  `half` ,  `float` ,  `double` , `int32` ,  `uint16` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` .
 - **`little_endian`** :   Whether the  `input_bytes`  data is in little-endian format. Data will beconverted into host byte order if necessary.
@@ -16,6 +16,6 @@ Convert raw byte strings into tensors. (deprecated arguments)
 - **`bytes`** : Deprecated parameter. Use  `input_bytes`  instead.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  object storing the decoded bytes.
 

@@ -1,9 +1,9 @@
-Keras backend API.
+Keras后端API。
 
-## Classes
+## Class 
 [ `class name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/backend/name_scope): A context manager for use when defining a Python op.
 
-## Functions
+## 功能
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/abs): Element-wise absolute value.
 
 [ `all(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/all): Bitwise reduction (logical AND).

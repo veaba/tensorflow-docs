@@ -1,11 +1,11 @@
 
 
 ## Class  `FixedLossScale` 
-Loss scale with a fixed value.
+定值损失量表。
 
 Inherits From: [ `LossScale` ](https://tensorflow.google.cn/api_docs/python/tf/train/experimental/LossScale)
 
-**Aliases** : [ `tf.compat.v1.train.experimental.FixedLossScale` ](/api_docs/python/tf/train/experimental/FixedLossScale), [ `tf.compat.v2.train.experimental.FixedLossScale` ](/api_docs/python/tf/train/experimental/FixedLossScale)
+**别名** : [ `tf.compat.v1.train.experimental.FixedLossScale` ](/api_docs/python/tf/train/experimental/FixedLossScale), [ `tf.compat.v2.train.experimental.FixedLossScale` ](/api_docs/python/tf/train/experimental/FixedLossScale)
 
 The loss scale is not updated for the lifetime of instances of this class.A given instance of this class always returns the same number when called.
 
@@ -17,17 +17,17 @@ The loss scale is not updated for the lifetime of instances of this class.A give
  
 ```
 
-Creates the fixed loss scale.
+创建固定损耗刻度。
 
-#### Args:
+#### 参数：
 - **`loss_scale_value`** : A Python float. Its ideal value varies depending onmodels to run. Choosing a too small loss_scale might affect modelquality; a too big loss_scale might cause inf or nan. There is no singleright loss_scale to apply. There is no harm choosing a relatively bignumber as long as no nan or inf is encountered in training.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If loss_scale_value is less than 1.
 
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -51,7 +51,7 @@ Returns the current loss scale as a scalar  `float32`  tensor.
  
 ```
 
-Creates the LossScale from its config.
+从其配置创建losscale。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/loss_scale.py#L233-L234)
@@ -61,7 +61,7 @@ Creates the LossScale from its config.
  
 ```
 
-Returns the config of this loss scale.
+返回此损失等级的配置。
 
 ###  `update` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/loss_scale.py#L226-L228)
@@ -71,7 +71,7 @@ Returns the config of this loss scale.
  
 ```
 
-Updates the value of the loss scale.
+更新损失等级的值。
 
 The loss scale will be potentially updated, based on the value of  `grads` .The tensor returned by calling this class is only updated when this functionis evaluated.
 
@@ -81,10 +81,10 @@ This function also returns a  `should_apply_gradients`  bool. If False,gradients
 
 When a DistributionStrategy is used, this function may only be called in across-replica context.
 
-#### Args:
+#### 参数：
 - **`grads`** : A nested structure of unscaled gradients, each which is thegradient of the loss with respect to a weight. The gradients should havealready been divided by the loss scale being before passed to thisfunction. 'None' gradients are accepted, and are ignored.
 
 
-#### Returns:
+#### 返回：
 - **`update_op`** : In eager mode, None. In graph mode, an op to update the lossscale.
 - **`should_apply_gradients`** : Either a bool or a scalar boolean tensor. IfFalse, the caller should skip applying  `grads`  to the variables thisstep.

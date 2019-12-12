@@ -32,22 +32,22 @@ Note that  `cond`  calls  `true_fn`  and  `false_fn`  *exactly once* (inside the
 **Note:**  It is illegal to "directly" use tensors created inside a cond branchoutside it, e.g. by storing a reference to a branch tensor in the pythonstate. If you need to use a tensor created in a branch function you shouldreturn it as an output of the branch function and use the output from[ `tf.cond` ](https://tensorflow.google.cn/api_docs/python/tf/cond) instead.
 
 
-#### Args:
+#### 参数：
 - **`pred`** : A scalar determining whether to return the result of  `true_fn`  or `false_fn` .
 - **`true_fn`** : The callable to be performed if pred is true.
 - **`false_fn`** : The callable to be performed if pred is false.
 - **`name`** : Optional name prefix for the returned tensors.
 
 
-#### Returns:
+#### 返回：
 Tensors returned by the call to either  `true_fn`  or  `false_fn` . If thecallables return a singleton list, the element is extracted from the list.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `true_fn`  or  `false_fn`  is not callable.
 - **`ValueError`** : if  `true_fn`  and  `false_fn`  do not return the same number oftensors, or return tensors of different types.
 
 
-#### Example:
+#### 示例：
 
 
 ```

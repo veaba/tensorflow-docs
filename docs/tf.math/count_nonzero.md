@@ -1,4 +1,4 @@
-Computes number of nonzero elements across dimensions of a tensor.
+计算张量维度上非零元素的数目。
 
 ```
  tf.math.count_nonzero(
@@ -17,7 +17,7 @@ If  `axis`  has no entries, all dimensions are reduced, and atensor with a singl
 
 **NOTE**  Floating point comparison to zero is done by exact floating pointequality check.  Small values are **not**  rounded to zero for purposes ofthe nonzero check.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -32,7 +32,7 @@ tf.math.count_nonzero(x, [0, 1])  # 3
 
 **NOTE**  Strings are compared against zero-length empty string  `""` . Anystring with a size greater than zero is already considered as nonzero.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -41,7 +41,7 @@ tf.math.count_nonzero(x) # 3, with "a", "  ", and "b" as nonzero strings.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : The tensor to reduce. Should be of numeric type,  `bool` , or  `string` .
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input), rank(input))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
@@ -49,6 +49,6 @@ tf.math.count_nonzero(x) # 3, with "a", "  ", and "b" as nonzero strings.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The reduced tensor (number of nonzero values).
+#### 返回：
+约化张量（非零值的数目）。
 

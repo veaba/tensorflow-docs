@@ -1,6 +1,6 @@
 Creates a  `Dataset`  from another  `Dataset` , discarding duplicates.
 
-**Aliases** : [ `tf.compat.v1.data.experimental.unique` ](/api_docs/python/tf/data/experimental/unique), [ `tf.compat.v2.data.experimental.unique` ](/api_docs/python/tf/data/experimental/unique)
+**别名** : [ `tf.compat.v1.data.experimental.unique` ](/api_docs/python/tf/data/experimental/unique), [ `tf.compat.v2.data.experimental.unique` ](/api_docs/python/tf/data/experimental/unique)
 
 ```
  tf.data.experimental.unique()
@@ -17,6 +17,6 @@ dataset = dataset.apply(tf.data.experimental.unique())  # ==> { 1, 37, 2 }
  
 ```
 
-#### Returns:
+#### 返回：
 A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 

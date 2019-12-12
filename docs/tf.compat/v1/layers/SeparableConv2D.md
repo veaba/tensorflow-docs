@@ -1,13 +1,13 @@
 
 
 ## Class  `SeparableConv2D` 
-Depthwise separable 2D convolution.
+可分离二维卷积。
 
 Inherits From: [ `SeparableConv2D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/SeparableConv2D), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
 This layer performs a depthwise convolution that acts separately onchannels, followed by a pointwise convolution that mixes channels.If  `use_bias`  is True and a bias initializer is provided,it adds a bias vector to the output.It then optionally applies an activation function to produce the final output.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : A tuple or list of 2 integers specifying the spatialdimensions of the filters. Can be a single integer to specify the samevalue for all spatial dimensions.
 - **`strides`** : A tuple or list of 2 positive integers specifying the stridesof the convolution. Can be a single integer to specify the same value forall spatial dimensions.Specifying any  `stride`  value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -94,11 +94,11 @@ This layer performs a depthwise convolution that acts separately onchannels, fol
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

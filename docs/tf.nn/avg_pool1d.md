@@ -1,6 +1,6 @@
-Performs the average pooling on the input.
+对输入执行平均池。
 
-**Aliases** : [ `tf.compat.v1.nn.avg_pool1d` ](/api_docs/python/tf/nn/avg_pool1d), [ `tf.compat.v2.nn.avg_pool1d` ](/api_docs/python/tf/nn/avg_pool1d)
+**别名** : [ `tf.compat.v1.nn.avg_pool1d` ](/api_docs/python/tf/nn/avg_pool1d), [ `tf.compat.v2.nn.avg_pool1d` ](/api_docs/python/tf/nn/avg_pool1d)
 
 ```
  tf.nn.avg_pool1d(
@@ -16,9 +16,9 @@ Performs the average pooling on the input.
 
 Each entry in  `output`  is the mean of the corresponding size  `ksize` window in  `value` .
 
-Note internally this op reshapes and uses the underlying 2d operation.
+注意，这个操作在内部重塑并使用底层的2d操作。
 
-#### Args:
+#### 参数：
 - **`input`** : A 3-D  `Tensor`  of the format specified by  `data_format` .
 - **`ksize`** : An int or list of  `ints`  that has length  `1`  or  `3` . The size of thewindow for each dimension of the input tensor.
 - **`strides`** : An int or list of  `ints`  that has length  `1`  or  `3` . The stride ofthe sliding window for each dimension of the input tensor.
@@ -27,6 +27,6 @@ Note internally this op reshapes and uses the underlying 2d operation.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of format specified by  `data_format` .The max pooled output tensor.
 

@@ -1,11 +1,11 @@
 
 
 ## Class  `FlagValues` 
-Registry of 'Flag' objects.
+“标记”对象的注册表。
 
 A 'FlagValues' can then scan command line arguments, passing flagarguments through to the 'Flag' objects that it owns.  It alsoprovides easy access to the flag values.  Typically only one'FlagValues' object is needed by an application: flags.FLAGS
 
-This class is heavily overloaded:
+该类重载严重：
 
 'Flag' objects are registered via **setitem** :     FLAGS['longname'] = x   # register a new flag
 
@@ -27,7 +27,7 @@ The str() operator of a 'FlagValues' object provides help for all ofthe register
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -41,19 +41,19 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Parses flags from argv; stores parsed flags into this FlagValues object.
+分析argv中的标志；将已分析的标志存储到此FlagValues对象中。
 
-All unparsed arguments are returned.
+将返回所有未分析的参数。
 
-#### Args:
+#### 参数：
 - **`argv`** : a tuple/list of strings.
 - **`known_only`** : bool, if True, parse and remove known flags; return the restuntouched. Unknown flags specified by --undefok are not returned.
 
 
-#### Returns:
+#### 返回：
 The list of arguments not parsed as options, including argv[0].
 
-#### Raises:
+#### 加薪：
 - **`Error`** : Raised on any parsing error.
 - **`TypeError`** : Raised on passing wrong type of arguments.
 - **`ValueError`** : Raised on flag value parsing error.
@@ -67,7 +67,7 @@ The list of arguments not parsed as options, including argv[0].
  
 ```
 
-Returns True if name is a value (flag) in the dict.
+如果name是dict中的值（标志），则返回true。
 
 ###  `__getitem__` 
 
@@ -103,9 +103,9 @@ Returns the Flag object for the flag --name.
  
 ```
 
-Appends flags registered in another FlagValues instance.
+追加在另一个FlagValues实例中注册的标志。
 
-#### Args:
+#### 参数：
 - **`flag_values`** : FlagValues, the FlagValues instance from which to copy flags.
 
 
@@ -117,13 +117,13 @@ Appends flags registered in another FlagValues instance.
  
 ```
 
-Appends all flags assignments from this FlagInfo object to a file.
+将此flaginfo对象中的所有标志分配附加到文件。
 
-Output will be in the format of a flagfile.
+输出将采用标记文件的格式。
 
-NOTE: MUST mirror the behavior of the C++ AppendFlagsIntoFilefrom https://github.com/gflags/gflags.
+注意：MUST mirror the behavior of the C++ AppendFlagsIntoFilefrom https://github.com/gflags/gflags.
 
-#### Args:
+#### 参数：
 - **`filename`** : str, name of the file.
 
 
@@ -140,12 +140,12 @@ NOTE: MUST mirror the behavior of the C++ AppendFlagsIntoFilefrom https://github
 
 Return the name of the module defining this flag, or default.
 
-#### Args:
+#### 参数：
 - **`flagname`** : str, name of the flag to lookup.
 - **`default`** : Value to return if flagname is not defined. Defaultsto None.
 
 
-#### Returns:
+#### 返回：
 The name of the module which registered the flag with this name.If no such module exists (i.e. no flag with this name exists),we return default.
 
 ###  `find_module_id_defining_flag` 
@@ -161,12 +161,12 @@ The name of the module which registered the flag with this name.If no such modul
 
 Return the ID of the module defining this flag, or default.
 
-#### Args:
+#### 参数：
 - **`flagname`** : str, name of the flag to lookup.
 - **`default`** : Value to return if flagname is not defined. Defaultsto None.
 
 
-#### Returns:
+#### 返回：
 The ID of the module which registered the flag with this name.If no such module exists (i.e. no flag with this name exists),we return default.
 
 ###  `flag_values_dict` 
@@ -177,7 +177,7 @@ The ID of the module which registered the flag with this name.If no such module 
  
 ```
 
-Returns a dictionary that maps flag names to flag values.
+返回将标志名称映射到标志值的字典。
 
 ###  `flags_by_module_dict` 
 
@@ -189,7 +189,7 @@ Returns a dictionary that maps flag names to flag values.
 
 Returns the dictionary of module_name -> list of defined flags.
 
-#### Returns:
+#### 返回：
 A dictionary.  Its keys are module names (strings).  Its valuesare lists of Flag objects.
 
 ###  `flags_by_module_id_dict` 
@@ -202,7 +202,7 @@ A dictionary.  Its keys are module names (strings).  Its valuesare lists of Flag
 
 Returns the dictionary of module_id -> list of defined flags.
 
-#### Returns:
+#### 返回：
 A dictionary.  Its keys are module IDs (ints).  Its valuesare lists of Flag objects.
 
 ###  `flags_into_string` 
@@ -213,13 +213,13 @@ A dictionary.  Its keys are module IDs (ints).  Its valuesare lists of Flag obje
  
 ```
 
-Returns a string with the flags assignments from this FlagValues object.
+返回具有来自此FlagValues对象的标志分配的字符串。
 
 This function ignores flags whose value is None.  Each flagassignment is separated by a newline.
 
-NOTE: MUST mirror the behavior of the C++ CommandlineFlagsIntoStringfrom https://github.com/gflags/gflags.
+注意：MUST mirror the behavior of the C++ CommandlineFlagsIntoStringfrom https://github.com/gflags/gflags.
 
-#### Returns:
+#### 返回：
 str, the string with the flags assignments from this FlagValues object.The flags are ordered by (module_name, flag_name).
 
 ###  `get_flag_value` 
@@ -233,15 +233,15 @@ str, the string with the flags assignments from this FlagValues object.The flags
  
 ```
 
-Returns the value of a flag (if not None) or a default value.
+返回标志值（如果不是无）或默认值。
 
-#### Args:
+#### 参数：
 - **`name`** : str, the name of a flag.
 - **`default`** : Default value to use if the flag value is None.
 
 
-#### Returns:
-Requested flag value or default.
+#### 返回：
+请求的标志值或默认值。
 
 ###  `get_help` 
 
@@ -254,14 +254,14 @@ Requested flag value or default.
  
 ```
 
-Returns a help string for all known flags.
+返回所有已知标志的帮助字符串。
 
-#### Args:
+#### 参数：
 - **`prefix`** : str, per-line output prefix.
 - **`include_special_flags`** : bool, whether to include description ofSPECIAL_FLAGS, i.e. --flagfile and --undefok.
 
 
-#### Returns:
+#### 返回：
 str, formatted help message.
 
 ###  `get_key_flags_for_module` 
@@ -272,13 +272,13 @@ str, formatted help message.
  
 ```
 
-Returns the list of key flags for a module.
+返回模块的键标志列表。
 
-#### Args:
+#### 参数：
 - **`module`** : module|str, the module to get key flags from.
 
 
-#### Returns:
+#### 返回：
 [Flag], a new list of Flag instances.  Caller may update this list as
 
 - **`desired`** : none of those changes will affect the internals of thisFlagValue instance.
@@ -300,7 +300,7 @@ Returns the list of key flags for a module.
  
 ```
 
-Returns whether flags were parsed.
+返回是否分析了标志。
 
 ###  `key_flags_by_module_dict` 
 
@@ -312,7 +312,7 @@ Returns whether flags were parsed.
 
 Returns the dictionary of module_name -> list of key flags.
 
-#### Returns:
+#### 返回：
 A dictionary.  Its keys are module names (strings).  Its valuesare lists of Flag objects.
 
 ###  `main_module_help` 
@@ -323,9 +323,9 @@ A dictionary.  Its keys are module names (strings).  Its valuesare lists of Flag
  
 ```
 
-Describes the key flags of the main module.
+描述主模块的键标志。
 
-#### Returns:
+#### 返回：
 str, describing the key flags of the main module.
 
 ###  `mark_as_parsed` 
@@ -336,7 +336,7 @@ str, describing the key flags of the main module.
  
 ```
 
-Explicitly marks flags as parsed.
+显式地将标志标记为已分析。
 
 Use this when the caller knows that this FlagValues has been parsed as ifa **call** () invocation has happened.  This is only a public method foruse by things like appcommands which do additional command like parsing.
 
@@ -348,13 +348,13 @@ Use this when the caller knows that this FlagValues has been parsed as ifa **cal
  
 ```
 
-Describes the key flags of a module.
+描述模块的键标志。
 
-#### Args:
+#### 参数：
 - **`module`** : module|str, the module to describe the key flags for.
 
 
-#### Returns:
+#### 返回：
 str, describing the key flags of a module.
 
 ###  `read_flags_from_files` 
@@ -370,15 +370,15 @@ str, describing the key flags of a module.
 
 Processes command line args, but also allow args to be read from file.
 
-#### Args:
+#### 参数：
 - **`argv`** : [str], a list of strings, usually sys.argv[1:], which may containone or more flagfile directives of the form --flagfile="./filename".Note that the name of the program (sys.argv[0]) should be omitted.
 - **`force_gnu`** : bool, if False, --flagfile parsing obeys theFLAGS.is_gnu_getopt() value. If True, ignore the value and alwaysfollow gnu_getopt semantics.
 
 
-#### Returns:
+#### 返回：
 A new list which has the original list combined with what we readfrom any flagfile(s).
 
-#### Raises:
+#### 加薪：
 - **`IllegalFlagValueError`** : Raised when --flagfile is provided with noargument.
 This function is called by FLAGS(argv).It scans the input list for a flag that looks like:--flagfile=<somefile>. Then it opens <somefile>, reads all valid keyand value pairs and inserts them into the input list in exactly theplace where the --flagfile arg is found.</somefile></somefile>
 
@@ -397,11 +397,11 @@ Notes (assuming we're getting a commandline of some sort as our input):--> For d
  
 ```
 
-Records the module that defines a specific flag.
+记录定义特定标志的模块。
 
 We keep track of which flag is defined by which module so that wecan later sort the flags by module.
 
-#### Args:
+#### 参数：
 - **`module_name`** : str, the name of a Python module.
 - **`flag`** : Flag, the Flag instance that is key to the module.
 
@@ -417,9 +417,9 @@ We keep track of which flag is defined by which module so that wecan later sort 
  
 ```
 
-Records the module that defines a specific flag.
+记录定义特定标志的模块。
 
-#### Args:
+#### 参数：
 - **`module_id`** : int, the ID of the Python module.
 - **`flag`** : Flag, the Flag instance that is key to the module.
 
@@ -435,9 +435,9 @@ Records the module that defines a specific flag.
  
 ```
 
-Specifies that a flag is a key flag for a module.
+指定标志是模块的键标志。
 
-#### Args:
+#### 参数：
 - **`module_name`** : str, the name of a Python module.
 - **`flag`** : Flag, the Flag instance that is key to the module.
 
@@ -450,9 +450,9 @@ Specifies that a flag is a key flag for a module.
  
 ```
 
-Remove flags that were previously appended from another FlagValues.
+删除以前从另一个标志值附加的标志。
 
-#### Args:
+#### 参数：
 - **`flag_values`** : FlagValues, the FlagValues instance containing flags toremove.
 
 
@@ -467,16 +467,16 @@ Remove flags that were previously appended from another FlagValues.
  
 ```
 
-Changes the default value of the named flag object.
+更改命名标志对象的默认值。
 
 The flag's current value is also updated if the flag is currently usingthe default value, i.e. not specified in the command line, and not setby FLAGS.name = value.
 
-#### Args:
+#### 参数：
 - **`name`** : str, the name of the flag to modify.
 - **`value`** : The new default value.
 
 
-#### Raises:
+#### 加薪：
 - **`UnrecognizedFlagError`** : Raised when there is no registered flag named name.
 - **`IllegalFlagValueError`** : Raised when value is not valid.
 
@@ -489,11 +489,11 @@ The flag's current value is also updated if the flag is currently usingthe defau
  
 ```
 
-Sets whether or not to use GNU style scanning.
+设置是否使用GNU样式扫描。
 
 GNU style allows mixing of flag and non-flag arguments. Seehttp://docs.python.org/library/getopt.html#getopt.gnu_getopt
 
-#### Args:
+#### 参数：
 - **`gnu_getopt`** : bool, whether or not to use GNU style scanning.
 
 
@@ -505,7 +505,7 @@ GNU style allows mixing of flag and non-flag arguments. Seehttp://docs.python.or
  
 ```
 
-Unparses all flags to the point before any FLAGS(argv) was called.
+在调用任何标志（argv）之前，断开所有标志的连接。
 
 ###  `write_help_in_xml_format` 
 
@@ -515,9 +515,9 @@ Unparses all flags to the point before any FLAGS(argv) was called.
  
 ```
 
-Outputs flag documentation in XML format.
+以XML格式输出标记文档。
 
-NOTE: We use element names that are consistent with those used bythe C++ command-line flag library, fromhttps://github.com/gflags/gflags.We also use a few new elements (e.g., <key>), but we do notinterfere / overlap with existing XML elements used by the C++library.  Please maintain this consistency.</key>
+注意：We use element names that are consistent with those used bythe C++ command-line flag library, fromhttps://github.com/gflags/gflags.We also use a few new elements (e.g., <key>), but we do notinterfere / overlap with existing XML elements used by the C++library.  Please maintain this consistency.</key>
 
-#### Args:
+#### 参数：
 - **`outfile`** : File object we write to.  Default None means sys.stdout.

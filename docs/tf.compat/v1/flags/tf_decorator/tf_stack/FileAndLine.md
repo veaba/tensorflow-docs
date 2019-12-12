@@ -18,7 +18,7 @@ __new__(
 
 Create new instance of FileAndLine(file, line)
 
-## Properties
+## 属性
 
 
 ###  `file` 

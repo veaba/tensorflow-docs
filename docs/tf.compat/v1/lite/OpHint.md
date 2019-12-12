@@ -1,7 +1,7 @@
 
 
 ## Class  `OpHint` 
-A class that helps build tflite function invocations.
+帮助构建tflite函数调用的类。
 
 It allows you to take a bunch of TensorFlow ops and annotate the constructionsuch that toco knows how to convert it to tflite. This embeds a pseudofunction in a TensorFlow graph. This allows embedding high-level API usageinformation in a lower level TensorFlow implementation so that an alternativeimplementation can be substituted later.
 
@@ -20,19 +20,19 @@ Essentially, any "input" into this pseudo op is fed into an identity, andattribu
  
 ```
 
-Create a OpHint.
+创造一个蛇夫。
 
-#### Args:
+#### 参数：
 - **`function_name`** : Name of the function (the custom op name in tflite)
 - **`level`** : OpHint level.
 - **`children_inputs_mappings`** : Children OpHint inputs/outputs mapping.children_inputs_mappings should like below:"parent_first_child_input":  [{"parent_input_index": num, "child_input_index": num}, ...]"parent_last_child_output":  [{"parent_output_index": num, "child_output_index": num}, ...]"internal_children_input_output":  [{"child_input_index": num, "child_output_index": num}, ...]
 - **`**kwargs`** : Keyword arguments of any constant attributes for the function.
 
 
-## Child Classes
+## 子类
 [ `class OpHintArgumentTracker` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/OpHint/OpHintArgumentTracker)
 
-## Methods
+## 方法
 
 
 ###  `add_input` 
@@ -46,15 +46,15 @@ Create a OpHint.
  
 ```
 
-Add a wrapped input argument to the hint.
+向提示中添加包装输入参数。
 
-#### Args:
+#### 参数：
 - **`*args`** : The input tensor.
 - **`**kwargs`** :   "name" label"tag" a tag to group multiple arguments that will be aggregated. I.e.a string like 'cool_input'. Basically multiple inputs can be addedto the same hint for parallel operations that will eventually becombined. An example would be static_rnn which creates multiple copiesof state or inputs."aggregate" aggregation strategy that is valid only for tag non None.Acceptable values are OpHint.AGGREGATE_FIRST, OpHint.AGGREGATE_LAST,and OpHint.AGGREGATE_STACK."index_override" The global index to use. This corresponds to theargument order in the final stub that will be generated.
 
 
-#### Returns:
-The wrapped input tensor.
+#### 返回：
+包装输入张量。
 
 ###  `add_inputs` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/op_hint.py#L428-L444)
@@ -67,14 +67,14 @@ The wrapped input tensor.
  
 ```
 
-Add a sequence of inputs to the function invocation.
+向函数调用添加一系列输入。
 
-#### Args:
+#### 参数：
 - **`*args`** : List of inputs to be converted (should be Tf.Tensor).
 - **`**kwargs`** : This allows 'names' which should be a list of names.
 
 
-#### Returns:
+#### 返回：
 Wrapped inputs (identity standins that have additional metadata). Theseare also are also tf.Tensor's.
 
 ###  `add_output` 
@@ -88,15 +88,15 @@ Wrapped inputs (identity standins that have additional metadata). Theseare also 
  
 ```
 
-Add a wrapped output argument to the hint.
+向提示中添加包装输出参数。
 
-#### Args:
+#### 参数：
 - **`*args`** : The output tensor.
 - **`**kwargs`** :   "name" label"tag" a tag to group multiple arguments that will be aggregated. I.e.a string like 'cool_input'. Basically multiple inputs can be addedto the same hint for parallel operations that will eventually becombined. An example would be static_rnn which creates multiple copiesof state or inputs."aggregate" aggregation strategy that is valid only for tag non None.Acceptable values are OpHint.AGGREGATE_FIRST, OpHint.AGGREGATE_LAST,and OpHint.AGGREGATE_STACK."index_override" The global index to use. This corresponds to theargument order in the final stub that will be generated.
 
 
-#### Returns:
-The wrapped output tensor.
+#### 返回：
+包装输出张量。
 
 ###  `add_outputs` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/op_hint.py#L446-L462)
@@ -109,17 +109,17 @@ The wrapped output tensor.
  
 ```
 
-Add a sequence of outputs to the function invocation.
+向函数调用添加一系列输出。
 
-#### Args:
+#### 参数：
 - **`*args`** : List of outputs to be converted (should be tf.Tensor).
 - **`**kwargs`** : See
 
 
-#### Returns:
+#### 返回：
 Wrapped outputs (identity standins that have additional metadata). Theseare also tf.Tensor's.
 
-## Class Members
+## Class 成员
 -  `AGGREGATE_FIRST = 'first'`  []()
 -  `AGGREGATE_LAST = 'last'`  []()
 -  `AGGREGATE_STACK = 'stack'`  []()

@@ -5,10 +5,10 @@ Wrapper for [ `Graph.container()` ](/api_docs/python/tf/Graph#container) using t
  
 ```
 
-#### Args:
+#### 参数：
 - **`container_name`** : The container string to use in the context.
 
 
-#### Returns:
+#### 返回：
 A context manager that specifies the default container to use for newlycreated stateful ops.
 

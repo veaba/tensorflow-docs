@@ -1,6 +1,6 @@
-Exception types for TensorFlow errors.
+TensorFlow错误的异常类型。
 
-## Classes
+## Class 
 [ `class AbortedError` ](https://tensorflow.google.cn/api_docs/python/tf/errors/AbortedError): The operation was aborted, typically due to a concurrent action.
 
 [ `class AlreadyExistsError` ](https://tensorflow.google.cn/api_docs/python/tf/errors/AlreadyExistsError): Raised when an entity that we attempted to create already exists.
@@ -37,12 +37,12 @@ Exception types for TensorFlow errors.
 
 [ `class raise_exception_on_not_ok_status` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/errors/raise_exception_on_not_ok_status): Context manager to check for C API status.
 
-## Functions
+## 功能
 [ `error_code_from_exception_type(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/errors/error_code_from_exception_type)
 
 [ `exception_type_from_error_code(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/errors/exception_type_from_error_code)
 
-## Other Members
+## 其他成员
 -  `ABORTED = 10`  []()
 -  `ALREADY_EXISTS = 6`  []()
 -  `CANCELLED = 1`  []()

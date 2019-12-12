@@ -1,4 +1,4 @@
-Computes the confusion matrix from predictions and labels.
+根据预测和标签计算混淆矩阵。
 
 ```
  tf.math.confusion_matrix(
@@ -18,7 +18,7 @@ If  `num_classes`  is  `None` , then  `num_classes`  will be set to one plus the
 
 If  `weights`  is not  `None` , then each prediction contributes itscorresponding weight to the total value of the confusion matrix cell.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -33,7 +33,7 @@ If  `weights`  is not  `None` , then each prediction contributes itscorrespondin
 
 Note that the possible labels are assumed to be  `[0, 1, 2, 3, 4]` ,resulting in a 5x5 confusion matrix.
 
-#### Args:
+#### 参数：
 - **`labels`** : 1-D  `Tensor`  of real labels for the classification task.
 - **`predictions`** : 1-D  `Tensor`  of predictions for a given classification.
 - **`num_classes`** : The possible number of labels the classification task can         have. If this value is not provided, it will be calculated         using both predictions and labels array.
@@ -42,8 +42,8 @@ Note that the possible labels are assumed to be  `[0, 1, 2, 3, 4]` ,resulting in
 - **`name`** : Scope name.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `dtype`  with shape  `[n, n]`  representing the confusionmatrix, where  `n`  is the number of possible labels in the classificationtask.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both predictions and labels are not 1-D vectors and havemismatched shapes, or if  `weights`  is not  `None`  and its shape doesn'tmatch  `predictions` .

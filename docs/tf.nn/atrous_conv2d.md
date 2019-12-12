@@ -1,6 +1,6 @@
-Atrous convolution (a.k.a. convolution with holes or dilated convolution).
+萎缩卷曲（亦称有孔卷曲或扩张卷曲）。
 
-**Aliases** : [ `tf.compat.v1.nn.atrous_conv2d` ](/api_docs/python/tf/nn/atrous_conv2d), [ `tf.compat.v2.nn.atrous_conv2d` ](/api_docs/python/tf/nn/atrous_conv2d)
+**别名** : [ `tf.compat.v1.nn.atrous_conv2d` ](/api_docs/python/tf/nn/atrous_conv2d), [ `tf.compat.v2.nn.atrous_conv2d` ](/api_docs/python/tf/nn/atrous_conv2d)
 
 ```
  tf.nn.atrous_conv2d(
@@ -17,7 +17,7 @@ This function is a simpler wrapper around the more general[ `tf.nn.convolution` 
 
 Computes a 2-D atrous convolution, also known as convolution with holes ordilated convolution, given 4-D  `value`  and  `filters`  tensors. If the  `rate` parameter is equal to one, it performs regular 2-D convolution. If the  `rate` parameter is greater than one, it performs convolution with holes, samplingthe input values every  `rate`  pixels in the  `height`  and  `width`  dimensions.This is equivalent to convolving the input with a set of upsampled filters,produced by inserting  `rate - 1`  zeros between two consecutive values of thefilters along the  `height`  and  `width`  dimensions, hence the name atrousconvolution or convolution with holes (the French word trous means holes inEnglish).
 
-#### More specifically:
+#### 更具体地说：
 
 
 ```
@@ -40,7 +40,7 @@ There are many different ways to implement atrous convolution (see the refsabove
  
 ```
 
-to the following three operations:
+执行以下三个操作：
 
 ```
   )
@@ -58,7 +58,7 @@ Advanced usage. Note the following optimization: A sequence of  `atrous_conv2d` 
  
 ```
 
-can be equivalently performed cheaper in terms of computation and memory as:
+在计算和内存方面，可以等效地以更低的成本执行：
 
 ```
   )
@@ -70,7 +70,7 @@ can be equivalently performed cheaper in terms of computation and memory as:
 
 because a pair of consecutive  `space_to_batch`  and  `batch_to_space`  ops withthe same  `block_size`  cancel out when their respective  `paddings`  and  `crops` inputs are identical.
 
-#### Args:
+#### 参数：
 - **`value`** : A 4-D  `Tensor`  of type  `float` . It needs to be in the default "NHWC"format. Its shape is  `[batch, in_height, in_width, in_channels]` .
 - **`filters`** : A 4-D  `Tensor`  with the same type as  `value`  and shape `[filter_height, filter_width, in_channels, out_channels]` .  `filters` ' `in_channels`  dimension must match that of  `value` . Atrous convolution isequivalent to standard convolution with upsampled filters with effectiveheight  `filter_height + (filter_height - 1) * (rate - 1)`  and effectivewidth  `filter_width + (filter_width - 1) * (rate - 1)` , produced byinserting  `rate - 1`  zeros along consecutive elements across the `filters` ' spatial dimensions.
 - **`rate`** : A positive int32. The stride with which we sample input values acrossthe  `height`  and  `width`  dimensions. Equivalently, the rate by which weupsample the filter values by inserting zeros across the  `height`  and `width`  dimensions. In the literature, the same parameter is sometimescalled  `input stride`  or  `dilation` .
@@ -78,7 +78,7 @@ because a pair of consecutive  `space_to_batch`  and  `batch_to_space`  ops with
 - **`name`** : Optional name for the returned tensor.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `value` .Output shape with  `'VALID'`  padding is:
 
 ```
@@ -94,5 +94,5 @@ Output shape with  `'SAME'`  padding is:
  
 ```
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If input/output depth does not match  `filters` ' shape, or ifpadding is other than  `'VALID'`  or  `'SAME'` .

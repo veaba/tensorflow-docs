@@ -20,7 +20,7 @@ In detail, the grayscale morphological 2-D erosion is given by:
 
 Duality: The erosion of  `value`  by the  `kernel`  is equal to the negation ofthe dilation of  `-value`  by the reflected  `kernel` .
 
-#### Args:
+#### 参数：
 - **`value`** : A  `Tensor` . 4-D with shape  `[batch, in_height, in_width, depth]` .
 - **`kernel`** : A  `Tensor` . Must have the same type as  `value` .3-D with shape  `[kernel_height, kernel_width, depth]` .
 - **`strides`** : A list of  `ints`  that has length  `>= 4` .1-D of length 4. The stride of the sliding window for each dimension ofthe input tensor. Must be:  `[1, stride_height, stride_width, 1]` .
@@ -29,8 +29,8 @@ Duality: The erosion of  `value`  by the  `kernel`  is equal to the negation oft
 - **`name`** : A name for the operation (optional). If not specified "erosion2d"is used.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `value` .4-D with shape  `[batch, out_height, out_width, depth]` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `value`  depth does not match  `kernel` ' shape, or ifpadding is other than  `'VALID'`  or  `'SAME'` .

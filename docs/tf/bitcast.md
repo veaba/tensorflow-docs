@@ -1,6 +1,6 @@
-Bitcasts a tensor from one type to another without copying data.
+位将张量从一种类型转换到另一种类型，而不复制数据。
 
-**Aliases** : [ `tf.compat.v1.bitcast` ](/api_docs/python/tf/bitcast), [ `tf.compat.v2.bitcast` ](/api_docs/python/tf/bitcast)
+**别名** : [ `tf.compat.v1.bitcast` ](/api_docs/python/tf/bitcast), [ `tf.compat.v2.bitcast` ](/api_docs/python/tf/bitcast)
 
 ```
  tf.bitcast(
@@ -19,7 +19,7 @@ If  `T`  is smaller than  `type` , the operator requires that the rightmostdimen
 
 tf.bitcast() and tf.cast() work differently when real dtype is casted as a complex dtype(e.g. tf.complex64 or tf.complex128) as tf.cast() make imaginary part 0 while tf.bitcast()gives module error.For example,
 
-#### Example 1:
+#### 例1：
 
 
 ```
@@ -58,12 +58,12 @@ tf.bitcast() and tf.cast() work differently when real dtype is casted as a compl
 
 *NOTE*: Bitcast is implemented as a low-level cast, so machines with differentendian orderings will give different results.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int64` ,  `int32` ,  `uint8` ,  `uint16` ,  `uint32` ,  `uint64` ,  `int8` ,  `int16` ,  `complex64` ,  `complex128` ,  `qint8` ,  `quint8` ,  `qint16` ,  `quint16` ,  `qint32` .
 - **`type`** : A [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) from:  `tf.bfloat16, tf.half, tf.float32, tf.float64, tf.int64, tf.int32, tf.uint8, tf.uint16, tf.uint32, tf.uint64, tf.int8, tf.int16, tf.complex64, tf.complex128, tf.qint8, tf.quint8, tf.qint16, tf.quint16, tf.qint32` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `type` .
 

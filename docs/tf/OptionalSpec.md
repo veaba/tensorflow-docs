@@ -1,11 +1,11 @@
 
 
 ## Class  `OptionalSpec` 
-Represents an optional potentially containing a structured value.
+表示可能包含结构化值的可选值。
 
 Inherits From: [ `TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TypeSpec)
 
-**Aliases** : [ `tf.compat.v1.OptionalSpec` ](/api_docs/python/tf/OptionalSpec), [ `tf.compat.v1.data.experimental.OptionalStructure` ](/api_docs/python/tf/OptionalSpec), [ `tf.compat.v2.OptionalSpec` ](/api_docs/python/tf/OptionalSpec)
+**别名** : [ `tf.compat.v1.OptionalSpec` ](/api_docs/python/tf/OptionalSpec), [ `tf.compat.v1.data.experimental.OptionalStructure` ](/api_docs/python/tf/OptionalSpec), [ `tf.compat.v2.OptionalSpec` ](/api_docs/python/tf/OptionalSpec)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/optional_ops.py#L169-L170)
@@ -17,13 +17,13 @@ Inherits From: [ `TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/Ty
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `value_type` 
-The Python type for values that are compatible with this TypeSpec.
+与此类型规范兼容的值的python类型。
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -75,9 +75,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

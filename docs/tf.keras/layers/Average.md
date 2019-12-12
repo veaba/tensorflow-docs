@@ -1,9 +1,9 @@
 
 
 ## Class  `Average` 
-Layer that averages a list of inputs.
+平均输入列表的层。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Average` ](/api_docs/python/tf/keras/layers/Average), [ `tf.compat.v2.keras.layers.Average` ](/api_docs/python/tf/keras/layers/Average)
+**别名** : [ `tf.compat.v1.keras.layers.Average` ](/api_docs/python/tf/keras/layers/Average), [ `tf.compat.v2.keras.layers.Average` ](/api_docs/python/tf/keras/layers/Average)
 
 It takes as input a list of tensors,all of the same shape, and returnsa single tensor (also of the same shape).
 
@@ -17,7 +17,7 @@ It takes as input a list of tensors,all of the same shape, and returnsa single t
 
 Functional interface to the  `Average`  layer.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.average` ](/api_docs/python/tf/keras/layers/average), [ `tf.compat.v2.keras.layers.average` ](/api_docs/python/tf/keras/layers/average)
+**别名** : [ `tf.compat.v1.keras.layers.average` ](/api_docs/python/tf/keras/layers/average), [ `tf.compat.v2.keras.layers.average` ](/api_docs/python/tf/keras/layers/average)
 
 ```
  tf.keras.layers.average(
@@ -27,15 +27,15 @@ Functional interface to the  `Average`  layer.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : A list of input tensors (at least 2).
 - **`**kwargs`** : Standard layer keyword arguments.
 
 
-#### Returns:
+#### 返回：
 A tensor, the average of the inputs.
 

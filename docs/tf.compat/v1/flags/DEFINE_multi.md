@@ -1,4 +1,4 @@
-Registers a generic MultiFlag that parses its args with a given parser.
+注册一个通用的多重标记，用给定的解析器解析其参数。
 
 ```
  tf.compat.v1.flags.DEFINE_multi(
@@ -18,7 +18,7 @@ Auxiliary function.  Normal users should NOT use it directly.
 
 Developers who need to create their own 'Parser' classes for optionswhich can appear multiple times can call this module function toregister their flags.
 
-#### Args:
+#### 参数：
 - **`parser`** : ArgumentParser, used to parse the flag arguments.
 - **`serializer`** : ArgumentSerializer, the flag serializer instance.
 - **`name`** : str, the flag name.

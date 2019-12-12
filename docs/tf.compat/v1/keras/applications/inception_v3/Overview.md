@@ -1,6 +1,6 @@
-Inception V3 model for Keras.
+用于Keras的Inception V3模型。
 
-## Functions
+## 功能
 [ `InceptionV3(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/InceptionV3)
 
 [ `decode_predictions(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/inception_v3/decode_predictions)

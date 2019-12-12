@@ -1,9 +1,9 @@
 
 
 ## Class  `SecondOrStepTimer` 
-Timer that triggers at most once every N seconds or once every N steps.
+每N秒或每N步最多触发一次的计时器。
 
-**Aliases** : [ `tf.compat.v1.estimator.SecondOrStepTimer` ](/api_docs/python/tf/estimator/SecondOrStepTimer), [ `tf.compat.v1.train.SecondOrStepTimer` ](/api_docs/python/tf/estimator/SecondOrStepTimer), [ `tf.compat.v2.estimator.SecondOrStepTimer` ](/api_docs/python/tf/estimator/SecondOrStepTimer)
+**别名** : [ `tf.compat.v1.estimator.SecondOrStepTimer` ](/api_docs/python/tf/estimator/SecondOrStepTimer), [ `tf.compat.v1.train.SecondOrStepTimer` ](/api_docs/python/tf/estimator/SecondOrStepTimer), [ `tf.compat.v2.estimator.SecondOrStepTimer` ](/api_docs/python/tf/estimator/SecondOrStepTimer)
 
 This symbol is also exported to v2 in tf.estimator namespace. Seehttps://github.com/tensorflow/estimator/blob/master/tensorflow_estimator/python/estimator/hooks/basic_session_run_hooks.py
 
@@ -20,7 +20,7 @@ This symbol is also exported to v2 in tf.estimator namespace. Seehttps://github.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `last_triggered_step` 
@@ -31,7 +31,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Returns the last triggered time step or None if never triggered.
+返回上次触发的时间步，如果从未触发，则返回“无”。
 
 ###  `reset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/basic_session_run_hooks.py#L110-L112)
@@ -41,7 +41,7 @@ Returns the last triggered time step or None if never triggered.
  
 ```
 
-Resets the timer.
+重置计时器。
 
 ###  `should_trigger_for_step` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/basic_session_run_hooks.py#L114-L139)
@@ -51,13 +51,13 @@ Resets the timer.
  
 ```
 
-Return true if the timer should trigger for the specified step.
+如果计时器应为指定步骤触发，则返回true。
 
-#### Args:
+#### 参数：
 - **`step`** : Training step to trigger on.
 
 
-#### Returns:
+#### 返回：
 True if the difference between the current time and the time of the lasttrigger exceeds  `every_secs` , or if the difference between the currentstep and the last triggered step exceeds  `every_steps` . False otherwise.
 
 ###  `update_last_triggered_step` 
@@ -68,12 +68,12 @@ True if the difference between the current time and the time of the lasttrigger 
  
 ```
 
-Update the last triggered time and step number.
+更新上次触发的时间和步骤号。
 
-#### Args:
+#### 参数：
 - **`step`** : The current step.
 
 
-#### Returns:
+#### 返回：
 A pair  `(elapsed_time, elapsed_steps)` , where  `elapsed_time`  is the numberof seconds between the current trigger and the last one (a float), and `elapsed_steps`  is the number of steps between the current trigger andthe last one. Both values will be set to  `None`  on the first trigger.
 

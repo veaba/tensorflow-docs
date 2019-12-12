@@ -1,13 +1,13 @@
-Returns the device name for a core in a replicated TPU computation.
+返回复制的TPU计算中核心的设备名。
 
 ```
  tf.compat.v1.tpu.core(num) 
 ```
 
-#### Args:
+#### 参数：
 - **`num`** : the virtual core number within each replica to which operators shouldbe assigned.
 
 
-#### Returns:
+#### 返回：
 A device name, suitable for passing to [ `tf.device()` ](https://tensorflow.google.cn/api_docs/python/tf/device).
 

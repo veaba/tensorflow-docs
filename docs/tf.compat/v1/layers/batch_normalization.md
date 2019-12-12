@@ -53,7 +53,7 @@ Sergey Ioffe, Christian Szegedy
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Tensor input.
 - **`axis`** : An  `int` , the axis that should be normalized (typically the featuresaxis). For instance, after a  `Convolution2D`  layer with `data_format="channels_first"` , set  `axis=1`  in  `BatchNormalization` .
 - **`momentum`** : Momentum for the moving average.
@@ -80,8 +80,8 @@ Sergey Ioffe, Christian Szegedy
 - **`adjustment`** : A function taking the  `Tensor`  containing the (dynamic) shape ofthe input tensor and returning a pair (scale, bias) to apply to thenormalized values (before gamma and beta), only during training. Forexample, if axis==-1, `adjustment = lambda shape: (  tf.random.uniform(shape[-1:], 0.93, 1.07),  tf.random.uniform(shape[-1:], -0.1, 0.1))` will scale the normalized value by up to 7% up or down, then shift theresult by up to 0.1 (with independent scaling and bias for each featurebut shared across all examples), and finally apply gamma and/or beta. If `None` , no adjustment is applied. Cannot be specified ifvirtual_batch_size is specified.
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

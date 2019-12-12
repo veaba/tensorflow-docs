@@ -1,6 +1,6 @@
-MobileNet v2 models for Keras.
+用于Keras的Mobilenet V2型号。
 
-## Functions
+## 功能
 [ `MobileNetV2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/MobileNetV2)
 
 [ `decode_predictions(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/mobilenet_v2/decode_predictions)

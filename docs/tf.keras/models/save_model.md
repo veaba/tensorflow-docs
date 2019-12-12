@@ -1,6 +1,6 @@
-Saves a model as a TensorFlow SavedModel or HDF5 file.
+将模型保存为TensorFlow SavedModel或HDF5文件。
 
-**Aliases** : [ `tf.compat.v1.keras.models.save_model` ](/api_docs/python/tf/keras/models/save_model), [ `tf.compat.v2.keras.models.save_model` ](/api_docs/python/tf/keras/models/save_model)
+**别名** : [ `tf.compat.v1.keras.models.save_model` ](/api_docs/python/tf/keras/models/save_model), [ `tf.compat.v2.keras.models.save_model` ](/api_docs/python/tf/keras/models/save_model)
 
 ```
  tf.keras.models.save_model(
@@ -23,7 +23,7 @@ Thus the saved model can be reinstantiated inthe exact same state, without any o
 
 The SavedModel serialization path uses [ `tf.saved_model.save` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/save) to save the modeland all trackable objects attached to the model (e.g. layers and variables). `@tf.function` -decorated methods are also saved. Additional trackable objectsand functions are added to the SavedModel to allow the model to beloaded back as a Keras Model object.
 
-#### Arguments:
+#### 参数：
 - **`model`** : Keras model instance to be saved.
 - **`filepath`** : One of the following:
 - **`overwrite`** : Whether we should overwrite any existing model at the targetlocation, or instead ask the user with a manual prompt.
@@ -35,5 +35,5 @@ The SavedModel serialization path uses [ `tf.saved_model.save` ](https://tensorf
     -  `h5py.File`  object where to save the model
 
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : If save format is hdf5, and h5py is not available.

@@ -1,6 +1,6 @@
-Decompress strings.
+解压缩字符串。
 
-**Aliases** : [ `tf.compat.v1.decode_compressed` ](/api_docs/python/tf/io/decode_compressed), [ `tf.compat.v1.io.decode_compressed` ](/api_docs/python/tf/io/decode_compressed), [ `tf.compat.v2.io.decode_compressed` ](/api_docs/python/tf/io/decode_compressed)
+**别名** : [ `tf.compat.v1.decode_compressed` ](/api_docs/python/tf/io/decode_compressed), [ `tf.compat.v1.io.decode_compressed` ](/api_docs/python/tf/io/decode_compressed), [ `tf.compat.v2.io.decode_compressed` ](/api_docs/python/tf/io/decode_compressed)
 
 ```
  tf.io.decode_compressed(
@@ -15,12 +15,12 @@ This op decompresses each element of the  `bytes`  input  `Tensor` , whichis ass
 
 The  `output`  is a string  `Tensor`  of the same shape as  `bytes` ,each element containing the decompressed data from the correspondingelement in  `bytes` .
 
-#### Args:
+#### 参数：
 - **`bytes`** : A  `Tensor`  of type  `string` .A Tensor of string which is compressed.
 - **`compression_type`** : An optional  `string` . Defaults to  `""` .A scalar containing either (i) the empty string (nocompression), (ii) "ZLIB", or (iii) "GZIP".
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

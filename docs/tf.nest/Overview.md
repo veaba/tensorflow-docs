@@ -1,6 +1,6 @@
-Public API for tf.nest namespace.
+tf.nest命名空间的公共api。
 
-## Functions
+## 功能
 [ `assert_same_structure(...)` ](https://tensorflow.google.cn/api_docs/python/tf/nest/assert_same_structure): Asserts that two structures are nested in the same way.
 
 [ `flatten(...)` ](https://tensorflow.google.cn/api_docs/python/tf/nest/flatten): Returns a flat list from a given nested structure.

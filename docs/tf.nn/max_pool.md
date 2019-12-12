@@ -1,6 +1,6 @@
-Performs the max pooling on the input.
+对输入执行最大池。
 
-**Aliases** : [ `tf.compat.v1.nn.max_pool_v2` ](/api_docs/python/tf/nn/max_pool), [ `tf.compat.v2.nn.max_pool` ](/api_docs/python/tf/nn/max_pool)
+**别名** : [ `tf.compat.v1.nn.max_pool_v2` ](/api_docs/python/tf/nn/max_pool), [ `tf.compat.v2.nn.max_pool` ](/api_docs/python/tf/nn/max_pool)
 
 ```
  tf.nn.max_pool(
@@ -14,7 +14,7 @@ Performs the max pooling on the input.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** :  Tensor of rank N+2, of shape  `[batch_size] + input_spatial_shape +[num_channels]`  if  `data_format`  does not start with "NC" (default), or `[batch_size, num_channels] + input_spatial_shape`  if data_format startswith "NC". Pooling happens over the spatial dimensions only.
 - **`ksize`** : An int or list of  `ints`  that has length  `1` ,  `N`  or  `N+2` . The sizeof the window for each dimension of the input tensor.
 - **`strides`** : An int or list of  `ints`  that has length  `1` ,  `N`  or  `N+2` . Thestride of the sliding window for each dimension of the input tensor.
@@ -23,6 +23,6 @@ Performs the max pooling on the input.
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of format specified by  `data_format` .The max pooled output tensor.
 

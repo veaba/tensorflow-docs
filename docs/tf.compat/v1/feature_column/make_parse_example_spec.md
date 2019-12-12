@@ -7,7 +7,7 @@ Creates parsing spec dictionary from input feature_columns.
 
 The returned dictionary can be used as arg 'features' in[ `tf.io.parse_example` ](https://tensorflow.google.cn/api_docs/python/tf/io/parse_example).
 
-#### Typical usage example:
+#### 典型用法示例：
 
 
 ```
@@ -37,12 +37,12 @@ For the above example, make_parse_example_spec would return the dict:
  
 ```
 
-#### Args:
+#### 参数：
 - **`feature_columns`** : An iterable containing all feature columns. All itemsshould be instances of classes derived from  `_FeatureColumn` .
 
 
-#### Returns:
+#### 返回：
 A dict mapping each feature key to a  `FixedLenFeature`  or  `VarLenFeature` value.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If any of the given  `feature_columns`  is not a  `_FeatureColumn` instance.

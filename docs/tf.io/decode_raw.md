@@ -1,10 +1,10 @@
-Convert raw byte strings into tensors.
+将原始字节字符串转换为张量。
 
 ```
  tf.io.decode_raw(    input_bytes,    out_type,    little_endian=True,    fixed_length=None,    name=None) 
 ```
 
-#### Args:
+#### 参数：
 - **`input_bytes`** :   Each element of the input Tensor is converted to an array of bytes.
 - **`out_type`** :    `DType`  of the output. Acceptable types are  `half` ,  `float` ,  `double` , `int32` ,  `uint16` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` .
 - **`little_endian`** :   Whether the  `input_bytes`  data is in little-endian format. Data will beconverted into host byte order if necessary.
@@ -16,6 +16,6 @@ Convert raw byte strings into tensors.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  object storing the decoded bytes.
 

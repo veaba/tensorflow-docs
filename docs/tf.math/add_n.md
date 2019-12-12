@@ -1,6 +1,6 @@
 Adds all input tensors element-wise.
 
-**Aliases** : [ `tf.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v1.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v1.math.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v2.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v2.math.add_n` ](/api_docs/python/tf/math/add_n)
+**别名** : [ `tf.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v1.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v1.math.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v2.add_n` ](/api_docs/python/tf/math/add_n), [ `tf.compat.v2.math.add_n` ](/api_docs/python/tf/math/add_n)
 
 ```
  tf.math.add_n(
@@ -10,12 +10,12 @@ Adds all input tensors element-wise.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Neural style transfer](https://tensorflow.google.cn/tutorials/generative/style_transfer)
 - [Overfit and underfit](https://tensorflow.google.cn/tutorials/keras/overfit_and_underfit)
 Converts  `IndexedSlices`  objects into dense tensors prior to adding.
@@ -24,7 +24,7 @@ Converts  `IndexedSlices`  objects into dense tensors prior to adding.
 
 This op does not [broadcast](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html)its inputs. If you need broadcasting, use [ `tf.math.add` ](https://tensorflow.google.cn/api_docs/python/tf/math/add) (or the  `+`  operator)instead.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -34,13 +34,13 @@ tf.math.add_n([a, b, a])  # [[7, 16], [10, 25]]
  
 ```
 
-#### Args:
+#### 参数：
 - **`inputs`** : A list of [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) or [ `tf.IndexedSlices` ](https://tensorflow.google.cn/api_docs/python/tf/IndexedSlices) objects, each with sameshape and type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of same shape and type as the elements of  `inputs` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `inputs`  don't all have same shape and dtype or the shapecannot be inferred.

@@ -1,6 +1,6 @@
-Compute gradients for a FakeQuantWithMinMaxVars operation.
+计算fakequantwithminmaxvars操作的渐变。
 
-**Aliases** : [ `tf.compat.v1.fake_quant_with_min_max_vars_gradient` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient), [ `tf.compat.v1.quantization.fake_quant_with_min_max_vars_gradient` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient), [ `tf.compat.v2.quantization.fake_quant_with_min_max_vars_gradient` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient)
+**别名** : [ `tf.compat.v1.fake_quant_with_min_max_vars_gradient` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient), [ `tf.compat.v1.quantization.fake_quant_with_min_max_vars_gradient` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient), [ `tf.compat.v2.quantization.fake_quant_with_min_max_vars_gradient` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient)
 
 ```
  tf.quantization.fake_quant_with_min_max_vars_gradient(
@@ -15,7 +15,7 @@ Compute gradients for a FakeQuantWithMinMaxVars operation.
  
 ```
 
-#### Args:
+#### 参数：
 - **`gradients`** : A  `Tensor`  of type  `float32` .Backpropagated gradients above the FakeQuantWithMinMaxVars operation.
 - **`inputs`** : A  `Tensor`  of type  `float32` .Values passed as inputs to the FakeQuantWithMinMaxVars operation.min, max: Quantization interval, scalar floats.
 - **`min`** : A  `Tensor`  of type  `float32` .
@@ -25,7 +25,7 @@ Compute gradients for a FakeQuantWithMinMaxVars operation.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (backprops_wrt_input, backprop_wrt_min, backprop_wrt_max).
 
 - **`backprops_wrt_input`** : A  `Tensor`  of type  `float32` .

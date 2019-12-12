@@ -1,10 +1,10 @@
-Performs the max pooling on the input.
+对输入执行最大池。
 
 ```
  tf.compat.v1.nn.max_pool(    value,    ksize,    strides,    padding,    data_format='NHWC',    name=None,    input=None) 
 ```
 
-#### Args:
+#### 参数：
 - **`value`** : A 4-D  `Tensor`  of the format specified by  `data_format` .
 - **`ksize`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` .The size of the window for each dimension of the input tensor.
 - **`strides`** : An int or list of  `ints`  that has length  `1` ,  `2`  or  `4` .The stride of the sliding window for each dimension of the input tensor.
@@ -14,6 +14,6 @@ Performs the max pooling on the input.
 - **`input`** : Alias for value.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of format specified by  `data_format` .The max pooled output tensor.
 

@@ -1,6 +1,6 @@
 Decode and Crop a JPEG-encoded image to a uint8 tensor.
 
-**Aliases** : [ `tf.compat.v1.image.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.compat.v1.io.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.compat.v2.image.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.compat.v2.io.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.image.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg)
+**别名** : [ `tf.compat.v1.image.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.compat.v1.io.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.compat.v2.image.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.compat.v2.io.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg), [ `tf.image.decode_and_crop_jpeg` ](/api_docs/python/tf/io/decode_and_crop_jpeg)
 
 ```
  tf.io.decode_and_crop_jpeg(
@@ -19,7 +19,7 @@ Decode and Crop a JPEG-encoded image to a uint8 tensor.
 
 The attr  `channels`  indicates the desired number of color channels for thedecoded image.
 
-#### Accepted values are:
+#### 接受值为：
 - 0: Use the number of channels in the JPEG-encoded image.
 - 1: output a grayscale image.
 - 3: output an RGB image.
@@ -29,7 +29,7 @@ The attr  `ratio`  allows downscaling the image by an integer factor duringdecod
 
 It is equivalent to a combination of decode and crop, but much faster by onlydecoding partial jpeg image.
 
-#### Args:
+#### 参数：
 - **`contents`** : A  `Tensor`  of type  `string` . 0-D.  The JPEG-encoded image.
 - **`crop_window`** : A  `Tensor`  of type  `int32` .1-D.  The crop window: [crop_y, crop_x, crop_height, crop_width].
 - **`channels`** : An optional  `int` . Defaults to  `0` .Number of color channels for the decoded image.
@@ -41,6 +41,6 @@ It is equivalent to a combination of decode and crop, but much faster by onlydec
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `uint8` .
 

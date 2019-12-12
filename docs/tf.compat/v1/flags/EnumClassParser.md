@@ -1,7 +1,7 @@
 
 
 ## Class  `EnumClassParser` 
-Parser of an Enum class member.
+枚举类成员的分析器。
 
 Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentParser)
 
@@ -13,18 +13,18 @@ Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python
  
 ```
 
-Initializes EnumParser.
+初始化枚举分析器。
 
-#### Args:
+#### 参数：
 - **`enum_class`** : class, the Enum class with all possible flag values.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : When enum_class is not a subclass of Enum.
 - **`ValueError`** : When enum_class is empty.
 
 
-## Methods
+## 方法
 
 
 ###  `flag_type` 
@@ -35,7 +35,7 @@ Initializes EnumParser.
  
 ```
 
-See base class.
+见基类。
 
 ###  `parse` 
 
@@ -45,14 +45,14 @@ See base class.
  
 ```
 
-Determines validity of argument and returns the correct element of enum.
+确定参数的有效性并返回枚举的正确元素。
 
-#### Args:
+#### 参数：
 - **`argument`** : str or Enum class member, the supplied flag value.
 
 
-#### Returns:
-The first matching Enum class member in Enum class.
+#### 返回：
+枚举类中第一个匹配的枚举类成员。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : Raised when argument didn't match anything in enum.

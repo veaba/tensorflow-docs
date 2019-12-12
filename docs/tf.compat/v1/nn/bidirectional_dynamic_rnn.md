@@ -21,7 +21,7 @@ Creates a dynamic version of bidirectional recurrent neural network. (deprecated
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Please use  `keras.layers.Bidirectional(keras.layers.RNN(cell))` , which is equivalent to this API
 Takes input and builds independent forward and backward RNNs. The input_sizeof forward and backward cell must match. The initial state for both directionsis zero by default (but can be set optionally) and no intermediate states areever returned -- the network is fully unrolled for the given (passed in)length(s) of the sequence(s) or completely unrolled if length(s) is notgiven.
 
-#### Args:
+#### 参数：
 - **`cell_fw`** : An instance of RNNCell, to be used for forward direction.
 - **`cell_bw`** : An instance of RNNCell, to be used for backward direction.
 - **`inputs`** : The RNN inputs.If time_major == False (default), this must be a tensor of shape: `[batch_size, max_time, ...]` , or a nested tuple of such elements.If time_major == True, this must be a tensor of shape:  `[max_time,batch_size, ...]` , or a nested tuple of such elements.
@@ -35,8 +35,8 @@ Takes input and builds independent forward and backward RNNs. The input_sizeof f
 - **`scope`** : VariableScope for the created subgraph; defaults to"bidirectional_rnn"
 
 
-#### Returns:
+#### 返回：
 A tuple (outputs, output_states) where:  outputs: A tuple (output_fw, output_bw) containing the forward and    the backward rnn output  `Tensor` .    If time_major == False (default),      output_fw will be a  `Tensor`  shaped:       `[batch_size, max_time, cell_fw.output_size]`       and output_bw will be a  `Tensor`  shaped:       `[batch_size, max_time, cell_bw.output_size]` .    If time_major == True,      output_fw will be a  `Tensor`  shaped:       `[max_time, batch_size, cell_fw.output_size]`       and output_bw will be a  `Tensor`  shaped:       `[max_time, batch_size, cell_bw.output_size]` .    It returns a tuple instead of a single concatenated  `Tensor` , unlike    in the  `bidirectional_rnn` . If the concatenated one is preferred,    the forward and backward outputs can be concatenated as    [ `tf.concat(outputs, 2)` ](https://tensorflow.google.cn/api_docs/python/tf/concat).  output_states: A tuple (output_state_fw, output_state_bw) containing    the forward and the backward final states of bidirectional rnn.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `cell_fw`  or  `cell_bw`  is not an instance of  `RNNCell` .

@@ -1,6 +1,6 @@
 Returns the single element in  `dataset`  as a nested structure of tensors.
 
-**Aliases** : [ `tf.compat.v1.data.experimental.get_single_element` ](/api_docs/python/tf/data/experimental/get_single_element), [ `tf.compat.v2.data.experimental.get_single_element` ](/api_docs/python/tf/data/experimental/get_single_element)
+**别名** : [ `tf.compat.v1.data.experimental.get_single_element` ](/api_docs/python/tf/data/experimental/get_single_element), [ `tf.compat.v2.data.experimental.get_single_element` ](/api_docs/python/tf/data/experimental/get_single_element)
 
 ```
  tf.data.experimental.get_single_element(dataset)
@@ -24,12 +24,12 @@ image_batch, label_batch = tf.data.experimental.get_single_element(dataset)
  
 ```
 
-#### Args:
+#### 参数：
 - **`dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) object containing a single element.
 
 
-#### Returns:
+#### 返回：
 A nested structure of [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects, corresponding to the singleelement of  `dataset` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `dataset`  is not a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) object.InvalidArgumentError (at runtime): if  `dataset`  does not contain exactlyone element.

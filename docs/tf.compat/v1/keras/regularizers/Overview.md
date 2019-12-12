@@ -1,11 +1,11 @@
 Built-in regularizers.
 
-## Classes
+## Class 
 [ `class L1L2` ](https://tensorflow.google.cn/api_docs/python/tf/keras/regularizers/L1L2): Regularizer for L1 and L2 regularization.
 
 [ `class Regularizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/regularizers/Regularizer): Regularizer base class.
 
-## Functions
+## 功能
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/regularizers/deserialize)
 
 [ `get(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/regularizers/get)

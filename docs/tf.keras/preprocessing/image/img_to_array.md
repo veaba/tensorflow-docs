@@ -1,6 +1,6 @@
-Converts a PIL Image instance to a Numpy array.
+将pil图像实例转换为numpy数组。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.img_to_array` ](/api_docs/python/tf/keras/preprocessing/image/img_to_array), [ `tf.compat.v2.keras.preprocessing.image.img_to_array` ](/api_docs/python/tf/keras/preprocessing/image/img_to_array)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.img_to_array` ](/api_docs/python/tf/keras/preprocessing/image/img_to_array), [ `tf.compat.v2.keras.preprocessing.image.img_to_array` ](/api_docs/python/tf/keras/preprocessing/image/img_to_array)
 
 ```
  tf.keras.preprocessing.image.img_to_array(
@@ -11,22 +11,22 @@ Converts a PIL Image instance to a Numpy array.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
 
 
-#### Arguments:
+#### 参数：
 - **`img`** : PIL Image instance.
 - **`data_format`** : Image data format,either "channels_first" or "channels_last".
 - **`dtype`** : Dtype to use for the returned array.
 
 
-#### Returns:
-A 3D Numpy array.
+#### 返回：
+三维核阵列。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if invalid  `img`  or  `data_format`  is passed.

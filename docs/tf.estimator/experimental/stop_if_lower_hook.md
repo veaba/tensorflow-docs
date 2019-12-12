@@ -1,6 +1,6 @@
 Creates hook to stop if the given metric is lower than the threshold.
 
-**Aliases** : [ `tf.compat.v1.estimator.experimental.stop_if_lower_hook` ](/api_docs/python/tf/estimator/experimental/stop_if_lower_hook), [ `tf.compat.v2.estimator.experimental.stop_if_lower_hook` ](/api_docs/python/tf/estimator/experimental/stop_if_lower_hook)
+**别名** : [ `tf.compat.v1.estimator.experimental.stop_if_lower_hook` ](/api_docs/python/tf/estimator/experimental/stop_if_lower_hook), [ `tf.compat.v2.estimator.experimental.stop_if_lower_hook` ](/api_docs/python/tf/estimator/experimental/stop_if_lower_hook)
 
 ```
  tf.estimator.experimental.stop_if_lower_hook(
@@ -15,7 +15,7 @@ Creates hook to stop if the given metric is lower than the threshold.
  
 ```
 
-#### Usage example:
+#### 用法示例：
 
 
 ```
@@ -29,7 +29,7 @@ tf.estimator.train_and_evaluate(estimator, train_spec, ...)
 
 Caveat: Current implementation supports early-stopping both training andevaluation in local mode. In distributed mode, training can be stopped butevaluation (where it's a separate job) will indefinitely wait for new modelcheckpoints to evaluate, so you will need other means to detect and stop it.Early-stopping evaluation in distributed mode requires changes in `train_and_evaluate`  API and will be addressed in a future revision.
 
-#### Args:
+#### 参数：
 - **`estimator`** : A [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) instance.
 - **`metric_name`** :  `str` , metric to track. "loss", "accuracy", etc.
 - **`threshold`** : Numeric threshold for the given metric.
@@ -39,6 +39,6 @@ Caveat: Current implementation supports early-stopping both training andevaluati
 - **`run_every_steps`** : If specified, calls  `should_stop_fn`  every `run_every_steps`  steps. Either this or  `run_every_secs`  must be set.
 
 
-#### Returns:
+#### 返回：
 An early-stopping hook of type  `SessionRunHook`  that periodically checksif the given metric is lower than specified threshold and initiatesearly stopping if true.
 

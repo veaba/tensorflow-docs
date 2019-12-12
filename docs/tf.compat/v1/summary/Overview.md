@@ -2,7 +2,7 @@ Operations for writing summary data, for use in analysis and visualization.
 
 See the [Summaries andTensorBoard](https://tensorflow.google.cn/guide/summaries_and_tensorboard) guide.
 
-## Classes
+## Class 
 [ `class Event` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Event): A ProtocolMessage
 
 [ `class FileWriter` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/FileWriter): Writes  `Summary`  protocol buffers to event files.
@@ -17,7 +17,7 @@ See the [Summaries andTensorBoard](https://tensorflow.google.cn/guide/summaries_
 
 [ `class TaggedRunMetadata` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/TaggedRunMetadata): A ProtocolMessage
 
-## Functions
+## 功能
 [ `all_v2_summary_ops(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/all_v2_summary_ops): Returns all V2-style summary ops defined in the current default graph.
 
 [ `audio(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/audio): Outputs a  `Summary`  protocol buffer with audio.

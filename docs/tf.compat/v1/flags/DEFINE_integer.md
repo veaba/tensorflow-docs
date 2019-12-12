@@ -1,4 +1,4 @@
-Registers a flag whose value must be an integer.
+注册一个标志，其值必须是整数。
 
 ```
  tf.compat.v1.flags.DEFINE_integer(
@@ -15,7 +15,7 @@ Registers a flag whose value must be an integer.
 
 If lower_bound, or upper_bound are set, then this flag must bewithin the given range.
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : int|str|None, the default value of the flag.
 - **`help`** : str, the help message.

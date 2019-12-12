@@ -1,6 +1,6 @@
-Instantiates a Keras model from its config.
+从配置中实例化keras模型。
 
-**Aliases** : [ `tf.compat.v1.keras.models.model_from_config` ](/api_docs/python/tf/keras/models/model_from_config), [ `tf.compat.v2.keras.models.model_from_config` ](/api_docs/python/tf/keras/models/model_from_config)
+**别名** : [ `tf.compat.v1.keras.models.model_from_config` ](/api_docs/python/tf/keras/models/model_from_config), [ `tf.compat.v2.keras.models.model_from_config` ](/api_docs/python/tf/keras/models/model_from_config)
 
 ```
  tf.keras.models.model_from_config(
@@ -10,13 +10,13 @@ Instantiates a Keras model from its config.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`config`** : Configuration dictionary.
 - **`custom_objects`** : Optional dictionary mapping names(strings) to custom classes or functions to beconsidered during deserialization.
 
 
-#### Returns:
-A Keras model instance (uncompiled).
+#### 返回：
+Keras模型实例（未编译）。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `config`  is not a dictionary.

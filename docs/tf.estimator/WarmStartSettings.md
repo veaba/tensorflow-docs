@@ -3,7 +3,7 @@
 ## Class  `WarmStartSettings` 
 Settings for warm-starting in  `tf.estimator.Estimators` .
 
-**Aliases** : [ `tf.compat.v1.estimator.WarmStartSettings` ](/api_docs/python/tf/estimator/WarmStartSettings), [ `tf.compat.v2.estimator.WarmStartSettings` ](/api_docs/python/tf/estimator/WarmStartSettings)
+**别名** : [ `tf.compat.v1.estimator.WarmStartSettings` ](/api_docs/python/tf/estimator/WarmStartSettings), [ `tf.compat.v2.estimator.WarmStartSettings` ](/api_docs/python/tf/estimator/WarmStartSettings)
 
 Example Use with canned [ `tf.estimator.DNNEstimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/DNNEstimator):
 
@@ -115,7 +115,7 @@ Warm-start non-TRAINABLE variables "v1", "v1/Momentum", and "v2" but not"v2/mome
  
 ```
 
-#### Attributes:
+#### 属性：
 - **`ckpt_to_initialize_from`** : [Required] A string specifying the directory withcheckpoint file(s) or path to checkpoint from which to warm-start themodel parameters.
 - **`vars_to_warm_start`** : [Optional] One of the following:
 
@@ -151,7 +151,7 @@ __new__(
 
 Create new instance of WarmStartSettings(ckpt_to_initialize_from, vars_to_warm_start, var_name_to_vocab_info, var_name_to_prev_var_name)
 
-## Properties
+## 属性
 
 
 ###  `ckpt_to_initialize_from` 

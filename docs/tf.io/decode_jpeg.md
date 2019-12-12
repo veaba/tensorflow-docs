@@ -1,6 +1,6 @@
 Decode a JPEG-encoded image to a uint8 tensor.
 
-**Aliases** : [ `tf.compat.v1.image.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.compat.v1.io.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.compat.v2.image.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.compat.v2.io.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.image.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg)
+**别名** : [ `tf.compat.v1.image.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.compat.v1.io.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.compat.v2.image.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.compat.v2.io.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg), [ `tf.image.decode_jpeg` ](/api_docs/python/tf/io/decode_jpeg)
 
 ```
  tf.io.decode_jpeg(
@@ -16,18 +16,18 @@ Decode a JPEG-encoded image to a uint8 tensor.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 - [Load images](https://tensorflow.google.cn/tutorials/load_data/images)
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 The attr  `channels`  indicates the desired number of color channels for thedecoded image.
 
-#### Accepted values are:
+#### 接受值为：
 - 0: Use the number of channels in the JPEG-encoded image.
 - 1: output a grayscale image.
 - 3: output an RGB image.
@@ -37,7 +37,7 @@ The attr  `ratio`  allows downscaling the image by an integer factor duringdecod
 
 This op also supports decoding PNGs and non-animated GIFs since the interface isthe same, though it is cleaner to use [ `tf.image.decode_image` ](https://tensorflow.google.cn/api_docs/python/tf/io/decode_image).
 
-#### Args:
+#### 参数：
 - **`contents`** : A  `Tensor`  of type  `string` . 0-D.  The JPEG-encoded image.
 - **`channels`** : An optional  `int` . Defaults to  `0` .Number of color channels for the decoded image.
 - **`ratio`** : An optional  `int` . Defaults to  `1` . Downscaling ratio.
@@ -48,6 +48,6 @@ This op also supports decoding PNGs and non-animated GIFs since the interface is
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `uint8` .
 

@@ -1,9 +1,9 @@
-Public API for tf.random namespace.
+tf.random命名空间的公共api。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/random/experimental) module: Public API for tf.random.experimental namespace.
 
-## Functions
+## 功能
 [ `all_candidate_sampler(...)` ](https://tensorflow.google.cn/api_docs/python/tf/random/all_candidate_sampler): Generate the set of all classes.
 
 [ `categorical(...)` ](https://tensorflow.google.cn/api_docs/python/tf/random/categorical): Draws samples from a categorical distribution.

@@ -1,6 +1,6 @@
-Returns a column for performing crosses of categorical features.
+返回一列，用于执行分类功能的交叉。
 
-**Aliases** : [ `tf.compat.v1.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column), [ `tf.compat.v2.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column)
+**别名** : [ `tf.compat.v1.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column), [ `tf.compat.v2.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column)
 
 ```
  tf.feature_column.crossed_column(
@@ -11,7 +11,7 @@ Returns a column for performing crosses of categorical features.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
 - [Build a linear model with Estimators](https://tensorflow.google.cn/tutorials/estimator/linear)
 Crossed features will be hashed according to  `hash_bucket_size` . Conceptually,the transformation can be thought of as:  Hash(cartesian product of features) %  `hash_bucket_size` 
@@ -43,7 +43,7 @@ For example, if the input features are:
  
 ```
 
-then crossed feature will look like:
+然后交叉特征看起来像：
 
 ```
   shape = [2, 2]
@@ -55,7 +55,7 @@ then crossed feature will look like:
  
 ```
 
-Here is an example to create a linear model with crosses of string features:
+下面是创建具有字符串交叉特征的线性模型的示例：
 
 ```
  keywords_x_doc_terms = crossed_column(['keywords', 'doc_terms'], 50K)
@@ -65,7 +65,7 @@ linear_prediction = linear_model(features, columns)
  
 ```
 
-You could also use vocabulary lookup before crossing:
+也可以在交叉之前使用词汇表查找：
 
 ```
  keywords = categorical_column_with_vocabulary_file(
@@ -101,7 +101,7 @@ dense_tensor = input_layer(features, [vertical_id_x_price_embedded, ...])
  
 ```
 
-#### Args:
+#### 参数：
 - **`keys`** : An iterable identifying the features to be crossed. Each element canbe either:
 - **`hash_bucket_size`** : An int > 1. The number of buckets.
 - **`hash_key`** : Specify the hash_key that will be used by the  `FingerprintCat64` function to combine the crosses fingerprints on SparseCrossOp (optional).
@@ -109,10 +109,10 @@ dense_tensor = input_layer(features, [vertical_id_x_price_embedded, ...])
     -  `CategoricalColumn` : Will use the transformed tensor produced by thiscolumn. Does not support hashed categorical column.
 
 
-#### Returns:
+#### 返回：
 A  `CrossedColumn` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `len(keys) < 2` .
 - **`ValueError`** : If any of the keys is neither a string nor  `CategoricalColumn` .
 - **`ValueError`** : If any of the keys is  `HashedCategoricalColumn` .

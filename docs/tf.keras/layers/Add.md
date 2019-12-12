@@ -1,13 +1,13 @@
 
 
 ## Class  `Add` 
-Layer that adds a list of inputs.
+添加输入列表的层。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Add` ](/api_docs/python/tf/keras/layers/Add), [ `tf.compat.v2.keras.layers.Add` ](/api_docs/python/tf/keras/layers/Add)
+**别名** : [ `tf.compat.v1.keras.layers.Add` ](/api_docs/python/tf/keras/layers/Add), [ `tf.compat.v2.keras.layers.Add` ](/api_docs/python/tf/keras/layers/Add)
 
 It takes as input a list of tensors,all of the same shape, and returnsa single tensor (also of the same shape).
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -34,7 +34,7 @@ It takes as input a list of tensors,all of the same shape, and returnsa single t
 
 Functional interface to the  `Add`  layer.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.add` ](/api_docs/python/tf/keras/layers/add), [ `tf.compat.v2.keras.layers.add` ](/api_docs/python/tf/keras/layers/add)
+**别名** : [ `tf.compat.v1.keras.layers.add` ](/api_docs/python/tf/keras/layers/add), [ `tf.compat.v2.keras.layers.add` ](/api_docs/python/tf/keras/layers/add)
 
 ```
  tf.keras.layers.add(
@@ -44,19 +44,19 @@ Functional interface to the  `Add`  layer.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : A list of input tensors (at least 2).
 - **`**kwargs`** : Standard layer keyword arguments.
 
 
-#### Returns:
+#### 返回：
 A tensor, the sum of the inputs.
 
-#### Examples:
+#### 示例：
 
 
 ```

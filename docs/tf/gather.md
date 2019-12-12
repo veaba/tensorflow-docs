@@ -1,6 +1,6 @@
 
 
-Gather slices from params axis axis according to indices.
+根据索引从params轴收集切片。
 
 ```
  tf.gather(
@@ -54,7 +54,7 @@ B
 batch_dims
 
 
-The shape of the output tensor is:
+输出张量的形状为：
 
 
 >  `output.shape = params.shape[:axis] + indices.shape[batch_dims:] +params.shape[axis + 1:]` .
@@ -66,7 +66,7 @@ See also [ `tf.gather_nd` ](https://tensorflow.google.cn/api_docs/python/tf/gath
 
 ![](https://tensorflow.google.cn/images/Gather.png)
 
-#### Args:
+#### 参数：
 - **`params`** : The  `Tensor`  from which to gather values. Must be at least rank `axis + 1` .
 - **`indices`** : The index  `Tensor` .  Must be one of the following types:  `int32` , `int64` . Must be in range  `[0, params.shape[axis])` .
 - **`validate_indices`** : Deprecated, does nothing.
@@ -75,6 +75,6 @@ See also [ `tf.gather_nd` ](https://tensorflow.google.cn/api_docs/python/tf/gath
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `params` .
 

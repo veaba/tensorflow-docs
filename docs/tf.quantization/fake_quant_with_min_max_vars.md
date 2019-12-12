@@ -1,6 +1,6 @@
 Fake-quantize the 'inputs' tensor of type float via global float scalars  `min` 
 
-**Aliases** : [ `tf.compat.v1.fake_quant_with_min_max_vars` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars), [ `tf.compat.v1.quantization.fake_quant_with_min_max_vars` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars), [ `tf.compat.v2.quantization.fake_quant_with_min_max_vars` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars)
+**别名** : [ `tf.compat.v1.fake_quant_with_min_max_vars` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars), [ `tf.compat.v1.quantization.fake_quant_with_min_max_vars` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars), [ `tf.compat.v2.quantization.fake_quant_with_min_max_vars` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_vars)
 
 ```
  tf.quantization.fake_quant_with_min_max_vars(    inputs,    min,    max,    num_bits=8,    narrow_range=False,    name=None) 
@@ -14,7 +14,7 @@ Before quantization,  `min`  and  `max`  values are adjusted with the followingl
 
 This operation has a gradient and thus allows for training  `min`  and  `max` values.
 
-#### Args:
+#### 参数：
 - **`inputs`** : A  `Tensor`  of type  `float32` .
 - **`min`** : A  `Tensor`  of type  `float32` .
 - **`max`** : A  `Tensor`  of type  `float32` .
@@ -23,6 +23,6 @@ This operation has a gradient and thus allows for training  `min`  and  `max` va
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 

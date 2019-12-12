@@ -1,4 +1,4 @@
-SpaceToDepth for tensors of type T.
+t型张量的空间深度。
 
 ```
  tf.nn.space_to_depth(
@@ -74,13 +74,13 @@ the operator will return the following tensor of shape  `[1 2 2 4]` :
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .
 - **`block_size`** : An  `int`  that is  `>= 2` . The size of the spatial block.
 - **`data_format`** : An optional  `string`  from:  `"NHWC", "NCHW", "NCHW_VECT_C"` . Defaults to  `"NHWC"` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

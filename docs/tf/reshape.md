@@ -1,6 +1,6 @@
-Reshapes a tensor.
+重塑张量。
 
-**Aliases** : [ `tf.compat.v1.manip.reshape` ](/api_docs/python/tf/reshape), [ `tf.compat.v1.reshape` ](/api_docs/python/tf/reshape), [ `tf.compat.v2.reshape` ](/api_docs/python/tf/reshape)
+**别名** : [ `tf.compat.v1.manip.reshape` ](/api_docs/python/tf/reshape), [ `tf.compat.v1.reshape` ](/api_docs/python/tf/reshape), [ `tf.compat.v2.reshape` ](/api_docs/python/tf/reshape)
 
 ```
  tf.reshape(
@@ -11,11 +11,11 @@ Reshapes a tensor.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
@@ -26,7 +26,7 @@ If one component of  `shape`  is the special value -1, the size of thatdimension
 
 If  `shape`  is 1-D or higher, then the operation returns a tensor with shape `shape`  filled with the values of  `tensor` . In this case, the number ofelements implied by  `shape`  must be the same as the number of elements in `tensor` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -74,12 +74,12 @@ reshape(t, []) ==> 7
  
 ```
 
-#### Args:
+#### 参数：
 - **`tensor`** : A  `Tensor` .
 - **`shape`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Defines the shape of the output tensor.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `tensor` .
 

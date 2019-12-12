@@ -9,7 +9,7 @@ Assert that  `x`  is of integer dtype.
  
 ```
 
-Example of adding a dependency to an operation:
+向操作添加依赖项的示例：
 
 ```
  with tf.control_dependencies([tf.compat.v1.assert_integer(x)]):
@@ -17,16 +17,16 @@ Example of adding a dependency to an operation:
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  whose basetype is integer and is not quantized.
 - **`message`** : A string to prefix to the default message.
 - **`name`** : A name for this operation (optional).  Defaults to "assert_integer".
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** :  If  `x.dtype`  is anything other than non-quantized integer.
 
 
-#### Returns:
+#### 返回：
 A  `no_op`  that does nothing.  Type can be determined statically.
 

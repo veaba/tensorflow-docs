@@ -1,11 +1,11 @@
 
 
 ## Class  `ClusterDef` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.ClusterDef` ](/api_docs/python/tf/train/ClusterDef), [ `tf.compat.v2.train.ClusterDef` ](/api_docs/python/tf/train/ClusterDef)
+**别名** : [ `tf.compat.v1.train.ClusterDef` ](/api_docs/python/tf/train/ClusterDef), [ `tf.compat.v2.train.ClusterDef` ](/api_docs/python/tf/train/ClusterDef)
 
-## Properties
+## 属性
 
 
 ###  `job` 

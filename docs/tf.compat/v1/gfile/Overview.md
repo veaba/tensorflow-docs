@@ -1,13 +1,13 @@
 Import router for file_io.
 
-## Classes
+## Class 
 [ `class FastGFile` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/gfile/FastGFile): File I/O wrappers without thread locking.
 
 [ `class GFile` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/GFile): File I/O wrappers without thread locking.
 
 [ `class Open` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/GFile): File I/O wrappers without thread locking.
 
-## Functions
+## 功能
 [ `Copy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/gfile/Copy): Copies data from  `oldpath`  to  `newpath` .
 
 [ `DeleteRecursively(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/gfile/DeleteRecursively): Deletes everything under dirname recursively.

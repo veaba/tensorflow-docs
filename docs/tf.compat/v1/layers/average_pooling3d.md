@@ -16,7 +16,7 @@ Average pooling layer for 3D inputs (e.g. volumes). (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use keras.layers.AveragePooling3D instead.
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : The tensor over which to pool. Must have rank 5.
 - **`pool_size`** : An integer or tuple/list of 3 integers:(pool_depth, pool_height, pool_width)specifying the size of the pooling window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 3 integers,specifying the strides of the pooling operation.Can be a single integer to specify the same value forall spatial dimensions.
@@ -25,8 +25,8 @@ Average pooling layer for 3D inputs (e.g. volumes). (deprecated)
 - **`name`** : A string, the name of the layer.
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

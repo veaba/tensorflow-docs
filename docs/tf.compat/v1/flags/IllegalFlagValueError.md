@@ -1,7 +1,7 @@
 
 
 ## Class  `IllegalFlagValueError` 
-Raised when the flag command line argument is illegal.
+当标志命令行参数非法时引发。
 
 Inherits From: [ `Error` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Error)
 

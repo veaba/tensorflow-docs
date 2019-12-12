@@ -1,15 +1,15 @@
 
 
 ## Class  `VirtualDeviceConfiguration` 
-Configuration class for virtual devices for a PhysicalDevice.
+物理设备的虚拟设备的配置类。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.VirtualDeviceConfiguration` ](/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration), [ `tf.compat.v2.config.experimental.VirtualDeviceConfiguration` ](/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration)
+**别名** : [ `tf.compat.v1.config.experimental.VirtualDeviceConfiguration` ](/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration), [ `tf.compat.v2.config.experimental.VirtualDeviceConfiguration` ](/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration)
 
-### Used in the guide:
+### 在指南中使用：
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 
 
-#### Fields:
+#### 字段：
 - **`memory_limit`** : (optional) Maximum memory (in MB) to allocate on the virtualdevice. Currently only supported for GPUs.
 
 
@@ -27,7 +27,7 @@ __new__(
 
 Create new instance of VirtualDeviceConfiguration(memory_limit,)
 
-## Properties
+## 属性
 
 
 ###  `memory_limit` 

@@ -1,4 +1,4 @@
-Registers a flag whose value can be a list of arbitrary floats.
+注册一个标志，其值可以是任意浮点数的列表。
 
 ```
  tf.compat.v1.flags.DEFINE_multi_float(    name,    default,    help,    lower_bound=None,    upper_bound=None,    flag_values=_flagvalues.FLAGS,    **args) 
@@ -6,7 +6,7 @@ Registers a flag whose value can be a list of arbitrary floats.
 
 Use the flag on the command line multiple times to place multiplefloat values into the list.  The 'default' may be a single float(which will be converted into a single-element list) or a list offloats.
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : Union[Iterable[float], Text, None], the default value of the flag;see  `DEFINE_multi` .
 - **`help`** : str, the help message.

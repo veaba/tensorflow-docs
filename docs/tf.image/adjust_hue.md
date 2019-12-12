@@ -1,6 +1,6 @@
-Adjust hue of RGB images.
+调整rgb图像的色调。
 
-**Aliases** : [ `tf.compat.v1.image.adjust_hue` ](/api_docs/python/tf/image/adjust_hue), [ `tf.compat.v2.image.adjust_hue` ](/api_docs/python/tf/image/adjust_hue)
+**别名** : [ `tf.compat.v1.image.adjust_hue` ](/api_docs/python/tf/image/adjust_hue), [ `tf.compat.v2.image.adjust_hue` ](/api_docs/python/tf/image/adjust_hue)
 
 ```
  tf.image.adjust_hue(
@@ -17,16 +17,16 @@ This is a convenience method that converts an RGB image to floatrepresentation, 
 
  `delta`  must be in the interval  `[-1, 1]` .
 
-#### Args:
+#### 参数：
 - **`image`** : RGB image or images. Size of the last dimension must be 3.
 - **`delta`** : float.  How much to add to the hue channel.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 Adjusted image(s), same shape and DType as  `image` .
 
-#### Usage Example:
+#### 用法示例：
 
 
 ```

@@ -3,7 +3,7 @@
 ## Class  `Maximum` 
 Layer that computes the maximum (element-wise) a list of inputs.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Maximum` ](/api_docs/python/tf/keras/layers/Maximum), [ `tf.compat.v2.keras.layers.Maximum` ](/api_docs/python/tf/keras/layers/Maximum)
+**别名** : [ `tf.compat.v1.keras.layers.Maximum` ](/api_docs/python/tf/keras/layers/Maximum), [ `tf.compat.v2.keras.layers.Maximum` ](/api_docs/python/tf/keras/layers/Maximum)
 
 It takes as input a list of tensors,all of the same shape, and returnsa single tensor (also of the same shape).
 
@@ -17,7 +17,7 @@ It takes as input a list of tensors,all of the same shape, and returnsa single t
 
 Functional interface to the  `Maximum`  layer that computes
 
-**Aliases** : [ `tf.compat.v1.keras.layers.maximum` ](/api_docs/python/tf/keras/layers/maximum), [ `tf.compat.v2.keras.layers.maximum` ](/api_docs/python/tf/keras/layers/maximum)
+**别名** : [ `tf.compat.v1.keras.layers.maximum` ](/api_docs/python/tf/keras/layers/maximum), [ `tf.compat.v2.keras.layers.maximum` ](/api_docs/python/tf/keras/layers/maximum)
 
 ```
  tf.keras.layers.maximum(
@@ -29,7 +29,7 @@ Functional interface to the  `Maximum`  layer that computes
 
 the maximum (element-wise) list of  `inputs` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -43,13 +43,13 @@ model = tf.keras.models.Model(inputs=[input1, input2], outputs=out)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : A list of input tensors (at least 2) of same shape.
 - **`**kwargs`** : Standard layer keyword arguments.
 
 
-#### Returns:
+#### 返回：
 A tensor (of same shape as input tensor) with the element-wisemaximum of the inputs.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If input tensors are of different shape.

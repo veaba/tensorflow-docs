@@ -1,17 +1,17 @@
 
 
 ## Class  `AbstractRNNCell` 
-Abstract object representing an RNN cell.
+表示RNN单元格的抽象对象。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell), [ `tf.compat.v2.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell)
+**别名** : [ `tf.compat.v1.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell), [ `tf.compat.v2.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell)
 
-This is the base class for implementing RNN cells with custom behavior.
+这是用自定义行为实现RNN单元的基类。
 
 Every  `RNNCell`  must have the properties below and implement  `call`  withthe signature  `(output, next_state) = call(input, state)` .
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -61,18 +61,18 @@ An RNN cell, in the most abstract setting, is anything that hasa state and perfo
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `output_size` 
-Integer or TensorShape: size of outputs produced by this cell.
+整数或张量形状：此单元格生成的输出大小。
 
 ###  `state_size` 
-size(s) of state(s) used by this cell.
+此单元格使用的状态大小。
 
 It can be represented by an Integer, a TensorShape or a tuple of Integersor TensorShapes.
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

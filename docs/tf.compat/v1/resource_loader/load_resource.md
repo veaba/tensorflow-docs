@@ -5,12 +5,12 @@ Load the resource at given path, where path is relative to tensorflow/.
  
 ```
 
-#### Args:
+#### 参数：
 - **`path`** : a string resource path relative to tensorflow/.
 
 
-#### Returns:
-The contents of that resource.
+#### 返回：
+资源的内容。
 
-#### Raises:
+#### 加薪：
 - **`IOError`** : If the path is not found, or the resource can't be opened.

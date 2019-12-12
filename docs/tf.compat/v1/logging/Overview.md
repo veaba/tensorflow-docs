@@ -1,6 +1,6 @@
-Logging and Summary Operations.
+日志和摘要操作。
 
-## Functions
+## 功能
 [ `TaskLevelStatusMessage(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging/TaskLevelStatusMessage)
 
 [ `debug(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging/debug)
@@ -31,7 +31,7 @@ Logging and Summary Operations.
 
 [ `warning(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging/warning)
 
-## Other Members
+## 其他成员
 -  `DEBUG = 10`  []()
 -  `ERROR = 40`  []()
 -  `FATAL = 50`  []()

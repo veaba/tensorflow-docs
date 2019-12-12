@@ -1,11 +1,11 @@
-Image processing and decoding ops.
+图像处理和解码操作。
 
 See the [Images](https://tensorflow.org/api_guides/python/image) guide.
 
-## Classes
+## Class 
 [ `class ResizeMethod` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/image/ResizeMethod)
 
-## Functions
+## 功能
 [ `adjust_brightness(...)` ](https://tensorflow.google.cn/api_docs/python/tf/image/adjust_brightness): Adjust the brightness of RGB or Grayscale images.
 
 [ `adjust_contrast(...)` ](https://tensorflow.google.cn/api_docs/python/tf/image/adjust_contrast): Adjust contrast of RGB or grayscale images.

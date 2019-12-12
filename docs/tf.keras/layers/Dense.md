@@ -5,9 +5,9 @@ Just your regular densely-connected NN layer.
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Dense` ](/api_docs/python/tf/keras/layers/Dense), [ `tf.compat.v2.keras.layers.Dense` ](/api_docs/python/tf/keras/layers/Dense)
+**别名** : [ `tf.compat.v1.keras.layers.Dense` ](/api_docs/python/tf/keras/layers/Dense), [ `tf.compat.v2.keras.layers.Dense` ](/api_docs/python/tf/keras/layers/Dense)
 
-### Used in the guide:
+### 在指南中使用：
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Keras overview](https://tensorflow.google.cn/guide/keras/overview)
@@ -15,7 +15,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - [Save and serialize models with Keras](https://tensorflow.google.cn/guide/keras/save_and_serialize)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Overfit and underfit](https://tensorflow.google.cn/tutorials/keras/overfit_and_underfit)
 - [Load a pandas.DataFrame](https://tensorflow.google.cn/tutorials/load_data/pandas_dataframe)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
@@ -27,7 +27,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 **Note:**  If the input to the layer has a rank greater than 2, thenit is flattened prior to the initial dot product with  `kernel` .
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -43,7 +43,7 @@ model.add(Dense(32))
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`activation`** : Activation function to use.If you don't specify anything, no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`use_bias`** : Boolean, whether the layer uses a bias vector.
@@ -56,10 +56,10 @@ model.add(Dense(32))
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-#### Input shape:
+#### 输入形状：
 N-D tensor with shape:  `(batch_size, ..., input_dim)` .The most common situation would bea 2D input with shape  `(batch_size, input_dim)` .
 
-#### Output shape:
+#### 输出形状：
 N-D tensor with shape:  `(batch_size, ..., units)` .For instance, for a 2D input with shape  `(batch_size, input_dim)` ,the output would have shape  `(batch_size, units)` .
 
 ##  `__init__` 

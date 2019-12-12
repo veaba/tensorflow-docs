@@ -20,7 +20,7 @@ Output strings (e.g. filenames) to a queue for an input pipeline. (deprecated)
 **Note:**  if  `num_epochs`  is not  `None` , this function creates local counter `epochs` . Use  `local_variables_initializer()`  to initialize local variables.
 
 
-#### Args:
+#### 参数：
 - **`string_tensor`** : A 1-D string tensor with the strings to produce.
 - **`num_epochs`** : An integer (optional). If specified,  `string_input_producer` produces each string from  `string_tensor`   `num_epochs`  times beforegenerating an  `OutOfRange`  error. If not specified, `string_input_producer`  can cycle through the strings in  `string_tensor` an unlimited number of times.
 - **`shuffle`** : Boolean. If true, the strings are randomly shuffled within eachepoch.
@@ -31,13 +31,13 @@ Output strings (e.g. filenames) to a queue for an input pipeline. (deprecated)
 - **`cancel_op`** : Cancel op for the queue (optional).
 
 
-#### Returns:
+#### 返回：
 A queue with the output strings.  A  `QueueRunner`  for the Queueis added to the current  `Graph` 's  `QUEUE_RUNNER`  collection.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the string_tensor is a null Python list.  At runtime,will fail with an assertion if string_tensor becomes a null tensor.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Input pipelines based on Queues are not supported when eager execution isenabled. Please use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API to ingest data under eager execution.
 

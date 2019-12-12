@@ -1,4 +1,4 @@
-Assert tensor shapes and dimension size relationships between tensors.
+断言张量形状和张量之间的维度大小关系。
 
 ```
  tf.debugging.assert_shapes(    shapes,    data=None,    summarize=None,    message=None,    name=None) 
@@ -6,7 +6,7 @@ Assert tensor shapes and dimension size relationships between tensors.
 
 This Op checks that a collection of tensors shape relationshipssatisfies given constraints.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -27,7 +27,7 @@ If the first entry of a shape is  `...`  (type  `Ellipsis` ) or '*' that indicat
 
 Scalar tensors and specified shapes of length zero (excluding the 'inner-most'prefix) are both treated as having a single dimension of size one.
 
-#### Args:
+#### 参数：
 - **`shapes`** : dictionary with ( `Tensor`  to shape) items. A shape must be aniterable.
 - **`data`** : The tensors to print out if the condition is False.  Defaults to errormessage and first few entries of the violating tensor.
 - **`summarize`** : Print this many entries of the tensor.
@@ -35,5 +35,5 @@ Scalar tensors and specified shapes of length zero (excluding the 'inner-most'pr
 - **`name`** : A name for this operation (optional).  Defaults to "assert_shapes".
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :  If static checks determine any shape constraint is violated.

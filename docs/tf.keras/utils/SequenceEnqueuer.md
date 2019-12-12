@@ -1,13 +1,13 @@
 
 
 ## Class  `SequenceEnqueuer` 
-Base class to enqueue inputs.
+将输入排队的基类。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.SequenceEnqueuer` ](/api_docs/python/tf/keras/utils/SequenceEnqueuer), [ `tf.compat.v2.keras.utils.SequenceEnqueuer` ](/api_docs/python/tf/keras/utils/SequenceEnqueuer)
+**别名** : [ `tf.compat.v1.keras.utils.SequenceEnqueuer` ](/api_docs/python/tf/keras/utils/SequenceEnqueuer), [ `tf.compat.v2.keras.utils.SequenceEnqueuer` ](/api_docs/python/tf/keras/utils/SequenceEnqueuer)
 
 The task of an Enqueuer is to use parallelism to speed up preprocessing.This is done with processes or threads.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -36,7 +36,7 @@ The  `enqueuer.get()`  should be an infinite stream of datas.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `get` 
@@ -47,7 +47,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Creates a generator to extract data from the queue.
+创建生成器以从队列中提取数据。
 
 Skip the data if it is  `None` .
 
@@ -79,9 +79,9 @@ Skip the data if it is  `None` .
  
 ```
 
-Starts the handler's workers.
+启动处理程序的工作线程。
 
-#### Arguments:
+#### 参数：
 - **`workers`** : Number of workers.
 - **`max_queue_size`** : queue size(when full, workers could block on  `put()` )
 
@@ -98,5 +98,5 @@ Stops running threads and wait for them to exit, if necessary.
 
 Should be called by the same thread which called  `start()` .
 
-#### Arguments:
+#### 参数：
 - **`timeout`** : maximum time to wait on  `thread.join()` 

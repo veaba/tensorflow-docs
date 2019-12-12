@@ -1,11 +1,11 @@
 
 
 ## Class  `TasksEntry` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.JobDef.TasksEntry` ](/api_docs/python/tf/train/JobDef/TasksEntry), [ `tf.compat.v2.train.JobDef.TasksEntry` ](/api_docs/python/tf/train/JobDef/TasksEntry)
+**别名** : [ `tf.compat.v1.train.JobDef.TasksEntry` ](/api_docs/python/tf/train/JobDef/TasksEntry), [ `tf.compat.v2.train.JobDef.TasksEntry` ](/api_docs/python/tf/train/JobDef/TasksEntry)
 
-## Properties
+## 属性
 
 
 ###  `key` 

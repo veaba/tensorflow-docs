@@ -1,6 +1,6 @@
-Performs a random spatial zoom of a Numpy image tensor.
+执行Numpy图像张量的随机空间缩放。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom), [ `tf.compat.v2.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom), [ `tf.compat.v2.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
 
 ```
  tf.keras.preprocessing.image.random_zoom(
@@ -20,7 +20,7 @@ Performs a random spatial zoom of a Numpy image tensor.
 
 
 ```
- x: Input tensor. Must be 3D.
+x：输入张量。必须是三维的。
 zoom_range: Tuple of floats; zoom range for width and height.
 row_axis: Index of axis for rows in the input tensor.
 col_axis: Index of axis for columns in the input tensor.
@@ -28,7 +28,7 @@ channel_axis: Index of axis for channels in the input tensor.
 fill_mode: Points outside the boundaries of the input
     are filled according to the given mode
     (one of `{'constant', 'nearest', 'reflect', 'wrap'}`).
-cval: Value used for points outside the boundaries
+cval：用于边界外点的值
     of the input if `mode='constant'`.
 interpolation_order: int, order of spline interpolation.
     see `ndimage.interpolation.affine_transform`
@@ -39,7 +39,7 @@ interpolation_order: int, order of spline interpolation.
 
 
 ```
- Zoomed Numpy image tensor.
+缩放的Numpy图像张量。
  
 ```
 

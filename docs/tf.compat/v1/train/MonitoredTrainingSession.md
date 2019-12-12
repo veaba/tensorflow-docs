@@ -6,7 +6,7 @@ Creates a  `MonitoredSession`  for training.
 
 For a chief, this utility sets proper session initializer/restorer. It alsocreates hooks related to checkpoint and summary saving. For workers, thisutility sets proper session creator which waits for the chief toinitialize/restore. Please check [ `tf.compat.v1.train.MonitoredSession` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/MonitoredSession) formoreinformation.
 
-#### Args:
+#### 参数：
 - **`master`** :  `String`  the TensorFlow master to use.
 - **`is_chief`** : If  `True` , it will take care of initialization and recovery theunderlying TensorFlow session. If  `False` , it will wait on a chief toinitialize or recover the TensorFlow session.
 - **`checkpoint_dir`** : A string.  Optional path to a directory where to restorevariables.
@@ -24,6 +24,6 @@ For a chief, this utility sets proper session initializer/restorer. It alsocreat
 - **`summary_dir`** : A string.  Optional path to a directory where to savesummaries. If None, checkpoint_dir is used instead.
 
 
-#### Returns:
+#### 返回：
 A  `MonitoredSession`  object.
 

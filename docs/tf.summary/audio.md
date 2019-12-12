@@ -1,10 +1,10 @@
-Write an audio summary.
+写一个音频摘要。
 
 ```
  tf.summary.audio(    name,    data,    sample_rate,    step=None,    max_outputs=3,    encoding=None,    description=None) 
 ```
 
-#### Arguments:
+#### 参数：
 - **`name`** : A name for this summary. The summary tag used for TensorBoard willbe this name prefixed by any active name scopes.
 - **`data`** : A  `Tensor`  representing audio data with shape  `[k, t, c]` ,where  `k`  is the number of audio clips,  `t`  is the number offrames, and  `c`  is the number of channels. Elements should befloating-point values in  `[-1.0, 1.0]` . Any of the dimensions maybe statically unknown (i.e.,  `None` ).
 - **`sample_rate`** : An  `int`  or rank-0  `int32`   `Tensor`  that represents thesample rate, in Hz. Must be positive.
@@ -14,8 +14,8 @@ Write an audio summary.
 - **`description`** : Optional long-form description for this summary, as aconstant  `str` . Markdown is supported. Defaults to empty.
 
 
-#### Returns:
+#### 返回：
 True on success, or false if no summary was emitted because no defaultsummary writer was available.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if a default writer exists, but no step was provided and[ `tf.summary.experimental.get_step()` ](https://tensorflow.google.cn/api_docs/python/tf/summary/experimental/get_step) is None.

@@ -1,15 +1,15 @@
 
 
 ## Class  `CSVLogger` 
-Callback that streams epoch results to a csv file.
+将epoch结果流式处理到csv文件的回调。
 
 Inherits From: [ `Callback` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/Callback)
 
-**Aliases** : [ `tf.compat.v1.keras.callbacks.CSVLogger` ](/api_docs/python/tf/keras/callbacks/CSVLogger), [ `tf.compat.v2.keras.callbacks.CSVLogger` ](/api_docs/python/tf/keras/callbacks/CSVLogger)
+**别名** : [ `tf.compat.v1.keras.callbacks.CSVLogger` ](/api_docs/python/tf/keras/callbacks/CSVLogger), [ `tf.compat.v2.keras.callbacks.CSVLogger` ](/api_docs/python/tf/keras/callbacks/CSVLogger)
 
 Supports all values that can be represented as a string,including 1D iterables such as np.ndarray.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -18,7 +18,7 @@ model.fit(X_train, Y_train, callbacks=[csv_logger])
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`filename`** : filename of the csv file, e.g. 'run/log.csv'.
 - **`separator`** : string used to separate elements in the csv file.
 - **`append`** : True: append if file exists (useful for continuingtraining). False: overwrite existing file,
@@ -38,7 +38,7 @@ model.fit(X_train, Y_train, callbacks=[csv_logger])
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `on_batch_begin` 
@@ -78,11 +78,11 @@ A backwards compatibility alias for  `on_train_batch_end` .
  
 ```
 
-Called at the start of an epoch.
+在一个新纪元开始时被召唤。
 
 Subclasses should override for any actions to run. This function should onlybe called during TRAIN mode.
 
-#### Arguments:
+#### 参数：
 - **`epoch`** : integer, index of epoch.
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
@@ -98,11 +98,11 @@ Subclasses should override for any actions to run. This function should onlybe c
  
 ```
 
-Called at the end of an epoch.
+在一个时代结束时被召唤。
 
 Subclasses should override for any actions to run. This function should onlybe called during TRAIN mode.
 
-#### Arguments:
+#### 参数：
 - **`epoch`** : integer, index of epoch.
 - **`logs`** : dict, metric results for this training epoch, and for thevalidation epoch if validation is performed. Validation result keysare prefixed with  `val_` .
 
@@ -120,9 +120,9 @@ Subclasses should override for any actions to run. This function should onlybe c
 
 Called at the beginning of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -140,9 +140,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -155,11 +155,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of prediction.
+在预测开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -171,11 +171,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of prediction.
+在预测结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -194,9 +194,9 @@ Called at the beginning of a batch in  `evaluate`  methods.
 
 Also called at the beginning of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -216,9 +216,9 @@ Called at the end of a batch in  `evaluate`  methods.
 
 Also called at the end of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -231,11 +231,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of evaluation or validation.
+在评估或验证开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -247,11 +247,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of evaluation or validation.
+在评估或验证结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -268,9 +268,9 @@ Subclasses should override for any actions to run.
 
 Called at the beginning of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -288,9 +288,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -303,11 +303,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of training.
+在训练开始时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -319,11 +319,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of training.
+训练结束时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 

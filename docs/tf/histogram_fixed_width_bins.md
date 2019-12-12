@@ -1,6 +1,6 @@
-Bins the given values for use in a histogram.
+在直方图中使用的给定值。
 
-**Aliases** : [ `tf.compat.v1.histogram_fixed_width_bins` ](/api_docs/python/tf/histogram_fixed_width_bins), [ `tf.compat.v2.histogram_fixed_width_bins` ](/api_docs/python/tf/histogram_fixed_width_bins)
+**别名** : [ `tf.compat.v1.histogram_fixed_width_bins` ](/api_docs/python/tf/histogram_fixed_width_bins), [ `tf.compat.v2.histogram_fixed_width_bins` ](/api_docs/python/tf/histogram_fixed_width_bins)
 
 ```
  tf.histogram_fixed_width_bins(
@@ -15,7 +15,7 @@ Bins the given values for use in a histogram.
 
 Given the tensor  `values` , this operation returns a rank 1  `Tensor` representing the indices of a histogram into which each elementof  `values`  would be binned. The bins are equal width anddetermined by the arguments  `value_range`  and  `nbins` .
 
-#### Args:
+#### 参数：
 - **`values`** :  Numeric  `Tensor` .
 - **`value_range`** :  Shape [2]  `Tensor`  of same  `dtype`  as  `values` .values <= value_range[0] will be mapped to hist[0],values >= value_range[1] will be mapped to hist[-1].
 - **`nbins`** :  Scalar  `int32 Tensor` .  Number of histogram bins.
@@ -23,15 +23,15 @@ Given the tensor  `values` , this operation returns a rank 1  `Tensor` represent
 - **`name`** :  A name for this operation (defaults to 'histogram_fixed_width').
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  holding the indices of the binned values whose shape matches `values` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If any unsupported dtype is provided.
 - **[ `tf.errors.InvalidArgumentError` ](/api_docs/python/tf/errors/InvalidArgumentError)** : If value_range does notsatisfy value_range[0] < value_range[1].
 
 
-#### Examples:
+#### 示例：
 
 
 ```

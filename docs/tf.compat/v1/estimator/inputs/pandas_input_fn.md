@@ -1,4 +1,4 @@
-Returns input function that would feed Pandas DataFrame into the model.
+返回将熊猫数据帧馈送到模型中的输入函数。
 
 ```
  tf.compat.v1.estimator.inputs.pandas_input_fn(
@@ -18,7 +18,7 @@ Returns input function that would feed Pandas DataFrame into the model.
 **Note:**   `y` 's index must match  `x` 's index.
 
 
-#### Args:
+#### 参数：
 - **`x`** : pandas  `DataFrame`  object.
 - **`y`** : pandas  `Series`  object or  `DataFrame` .  `None`  if absent.
 - **`batch_size`** : int, size of batches to return.
@@ -29,9 +29,9 @@ Returns input function that would feed Pandas DataFrame into the model.
 - **`target_column`** : str, name to give the target column  `y` . This parameteris not used when  `y`  is a  `DataFrame` .
 
 
-#### Returns:
+#### 返回：
 Function, that has signature of ()->(dict of  `features` ,  `target` )
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `x`  already contains a column with the same name as  `y` , orif the indexes of  `x`  and  `y`  don't match.
 - **`ValueError`** : if 'shuffle' is not provided or a bool.

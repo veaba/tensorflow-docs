@@ -1,6 +1,6 @@
-Exponential linear unit.
+指数线性单位。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.elu` ](/api_docs/python/tf/keras/backend/elu), [ `tf.compat.v2.keras.backend.elu` ](/api_docs/python/tf/keras/backend/elu)
+**别名** : [ `tf.compat.v1.keras.backend.elu` ](/api_docs/python/tf/keras/backend/elu), [ `tf.compat.v2.keras.backend.elu` ](/api_docs/python/tf/keras/backend/elu)
 
 ```
  tf.keras.backend.elu(
@@ -10,11 +10,11 @@ Exponential linear unit.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable to compute the activation function for.
 - **`alpha`** : A scalar, slope of negative section.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

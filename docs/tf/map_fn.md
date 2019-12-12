@@ -1,6 +1,6 @@
 map on the list of tensors unpacked from  `elems`  on dimension 0.
 
-**Aliases** : [ `tf.compat.v1.map_fn` ](/api_docs/python/tf/map_fn), [ `tf.compat.v2.map_fn` ](/api_docs/python/tf/map_fn)
+**别名** : [ `tf.compat.v1.map_fn` ](/api_docs/python/tf/map_fn), [ `tf.compat.v2.map_fn` ](/api_docs/python/tf/map_fn)
 
 ```
  tf.map_fn(
@@ -39,7 +39,7 @@ If, however, the function is not expressible as a TensorFlow op, then use
  
 ```
 
-instead.
+相反。
 
 When executing eagerly, map_fn does not execute in parallel even if `parallel_iterations`  is set to a value > 1. You can still get theperformance benefits of running a function in parallel by using the `tf.contrib.eager.defun`  decorator,
 
@@ -54,7 +54,7 @@ def func(tensor):
 
 Note that if you use the defun decorator, any non-TensorFlow Python codethat you may have written in your function won't get executed. See `tf.contrib.eager.defun`  for more details. The recommendation would be todebug without defun but switch to defun to get performance benefits ofrunning map_fn in parallel.
 
-#### Args:
+#### 参数：
 - **`fn`** : The callable to be performed.  It accepts one argument, which willhave the same (possibly nested) structure as  `elems` .  Its outputmust have the same structure as  `dtype`  if one is provided, otherwiseit must have the same structure as  `elems` .
 - **`elems`** : A tensor or (possibly nested) sequence of tensors, each of whichwill be unpacked along their first dimension.  The nested sequenceof the resulting slices will be applied to  `fn` .
 - **`dtype`** : (optional) The output type(s) of  `fn` .  If  `fn`  returns a structureof Tensors differing from the structure of  `elems` , then  `dtype`  is notoptional and must have the same structure as the output of  `fn` .
@@ -65,15 +65,15 @@ Note that if you use the defun decorator, any non-TensorFlow Python codethat you
 - **`name`** : (optional) Name prefix for the returned tensors.
 
 
-#### Returns:
+#### 返回：
 A tensor or (possibly nested) sequence of tensors.  Each tensor packs theresults of applying  `fn`  to tensors unpacked from  `elems`  along the firstdimension, from first to last.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `fn`  is not callable or the structure of the output of `fn`  and  `dtype`  do not match, or if elems is a SparseTensor.
 - **`ValueError`** : if the lengths of the output of  `fn`  and  `dtype`  do not match.
 
 
-#### Examples:
+#### 示例：
 
 
 ```

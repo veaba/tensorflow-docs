@@ -1,4 +1,4 @@
-DEPRECATED FUNCTION
+不推荐的函数
 
 ```
  tf.compat.v1.data.experimental.SparseTensorStructure(

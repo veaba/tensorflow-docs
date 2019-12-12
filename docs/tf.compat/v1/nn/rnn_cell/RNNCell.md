@@ -1,7 +1,7 @@
 
 
 ## Class  `RNNCell` 
-Abstract object representing an RNN cell.
+表示RNN单元格的抽象对象。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
@@ -24,28 +24,28 @@ An RNN cell, in the most abstract setting, is anything that hasa state and perfo
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
 
 
 ###  `output_size` 
-Integer or TensorShape: size of outputs produced by this cell.
+整数或张量形状：此单元格生成的输出大小。
 
 ###  `scope_name` 
 
 
 ###  `state_size` 
-size(s) of state(s) used by this cell.
+此单元格使用的状态大小。
 
 It can be represented by an Integer, a TensorShape or a tuple of Integersor TensorShapes.
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 
@@ -73,12 +73,12 @@ It can be represented by an Integer, a TensorShape or a tuple of Integersor Tens
 
 Return zero-filled state tensor(s).
 
-#### Args:
+#### 参数：
 - **`batch_size`** : int, float, or unit Tensor representing the batch size.
 - **`dtype`** : the data type to use for the state.
 
 
-#### Returns:
+#### 返回：
 If  `state_size`  is an int or TensorShape, then the return value is a `N-D`  tensor of shape  `[batch_size, state_size]`  filled with zeros.
 
 If  `state_size`  is a nested list or tuple, then the return value isa nested list or tuple (of the same structure) of  `2-D`  tensors withthe shapes  `[batch_size, s]`  for each s in  `state_size` .

@@ -1,8 +1,8 @@
 
 
-Batch normalization.
+批量标准化。
 
-**Aliases** : [ `tf.compat.v1.nn.batch_normalization` ](/api_docs/python/tf/nn/batch_normalization), [ `tf.compat.v2.nn.batch_normalization` ](/api_docs/python/tf/nn/batch_normalization)
+**别名** : [ `tf.compat.v1.nn.batch_normalization` ](/api_docs/python/tf/nn/batch_normalization), [ `tf.compat.v2.nn.batch_normalization` ](/api_docs/python/tf/nn/batch_normalization)
 
 ```
  tf.nn.batch_normalization(
@@ -27,7 +27,7 @@ Normalizes a tensor by  `mean`  and  `variance` , and applies (optionally) a `sc
 - In the common case where the 'depth' dimension is the last dimension inthe input tensor  `x` , they may be one dimensional tensors of the samesize as the 'depth' dimension.This is the case for example for the common  `[batch, depth]`  layout offully-connected layers, and  `[batch, height, width, depth]`  forconvolutions. `mean`  and  `variance`  in this case would typically be the outputs of[ `tf.nn.moments(..., keep_dims=False)` ](https://tensorflow.google.cn/api_docs/python/tf/nn/moments) during training, or running averagesthereof during inference.
 See Source: [Batch Normalization: Accelerating Deep Network Training byReducing Internal Covariate Shift; S. Ioffe, C. Szegedy](http://arxiv.org/abs/1502.03167).
 
-#### Args:
+#### 参数：
 - **`x`** : Input  `Tensor`  of arbitrary dimensionality.
 - **`mean`** : A mean  `Tensor` .
 - **`variance`** : A variance  `Tensor` .
@@ -37,6 +37,6 @@ See Source: [Batch Normalization: Accelerating Deep Network Training byReducing 
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 the normalized, scaled, offset tensor.
 

@@ -1,6 +1,6 @@
-Context manager for testing forward compatibility of generated graphs.
+用于测试生成的图的前向兼容性的上下文管理器。
 
-**Aliases** : [ `tf.compat.v1.compat.forward_compatibility_horizon` ](/api_docs/python/tf/compat/forward_compatibility_horizon), [ `tf.compat.v2.compat.forward_compatibility_horizon` ](/api_docs/python/tf/compat/forward_compatibility_horizon)
+**别名** : [ `tf.compat.v1.compat.forward_compatibility_horizon` ](/api_docs/python/tf/compat/forward_compatibility_horizon), [ `tf.compat.v2.compat.forward_compatibility_horizon` ](/api_docs/python/tf/compat/forward_compatibility_horizon)
 
 ```
  tf.compat.forward_compatibility_horizon(
@@ -26,7 +26,7 @@ else:
 However, when adding new features, one may want to unittest it beforethe forward compatibility window expires. This context manager enablessuch tests. For example:
 
 ```
- from tensorflow.python.compat import compat
+从tensorflow.python.compat导入compat
 
 def testMyNewFeature(self):
   with compat.forward_compatibility_horizon(2018, 08, 02):
@@ -34,12 +34,12 @@ def testMyNewFeature(self):
  
 ```
 
-#### Args:
+#### 参数：
 - **`year`** :  A year (e.g., 2018). Must be an  `int` .
 - **`month`** : A month (1 <= month <= 12) in year. Must be an  `int` .
 - **`day`** :   A day (1 <= day <= 31, or 30, or 29, or 28) in month. Must be an `int` .
 
 
-#### Yields:
-Nothing.
+#### 收益率：
+没有什么。
 

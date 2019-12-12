@@ -12,7 +12,7 @@ Warm-starts a model using the given settings.
 
 If you are using a tf.estimator.Estimator, this will automatically be calledduring training.
 
-#### Args:
+#### 参数：
 - **`ckpt_to_initialize_from`** : [Required] A string specifying the directory withcheckpoint file(s) or path to checkpoint from which to warm-start themodel parameters.
 - **`vars_to_warm_start`** : [Optional] One of the following:
 
@@ -31,5 +31,5 @@ Defaults to  `'.*'` , which warm-starts all variables in theTRAINABLE_VARIABLES 
     -  `None` , in which case only TRAINABLE variables specified in `var_name_to_vocab_info`  will be warm-started.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the WarmStartSettings contains prev_var_name or VocabInfoconfiguration for variable names that are not used.  This is to ensurea stronger check for variable configuration than relying on users toexamine the logs.

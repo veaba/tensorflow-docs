@@ -9,11 +9,11 @@ Creates a  `Dataset`  that counts from  `start`  in steps of size  `step` .
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -25,12 +25,12 @@ Dataset.count(10, -1) == [10, 9, ...)
  
 ```
 
-#### Args:
+#### 参数：
 - **`start`** : (Optional.) The starting value for the counter. Defaults to 0.
 - **`step`** : (Optional.) The step size for the counter. Defaults to 1.
 - **`dtype`** : (Optional.) The data type for counter elements. Defaults to[ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
 
 
-#### Returns:
+#### 返回：
 A  `Dataset`  of scalar  `dtype`  elements.
 

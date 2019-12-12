@@ -3,14 +3,14 @@
 ## Class  `EstimatorSpec` 
 Ops and objects returned from a  `model_fn`  and passed to an  `Estimator` .
 
-**Aliases** : [ `tf.compat.v1.estimator.EstimatorSpec` ](/api_docs/python/tf/estimator/EstimatorSpec), [ `tf.compat.v2.estimator.EstimatorSpec` ](/api_docs/python/tf/estimator/EstimatorSpec)
+**别名** : [ `tf.compat.v1.estimator.EstimatorSpec` ](/api_docs/python/tf/estimator/EstimatorSpec), [ `tf.compat.v2.estimator.EstimatorSpec` ](/api_docs/python/tf/estimator/EstimatorSpec)
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
  `EstimatorSpec`  fully defines the model to be run by an  `Estimator` .
 
@@ -84,7 +84,7 @@ Alternatively, model_fn can just populate the arguments appropriate to thegiven 
  
 ```
 
-#### Args:
+#### 参数：
 - **`mode`** : A  `ModeKeys` . Specifies if this is training, evaluation orprediction.
 - **`predictions`** : Predictions  `Tensor`  or dict of  `Tensor` .
 - **`loss`** : Training loss  `Tensor` . Must be either scalar, or with shape  `[1]` .
@@ -100,15 +100,15 @@ Alternatively, model_fn can just populate the arguments appropriate to thegiven 
     - output: an  `ExportOutput`  object such as  `ClassificationOutput` , `RegressionOutput` , or  `PredictOutput` .Single-headed models only need to specify one entry in this dictionary.Multi-headed models should specify one entry for each head, one ofwhich must be named using `tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY` .If no entry is provided, a default  `PredictOutput`  mapping to `predictions`  will be created.
 
 
-#### Returns:
+#### 返回：
 A validated  `EstimatorSpec`  object.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If validation fails.
 - **`TypeError`** : If any of the arguments is not the expected type.
 
 
-## Properties
+## 属性
 
 
 ###  `mode` 

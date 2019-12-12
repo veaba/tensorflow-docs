@@ -1,6 +1,6 @@
 Inverse real-valued fast Fourier transform.
 
-**Aliases** : [ `tf.compat.v1.signal.irfft` ](/api_docs/python/tf/signal/irfft), [ `tf.compat.v1.spectral.irfft` ](/api_docs/python/tf/signal/irfft), [ `tf.compat.v2.signal.irfft` ](/api_docs/python/tf/signal/irfft)
+**别名** : [ `tf.compat.v1.signal.irfft` ](/api_docs/python/tf/signal/irfft), [ `tf.compat.v1.spectral.irfft` ](/api_docs/python/tf/signal/irfft), [ `tf.compat.v2.signal.irfft` ](/api_docs/python/tf/signal/irfft)
 
 ```
  tf.signal.irfft(
@@ -17,12 +17,12 @@ The inner-most dimension of  `input`  is assumed to be the result of  `RFFT` : t
 
 Along the axis  `IRFFT`  is computed on, if  `fft_length / 2 + 1`  is smallerthan the corresponding dimension of  `input` , the dimension is cropped. If it islarger, the dimension is padded with zeros.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `complex64` . A complex64 tensor.
 - **`fft_length`** : A  `Tensor`  of type  `int32` .An int32 tensor of shape [1]. The FFT length.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 

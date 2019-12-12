@@ -1,6 +1,6 @@
-The op extracts fields from a serialized protocol buffers message into tensors.
+op将序列化协议缓冲区消息中的字段提取为张量。
 
-**Aliases** : [ `tf.compat.v1.io.decode_proto` ](/api_docs/python/tf/io/decode_proto), [ `tf.compat.v2.io.decode_proto` ](/api_docs/python/tf/io/decode_proto)
+**别名** : [ `tf.compat.v1.io.decode_proto` ](/api_docs/python/tf/io/decode_proto), [ `tf.compat.v2.io.decode_proto` ](/api_docs/python/tf/io/decode_proto)
 
 ```
  tf.io.decode_proto(    bytes,    message_type,    field_names,    output_types,    descriptor_source='local://',    message_format='binary',    sanitize=False,    name=None) 
@@ -27,13 +27,13 @@ The  `descriptor_source`  attribute selects the source of protocoldescriptors to
 - An empty string  or "local://", in which case protocol descriptors arecreated for C++ (not Python) proto definitions linked to the binary.
 
 
-- A file, in which case protocol descriptors are created from the file,which is expected to contain a  `FileDescriptorSet`  serialized as a string.NOTE: You can build a  `descriptor_source`  file using the  `--descriptor_set_out` and  `--include_imports`  options to the protocol compiler  `protoc` .
+- A file, in which case protocol descriptors are created from the file,which is expected to contain a  `FileDescriptorSet`  serialized as a string.注意：You can build a  `descriptor_source`  file using the  `--descriptor_set_out` and  `--include_imports`  options to the protocol compiler  `protoc` .
 
 
 - A "bytes://<bytes>", in which protocol descriptors are created from  `<bytes>` ,which is expected to be a  `FileDescriptorSet`  serialized as a string.</bytes>
 
 
-#### Args:
+#### 参数：
 - **`bytes`** : A  `Tensor`  of type  `string` .Tensor of serialized protos with shape  `batch_shape` .
 - **`message_type`** : A  `string` . Name of the proto message type to decode.
 - **`field_names`** : A list of  `strings` .List of strings containing proto field names. An extension field can be decodedby using its full name, e.g. EXT_PACKAGE.EXT_FIELD_NAME.
@@ -44,7 +44,7 @@ The  `descriptor_source`  attribute selects the source of protocoldescriptors to
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (sizes, values).
 
 - **`sizes`** : A  `Tensor`  of type  `int32` .

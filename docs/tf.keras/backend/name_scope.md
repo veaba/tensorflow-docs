@@ -1,4 +1,4 @@
-A context manager for use when defining a Python op.
+定义python操作时使用的上下文管理器。
 
 ```
  tf.keras.backend.name_scope(name) 
@@ -17,10 +17,10 @@ For example, to define a new Python op called  `my_op` :
 
 When executed, the Tensor  `a`  will have the name  `MyOp/a` .
 
-#### Args:
+#### 参数：
 - **`name`** : The prefix to use on all names created within the name scope.
 
 
-#### Returns:
-Name scope context manager.
+#### 返回：
+命名作用域上下文管理器。
 

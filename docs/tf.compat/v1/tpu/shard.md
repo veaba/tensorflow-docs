@@ -16,7 +16,7 @@ If  `outputs_from_all_shards`  is true, the outputs from all shards of `computat
 
 Inputs and outputs of the computation must be at least rank-1 Tensors.
 
-#### Args:
+#### 参数：
 - **`computation`** : A Python function that builds a computation to apply to eachshard of the input.
 - **`inputs`** : A list of input tensors or None (equivalent to an empty list). Eachinput tensor has a corresponding shard axes, given by  `input_shard_axes` ,which must have size divisible by  `num_shards` .
 - **`num_shards`** : The number of shards.
@@ -28,10 +28,10 @@ Inputs and outputs of the computation must be at least rank-1 Tensors.
 - **`name`** : (Deprecated) Does nothing.
 
 
-#### Returns:
-A list of output tensors.
+#### 返回：
+输出张量的列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If num_shards <= 0
 - **`ValueError`** : If len(input_shard_axes) != len(inputs)
 - **`ValueError`** : If len(output_shard_axes) != len(outputs from  `computation` )

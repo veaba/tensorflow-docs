@@ -1,19 +1,19 @@
-Reads CSV files into a dataset.
+将csv文件读入数据集。
 
 ```
  tf.data.experimental.make_csv_dataset(    file_pattern,    batch_size,    column_names=None,    column_defaults=None,    label_name=None,    select_columns=None,    field_delim=',',    use_quote_delim=True,    na_value='',    header=True,    num_epochs=None,    shuffle=True,    shuffle_buffer_size=10000,    shuffle_seed=None,    prefetch_buffer_size=dataset_ops.AUTOTUNE,    num_parallel_reads=1,    sloppy=False,    num_rows_for_inference=100,    compression_type=None,    ignore_errors=False) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Custom training: walkthrough](https://tensorflow.google.cn/tutorials/customization/custom_training_walkthrough)
 - [Load CSV data](https://tensorflow.google.cn/tutorials/load_data/csv)
 Reads CSV files into a dataset, where each element is a (features, labels)tuple that corresponds to a batch of CSV rows. The features dictionarymaps feature column names to  `Tensor` s containing the correspondingfeature data, and labels is a  `Tensor`  containing the batch's label data.
 
-#### Args:
+#### 参数：
 - **`file_pattern`** : List of files or patterns of file paths containing CSVrecords. See [ `tf.io.gfile.glob` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/glob) for pattern rules.
 - **`batch_size`** : An int representing the number of records to combinein a single batch.
 - **`column_names`** : An optional list of strings that corresponds to the CSVcolumns, in order. One per column of the input record. If this is notprovided, infers the column names from the first row of the records.These names will be the keys of the features dict of each dataset element.
@@ -46,8 +46,8 @@ Reads CSV files into a dataset, where each element is a (features, labels)tuple 
 - **`ignore_errors`** : (Optional.) If  `True` , ignores errors with CSV file parsing,such as malformed data or empty lines, and moves on to the next validCSV record. Otherwise, the dataset raises an error and stops processingwhen encountering any invalid records. Defaults to  `False` .
 
 
-#### Returns:
+#### 返回：
 A dataset, where each element is a (features, labels) tuple that correspondsto a batch of  `batch_size`  CSV rows. The features dictionary maps featurecolumn names to  `Tensor` s containing the corresponding column data, andlabels is a  `Tensor`  containing the column data for the label columnspecified by  `label_name` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If any of the arguments is malformed.

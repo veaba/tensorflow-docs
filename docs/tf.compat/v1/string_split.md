@@ -18,7 +18,7 @@ Let N be the size of  `source`  (typically N will be the batch size). Split each
 
 If  `sep`  is an empty string, each element of the  `source`  is splitinto individual strings, each containing one byte. (This includes splittingmultibyte sequences of UTF-8.) If delimiter contains multiple bytes, it istreated as a set of delimiters with each considered a potential split point.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -36,7 +36,7 @@ If  `sep`  is an empty string, each element of the  `source`  is splitinto indiv
 
 ```
  
-#### Args:
+#### 参数：
 
 
 * **`source`**: `1-D` string `Tensor`, the strings to split.
@@ -49,18 +49,18 @@ If  `sep`  is an empty string, each element of the  `source`  is splitinto indiv
 * **`name`**: A name for the operation (optional).
 
 
-#### Raises:
+#### 加薪：
 
 
 * **`ValueError`**: If delimiter is not a string.
 
 
-#### Returns:
+#### 返回：
 
 A `SparseTensor` or `RaggedTensor` of rank `2`, the strings split according
-to the delimiter.  The first column of the indices corresponds to the row
-in `source` and the second column corresponds to the index of the split
-component in this row.
+到分隔符。索引的第一列对应于行
+在“source”中，第二列对应于拆分的索引
+此行中的组件。
  
 ```
 

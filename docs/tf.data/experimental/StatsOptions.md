@@ -3,7 +3,7 @@
 ## Class  `StatsOptions` 
 Represents options for collecting dataset stats using  `StatsAggregator` .
 
-**Aliases** : [ `tf.compat.v1.data.experimental.StatsOptions` ](/api_docs/python/tf/data/experimental/StatsOptions), [ `tf.compat.v2.data.experimental.StatsOptions` ](/api_docs/python/tf/data/experimental/StatsOptions)
+**别名** : [ `tf.compat.v1.data.experimental.StatsOptions` ](/api_docs/python/tf/data/experimental/StatsOptions), [ `tf.compat.v2.data.experimental.StatsOptions` ](/api_docs/python/tf/data/experimental/StatsOptions)
 
 You can set the stats options of a dataset through the  `experimental_stats` property of [ `tf.data.Options` ](https://tensorflow.google.cn/api_docs/python/tf/data/Options); the property is an instance of[ `tf.data.experimental.StatsOptions` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/StatsOptions). For example, to collect latency statson all dataset edges, use the following pattern:
 
@@ -27,22 +27,22 @@ dataset = dataset.with_options(options)
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `aggregator` 
-Associates the given statistics aggregator with the dataset pipeline.
+将给定的统计聚合器与数据集管道关联。
 
 ###  `counter_prefix` 
-Prefix for the statistics recorded as counter.
+记录为计数器的统计信息的前缀。
 
 ###  `latency_all_edges` 
-Whether to add latency measurements on all edges. Defaults to False.
+是否在所有边上添加延迟度量。默认为false。
 
 ###  `prefix` 
 Prefix to prepend all statistics recorded for the input  `dataset`  with.
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 

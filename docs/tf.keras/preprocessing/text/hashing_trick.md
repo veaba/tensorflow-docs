@@ -2,7 +2,7 @@
 
 Converts a text to a sequence of indexes in a fixed-size hashing space.
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick), [ `tf.compat.v2.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick)
+**别名** : [ `tf.compat.v1.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick), [ `tf.compat.v2.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick)
 
 ```
  tf.keras.preprocessing.text.hashing_trick(
@@ -20,8 +20,8 @@ Converts a text to a sequence of indexes in a fixed-size hashing space.
 
 
 ```
- text: Input text (string).
-n: Dimension of the hashing space.
+文本：输入文本（字符串）。
+n：散列空间的维数。
 hash_function: defaults to python `hash` function, can be 'md5' or
     any function that takes in input a string and returns a int.
     Note that 'hash' is not a stable hashing function, so
@@ -30,8 +30,8 @@ hash_function: defaults to python `hash` function, can be 'md5' or
 filters: list (or concatenation) of characters to filter out, such as
     punctuation. Default: ``!"#$%&amp;()*+,-./:;<=>?@[\]^_`{|}~\t\n``,
     includes basic punctuation, tabs, and newlines.
-lower: boolean. Whether to set the text to lowercase.
-split: str. Separator for word splitting.
+下：布尔值。是否将文本设置为小写。
+拆分：单词拆分的str分隔符。
  
 ```
 

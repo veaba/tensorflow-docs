@@ -5,7 +5,7 @@ Type specification for a [ `tf.TensorArray` ](https://tensorflow.google.cn/api_d
 
 Inherits From: [ `TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TypeSpec)
 
-**Aliases** : [ `tf.compat.v1.TensorArraySpec` ](/api_docs/python/tf/TensorArraySpec), [ `tf.compat.v2.TensorArraySpec` ](/api_docs/python/tf/TensorArraySpec)
+**别名** : [ `tf.compat.v1.TensorArraySpec` ](/api_docs/python/tf/TensorArraySpec), [ `tf.compat.v2.TensorArraySpec` ](/api_docs/python/tf/TensorArraySpec)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/tensor_array_ops.py#L1250-L1263)
@@ -22,20 +22,20 @@ Inherits From: [ `TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/Ty
 
 Constructs a type specification for a [ `tf.TensorArray` ](https://tensorflow.google.cn/api_docs/python/tf/TensorArray).
 
-#### Args:
+#### 参数：
 - **`element_shape`** : The shape of each element in the  `TensorArray` .
 - **`dtype`** : Data type of the  `TensorArray` .
 - **`dynamic_size`** : Whether the  `TensorArray`  can grow past its initial size.
 - **`infer_shape`** : Whether shape inference is enabled.
 
 
-## Properties
+## 属性
 
 
 ###  `value_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -87,9 +87,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

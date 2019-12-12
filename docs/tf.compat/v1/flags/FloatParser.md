@@ -1,9 +1,9 @@
 
 
 ## Class  `FloatParser` 
-Parser of floating point values.
+浮点值分析器。
 
-Parsed value may be bounded to a given upper and lower bound.
+解析后的值可以限定为给定的上下限。
 
 ##  `__init__` 
 
@@ -18,7 +18,7 @@ Parsed value may be bounded to a given upper and lower bound.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `convert` 
@@ -29,7 +29,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Returns the float value of argument.
+返回参数的浮点值。
 
 ###  `flag_type` 
 
@@ -39,7 +39,7 @@ Returns the float value of argument.
  
 ```
 
-See base class.
+见基类。
 
 ###  `is_outside_bounds` 
 
@@ -49,7 +49,7 @@ See base class.
  
 ```
 
-Returns whether the value is outside the bounds or not.
+返回值是否在边界之外。
 
 ###  `parse` 
 
@@ -59,9 +59,9 @@ Returns whether the value is outside the bounds or not.
  
 ```
 
-See base class.
+见基类。
 
-## Class Members
+## Class 成员
 -  `number_article = 'a'`  []()
 -  `number_name = 'number'`  []()
 -  `syntactic_help = 'a number'`  []()

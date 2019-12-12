@@ -1,6 +1,6 @@
 Encodes each sequence of Unicode code points in  `input`  into a string.
 
-**Aliases** : [ `tf.compat.v1.strings.unicode_encode` ](/api_docs/python/tf/strings/unicode_encode), [ `tf.compat.v2.strings.unicode_encode` ](/api_docs/python/tf/strings/unicode_encode)
+**别名** : [ `tf.compat.v1.strings.unicode_encode` ](/api_docs/python/tf/strings/unicode_encode), [ `tf.compat.v2.strings.unicode_encode` ](/api_docs/python/tf/strings/unicode_encode)
 
 ```
  tf.strings.unicode_encode(
@@ -13,11 +13,11 @@ Encodes each sequence of Unicode code points in  `input`  into a string.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Unicode strings](https://tensorflow.google.cn/tutorials/load_data/unicode)
  `result[i1...iN]`  is the string formed by concatenating the Unicodecodepoints  `input[1...iN, :]` , encoded using  `output_encoding` .
 
-#### Args:
+#### 参数：
 - **`input`** : An  `N+1`  dimensional potentially ragged integer tensor with shape `[D1...DN, num_chars]` .
 - **`output_encoding`** : Unicode encoding that should be used to encode eachcodepoint sequence.  Can be  `"UTF-8"` ,  `"UTF-16-BE"` , or  `"UTF-32-BE"` .
 - **`errors`** : Specifies the response when an invalid codepoint is encountered(optional). One of:    *  `'replace'` : Replace invalid codepoint with the       `replacement_char` . (default)    *  `'ignore'` : Skip invalid codepoints.    *  `'strict'` : Raise an exception for any invalid codepoint.
@@ -25,10 +25,10 @@ Encodes each sequence of Unicode code points in  `input`  into a string.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `N`  dimensional  `string`  tensor with shape  `[D1...DN]` .
 
-#### Example:
+#### 示例：
 
 
 ```

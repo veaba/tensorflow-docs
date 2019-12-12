@@ -1,8 +1,8 @@
 
 
-Computes the maximum along segments of a tensor.
+计算张量沿线段的最大值。
 
-**Aliases** : [ `tf.compat.v1.math.unsorted_segment_max` ](/api_docs/python/tf/math/unsorted_segment_max), [ `tf.compat.v1.unsorted_segment_max` ](/api_docs/python/tf/math/unsorted_segment_max), [ `tf.compat.v2.math.unsorted_segment_max` ](/api_docs/python/tf/math/unsorted_segment_max)
+**别名** : [ `tf.compat.v1.math.unsorted_segment_max` ](/api_docs/python/tf/math/unsorted_segment_max), [ `tf.compat.v1.unsorted_segment_max` ](/api_docs/python/tf/math/unsorted_segment_max), [ `tf.compat.v2.math.unsorted_segment_max` ](/api_docs/python/tf/math/unsorted_segment_max)
 
 ```
  tf.math.unsorted_segment_max(
@@ -26,7 +26,7 @@ If the given segment ID  `i`  is negative, then the corresponding value isdroppe
 
 ![](https://tensorflow.google.cn/images/UnsortedSegmentMax.png)
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -37,13 +37,13 @@ tf.unsorted_segment_max(c, tf.constant([0, 1, 0]), num_segments=2)
  
 ```
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`segment_ids`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor whose shape is a prefix of  `data.shape` .
 - **`num_segments`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `data` .
 

@@ -1,6 +1,6 @@
-Compatibility utility required to allow for both V1 and V2 behavior in TF.
+在tf中同时允许v1和v2行为所需的兼容性实用程序。
 
-**Aliases** : [ `tf.compat.v1.compat.dimension_at_index` ](/api_docs/python/tf/compat/dimension_at_index), [ `tf.compat.v1.dimension_at_index` ](/api_docs/python/tf/compat/dimension_at_index), [ `tf.compat.v2.compat.dimension_at_index` ](/api_docs/python/tf/compat/dimension_at_index)
+**别名** : [ `tf.compat.v1.compat.dimension_at_index` ](/api_docs/python/tf/compat/dimension_at_index), [ `tf.compat.v1.dimension_at_index` ](/api_docs/python/tf/compat/dimension_at_index), [ `tf.compat.v2.compat.dimension_at_index` ](/api_docs/python/tf/compat/dimension_at_index)
 
 ```
  tf.compat.dimension_at_index(
@@ -38,11 +38,11 @@ else:
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`shape`** : A TensorShape instance.
 - **`index`** : An integer index.
 
 
-#### Returns:
-A dimension object.
+#### 返回：
+一个维度对象。
 

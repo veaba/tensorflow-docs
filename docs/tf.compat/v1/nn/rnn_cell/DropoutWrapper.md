@@ -1,7 +1,7 @@
 
 
 ## Class  `DropoutWrapper` 
-Operator adding dropout to inputs and outputs of the given cell.
+运算符向给定单元格的输入和输出添加辍学。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/rnn_cell_impl.py#L1170-L1171)
@@ -18,11 +18,11 @@ Create a cell with added input, state, and/or output dropout.
 
 If  `variational_recurrent`  is set to  `True`  (**NOT**  the default behavior),then the same dropout mask is applied at every step, as described in:[A Theoretically Grounded Application of Dropout in RecurrentNeural Networks. Y. Gal, Z. Ghahramani](https://arxiv.org/abs/1512.05287).
 
-Otherwise a different dropout mask is applied at every time step.
+否则，在每个时间步应用不同的退出掩码。
 
 Note, by default (unless a custom  `dropout_state_filter`  is provided),the memory state ( `c`  component of any  `LSTMStateTuple` ) passing througha  `DropoutWrapper`  is never modified.  This behavior is described in theabove article.
 
-#### Args:
+#### 参数：
 - **`cell`** : an RNNCell, a projection to output_size is added to it.
 - **`input_keep_prob`** : unit Tensor or float between 0 and 1, input keepprobability; if it is constant and 1, no input dropout will be added.
 - **`output_keep_prob`** : unit Tensor or float between 0 and 1, output keepprobability; if it is constant and 1, no output dropout will be added.
@@ -35,16 +35,16 @@ Note, by default (unless a custom  `dropout_state_filter`  is provided),the memo
 - **`**kwargs`** : dict of keyword arguments for base layer.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `cell`  is not an  `RNNCell` , or  `keep_state_fn`  is providedbut not  `callable` .
 - **`ValueError`** : if any of the keep_probs are not between 0 and 1.
 
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -62,7 +62,7 @@ DEPRECATED FUNCTION
 ###  `wrapped_cell` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

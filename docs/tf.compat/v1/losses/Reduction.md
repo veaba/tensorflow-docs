@@ -1,9 +1,9 @@
 
 
 ## Class  `Reduction` 
-Types of loss reduction.
+减少损失的类型。
 
-Contains the following values:
+包含以下值：
 
 -  `NONE` : Un-reduced weighted losses with the same shape as input.
 -  `SUM` : Scalar sum of weighted losses.
@@ -13,7 +13,7 @@ Contains the following values:
 -  `SUM_BY_NONZERO_WEIGHTS` : Same as  `SUM_OVER_NONZERO_WEIGHTS` . DEPRECATED.
 
 
-## Methods
+## 方法
 
 
 ###  `all` 
@@ -37,7 +37,7 @@ validate(
  
 ```
 
-## Class Members
+## Class 成员
 -  `MEAN = 'weighted_mean'`  []()
 -  `NONE = 'none'`  []()
 -  `SUM = 'weighted_sum'`  []()

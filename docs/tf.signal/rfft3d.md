@@ -1,6 +1,6 @@
 3D real-valued fast Fourier transform.
 
-**Aliases** : [ `tf.compat.v1.signal.rfft3d` ](/api_docs/python/tf/signal/rfft3d), [ `tf.compat.v1.spectral.rfft3d` ](/api_docs/python/tf/signal/rfft3d), [ `tf.compat.v2.signal.rfft3d` ](/api_docs/python/tf/signal/rfft3d)
+**别名** : [ `tf.compat.v1.signal.rfft3d` ](/api_docs/python/tf/signal/rfft3d), [ `tf.compat.v1.spectral.rfft3d` ](/api_docs/python/tf/signal/rfft3d), [ `tf.compat.v2.signal.rfft3d` ](/api_docs/python/tf/signal/rfft3d)
 
 ```
  tf.signal.rfft3d(
@@ -17,12 +17,12 @@ Since the DFT of a real signal is Hermitian-symmetric,  `RFFT3D`  only returns t
 
 Along each axis  `RFFT3D`  is computed on, if  `fft_length`  is smaller than thecorresponding dimension of  `input` , the dimension is cropped. If it is larger,the dimension is padded with zeros.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `float32` . A float32 tensor.
 - **`fft_length`** : A  `Tensor`  of type  `int32` .An int32 tensor of shape [3]. The FFT length for each dimension.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `complex64` .
 

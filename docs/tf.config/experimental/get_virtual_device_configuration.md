@@ -1,6 +1,6 @@
-Get the virtual device configuration for a PhysicalDevice.
+获取物理设备的虚拟设备配置。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration), [ `tf.compat.v2.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration)
+**别名** : [ `tf.compat.v1.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration), [ `tf.compat.v2.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration)
 
 ```
  tf.config.experimental.get_virtual_device_configuration(device)
@@ -9,7 +9,7 @@ Get the virtual device configuration for a PhysicalDevice.
 
 Returns the list of VirtualDeviceConfiguration objects previously configuredby a call to [ `tf.config.experimental.set_virtual_device_configuration()` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/set_virtual_device_configuration).
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -28,10 +28,10 @@ assert len(configs) == 2
  
 ```
 
-#### Args:
+#### 参数：
 - **`device`** : PhysicalDevice to query
 
 
-#### Returns:
+#### 返回：
 List of [ `tf.config.experimental.VirtualDeviceConfiguration` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration) objects or `None`  if no virtual device configuration has been set for this physicaldevice.
 

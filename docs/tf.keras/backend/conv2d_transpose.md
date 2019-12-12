@@ -1,6 +1,6 @@
 2D deconvolution (i.e.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.conv2d_transpose` ](/api_docs/python/tf/keras/backend/conv2d_transpose), [ `tf.compat.v2.keras.backend.conv2d_transpose` ](/api_docs/python/tf/keras/backend/conv2d_transpose)
+**别名** : [ `tf.compat.v1.keras.backend.conv2d_transpose` ](/api_docs/python/tf/keras/backend/conv2d_transpose), [ `tf.compat.v2.keras.backend.conv2d_transpose` ](/api_docs/python/tf/keras/backend/conv2d_transpose)
 
 ```
  tf.keras.backend.conv2d_transpose(
@@ -15,9 +15,9 @@
  
 ```
 
-transposed convolution).
+转置卷积）。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`kernel`** : kernel tensor.
 - **`output_shape`** : 1D int tensor for the output shape.
@@ -27,8 +27,8 @@ transposed convolution).
 - **`dilation_rate`** : Tuple of 2 integers.
 
 
-#### Returns:
+#### 返回：
 A tensor, result of transposed 2D convolution.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `data_format`  is neither  `channels_last`  or `channels_first` .

@@ -36,7 +36,7 @@ estimator = tf.estimator.tpu.TPUEstimator(
  
 ```
 
-#### Args:
+#### 参数：
 - **`categorical_columns`** : A list of categorical columns returned from `categorical_column_with_identity` ,  `weighted_categorical_column` , `categorical_column_with_vocabulary_file` , `categorical_column_with_vocabulary_list` , `sequence_categorical_column_with_identity` , `sequence_categorical_column_with_vocabulary_file` , `sequence_categorical_column_with_vocabulary_list` 
 - **`dimension`** : An integer specifying dimension of the embedding, must be > 0.
 - **`combiner`** : A string specifying how to reduce if there are multiple entriesin a single row for a non-sequence column. For more information, see[ `tf.feature_column.embedding_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/embedding_column).
@@ -45,10 +45,10 @@ estimator = tf.estimator.tpu.TPUEstimator(
 - **`max_sequence_lengths`** : An list of non-negative integers, either None orempty or the same length as the argument categorical_columns. Entriescorresponding to non-sequence columns must be 0 and entries correspondingto sequence columns specify the max sequence length for the column. Anysequence shorter then this will be padded with 0 embeddings and anysequence longer will be truncated.
 
 
-#### Returns:
+#### 返回：
 A  list of  `_TPUSharedEmbeddingColumnV2` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `dimension`  not > 0.
 - **`ValueError`** : if  `initializer`  is specified but not callable.
 - **`ValueError`** : if  `max_sequence_lengths`  is specified and not the same lengthas  `categorical_columns` .

@@ -1,12 +1,12 @@
 
 
-Math Operations.
+数学运算。
 
 
 **Note:**  Functions taking  `Tensor`  arguments can also take anything accepted by[ `tf.convert_to_tensor` ](https://tensorflow.google.cn/api_docs/python/tf/convert_to_tensor).
 
 **Note:**  Elementwise binary operations in TensorFlow follow [numpy-stylebroadcasting](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html).
-TensorFlow provides a variety of math functions including:
+TensorFlow提供多种数学函数，包括：
 
 - Basic arithmetic operators and trigonometric functions.
 - Special math functions (like: [ `tf.math.igamma` ](https://tensorflow.google.cn/api_docs/python/tf/math/igamma) and [ `tf.math.zeta` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta))
@@ -17,10 +17,10 @@ See: [ `tf.linalg` ](https://tensorflow.google.cn/api_docs/python/tf/linalg) for
 
 []()
 
-## About Segmentation
+## 关于分段
 TensorFlow provides several operations that you can use to perform commonmath computations on tensor segments.Here a segmentation is a partitioning of a tensor alongthe first dimension, i.e. it  defines a mapping from the first dimension onto `segment_ids` . The  `segment_ids`  tensor should be the size ofthe first dimension,  `d0` , with consecutive IDs in the range  `0`  to  `k` ,where  `k<d0` .In particular, a segmentation of a matrix tensor is a mapping of rows tosegments.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -41,7 +41,7 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
  
 ```
 
-## Functions
+## 功能
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/abs): Computes the absolute value of a tensor.
 
 [ `accumulate_n(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/accumulate_n): Returns the element-wise sum of a list of tensors.

@@ -16,7 +16,7 @@ If  `pos`  specifies an index which is out of range for any of the input strings
 
 *NOTE*:  `Substr`  supports broadcasting up to two dimensions. More aboutbroadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-Examples
+实例
 
 Using scalar  `pos`  and  `len` :
 
@@ -76,7 +76,7 @@ output = [b'hir', b'ee', b'n']
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `string` . Tensor of strings
 - **`pos`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Scalar defining the position of first character in each substring
 - **`len`** : A  `Tensor` . Must have the same type as  `pos` .Scalar defining the number of characters to include in each substring
@@ -84,6 +84,6 @@ output = [b'hir', b'ee', b'n']
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

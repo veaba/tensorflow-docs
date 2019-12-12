@@ -1,6 +1,6 @@
-TODO: add doc.
+待办事项：添加文档。
 
-**Aliases** : [ `tf.compat.v1.strings.lower` ](/api_docs/python/tf/strings/lower), [ `tf.compat.v2.strings.lower` ](/api_docs/python/tf/strings/lower)
+**别名** : [ `tf.compat.v1.strings.lower` ](/api_docs/python/tf/strings/lower), [ `tf.compat.v2.strings.lower` ](/api_docs/python/tf/strings/lower)
 
 ```
  tf.strings.lower(
@@ -11,12 +11,12 @@ TODO: add doc.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `string` .
 - **`encoding`** : An optional  `string` . Defaults to  `""` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

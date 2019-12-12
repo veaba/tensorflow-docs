@@ -1,6 +1,6 @@
-Public API for tf.summary.experimental namespace.
+tf.summary.experimental命名空间的公共API。
 
-## Functions
+## 功能
 [ `get_step(...)` ](https://tensorflow.google.cn/api_docs/python/tf/summary/experimental/get_step): Returns the default summary step for the current thread.
 
 [ `set_step(...)` ](https://tensorflow.google.cn/api_docs/python/tf/summary/experimental/set_step): Sets the default summary step for the current thread.

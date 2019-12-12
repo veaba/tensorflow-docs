@@ -1,13 +1,13 @@
 
 
 ## Class  `SimpleRNNCell` 
-Cell class for SimpleRNN.
+SimpleRN的单元格类。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.SimpleRNNCell` ](/api_docs/python/tf/keras/layers/SimpleRNNCell), [ `tf.compat.v2.keras.layers.SimpleRNNCell` ](/api_docs/python/tf/keras/layers/SimpleRNNCell)
+**别名** : [ `tf.compat.v1.keras.layers.SimpleRNNCell` ](/api_docs/python/tf/keras/layers/SimpleRNNCell), [ `tf.compat.v2.keras.layers.SimpleRNNCell` ](/api_docs/python/tf/keras/layers/SimpleRNNCell)
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`activation`** : Activation function to use.Default: hyperbolic tangent ( `tanh` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`use_bias`** : Boolean, whether the layer uses a bias vector.
@@ -24,7 +24,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - **`recurrent_dropout`** : Float between 0 and 1.Fraction of the units to drop forthe linear transformation of the recurrent state.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : A 2D tensor.
 - **`states`** : List of state tensors corresponding to the previous timestep.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. Only relevant when  `dropout`  or `recurrent_dropout`  is used.
@@ -54,7 +54,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
  
 ```
 
-## Methods
+## 方法
 
 
 ###  `get_dropout_mask_for_cell` 
@@ -69,17 +69,17 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
  
 ```
 
-Get the dropout mask for RNN cell's input.
+获取RNN单元输入的退出掩码。
 
 It will create mask based on context if there isn't any existing cachedmask. If a new mask is generated, it will update the cache in the cell.
 
-#### Args:
+#### 参数：
 - **`inputs`** : the input tensor whose shape will be used to generate dropoutmask.
 - **`training`** : boolean tensor, whether its in training mode, dropout will beignored in non-training mode.
 - **`count`** : int, how many dropout mask will be generated. It is useful for cellthat has internal weights fused together.
 
 
-#### Returns:
+#### 返回：
 List of mask tensor, generated or cached mask based on context.
 
 ###  `get_initial_state` 
@@ -106,17 +106,17 @@ List of mask tensor, generated or cached mask based on context.
  
 ```
 
-Get the recurrent dropout mask for RNN cell.
+获取RNN细胞的复发性脱落面具。
 
 It will create mask based on context if there isn't any existing cachedmask. If a new mask is generated, it will update the cache in the cell.
 
-#### Args:
+#### 参数：
 - **`inputs`** : the input tensor whose shape will be used to generate dropoutmask.
 - **`training`** : boolean tensor, whether its in training mode, dropout will beignored in non-training mode.
 - **`count`** : int, how many dropout mask will be generated. It is useful for cellthat has internal weights fused together.
 
 
-#### Returns:
+#### 返回：
 List of mask tensor, generated or cached mask based on context.
 
 ###  `reset_dropout_mask` 
@@ -127,7 +127,7 @@ List of mask tensor, generated or cached mask based on context.
  
 ```
 
-Reset the cached dropout masks if any.
+重置缓存的退出掩码（如果有）。
 
 This is important for the RNN layer to invoke this in it call() method sothat the cached mask is cleared before calling the cell.call(). The maskshould be cached across the timestep within the same batch, but shouldn'tbe cached between batches. Otherwise it will introduce unreasonable biasagainst certain index of data within the batch.
 
@@ -139,7 +139,7 @@ This is important for the RNN layer to invoke this in it call() method sothat th
  
 ```
 
-Reset the cached recurrent dropout masks if any.
+如果存在，则重置缓存的重复退出掩码。
 
 This is important for the RNN layer to invoke this in it call() method sothat the cached mask is cleared before calling the cell.call(). The maskshould be cached across the timestep within the same batch, but shouldn'tbe cached between batches. Otherwise it will introduce unreasonable biasagainst certain index of data within the batch.
 

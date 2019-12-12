@@ -1,6 +1,6 @@
-Returns a flat list from a given nested structure.
+从给定的嵌套结构返回平面列表。
 
-**Aliases** : [ `tf.compat.v1.nest.flatten` ](/api_docs/python/tf/nest/flatten), [ `tf.compat.v2.nest.flatten` ](/api_docs/python/tf/nest/flatten)
+**别名** : [ `tf.compat.v1.nest.flatten` ](/api_docs/python/tf/nest/flatten), [ `tf.compat.v2.nest.flatten` ](/api_docs/python/tf/nest/flatten)
 
 ```
  tf.nest.flatten(
@@ -10,7 +10,7 @@ Returns a flat list from a given nested structure.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 If nest is not a sequence, tuple, or dict, then returns a single-element list:[nest].
 
@@ -18,13 +18,13 @@ In the case of dict instances, the sequence consists of the values, sorted bykey
 
 Users must not modify any collections used in nest while this function isrunning.
 
-#### Args:
+#### 参数：
 - **`structure`** : an arbitrarily nested structure or a scalar object. Note, numpyarrays are considered scalars.
 - **`expand_composites`** : If true, then composite tensors such as tf.SparseTensorand tf.RaggedTensor are expanded into their component tensors.
 
 
-#### Returns:
+#### 返回：
 A Python list, the flattened version of the input.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : The nest is or contains a dict with non-sortable keys.

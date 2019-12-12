@@ -3,7 +3,7 @@
 ## Class  `MonitoredSession` 
 Session-like object that handles initialization, recovery and hooks.
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -66,13 +66,13 @@ See  `MonitoredTrainingSession`  for an example usage based on chief or worker.
 - it cannot be sent to tf.train.start_queue_runners.
 
 
-#### Args:
+#### 参数：
 - **`session_creator`** : A factory object to create session. Typically a `ChiefSessionCreator`  which is the default one.
 - **`hooks`** : An iterable of `SessionRunHook' objects.
 
 
-#### Returns:
-A MonitoredSession object.
+#### 返回：
+监视会话对象。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L1006-L1014)
@@ -86,25 +86,25 @@ A MonitoredSession object.
  
 ```
 
-Sets up a Monitored or Hooked Session.
+设置监视或连接的会话。
 
-#### Args:
+#### 参数：
 - **`session_creator`** : A factory object to create session. Typically a `ChiefSessionCreator`  or a  `WorkerSessionCreator` .
 - **`hooks`** : An iterable of `SessionRunHook' objects.
 - **`should_recover`** : A bool. Indicates whether to recover from  `AbortedError` and  `UnavailableError`  or not.
 - **`stop_grace_period_secs`** : Number of seconds given to threads to stop after `close()`  has been called.
 
 
-## Child Classes
+## 子类
 [ `class StepContext` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/MonitoredSession/StepContext)
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-The graph that was launched in this session.
+在此会话中启动的图表。
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -148,18 +148,18 @@ The graph that was launched in this session.
  
 ```
 
-Run ops in the monitored session.
+在监视的会话中运行操作。
 
 This method is completely compatible with the  `tf.Session.run()`  method.
 
-#### Args:
+#### 参数：
 - **`fetches`** : Same as  `tf.Session.run()` .
 - **`feed_dict`** : Same as  `tf.Session.run()` .
 - **`options`** : Same as  `tf.Session.run()` .
 - **`run_metadata`** : Same as  `tf.Session.run()` .
 
 
-#### Returns:
+#### 返回：
 Same as  `tf.Session.run()` .
 
 ###  `run_step_fn` 
@@ -170,9 +170,9 @@ Same as  `tf.Session.run()` .
  
 ```
 
-Run ops using a step function.
+使用step函数运行ops。
 
-#### Args:
+#### 参数：
 - **`step_fn`** : A function or a method with a single argument of type `StepContext` .  The function may use methods of the argument to performcomputations with access to a raw session.  The returned value of the `step_fn`  will be returned from  `run_step_fn` , unless a stop isrequested.  In that case, the next  `should_stop`  call will return True.Example usage:
 
 
@@ -196,10 +196,10 @@ Run ops using a step function.
  
 ```
 
-#### Returns:
+#### 返回：
 Returns the returned value of  `step_fn` .
 
-#### Raises:
+#### 加薪：
 - **`StopIteration`** : if  `step_fn`  has called  `request_stop()` .  It may becaught by  `with tf.MonitoredSession()`  to close the session.
 - **`ValueError`** : if  `step_fn`  doesn't have a single argument called `step_context` . It may also optionally have  `self`  for cases when itbelongs to an object.
 

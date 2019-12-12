@@ -1,19 +1,19 @@
 
 
 ## Class  `Exporter` 
-A class representing a type of model export.
+表示模型导出类型的类。
 
-**Aliases** : [ `tf.compat.v1.estimator.Exporter` ](/api_docs/python/tf/estimator/Exporter), [ `tf.compat.v2.estimator.Exporter` ](/api_docs/python/tf/estimator/Exporter)
+**别名** : [ `tf.compat.v1.estimator.Exporter` ](/api_docs/python/tf/estimator/Exporter), [ `tf.compat.v2.estimator.Exporter` ](/api_docs/python/tf/estimator/Exporter)
 
-## Properties
+## 属性
 
 
 ###  `name` 
-Directory name.
+目录名。
 
 A directory name under the export base directory where exports ofthis type are written.  Should not be  `None`  nor empty.
 
-## Methods
+## 方法
 
 
 ###  `export` 
@@ -32,7 +32,7 @@ A directory name under the export base directory where exports ofthis type are w
 
 Exports the given  `Estimator`  to a specific format.
 
-#### Args:
+#### 参数：
 - **`estimator`** : the  `Estimator`  to export.
 - **`export_path`** : A string containing a directory where to write the export.
 - **`checkpoint_path`** : The checkpoint path to export.
@@ -40,6 +40,6 @@ Exports the given  `Estimator`  to a specific format.
 - **`is_the_final_export`** : This boolean is True when this is an export in theend of training.  It is False for the intermediate exports duringthe training.When passing  `Exporter`  to [ `tf.estimator.train_and_evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate) `is_the_final_export`  is always False if [ `TrainSpec.max_steps` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/TrainSpec#max_steps) is `None` .
 
 
-#### Returns:
+#### 返回：
 The string path to the exported directory or  `None`  if export is skipped.
 

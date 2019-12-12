@@ -1,6 +1,6 @@
-Computes the variance of elements across dimensions of a tensor.
+计算元素在张量维度上的方差。
 
-**Aliases** : [ `tf.compat.v1.math.reduce_variance` ](/api_docs/python/tf/math/reduce_variance), [ `tf.compat.v2.math.reduce_variance` ](/api_docs/python/tf/math/reduce_variance)
+**别名** : [ `tf.compat.v1.math.reduce_variance` ](/api_docs/python/tf/math/reduce_variance), [ `tf.compat.v2.math.reduce_variance` ](/api_docs/python/tf/math/reduce_variance)
 
 ```
  tf.math.reduce_variance(
@@ -16,7 +16,7 @@ Reduces  `input_tensor`  along the dimensions given in  `axis` .Unless  `keepdim
 
 If  `axis`  is None, all dimensions are reduced, and atensor with a single element is returned.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -27,18 +27,18 @@ tf.reduce_variance(x, 1)  # [0.25,  0.25]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The tensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
 - **`name`** : A name scope for the associated operations (optional).
 
 
-#### Returns:
+#### 返回：
 The reduced tensor, of the same dtype as the input_tensor.
 
-#### Numpy Compatibility
-Equivalent to np.var
+#### numpy兼容性
+相当于np.var
 
 Please note that  `np.var`  has a  `dtype`  parameter that could be used tospecify the output type. By default this is  `dtype=float64` . On the otherhand,  `tf.reduce_variance`  has an aggressive type inference from `input_tensor` ,
 

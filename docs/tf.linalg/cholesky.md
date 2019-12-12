@@ -1,6 +1,6 @@
-Computes the Cholesky decomposition of one or more square matrices.
+计算一个或多个方阵的cholesky分解。
 
-**Aliases** : [ `tf.compat.v1.cholesky` ](/api_docs/python/tf/linalg/cholesky), [ `tf.compat.v1.linalg.cholesky` ](/api_docs/python/tf/linalg/cholesky), [ `tf.compat.v2.linalg.cholesky` ](/api_docs/python/tf/linalg/cholesky)
+**别名** : [ `tf.compat.v1.cholesky` ](/api_docs/python/tf/linalg/cholesky), [ `tf.compat.v1.linalg.cholesky` ](/api_docs/python/tf/linalg/cholesky), [ `tf.compat.v2.linalg.cholesky` ](/api_docs/python/tf/linalg/cholesky)
 
 ```
  tf.linalg.cholesky(
@@ -18,11 +18,11 @@ The output is a tensor of the same shape as the inputcontaining the Cholesky dec
 
 **Note** : The gradient computation on GPU is faster for large matrices butnot for large batch dimensions when the submatrices are small. In thiscase it might be faster to use the CPU.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `float64` ,  `float32` ,  `half` ,  `complex64` ,  `complex128` .Shape is  `[..., M, M]` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

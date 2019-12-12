@@ -1,27 +1,27 @@
 
 
 ## Class  `Constant` 
-Initializer that generates tensors with constant values.
+生成具有常量值的张量的初始值设定项。
 
 Inherits From: [ `Initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Initializer)
 
-**Aliases** : [ `tf.compat.v1.constant_initializer` ](/api_docs/python/tf/compat/v1/keras/initializers/Constant), [ `tf.compat.v1.initializers.constant` ](/api_docs/python/tf/compat/v1/keras/initializers/Constant), [ `tf.compat.v1.keras.initializers.constant` ](/api_docs/python/tf/compat/v1/keras/initializers/Constant)
+**别名** : [ `tf.compat.v1.constant_initializer` ](/api_docs/python/tf/compat/v1/keras/initializers/Constant), [ `tf.compat.v1.initializers.constant` ](/api_docs/python/tf/compat/v1/keras/initializers/Constant), [ `tf.compat.v1.keras.initializers.constant` ](/api_docs/python/tf/compat/v1/keras/initializers/Constant)
 
 The resulting tensor is populated with values of type  `dtype` , asspecified by arguments  `value`  following the desired  `shape`  of thenew tensor (see examples below).
 
 The argument  `value`  can be a constant value, or a list of values of type `dtype` . If  `value`  is a list, then the length of the list must be lessthan or equal to the number of elements implied by the desired shape of thetensor. In the case where the total number of elements in  `value`  is lessthan the number of elements required by the tensor shape, the last elementin  `value`  will be used to fill the remaining entries. If the total number ofelements in  `value`  is greater than the number of elements required by thetensor shape, the initializer will raise a  `ValueError` .
 
-#### Args:
+#### 参数：
 - **`value`** : A Python scalar, list or tuple of values, or a N-dimensional numpyarray. All elements of the initialized variable will be set to thecorresponding value in the  `value`  argument.
 - **`dtype`** : Default data type, used if no  `dtype`  argument is provided whencalling the initializer.
 - **`verify_shape`** : Boolean that enables verification of the shape of  `value` . If `True` , the initializer will throw an error if the shape of  `value`  is notcompatible with the shape of the initialized tensor.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the input  `value`  is not one of the expected types.
 
 
-#### Examples:
+#### 示例：
 The following example can be rewritten using a numpy.ndarray insteadof the  `value`  list, even reshaped, as shown in the two commented linesbelow the  `value`  list initialization.
 
 
@@ -93,7 +93,7 @@ DEPRECATED FUNCTION ARGUMENTS (deprecated arguments)
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(verify_shape)` . They will be removed in a future version.Instructions for updating:Objects must now be the required shape or no shape can be specified
 
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -109,9 +109,9 @@ DEPRECATED FUNCTION ARGUMENTS (deprecated arguments)
  
 ```
 
-Returns a tensor object initialized as specified by the initializer.
+返回按初始值设定项指定初始化的张量对象。
 
-#### Args:
+#### 参数：
 - **`shape`** : Shape of the tensor.
 - **`dtype`** : Optional dtype of the tensor. If not provided use the initializerdtype.
 - **`partition_info`** : Optional information about the possible partitioning of atensor.
@@ -128,9 +128,9 @@ Returns a tensor object initialized as specified by the initializer.
  
 ```
 
-Instantiates an initializer from a configuration dictionary.
+从配置字典实例化初始值设定项。
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -140,12 +140,12 @@ initializer = RandomUniform.from_config(config)
  
 ```
 
-#### Args:
+#### 参数：
 - **`config`** : A Python dictionary. It will typically be the output of `get_config` .
 
 
-#### Returns:
-An Initializer instance.
+#### 返回：
+初始化器实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L246-L251)
@@ -157,6 +157,6 @@ An Initializer instance.
 
 Returns the configuration of the initializer as a JSON-serializable dict.
 
-#### Returns:
+#### 返回：
 A JSON-serializable Python dict.
 

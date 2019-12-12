@@ -1,11 +1,11 @@
 
 
 ## Class  `TimeseriesGenerator` 
-Utility class for generating batches of temporal data.
+用于生成时间数据批的实用程序类。
 
 Inherits From: [ `Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator), [ `tf.compat.v2.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator)
+**别名** : [ `tf.compat.v1.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator), [ `tf.compat.v2.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator)
 
 This class takes in a sequence of data-points gathered atequal intervals, along with time series parameters such asstride, length of history, etc., to produce batches fortraining/validation.
 
@@ -17,14 +17,14 @@ This class takes in a sequence of data-points gathered atequal intervals, along 
     containing consecutive data points (timesteps).
     The data should be at 2D, and axis 0 is expected
     to be the time dimension.
-targets: Targets corresponding to timesteps in `data`.
+targets：与“data”中的timestep相对应的目标。
     It should have same length as `data`.
-length: Length of the output sequences (in number of timesteps).
+长度：输出序列的长度（以时间步数为单位）。
 sampling_rate: Period between successive individual timesteps
     within sequences. For rate `r`, timesteps
     `data[i]`, `data[i-r]`, ... `data[i - length]`
     are used for create a sample sequence.
-stride: Period between successive output sequences.
+步幅：连续输出序列之间的周期。
     For stride `s`, consecutive output samples would
     be centered around `data[i]`, `data[i+s]`, `data[i+2*s]`, etc.
 start_index: Data points earlier than `start_index` will not be used
@@ -54,7 +54,7 @@ batch_size: Number of timeseries samples in each batch
 
 
 ```
- from keras.preprocessing.sequence import TimeseriesGenerator
+从keras.preprocessing.sequence import timeseriesgenerator
 import numpy as np
 data = np.array([[i] for i in range(50)])
 targets = np.array([[i] for i in range(50)])
@@ -93,7 +93,7 @@ assert np.array_equal(y,
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__getitem__` 
@@ -112,7 +112,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Create a generator that iterate over the Sequence.
+创建一个遍历序列的生成器。
 
 ###  `__len__` 
 
@@ -130,13 +130,13 @@ Create a generator that iterate over the Sequence.
  
 ```
 
-Returns the TimeseriesGenerator configuration as Python dictionary.
+将TimeSeriesGenerator配置作为Python字典返回。
 
 # Returns
 
 
 ```
- A Python dictionary with the TimeseriesGenerator configuration.
+具有TimeSeriesGenerator配置的Python字典。
  
 ```
 
@@ -148,7 +148,7 @@ Returns the TimeseriesGenerator configuration as Python dictionary.
  
 ```
 
-Method called at the end of every epoch.
+方法在每个纪元结束时调用。
 
 ###  `to_json` 
 
@@ -173,7 +173,7 @@ Returns a JSON string containing the timeseries generatorconfiguration. To load 
 
 
 ```
- A JSON string containing the tokenizer configuration.
+包含标记器配置的json字符串。
  
 ```
 

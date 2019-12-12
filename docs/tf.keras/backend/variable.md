@@ -1,6 +1,6 @@
-Instantiates a variable and returns it.
+实例化变量并返回它。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.variable` ](/api_docs/python/tf/keras/backend/variable), [ `tf.compat.v2.keras.backend.variable` ](/api_docs/python/tf/keras/backend/variable)
+**别名** : [ `tf.compat.v1.keras.backend.variable` ](/api_docs/python/tf/keras/backend/variable), [ `tf.compat.v2.keras.backend.variable` ](/api_docs/python/tf/keras/backend/variable)
 
 ```
  tf.keras.backend.variable(
@@ -12,17 +12,17 @@ Instantiates a variable and returns it.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`value`** : Numpy array, initial value of the tensor.
 - **`dtype`** : Tensor type.
 - **`name`** : Optional name string for the tensor.
 - **`constraint`** : Optional projection function to beapplied to the variable after an optimizer update.
 
 
-#### Returns:
-A variable instance (with Keras metadata included).
+#### 返回：
+变量实例（包括keras元数据）。
 
-#### Examples:
+#### 示例：
 
 
 ```

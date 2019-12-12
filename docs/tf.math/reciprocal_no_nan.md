@@ -1,6 +1,6 @@
 Performs a safe reciprocal operation, element wise.
 
-**Aliases** : [ `tf.compat.v1.math.reciprocal_no_nan` ](/api_docs/python/tf/math/reciprocal_no_nan), [ `tf.compat.v2.math.reciprocal_no_nan` ](/api_docs/python/tf/math/reciprocal_no_nan)
+**别名** : [ `tf.compat.v1.math.reciprocal_no_nan` ](/api_docs/python/tf/math/reciprocal_no_nan), [ `tf.compat.v2.math.reciprocal_no_nan` ](/api_docs/python/tf/math/reciprocal_no_nan)
 
 ```
  tf.math.reciprocal_no_nan(    x,    name=None) 
@@ -8,7 +8,7 @@ Performs a safe reciprocal operation, element wise.
 
 If a particular element is zero, the reciprocal for that element isalso set to zero.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -17,13 +17,13 @@ tf.math.reciprocal_no_nan(x)  # [ 0.5, 2, 0.0, 1.0 ]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64`   `complex64`  or `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of same shape and type as  `x` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : x must be of a valid dtype.

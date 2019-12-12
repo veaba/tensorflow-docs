@@ -1,4 +1,4 @@
-Applies natural exponential decay to the initial learning rate.
+对初始学习率应用自然指数衰减。
 
 ```
  tf.compat.v1.train.natural_exp_decay(    learning_rate,    global_step,    decay_steps,    decay_rate,    staircase=False,    name=None) 
@@ -42,7 +42,7 @@ learning_step = (
  
 ```
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or a Python number.The initial learning rate.
 - **`global_step`** : A Python number. Global step to use for the decay computation.Must not be negative.
 - **`decay_steps`** : How often to apply decay.
@@ -51,13 +51,13 @@ learning_step = (
 - **`name`** : String.  Optional name of the operation.  Defaults to'ExponentialTimeDecay'.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of the same type as  `learning_rate` .  The decayedlearning rate.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `global_step`  is not supplied.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled, this function returns a function which inturn returns the decayed learning rate Tensor. This can be useful for changingthe learning rate value across different invocations of optimizer functions.
 

@@ -1,11 +1,11 @@
 
 
 ## Class  `Progbar` 
-Displays a progress bar.
+显示进度条。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.Progbar` ](/api_docs/python/tf/keras/utils/Progbar), [ `tf.compat.v2.keras.utils.Progbar` ](/api_docs/python/tf/keras/utils/Progbar)
+**别名** : [ `tf.compat.v1.keras.utils.Progbar` ](/api_docs/python/tf/keras/utils/Progbar), [ `tf.compat.v2.keras.utils.Progbar` ](/api_docs/python/tf/keras/utils/Progbar)
 
-#### Arguments:
+#### 参数：
 - **`target`** : Total number of steps expected, None if unknown.
 - **`width`** : Progress bar width on screen.
 - **`verbose`** : Verbosity mode, 0 (silent), 1 (verbose), 2 (semi-verbose)
@@ -31,7 +31,7 @@ Displays a progress bar.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `add` 
@@ -56,8 +56,8 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Updates the progress bar.
+更新进度条。
 
-#### Arguments:
+#### 参数：
 - **`current`** : Index of current step.
 - **`values`** : List of tuples: `(name, value_for_last_step)` .If  `name`  is in  `stateful_metrics` , `value_for_last_step`  will be displayed as-is.Else, an average of the metric over time will be displayed.

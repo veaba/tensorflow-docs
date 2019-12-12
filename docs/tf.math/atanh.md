@@ -1,6 +1,6 @@
 Computes inverse hyperbolic tangent of x element-wise.
 
-**Aliases** : [ `tf.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v1.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v1.math.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v2.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v2.math.atanh` ](/api_docs/python/tf/math/atanh)
+**别名** : [ `tf.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v1.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v1.math.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v2.atanh` ](/api_docs/python/tf/math/atanh), [ `tf.compat.v2.math.atanh` ](/api_docs/python/tf/math/atanh)
 
 ```
  tf.math.atanh(    x,    name=None) 
@@ -14,11 +14,11 @@ tf.math.atanh(x) ==> [nan -inf -0.54930615 inf  0. 0.54930615 nan nan]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

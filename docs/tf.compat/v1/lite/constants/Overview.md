@@ -1,6 +1,6 @@
-Public API for tf.lite.constants namespace.
+tf.lite.constants命名空间的公共API。
 
-## Other Members
+## 其他成员
 -  `FLOAT`  []()
 -  `FLOAT16`  []()
 -  `GRAPHVIZ_DOT = 3`  []()

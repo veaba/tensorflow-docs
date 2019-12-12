@@ -39,9 +39,9 @@ Additionally both 'params' and 'indices' can have M leading batchdimensions that
 
 Note that on CPU, if an out of bound index is found, an error is returned.On GPU, if an out of bound index is found, a 0 is stored in thecorresponding output value.
 
-Some examples below.
+下面是一些例子。
 
-Simple indexing into a matrix:
+矩阵的简单索引：
 
 ```
      indices = [[0, 0], [1, 1]]
@@ -50,7 +50,7 @@ Simple indexing into a matrix:
  
 ```
 
-Slice indexing into a matrix:
+将索引切片到矩阵中：
 
 ```
      indices = [[1], [0]]
@@ -83,7 +83,7 @@ Indexing into a 3-tensor:
 
 The examples below are for the case when only indices have leading extradimensions. If both 'params' and 'indices' have leading batch dimensions, usethe 'batch_dims' parameter to run gather_nd in batch mode.
 
-Batched indexing into a matrix:
+批量索引到矩阵：
 
 ```
      indices = [[[0, 0]], [[0, 1]]]
@@ -92,7 +92,7 @@ Batched indexing into a matrix:
  
 ```
 
-Batched slice indexing into a matrix:
+批量切片索引到矩阵：
 
 ```
      indices = [[[1]], [[0]]]
@@ -124,7 +124,7 @@ Batched indexing into a 3-tensor:
  
 ```
 
-Examples with batched 'params' and 'indices':
+带有成批“params”和“index”的示例：
 
 ```
      batch_dims = 1
@@ -149,13 +149,13 @@ Examples with batched 'params' and 'indices':
 
 See also [ `tf.gather` ](https://tensorflow.google.cn/api_docs/python/tf/gather).
 
-#### Args:
+#### 参数：
 - **`params`** : A  `Tensor` . The tensor from which to gather values.
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Index tensor.
 - **`name`** : A name for the operation (optional).
 - **`batch_dims`** : An integer or a scalar 'Tensor'. The number of batch dimensions.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `params` .
 

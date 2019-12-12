@@ -28,7 +28,7 @@ Functional interface for transposed 3D convolution layer. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.keras.layers.Conv3DTranspose` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv3DTranspose) instead.
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Input tensor.
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : A tuple or list of 3 positive integers specifying the spatialdimensions of the filters. Can be a single integer to specify the samevalue for all spatial dimensions.
@@ -49,8 +49,8 @@ Functional interface for transposed 3D convolution layer. (deprecated)
 - **`reuse`** : Boolean, whether to reuse the weights of a previous layerby the same name.
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

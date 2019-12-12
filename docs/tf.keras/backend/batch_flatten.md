@@ -1,6 +1,6 @@
 Turn a nD tensor into a 2D tensor with same 0th dimension.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.batch_flatten` ](/api_docs/python/tf/keras/backend/batch_flatten), [ `tf.compat.v2.keras.backend.batch_flatten` ](/api_docs/python/tf/keras/backend/batch_flatten)
+**别名** : [ `tf.compat.v1.keras.backend.batch_flatten` ](/api_docs/python/tf/keras/backend/batch_flatten), [ `tf.compat.v2.keras.backend.batch_flatten` ](/api_docs/python/tf/keras/backend/batch_flatten)
 
 ```
  tf.keras.backend.batch_flatten(x) 
@@ -8,15 +8,15 @@ Turn a nD tensor into a 2D tensor with same 0th dimension.
 
 In other words, it flattens each data samples of a batch.
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Examples:
-Flattening a 3D tensor to 2D by collapsing the last dimension.
+#### 示例：
+通过折叠最后一个维度将三维张量展平到二维。
 
 ```
      >>> from tensorflow.keras import backend as K

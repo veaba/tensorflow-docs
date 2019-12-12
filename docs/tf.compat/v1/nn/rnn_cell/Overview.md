@@ -1,6 +1,6 @@
-Module for constructing RNN Cells.
+用于构建RNN单元的模块。
 
-## Classes
+## Class 
 [ `class BasicLSTMCell` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/nn/rnn_cell/BasicLSTMCell): DEPRECATED: Please use [ `tf.compat.v1.nn.rnn_cell.LSTMCell` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/nn/rnn_cell/LSTMCell) instead.
 
 [ `class BasicRNNCell` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/nn/rnn_cell/BasicRNNCell): The most basic RNN cell.

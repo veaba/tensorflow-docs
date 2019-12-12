@@ -3,7 +3,7 @@
 ## Class  `SparseTensorSpec` 
 Type specification for a [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-**Aliases** : [ `tf.compat.v1.SparseTensorSpec` ](/api_docs/python/tf/SparseTensorSpec), [ `tf.compat.v2.SparseTensorSpec` ](/api_docs/python/tf/SparseTensorSpec)
+**别名** : [ `tf.compat.v1.SparseTensorSpec` ](/api_docs/python/tf/SparseTensorSpec), [ `tf.compat.v2.SparseTensorSpec` ](/api_docs/python/tf/SparseTensorSpec)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/sparse_tensor.py#L268-L277)
@@ -18,12 +18,12 @@ Type specification for a [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_
 
 Constructs a type specification for a [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-#### Args:
+#### 参数：
 - **`shape`** : The dense shape of the  `SparseTensor` , or  `None`  to allowany dense shape.
 - **`dtype`** : [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) of values in the  `SparseTensor` .
 
 
-## Properties
+## 属性
 
 
 ###  `dtype` 
@@ -35,7 +35,7 @@ The [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorS
 ###  `value_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -90,9 +90,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

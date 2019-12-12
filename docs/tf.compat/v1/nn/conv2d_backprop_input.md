@@ -1,4 +1,4 @@
-Computes the gradients of convolution with respect to the input.
+计算卷积相对于输入的梯度。
 
 ```
  tf.compat.v1.nn.conv2d_backprop_input(
@@ -16,7 +16,7 @@ Computes the gradients of convolution with respect to the input.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_sizes`** : A  `Tensor`  of type  `int32` .An integer vector representing the shape of  `input` ,where  `input`  is a 4-D  `[batch, height, width, channels]`  tensor.
 - **`filter`** : A  `Tensor` . Must be one of the following types: `half` ,  `bfloat16` ,  `float32` ,  `float64` .4-D with shape `[filter_height, filter_width, in_channels, out_channels]` .
 - **`out_backprop`** : A  `Tensor` . Must have the same type as  `filter` .4-D with shape  `[batch, out_height, out_width, out_channels]` .Gradients w.r.t. the output of the convolution.
@@ -29,6 +29,6 @@ Computes the gradients of convolution with respect to the input.
 - **`filters`** : Alias for filter.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `filter` .
 

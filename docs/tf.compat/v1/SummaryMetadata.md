@@ -1,12 +1,12 @@
 
 
 ## Class  `SummaryMetadata` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class PluginData` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/SummaryMetadata/PluginData)
 
-## Properties
+## 属性
 
 
 ###  `display_name` 

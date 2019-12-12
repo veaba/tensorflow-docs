@@ -22,7 +22,7 @@ Creates batches by randomly shuffling conditionally-enqueued tensors. (deprecate
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Queue-based input pipelines have been replaced by [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data). Use  `tf.data.Dataset.filter(...).shuffle(min_after_dequeue).batch(batch_size)` .
 See docstring in  `shuffle_batch`  for more details.
 
-#### Args:
+#### 参数：
 - **`tensors`** : The list or dictionary of tensors to enqueue.
 - **`batch_size`** : The new batch size pulled from the queue.
 - **`capacity`** : An integer. The maximum number of elements in the queue.
@@ -37,13 +37,13 @@ See docstring in  `shuffle_batch`  for more details.
 - **`name`** : (Optional) A name for the operations.
 
 
-#### Returns:
+#### 返回：
 A list or dictionary of tensors with the types as  `tensors` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `shapes`  are not specified, and cannot beinferred from the elements of  `tensors` .
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Input pipelines based on Queues are not supported when eager execution isenabled. Please use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API to ingest data under eager execution.
 

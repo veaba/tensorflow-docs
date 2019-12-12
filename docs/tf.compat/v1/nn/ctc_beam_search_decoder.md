@@ -1,4 +1,4 @@
-Performs beam search decoding on the logits given in input.
+对输入中给定的登录执行波束搜索解码。
 
 ```
  tf.compat.v1.nn.ctc_beam_search_decoder(
@@ -19,7 +19,7 @@ If  `merge_repeated`  is  `True` , merge repeated classes in the output beams.Th
 -  `A B B B`  if  `merge_repeated = False` .
 
 
-#### Args:
+#### 参数：
 - **`inputs`** : 3-D  `float`   `Tensor` , size  `[max_time x batch_size x num_classes]` .The logits.
 - **`sequence_length`** : 1-D  `int32`  vector containing sequence lengths, having size `[batch_size]` .
 - **`beam_width`** : An int scalar >= 0 (beam search beam width).
@@ -27,7 +27,7 @@ If  `merge_repeated`  is  `True` , merge repeated classes in the output beams.Th
 - **`merge_repeated`** : Boolean.  Default: True.
 
 
-#### Returns:
+#### 返回：
 A tuple  `(decoded, log_probabilities)`  where
 
 - **`decoded`** : A list of length top_paths, where  `decoded[j]` is a  `SparseTensor`  containing the decoded outputs:

@@ -1,13 +1,13 @@
-Public API for tf.config namespace.
+tf.config命名空间的公共API。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/config/experimental) module: Public API for tf.config.experimental namespace.
 
 [ `optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/config/optimizer) module: Public API for tf.config.optimizer namespace.
 
 [ `threading` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/config/threading) module: Public API for tf.config.threading namespace.
 
-## Functions
+## 功能
 [ `experimental_connect_to_cluster(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental_connect_to_cluster): Connects to the given cluster.
 
 [ `experimental_connect_to_host(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental_connect_to_host): Connects to a single machine to enable remote execution on it.

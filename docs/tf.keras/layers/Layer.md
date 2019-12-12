@@ -1,17 +1,17 @@
 
 
 ## Class  `Layer` 
-Base layer class.
+基本层类。
 
 Inherits From: [ `Module` ](https://tensorflow.google.cn/api_docs/python/tf/Module)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Layer` ](/api_docs/python/tf/keras/layers/Layer), [ `tf.compat.v2.keras.layers.Layer` ](/api_docs/python/tf/keras/layers/Layer)
+**别名** : [ `tf.compat.v1.keras.layers.Layer` ](/api_docs/python/tf/keras/layers/Layer), [ `tf.compat.v2.keras.layers.Layer` ](/api_docs/python/tf/keras/layers/Layer)
 
-This is the class from which all layers inherit.
+这是所有层都从中继承的类。
 
 A layer is a class implementing common neural networks operations, suchas convolution, batch norm, etc. These operations require managing weights,losses, updates, and inter-layer connectivity.
 
-Users will just instantiate a layer and then treat it as a callable.
+用户只需实例化一个层，然后将其视为可调用的。
 
 We recommend that descendants of  `Layer`  implement the following methods:
 
@@ -20,19 +20,19 @@ We recommend that descendants of  `Layer`  implement the following methods:
 -  `call()` : Called in  `__call__`  after making sure  `build()`  has been calledonce. Should actually perform the logic of applying the layer to theinput tensors (which should be passed in as the first argument).
 
 
-#### Arguments:
+#### 参数：
 - **`trainable`** : Boolean, whether the layer's variables should be trainable.
 - **`name`** : String name of the layer.
 - **`dtype`** : The dtype of the layer's computations and weights (default of `None`  means use [ `tf.keras.backend.floatx` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/floatx) in TensorFlow 2, or the typeof the first input in TensorFlow 1).
 - **`dynamic`** : Set this to  `True`  if your layer should only be run eagerly, andshould not be used to generate a static computation graph.This would be the case for a Tree-RNN or a recursive network,for example, or generally for any layer that manipulates tensorsusing Python control flow. If  `False` , we assume that the layer cansafely be used to generate a static computation graph.
 Read-only properties:  name: The name of the layer (string).  dtype: The dtype of the layer's computations and weights. If mixed    precision is used with a [ `tf.keras.mixed_precision.experimental.Policy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/Policy),    this is instead just the dtype of the layer's weights, as the computations    are done in a different dtype.  updates: List of update ops of this layer.  losses: List of losses added by this layer.  trainable_weights: List of variables to be included in backprop.  non_trainable_weights: List of variables that should not be    included in backprop.  weights: The concatenation of the lists trainable_weights and    non_trainable_weights (in this order).
 
-#### Mutable properties:
+#### 可变属性：
 - **`trainable`** : Whether the layer should be trained (boolean).
 - **`input_spec`** : Optional (list of)  `InputSpec`  object(s) specifying theconstraints on inputs that can be accepted by the layer.
 
 
-### Dtypes and casting
+###D类型和铸造
 Each layer has a dtype, which is typically the dtype of the layer'scomputations and variables. A layer's dtype can be queried via the[ `Layer.dtype` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer#dtype) property. The dtype is specified with the  `dtype`  constructorargument. In TensorFlow 2, the dtype defaults to [ `tf.keras.backend.floatx()` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/floatx)if no dtype is passed.  `floatx()`  itself defaults to "float32". Additionally,layers will cast their inputs to the layer's dtype in TensorFlow 2. Forexample:
 
 ```
@@ -96,7 +96,7 @@ print(y.dtype)  # float64
  
 ```
 
-#### Running models in float64 in TensorFlow 2
+####Tensorflow 2中float64中的运行模型
 If you want to run a Model in float64, you can set floatx to be float64 bycalling  `tf.keras.backend.set_floatx('float64')` . This will cause all layersto default to float64 instead of float32:
 
 ```
@@ -147,11 +147,11 @@ z = layer3(x)  # layer3's dense layer runs in float64, since NestedLayer
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `activity_regularizer` 
-Optional regularizer function for the output of this layer.
+此层输出的可选正则化函数。
 
 ###  `dtype` 
 
@@ -160,39 +160,39 @@ Optional regularizer function for the output of this layer.
 
 
 ###  `input` 
-Retrieves the input tensor(s) of a layer.
+检索层的输入张量。
 
 Only applicable if the layer has exactly one input,i.e. if it is connected to one incoming layer.
 
-#### Returns:
-Input tensor or list of input tensors.
+#### 返回：
+输入张量或输入张量列表。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called in Eager mode.
 - **`AttributeError`** : If no inbound nodes are found.
 
 
 ###  `input_mask` 
-Retrieves the input mask tensor(s) of a layer.
+检索层的输入掩码张量。
 
 Only applicable if the layer has exactly one inbound node,i.e. if it is connected to one incoming layer.
 
-#### Returns:
+#### 返回：
 Input mask tensor (potentially None) or list of inputmask tensors.
 
-#### Raises:
+#### 加薪：
 - **`AttributeError`** : if the layer is connected tomore than one incoming layers.
 
 
 ###  `input_shape` 
-Retrieves the input shape(s) of a layer.
+检索层的输入形状。
 
 Only applicable if the layer has exactly one input,i.e. if it is connected to one incoming layer, or if all inputshave the same shape.
 
-#### Returns:
+#### 返回：
 Input shape, as an integer shape tuple(or list of shape tuples, one tuple per input tensor).
 
-#### Raises:
+#### 加薪：
 - **`AttributeError`** : if the layer has no defined input_shape.
 - **`RuntimeError`** : if called in Eager mode.
 
@@ -205,16 +205,16 @@ Losses which are associated with this  `Layer` .
 
 Variable regularization tensors are created when this property is accessed,so it is eager safe: accessing  `losses`  under a [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) willpropagate gradients back to the corresponding variables.
 
-#### Returns:
-A list of tensors.
+#### 返回：
+张量表。
 
 ###  `metrics` 
 
 
 ###  `name` 
-Returns the name of this module as passed or determined in the ctor.
+返回在ctor中传递或确定的此模块的名称。
 
-NOTE: This is not the same as the  `self.name_scope.name`  which includesparent module names.
+注意：This is not the same as the  `self.name_scope.name`  which includesparent module names.
 
 ###  `non_trainable_variables` 
 
@@ -223,39 +223,39 @@ NOTE: This is not the same as the  `self.name_scope.name`  which includesparent 
 
 
 ###  `output` 
-Retrieves the output tensor(s) of a layer.
+检索层的输出张量。
 
 Only applicable if the layer has exactly one output,i.e. if it is connected to one incoming layer.
 
-#### Returns:
-Output tensor or list of output tensors.
+#### 返回：
+输出张量或输出张量列表。
 
-#### Raises:
+#### 加薪：
 - **`AttributeError`** : if the layer is connected to more than one incominglayers.
 - **`RuntimeError`** : if called in Eager mode.
 
 
 ###  `output_mask` 
-Retrieves the output mask tensor(s) of a layer.
+检索层的输出掩码张量。
 
 Only applicable if the layer has exactly one inbound node,i.e. if it is connected to one incoming layer.
 
-#### Returns:
+#### 返回：
 Output mask tensor (potentially None) or list of outputmask tensors.
 
-#### Raises:
+#### 加薪：
 - **`AttributeError`** : if the layer is connected tomore than one incoming layers.
 
 
 ###  `output_shape` 
-Retrieves the output shape(s) of a layer.
+检索层的输出形状。
 
 Only applicable if the layer has one output,or if all outputs have the same shape.
 
-#### Returns:
+#### 返回：
 Output shape, as an integer shape tuple(or list of shape tuples, one tuple per output tensor).
 
-#### Raises:
+#### 加薪：
 - **`AttributeError`** : if the layer has no defined output shape.
 - **`RuntimeError`** : if called in Eager mode.
 
@@ -264,13 +264,13 @@ Output shape, as an integer shape tuple(or list of shape tuples, one tuple per o
 
 
 ###  `trainable_variables` 
-Sequence of variables owned by this module and it's submodules.
+此模块及其子模块拥有的变量序列。
 
 
 **Note:**  this method uses reflection to find variables on the current instanceand submodules. For performance reasons you may wish to cache the resultof calling this method if you don't expect the return value to change.
 
 
-#### Returns:
+#### 返回：
 A sequence of variables for the current module (sorted by attributename) followed by variables from all submodules recursively (breadthfirst).
 
 ###  `trainable_weights` 
@@ -280,20 +280,20 @@ A sequence of variables for the current module (sorted by attributename) followe
 
 
 ###  `variables` 
-Returns the list of all layer variables/weights.
+返回所有图层变量/权重的列表。
 
 Alias of  `self.weights` .
 
-#### Returns:
-A list of variables.
+#### 返回：
+变量列表。
 
 ###  `weights` 
-Returns the list of all layer variables/weights.
+返回所有图层变量/权重的列表。
 
-#### Returns:
-A list of variables.
+#### 返回：
+变量列表。
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -310,23 +310,23 @@ A list of variables.
 
 Wraps  `call` , applying pre- and post-processing steps.
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : input tensor(s).
 - **`*args`** : additional positional arguments to be passed to  `self.call` .
 - **`**kwargs`** : additional keyword arguments to be passed to  `self.call` .
 
 
-#### Returns:
-Output tensor(s).
+#### 返回：
+输出张量。
 
-#### Note:
+#### 注：
 - The following optional keyword arguments are reserved for specific uses:
 - If the layer's  `call`  method takes a  `mask`  argument (as some Keraslayers do), its default value will be set to the mask generatedfor  `inputs`  by the previous layer (if  `input`  did come froma layer that generated a corresponding mask, i.e. if it came froma Keras layer with masking support.
     -  `training` : Boolean scalar tensor of Python boolean indicatingwhether the  `call`  is meant for training or inference.
     -  `mask` : Boolean input mask.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the layer's  `call`  method returns None (an invalid value).
 
 
@@ -347,7 +347,7 @@ Some losses (for instance, activity regularization losses) may be dependenton th
 
 This method can be used inside a subclassed layer or model's  `call` function, in which case  `losses`  should be a Tensor or list of Tensors.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -360,7 +360,7 @@ This method can be used inside a subclassed layer or model's  `call` function, i
 
 This method can also be called directly on a Functional Model duringconstruction. In this case, any loss Tensors passed to this Model mustbe symbolic and be able to be traced back to the model's  `Input` s. Theselosses become part of the model's topology and are tracked in  `get_config` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -375,7 +375,7 @@ model.add_loss(tf.abs(tf.reduce_mean(x)))
 
 If this is not the case for your loss (if, for example, your loss referencesa  `Variable`  of one of the model's layers), you can wrap your loss in azero-argument lambda. These losses are not tracked as part of the model'stopology since they can't be serialized.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -390,7 +390,7 @@ model.add_loss(lambda: tf.reduce_mean(x.kernel))
 
 The  `get_losses_for`  method allows to retrieve the losses relevant to aspecific set of inputs.
 
-#### Arguments:
+#### 参数：
 - **`losses`** : Loss tensor, or list/tuple of tensors. Rather than tensors, lossesmay also be zero-argument callables which create a loss tensor.
 - **`inputs`** : Ignored when executing eagerly. If anything other than None ispassed, it signals the losses are conditional on some of the layer'sinputs, and thus they should only be run where these inputs areavailable. This is the case for activity regularization losses, forinstance. If  `None`  is passed, the losses are assumedto be unconditional, and will apply across all dataflows of the layer(e.g. weight regularization losses).
 
@@ -407,15 +407,15 @@ The  `get_losses_for`  method allows to retrieve the losses relevant to aspecifi
  
 ```
 
-Adds metric tensor to the layer.
+向层添加度量张量。
 
-#### Args:
+#### 参数：
 - **`value`** : Metric tensor.
 - **`aggregation`** : Sample-wise metric reduction function. If  `aggregation=None` ,it indicates that the metric tensor provided has been aggregatedalready. eg,  `bin_acc = BinaryAccuracy(name='acc')`  followed by `model.add_metric(bin_acc(y_true, y_pred))` . If aggregation='mean', thegiven metric tensor will be sample-wise reduced using  `mean`  function.eg,  `model.add_metric(tf.reduce_sum(outputs), name='output_mean',aggregation='mean')` .
 - **`name`** : String metric name.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `aggregation`  is anything other than None or  `mean` .
 
 
@@ -440,7 +440,7 @@ The  `get_updates_for`  method allows to retrieve the updates relevant to aspeci
 
 This call is ignored when eager execution is enabled (in that case, variableupdates are run on the fly and thus do not need to be tracked for laterexecution).
 
-#### Arguments:
+#### 参数：
 - **`updates`** : Update op, or list/tuple of update ops, or zero-arg callablethat returns an update op. A zero-arg callable should be passed inorder to disable running the updates by setting  `trainable=False` on this Layer, when executing in Eager mode.
 - **`inputs`** : Deprecated, will be automatically inferred.
 
@@ -466,9 +466,9 @@ This call is ignored when eager execution is enabled (in that case, variableupda
  
 ```
 
-Adds a new variable to the layer.
+向图层添加新变量。
 
-#### Arguments:
+#### 参数：
 - **`name`** : Variable name.
 - **`shape`** : Variable shape. Defaults to scalar if unspecified.
 - **`dtype`** : The type of the variable. Defaults to  `self.dtype`  or  `float32` .
@@ -483,10 +483,10 @@ Adds a new variable to the layer.
 - **`**kwargs`** : Additional keyword arguments. Accepted values are  `getter`  and `collections` .
 
 
-#### Returns:
+#### 返回：
 The created variable. Usually either a  `Variable`  or  `ResourceVariable` instance. If  `partitioner`  is not  `None` , a  `PartitionedVariable` instance is returned.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called with partitioned variable regularization andeager execution is enabled.
 - **`ValueError`** : When giving unsupported dtype and no initializer or whentrainable has been set to True with synchronization set as  `ON_READ` .
 
@@ -505,7 +505,7 @@ This is a method that implementers of subclasses of  `Layer`  or  `Model` can ov
 
 This is typically used to create the weights of  `Layer`  subclasses.
 
-#### Arguments:
+#### 参数：
 - **`input_shape`** : Instance of  `TensorShape` , or list of instances of `TensorShape`  if the layer expects a list of inputs(one instance per input).
 
 
@@ -520,15 +520,15 @@ This is typically used to create the weights of  `Layer`  subclasses.
  
 ```
 
-This is where the layer's logic lives.
+这就是层的逻辑所在。
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Input tensor, or list/tuple of input tensors.
 - **`**kwargs`** : Additional keyword arguments.
 
 
-#### Returns:
-A tensor or list/tuple of tensors.
+#### 返回：
+张量或张量的列表/元组。
 
 ###  `compute_mask` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/base_layer.py#L681-L701)
@@ -541,14 +541,14 @@ A tensor or list/tuple of tensors.
  
 ```
 
-Computes an output mask tensor.
+计算输出遮罩张量。
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Tensor or list of tensors.
 - **`mask`** : Tensor or list of tensors.
 
 
-#### Returns:
+#### 返回：
 None or a tensor (or list of tensors,    one per output tensor of the layer).
 
 ###  `compute_output_shape` 
@@ -559,16 +559,16 @@ None or a tensor (or list of tensors,    one per output tensor of the layer).
  
 ```
 
-Computes the output shape of the layer.
+计算层的输出形状。
 
 If the layer has not been built, this method will call  `build`  on thelayer. This assumes that the layer will later be used with inputs thatmatch the input shape provided here.
 
-#### Arguments:
+#### 参数：
 - **`input_shape`** : Shape tuple (tuple of integers)or list of shape tuples (one per output tensor of the layer).Shape tuples can include None for free dimensions,instead of an integer.
 
 
-#### Returns:
-An input shape tuple.
+#### 返回：
+输入形状元组。
 
 ###  `compute_output_signature` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/base_layer.py#L641-L679)
@@ -578,18 +578,18 @@ An input shape tuple.
  
 ```
 
-Compute the output tensor signature of the layer based on the inputs.
+根据输入计算层的输出张量特征。
 
 Unlike a TensorShape object, a TensorSpec object contains both shapeand dtype information for a tensor. This method allows layers to provideoutput dtype information if it is different from the input dtype.For any layer that doesn't implement this function,the framework will fall back to use  `compute_output_shape` , and willassume that the output dtype matches the input dtype.
 
-#### Args:
+#### 参数：
 - **`input_signature`** : Single TensorSpec or nested structure of TensorSpecobjects, describing a candidate input for the layer.
 
 
-#### Returns:
+#### 返回：
 Single TensorSpec or nested structure of TensorSpec objects, describing  how the layer would transform the provided input.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If input_signature contains a non-TensorSpec object.
 
 
@@ -601,12 +601,12 @@ Single TensorSpec or nested structure of TensorSpec objects, describing  how the
  
 ```
 
-Count the total number of scalars composing the weights.
+计算组成权重的标量总数。
 
-#### Returns:
-An integer count.
+#### 返回：
+整数计数。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the layer isn't yet built(in which case its weights aren't yet defined).
 
 
@@ -622,16 +622,16 @@ from_config(
  
 ```
 
-Creates a layer from its config.
+从其配置创建层。
 
 This method is the reverse of  `get_config` ,capable of instantiating the same layer from the configdictionary. It does not handle layer connectivity(handled by Network), nor weights (handled by  `set_weights` ).
 
-#### Arguments:
+#### 参数：
 - **`config`** : A Python dictionary, typically theoutput of get_config.
 
 
-#### Returns:
-A layer instance.
+#### 返回：
+层实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/base_layer.py#L539-L576)
@@ -641,14 +641,14 @@ A layer instance.
  
 ```
 
-Returns the config of the layer.
+返回层的配置。
 
 A layer config is a Python dictionary (serializable)containing the configuration of a layer.The same layer can be reinstantiated later(without its trained weights) from this configuration.
 
 The config of a layer does not include connectivityinformation, nor the layer class name. These are handledby  `Network`  (one layer of abstraction above).
 
-#### Returns:
-Python dictionary.
+#### 返回：
+python字典。
 
 ###  `get_input_at` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/base_layer.py#L1505-L1521)
@@ -658,16 +658,16 @@ Python dictionary.
  
 ```
 
-Retrieves the input tensor(s) of a layer at a given node.
+检索给定节点处的层的输入张量。
 
-#### Arguments:
+#### 参数：
 - **`node_index`** : Integer, index of the nodefrom which to retrieve the attribute.E.g.  `node_index=0`  will correspond to thefirst time the layer was called.
 
 
-#### Returns:
-A tensor (or list of tensors if the layer has multiple inputs).
+#### 返回：
+张量（或张量列表，如果层有多个输入）。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called in Eager mode.
 
 
@@ -679,13 +679,13 @@ A tensor (or list of tensors if the layer has multiple inputs).
  
 ```
 
-Retrieves the input mask tensor(s) of a layer at a given node.
+检索给定节点处的层的输入掩码张量。
 
-#### Arguments:
+#### 参数：
 - **`node_index`** : Integer, index of the nodefrom which to retrieve the attribute.E.g.  `node_index=0`  will correspond to thefirst time the layer was called.
 
 
-#### Returns:
+#### 返回：
 A mask tensor(or list of tensors if the layer has multiple inputs).
 
 ###  `get_input_shape_at` 
@@ -696,16 +696,16 @@ A mask tensor(or list of tensors if the layer has multiple inputs).
  
 ```
 
-Retrieves the input shape(s) of a layer at a given node.
+检索给定节点处的层的输入形状。
 
-#### Arguments:
+#### 参数：
 - **`node_index`** : Integer, index of the nodefrom which to retrieve the attribute.E.g.  `node_index=0`  will correspond to thefirst time the layer was called.
 
 
-#### Returns:
+#### 返回：
 A shape tuple(or list of shape tuples if the layer has multiple inputs).
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called in Eager mode.
 
 
@@ -717,13 +717,13 @@ A shape tuple(or list of shape tuples if the layer has multiple inputs).
  
 ```
 
-Retrieves losses relevant to a specific set of inputs.
+检索与特定输入集相关的丢失。
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Input tensor or list/tuple of input tensors.
 
 
-#### Returns:
+#### 返回：
 List of loss tensors of the layer that depend on  `inputs` .
 
 ###  `get_output_at` 
@@ -734,16 +734,16 @@ List of loss tensors of the layer that depend on  `inputs` .
  
 ```
 
-Retrieves the output tensor(s) of a layer at a given node.
+检索给定节点处层的输出张量。
 
-#### Arguments:
+#### 参数：
 - **`node_index`** : Integer, index of the nodefrom which to retrieve the attribute.E.g.  `node_index=0`  will correspond to thefirst time the layer was called.
 
 
-#### Returns:
-A tensor (or list of tensors if the layer has multiple outputs).
+#### 返回：
+张量（或张量列表，如果层有多个输出）。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called in Eager mode.
 
 
@@ -755,13 +755,13 @@ A tensor (or list of tensors if the layer has multiple outputs).
  
 ```
 
-Retrieves the output mask tensor(s) of a layer at a given node.
+检索给定节点处的层的输出掩码张量。
 
-#### Arguments:
+#### 参数：
 - **`node_index`** : Integer, index of the nodefrom which to retrieve the attribute.E.g.  `node_index=0`  will correspond to thefirst time the layer was called.
 
 
-#### Returns:
+#### 返回：
 A mask tensor(or list of tensors if the layer has multiple outputs).
 
 ###  `get_output_shape_at` 
@@ -772,16 +772,16 @@ A mask tensor(or list of tensors if the layer has multiple outputs).
  
 ```
 
-Retrieves the output shape(s) of a layer at a given node.
+检索给定节点处的层的输出形状。
 
-#### Arguments:
+#### 参数：
 - **`node_index`** : Integer, index of the nodefrom which to retrieve the attribute.E.g.  `node_index=0`  will correspond to thefirst time the layer was called.
 
 
-#### Returns:
+#### 返回：
 A shape tuple(or list of shape tuples if the layer has multiple outputs).
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called in Eager mode.
 
 
@@ -793,13 +793,13 @@ A shape tuple(or list of shape tuples if the layer has multiple outputs).
  
 ```
 
-Retrieves updates relevant to a specific set of inputs.
+检索与特定输入集相关的更新。
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Input tensor or list/tuple of input tensors.
 
 
-#### Returns:
+#### 返回：
 List of update ops of the layer that depend on  `inputs` .
 
 ###  `get_weights` 
@@ -810,10 +810,10 @@ List of update ops of the layer that depend on  `inputs` .
  
 ```
 
-Returns the current weights of the layer.
+返回层的当前权重。
 
-#### Returns:
-Weights values as a list of numpy arrays.
+#### 返回：
+将值作为numpy数组的列表进行加权。
 
 ###  `set_weights` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/base_layer.py#L1307-L1338)
@@ -825,9 +825,9 @@ Weights values as a list of numpy arrays.
 
 Sets the weights of the layer, from Numpy arrays.
 
-#### Arguments:
+#### 参数：
 - **`weights`** : a list of Numpy arrays. The numberof arrays and their shape must matchnumber of the dimensions of the weightsof the layer (i.e. it should match theoutput of  `get_weights` ).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the provided weights list does not match thelayer's specifications.

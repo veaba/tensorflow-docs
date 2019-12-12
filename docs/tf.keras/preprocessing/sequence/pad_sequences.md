@@ -1,6 +1,6 @@
-Pads sequences to the same length.
+焊盘序列长度相同。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.pad_sequences` ](/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences), [ `tf.compat.v2.keras.preprocessing.sequence.pad_sequences` ](/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences)
+**别名** : [ `tf.compat.v1.keras.preprocessing.sequence.pad_sequences` ](/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences), [ `tf.compat.v2.keras.preprocessing.sequence.pad_sequences` ](/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences)
 
 ```
  tf.keras.preprocessing.sequence.pad_sequences(
@@ -14,11 +14,11 @@ Pads sequences to the same length.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Masking and padding with Keras](https://tensorflow.google.cn/guide/keras/masking_and_padding)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 This function transforms a list of `num_samples`  sequences (lists of integers)into a 2D Numpy array of shape  `(num_samples, num_timesteps)` . `num_timesteps`  is either the  `maxlen`  argument if provided,or the length of the longest sequence otherwise.
@@ -35,7 +35,7 @@ Pre-padding is the default.
 ```
  sequences: List of lists, where each element is a sequence.
 maxlen: Int, maximum length of all sequences.
-dtype: Type of the output sequences.
+dtype：输出序列的类型。
     To pad sequences with variable length strings, you can use `object`.
 padding: String, 'pre' or 'post':
     pad either before or after each sequence.

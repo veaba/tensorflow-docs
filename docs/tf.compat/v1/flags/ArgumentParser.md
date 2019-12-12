@@ -1,7 +1,7 @@
 
 
 ## Class  `ArgumentParser` 
-Base class used to parse and convert arguments.
+用于分析和转换参数的基类。
 
 The parse() method checks to make sure that the string argument is alegal value and convert it to a native type.  If the value cannot beconverted, it should throw a 'ValueError' exception with a humanreadable explanation of why the value is illegal.
 
@@ -9,7 +9,7 @@ Subclasses should also define a syntactic_help string which may bepresented to t
 
 Argument parser classes must be stateless, since instances are cachedand shared between flags. Initializer arguments are allowed, but allmember variables must be derived from initializer arguments only.
 
-## Methods
+## 方法
 
 
 ###  `flag_type` 
@@ -20,7 +20,7 @@ Argument parser classes must be stateless, since instances are cachedand shared 
  
 ```
 
-Returns a string representing the type of the flag.
+返回表示标志类型的字符串。
 
 ###  `parse` 
 
@@ -30,19 +30,19 @@ Returns a string representing the type of the flag.
  
 ```
 
-Parses the string argument and returns the native value.
+分析字符串参数并返回本机值。
 
-By default it returns its argument unmodified.
+默认情况下，它返回未修改的参数。
 
-#### Args:
+#### 参数：
 - **`argument`** : string argument passed in the commandline.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : Raised when it fails to parse the argument.
 - **`TypeError`** : Raised when the argument has the wrong type.
 
 
-#### Returns:
-The parsed value in native type.
+#### 返回：
+本机类型中的已分析值。
 

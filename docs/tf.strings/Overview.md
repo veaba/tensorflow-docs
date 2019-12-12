@@ -1,6 +1,6 @@
-Operations for working with string Tensors.
+使用字符串张量的操作。
 
-## Functions
+## 功能
 [ `as_string(...)` ](https://tensorflow.google.cn/api_docs/python/tf/strings/as_string): Converts each entry in the given tensor to strings.
 
 [ `bytes_split(...)` ](https://tensorflow.google.cn/api_docs/python/tf/strings/bytes_split): Split string elements of  `input`  into bytes.

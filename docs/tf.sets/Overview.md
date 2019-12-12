@@ -1,6 +1,6 @@
-Tensorflow set operations.
+tensorflow集合运算。
 
-## Functions
+## 功能
 [ `difference(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sets/difference): Compute set difference of elements in last dimension of  `a`  and  `b` .
 
 [ `intersection(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sets/intersection): Compute set intersection of elements in last dimension of  `a`  and  `b` .

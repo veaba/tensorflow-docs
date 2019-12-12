@@ -1,4 +1,4 @@
-Returns a list of entries contained within a directory.
+返回目录中包含的条目列表。
 
 ```
  tf.compat.v1.gfile.ListDirectory(dirname)
@@ -7,13 +7,13 @@ Returns a list of entries contained within a directory.
 
 The list is in arbitrary order. It does not contain the special entries "."and "..".
 
-#### Args:
+#### 参数：
 - **`dirname`** : string, path to a directory
 
 
-#### Returns:
+#### 返回：
 [filename1, filename2, ... filenameN] as strings
 
-#### Raises:
-errors.NotFoundError if directory doesn't exist
+#### 加薪：
+errors.notfounderror如果目录不存在
 

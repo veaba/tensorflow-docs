@@ -1,6 +1,6 @@
-Operations for manipulating the binary representations of integers.
+操作整数的二进制表示的操作。
 
-## Functions
+## 功能
 [ `bitwise_and(...)` ](https://tensorflow.google.cn/api_docs/python/tf/bitwise/bitwise_and): Elementwise computes the bitwise AND of  `x`  and  `y` .
 
 [ `bitwise_or(...)` ](https://tensorflow.google.cn/api_docs/python/tf/bitwise/bitwise_or): Elementwise computes the bitwise OR of  `x`  and  `y` .

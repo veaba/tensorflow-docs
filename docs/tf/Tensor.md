@@ -3,11 +3,11 @@
 ## Class  `Tensor` 
 Represents one of the outputs of an  `Operation` .
 
-**Aliases** : [ `tf.compat.v1.Tensor` ](/api_docs/python/tf/Tensor), [ `tf.compat.v2.Tensor` ](/api_docs/python/tf/Tensor)
+**别名** : [ `tf.compat.v1.Tensor` ](/api_docs/python/tf/Tensor), [ `tf.compat.v2.Tensor` ](/api_docs/python/tf/Tensor)
 
 A  `Tensor`  is a symbolic handle to one of the outputs of an `Operation` . It does not hold the values of that operation's output,but instead provides a means of computing those values in aTensorFlow [ `tf.compat.v1.Session` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session).
 
-This class has two primary purposes:
+这个类有两个主要目的：
 
 1. A  `Tensor`  can be passed as an input to another  `Operation` .This builds a dataflow connection between operations, whichenables TensorFlow to execute an entire  `Graph`  that represents alarge, multi-step computation.
 
@@ -45,17 +45,17 @@ result = sess.run(e)
 
 Creates a new  `Tensor` .
 
-#### Args:
+#### 参数：
 - **`op`** : An  `Operation` .  `Operation`  that computes this tensor.
 - **`value_index`** : An  `int` . Index of the operation's endpoint that producesthis tensor.
 - **`dtype`** : A  `DType` . Type of elements stored in this tensor.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the op is not an  `Operation` .
 
 
-## Properties
+## 属性
 
 
 ###  `device` 
@@ -68,7 +68,7 @@ The  `DType`  of elements in this tensor.
 The  `Graph`  that contains this tensor.
 
 ###  `name` 
-The string name of this tensor.
+这个张量的字符串名。
 
 ###  `op` 
 The  `Operation`  that produces this tensor as an output.
@@ -104,13 +104,13 @@ print(f.shape)
 
 In some cases, the inferred shape may have unknown dimensions. Ifthe caller has additional information about the values of thesedimensions, [ `Tensor.set_shape()` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#set_shape) can be used to augment theinferred shape.
 
-#### Returns:
+#### 返回：
 A  `TensorShape`  representing the shape of this tensor.
 
 ###  `value_index` 
 The index of this tensor in the outputs of its  `Operation` .
 
-## Methods
+## 方法
 
 
 ###  `__abs__` 
@@ -124,7 +124,7 @@ The index of this tensor in the outputs of its  `Operation` .
  
 ```
 
-Computes the absolute value of a tensor.
+计算张量的绝对值。
 
 Given a tensor of integer or floating-point values, this operation returns atensor of the same type, where each element contains the absolute value of thecorresponding element in the input.
 
@@ -136,12 +136,12 @@ tf.abs(x)  # [5.25594902, 6.60492229]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  or  `SparseTensor`  of type  `float16` ,  `float32` ,  `float64` , `int32` ,  `int64` ,  `complex64`  or  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  or  `SparseTensor`  the same size, type, and sparsity as  `x`  with  absolute values.Note, for  `complex64`  or  `complex128`  input, the returned  `Tensor`  will be  of type  `float32`  or  `float64` , respectively.
 
 If  `x`  is a  `SparseTensor` , returns `SparseTensor(x.indices, tf.math.abs(x.values, ...), x.dense_shape)` 
@@ -174,13 +174,13 @@ Returns the truth value of x AND y element-wise.
 
 *NOTE*: [ `math.logical_and` ](https://tensorflow.google.cn/api_docs/python/tf/math/logical_and) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__bool__` 
@@ -204,7 +204,7 @@ if tf.constant(5) < tf.constant(7):  # Will raise.
  
 ```
 
-#### Raises:
+#### 加薪：
  `TypeError` .
 
 ###  `__div__` 
@@ -218,17 +218,17 @@ if tf.constant(5) < tf.constant(7):  # Will raise.
  
 ```
 
-Divide two values using Python 2 semantics.
+使用python 2语义划分两个值。
 
 Used for Tensor.**div** .
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  returns the quotient of x and y.
 
 ###  `__eq__` 
@@ -258,16 +258,16 @@ The same as [ `tf.compat.v1.div(x,y)` ](https://tensorflow.google.cn/api_docs/py
 
  `x`  and  `y`  must have the same type, and the result will have the same typeas well.
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  rounded down.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the inputs are complex.
 
 
@@ -287,13 +287,13 @@ Returns the truth value of (x >= y) element-wise.
 
 *NOTE*: [ `math.greater_equal` ](https://tensorflow.google.cn/api_docs/python/tf/math/greater_equal) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__getitem__` 
@@ -312,7 +312,7 @@ Overload for Tensor.**getitem** .
 
 This operation extracts the specified region from the tensor.The notation is similar to NumPy with the restriction thatcurrently only support basic indexing. That means thatusing a non-scalar tensor as input is not currently allowed.
 
-#### Some useful examples:
+#### 一些有用的例子：
 
 
 ```
@@ -346,22 +346,22 @@ print(foo[foo > 2].eval())  # => [3, 4, 5, 6, 7, 8, 9]
  
 ```
 
-#### Notes:
+#### 注：
 -  `tf.newaxis`  is  `None`  as in NumPy.
 - An implicit ellipsis is placed at the end of the  `slice_spec` 
 - NumPy advanced indexing is currently not supported.
 
 
-#### Args:
+#### 参数：
 - **`tensor`** : An ops.Tensor object.
 - **`slice_spec`** : The arguments to Tensor.**getitem** .
 - **`var`** : In the case of variable slice assignment, the Variable object to slice(i.e. tensor is the read-only view of this variable).
 
 
-#### Returns:
+#### 返回：
 The appropriate slice of "tensor", based on "slice_spec".
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If a slice range is negative size.
 - **`TypeError`** : If the slice indices aren't int, slice, ellipsis,tf.newaxis or scalar int32/int64 tensors.
 
@@ -382,13 +382,13 @@ Returns the truth value of (x > y) element-wise.
 
 *NOTE*: [ `math.greater` ](https://tensorflow.google.cn/api_docs/python/tf/math/greater) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__invert__` 
@@ -404,12 +404,12 @@ A  `Tensor`  of type  `bool` .
 
 Returns the truth value of NOT x element-wise.
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__iter__` 
@@ -436,13 +436,13 @@ Returns the truth value of (x <= y) element-wise.
 
 *NOTE*: [ `math.less_equal` ](https://tensorflow.google.cn/api_docs/python/tf/math/less_equal) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__len__` 
@@ -469,13 +469,13 @@ Returns the truth value of (x < y) element-wise.
 
 *NOTE*: [ `math.less` ](https://tensorflow.google.cn/api_docs/python/tf/math/less) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__matmul__` 
@@ -499,7 +499,7 @@ Either matrix can be transposed or adjointed (conjugated and transposed) onthe f
 
 If one or both of the matrices contain a lot of zeros, a more efficientmultiplication algorithm can be used by setting the corresponding `a_is_sparse`  or  `b_is_sparse`  flag to  `True` . These are  `False`  by default.This optimization is only available for plain matrices (rank-2 tensors) withdatatypes  `bfloat16`  or  `float32` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -553,7 +553,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `complex64` , `complex128`  and rank > 1.
 - **`b`** :  `Tensor`  with same type and rank as  `a` .
 - **`transpose_a`** : If  `True` ,  `a`  is transposed before multiplication.
@@ -565,7 +565,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
 - **`name`** : Name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix isthe product of the corresponding matrices in  `a`  and  `b` , e.g. if alltranspose or adjoint attributes are  `False` :
 
  `output` [..., i, j] = sum_k ( `a` [..., i, k] *  `b` [..., k, j]),for all indices i, j.
@@ -573,7 +573,7 @@ A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix is
 - **`Note`** : This is matrix product, not element-wise product.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If transpose_a and adjoint_a, or transpose_b and adjoint_bare both set to True.
 
 
@@ -594,13 +594,13 @@ true, this follows Python semantics in that the result here is consistentwith a 
 
 *NOTE*: [ `math.floormod` ](https://tensorflow.google.cn/api_docs/python/tf/math/floormod) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` ,  `bfloat16` ,  `half` ,  `float32` ,  `float64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__mul__` 
@@ -641,12 +641,12 @@ Computes numerical negative value element-wise.
 
 I.e., ![](./Tensor.md_0.png).
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 If  `x`  is a  `SparseTensor` , returns `SparseTensor(x.indices, tf.math.negative(x.values, ...), x.dense_shape)` 
@@ -663,7 +663,7 @@ Dummy method to prevent a tensor from being used as a Python  `bool` .
 
 This is the Python 2.x counterpart to  `__bool__()`  above.
 
-#### Raises:
+#### 加薪：
  `TypeError` .
 
 ###  `__or__` 
@@ -681,13 +681,13 @@ Returns the truth value of x OR y element-wise.
 
 *NOTE*: [ `math.logical_or` ](https://tensorflow.google.cn/api_docs/python/tf/math/logical_or) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__pow__` 
@@ -701,7 +701,7 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Computes the power of one value to another.
+计算一个值对另一个值的幂。
 
 Given a tensor  `x`  and a tensor  `y` , this operation computes ![](./Tensor.md_0.png) forcorresponding elements in  `x`  and  `y` . For example:
 
@@ -712,13 +712,13 @@ tf.pow(x, y)  # [[256, 65536], [9, 27]]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`y`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` .
 
 ###  `__radd__` 
@@ -749,13 +749,13 @@ Returns the truth value of x AND y element-wise.
 
 *NOTE*: [ `math.logical_and` ](https://tensorflow.google.cn/api_docs/python/tf/math/logical_and) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__rdiv__` 
@@ -769,17 +769,17 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Divide two values using Python 2 semantics.
+使用python 2语义划分两个值。
 
 Used for Tensor.**div** .
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  returns the quotient of x and y.
 
 ###  `__rfloordiv__` 
@@ -799,16 +799,16 @@ The same as [ `tf.compat.v1.div(x,y)` ](https://tensorflow.google.cn/api_docs/py
 
  `x`  and  `y`  must have the same type, and the result will have the same typeas well.
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  rounded down.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the inputs are complex.
 
 
@@ -833,7 +833,7 @@ Either matrix can be transposed or adjointed (conjugated and transposed) onthe f
 
 If one or both of the matrices contain a lot of zeros, a more efficientmultiplication algorithm can be used by setting the corresponding `a_is_sparse`  or  `b_is_sparse`  flag to  `True` . These are  `False`  by default.This optimization is only available for plain matrices (rank-2 tensors) withdatatypes  `bfloat16`  or  `float32` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -887,7 +887,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `complex64` , `complex128`  and rank > 1.
 - **`b`** :  `Tensor`  with same type and rank as  `a` .
 - **`transpose_a`** : If  `True` ,  `a`  is transposed before multiplication.
@@ -899,7 +899,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
 - **`name`** : Name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix isthe product of the corresponding matrices in  `a`  and  `b` , e.g. if alltranspose or adjoint attributes are  `False` :
 
  `output` [..., i, j] = sum_k ( `a` [..., i, k] *  `b` [..., k, j]),for all indices i, j.
@@ -907,7 +907,7 @@ A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix is
 - **`Note`** : This is matrix product, not element-wise product.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If transpose_a and adjoint_a, or transpose_b and adjoint_bare both set to True.
 
 
@@ -928,13 +928,13 @@ true, this follows Python semantics in that the result here is consistentwith a 
 
 *NOTE*: [ `math.floormod` ](https://tensorflow.google.cn/api_docs/python/tf/math/floormod) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` ,  `bfloat16` ,  `half` ,  `float32` ,  `float64` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__rmul__` 
@@ -965,13 +965,13 @@ Returns the truth value of x OR y element-wise.
 
 *NOTE*: [ `math.logical_or` ](https://tensorflow.google.cn/api_docs/python/tf/math/logical_or) supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `bool` .
 - **`y`** : A  `Tensor`  of type  `bool` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` .
 
 ###  `__rpow__` 
@@ -985,7 +985,7 @@ A  `Tensor`  of type  `bool` .
  
 ```
 
-Computes the power of one value to another.
+计算一个值对另一个值的幂。
 
 Given a tensor  `x`  and a tensor  `y` , this operation computes ![](./Tensor.md_0.png) forcorresponding elements in  `x`  and  `y` . For example:
 
@@ -996,13 +996,13 @@ tf.pow(x, y)  # [[256, 65536], [9, 27]]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`y`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` , `complex64` , or  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` .
 
 ###  `__rsub__` 
@@ -1020,13 +1020,13 @@ Returns x - y element-wise.
 
 *NOTE*:  `Subtract`  supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `uint8` ,  `int8` ,  `uint16` ,  `int16` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__rtruediv__` 
@@ -1051,13 +1051,13 @@ A  `Tensor` . Has the same type as  `x` .
  
 ```
 
-Logical XOR function.
+逻辑异或函数。
 
 x ^ y = (x | y) &amp; ~(x &amp; y)
 
 Inputs are tensor and if the tensors contains more than one element, anelement-wise logical XOR is computed.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -1066,12 +1066,12 @@ Inputs are tensor and if the tensors contains more than one element, anelement-w
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  type bool.
 - **`y`** : A  `Tensor`  of type bool.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type bool with the same size as that of x or y.
 
 ###  `__sub__` 
@@ -1089,13 +1089,13 @@ Returns x - y element-wise.
 
 *NOTE*:  `Subtract`  supports broadcasting. More about broadcasting[here](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `uint8` ,  `int8` ,  `uint16` ,  `int16` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 
 ###  `__truediv__` 
@@ -1120,13 +1120,13 @@ A  `Tensor` . Has the same type as  `x` .
  
 ```
 
-Logical XOR function.
+逻辑异或函数。
 
 x ^ y = (x | y) &amp; ~(x &amp; y)
 
 Inputs are tensor and if the tensors contains more than one element, anelement-wise logical XOR is computed.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -1135,12 +1135,12 @@ Inputs are tensor and if the tensors contains more than one element, anelement-w
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  type bool.
 - **`y`** : A  `Tensor`  of type bool.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type bool with the same size as that of x or y.
 
 ###  `consumers` 
@@ -1153,7 +1153,7 @@ A  `Tensor`  of type bool with the same size as that of x or y.
 
 Returns a list of  `Operation` s that consume this tensor.
 
-#### Returns:
+#### 返回：
 A list of  `Operation` s.
 
 ###  `eval` 
@@ -1173,13 +1173,13 @@ Calling this method will execute all preceding operations thatproduce the inputs
 
 *N.B.* Before invoking [ `Tensor.eval()` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval), its graph must have beenlaunched in a session, and either a default session must beavailable, or  `session`  must be specified explicitly.
 
-#### Args:
+#### 参数：
 - **`feed_dict`** : A dictionary that maps  `Tensor`  objects to feed values. See `tf.Session.run`  for a description of the valid feed values.
 - **`session`** : (Optional.) The  `Session`  to be used to evaluate this tensor. Ifnone, the default session will be used.
 
 
-#### Returns:
-A numpy array corresponding to the value of this tensor.
+#### 返回：
+对应于这个张量值的numpy数组。
 
 ###  `experimental_ref` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L800-L851)
@@ -1189,7 +1189,7 @@ A numpy array corresponding to the value of this tensor.
  
 ```
 
-Returns a hashable reference object to this Tensor.
+返回此张量的哈希引用对象。
 
 
 **Warning:**  Experimental API that could be changed or removed.
@@ -1245,7 +1245,7 @@ print(x.experimental_ref().deref())
  
 ```
 
-Alias of Tensor.shape.
+张量的别名。
 
 ###  `set_shape` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L584-L645)
@@ -1255,7 +1255,7 @@ Alias of Tensor.shape.
  
 ```
 
-Updates the shape of this tensor.
+更新此张量的形状。
 
 This method can be called multiple times, and will merge the given `shape`  with the current shape of this tensor. It can be used toprovide additional information about the shape of this tensor thatcannot be inferred from the graph alone. For example, this can be usedto provide additional information about the shapes of images:
 
@@ -1275,15 +1275,15 @@ print(image.shape)
  
 ```
 
-NOTE: This shape is not enforced at runtime. Setting incorrect shapes canresult in inconsistencies between the statically-known graph and the runtimevalue of tensors. For runtime validation of the shape, use [ `tf.ensure_shape` ](https://tensorflow.google.cn/api_docs/python/tf/ensure_shape)instead.
+注意：This shape is not enforced at runtime. Setting incorrect shapes canresult in inconsistencies between the statically-known graph and the runtimevalue of tensors. For runtime validation of the shape, use [ `tf.ensure_shape` ](https://tensorflow.google.cn/api_docs/python/tf/ensure_shape)instead.
 
-#### Args:
+#### 参数：
 - **`shape`** : A  `TensorShape`  representing the shape of this tensor, a `TensorShapeProto` , a list, a tuple, or None.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `shape`  is not compatible with the current shape ofthis tensor.
 
 
-## Class Members
+## Class 成员
 -  `OVERLOADABLE_OPERATORS`  []()

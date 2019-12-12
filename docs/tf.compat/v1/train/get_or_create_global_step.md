@@ -1,21 +1,21 @@
-Returns and create (if necessary) the global step tensor.
+返回并创建（如果需要）全局阶跃张量。
 
 ```
  tf.compat.v1.train.get_or_create_global_step(graph=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
 
 
-#### Args:
+#### 参数：
 - **`graph`** : The graph in which to create the global step tensor. If missing, usedefault graph.
 
 
-#### Returns:
-The global step tensor.
+#### 返回：
+全局阶跃张量。
 

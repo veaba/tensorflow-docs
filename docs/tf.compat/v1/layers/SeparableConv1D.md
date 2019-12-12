@@ -1,13 +1,13 @@
 
 
 ## Class  `SeparableConv1D` 
-Depthwise separable 1D convolution.
+可分离的一维反褶积。
 
 Inherits From: [ `SeparableConv1D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/SeparableConv1D), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
 This layer performs a depthwise convolution that acts separately onchannels, followed by a pointwise convolution that mixes channels.If  `use_bias`  is True and a bias initializer is provided,it adds a bias vector to the output.It then optionally applies an activation function to produce the final output.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : A single integer specifying the spatialdimensions of the filters.
 - **`strides`** : A single integer specifying the stridesof the convolution.Specifying any  `stride`  value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -62,11 +62,11 @@ This layer performs a depthwise convolution that acts separately onchannels, fol
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

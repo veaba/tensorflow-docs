@@ -1,9 +1,9 @@
 
 
 ## Class  `AggregationMethod` 
-A class listing aggregation methods used to combine gradients.
+列出用于组合渐变的聚合方法的类。
 
-**Aliases** : [ `tf.compat.v1.AggregationMethod` ](/api_docs/python/tf/AggregationMethod), [ `tf.compat.v2.AggregationMethod` ](/api_docs/python/tf/AggregationMethod)
+**别名** : [ `tf.compat.v1.AggregationMethod` ](/api_docs/python/tf/AggregationMethod), [ `tf.compat.v2.AggregationMethod` ](/api_docs/python/tf/AggregationMethod)
 
 Computing partial derivatives can require aggregating gradientcontributions. This class lists the various methods that canbe used to combine gradients in the graph.
 
@@ -19,7 +19,7 @@ The following aggregation methods are experimental and may notbe supported in fu
 -  `EXPERIMENTAL_ACCUMULATE_N` : Gradient terms are summed using the"AccumulateN" op (see  `tf.accumulate_n` ), which accumulates theoverall sum in a single buffer that is shared across threads.This method of summing gradients can result in a lower memory footprintand lower latency at the expense of higher CPU/GPU utilization.For gradients of types that "AccumulateN" does not support, thissummation method falls back on the behavior of  `EXPERIMENTAL_TREE` 
 
 
-## Class Members
+## Class 成员
 -  `ADD_N = 0`  []()
 -  `DEFAULT = 0`  []()
 -  `EXPERIMENTAL_ACCUMULATE_N = 2`  []()

@@ -4,7 +4,7 @@ Reduces sparse updates into a variable reference using the  `max`  operation.
  tf.compat.v1.scatter_max(    ref,    indices,    updates,    use_locking=False,    name=None) 
 ```
 
-This operation computes
+此操作计算
 
 ```
  # Scalar indices
@@ -27,7 +27,7 @@ Requires  `updates.shape = indices.shape + ref.shape[1:]`  or  `updates.shape =[
 
 ![](https://tensorflow.google.cn/images/ScatterAdd.png)
 
-#### Args:
+#### 参数：
 - **`ref`** : A mutable  `Tensor` . Must be one of the following types:  `half` , `bfloat16` ,  `float32` ,  `float64` ,  `int32` ,  `int64` . Should be from a `Variable`  node.
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` . Atensor of indices into the first dimension of  `ref` .
 - **`updates`** : A  `Tensor` . Must have the same type as  `ref` . A tensor of updatedvalues to reduce into  `ref` .
@@ -35,6 +35,6 @@ Requires  `updates.shape = indices.shape + ref.shape[1:]`  or  `updates.shape =[
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A mutable  `Tensor` . Has the same type as  `ref` .
 

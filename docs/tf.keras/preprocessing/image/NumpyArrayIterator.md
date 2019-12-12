@@ -1,13 +1,13 @@
 
 
 ## Class  `NumpyArrayIterator` 
-Iterator yielding data from a Numpy array.
+从numpy数组生成数据的迭代器。
 
 Inherits From: [ `Iterator` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image/Iterator)
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.NumpyArrayIterator` ](/api_docs/python/tf/keras/preprocessing/image/NumpyArrayIterator), [ `tf.compat.v2.keras.preprocessing.image.NumpyArrayIterator` ](/api_docs/python/tf/keras/preprocessing/image/NumpyArrayIterator)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.NumpyArrayIterator` ](/api_docs/python/tf/keras/preprocessing/image/NumpyArrayIterator), [ `tf.compat.v2.keras.preprocessing.image.NumpyArrayIterator` ](/api_docs/python/tf/keras/preprocessing/image/NumpyArrayIterator)
 
-#### Arguments:
+#### 参数：
 - **`x`** : Numpy array of input data or tuple.If tuple, the second elements is eitheranother numpy array or a list of numpy arrays,each of which gets passedthrough as an output without any modifications.
 - **`y`** : Numpy array of targets data.
 - **`image_data_generator`** : Instance of  `ImageDataGenerator` to use for random transformations and normalization.
@@ -47,7 +47,7 @@ Inherits From: [ `Iterator` ](https://tensorflow.google.cn/api_docs/python/tf/ke
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__getitem__` 
@@ -60,12 +60,12 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Gets batch at position  `index` .
 
-#### Arguments:
+#### 参数：
 - **`index`** : position of the batch in the Sequence.
 
 
-#### Returns:
-A batch
+#### 返回：
+一批
 
 ###  `__iter__` 
 
@@ -75,7 +75,7 @@ A batch
  
 ```
 
-Create a generator that iterate over the Sequence.
+创建一个遍历序列的生成器。
 
 ###  `__len__` 
 
@@ -85,10 +85,10 @@ Create a generator that iterate over the Sequence.
  
 ```
 
-Number of batch in the Sequence.
+序列中的批数。
 
-#### Returns:
-The number of batches in the Sequence.
+#### 返回：
+序列中的批数。
 
 ###  `next` 
 
@@ -98,13 +98,13 @@ The number of batches in the Sequence.
  
 ```
 
-For python 2.x.
+对于Python2.x。
 
 # Returns
 
 
 ```
- The next batch.
+下一批。
  
 ```
 
@@ -116,7 +116,7 @@ For python 2.x.
  
 ```
 
-Method called at the end of every epoch.
+方法在每个纪元结束时调用。
 
 ###  `reset` 
 
@@ -126,5 +126,5 @@ Method called at the end of every epoch.
  
 ```
 
-## Class Members
+## Class 成员
 -  `white_list_formats`  []()

@@ -23,7 +23,7 @@ If  `label_smoothing`  is nonzero, smooth the labels towards 1/2:
  
 ```
 
-#### Args:
+#### 参数：
 - **`multi_class_labels`** :  `[batch_size, num_classes]`  target integer labels in `{0, 1}` .
 - **`logits`** : Float  `[batch_size, num_classes]`  logits outputs of the network.
 - **`weights`** : Optional  `Tensor`  whose rank is either 0, or the same rank as `labels` , and must be broadcastable to  `labels`  (i.e., all dimensions mustbe either  `1` , or the same as the corresponding  `losses`  dimension).
@@ -33,13 +33,13 @@ If  `label_smoothing`  is nonzero, smooth the labels towards 1/2:
 - **`reduction`** : Type of reduction to apply to loss.
 
 
-#### Returns:
+#### 返回：
 Weighted loss  `Tensor`  of the same type as  `logits` . If  `reduction`  is `NONE` , this has the same shape as  `logits` ; otherwise, it is scalar.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `logits`  doesn't match that of `multi_class_labels`  or if the shape of  `weights`  is invalid, or if `weights`  is None.  Also if  `multi_class_labels`  or  `logits`  is None.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 The  `loss_collection`  argument is ignored when executing eagerly. Considerholding on to the return value or collecting losses via a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model).
 

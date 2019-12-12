@@ -1,4 +1,4 @@
-Readahead files not implemented; simply returns given path.
+未实现readahead文件；只返回给定的路径。
 
 ```
  tf.compat.v1.resource_loader.readahead_file_path(

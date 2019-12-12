@@ -1,13 +1,13 @@
 
 
 ## Class  `AUC` 
-Computes the approximate AUC (Area under the curve) via a Riemann sum.
+通过黎曼和计算近似AUC（曲线下面积）。
 
 Inherits From: [ `Metric` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Metric)
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC), [ `tf.compat.v2.keras.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC), [ `tf.compat.v2.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC), [ `tf.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC)
+**别名** : [ `tf.compat.v1.keras.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC), [ `tf.compat.v2.keras.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC), [ `tf.compat.v2.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC), [ `tf.metrics.AUC` ](/api_docs/python/tf/keras/metrics/AUC)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classification on imbalanced data](https://tensorflow.google.cn/tutorials/structured_data/imbalanced_data)
 This metric creates four local variables,  `true_positives` ,  `true_negatives` , `false_positives`  and  `false_negatives`  that are used to compute the AUC.To discretize the AUC curve, a linearly spaced set of thresholds is used tocompute pairs of recall and precision values. The area under the ROC-curve istherefore computed using the height of the recall values by the false positiverate, while the area under the PR-curve is the computed using the height ofthe precision values by the recall.
 
@@ -17,7 +17,7 @@ For best results,  `predictions`  should be distributed approximately uniformlyi
 
 If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -33,7 +33,7 @@ print('Final result: ', m.result().numpy())  # Final result: 0.75
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -58,7 +58,7 @@ model.compile('sgd', loss='mse', metrics=[tf.keras.metrics.AUC()])
 
 Creates an  `AUC`  instance.
 
-#### Args:
+#### 参数：
 - **`num_thresholds`** : (Optional) Defaults to 200. The number of thresholds touse when discretizing the roc curve. Values must be > 1.
 - **`curve`** : (Optional) Specifies the name of the curve to be computed, 'ROC'[default] or 'PR' for the Precision-Recall-curve.
 - **`summation_method`** : (Optional) Specifies the Riemann summation method used(https://en.wikipedia.org/wiki/Riemann_sum): 'interpolation' [default],applies mid-point summation scheme for  `ROC` . For PR-AUC, interpolates(true/false) positives but not the ratio that is precision (see Davis&amp; Goadrich 2006 for details); 'minoring' that applies left summationfor increasing intervals and right summation for decreasing intervals;'majoring' that does the opposite.
@@ -81,7 +81,7 @@ Creates an  `AUC`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `interpolate_pr_auc` 
@@ -124,7 +124,7 @@ int_A^B{Precision.dTP} = int_A^B{slope * dTP} = slope * (TP_B - TP_A)
 
 which is really equivalent to imputing constant precision throughout thefirst bucket having >0 true positives.
 
-#### Returns:
+#### 返回：
 - **`pr_auc`** : an approximation of the area under the P-R curve.
 
 
@@ -136,7 +136,7 @@ which is really equivalent to imputing constant precision throughout thefirst bu
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -148,7 +148,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -164,14 +164,14 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates confusion matrix statistics.
+累积混淆矩阵统计。
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

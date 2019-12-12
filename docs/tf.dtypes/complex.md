@@ -1,8 +1,8 @@
 
 
-Converts two real numbers to a complex number.
+将两个实数转换为复数。
 
-**Aliases** : [ `tf.compat.v1.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.compat.v1.dtypes.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.compat.v2.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.compat.v2.dtypes.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.complex` ](/api_docs/python/tf/dtypes/complex)
+**别名** : [ `tf.compat.v1.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.compat.v1.dtypes.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.compat.v2.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.compat.v2.dtypes.complex` ](/api_docs/python/tf/dtypes/complex), [ `tf.complex` ](/api_docs/python/tf/dtypes/complex)
 
 ```
  tf.dtypes.complex(
@@ -17,7 +17,7 @@ Given a tensor  `real`  representing the real part of a complex number, and aten
 
 The input tensors  `real`  and  `imag`  must have the same shape.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -27,14 +27,14 @@ tf.complex(real, imag)  # [[2.25 + 4.75j], [3.25 + 5.75j]]
  
 ```
 
-#### Args:
+#### 参数：
 - **`real`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` .
 - **`imag`** : A  `Tensor` . Must have the same type as  `real` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `complex64`  or  `complex128` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : Real and imag must be correct types

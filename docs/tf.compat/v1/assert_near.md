@@ -14,7 +14,7 @@ Assert the condition  `x`  and  `y`  are close element-wise.
  
 ```
 
-Example of adding a dependency to an operation:
+向操作添加依赖项的示例：
 
 ```
  with tf.control_dependencies([tf.compat.v1.assert_near(x, y)]):
@@ -30,7 +30,7 @@ If both  `x`  and  `y`  are empty, this is trivially satisfied.
 
 The default  `atol`  and  `rtol`  is  `10 * eps` , where  `eps`  is the smallestrepresentable positive number such that  `1 + eps != 1` .  This is about `1.2e-6`  in  `32bit` ,  `2.22e-15`  in  `64bit` , and  `0.00977`  in  `16bit` .See  `numpy.finfo` .
 
-#### Args:
+#### 参数：
 - **`x`** :  Float or complex  `Tensor` .
 - **`y`** :  Float or complex  `Tensor` , same  `dtype`  as, and broadcastable to,  `x` .
 - **`rtol`** :   `Tensor` .  Same  `dtype`  as, and broadcastable to,  `x` .The relative tolerance.  Default is  `10 * eps` .
@@ -41,9 +41,9 @@ The default  `atol`  and  `rtol`  is  `10 * eps` , where  `eps`  is the smallest
 - **`name`** : A name for this operation (optional).  Defaults to "assert_near".
 
 
-#### Returns:
+#### 返回：
 Op that raises  `InvalidArgumentError`  if  `x`  and  `y`  are not close enough.
 
-#### Numpy Compatibility
+#### numpy兼容性
 Similar to  `numpy.assert_allclose` , except tolerance depends on data type.This is due to the fact that  `TensorFlow`  is often used with  `32bit` ,  `64bit` ,and even  `16bit`  data.
 

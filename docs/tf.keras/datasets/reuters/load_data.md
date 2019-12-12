@@ -1,6 +1,6 @@
-Loads the Reuters newswire classification dataset.
+加载路透社新闻专线分类数据集。
 
-**Aliases** : [ `tf.compat.v1.keras.datasets.reuters.load_data` ](/api_docs/python/tf/keras/datasets/reuters/load_data), [ `tf.compat.v2.keras.datasets.reuters.load_data` ](/api_docs/python/tf/keras/datasets/reuters/load_data)
+**别名** : [ `tf.compat.v1.keras.datasets.reuters.load_data` ](/api_docs/python/tf/keras/datasets/reuters/load_data), [ `tf.compat.v2.keras.datasets.reuters.load_data` ](/api_docs/python/tf/keras/datasets/reuters/load_data)
 
 ```
  tf.keras.datasets.reuters.load_data(
@@ -18,7 +18,7 @@ Loads the Reuters newswire classification dataset.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`path`** : where to cache the data (relative to  `~/.keras/dataset` ).
 - **`num_words`** : max number of words to include. Words are rankedby how often they occur (in the training set) and onlythe most frequent words are kept
 - **`skip_top`** : skip the top N most frequently occurring words(which may not be informative).
@@ -31,7 +31,7 @@ Loads the Reuters newswire classification dataset.
 - **`**kwargs`** : Used for backwards compatibility.
 
 
-#### Returns:
+#### 返回：
 Tuple of Numpy arrays:  `(x_train, y_train), (x_test, y_test)` .
 
 Note that the 'out of vocabulary' character is only used forwords that were present in the training set but are not includedbecause they're not making the  `num_words`  cut here.Words that were not seen in the training set but are in the test sethave simply been skipped.

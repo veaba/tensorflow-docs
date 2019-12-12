@@ -1,4 +1,4 @@
-Creates a constant tensor.
+创建常量张量。
 
 ```
  tf.compat.v1.constant(
@@ -19,7 +19,7 @@ The argument  `shape`  is optional. If present, it specifies the dimensions ofth
 
 If the argument  `dtype`  is not specified, then the type is inferred fromthe type of  `value` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -39,7 +39,7 @@ tensor = tf.constant(-1.0, shape=[2, 3]) => [[-1. -1. -1.]
 - Because [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) only embeds constant values in the graph, it doesnot support dynamic shapes based on other runtime Tensors, whereas[ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill) does.
 
 
-#### Args:
+#### 参数：
 - **`value`** :          A constant value (or list) of output type  `dtype` .
 
 
@@ -55,8 +55,8 @@ tensor = tf.constant(-1.0, shape=[2, 3]) => [[-1. -1. -1.]
 - **`verify_shape`** :   Boolean that enables verification of a shape of values.
 
 
-#### Returns:
-A Constant Tensor.
+#### 返回：
+恒定张量
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if shape is incorrectly specified or unsupported.

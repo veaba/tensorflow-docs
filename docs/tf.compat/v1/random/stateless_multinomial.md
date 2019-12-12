@@ -8,7 +8,7 @@ Draws deterministic pseudorandom samples from a multinomial distribution. (depre
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.random.stateless_categorical` ](https://tensorflow.google.cn/api_docs/python/tf/random/stateless_categorical) instead.
 This is a stateless version of [ `tf.random.categorical` ](https://tensorflow.google.cn/api_docs/python/tf/random/categorical): if run twice with thesame seeds, it will produce the same pseudorandom numbers.  The output isconsistent across multiple runs on the same hardware (and between CPUand GPU), but may change between versions of TensorFlow or on non-CPU/GPUhardware.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -19,7 +19,7 @@ samples = tf.random.stateless_categorical(
  
 ```
 
-#### Args:
+#### 参数：
 - **`logits`** : 2-D Tensor with shape  `[batch_size, num_classes]` .  Each slice `[i, :]`  represents the unnormalized log-probabilities for all classes.
 - **`num_samples`** : 0-D.  Number of independent samples to draw for each row slice.
 - **`seed`** : A shape [2] integer Tensor of seeds to the random number generator.
@@ -27,6 +27,6 @@ samples = tf.random.stateless_categorical(
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 The drawn samples of shape  `[batch_size, num_samples]` .
 

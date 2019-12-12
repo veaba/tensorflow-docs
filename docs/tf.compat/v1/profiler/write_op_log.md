@@ -13,7 +13,7 @@ Log provided 'op_log', and add additional model information below.
 
 The API also assigns ops in tf.compat.v1.trainable_variables() an op type  called '_trainable_variables'.  The API also logs 'flops' statistics for ops with op.RegisterStatistics()  defined. flops calculation depends on Tensor shapes defined in 'graph',  which might not be complete. 'run_meta', if provided, completes the shape  information with best effort.
 
-#### Args:
+#### 参数：
 - **`graph`** : tf.Graph. If None and eager execution is not enabled, usedefault graph.
 - **`log_dir`** : directory to write the log file.
 - **`op_log`** : (Optional) OpLogProto proto to be written. If not provided, an newone is created.

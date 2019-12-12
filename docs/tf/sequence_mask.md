@@ -1,6 +1,6 @@
-Returns a mask tensor representing the first N positions of each cell.
+返回表示每个单元格的前n个位置的掩码张量。
 
-**Aliases** : [ `tf.compat.v1.sequence_mask` ](/api_docs/python/tf/sequence_mask), [ `tf.compat.v2.sequence_mask` ](/api_docs/python/tf/sequence_mask)
+**别名** : [ `tf.compat.v1.sequence_mask` ](/api_docs/python/tf/sequence_mask), [ `tf.compat.v2.sequence_mask` ](/api_docs/python/tf/sequence_mask)
 
 ```
  tf.sequence_mask(    lengths,    maxlen=None,    dtype=tf.dtypes.bool,    name=None) 
@@ -13,7 +13,7 @@ If  `lengths`  has shape  `[d_1, d_2, ..., d_n]`  the resulting tensor  `mask`  
  
 ```
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -28,15 +28,15 @@ tf.sequence_mask([[1, 3],[2,0]])  # [[[True, False, False],
  
 ```
 
-#### Args:
+#### 参数：
 - **`lengths`** : integer tensor, all its values <= maxlen.
 - **`maxlen`** : scalar integer tensor, size of last dimension of returned tensor.Default is the maximum value in  `lengths` .
 - **`dtype`** : output type of the resulting tensor.
 - **`name`** : name of the op.
 
 
-#### Returns:
+#### 返回：
 A mask tensor of shape  `lengths.shape + (maxlen,)` , cast to specified dtype.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `maxlen`  is not a scalar.

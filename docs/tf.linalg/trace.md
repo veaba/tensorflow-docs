@@ -1,6 +1,6 @@
 Compute the trace of a tensor  `x` .
 
-**Aliases** : [ `tf.compat.v1.linalg.trace` ](/api_docs/python/tf/linalg/trace), [ `tf.compat.v1.trace` ](/api_docs/python/tf/linalg/trace), [ `tf.compat.v2.linalg.trace` ](/api_docs/python/tf/linalg/trace)
+**别名** : [ `tf.compat.v1.linalg.trace` ](/api_docs/python/tf/linalg/trace), [ `tf.compat.v1.trace` ](/api_docs/python/tf/linalg/trace), [ `tf.compat.v2.linalg.trace` ](/api_docs/python/tf/linalg/trace)
 
 ```
  tf.linalg.trace(
@@ -14,7 +14,7 @@ Compute the trace of a tensor  `x` .
 
  `output[i, j, k, ..., l] = trace(x[i, j, i, ..., l, :, :])` 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -36,11 +36,11 @@ tf.linalg.trace(x)  # [15, -15]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : tensor.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The trace of input tensor.
+#### 返回：
+输入张量的轨迹。
 

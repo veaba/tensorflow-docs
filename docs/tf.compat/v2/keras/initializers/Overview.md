@@ -1,6 +1,6 @@
-Keras initializer serialization / deserialization.
+Keras初始值设定项序列化/反序列化。
 
-## Classes
+## Class 
 [ `class Constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant_initializer): Initializer that generates tensors with constant values.
 
 [ `class GlorotNormal` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/GlorotNormal): The Glorot normal initializer, also called Xavier normal initializer.
@@ -39,7 +39,7 @@ Keras initializer serialization / deserialization.
 
 [ `class zeros` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_initializer): Initializer that generates tensors initialized to 0.
 
-## Functions
+## 功能
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/deserialize): Return an  `Initializer`  object from its config.
 
 [ `get(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/get)

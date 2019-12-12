@@ -1,15 +1,15 @@
 
 
 ## Class  `Nadam` 
-Optimizer that implements the NAdam algorithm.
+实现NADAM算法的优化器。
 
 Inherits From: [ `Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)
 
-**Aliases** : [ `tf.compat.v1.keras.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam), [ `tf.compat.v2.keras.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam), [ `tf.compat.v2.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam), [ `tf.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam)
+**别名** : [ `tf.compat.v1.keras.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam), [ `tf.compat.v2.keras.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam), [ `tf.compat.v2.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam), [ `tf.optimizers.Nadam` ](/api_docs/python/tf/keras/optimizers/Nadam)
 
 Much like Adam is essentially RMSprop with momentum, Nadam is Adam withNesterov momentum.
 
-#### Initialization:
+#### 初始化：
 
 m0:=0(Initialize 1st moment vector)
 
@@ -20,7 +20,7 @@ mu0:=1
 t:=0(Initialize timestep)
 
 
-#### Computes:
+#### 计算：
 
 t:=t+1
 
@@ -58,9 +58,9 @@ References  See [Dozat, T., 2015](http://cs229.stanford.edu/proj2015/054_report.
  
 ```
 
-Construct a new Nadam optimizer.
+构造一个新的NADAM优化器。
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : A Tensor or a floating point value.  The learning rate.
 - **`beta_1`** : A float value or a constant float tensor. The exponential decayrate for the 1st moment estimates.
 - **`beta_2`** : A float value or a constant float tensor. The exponential decayrate for the exponentially weighted infinity norm.
@@ -69,16 +69,16 @@ Construct a new Nadam optimizer.
 - **`**kwargs`** : keyword arguments. Allowed to be { `clipnorm` ,  `clipvalue` ,  `lr` , `decay` }.  `clipnorm`  is clip gradients by norm;  `clipvalue`  is clipgradients by value,  `decay`  is included for backward compatibility toallow time inverse decay of learning rate.  `lr`  is included for backwardcompatibility, recommended to use  `learning_rate`  instead.
 
 
-## Properties
+## 属性
 
 
 ###  `iterations` 
-Variable. The number of training steps this Optimizer has run.
+变量。此优化器已运行的训练步骤数。
 
 ###  `weights` 
-Returns variables of this Optimizer based on the order created.
+根据创建的顺序返回此优化器的变量。
 
-## Methods
+## 方法
 
 
 ###  `add_slot` 
@@ -122,19 +122,19 @@ Add a new slot variable for  `var` .
  
 ```
 
-Apply gradients to variables.
+对变量应用渐变。
 
 This is the second part of  `minimize()` . It returns an  `Operation`  thatapplies gradients.
 
-#### Args:
+#### 参数：
 - **`grads_and_vars`** : List of (gradient, variable) pairs.
 - **`name`** : Optional name for the returned operation.  Default to the namepassed to the  `Optimizer`  constructor.
 
 
-#### Returns:
+#### 返回：
 An  `Operation`  that applies the specified gradients. If  `global_step` was not None, that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `grads_and_vars`  is malformed.
 - **`ValueError`** : If none of the variables have gradients.
 
@@ -151,17 +151,17 @@ An  `Operation`  that applies the specified gradients. If  `global_step` was not
  
 ```
 
-Creates an optimizer from its config.
+从其配置创建优化器。
 
 This method is the reverse of  `get_config` ,capable of instantiating the same optimizer from the configdictionary.
 
-#### Arguments:
+#### 参数：
 - **`config`** : A Python dictionary, typically the output of get_config.
 - **`custom_objects`** : A Python dictionary mapping names to additional Pythonobjects used to create this optimizer, such as a function used for ahyperparameter.
 
 
-#### Returns:
-An optimizer instance.
+#### 返回：
+优化器实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/nadam.py#L227-L236)
@@ -171,12 +171,12 @@ An optimizer instance.
  
 ```
 
-Returns the config of the optimimizer.
+返回优化程序的配置。
 
 An optimizer config is a Python dictionary (serializable)containing the configuration of an optimizer.The same optimizer can be reinstantiated later(without any saved state) from this configuration.
 
-#### Returns:
-Python dictionary.
+#### 返回：
+python字典。
 
 ###  `get_gradients` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/optimizer_v2.py#L374-L406)
@@ -191,15 +191,15 @@ Python dictionary.
 
 Returns gradients of  `loss`  with respect to  `params` .
 
-#### Arguments:
+#### 参数：
 - **`loss`** : Loss tensor.
 - **`params`** : List of variables.
 
 
-#### Returns:
-List of gradient tensors.
+#### 返回：
+梯度张量列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case any gradient cannot be computed (e.g. if gradientfunction not implemented).
 
 
@@ -222,7 +222,7 @@ List of gradient tensors.
  
 ```
 
-A list of names for this optimizer's slots.
+此优化器插槽的名称列表。
 
 ###  `get_updates` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/optimizer_v2.py#L499-L506)
@@ -260,17 +260,17 @@ Minimize  `loss`  by updating  `var_list` .
 
 This method simply computes gradient using [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) and calls `apply_gradients()` . If you want to process the gradient before applyingthen call [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) and  `apply_gradients()`  explicitly insteadof using this function.
 
-#### Args:
+#### 参数：
 - **`loss`** : A callable taking no arguments which returns the value to minimize.
 - **`var_list`** : list or tuple of  `Variable`  objects to update to minimize `loss` , or a callable returning the list or tuple of  `Variable`  objects.Use callable when the variable list would otherwise be incomplete before `minimize`  since the variables are created at the first time  `loss`  iscalled.
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 - **`name`** : Optional name for the returned operation.
 
 
-#### Returns:
+#### 返回：
 An Operation that updates the variables in  `var_list` .  If  `global_step` was not  `None` , that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If some of the variables are not  `Variable`  objects.
 
 
@@ -290,5 +290,5 @@ An Operation that updates the variables in  `var_list` .  If  `global_step` was 
  
 ```
 
-Returns variables of this Optimizer based on the order created.
+根据创建的顺序返回此优化器的变量。
 

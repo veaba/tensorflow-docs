@@ -1,6 +1,6 @@
-Returns the batched diagonal part of a batched tensor.
+返回批处理张量的批处理对角线部分。
 
-**Aliases** : [ `tf.compat.v1.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part), [ `tf.compat.v1.matrix_diag_part` ](/api_docs/python/tf/linalg/diag_part), [ `tf.compat.v2.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part)
+**别名** : [ `tf.compat.v1.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part), [ `tf.compat.v1.matrix_diag_part` ](/api_docs/python/tf/linalg/diag_part), [ `tf.compat.v2.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part)
 
 ```
  tf.linalg.diag_part(
@@ -38,9 +38,9 @@ Otherwise, the output tensor has rank  `r`  with dimensions `[I, J, ..., L, num_
 
 where  `d = k[1] - m` ,  `y = max(-d, 0)` , and  `x = max(d, 0)` .
 
-The input must be at least a matrix.
+输入必须至少是矩阵。
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -80,13 +80,13 @@ tf.matrix_diag_part(input, k = (1, 3), padding = 9)
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  with  `rank k >= 2` .
 - **`name`** : A name for the operation (optional).
 - **`k`** : Diagonal offset(s). Positive value means superdiagonal, 0 refers to themain diagonal, and negative value means subdiagonals.  `k`  can be a singleinteger (for a single diagonal) or a pair of integers specifying the lowand high ends of a matrix band.  `k[0]`  must not be larger than  `k[1]` .
 - **`padding_value`** : The value to fill the area outside the specified diagonalband with. Default is 0.
 
 
-#### Returns:
+#### 返回：
 A Tensor containing diagonals of  `input` . Has the same type as  `input` .
 

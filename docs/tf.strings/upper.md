@@ -1,6 +1,6 @@
-TODO: add doc.
+待办事项：添加文档。
 
-**Aliases** : [ `tf.compat.v1.strings.upper` ](/api_docs/python/tf/strings/upper), [ `tf.compat.v2.strings.upper` ](/api_docs/python/tf/strings/upper)
+**别名** : [ `tf.compat.v1.strings.upper` ](/api_docs/python/tf/strings/upper), [ `tf.compat.v2.strings.upper` ](/api_docs/python/tf/strings/upper)
 
 ```
  tf.strings.upper(
@@ -11,12 +11,12 @@ TODO: add doc.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `string` .
 - **`encoding`** : An optional  `string` . Defaults to  `""` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

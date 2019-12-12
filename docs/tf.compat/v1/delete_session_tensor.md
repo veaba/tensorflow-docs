@@ -1,4 +1,4 @@
-Delete the tensor for the given tensor handle.
+删除给定张量句柄的张量。
 
 ```
  tf.compat.v1.delete_session_tensor(
@@ -8,15 +8,15 @@ Delete the tensor for the given tensor handle.
  
 ```
 
-This is EXPERIMENTAL and subject to change.
+这是实验性的，随时可能改变。
 
 Delete the tensor of a given tensor handle. The tensor is producedin a previous run() and stored in the state of the session.
 
-#### Args:
+#### 参数：
 - **`handle`** : The string representation of a persistent tensor handle.
 - **`name`** : Optional name prefix for the return tensor.
 
 
-#### Returns:
+#### 返回：
 A pair of graph elements. The first is a placeholder for feeding atensor handle and the second is a deletion operation.
 

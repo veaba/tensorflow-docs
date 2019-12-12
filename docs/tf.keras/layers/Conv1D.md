@@ -3,16 +3,16 @@
 ## Class  `Conv1D` 
 1D convolution layer (e.g. temporal convolution).
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Conv1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.compat.v1.keras.layers.Convolution1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.compat.v2.keras.layers.Conv1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.compat.v2.keras.layers.Convolution1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.keras.layers.Convolution1D` ](/api_docs/python/tf/keras/layers/Conv1D)
+**别名** : [ `tf.compat.v1.keras.layers.Conv1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.compat.v1.keras.layers.Convolution1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.compat.v2.keras.layers.Conv1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.compat.v2.keras.layers.Convolution1D` ](/api_docs/python/tf/keras/layers/Conv1D), [ `tf.keras.layers.Convolution1D` ](/api_docs/python/tf/keras/layers/Conv1D)
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 This layer creates a convolution kernel that is convolvedwith the layer input over a single spatial (or temporal) dimensionto produce a tensor of outputs.If  `use_bias`  is True, a bias vector is created and added to the outputs.Finally, if  `activation`  is not  `None` ,it is applied to the outputs as well.
 
 When using this layer as the first layer in a model,provide an  `input_shape`  argument(tuple of integers or  `None` , e.g. `(10, 128)`  for sequences of 10 vectors of 128-dimensional vectors,or  `(None, 128)`  for variable-length sequences of 128-dimensional vectors.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of a single integer,specifying the length of the 1D convolution window.
 - **`strides`** : An integer or tuple/list of a single integer,specifying the stride length of the convolution.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -30,7 +30,7 @@ When using this layer as the first layer in a model,provide an  `input_shape`  a
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -46,10 +46,10 @@ model.add(Conv1D(32, 3,
  
 ```
 
-#### Input shape:
+#### 输入形状：
 3D tensor with shape:  `(batch_size, steps, input_dim)` 
 
-#### Output shape:
+#### 输出形状：
 3D tensor with shape:  `(batch_size, new_steps, filters)`    `steps`  value might have changed due to padding or strides.
 
 ##  `__init__` 

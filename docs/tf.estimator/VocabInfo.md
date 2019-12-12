@@ -3,7 +3,7 @@
 ## Class  `VocabInfo` 
 Vocabulary information for warm-starting.
 
-**Aliases** : [ `tf.compat.v1.estimator.VocabInfo` ](/api_docs/python/tf/estimator/VocabInfo), [ `tf.compat.v1.train.VocabInfo` ](/api_docs/python/tf/estimator/VocabInfo), [ `tf.compat.v2.estimator.VocabInfo` ](/api_docs/python/tf/estimator/VocabInfo)
+**别名** : [ `tf.compat.v1.estimator.VocabInfo` ](/api_docs/python/tf/estimator/VocabInfo), [ `tf.compat.v1.train.VocabInfo` ](/api_docs/python/tf/estimator/VocabInfo), [ `tf.compat.v2.estimator.VocabInfo` ](/api_docs/python/tf/estimator/VocabInfo)
 
 See [ `tf.estimator.WarmStartSettings` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/WarmStartSettings) for examples of using  VocabInfo to warm-start.
 
@@ -71,7 +71,7 @@ __new__(
 
 Create new instance of VocabInfo(new_vocab, new_vocab_size, num_oov_buckets, old_vocab, old_vocab_size, backup_initializer, axis)
 
-## Properties
+## 属性
 
 
 ###  `new_vocab` 

@@ -1,9 +1,9 @@
 
 
 ## Class  `MapVectorizationOptions` 
-Represents options for the MapVectorization optimization.
+表示地图矢量化优化的选项。
 
-**Aliases** : [ `tf.compat.v1.data.experimental.MapVectorizationOptions` ](/api_docs/python/tf/data/experimental/MapVectorizationOptions), [ `tf.compat.v2.data.experimental.MapVectorizationOptions` ](/api_docs/python/tf/data/experimental/MapVectorizationOptions)
+**别名** : [ `tf.compat.v1.data.experimental.MapVectorizationOptions` ](/api_docs/python/tf/data/experimental/MapVectorizationOptions), [ `tf.compat.v2.data.experimental.MapVectorizationOptions` ](/api_docs/python/tf/data/experimental/MapVectorizationOptions)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/util/options.py#L33-L35)
@@ -15,7 +15,7 @@ Represents options for the MapVectorization optimization.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `enabled` 
@@ -24,7 +24,7 @@ Whether to vectorize map transformations. If None, defaults to False.
 ###  `use_choose_fastest` 
 Whether to use ChooseFastestBranchDataset with this transformation. If True, the pipeline picks between the vectorized and original segment at runtime based on their iterations speed. If None, defaults to False.
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 

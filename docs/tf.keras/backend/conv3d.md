@@ -1,6 +1,6 @@
 3D convolution.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.conv3d` ](/api_docs/python/tf/keras/backend/conv3d), [ `tf.compat.v2.keras.backend.conv3d` ](/api_docs/python/tf/keras/backend/conv3d)
+**别名** : [ `tf.compat.v1.keras.backend.conv3d` ](/api_docs/python/tf/keras/backend/conv3d), [ `tf.compat.v2.keras.backend.conv3d` ](/api_docs/python/tf/keras/backend/conv3d)
 
 ```
  tf.keras.backend.conv3d(
@@ -14,7 +14,7 @@
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`kernel`** : kernel tensor.
 - **`strides`** : strides tuple.
@@ -23,8 +23,8 @@
 - **`dilation_rate`** : tuple of 3 integers.
 
 
-#### Returns:
+#### 返回：
 A tensor, result of 3D convolution.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `data_format`  is neither  `channels_last`  or `channels_first` .

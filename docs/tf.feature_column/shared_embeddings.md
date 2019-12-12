@@ -21,7 +21,7 @@ Use this when your inputs are sparse and of the same type (e.g. watched andimpre
 
 Inputs must be a list of categorical columns created by any of the `categorical_column_*`  function. They must all be of the same type and havethe same arguments except  `key` . E.g. they can becategorical_column_with_vocabulary_file with the same vocabulary_file. Some orall columns could also be weighted_categorical_column.
 
-Here is an example embedding of two features for a DNNClassifier model:
+下面是为dnnclassifier模型嵌入两个功能的示例：
 
 ```
  watched_video_id = categorical_column_with_vocabulary_file(
@@ -60,7 +60,7 @@ Here is an example using  `shared_embedding_columns`  with model_fn:
  
 ```
 
-#### Args:
+#### 参数：
 - **`categorical_columns`** : List of categorical columns created by a `categorical_column_with_*`  function. These columns produce the sparse IDsthat are inputs to the embedding lookup. All columns must be of the sametype and have the same arguments except  `key` . E.g. they can becategorical_column_with_vocabulary_file with the same vocabulary_file.Some or all columns could also be weighted_categorical_column.
 - **`dimension`** : An integer specifying dimension of the embedding, must be > 0.
 - **`combiner`** : A string specifying how to reduce if there are multiple entriesin a single row. Currently 'mean', 'sqrtn' and 'sum' are supported, with'mean' the default. 'sqrtn' often achieves good accuracy, in particularwith bag-of-words columns. Each of this can be thought as example levelnormalizations on the column. For more information, see `tf.embedding_lookup_sparse` .
@@ -72,10 +72,10 @@ Here is an example using  `shared_embedding_columns`  with model_fn:
 - **`trainable`** : Whether or not the embedding is trainable. Default is True.
 
 
-#### Returns:
+#### 返回：
 A list of dense columns that converts from sparse input. The order ofresults follows the ordering of  `categorical_columns` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `dimension`  not > 0.
 - **`ValueError`** : if any of the given  `categorical_columns`  is of different typeor has different arguments than the others.
 - **`ValueError`** : if exactly one of  `ckpt_to_load_from`  and  `tensor_name_in_ckpt` is specified.

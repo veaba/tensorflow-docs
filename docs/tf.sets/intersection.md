@@ -1,6 +1,6 @@
 Compute set intersection of elements in last dimension of  `a`  and  `b` .
 
-**Aliases** : [ `tf.compat.v1.sets.intersection` ](/api_docs/python/tf/sets/intersection), [ `tf.compat.v1.sets.set_intersection` ](/api_docs/python/tf/sets/intersection), [ `tf.compat.v2.sets.intersection` ](/api_docs/python/tf/sets/intersection)
+**别名** : [ `tf.compat.v1.sets.intersection` ](/api_docs/python/tf/sets/intersection), [ `tf.compat.v1.sets.set_intersection` ](/api_docs/python/tf/sets/intersection), [ `tf.compat.v2.sets.intersection` ](/api_docs/python/tf/sets/intersection)
 
 ```
  tf.sets.intersection(    a,    b,    validate_indices=True) 
@@ -8,7 +8,7 @@ Compute set intersection of elements in last dimension of  `a`  and  `b` .
 
 All but the last dimension of  `a`  and  `b`  must match.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -54,12 +54,12 @@ All but the last dimension of  `a`  and  `b`  must match.
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  or  `SparseTensor`  of the same type as  `b` . If sparse, indicesmust be sorted in row-major order.
 - **`b`** :  `Tensor`  or  `SparseTensor`  of the same type as  `a` . If sparse, indicesmust be sorted in row-major order.
 - **`validate_indices`** : Whether to validate the order and range of sparse indicesin  `a`  and  `b` .
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  whose shape is the same rank as  `a`  and  `b` , and all butthe last dimension the same. Elements along the last dimension contain theintersections.
 

@@ -1,9 +1,9 @@
 
 
 ## Class  `StackTraceTransform` 
-Base class for stack trace transformation functions.
+堆栈跟踪转换函数的基类。
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

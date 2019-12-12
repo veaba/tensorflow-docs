@@ -1,13 +1,13 @@
 
 
 ## Class  `SaveSliceInfo` 
-Information on how to save this Variable as a slice.
+有关如何将此变量保存为切片的信息。
 
-**Aliases** : [ `tf.compat.v1.Variable.SaveSliceInfo` ](/api_docs/python/tf/Variable/SaveSliceInfo), [ `tf.compat.v2.Variable.SaveSliceInfo` ](/api_docs/python/tf/Variable/SaveSliceInfo)
+**别名** : [ `tf.compat.v1.Variable.SaveSliceInfo` ](/api_docs/python/tf/Variable/SaveSliceInfo), [ `tf.compat.v2.Variable.SaveSliceInfo` ](/api_docs/python/tf/Variable/SaveSliceInfo)
 
 Provides internal support for saving variables as slices of a largervariable.  This API is not public and is subject to change.
 
-#### Available properties:
+#### 可用属性：
 - full_name
 - full_shape
 - var_offset
@@ -31,7 +31,7 @@ Provides internal support for saving variables as slices of a largervariable.  T
 
 Create a  `SaveSliceInfo` .
 
-#### Args:
+#### 参数：
 - **`full_name`** : Name of the full variable of which this  `Variable`  is aslice.
 - **`full_shape`** : Shape of the full variable, as a list of int.
 - **`var_offset`** : Offset of this  `Variable`  into the full variable, as a listof int.
@@ -40,13 +40,13 @@ Create a  `SaveSliceInfo` .
 - **`import_scope`** : Optional  `string` . Name scope to add. Only used wheninitializing from protocol buffer.
 
 
-## Properties
+## 属性
 
 
 ###  `spec` 
-Computes the spec string used for saving.
+计算用于保存的规范字符串。
 
-## Methods
+## 方法
 
 
 ###  `to_proto` 
@@ -57,12 +57,12 @@ Computes the spec string used for saving.
  
 ```
 
-Returns a SaveSliceInfoDef() proto.
+返回saveSliceInfoDef（）协议。
 
-#### Args:
+#### 参数：
 - **`export_scope`** : Optional  `string` . Name scope to remove.
 
 
-#### Returns:
+#### 返回：
 A  `SaveSliceInfoDef`  protocol buffer, or None if the  `Variable`  is notin the specified name scope.
 

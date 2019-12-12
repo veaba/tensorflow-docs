@@ -1,6 +1,6 @@
-Transforms a Tensor into a serialized TensorProto proto.
+将张量转换为序列化的张量proto。
 
-**Aliases** : [ `tf.compat.v1.io.serialize_tensor` ](/api_docs/python/tf/io/serialize_tensor), [ `tf.compat.v1.serialize_tensor` ](/api_docs/python/tf/io/serialize_tensor), [ `tf.compat.v2.io.serialize_tensor` ](/api_docs/python/tf/io/serialize_tensor)
+**别名** : [ `tf.compat.v1.io.serialize_tensor` ](/api_docs/python/tf/io/serialize_tensor), [ `tf.compat.v1.serialize_tensor` ](/api_docs/python/tf/io/serialize_tensor), [ `tf.compat.v2.io.serialize_tensor` ](/api_docs/python/tf/io/serialize_tensor)
 
 ```
  tf.io.serialize_tensor(
@@ -10,11 +10,11 @@ Transforms a Tensor into a serialized TensorProto proto.
  
 ```
 
-#### Args:
+#### 参数：
 - **`tensor`** : A  `Tensor` . A Tensor of type  `T` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

@@ -1,13 +1,13 @@
 
 
 ## Class  `Precision` 
-Computes the precision of the predictions with respect to the labels.
+计算相对于标签的预测精度。
 
 Inherits From: [ `Metric` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Metric)
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision), [ `tf.compat.v2.keras.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision), [ `tf.compat.v2.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision), [ `tf.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision)
+**别名** : [ `tf.compat.v1.keras.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision), [ `tf.compat.v2.keras.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision), [ `tf.compat.v2.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision), [ `tf.metrics.Precision` ](/api_docs/python/tf/keras/metrics/Precision)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classification on imbalanced data](https://tensorflow.google.cn/tutorials/structured_data/imbalanced_data)
 For example, if  `y_true`  is [0, 1, 1, 1] and  `y_pred`  is [1, 0, 1, 1]then the precision value is 2/(2+1) ie. 0.66. If the weights were specified as[0, 0, 1, 0] then the precision value would be 1.
 
@@ -19,7 +19,7 @@ If  `top_k`  is set, we'll calculate precision as how often on average a classam
 
 If  `class_id`  is specified, we calculate precision by considering only theentries in the batch for which  `class_id`  is above the threshold and/or in thetop-k highest predictions, and computing the fraction of them for which `class_id`  is indeed a correct label.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -29,7 +29,7 @@ print('Final result: ', m.result().numpy())  # Final result: 0.66
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -53,7 +53,7 @@ model.compile('sgd', loss='mse', metrics=[tf.keras.metrics.Precision()])
 
 Creates a  `Precision`  instance.
 
-#### Args:
+#### 参数：
 - **`thresholds`** : (Optional) A float value or a python list/tuple of floatthreshold values in [0, 1]. A threshold is compared with predictionvalues to determine the truth value of predictions (i.e., above thethreshold is  `true` , below is  `false` ). One metric value is generatedfor each threshold value. If neither thresholds nor top_k are set, thedefault is to calculate precision with  `thresholds=0.5` .
 - **`top_k`** : (Optional) Unset by default. An int value specifying the top-kpredictions to consider when calculating precision.
 - **`class_id`** : (Optional) Integer class ID for which we want binary metrics.This must be in the half-open interval  `[0, num_classes)` , where `num_classes`  is the last dimension of predictions.
@@ -75,7 +75,7 @@ Creates a  `Precision`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -86,7 +86,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -98,7 +98,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -114,14 +114,14 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates true positive and false positive statistics.
+累积真阳性和假阳性统计数据。
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values, with the same dimensions as  `y_pred` .Will be cast to  `bool` .
 - **`y_pred`** : The predicted values. Each element must be in the range  `[0, 1]` .
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

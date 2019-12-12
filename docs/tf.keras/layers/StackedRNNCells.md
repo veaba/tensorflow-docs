@@ -1,19 +1,19 @@
 
 
 ## Class  `StackedRNNCells` 
-Wrapper allowing a stack of RNN cells to behave as a single cell.
+包装器，允许一堆RNN单元作为单个单元运行。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.StackedRNNCells` ](/api_docs/python/tf/keras/layers/StackedRNNCells), [ `tf.compat.v2.keras.layers.StackedRNNCells` ](/api_docs/python/tf/keras/layers/StackedRNNCells)
+**别名** : [ `tf.compat.v1.keras.layers.StackedRNNCells` ](/api_docs/python/tf/keras/layers/StackedRNNCells), [ `tf.compat.v2.keras.layers.StackedRNNCells` ](/api_docs/python/tf/keras/layers/StackedRNNCells)
 
-Used to implement efficient stacked RNNs.
+用于实现高效的堆叠RNN。
 
-#### Arguments:
+#### 参数：
 - **`cells`** : List of RNN cell instances.
 
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -39,7 +39,7 @@ x = keras.layers.RNN(cells)(inputs)
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `output_size` 
@@ -48,7 +48,7 @@ x = keras.layers.RNN(cells)(inputs)
 ###  `state_size` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

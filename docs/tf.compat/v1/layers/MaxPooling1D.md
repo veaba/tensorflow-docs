@@ -1,11 +1,11 @@
 
 
 ## Class  `MaxPooling1D` 
-Max Pooling layer for 1D inputs.
+1D输入的最大池层。
 
 Inherits From: [ `MaxPool1D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/MaxPool1D), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
-#### Arguments:
+#### 参数：
 - **`pool_size`** : An integer or tuple/list of a single integer,representing the size of the pooling window.
 - **`strides`** : An integer or tuple/list of a single integer, specifying thestrides of the pooling operation.
 - **`padding`** : A string. The padding method, either 'valid' or 'same'.Case-insensitive.
@@ -28,11 +28,11 @@ Inherits From: [ `MaxPool1D` ](https://tensorflow.google.cn/api_docs/python/tf/k
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

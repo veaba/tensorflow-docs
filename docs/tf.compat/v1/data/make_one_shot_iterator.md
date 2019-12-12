@@ -8,10 +8,10 @@ Creates a [ `tf.compat.v1.data.Iterator` ](https://tensorflow.google.cn/api_docs
 **Note:**  The returned iterator will be initialized automatically.A "one-shot" iterator does not support re-initialization.
 
 
-#### Args:
+#### 参数：
 - **`dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
 
 
-#### Returns:
+#### 返回：
 A [ `tf.compat.v1.data.Iterator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/Iterator) over the elements of this dataset.
 

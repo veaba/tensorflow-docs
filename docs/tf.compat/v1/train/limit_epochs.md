@@ -15,14 +15,14 @@ Returns tensor  `num_epochs`  times and then raises an  `OutOfRange`  error. (de
 **Note:**  creates local counter  `epochs` . Use  `local_variables_initializer()`  toinitialize local variables.
 
 
-#### Args:
+#### 参数：
 - **`tensor`** : Any  `Tensor` .
 - **`num_epochs`** : A positive integer (optional).  If specified, limits the numberof steps the output tensor may be evaluated.
 - **`name`** : A name for the operations (optional).
 
 
-#### Returns:
+#### 返回：
 tensor or  `OutOfRange` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `num_epochs`  is invalid.

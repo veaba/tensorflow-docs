@@ -1,12 +1,12 @@
-Ops related to Tensor Processing Units.
+与张量处理单元有关的操作。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental) module: Public API for tf.tpu.experimental namespace.
 
-## Classes
+## Class 
 [ `class CrossShardOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/CrossShardOptimizer): An optimizer that averages gradients across TPU shards.
 
-## Functions
+## 功能
 [ `batch_parallel(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/batch_parallel): Shards  `computation`  along the batch dimension for parallel execution.
 
 [ `bfloat16_scope(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/bfloat16_scope): Scope class for bfloat16 variables so that the model uses custom getter.

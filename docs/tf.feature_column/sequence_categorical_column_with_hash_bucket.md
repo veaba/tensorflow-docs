@@ -1,6 +1,6 @@
-A sequence of categorical terms where ids are set by hashing.
+通过哈希设置id的一系列分类术语。
 
-**Aliases** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_hash_bucket` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_hash_bucket), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_hash_bucket` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_hash_bucket)
+**别名** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_hash_bucket` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_hash_bucket), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_hash_bucket` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_hash_bucket)
 
 ```
  tf.feature_column.sequence_categorical_column_with_hash_bucket(
@@ -13,7 +13,7 @@ A sequence of categorical terms where ids are set by hashing.
 
 Pass this to  `embedding_column`  or  `indicator_column`  to convert sequencecategorical data into dense representation for input to sequence NN, such asRNN.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -33,15 +33,15 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
  
 ```
 
-#### Args:
+#### 参数：
 - **`key`** : A unique string identifying the input feature.
 - **`hash_bucket_size`** : An int > 1. The number of buckets.
 - **`dtype`** : The type of features. Only string and integer types are supported.
 
 
-#### Returns:
+#### 返回：
 A  `SequenceCategoricalColumn` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :  `hash_bucket_size`  is not greater than 1.
 - **`ValueError`** :  `dtype`  is neither string nor integer.

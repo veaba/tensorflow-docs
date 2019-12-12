@@ -1,6 +1,6 @@
-Reshapes a tensor to the specified shape.
+将张量重塑为指定形状。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.reshape` ](/api_docs/python/tf/keras/backend/reshape), [ `tf.compat.v2.keras.backend.reshape` ](/api_docs/python/tf/keras/backend/reshape)
+**别名** : [ `tf.compat.v1.keras.backend.reshape` ](/api_docs/python/tf/keras/backend/reshape), [ `tf.compat.v2.keras.backend.reshape` ](/api_docs/python/tf/keras/backend/reshape)
 
 ```
  tf.keras.backend.reshape(
@@ -10,15 +10,15 @@ Reshapes a tensor to the specified shape.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`shape`** : Target shape tuple.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Example:
+#### 示例：
 
 
 ```

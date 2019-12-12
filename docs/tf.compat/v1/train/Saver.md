@@ -1,7 +1,7 @@
 
 
 ## Class  `Saver` 
-Saves and restores variables.
+保存和还原变量。
 
 See [Variables](https://tensorflow.org/guide/variables)for an overview of variables, saving and restoring.
 
@@ -30,7 +30,7 @@ Additionally, optional arguments to the  `Saver()`  constructor let you controlt
 
 Note that you still have to call the  `save()`  method to save the model.Passing these arguments to the constructor will not save variablesautomatically for you.
 
-A training program that saves regularly looks like:
+定期保存的培训计划如下：
 
 ```
  ...
@@ -76,7 +76,7 @@ If you create several savers, you can specify a different filename for theprotoc
 
 Creates a  `Saver` .
 
-The constructor adds ops to save and restore variables.
+构造函数添加操作以保存和还原变量。
 
  `var_list`  specifies the variables that will be saved and restored. It canbe passed as a  `dict`  or a list:
 
@@ -84,7 +84,7 @@ The constructor adds ops to save and restore variables.
 - A list of variables: The variables will be keyed with their op name inthe checkpoint files.
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -108,7 +108,7 @@ The optional  `reshape`  argument, if  `True` , allows restoring a variable from
 
 The optional  `sharded`  argument, if  `True` , instructs the saver to shardcheckpoints per device.
 
-#### Args:
+#### 参数：
 - **`var_list`** : A list of  `Variable` / `SaveableObject` , or a dictionary mappingnames to  `SaveableObject` s. If  `None` , defaults to the list of allsaveable objects.
 - **`reshape`** : If  `True` , allows restoring parameters from a checkpoint wherethe variables have a different shape.
 - **`sharded`** : If  `True` , shard the checkpoints, one per device.
@@ -126,18 +126,18 @@ The optional  `sharded`  argument, if  `True` , instructs the saver to shardchec
 - **`filename`** : If known at graph construction time, filename used for variableloading/saving.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `var_list`  is invalid.
 - **`ValueError`** : If any of the keys or values in  `var_list`  are not unique.
 - **`RuntimeError`** : If eager execution is enabled and `var_list`  does not specifya list of variables to save.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled,  `var_list`  must specify a  `list`  or  `dict` of variables to save. Otherwise, a  `RuntimeError`  will be raised.
 
 Although Saver works in some cases when executing eagerly, it isfragile. Please switch to [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint) or[ `tf.keras.Model.save_weights` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model#save_weights), which perform a more robust object-basedsaving. These APIs will load checkpoints written by  `Saver` .
 
-## Properties
+## 属性
 
 
 ###  `last_checkpoints` 
@@ -145,10 +145,10 @@ List of not-yet-deleted checkpoint filenames.
 
 You can pass any of the returned values to  `restore()` .
 
-#### Returns:
+#### 返回：
 A list of checkpoint filenames, sorted from oldest to newest.
 
-## Methods
+## 方法
 
 
 ###  `as_saver_def` 
@@ -161,7 +161,7 @@ A list of checkpoint filenames, sorted from oldest to newest.
 
 Generates a  `SaverDef`  representation of this saver.
 
-#### Returns:
+#### 返回：
 A  `SaverDef`  proto.
 
 ###  `build` 
@@ -191,7 +191,7 @@ A  `SaverDef`  proto.
 
 Writes  `MetaGraphDef`  to save_path/filename.
 
-#### Args:
+#### 参数：
 - **`filename`** : Optional meta_graph filename including the path.
 - **`collection_list`** : List of string keys to collect.
 - **`as_text`** : If  `True` , writes the meta_graph as an ASCII proto.
@@ -202,7 +202,7 @@ Writes  `MetaGraphDef`  to save_path/filename.
 - **`save_debug_info`** : If  `True` , save the GraphDebugInfo to a separate file,which in the same directory of filename and with  `_debug`  added beforethe file extension.
 
 
-#### Returns:
+#### 返回：
 A  `MetaGraphDef`  proto.
 
 ###  `from_proto` 
@@ -219,12 +219,12 @@ from_proto(
 
 Returns a  `Saver`  object created from  `saver_def` .
 
-#### Args:
+#### 参数：
 - **`saver_def`** : a  `SaverDef`  protocol buffer.
 - **`import_scope`** : Optional  `string` . Name scope to use.
 
 
-#### Returns:
+#### 返回：
 A  `Saver`  built from saver_def.
 
 ###  `recover_last_checkpoints` 
@@ -235,13 +235,13 @@ A  `Saver`  built from saver_def.
  
 ```
 
-Recovers the internal saver state after a crash.
+恢复崩溃后的内部保护程序状态。
 
 This method is useful for recovering the "self._last_checkpoints" state.
 
 Globs for the checkpoints pointed to by  `checkpoint_paths` .  If the filesexist, use their mtime as the checkpoint timestamp.
 
-#### Args:
+#### 参数：
 - **`checkpoint_paths`** : a list of checkpoint paths.
 
 
@@ -256,18 +256,18 @@ Globs for the checkpoints pointed to by  `checkpoint_paths` .  If the filesexist
  
 ```
 
-Restores previously saved variables.
+恢复以前保存的变量。
 
 This method runs the ops added by the constructor for restoring variables.It requires a session in which the graph was launched.  The variables torestore do not have to have been initialized, as restoring is itself a wayto initialize variables.
 
 The  `save_path`  argument is typically a value previously returned from a `save()`  call, or a call to  `latest_checkpoint()` .
 
-#### Args:
+#### 参数：
 - **`sess`** : A  `Session`  to use to restore the parameters. None in eager mode.
 - **`save_path`** : Path where parameters were previously saved.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If save_path is None or not a valid checkpoint.
 
 
@@ -289,13 +289,13 @@ The  `save_path`  argument is typically a value previously returned from a `save
  
 ```
 
-Saves variables.
+保存变量。
 
 This method runs the ops added by the constructor for saving variables.It requires a session in which the graph was launched.  The variables tosave must also have been initialized.
 
 The method returns the path prefix of the newly created checkpoint files.This string can be passed directly to a call to  `restore()` .
 
-#### Args:
+#### 参数：
 - **`sess`** : A Session to use to save the variables.
 - **`save_path`** : String.  Prefix of filenames created for the checkpoint.
 - **`global_step`** : If provided the global step number is appended to  `save_path` to create the checkpoint filenames. The optional argument can be a `Tensor` , a  `Tensor`  name or an integer.
@@ -307,10 +307,10 @@ The method returns the path prefix of the newly created checkpoint files.This st
 - **`save_debug_info`** : If  `True` , save the GraphDebugInfo to a separate file,which in the same directory of save_path and with  `_debug`  added beforethe file extension. This is only enabled when  `write_meta_graph`  is `True` 
 
 
-#### Returns:
+#### 返回：
 A string: path prefix used for the checkpoint files.  If the saver is  sharded, this string ends with: '-?????-of-nnnnn' where 'nnnnn'  is the number of shards created.If the saver is empty, returns None.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sess`  is not a  `Session` .
 - **`ValueError`** : If  `latest_filename`  contains path components, or if itcollides with  `save_path` .
 - **`RuntimeError`** : If save and restore ops weren't built.
@@ -326,13 +326,13 @@ A string: path prefix used for the checkpoint files.  If the saver is  sharded, 
 
 DEPRECATED: Use set_last_checkpoints_with_time.
 
-Sets the list of old checkpoint filenames.
+设置旧检查点文件名的列表。
 
-#### Args:
+#### 参数：
 - **`last_checkpoints`** : A list of checkpoint filenames.
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** : If last_checkpoints is not a list.
 
 
@@ -344,13 +344,13 @@ Sets the list of old checkpoint filenames.
  
 ```
 
-Sets the list of old checkpoint filenames and timestamps.
+设置旧检查点文件名和时间戳的列表。
 
-#### Args:
+#### 参数：
 - **`last_checkpoints_with_time`** : A list of tuples of checkpoint filenames andtimestamps.
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** : If last_checkpoints_with_time is not a list.
 
 
@@ -364,10 +364,10 @@ Sets the list of old checkpoint filenames and timestamps.
 
 Converts this  `Saver`  to a  `SaverDef`  protocol buffer.
 
-#### Args:
+#### 参数：
 - **`export_scope`** : Optional  `string` . Name scope to remove.
 
 
-#### Returns:
+#### 返回：
 A  `SaverDef`  protocol buffer.
 

@@ -1,11 +1,11 @@
 
 
 ## Class  `StackTraceMapper` 
-Allows remapping traceback information to different source code.
+允许将回溯信息重新映射到不同的源代码。
 
 Inherits From: [ `StackTraceTransform` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceTransform)
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

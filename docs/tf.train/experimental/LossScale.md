@@ -1,9 +1,9 @@
 
 
 ## Class  `LossScale` 
-Loss scale base class.
+损失等级基类。
 
-**Aliases** : [ `tf.compat.v1.train.experimental.LossScale` ](/api_docs/python/tf/train/experimental/LossScale), [ `tf.compat.v2.train.experimental.LossScale` ](/api_docs/python/tf/train/experimental/LossScale)
+**别名** : [ `tf.compat.v1.train.experimental.LossScale` ](/api_docs/python/tf/train/experimental/LossScale), [ `tf.compat.v2.train.experimental.LossScale` ](/api_docs/python/tf/train/experimental/LossScale)
 
 Loss scaling is a process that multiplies the loss by a multiplier called theloss scale, and divides each gradient by the same multiplier. The pseudocodefor this process is:
 
@@ -27,9 +27,9 @@ Instances of this class represent a loss scale. Calling instances of thisclass r
  
 ```
 
-Initializes the loss scale class.
+初始化损失等级。
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -54,7 +54,7 @@ from_config(
  
 ```
 
-Creates the LossScale from its config.
+从其配置创建losscale。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/loss_scale.py#L174-L177)
@@ -64,7 +64,7 @@ Creates the LossScale from its config.
  
 ```
 
-Returns the config of this loss scale.
+返回此损失等级的配置。
 
 ###  `update` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/experimental/loss_scale.py#L74-L109)
@@ -74,7 +74,7 @@ Returns the config of this loss scale.
  
 ```
 
-Updates the value of the loss scale.
+更新损失等级的值。
 
 The loss scale will be potentially updated, based on the value of  `grads` .The tensor returned by calling this class is only updated when this functionis evaluated.
 
@@ -84,10 +84,10 @@ This function also returns a  `should_apply_gradients`  bool. If False,gradients
 
 When a DistributionStrategy is used, this function may only be called in across-replica context.
 
-#### Args:
+#### 参数：
 - **`grads`** : A nested structure of unscaled gradients, each which is thegradient of the loss with respect to a weight. The gradients should havealready been divided by the loss scale being before passed to thisfunction. 'None' gradients are accepted, and are ignored.
 
 
-#### Returns:
+#### 返回：
 - **`update_op`** : In eager mode, None. In graph mode, an op to update the lossscale.
 - **`should_apply_gradients`** : Either a bool or a scalar boolean tensor. IfFalse, the caller should skip applying  `grads`  to the variables thisstep.

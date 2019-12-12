@@ -1,16 +1,16 @@
 Element-wise square.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.square` ](/api_docs/python/tf/keras/backend/square), [ `tf.compat.v2.keras.backend.square` ](/api_docs/python/tf/keras/backend/square)
+**别名** : [ `tf.compat.v1.keras.backend.square` ](/api_docs/python/tf/keras/backend/square), [ `tf.compat.v2.keras.backend.square` ](/api_docs/python/tf/keras/backend/square)
 
 ```
  tf.keras.backend.square(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

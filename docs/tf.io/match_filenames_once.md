@@ -1,6 +1,6 @@
 Save the list of files matching pattern, so it is only computed once.
 
-**Aliases** : [ `tf.compat.v1.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once), [ `tf.compat.v1.train.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once), [ `tf.compat.v2.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once)
+**别名** : [ `tf.compat.v1.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once), [ `tf.compat.v1.train.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once), [ `tf.compat.v2.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once)
 
 ```
  tf.io.match_filenames_once(
@@ -10,13 +10,13 @@ Save the list of files matching pattern, so it is only computed once.
  
 ```
 
-NOTE: The order of the files returned is deterministic.
+注意：返回文件的顺序是确定的。
 
-#### Args:
+#### 参数：
 - **`pattern`** : A file pattern (glob), or 1D tensor of file patterns.
 - **`name`** : A name for the operations (optional).
 
 
-#### Returns:
-A variable that is initialized to the list of files matching the pattern(s).
+#### 返回：
+初始化为与模式匹配的文件列表的变量。
 

@@ -1,7 +1,7 @@
 
 
 ## Class  `CurrentModuleFilter` 
-Filters stack frames from the module where this is used (best effort).
+从使用此功能的模块中筛选堆栈帧（尽最大努力）。
 
 Inherits From: [ `StackTraceFilter` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceFilter)
 
@@ -15,7 +15,7 @@ Inherits From: [ `StackTraceFilter` ](https://tensorflow.google.cn/api_docs/pyth
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

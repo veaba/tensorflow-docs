@@ -1,11 +1,11 @@
 
 
 ## Class  `SequenceExample` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.SequenceExample` ](/api_docs/python/tf/train/SequenceExample), [ `tf.compat.v2.train.SequenceExample` ](/api_docs/python/tf/train/SequenceExample)
+**别名** : [ `tf.compat.v1.train.SequenceExample` ](/api_docs/python/tf/train/SequenceExample), [ `tf.compat.v2.train.SequenceExample` ](/api_docs/python/tf/train/SequenceExample)
 
-## Properties
+## 属性
 
 
 ###  `context` 

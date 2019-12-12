@@ -3,10 +3,10 @@
 ## Class  `Profiler` 
 TensorFlow multi-step profiler.
 
-https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/README.md
+https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/readme.md
 
 ```
- Typical use case:
+典型用例：
   # Currently we are only allowed to create 1 profiler per process.
   profiler = Profiler(sess.graph)
 
@@ -51,14 +51,14 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/RE
  
 ```
 
-Constructor.
+构造器。
 
-#### Args:
+#### 参数：
 - **`graph`** : tf.Graph. If None and eager execution is not enabled, usedefault graph.
 - **`op_log`** : optional. tensorflow::tfprof::OpLogProto proto. Used to defineextra op types.
 
 
-## Methods
+## 方法
 
 
 ###  `add_step` 
@@ -72,9 +72,9 @@ Constructor.
  
 ```
 
-Add statistics of a step.
+添加步骤的统计信息。
 
-#### Args:
+#### 参数：
 - **`step`** : int, An id used to group one or more different  `run_meta`  together.When profiling with the profile_xxx APIs, user can use the  `step` id in the  `options`  to profile these  `run_meta`  together.
 - **`run_meta`** : RunMetadata proto that contains statistics of a session run.
 
@@ -87,14 +87,14 @@ Add statistics of a step.
  
 ```
 
-Automatically detect problems and generate reports.
+自动检测问题并生成报告。
 
-#### Args:
+#### 参数：
 - **`options`** : A dict of options. See ALL_ADVICE example above.
 
 
-#### Returns:
-A Advise proto that conains the reports from all checkers.
+#### 返回：
+一个通知原型，它包含所有检查者的报告。
 
 ###  `profile_graph` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L262-L277)
@@ -106,12 +106,12 @@ A Advise proto that conains the reports from all checkers.
 
 Profile the statistics of graph nodes, organized by dataflow graph.
 
-#### Args:
+#### 参数：
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
 
 
-#### Returns:
-a GraphNodeProto that records the results.
+#### 返回：
+记录结果的GraphnodeProto。
 
 ###  `profile_name_scope` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L245-L260)
@@ -123,12 +123,12 @@ a GraphNodeProto that records the results.
 
 Profile the statistics of graph nodes, organized by name scope.
 
-#### Args:
+#### 参数：
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
 
 
-#### Returns:
-a GraphNodeProto that records the results.
+#### 返回：
+记录结果的GraphnodeProto。
 
 ###  `profile_operations` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L228-L243)
@@ -140,12 +140,12 @@ a GraphNodeProto that records the results.
 
 Profile the statistics of the Operation types (e.g. MatMul, Conv2D).
 
-#### Args:
+#### 参数：
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
 
 
-#### Returns:
-a MultiGraphNodeProto that records the results.
+#### 返回：
+记录结果的多重图形模型。
 
 ###  `profile_python` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L207-L226)
@@ -155,16 +155,16 @@ a MultiGraphNodeProto that records the results.
  
 ```
 
-Profile the statistics of the Python codes.
+分析python代码的统计信息。
 
 By default, it shows the call stack from root. To avoid  redundant output, you may use options to filter as below    options['show_name_regexes'] = ['.*my_code.py.*']
 
-#### Args:
+#### 参数：
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
 
 
-#### Returns:
-a MultiGraphNodeProto that records the results.
+#### 返回：
+记录结果的多重图形模型。
 
 ###  `serialize_to_string` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L293-L302)
@@ -174,10 +174,10 @@ a MultiGraphNodeProto that records the results.
  
 ```
 
-Serialize the ProfileProto to a binary string.
+将profileproto序列化为二进制字符串。
 
 Users can write it to file for offline analysis by tfprof commandline  or graphical interface.
 
-#### Returns:
-ProfileProto binary string.
+#### 返回：
+profileproto二进制字符串。
 

@@ -1,6 +1,6 @@
-Multiply SparseTensor (of rank 2) "A" by dense matrix "B".
+将Sparsetensor（秩2）“A”乘以稠密矩阵“B”。
 
-**Aliases** : [ `tf.compat.v1.sparse.matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v1.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v1.sparse_tensor_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v2.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
+**别名** : [ `tf.compat.v1.sparse.matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v1.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v1.sparse_tensor_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v2.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
 
 ```
  tf.sparse.sparse_dense_matmul(
@@ -65,10 +65,10 @@ This operation tends to perform well when  `A`  is more sparse, if the columnsiz
 
 Below is a rough speed comparison between  `sparse_tensor_dense_matmul` ,labeled 'sparse', and  `matmul` (a_is_sparse=True), labeled 'dense'.  Forpurposes of the comparison, the time spent converting from a  `SparseTensor`  toa dense  `Tensor`  is not included, so it is overly conservative with respect tothe time ratio.
 
-#### Benchmark system:
+#### 基准系统：
 CPU: Intel Ivybridge with HyperThreading (6 cores) dL1:32KB dL2:256KB dL3:12MBGPU: NVidia Tesla k40c
 
-#### Compiled with:
+#### 编制单位：
  `-c opt --config=cuda --copt=-mavx` 
 
 ```
@@ -176,7 +176,7 @@ B dense [k, n]
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_a`** : SparseTensor A, of rank 2.
 - **`b`** : A dense Matrix with the same dtype as sp_a.
 - **`adjoint_a`** : Use the adjoint of A in the matrix multiply.  If A is complex,this is transpose(conj(A)).  Otherwise it's transpose(A).
@@ -184,6 +184,6 @@ B dense [k, n]
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
+#### 返回：
 A dense matrix (pseudo-code in dense np.matrix notation):   `A = A.H if adjoint_a else A`    `B = B.H if adjoint_b else B`    `return A*B` 
 

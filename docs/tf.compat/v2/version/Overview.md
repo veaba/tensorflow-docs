@@ -1,6 +1,6 @@
-Public API for tf.version namespace.
+tf.version命名空间的公共API。
 
-## Other Members
+## 其他成员
 -  `COMPILER_VERSION = '7.3.1 20180303'`  []()
 -  `GIT_VERSION = 'v2.0.0-rc2-26-g64c3d38'`  []()
 -  `GRAPH_DEF_VERSION = 119`  []()

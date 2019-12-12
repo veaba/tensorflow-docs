@@ -1,6 +1,6 @@
 Creates a grad-pass-through op with the forward behavior provided in f.
 
-**Aliases** : [ `tf.compat.v1.grad_pass_through` ](/api_docs/python/tf/grad_pass_through), [ `tf.compat.v2.grad_pass_through` ](/api_docs/python/tf/grad_pass_through)
+**别名** : [ `tf.compat.v1.grad_pass_through` ](/api_docs/python/tf/grad_pass_through), [ `tf.compat.v2.grad_pass_through` ](/api_docs/python/tf/grad_pass_through)
 
 ```
  tf.grad_pass_through(f)
@@ -34,10 +34,10 @@ grads = tape.gradient(mavg_x, x) # grads will evaluate to 1.0
  
 ```
 
-#### Args:
+#### 参数：
 - **`f`** : function  `f(*x)`  that returns a  `Tensor`  or nested structure of  `Tensor` outputs.
 
 
-#### Returns:
+#### 返回：
 A function  `h(x)`  which returns the same values as  `f(x)`  and whosegradients are the same as those of an identity function.
 

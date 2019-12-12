@@ -1,9 +1,9 @@
 
 
 ## Class  `Reducer` 
-A reducer is used for reducing a set of elements.
+减速机用于减少一组元素。
 
-**Aliases** : [ `tf.compat.v1.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer), [ `tf.compat.v2.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer)
+**别名** : [ `tf.compat.v1.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer), [ `tf.compat.v2.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer)
 
 A reducer is represented as a tuple of the three functions:  1) initialization function: key => initial state  2) reduce function: (old state, input) => new state  3) finalization function: state => result
 
@@ -21,7 +21,7 @@ A reducer is represented as a tuple of the three functions:  1) initialization f
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `finalize_func` 

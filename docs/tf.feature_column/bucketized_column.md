@@ -1,6 +1,6 @@
-Represents discretized dense input.
+表示离散化的密集输入。
 
-**Aliases** : [ `tf.compat.v1.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column), [ `tf.compat.v2.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column)
+**别名** : [ `tf.compat.v1.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column), [ `tf.compat.v2.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column)
 
 ```
  tf.feature_column.bucketized_column(
@@ -10,7 +10,7 @@ Represents discretized dense input.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
 Buckets include the left boundary, and exclude the right boundary. Namely, `boundaries=[0., 1., 2.]`  generates buckets  `(-inf, 0.)` ,  `[0., 1.)` , `[1., 2.)` , and  `[2., +inf)` .
 
@@ -24,7 +24,7 @@ input tensor = [[-5, 10000]
  
 ```
 
-then the output will be
+然后输出将是
 
 ```
  output = [[0, 3]
@@ -33,7 +33,7 @@ then the output will be
  
 ```
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -64,14 +64,14 @@ linear_prediction = linear_model(features, columns)
  
 ```
 
-#### Args:
+#### 参数：
 - **`source_column`** : A one-dimensional dense column which is generated with `numeric_column` .
 - **`boundaries`** : A sorted list or tuple of floats specifying the boundaries.
 
 
-#### Returns:
+#### 返回：
 A  `BucketizedColumn` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `source_column`  is not a numeric column, or if it is notone-dimensional.
 - **`ValueError`** : If  `boundaries`  is not a sorted list or tuple.

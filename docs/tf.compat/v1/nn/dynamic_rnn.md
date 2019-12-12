@@ -8,7 +8,7 @@ Creates a recurrent neural network specified by RNNCell  `cell` . (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Please use [ `keras.layers.RNN(cell)` ](/api_docs/python/tf/keras/layers/RNN), which is equivalent to this API
 Performs fully dynamic unrolling of  `inputs` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -43,7 +43,7 @@ outputs, state = tf.compat.v1.nn.dynamic_rnn(cell=multi_rnn_cell,
  
 ```
 
-#### Args:
+#### 参数：
 - **`cell`** : An instance of RNNCell.
 - **`inputs`** : The RNN inputs.If  `time_major == False`  (default), this must be a  `Tensor`  of shape: `[batch_size, max_time, ...]` , or a nested tuple of such elements.If  `time_major == True` , this must be a  `Tensor`  of shape:  `[max_time,batch_size, ...]` , or a nested tuple of such elements. This may also bea (possibly nested) tuple of Tensors satisfying this property.  Thefirst two dimensions must match across all the inputs, but otherwise theranks and other shape components may differ. In this case, input to `cell`  at each time-step will replicate the structure of these tuples,except for the time dimension (from which the time is taken). The inputto  `cell`  at each time step will be a  `Tensor`  or (possibly nested)tuple of Tensors each with dimensions  `[batch_size, ...]` .
 - **`sequence_length`** : (optional) An int32/int64 vector sized  `[batch_size]` . Usedto copy-through state and zero-out outputs when past a batch element'ssequence length.  This parameter enables users to extract the last validstate and properly padded outputs, so it is provided for correctness.
@@ -55,7 +55,7 @@ outputs, state = tf.compat.v1.nn.dynamic_rnn(cell=multi_rnn_cell,
 - **`scope`** : VariableScope for the created subgraph; defaults to "rnn".
 
 
-#### Returns:
+#### 返回：
 A pair (outputs, state) where:
 
 - **`outputs`** : The RNN output  `Tensor` .
@@ -70,6 +70,6 @@ Note, if  `cell.output_size`  is a (possibly nested) tuple of integersor  `Tenso
 - **`state`** : The final state.  If  `cell.state_size`  is an int, thiswill be shaped  `[batch_size, cell.state_size]` .  If it is a `TensorShape` , this will be shaped  `[batch_size] + cell.state_size` .If it is a (possibly nested) tuple of ints or  `TensorShape` , this willbe a tuple having the corresponding shapes. If cells are  `LSTMCells`  `state`  will be a tuple containing a  `LSTMStateTuple`  for each cell.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `cell`  is not an instance of RNNCell.
 - **`ValueError`** : If inputs is None or an empty list.

@@ -1,6 +1,6 @@
-Creates a tensor filled with a scalar value.
+创建填充标量值的张量。
 
-**Aliases** : [ `tf.compat.v1.fill` ](/api_docs/python/tf/fill), [ `tf.compat.v2.fill` ](/api_docs/python/tf/fill)
+**别名** : [ `tf.compat.v1.fill` ](/api_docs/python/tf/fill), [ `tf.compat.v2.fill` ](/api_docs/python/tf/fill)
 
 ```
  tf.fill(
@@ -11,16 +11,16 @@ Creates a tensor filled with a scalar value.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Unicode strings](https://tensorflow.google.cn/tutorials/load_data/unicode)
 This operation creates a tensor of shape  `dims`  and fills it with  `value` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -37,12 +37,12 @@ fill([2, 3], 9) ==> [[9, 9, 9]
 - Because [ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill) evaluates at graph runtime, it supports dynamic shapesbased on other runtime Tensors, unlike [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant).
 
 
-#### Args:
+#### 参数：
 - **`dims`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` . 1-D.Represents the shape of the output tensor.
 - **`value`** : A  `Tensor` . 0-D (scalar). Value to fill the returned tensor.@compatibility(numpy) Equivalent to np.full @end_compatibility
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `value` .
 

@@ -1,13 +1,13 @@
 
 
 ## Class  `Subtract` 
-Layer that subtracts two inputs.
+减去两个输入的层。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract), [ `tf.compat.v2.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
+**别名** : [ `tf.compat.v1.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract), [ `tf.compat.v2.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
 
 It takes as input a list of tensors of size 2,both of the same shape, and returns a single tensor, (inputs[0] - inputs[1]),also of the same shape.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -35,7 +35,7 @@ It takes as input a list of tensors of size 2,both of the same shape, and return
 
 Functional interface to the  `Subtract`  layer.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract), [ `tf.compat.v2.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
+**别名** : [ `tf.compat.v1.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract), [ `tf.compat.v2.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
 
 ```
  tf.keras.layers.subtract(
@@ -45,15 +45,15 @@ Functional interface to the  `Subtract`  layer.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : A list of input tensors (exactly 2).
 - **`**kwargs`** : Standard layer keyword arguments.
 
 
-#### Returns:
+#### 返回：
 A tensor, the difference of the inputs.
 
-#### Examples:
+#### 示例：
 
 
 ```

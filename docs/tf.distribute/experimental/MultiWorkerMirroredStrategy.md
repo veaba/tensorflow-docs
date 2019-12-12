@@ -1,15 +1,15 @@
 
 
 ## Class  `MultiWorkerMirroredStrategy` 
-A distribution strategy for synchronous training on multiple workers.
+多人同步培训的分配策略。
 
 Inherits From: [ `Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy)
 
-### Used in the guide:
+### 在指南中使用：
 - [Distributed training with TensorFlow](https://tensorflow.google.cn/guide/distributed_training)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
 - [Multi-worker training with Keras](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_keras)
 This strategy implements synchronous distributed training across multipleworkers, each with potentially multiple GPUs. Similar to[ `tf.distribute.MirroredStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/MirroredStrategy), it creates copies of all variables in themodel on each device across all workers.
@@ -30,22 +30,22 @@ It supports both eager mode and graph mode. However, for eager mode, it has tose
  
 ```
 
-Creates the strategy.
+创建策略。
 
-#### Args:
+#### 参数：
 - **`communication`** : optional Enum of type[ `distribute.experimental.CollectiveCommunication` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental/CollectiveCommunication).  This provides a wayfor the user to override the choice of collective op communication.Possible values include  `AUTO` ,  `RING` , and  `NCCL` .
 
 
-## Properties
+## 属性
 
 
 ###  `extended` 
 [ `tf.distribute.StrategyExtended` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/StrategyExtended) with additional methods.
 
 ###  `num_replicas_in_sync` 
-Returns number of replicas over which gradients are aggregated.
+返回聚合渐变的副本数。
 
-## Methods
+## 方法
 
 
 ###  `experimental_distribute_dataset` 
@@ -58,9 +58,9 @@ Returns number of replicas over which gradients are aggregated.
 
 Distributes a tf.data.Dataset instance provided via  `dataset` .
 
-The returned distributed dataset can be iterated over similar to howregular datasets can.NOTE: Currently, the user cannot add any more transformations to adistributed dataset.
+The returned distributed dataset can be iterated over similar to howregular datasets can.注意：Currently, the user cannot add any more transformations to adistributed dataset.
 
-The following is an example:
+下面是一个例子：
 
 ```
  strategy = tf.distribute.MirroredStrategy()
@@ -90,11 +90,11 @@ Within each worker, we will also split the data among all the workerdevices (if 
 
 If the above batch splitting and dataset sharding logic is undesirable,please use  `experimental_distribute_datasets_from_function`  instead, whichdoes not do any automatic splitting or sharding.
 
-#### Args:
+#### 参数：
 - **`dataset`** : [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) that will be sharded across all replicas usingthe rules stated above.
 
 
-#### Returns:
+#### 返回：
 A "distributed  `Dataset` ", which acts like a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) exceptit produces "per-replica" values.
 
 ###  `experimental_distribute_datasets_from_function` 
@@ -129,11 +129,11 @@ for batch in inputs:
 
 IMPORTANT: The [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) returned by  `dataset_fn`  should have aper-replica batch size, unlike  `experimental_distribute_dataset` , which usesthe global batch size.  This may be computed using `input_context.get_per_replica_batch_size` .
 
-#### Args:
+#### 参数：
 - **`dataset_fn`** : A function taking a [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance andreturning a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
 
 
-#### Returns:
+#### 返回：
 A "distributed  `Dataset` ", which acts like a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) exceptit produces "per-replica" values.
 
 ###  `experimental_local_results` 
@@ -150,11 +150,11 @@ Returns the list of all local per-replica values contained in  `value` .
 **Note:**  This only returns values on the worker initiated by this client.When using a [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) like[ `tf.distribute.experimental.MultiWorkerMirroredStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental/MultiWorkerMirroredStrategy), each workerwill be its own client, and this function will only return valuescomputed on that worker.
 
 
-#### Args:
+#### 参数：
 - **`value`** : A value returned by  `experimental_run()` ,  `experimental_run_v2()` , `extended.call_for_each_replica()` , or a variable created in  `scope` .
 
 
-#### Returns:
+#### 返回：
 A tuple of values contained in  `value` . If  `value`  represents a singlevalue, this returns  `(value,).` 
 
 ###  `experimental_make_numpy_dataset` 
@@ -171,7 +171,7 @@ This avoids adding  `numpy_input`  as a large constant in the graph,and copies t
 
 Note that you will likely need to use  `experimental_distribute_dataset` with the returned dataset to further distribute it with the strategy.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -181,11 +181,11 @@ dist_dataset = strategy.experimental_distribute_dataset(dataset)
  
 ```
 
-#### Args:
+#### 参数：
 - **`numpy_input`** : A nest of NumPy input arrays that will be converted into adataset. Note that lists of Numpy arrays are stacked, as that is normal[ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) behavior.
 
 
-#### Returns:
+#### 返回：
 A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) representing  `numpy_input` .
 
 ###  `experimental_run_v2` 
@@ -210,13 +210,13 @@ All arguments in  `args`  or  `kwargs`  should either be nest of tensors orper-r
 
 IMPORTANT: Depending on the implementation of [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) andwhether eager execution is enabled,  `fn`  may be called one or more times (once for each replica).
 
-#### Args:
+#### 参数：
 - **`fn`** : The function to run. The output must be a [ `tf.nest` ](https://tensorflow.google.cn/api_docs/python/tf/nest) of  `Tensor` s.
 - **`args`** : (Optional) Positional arguments to  `fn` .
 - **`kwargs`** : (Optional) Keyword arguments to  `fn` .
 
 
-#### Returns:
+#### 返回：
 Merged return value of  `fn`  across replicas. The structure of the returnvalue is the same as the return value from  `fn` . Each element in thestructure can either be "per-replica"  `Tensor`  objects or  `Tensor` s(for example, if running on a single replica).
 
 ###  `reduce` 
@@ -237,13 +237,13 @@ Given a per-replica value returned by  `experimental_run_v2` , say aper-example 
 
 If there is a last partial batch, you will need to specify an axis sothat the resulting shape is consistent across replicas. So if the lastbatch has size 6 and it is divided into [0, 1, 2, 3] and [4, 5], youwould get a shape mismatch unless you specify  `axis=0` . If you specify[ `tf.distribute.ReduceOp.MEAN` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp#MEAN), using  `axis=0`  will use the correctdenominator of 6. Contrast this with computing  `reduce_mean`  to get ascalar value on each replica and this function to average those means,which will weigh some values  `1/8`  and others  `1/4` .
 
-#### Args:
+#### 参数：
 - **`reduce_op`** : A [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) value specifying how values shouldbe combined.
 - **`value`** : A "per replica" value, e.g. returned by  `experimental_run_v2`  tobe combined into a single tensor.
 - **`axis`** : Specifies the dimension to reduce along within eachreplica's tensor. Should typically be set to the batch dimension, or `None`  to only reduce across replicas (e.g. if the tensor has no batchdimension).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` .
 
 ###  `scope` 
@@ -254,12 +254,12 @@ A  `Tensor` .
  
 ```
 
-Returns a context manager selecting this Strategy as current.
+返回选择此策略为当前策略的上下文管理器。
 
 Inside a  `with strategy.scope():`  code block, this threadwill use a variable creator set by  `strategy` , and willenter its "cross-replica context".
 
 In  `MultiWorkerMirroredStrategy` , all variables created inside`strategy.scope() will be mirrored on all replicas of each worker.Moreover, it also sets a default device scope so that ops withoutspecified devices will end up on the correct worker.
 
-#### Returns:
-A context manager to use for creating variables with this strategy.
+#### 返回：
+用于使用此策略创建变量的上下文管理器。
 

@@ -1,6 +1,6 @@
-Scaled Exponential Linear Unit (SELU).
+标度指数线性单位（selu）。
 
-**Aliases** : [ `tf.compat.v1.keras.activations.selu` ](/api_docs/python/tf/keras/activations/selu), [ `tf.compat.v2.keras.activations.selu` ](/api_docs/python/tf/keras/activations/selu)
+**别名** : [ `tf.compat.v1.keras.activations.selu` ](/api_docs/python/tf/keras/activations/selu), [ `tf.compat.v2.keras.activations.selu` ](/api_docs/python/tf/keras/activations/selu)
 
 ```
  tf.keras.activations.selu(x)
@@ -13,7 +13,7 @@ The values of  `alpha`  and  `scale`  arechosen so that the mean and variance of
 
 ![](https://cdn-images-1.medium.com/max/1600/1*m0e8lZU_Zrkh4ESfQkY2Pw.png)(Courtesy: Blog on Towards DataScience athttps://towardsdatascience.com/selu-make-fnns-great-again-snn-8d61526802a9)
 
-#### Example Usage:
+#### 示例用法：
 
 
 ```
@@ -27,11 +27,11 @@ model.add(Dense(n_classes, activation='softmax'))
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable to compute the activation function for.
 
 
-#### Returns:
+#### 返回：
 The scaled exponential unit activation:  `scale * elu(x, alpha)` .
 
 # Note
@@ -45,6 +45,6 @@ The scaled exponential unit activation:  `scale * elu(x, alpha)` .
  
 ```
 
-#### References:
+#### 参考文献：
 [Self-Normalizing Neural Networks (Klambauer et al, 2017)](https://arxiv.org/abs/1706.02515)
 

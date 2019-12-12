@@ -1,6 +1,6 @@
 Stacks a list of rank- `R`  tensors into one rank- `(R+1)`  tensor in parallel.
 
-**Aliases** : [ `tf.compat.v1.parallel_stack` ](/api_docs/python/tf/parallel_stack), [ `tf.compat.v2.parallel_stack` ](/api_docs/python/tf/parallel_stack)
+**别名** : [ `tf.compat.v1.parallel_stack` ](/api_docs/python/tf/parallel_stack), [ `tf.compat.v2.parallel_stack` ](/api_docs/python/tf/parallel_stack)
 
 ```
  tf.parallel_stack(
@@ -10,11 +10,11 @@ Stacks a list of rank- `R`  tensors into one rank- `(R+1)`  tensor in parallel.
  
 ```
 
-Requires that the shape of inputs be known at graph construction time.
+要求在图构造时知道输入的形状。
 
 Packs the list of tensors in  `values`  into a tensor with rank one higher thaneach tensor in  `values` , by packing them along the first dimension.Given a list of length  `N`  of tensors of shape  `(A, B, C)` ; the  `output` tensor will have the shape  `(N, A, B, C)` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -38,10 +38,10 @@ This is the opposite of unstack.  The numpy equivalent is
  
 ```
 
-#### Args:
+#### 参数：
 - **`values`** : A list of  `Tensor`  objects with the same shape and type.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`output`** : A stacked  `Tensor`  with the same type as  `values` .

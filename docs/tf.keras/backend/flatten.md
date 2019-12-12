@@ -1,19 +1,19 @@
-Flatten a tensor.
+使张量变平。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten), [ `tf.compat.v2.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten)
+**别名** : [ `tf.compat.v1.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten), [ `tf.compat.v2.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten)
 
 ```
  tf.keras.backend.flatten(x) 
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable.
 
 
-#### Returns:
+#### 返回：
 A tensor, reshaped into 1-D
 
-#### Example:
+#### 示例：
 
 
 ```

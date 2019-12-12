@@ -1,11 +1,11 @@
 
 
 ## Class  `TFRecordWriter` 
-Writes data to a TFRecord file.
+将数据写入tfrecord文件。
 
-**Aliases** : [ `tf.compat.v1.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter), [ `tf.compat.v2.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter)
+**别名** : [ `tf.compat.v1.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter), [ `tf.compat.v2.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
 To write a  `dataset`  to a single TFRecord file:
 
@@ -47,7 +47,7 @@ dataset = dataset.apply(tf.data.experimental.group_by_window(
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `write` 
@@ -60,10 +60,10 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Returns a [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) to write a dataset to a file.
 
-#### Args:
+#### 参数：
 - **`dataset`** : a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) whose elements are to be written to a file
 
 
-#### Returns:
+#### 返回：
 A [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) that, when run, writes contents of  `dataset`  to a file.
 

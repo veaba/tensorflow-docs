@@ -1,4 +1,4 @@
-Computes the max of elements across dimensions of a SparseTensor.
+计算Sparsetensor维度上元素的最大值。
 
 ```
  tf.sparse.reduce_max(    sp_input,    axis=None,    keepdims=None,    output_is_sparse=False,    name=None) 
@@ -14,7 +14,7 @@ If  `axis`  has no entries, all dimensions are reduced, and a tensorwith a singl
 
 The values not defined in  `sp_input`  don't participate in the reduce max,as opposed to be implicitly assumed 0 -- hence it can return negative valuesfor sparse  `axis` . But, in case there are no values in `axis` , it will reduce to 0. See second example below.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -34,7 +34,7 @@ tf.sparse.reduce_max(x, 1) ==> [-7, 4, 0]
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The SparseTensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce; list or scalar. If  `None`  (thedefault), reduces all dimensions.
 - **`keepdims`** : If true, retain reduced dimensions with length 1.
@@ -42,6 +42,6 @@ tf.sparse.reduce_max(x, 1) ==> [-7, 4, 0]
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The reduced Tensor or the reduced SparseTensor if  `output_is_sparse`  isTrue.
 

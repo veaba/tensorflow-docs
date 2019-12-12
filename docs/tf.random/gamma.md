@@ -1,6 +1,6 @@
 Draws  `shape`  samples from each of the given Gamma distribution(s).
 
-**Aliases** : [ `tf.compat.v1.random.gamma` ](/api_docs/python/tf/random/gamma), [ `tf.compat.v1.random_gamma` ](/api_docs/python/tf/random/gamma), [ `tf.compat.v2.random.gamma` ](/api_docs/python/tf/random/gamma)
+**别名** : [ `tf.compat.v1.random.gamma` ](/api_docs/python/tf/random/gamma), [ `tf.compat.v1.random_gamma` ](/api_docs/python/tf/random/gamma), [ `tf.compat.v2.random.gamma` ](/api_docs/python/tf/random/gamma)
 
 ```
  tf.random.gamma(
@@ -22,7 +22,7 @@ The samples are differentiable w.r.t. alpha and beta.The derivatives are compute
 
 [Michael Figurnov, Shakir Mohamed, Andriy Mnih.Implicit Reparameterization Gradients, 2018](https://arxiv.org/abs/1805.08498)
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -47,7 +47,7 @@ beta.shape == dloss_dbeta.shape  # True
  
 ```
 
-#### Args:
+#### 参数：
 - **`shape`** : A 1-D integer Tensor or Python array. The shape of the output samplesto be drawn per alpha/beta-parameterized distribution.
 - **`alpha`** : A Tensor or Python value or N-D array of type  `dtype` .  `alpha` provides the shape parameter(s) describing the gamma distribution(s) tosample. Must be broadcastable with  `beta` .
 - **`beta`** : A Tensor or Python value or N-D array of type  `dtype` . Defaults to 1. `beta`  provides the inverse scale parameter(s) of the gammadistribution(s) to sample. Must be broadcastable with  `alpha` .
@@ -56,5 +56,5 @@ beta.shape == dloss_dbeta.shape  # True
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 - **`samples`** : a  `Tensor`  of shape `tf.concat([shape, tf.shape(alpha + beta)], axis=0)`  with values of type `dtype` .

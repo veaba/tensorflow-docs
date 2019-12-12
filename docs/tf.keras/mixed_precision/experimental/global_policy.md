@@ -1,6 +1,6 @@
-Returns the global Policy.
+返回全局策略。
 
-**Aliases** : [ `tf.compat.v1.keras.mixed_precision.experimental.global_policy` ](/api_docs/python/tf/keras/mixed_precision/experimental/global_policy), [ `tf.compat.v2.keras.mixed_precision.experimental.global_policy` ](/api_docs/python/tf/keras/mixed_precision/experimental/global_policy)
+**别名** : [ `tf.compat.v1.keras.mixed_precision.experimental.global_policy` ](/api_docs/python/tf/keras/mixed_precision/experimental/global_policy), [ `tf.compat.v2.keras.mixed_precision.experimental.global_policy` ](/api_docs/python/tf/keras/mixed_precision/experimental/global_policy)
 
 ```
  tf.keras.mixed_precision.experimental.global_policy()
@@ -11,6 +11,6 @@ The global policy is the default policy used for layers, if no policy ispassed t
 
 See [ `keras.mixed_precision.experimental.Policy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/mixed_precision/experimental/Policy) for more information.
 
-#### Returns:
-The global Policy.
+#### 返回：
+全球政策。
 

@@ -1,7 +1,7 @@
 
 
 ## Class  `Dimension` 
-Represents the value of one dimension in a TensorShape.
+表示张量形状中一维的值。
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/tensor_shape.py#L184-L198)
@@ -11,15 +11,15 @@ Represents the value of one dimension in a TensorShape.
  
 ```
 
-Creates a new Dimension with the given value.
+创建具有给定值的新维度。
 
-## Properties
+## 属性
 
 
 ###  `value` 
 The value of this dimension, or None if it is unknown.
 
-## Methods
+## 方法
 
 
 ###  `__add__` 
@@ -32,7 +32,7 @@ The value of this dimension, or None if it is unknown.
 
 Returns the sum of  `self`  and  `other` .
 
-Dimensions are summed as follows:
+尺寸汇总如下：
 
 ```
  tf.compat.v1.Dimension(m)    + tf.compat.v1.Dimension(n)     ==
@@ -46,11 +46,11 @@ tf.compat.v1.Dimension(None)
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is the sum of  `self`  and  `other` .
 
 ###  `__div__` 
@@ -65,11 +65,11 @@ DEPRECATED: Use  `__floordiv__`  via  `x // y`  instead.
 
 This function exists only for backwards compatibility purposes; new codeshould use  `__floordiv__`  via the syntax  `x // y` .  Using  `x // y` communicates clearly that the result rounds down, and is forward compatibleto Python 3.
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `Dimension` .
 
 
-#### Returns:
+#### 返回：
 A  `Dimension`  whose value is the integer quotient of  `self`  and  `other` .
 
 ###  `__eq__` 
@@ -92,7 +92,7 @@ Returns true if  `other`  has the same known value as this Dimension.
 
 Returns the quotient of  `self`  and  `other`  rounded down.
 
-Dimensions are divided as follows:
+尺寸划分如下：
 
 ```
  tf.compat.v1.Dimension(m)    // tf.compat.v1.Dimension(n)     ==
@@ -106,11 +106,11 @@ tf.compat.v1.Dimension(None)
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A  `Dimension`  whose value is the integer quotient of  `self`  and  `other` .
 
 ###  `__ge__` 
@@ -123,7 +123,7 @@ A  `Dimension`  whose value is the integer quotient of  `self`  and  `other` .
 
 Returns True if  `self`  is known to be greater than or equal to  `other` .
 
-Dimensions are compared as follows:
+尺寸比较如下：
 
 ```
  (tf.compat.v1.Dimension(m)    >= tf.compat.v1.Dimension(n))    == (m >= n)
@@ -133,11 +133,11 @@ Dimensions are compared as follows:
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Returns:
+#### 返回：
 The value of  `self.value >= other.value`  if both are known, otherwiseNone.
 
 ###  `__gt__` 
@@ -150,7 +150,7 @@ The value of  `self.value >= other.value`  if both are known, otherwiseNone.
 
 Returns True if  `self`  is known to be greater than  `other` .
 
-Dimensions are compared as follows:
+尺寸比较如下：
 
 ```
  (tf.compat.v1.Dimension(m)    > tf.compat.v1.Dimension(n))    == (m > n)
@@ -160,11 +160,11 @@ Dimensions are compared as follows:
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Returns:
+#### 返回：
 The value of  `self.value > other.value`  if both are known, otherwiseNone.
 
 ###  `__le__` 
@@ -177,7 +177,7 @@ The value of  `self.value > other.value`  if both are known, otherwiseNone.
 
 Returns True if  `self`  is known to be less than or equal to  `other` .
 
-Dimensions are compared as follows:
+尺寸比较如下：
 
 ```
  (tf.compat.v1.Dimension(m)    <= tf.compat.v1.Dimension(n))    == (m <= n)
@@ -187,11 +187,11 @@ Dimensions are compared as follows:
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Returns:
+#### 返回：
 The value of  `self.value <= other.value`  if both are known, otherwiseNone.
 
 ###  `__lt__` 
@@ -204,7 +204,7 @@ The value of  `self.value <= other.value`  if both are known, otherwiseNone.
 
 Returns True if  `self`  is known to be less than  `other` .
 
-Dimensions are compared as follows:
+尺寸比较如下：
 
 ```
  (tf.compat.v1.Dimension(m)    < tf.compat.v1.Dimension(n))    == (m < n)
@@ -214,11 +214,11 @@ Dimensions are compared as follows:
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Returns:
+#### 返回：
 The value of  `self.value < other.value`  if both are known, otherwiseNone.
 
 ###  `__mod__` 
@@ -231,7 +231,7 @@ The value of  `self.value < other.value`  if both are known, otherwiseNone.
 
 Returns  `self`  modulo  `other` .
 
-Dimension moduli are computed as follows:
+尺寸模数计算如下：
 
 ```
  tf.compat.v1.Dimension(m)    % tf.compat.v1.Dimension(n)     ==
@@ -245,11 +245,11 @@ tf.compat.v1.Dimension(None)
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is  `self`  modulo  `other` .
 
 ###  `__mul__` 
@@ -262,7 +262,7 @@ A Dimension whose value is  `self`  modulo  `other` .
 
 Returns the product of  `self`  and  `other` .
 
-Dimensions are summed as follows:
+尺寸汇总如下：
 
 ```
  tf.compat.v1.Dimension(m)    * tf.compat.v1.Dimension(n)     ==
@@ -276,11 +276,11 @@ tf.compat.v1.Dimension(None)
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is the product of  `self`  and  `other` .
 
 ###  `__ne__` 
@@ -303,11 +303,11 @@ Returns true if  `other`  has a different known value from  `self` .
 
 Returns the sum of  `other`  and  `self` .
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is the sum of  `self`  and  `other` .
 
 ###  `__rdiv__` 
@@ -322,11 +322,11 @@ Use  `__floordiv__`  via  `x // y`  instead.
 
 This function exists only to have a better error message. Instead of: `TypeError: unsupported operand type(s) for /: 'int' and 'Dimension'` ,this function will explicitly call for usage of  `//`  instead.
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `Dimension` .
 
 
-#### Raises:
+#### 加薪：
 TypeError.
 
 ###  `__rfloordiv__` 
@@ -339,11 +339,11 @@ TypeError.
 
 Returns the quotient of  `other`  and  `self`  rounded down.
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A  `Dimension`  whose value is the integer quotient of  `self`  and  `other` .
 
 ###  `__rmod__` 
@@ -356,11 +356,11 @@ A  `Dimension`  whose value is the integer quotient of  `self`  and  `other` .
 
 Returns  `other`  modulo  `self` .
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is  `other`  modulo  `self` .
 
 ###  `__rmul__` 
@@ -373,11 +373,11 @@ A Dimension whose value is  `other`  modulo  `self` .
 
 Returns the product of  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is the product of  `self`  and  `other` .
 
 ###  `__rsub__` 
@@ -390,11 +390,11 @@ A Dimension whose value is the product of  `self`  and  `other` .
 
 Returns the subtraction of  `self`  from  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is the subtraction of  `self`  from  `other` .
 
 ###  `__rtruediv__` 
@@ -409,11 +409,11 @@ Use  `__floordiv__`  via  `x // y`  instead.
 
 This function exists only to have a better error message. Instead of: `TypeError: unsupported operand type(s) for /: 'int' and 'Dimension'` ,this function will explicitly call for usage of  `//`  instead.
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `Dimension` .
 
 
-#### Raises:
+#### 加薪：
 TypeError.
 
 ###  `__sub__` 
@@ -426,7 +426,7 @@ TypeError.
 
 Returns the subtraction of  `other`  from  `self` .
 
-Dimensions are subtracted as follows:
+尺寸减去如下：
 
 ```
  tf.compat.v1.Dimension(m)    - tf.compat.v1.Dimension(n)     ==
@@ -440,11 +440,11 @@ tf.compat.v1.Dimension(None)
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension, or a value accepted by  `as_dimension` .
 
 
-#### Returns:
+#### 返回：
 A Dimension whose value is the subtraction of  `other`  from  `self` .
 
 ###  `__truediv__` 
@@ -459,11 +459,11 @@ Use  `__floordiv__`  via  `x // y`  instead.
 
 This function exists only to have a better error message. Instead of: `TypeError: unsupported operand type(s) for /: 'Dimension' and 'int'` ,this function will explicitly call for usage of  `//`  instead.
 
-#### Args:
+#### 参数：
 - **`other`** : Another  `Dimension` .
 
 
-#### Raises:
+#### 加薪：
 TypeError.
 
 ###  `assert_is_compatible_with` 
@@ -476,11 +476,11 @@ TypeError.
 
 Raises an exception if  `other`  is not compatible with this Dimension.
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  and  `other`  are not compatible (seeis_compatible_with).
 
 
@@ -496,11 +496,11 @@ Returns true if  `other`  is compatible with this Dimension.
 
 Two known Dimensions are compatible if they have the same value.An unknown Dimension is compatible with all other Dimensions.
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Returns:
+#### 返回：
 True if this Dimension and  `other`  are compatible.
 
 ###  `merge_with` 
@@ -513,7 +513,7 @@ True if this Dimension and  `other`  are compatible.
 
 Returns a Dimension that combines the information in  `self`  and  `other` .
 
-Dimensions are combined as follows:
+尺寸组合如下：
 
 ```
  tf.compat.v1.Dimension(n)   .merge_with(tf.compat.v1.Dimension(n))     ==
@@ -530,12 +530,12 @@ tf.compat.v1.Dimension(n)   .merge_with(tf.compat.v1.Dimension(m))
  
 ```
 
-#### Args:
+#### 参数：
 - **`other`** : Another Dimension.
 
 
-#### Returns:
+#### 返回：
 A Dimension containing the combined information of  `self`  and `other` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `self`  and  `other`  are not compatible (seeis_compatible_with).

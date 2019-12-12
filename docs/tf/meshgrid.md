@@ -1,6 +1,6 @@
 Broadcasts parameters for evaluation on an N-D grid.
 
-**Aliases** : [ `tf.compat.v1.meshgrid` ](/api_docs/python/tf/meshgrid), [ `tf.compat.v2.meshgrid` ](/api_docs/python/tf/meshgrid)
+**别名** : [ `tf.compat.v1.meshgrid` ](/api_docs/python/tf/meshgrid), [ `tf.compat.v2.meshgrid` ](/api_docs/python/tf/meshgrid)
 
 ```
  tf.meshgrid(
@@ -12,10 +12,10 @@ Broadcasts parameters for evaluation on an N-D grid.
 
 Given N one-dimensional coordinate arrays  `*args` , returns a list  `outputs` of N-D coordinate arrays for evaluating expressions on an N-D grid.
 
-#### Notes:
+#### 注：
  `meshgrid`  supports cartesian ('xy') and matrix ('ij') indexing conventions.When the  `indexing`  argument is set to 'xy' (the default), the broadcastinginstructions for the first two dimensions are swapped.
 
-#### Examples:
+#### 示例：
 Calling  `X, Y = meshgrid(x, y)`  with the tensors
 
 ```
@@ -31,16 +31,16 @@ X, Y = tf.meshgrid(x, y)
  
 ```
 
-#### Args:
+#### 参数：
 - **`*args`** :  `Tensor` s with rank 1.
 - **`**kwargs`** :   - indexing: Either 'xy' or 'ij' (optional, default: 'xy').
     - name: A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`outputs`** : A list of N  `Tensor` s with rank N.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : When no keyword arguments (kwargs) are passed.
 - **`ValueError`** : When indexing keyword argument is not one of  `xy`  or  `ij` .

@@ -12,7 +12,7 @@ Fractional max pooling is slightly different than regular max pooling.  Inregula
 
 The sizes of the pooling regions are generated randomly but are fairlyuniform.  For example, let's look at the height dimension, and the constraintson the list of rows that will be pool boundaries.
 
-First we define the following:
+首先，我们定义如下：
 
 1. input_row_length : the number of rows from the input set
 2. output_row_length : which will be smaller than the input
@@ -27,7 +27,7 @@ Then, row_pooling_sequence should satisfy:
 4. length(row_pooling_sequence) = output_row_length+1
 For more details on fractional max pooling, see this paper: [Benjamin Graham,Fractional Max-Pooling](http://arxiv.org/abs/1412.6071)
 
-#### Args:
+#### 参数：
 - **`value`** : A  `Tensor` . 4-D with shape  `[batch, height, width, channels]` .
 - **`pooling_ratio`** : A list of  `floats`  that has length >= 4.  Pooling ratio foreach dimension of  `value` , currently only supports row and col dimensionand should be >= 1.0. For example, a valid pooling ratio looks like [1.0,1.44, 1.73, 1.0]. The first and last elements must be 1.0 because we don'tallow pooling on batch and channels dimensions.  1.44 and 1.73 are poolingratio on height and width dimensions respectively.
 - **`pseudo_random`** : An optional  `bool` .  Defaults to  `False` . When set to  `True` ,generates the pooling sequence in a pseudorandom fashion, otherwise, in arandom fashion. Check paper [Benjamin Graham, FractionalMax-Pooling](http://arxiv.org/abs/1412.6071) for difference betweenpseudorandom and random.
@@ -38,6 +38,6 @@ For more details on fractional max pooling, see this paper: [Benjamin Graham,Fra
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects ( `output` ,  `row_pooling_sequence` , `col_pooling_sequence` ).  output: Output  `Tensor`  after fractional max pooling.  Has the same type as     `value` .  row_pooling_sequence: A  `Tensor`  of type  `int64` .  col_pooling_sequence: A  `Tensor`  of type  `int64` .
 

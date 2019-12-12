@@ -1,11 +1,11 @@
-Sparse Tensor Representation.
+稀疏张量表示。
 
 See also [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-## Classes
+## Class 
 [ `class SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor): Represents a sparse tensor.
 
-## Functions
+## 功能
 [ `add(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/add): Adds two tensors, at least one of each is a  `SparseTensor` .
 
 [ `concat(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/concat): Concatenates a list of  `SparseTensor`  along the specified dimension. (deprecated arguments)

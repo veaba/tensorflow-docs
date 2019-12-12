@@ -3,9 +3,9 @@
 ## Class  `VarLenFeature` 
 Configuration for parsing a variable-length input feature.
 
-**Aliases** : [ `tf.compat.v1.VarLenFeature` ](/api_docs/python/tf/io/VarLenFeature), [ `tf.compat.v1.io.VarLenFeature` ](/api_docs/python/tf/io/VarLenFeature), [ `tf.compat.v2.io.VarLenFeature` ](/api_docs/python/tf/io/VarLenFeature)
+**别名** : [ `tf.compat.v1.VarLenFeature` ](/api_docs/python/tf/io/VarLenFeature), [ `tf.compat.v1.io.VarLenFeature` ](/api_docs/python/tf/io/VarLenFeature), [ `tf.compat.v2.io.VarLenFeature` ](/api_docs/python/tf/io/VarLenFeature)
 
-#### Fields:
+#### 字段：
 - **`dtype`** : Data type of input.
 
 
@@ -22,7 +22,7 @@ Configuration for parsing a variable-length input feature.
 
 Create new instance of VarLenFeature(dtype,)
 
-## Properties
+## 属性
 
 
 ###  `dtype` 

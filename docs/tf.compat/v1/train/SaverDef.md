@@ -1,9 +1,9 @@
 
 
 ## Class  `SaverDef` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `filename_tensor_name` 
@@ -27,7 +27,7 @@ A ProtocolMessage
 ###  `version` 
  `CheckpointFormatVersion version` 
 
-## Class Members
+## Class 成员
 -  `CheckpointFormatVersion`  []()
 -  `LEGACY = 0`  []()
 -  `V1 = 1`  []()

@@ -1,11 +1,11 @@
 [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) API for input pipelines.
 
-See [Importing Data](https://tensorflow.org/guide/datasets) for an overview.
+有关概述，请参见[导入数据]（https://tensorflow.org/guide/datasets）。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental) module: Experimental API for building input pipelines.
 
-## Classes
+## Class 
 [ `class Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset): Represents a potentially large set of elements.
 
 [ `class DatasetSpec` ](https://tensorflow.google.cn/api_docs/python/tf/data/DatasetSpec): Type specification for [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).

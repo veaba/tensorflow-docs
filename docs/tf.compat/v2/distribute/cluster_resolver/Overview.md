@@ -1,8 +1,8 @@
-Library imports for ClusterResolvers.
+用于ClusterResolver的库导入。
 
 This library contains all implementations of ClusterResolvers.ClusterResolvers are a way of specifying cluster information for distributedexecution. Built on top of existing  `ClusterSpec`  framework, ClusterResolversare a way for TensorFlow to communicate with various cluster managementsystems (e.g. GCE, AWS, etc...).
 
-## Classes
+## Class 
 [ `class ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver): Abstract class for all implementations of ClusterResolvers.
 
 [ `class GCEClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/GCEClusterResolver): ClusterResolver for Google Compute Engine.

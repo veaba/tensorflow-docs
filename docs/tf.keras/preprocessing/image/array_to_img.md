@@ -1,6 +1,6 @@
-Converts a 3D Numpy array to a PIL Image instance.
+将3d numpy数组转换为pil图像实例。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.array_to_img` ](/api_docs/python/tf/keras/preprocessing/image/array_to_img), [ `tf.compat.v2.keras.preprocessing.image.array_to_img` ](/api_docs/python/tf/keras/preprocessing/image/array_to_img)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.array_to_img` ](/api_docs/python/tf/keras/preprocessing/image/array_to_img), [ `tf.compat.v2.keras.preprocessing.image.array_to_img` ](/api_docs/python/tf/keras/preprocessing/image/array_to_img)
 
 ```
  tf.keras.preprocessing.image.array_to_img(
@@ -12,20 +12,20 @@ Converts a 3D Numpy array to a PIL Image instance.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Image segmentation](https://tensorflow.google.cn/tutorials/images/segmentation)
 
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input Numpy array.
 - **`data_format`** : Image data format.either "channels_first" or "channels_last".
 - **`scale`** : Whether to rescale image valuesto be within  `[0, 255]` .
 - **`dtype`** : Dtype to use.
 
 
-#### Returns:
-A PIL Image instance.
+#### 返回：
+PIL图像实例。
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : if PIL is not available.
 - **`ValueError`** : if invalid  `x`  or  `data_format`  is passed.

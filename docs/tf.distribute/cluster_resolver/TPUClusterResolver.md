@@ -1,11 +1,11 @@
 
 
 ## Class  `TPUClusterResolver` 
-Cluster Resolver for Google Cloud TPUs.
+google云tpu的集群解析器。
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.TPUClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.TPUClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.TPUClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.TPUClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver)
 
 This is an implementation of cluster resolvers for the Google Cloud TPUservice. As Cloud TPUs are in alpha, you will need to specify a API definitionfile for this to consume, in addition to a list of Cloud TPUs in your GoogleCloud Platform project.
 
@@ -29,11 +29,11 @@ TPUClusterResolver supports the following distinct environments:Google Compute E
  
 ```
 
-Creates a new TPUClusterResolver object.
+创建新的tpuclusterresolver对象。
 
 The ClusterResolver will then use the parameters to query the Cloud TPU APIsfor the IP addresses and ports of each Cloud TPU listed.
 
-#### Args:
+#### 参数：
 - **`tpu`** : A string corresponding to the TPU to use. If the string is an emptystring, the string 'local', or a string that begins with 'grpc://' or'/bns', then it is assumed to not correspond with a Cloud TPU and willinstead be passed as the session master and no ClusterSpec propagationwill be done. In the future, this may also support a list of stringswhen multiple Cloud TPUs are used.
 - **`zone`** : Zone where the TPUs are located. If omitted or empty, we will assumethat the zone of the TPU is the same as the zone of the GCE VM, which wewill try to discover from the GCE metadata service.
 - **`project`** : Name of the GCP project containing Cloud TPUs. If omitted orempty, we will try to discover the project name of the GCE VM from theGCE metadata service.
@@ -45,19 +45,19 @@ The ClusterResolver will then use the parameters to query the Cloud TPU APIsfor 
 - **`discovery_url`** : A URL template that points to the location of the discoveryservice. It should have two parameters {api} and {apiVersion} that whenfilled in produce an absolute URL to the discovery document for thatservice. The environment variable 'TPU_API_DISCOVERY_URL' will overridethis.
 
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : If the googleapiclient is not installed.
 - **`ValueError`** : If no TPUs are specified.
 - **`RuntimeError`** : If an empty TPU name is specified and this is running in aGoogle Cloud environment.
 
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -68,14 +68,14 @@ Returns the current environment which TensorFlow is running in.
  
 ```
 
-Returns a ClusterSpec object based on the latest TPU information.
+基于最新的TPU信息返回ClusterSpec对象。
 
 We retrieve the information from the GCE APIs every time this method iscalled.
 
-#### Returns:
+#### 返回：
 A ClusterSpec containing host information returned from Cloud TPUs,or None.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If the provided TPU is not healthy.
 
 
@@ -107,22 +107,22 @@ A ClusterSpec containing host information returned from Cloud TPUs,or None.
  
 ```
 
-Get the Master string to be used for the session.
+获取用于会话的主字符串。
 
 In the normal case, this returns the grpc path (grpc://1.2.3.4:8470) offirst instance in the ClusterSpec returned by the cluster_spec function.
 
 If a non-TPU name is used when constructing a TPUClusterResolver, that willbe returned instead (e.g. If the tpus argument's value when constructingthis TPUClusterResolver was 'grpc://10.240.1.2:8470','grpc://10.240.1.2:8470' will be returned).
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional, string) The type of the TensorFlow task of themaster.
 - **`task_id`** : (Optional, integer) The index of the TensorFlow task of themaster.
 - **`rpc_layer`** : (Optional, string) The RPC protocol TensorFlow should use tocommunicate with TPUs.
 
 
-#### Returns:
+#### 返回：
 string, the connection string to use when creating a session.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If none of the TPUs specified exists.
 
 
@@ -138,15 +138,15 @@ string, the connection string to use when creating a session.
  
 ```
 
-Returns the number of TPU cores per worker.
+返回每个工作进程的TPU核心数。
 
 Connects to the master and list all the devices present in the master,and counts them up. Also verifies that the device counts per host in thecluster is the same before returning the number of TPU cores per host.
 
-#### Args:
+#### 参数：
 - **`task_type`** : Unused.
 - **`task_id`** : Unused.
 - **`config_proto`** : Used to create a connection to a TPU master in order toretrieve the system metadata.
 
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If we cannot talk to a TPU worker after retrying or if thenumber of TPU devices per host is different.

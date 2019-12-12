@@ -1,6 +1,6 @@
 Computes the trignometric inverse sine of x element-wise.
 
-**Aliases** : [ `tf.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v1.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v1.math.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v2.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v2.math.asin` ](/api_docs/python/tf/math/asin)
+**别名** : [ `tf.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v1.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v1.math.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v2.asin` ](/api_docs/python/tf/math/asin), [ `tf.compat.v2.math.asin` ](/api_docs/python/tf/math/asin)
 
 ```
  tf.math.asin(
@@ -14,11 +14,11 @@ The [ `tf.math.asin` ](https://tensorflow.google.cn/api_docs/python/tf/math/asin
 
 **Note** : The output of [ `tf.math.asin` ](https://tensorflow.google.cn/api_docs/python/tf/math/asin) will lie within the invertible range of sine, i.e [-pi/2, pi/2].
 
-#### For example:
+#### 例如：
 
 
 ```
- # Note: [1.047, 0.785] ~= [(pi/3), (pi/4)]
+ # 注意：[1.047, 0.785] ~= [(pi/3), (pi/4)]
 x = tf.constant([1.047, 0.785])
 y = tf.math.sin(x) # [0.8659266, 0.7068252]
 
@@ -26,11 +26,11 @@ tf.math.asin(y) # [1.047, 0.785] = x
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

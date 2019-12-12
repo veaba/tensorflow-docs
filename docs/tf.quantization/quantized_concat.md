@@ -1,6 +1,6 @@
-Concatenates quantized tensors along one dimension.
+沿一维连接量化张量。
 
-**Aliases** : [ `tf.compat.v1.quantization.quantized_concat` ](/api_docs/python/tf/quantization/quantized_concat), [ `tf.compat.v1.quantized_concat` ](/api_docs/python/tf/quantization/quantized_concat), [ `tf.compat.v2.quantization.quantized_concat` ](/api_docs/python/tf/quantization/quantized_concat)
+**别名** : [ `tf.compat.v1.quantization.quantized_concat` ](/api_docs/python/tf/quantization/quantized_concat), [ `tf.compat.v1.quantized_concat` ](/api_docs/python/tf/quantization/quantized_concat), [ `tf.compat.v2.quantization.quantized_concat` ](/api_docs/python/tf/quantization/quantized_concat)
 
 ```
  tf.quantization.quantized_concat(
@@ -13,7 +13,7 @@ Concatenates quantized tensors along one dimension.
  
 ```
 
-#### Args:
+#### 参数：
 - **`concat_dim`** : A  `Tensor`  of type  `int32` .0-D.  The dimension along which to concatenate.  Must be in therange [0, rank(values)).
 - **`values`** : A list of at least 2  `Tensor`  objects with the same type.The  `N`  Tensors to concatenate. Their ranks and types must match,and their sizes must match in all dimensions except  `concat_dim` .
 - **`input_mins`** : A list with the same length as  `values`  of  `Tensor`  objects with type  `float32` .The minimum scalar values for each of the input tensors.
@@ -21,7 +21,7 @@ Concatenates quantized tensors along one dimension.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (output, output_min, output_max).
 
 - **`output`** : A  `Tensor` . Has the same type as  `values` .

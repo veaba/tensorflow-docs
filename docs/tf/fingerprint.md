@@ -1,6 +1,6 @@
-Generates fingerprint values.
+生成指纹值。
 
-**Aliases** : [ `tf.compat.v1.fingerprint` ](/api_docs/python/tf/fingerprint), [ `tf.compat.v2.fingerprint` ](/api_docs/python/tf/fingerprint)
+**别名** : [ `tf.compat.v1.fingerprint` ](/api_docs/python/tf/fingerprint), [ `tf.compat.v2.fingerprint` ](/api_docs/python/tf/fingerprint)
 
 ```
  tf.fingerprint(    data,    method='farmhash64',    name=None) 
@@ -24,12 +24,12 @@ tf.fingerprint(data) == tf.fingerprint(tf.bitcast(data, ...))
 
 For string data, one should expect  `tf.fingerprint(data) !=tf.fingerprint(tf.string.reduce_join(data))`  in general.
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor` . Must have rank 1 or higher.
 - **`method`** : A  `Tensor`  of type [ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string). Fingerprint method used by this op.Currently available method is  `farmhash64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A two-dimensional  `Tensor`  of type [ `tf.uint8` ](https://tensorflow.google.cn/api_docs/python/tf#uint8). The first dimension equals to `data` 's first dimension, and the second dimension size depends on thefingerprint algorithm.
 

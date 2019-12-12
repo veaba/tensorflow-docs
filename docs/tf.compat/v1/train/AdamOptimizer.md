@@ -1,11 +1,11 @@
 
 
 ## Class  `AdamOptimizer` 
-Optimizer that implements the Adam algorithm.
+实现ADAM算法的优化器。
 
 Inherits From: [ `Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Optimizer)
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 See [Kingma et al., 2014](http://arxiv.org/abs/1412.6980)([pdf](http://arxiv.org/pdf/1412.6980.pdf)).
 
@@ -24,9 +24,9 @@ See [Kingma et al., 2014](http://arxiv.org/abs/1412.6980)([pdf](http://arxiv.org
  
 ```
 
-Construct a new Adam optimizer.
+构造一个新的adam优化器。
 
-#### Initialization:
+#### 初始化：
 
 m0:=0(Initialize initial 1st moment vector)
 

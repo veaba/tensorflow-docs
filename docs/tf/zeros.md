@@ -1,6 +1,6 @@
-Creates a tensor with all elements set to zero.
+创建所有元素都设置为零的张量。
 
-**Aliases** : [ `tf.compat.v1.zeros` ](/api_docs/python/tf/zeros), [ `tf.compat.v2.zeros` ](/api_docs/python/tf/zeros)
+**别名** : [ `tf.compat.v1.zeros` ](/api_docs/python/tf/zeros), [ `tf.compat.v2.zeros` ](/api_docs/python/tf/zeros)
 
 ```
  tf.zeros(
@@ -11,7 +11,7 @@ Creates a tensor with all elements set to zero.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Writing custom layers and models with Keras](https://tensorflow.google.cn/guide/keras/custom_layers_and_models)
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Better performance with the tf.data API](https://tensorflow.google.cn/guide/data_performance)
@@ -19,7 +19,7 @@ Creates a tensor with all elements set to zero.
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Custom layers](https://tensorflow.google.cn/tutorials/customization/custom_layers)
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
@@ -27,7 +27,7 @@ Creates a tensor with all elements set to zero.
 - [Custom training with tf.distribute.Strategy](https://tensorflow.google.cn/tutorials/distribute/custom_training)
 This operation returns a tensor of type  `dtype`  with shape  `shape`  andall elements set to zero.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -35,12 +35,12 @@ This operation returns a tensor of type  `dtype`  with shape  `shape`  andall el
  
 ```
 
-#### Args:
+#### 参数：
 - **`shape`** : A list of integers, a tuple of integers, or a 1-D  `Tensor`  of type `int32` .
 - **`dtype`** : The type of an element in the resulting  `Tensor` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with all elements set to zero.
 

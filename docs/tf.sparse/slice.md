@@ -1,6 +1,6 @@
 Slice a  `SparseTensor`  based on the  `start`  and `size.
 
-**Aliases** : [ `tf.compat.v1.sparse.slice` ](/api_docs/python/tf/sparse/slice), [ `tf.compat.v1.sparse_slice` ](/api_docs/python/tf/sparse/slice), [ `tf.compat.v2.sparse.slice` ](/api_docs/python/tf/sparse/slice)
+**别名** : [ `tf.compat.v1.sparse.slice` ](/api_docs/python/tf/sparse/slice), [ `tf.compat.v1.sparse_slice` ](/api_docs/python/tf/sparse/slice), [ `tf.compat.v2.sparse.slice` ](/api_docs/python/tf/sparse/slice)
 
 ```
  tf.sparse.slice(
@@ -21,7 +21,7 @@ For example, if the input is
  
 ```
 
-Graphically the output tensors are:
+从图形上看，输出张量为：
 
 ```
  sparse.slice([0, 0], [2, 4]) = shape = [2, 4]
@@ -34,15 +34,15 @@ sparse.slice([0, 4], [2, 3]) = shape = [2, 3]
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The  `SparseTensor`  to split.
 - **`start`** : 1-D. tensor represents the start of the slice.
 - **`size`** : 1-D. tensor represents the size of the slice.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  objects resulting from splicing.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .

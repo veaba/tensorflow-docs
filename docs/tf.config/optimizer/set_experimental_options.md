@@ -1,6 +1,6 @@
-Set experimental optimizer options.
+设置实验优化器选项。
 
-**Aliases** : [ `tf.compat.v1.config.optimizer.set_experimental_options` ](/api_docs/python/tf/config/optimizer/set_experimental_options), [ `tf.compat.v2.config.optimizer.set_experimental_options` ](/api_docs/python/tf/config/optimizer/set_experimental_options)
+**别名** : [ `tf.compat.v1.config.optimizer.set_experimental_options` ](/api_docs/python/tf/config/optimizer/set_experimental_options), [ `tf.compat.v2.config.optimizer.set_experimental_options` ](/api_docs/python/tf/config/optimizer/set_experimental_options)
 
 ```
  tf.config.optimizer.set_experimental_options(options)
@@ -9,7 +9,7 @@ Set experimental optimizer options.
 
 Note that optimizations are only applied in graph mode, (within tf.function).In addition, as these are experimental options, the list is subject to change.
 
-#### Args:
+#### 参数：
 - **`options`** : Dictionary of experimental optimizer options to configure.Valid keys:
     - layout_optimizer: Optimize tensor layoutse.g. This will try to use NCHW layout on GPU which is faster.
     - constant_folding: Fold constantsStatically infer the value of tensors when possible, and materialize theresult using constants.

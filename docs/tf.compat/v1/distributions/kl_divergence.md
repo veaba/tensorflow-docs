@@ -14,15 +14,15 @@ If more than one such registered method exists, the method whose registeredclass
 
 If more than one such shortest path exists, the first methodidentified in the search is used (favoring a shorter MRO distance to `type(distribution_a)` ).
 
-#### Args:
+#### 参数：
 - **`distribution_a`** : The first distribution.
 - **`distribution_b`** : The second distribution.
 - **`allow_nan_stats`** : Python  `bool` , default  `True` . When  `True` ,statistics (e.g., mean, mode, variance) use the value " `NaN` " toindicate the result is undefined. When  `False` , an exception is raisedif one or more of the statistic's batch members are undefined.
 - **`name`** : Python  `str`  name prefixed to Ops created by this class.
 
 
-#### Returns:
+#### 返回：
 A Tensor with the batchwise KL-divergence between  `distribution_a` and  `distribution_b` .
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** : If no KL method is defined for distribution typesof  `distribution_a`  and  `distribution_b` .

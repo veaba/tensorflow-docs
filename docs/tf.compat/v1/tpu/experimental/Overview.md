@@ -1,6 +1,6 @@
-Public API for tf.tpu.experimental namespace.
+tf.tpu.实验命名空间的公共api。
 
-## Classes
+## Class 
 [ `class AdagradParameters` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/AdagradParameters): Optimization parameters for Adagrad with TPU embeddings.
 
 [ `class AdamParameters` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/AdamParameters): Optimization parameters for Adam with TPU embeddings.
@@ -9,7 +9,7 @@ Public API for tf.tpu.experimental namespace.
 
 [ `class StochasticGradientDescentParameters` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/StochasticGradientDescentParameters): Optimization parameters for stochastic gradient descent for TPU embeddings.
 
-## Functions
+## 功能
 [ `embedding_column(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/embedding_column): TPU version of [ `tf.compat.v1.feature_column.embedding_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/embedding_column).
 
 [ `initialize_tpu_system(...)` ](https://tensorflow.google.cn/api_docs/python/tf/tpu/experimental/initialize_tpu_system): Initialize the TPU devices.

@@ -1,6 +1,6 @@
-Create a TensorProto.
+创建一个tensorproto。
 
-**Aliases** : [ `tf.compat.v1.make_tensor_proto` ](/api_docs/python/tf/make_tensor_proto), [ `tf.compat.v2.make_tensor_proto` ](/api_docs/python/tf/make_tensor_proto)
+**别名** : [ `tf.compat.v1.make_tensor_proto` ](/api_docs/python/tf/make_tensor_proto), [ `tf.compat.v2.make_tensor_proto` ](/api_docs/python/tf/make_tensor_proto)
 
 ```
  tf.make_tensor_proto(
@@ -29,7 +29,7 @@ If "shape" is None, the resulting tensor proto represents the numpyarray precise
 
 Otherwise, "shape" specifies the tensor's shape and the numpy arraycan not have more elements than what "shape" specifies.
 
-#### Args:
+#### 参数：
 - **`values`** :         Values to put in the TensorProto.
 - **`dtype`** :          Optional tensor_pb2 DataType value.
 - **`shape`** :          List of integers representing the dimensions of tensor.
@@ -37,11 +37,11 @@ Otherwise, "shape" specifies the tensor's shape and the numpy arraycan not have 
 - **`allow_broadcast`** :  Boolean that enables allowing scalars and 1 length vectorbroadcasting. Cannot be true when verify_shape is true.
 
 
-#### Returns:
+#### 返回：
 A  `TensorProto` . Depending on the type, it may contain data in the"tensor_content" attribute, which is not directly useful to Python programs.To access the values you should convert the proto back to a numpy ndarraywith [ `tf.make_ndarray(proto)` ](https://tensorflow.google.cn/api_docs/python/tf/make_ndarray).
 
 If  `values`  is a  `TensorProto` , it is immediately returned;  `dtype`  and `shape`  are ignored.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** :  if unsupported types are provided.
 - **`ValueError`** : if arguments have inappropriate values or if verify_shape isTrue and shape of values is not equals to a shape from the argument.

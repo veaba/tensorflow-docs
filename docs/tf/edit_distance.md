@@ -1,6 +1,6 @@
-Computes the Levenshtein distance between sequences.
+计算序列之间的levenshtein距离。
 
-**Aliases** : [ `tf.compat.v1.edit_distance` ](/api_docs/python/tf/edit_distance), [ `tf.compat.v2.edit_distance` ](/api_docs/python/tf/edit_distance)
+**别名** : [ `tf.compat.v1.edit_distance` ](/api_docs/python/tf/edit_distance), [ `tf.compat.v2.edit_distance` ](/api_docs/python/tf/edit_distance)
 
 ```
  tf.edit_distance(    hypothesis,    truth,    normalize=True,    name='edit_distance') 
@@ -37,7 +37,7 @@ normalize = True
  
 ```
 
-This operation would return the following:
+此操作将返回以下内容：
 
 ```
  # 'output' is a tensor of shape `[2, 2]` with edit distances normalized
@@ -47,15 +47,15 @@ output ==> [[inf, 1.0],  # (0,0): no truth, (0,1): no hypothesis
  
 ```
 
-#### Args:
+#### 参数：
 - **`hypothesis`** : A  `SparseTensor`  containing hypothesis sequences.
 - **`truth`** : A  `SparseTensor`  containing truth sequences.
 - **`normalize`** : A  `bool` . If  `True` , normalizes the Levenshtein distance bylength of  `truth.` 
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A dense  `Tensor`  with rank  `R - 1` , where R is the rank of the `SparseTensor`  inputs  `hypothesis`  and  `truth` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If either  `hypothesis`  or  `truth`  are not a  `SparseTensor` .

@@ -1,6 +1,6 @@
-Extracts a strided slice of a tensor (generalized python array indexing).
+提取张量的一个跨步片（通用python数组索引）。
 
-**Aliases** : [ `tf.compat.v1.strided_slice` ](/api_docs/python/tf/strided_slice), [ `tf.compat.v2.strided_slice` ](/api_docs/python/tf/strided_slice)
+**别名** : [ `tf.compat.v1.strided_slice` ](/api_docs/python/tf/strided_slice), [ `tf.compat.v2.strided_slice` ](/api_docs/python/tf/strided_slice)
 
 ```
  tf.strided_slice(
@@ -43,7 +43,7 @@ For example, `foo[:4, tf.newaxis, :2]`  would produce a shape  `(4, 1, 2)`  tens
 
 If the ith bit of  `shrink_axis_mask`  is set, it implies that the ithspecification shrinks the dimensionality by 1, taking on the value at index `begin[i]` .  `end[i]`  and  `strides[i]`  are ignored in this case. For example inPython one might do  `foo[:, 3, :]`  which would result in  `shrink_axis_mask` equal to 2.
 
-NOTE:  `begin`  and  `end`  are zero-indexed. `strides`  entries must be non-zero.
+注意： `begin`  and  `end`  are zero-indexed. `strides`  entries must be non-zero.
 
 ```
  t = tf.constant([[[1, 1, 1], [2, 2, 2]],
@@ -57,7 +57,7 @@ tf.strided_slice(t, [1, -1, 0], [2, -3, 3], [1, -1, 1])  # [[[4, 4, 4],
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_`** : A  `Tensor` .
 - **`begin`** : An  `int32`  or  `int64`   `Tensor` .
 - **`end`** : An  `int32`  or  `int64`   `Tensor` .
@@ -71,6 +71,6 @@ tf.strided_slice(t, [1, -1, 0], [2, -3, 3], [1, -1, 1])  # [[[4, 4, 4],
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  the same type as  `input` .
 

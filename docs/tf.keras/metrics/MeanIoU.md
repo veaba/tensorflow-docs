@@ -5,13 +5,13 @@ Computes the mean Intersection-Over-Union metric.
 
 Inherits From: [ `Metric` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Metric)
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.compat.v2.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.compat.v2.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
+**别名** : [ `tf.compat.v1.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.compat.v2.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.compat.v2.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
 
 Mean Intersection-Over-Union is a common evaluation metric for semantic imagesegmentation, which first computes the IOU for each semantic class and thencomputes the average over classes. IOU is defined as follows:  IOU = true_positive / (true_positive + false_positive + false_negative).The predictions are accumulated in a confusion matrix, weighted by `sample_weight`  and the metric is then calculated from it.
 
 If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -27,7 +27,7 @@ print('Final result: ', m.result().numpy())  # Final result: 0.33
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -52,7 +52,7 @@ model.compile(
 
 Creates a  `MeanIoU`  instance.
 
-#### Args:
+#### 参数：
 - **`num_classes`** : The possible number of labels the prediction task can have.This value must be provided, since a confusion matrix of dimension =[num_classes, num_classes] will be allocated.
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
@@ -72,7 +72,7 @@ Creates a  `MeanIoU`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -83,7 +83,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -109,14 +109,14 @@ Compute the mean intersection-over-union via the confusion matrix.
  
 ```
 
-Accumulates the confusion matrix statistics.
+累积混淆矩阵统计。
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

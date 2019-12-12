@@ -1,18 +1,18 @@
-Returns the value of more than one tensor variable.
+返回多个张量变量的值。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.batch_get_value` ](/api_docs/python/tf/keras/backend/batch_get_value), [ `tf.compat.v2.keras.backend.batch_get_value` ](/api_docs/python/tf/keras/backend/batch_get_value)
+**别名** : [ `tf.compat.v1.keras.backend.batch_get_value` ](/api_docs/python/tf/keras/backend/batch_get_value), [ `tf.compat.v2.keras.backend.batch_get_value` ](/api_docs/python/tf/keras/backend/batch_get_value)
 
 ```
  tf.keras.backend.batch_get_value(tensors)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`tensors`** : list of ops to run.
 
 
-#### Returns:
-A list of Numpy arrays.
+#### 返回：
+numpy数组的列表。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If this method is called inside defun.

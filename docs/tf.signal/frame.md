@@ -1,6 +1,6 @@
 Expands  `signal` 's  `axis`  dimension into frames of  `frame_length` .
 
-**Aliases** : [ `tf.compat.v1.signal.frame` ](/api_docs/python/tf/signal/frame), [ `tf.compat.v2.signal.frame` ](/api_docs/python/tf/signal/frame)
+**别名** : [ `tf.compat.v1.signal.frame` ](/api_docs/python/tf/signal/frame), [ `tf.compat.v2.signal.frame` ](/api_docs/python/tf/signal/frame)
 
 ```
  tf.signal.frame(
@@ -19,7 +19,7 @@ Slides a window of size  `frame_length`  over  `signal` 's  `axis`  dimensionwit
 
 If  `pad_end`  is True, window positions that are past the end of the  `axis` dimension are padded with  `pad_value`  until the window moves fully past theend of the dimension. Otherwise, only window positions that fully overlap the `axis`  dimension are produced.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -30,7 +30,7 @@ image = tf.expand_dims(magspec, 3)
  
 ```
 
-#### Args:
+#### 参数：
 - **`signal`** : A  `[..., samples, ...]`   `Tensor` . The rank and dimensionsmay be unknown. Rank must be at least 1.
 - **`frame_length`** : The frame length in samples. An integer or scalar  `Tensor` .
 - **`frame_step`** : The frame hop size in samples. An integer or scalar  `Tensor` .
@@ -40,8 +40,8 @@ image = tf.expand_dims(magspec, 3)
 - **`name`** : An optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of frames with shape  `[..., frames, frame_length, ...]` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `frame_length` ,  `frame_step` ,  `pad_value` , or  `axis`  are notscalar.

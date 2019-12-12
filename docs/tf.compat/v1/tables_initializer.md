@@ -1,4 +1,4 @@
-Returns an Op that initializes all tables of the default graph.
+返回初始化默认图的所有表的操作。
 
 ```
  tf.compat.v1.tables_initializer(name='init_all_tables')
@@ -7,10 +7,10 @@ Returns an Op that initializes all tables of the default graph.
 
 See the [Low LevelIntro](https://tensorflow.google.cn/guide/low_level_intro#feature_columns)guide, for an example of usage.
 
-#### Args:
+#### 参数：
 - **`name`** : Optional name for the initialization op.
 
 
-#### Returns:
+#### 返回：
 An Op that initializes all tables.  Note that if there arenot tables the returned Op is a NoOp.
 

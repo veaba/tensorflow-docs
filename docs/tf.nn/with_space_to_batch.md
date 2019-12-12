@@ -1,6 +1,6 @@
 Performs  `op`  on the space-to-batch representation of  `input` .
 
-**Aliases** : [ `tf.compat.v1.nn.with_space_to_batch` ](/api_docs/python/tf/nn/with_space_to_batch), [ `tf.compat.v2.nn.with_space_to_batch` ](/api_docs/python/tf/nn/with_space_to_batch)
+**别名** : [ `tf.compat.v1.nn.with_space_to_batch` ](/api_docs/python/tf/nn/with_space_to_batch), [ `tf.compat.v2.nn.with_space_to_batch` ](/api_docs/python/tf/nn/with_space_to_batch)
 
 ```
  tf.nn.with_space_to_batch(
@@ -75,7 +75,7 @@ def combined_op(converted_input, num_spatial_dims, _):    result = op_1(converte
 
 net = with_space_to_batch(net, dilation_rate, "VALID", combined_op)
 
-#### Args:
+#### 参数：
 - **`input`** : Tensor of rank > max(spatial_dims).
 - **`dilation_rate`** : int32 Tensor of *known* shape [num_spatial_dims].
 - **`padding`** : str constant equal to "VALID" or "SAME"
@@ -85,9 +85,9 @@ net = with_space_to_batch(net, dilation_rate, "VALID", combined_op)
 - **`data_format`** : A string or None.  Specifies whether the channel dimension ofthe  `input`  and output is the last dimension (default, or if  `data_format` does not start with "NC"), or the second dimension (if  `data_format` starts with "NC").  For N=1, the valid values are "NWC" (default) and"NCW".  For N=2, the valid values are "NHWC" (default) and "NCHW".For N=3, the valid values are "NDHWC" (default) and "NCDHW".
 
 
-#### Returns:
+#### 返回：
 The output Tensor as described above, dimensions will vary based on the opprovided.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `padding`  is invalid or the arguments are incompatible.
 - **`ValueError`** : if  `spatial_dims`  are invalid.

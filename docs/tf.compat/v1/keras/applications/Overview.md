@@ -1,6 +1,6 @@
 Keras Applications are canned architectures with pre-trained weights.
 
-## Modules
+## 模块
 [ `densenet` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/applications/densenet) module: DenseNet models for Keras.
 
 [ `imagenet_utils` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/applications/imagenet_utils) module: Utilities for ImageNet data preprocessing &amp; prediction decoding.
@@ -27,7 +27,7 @@ Keras Applications are canned architectures with pre-trained weights.
 
 [ `xception` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/applications/xception) module: Xception V1 model for Keras.
 
-## Functions
+## 功能
 [ `DenseNet121(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/DenseNet121)
 
 [ `DenseNet169(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/DenseNet169)

@@ -4,7 +4,7 @@ Sets the graph-level random seed.
  tf.random.set_seed(seed) 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Boosted trees using Estimators](https://tensorflow.google.cn/tutorials/estimator/boosted_trees)
 - [Gradient Boosted Trees: Model understanding](https://tensorflow.google.cn/tutorials/estimator/boosted_trees_model_understanding)
 - [Time series forecasting](https://tensorflow.google.cn/tutorials/structured_data/time_series)
@@ -89,5 +89,5 @@ with tf.compat.v1.Session() as sess2:
  
 ```
 
-#### Args:
+#### 参数：
 - **`seed`** : integer.

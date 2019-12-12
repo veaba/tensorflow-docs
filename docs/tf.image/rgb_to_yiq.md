@@ -1,6 +1,6 @@
-Converts one or more images from RGB to YIQ.
+将一个或多个图像从rgb转换为yiq。
 
-**Aliases** : [ `tf.compat.v1.image.rgb_to_yiq` ](/api_docs/python/tf/image/rgb_to_yiq), [ `tf.compat.v2.image.rgb_to_yiq` ](/api_docs/python/tf/image/rgb_to_yiq)
+**别名** : [ `tf.compat.v1.image.rgb_to_yiq` ](/api_docs/python/tf/image/rgb_to_yiq), [ `tf.compat.v2.image.rgb_to_yiq` ](/api_docs/python/tf/image/rgb_to_yiq)
 
 ```
  tf.image.rgb_to_yiq(images)
@@ -9,9 +9,9 @@ Converts one or more images from RGB to YIQ.
 
 Outputs a tensor of the same shape as the  `images`  tensor, containing the YIQvalue of the pixels.The output is only well defined if the value in images are in [0,1].
 
-#### Args:
+#### 参数：
 - **`images`** : 2-D or higher rank. Image data to convert. Last dimension must besize 3.
 
 
-#### Returns:
+#### 返回：
 - **`images`** : tensor with the same shape as  `images` .

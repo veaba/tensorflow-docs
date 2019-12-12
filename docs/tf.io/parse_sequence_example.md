@@ -1,6 +1,6 @@
 Parses a batch of  `SequenceExample`  protos.
 
-**Aliases** : [ `tf.compat.v1.io.parse_sequence_example` ](/api_docs/python/tf/io/parse_sequence_example), [ `tf.compat.v2.io.parse_sequence_example` ](/api_docs/python/tf/io/parse_sequence_example)
+**别名** : [ `tf.compat.v1.io.parse_sequence_example` ](/api_docs/python/tf/io/parse_sequence_example), [ `tf.compat.v2.io.parse_sequence_example` ](/api_docs/python/tf/io/parse_sequence_example)
 
 ```
  tf.io.parse_sequence_example(
@@ -33,7 +33,7 @@ Each  `SparseTensor`  corresponding to  `sequence_features`  represents a ragged
 
  `example_name`  may contain a descriptive name for the corresponding serializedproto. This may be useful for debugging purposes, but it has no effect on theoutput. If not  `None` ,  `example_name`  must be a scalar.
 
-#### Args:
+#### 参数：
 - **`serialized`** : A vector (1-D Tensor) of type string containing binaryserialized  `SequenceExample`  protos.
 - **`context_features`** : A  `dict`  mapping feature keys to  `FixedLenFeature`  or `VarLenFeature`  values. These features are associated with a `SequenceExample`  as a whole.
 - **`sequence_features`** : A  `dict`  mapping feature keys to `FixedLenSequenceFeature`  or  `VarLenFeature`  values. These features areassociated with data within the  `FeatureList`  section of the `SequenceExample`  proto.
@@ -41,8 +41,8 @@ Each  `SparseTensor`  corresponding to  `sequence_features`  represents a ragged
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of three  `dict` s, each mapping keys to  `Tensor` s and `SparseTensor` s. The first dict contains the context key/values,the second dict contains the feature_list key/values, and the final dictcontains the lengths of any dense feature_list features.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any feature is invalid.

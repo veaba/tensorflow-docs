@@ -1,11 +1,11 @@
 
 
 ## Class  `LSTMCell` 
-Cell class for the LSTM layer.
+LSTM层的单元格类。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`activation`** : Activation function to use.Default: hyperbolic tangent ( `tanh` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`recurrent_activation`** : Activation function to usefor the recurrent step.Default: hard sigmoid ( `hard_sigmoid` ).If you pass  `None` , no activation is applied(ie. "linear" activation:  `a(x) = x` ).
@@ -25,7 +25,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - **`implementation`** : Implementation mode, either 1 or 2.Mode 1 will structure its operations as a larger number ofsmaller dot products and additions, whereas mode 2 willbatch them into fewer, larger operations. These modes willhave different performance profiles on different hardware andfor different applications.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : A 2D tensor.
 - **`states`** : List of state tensors corresponding to the previous timestep.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. Only relevant when  `dropout`  or `recurrent_dropout`  is used.
@@ -58,7 +58,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
  
 ```
 
-## Methods
+## 方法
 
 
 ###  `get_dropout_mask_for_cell` 
@@ -73,17 +73,17 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
  
 ```
 
-Get the dropout mask for RNN cell's input.
+获取RNN单元输入的退出掩码。
 
 It will create mask based on context if there isn't any existing cachedmask. If a new mask is generated, it will update the cache in the cell.
 
-#### Args:
+#### 参数：
 - **`inputs`** : the input tensor whose shape will be used to generate dropoutmask.
 - **`training`** : boolean tensor, whether its in training mode, dropout will beignored in non-training mode.
 - **`count`** : int, how many dropout mask will be generated. It is useful for cellthat has internal weights fused together.
 
 
-#### Returns:
+#### 返回：
 List of mask tensor, generated or cached mask based on context.
 
 ###  `get_initial_state` 
@@ -110,17 +110,17 @@ List of mask tensor, generated or cached mask based on context.
  
 ```
 
-Get the recurrent dropout mask for RNN cell.
+获取RNN细胞的复发性脱落面具。
 
 It will create mask based on context if there isn't any existing cachedmask. If a new mask is generated, it will update the cache in the cell.
 
-#### Args:
+#### 参数：
 - **`inputs`** : the input tensor whose shape will be used to generate dropoutmask.
 - **`training`** : boolean tensor, whether its in training mode, dropout will beignored in non-training mode.
 - **`count`** : int, how many dropout mask will be generated. It is useful for cellthat has internal weights fused together.
 
 
-#### Returns:
+#### 返回：
 List of mask tensor, generated or cached mask based on context.
 
 ###  `reset_dropout_mask` 
@@ -131,7 +131,7 @@ List of mask tensor, generated or cached mask based on context.
  
 ```
 
-Reset the cached dropout masks if any.
+重置缓存的退出掩码（如果有）。
 
 This is important for the RNN layer to invoke this in it call() method sothat the cached mask is cleared before calling the cell.call(). The maskshould be cached across the timestep within the same batch, but shouldn'tbe cached between batches. Otherwise it will introduce unreasonable biasagainst certain index of data within the batch.
 
@@ -143,7 +143,7 @@ This is important for the RNN layer to invoke this in it call() method sothat th
  
 ```
 
-Reset the cached recurrent dropout masks if any.
+如果存在，则重置缓存的重复退出掩码。
 
 This is important for the RNN layer to invoke this in it call() method sothat the cached mask is cleared before calling the cell.call(). The maskshould be cached across the timestep within the same batch, but shouldn'tbe cached between batches. Otherwise it will introduce unreasonable biasagainst certain index of data within the batch.
 

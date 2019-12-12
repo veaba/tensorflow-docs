@@ -3,7 +3,7 @@
 ## Class  `Multiply` 
 Layer that multiplies (element-wise) a list of inputs.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Multiply` ](/api_docs/python/tf/keras/layers/Multiply), [ `tf.compat.v2.keras.layers.Multiply` ](/api_docs/python/tf/keras/layers/Multiply)
+**别名** : [ `tf.compat.v1.keras.layers.Multiply` ](/api_docs/python/tf/keras/layers/Multiply), [ `tf.compat.v2.keras.layers.Multiply` ](/api_docs/python/tf/keras/layers/Multiply)
 
 It takes as input a list of tensors,all of the same shape, and returnsa single tensor (also of the same shape).
 
@@ -17,7 +17,7 @@ It takes as input a list of tensors,all of the same shape, and returnsa single t
 
 Functional interface to the  `Multiply`  layer.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.multiply` ](/api_docs/python/tf/keras/layers/multiply), [ `tf.compat.v2.keras.layers.multiply` ](/api_docs/python/tf/keras/layers/multiply)
+**别名** : [ `tf.compat.v1.keras.layers.multiply` ](/api_docs/python/tf/keras/layers/multiply), [ `tf.compat.v2.keras.layers.multiply` ](/api_docs/python/tf/keras/layers/multiply)
 
 ```
  tf.keras.layers.multiply(
@@ -27,11 +27,11 @@ Functional interface to the  `Multiply`  layer.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : A list of input tensors (at least 2).
 - **`**kwargs`** : Standard layer keyword arguments.
 
 
-#### Returns:
+#### 返回：
 A tensor, the element-wise product of the inputs.
 

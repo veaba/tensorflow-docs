@@ -1,6 +1,6 @@
 NASNet-A models for Keras.
 
-## Functions
+## 功能
 [ `NASNetLarge(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/NASNetLarge)
 
 [ `NASNetMobile(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/NASNetMobile)

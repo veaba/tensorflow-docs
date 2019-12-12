@@ -1,13 +1,13 @@
 
 
 ## Class  `Optimize` 
-Enum defining the optimizations to apply when generating tflite graphs.
+枚举定义生成tflite图时要应用的优化。
 
-**Aliases** : [ `tf.compat.v1.lite.Optimize` ](/api_docs/python/tf/lite/Optimize), [ `tf.compat.v2.lite.Optimize` ](/api_docs/python/tf/lite/Optimize)
+**别名** : [ `tf.compat.v1.lite.Optimize` ](/api_docs/python/tf/lite/Optimize), [ `tf.compat.v2.lite.Optimize` ](/api_docs/python/tf/lite/Optimize)
 
-Some optimizations may come at the cost of accuracy.
+一些优化可能以牺牲准确性为代价。
 
-## Class Members
+## Class 成员
 -  `DEFAULT`  []()
 -  `OPTIMIZE_FOR_LATENCY`  []()
 -  `OPTIMIZE_FOR_SIZE`  []()

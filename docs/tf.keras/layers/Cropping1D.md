@@ -1,22 +1,22 @@
 
 
 ## Class  `Cropping1D` 
-Cropping layer for 1D input (e.g. temporal sequence).
+用于1D输入的裁剪层（例如时间序列）。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Cropping1D` ](/api_docs/python/tf/keras/layers/Cropping1D), [ `tf.compat.v2.keras.layers.Cropping1D` ](/api_docs/python/tf/keras/layers/Cropping1D)
+**别名** : [ `tf.compat.v1.keras.layers.Cropping1D` ](/api_docs/python/tf/keras/layers/Cropping1D), [ `tf.compat.v2.keras.layers.Cropping1D` ](/api_docs/python/tf/keras/layers/Cropping1D)
 
-It crops along the time dimension (axis 1).
+它沿着时间维度（轴1）生长。
 
-#### Arguments:
+#### 参数：
 - **`cropping`** : Int or tuple of int (length 2)How many units should be trimmed off at the beginning and end ofthe cropping dimension (axis 1).If a single int is provided, the same value will be used for both.
 
 
-#### Input shape:
+#### 输入形状：
 3D tensor with shape  `(batch, axis_to_crop, features)` 
 
-#### Output shape:
+#### 输出形状：
 3D tensor with shape  `(batch, cropped_axis, features)` 
 
 ##  `__init__` 

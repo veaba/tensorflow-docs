@@ -1,6 +1,6 @@
 Real-valued fast Fourier transform.
 
-**Aliases** : [ `tf.compat.v1.signal.rfft` ](/api_docs/python/tf/signal/rfft), [ `tf.compat.v1.spectral.rfft` ](/api_docs/python/tf/signal/rfft), [ `tf.compat.v2.signal.rfft` ](/api_docs/python/tf/signal/rfft)
+**别名** : [ `tf.compat.v1.signal.rfft` ](/api_docs/python/tf/signal/rfft), [ `tf.compat.v1.spectral.rfft` ](/api_docs/python/tf/signal/rfft), [ `tf.compat.v2.signal.rfft` ](/api_docs/python/tf/signal/rfft)
 
 ```
  tf.signal.rfft(
@@ -17,12 +17,12 @@ Since the DFT of a real signal is Hermitian-symmetric,  `RFFT`  only returns the
 
 Along the axis  `RFFT`  is computed on, if  `fft_length`  is smaller than thecorresponding dimension of  `input` , the dimension is cropped. If it is larger,the dimension is padded with zeros.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `float32` . A float32 tensor.
 - **`fft_length`** : A  `Tensor`  of type  `int32` .An int32 tensor of shape [1]. The FFT length.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `complex64` .
 

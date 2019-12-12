@@ -28,7 +28,7 @@ In detail, with the default NHWC format,
 
  `strides`  controls the strides for the depthwise convolution only, sincethe pointwise convolution has implicit strides of  `[1, 1, 1, 1]` .  Must have `strides[0] = strides[3] = 1` .  For the most common case of the samehorizontal and vertical strides,  `strides = [1, stride, stride, 1]` .If any value in  `rate`  is greater than 1, we perform atrous depthwiseconvolution, in which case all values in the  `strides`  tensor must be equalto 1.
 
-#### Args:
+#### 参数：
 - **`input`** : 4-D  `Tensor`  with shape according to  `data_format` .
 - **`depthwise_filter`** : 4-D  `Tensor`  with shape  `[filter_height, filter_width,in_channels, channel_multiplier]` . Contains  `in_channels`  convolutionalfilters of depth 1.
 - **`pointwise_filter`** : 4-D  `Tensor`  with shape  `[1, 1, channel_multiplier *in_channels, out_channels]` .  Pointwise filter to mix channels after `depthwise_filter`  has convolved spatially.
@@ -39,6 +39,6 @@ In detail, with the default NHWC format,
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 A 4-D  `Tensor`  with shape according to 'data_format'. For  example, with data_format="NHWC", shape is [batch, out_height,  out_width, out_channels].
 

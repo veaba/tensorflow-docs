@@ -1,20 +1,20 @@
-Returns list of all variables in the checkpoint.
+返回检查点中所有变量的列表。
 
-**Aliases** : [ `tf.compat.v1.train.list_variables` ](/api_docs/python/tf/train/list_variables), [ `tf.compat.v2.train.list_variables` ](/api_docs/python/tf/train/list_variables)
+**别名** : [ `tf.compat.v1.train.list_variables` ](/api_docs/python/tf/train/list_variables), [ `tf.compat.v2.train.list_variables` ](/api_docs/python/tf/train/list_variables)
 
 ```
  tf.train.list_variables(ckpt_dir_or_file)
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
 
 
-#### Args:
+#### 参数：
 - **`ckpt_dir_or_file`** : Directory with checkpoints file or path to checkpoint.
 
 
-#### Returns:
+#### 返回：
 List of tuples  `(name, shape)` .
 

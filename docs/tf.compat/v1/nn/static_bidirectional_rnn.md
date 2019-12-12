@@ -18,7 +18,7 @@ Creates a bidirectional recurrent neural network. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Please use  `keras.layers.Bidirectional(keras.layers.RNN(cell, unroll=True))` , which is equivalent to this API
 Similar to the unidirectional case above (rnn) but takes input and buildsindependent forward and backward RNNs with the final forward and backwardoutputs depth-concatenated, such that the output will have the format[time][batch][cell_fw.output_size + cell_bw.output_size]. The input_size offorward and backward cell must match. The initial state for both directionsis zero by default (but can be set optionally) and no intermediate states areever returned -- the network is fully unrolled for the given (passed in)length(s) of the sequence(s) or completely unrolled if length(s) is not given.
 
-#### Args:
+#### 参数：
 - **`cell_fw`** : An instance of RNNCell, to be used for forward direction.
 - **`cell_bw`** : An instance of RNNCell, to be used for backward direction.
 - **`inputs`** : A length T list of inputs, each a tensor of shape [batch_size,input_size], or a nested tuple of such elements.
@@ -29,9 +29,9 @@ Similar to the unidirectional case above (rnn) but takes input and buildsindepen
 - **`scope`** : VariableScope for the created subgraph; defaults to"bidirectional_rnn"
 
 
-#### Returns:
+#### 返回：
 A tuple (outputs, output_state_fw, output_state_bw) where:  outputs is a length  `T`  list of outputs (one for each input), which    are depth-concatenated forward and backward outputs.  output_state_fw is the final state of the forward rnn.  output_state_bw is the final state of the backward rnn.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `cell_fw`  or  `cell_bw`  is not an instance of  `RNNCell` .
 - **`ValueError`** : If inputs is None or an empty list.

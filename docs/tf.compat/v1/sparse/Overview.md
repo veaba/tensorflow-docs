@@ -1,13 +1,13 @@
-Sparse Tensor Representation.
+稀疏张量表示。
 
 See also [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-## Classes
+## Class 
 [ `class SparseConditionalAccumulator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/SparseConditionalAccumulator): A conditional accumulator for aggregating sparse gradients.
 
 [ `class SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor): Represents a sparse tensor.
 
-## Functions
+## 功能
 [ `add(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/sparse_add): Adds two tensors, at least one of each is a  `SparseTensor` . (deprecated arguments)
 
 [ `concat(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/sparse_concat): Concatenates a list of  `SparseTensor`  along the specified dimension. (deprecated arguments)

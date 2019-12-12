@@ -1,6 +1,6 @@
 Multiplies 2 tensors (and/or variables) and returns a *tensor*.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot), [ `tf.compat.v2.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot)
+**别名** : [ `tf.compat.v1.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot), [ `tf.compat.v2.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot)
 
 ```
  tf.keras.backend.dot(
@@ -12,15 +12,15 @@ Multiplies 2 tensors (and/or variables) and returns a *tensor*.
 
 When attempting to multiply a nD tensorwith a nD tensor, it reproduces the Theano behavior.(e.g.  `(2, 3) * (4, 3, 5) -> (2, 4, 5)` )
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`y`** : Tensor or variable.
 
 
-#### Returns:
+#### 返回：
 A tensor, dot product of  `x`  and  `y` .
 
-#### Examples:
+#### 示例：
 
 
 ```

@@ -22,7 +22,7 @@ This function will modify the tensors passed in as it adds more operationsand he
 
 This function adds operations to the current session. To compute the errorusing a particular device, such as a GPU, use the standard methods forsetting a device (e.g. using with sess.graph.device() or setting a devicefunction in the session constructor).
 
-#### Args:
+#### 参数：
 - **`x`** : a tensor or list of tensors
 - **`x_shape`** : the dimensions of x as a tuple or an array of ints. If x is a list,then this is the list of shapes.
 - **`y`** : a tensor
@@ -33,6 +33,6 @@ This function adds operations to the current session. To compute the errorusing 
 - **`extra_feed_dict`** : dict that allows fixing specified tensor valuesduring the Jacobian calculation.
 
 
-#### Returns:
-The maximum error in between the two Jacobians.
+#### 返回：
+两个雅可比之间的最大误差。
 

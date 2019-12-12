@@ -1,6 +1,6 @@
-Copy a tensor setting everything outside a central band in each innermost matrix
+复制一个张量，在每个最里面的矩阵中设置中心带之外的所有内容
 
-**Aliases** : [ `tf.compat.v1.linalg.band_part` ](/api_docs/python/tf/linalg/band_part), [ `tf.compat.v1.matrix_band_part` ](/api_docs/python/tf/linalg/band_part), [ `tf.compat.v2.linalg.band_part` ](/api_docs/python/tf/linalg/band_part)
+**别名** : [ `tf.compat.v1.linalg.band_part` ](/api_docs/python/tf/linalg/band_part), [ `tf.compat.v1.matrix_band_part` ](/api_docs/python/tf/linalg/band_part), [ `tf.compat.v2.linalg.band_part` ](/api_docs/python/tf/linalg/band_part)
 
 ```
  tf.linalg.band_part(
@@ -12,19 +12,19 @@ Copy a tensor setting everything outside a central band in each innermost matrix
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
-to zero.
+归零。
 
 The  `band`  part is computed as follows:Assume  `input`  has  `k`  dimensions  `[I, J, K, ..., M, N]` , then the output is atensor with the same shape where
 
  `band[i, j, k, ..., m, n] = in_band(m, n) * input[i, j, k, ..., m, n]` .
 
-The indicator function
+指示器功能
 
  `in_band(m, n) = (num_lower < 0 || (m-n) <= num_lower)) &amp;&amp;                 (num_upper < 0 || (n-m) <= num_upper)` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -45,7 +45,7 @@ tf.matrix_band_part(input, 2, 1) ==> [[ 0,  1,  0, 0]
  
 ```
 
-#### Useful special cases:
+#### 有用的特殊情况：
 
 
 ```
@@ -55,13 +55,13 @@ tf.matrix_band_part(input, 2, 1) ==> [[ 0,  1,  0, 0]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Rank  `k`  tensor.
 - **`num_lower`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .0-D tensor. Number of subdiagonals to keep. If negative, keep entirelower triangle.
 - **`num_upper`** : A  `Tensor` . Must have the same type as  `num_lower` .0-D tensor. Number of superdiagonals to keep. If negative, keepentire upper triangle.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

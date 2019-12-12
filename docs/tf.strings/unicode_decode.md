@@ -1,6 +1,6 @@
 Decodes each string in  `input`  into a sequence of Unicode code points.
 
-**Aliases** : [ `tf.compat.v1.strings.unicode_decode` ](/api_docs/python/tf/strings/unicode_decode), [ `tf.compat.v2.strings.unicode_decode` ](/api_docs/python/tf/strings/unicode_decode)
+**别名** : [ `tf.compat.v1.strings.unicode_decode` ](/api_docs/python/tf/strings/unicode_decode), [ `tf.compat.v2.strings.unicode_decode` ](/api_docs/python/tf/strings/unicode_decode)
 
 ```
  tf.strings.unicode_decode(
@@ -14,11 +14,11 @@ Decodes each string in  `input`  into a sequence of Unicode code points.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Unicode strings](https://tensorflow.google.cn/tutorials/load_data/unicode)
  `result[i1...iN, j]`  is the Unicode codepoint for the  `j` th character in `input[i1...iN]` , when decoded using  `input_encoding` .
 
-#### Args:
+#### 参数：
 - **`input`** : An  `N`  dimensional potentially ragged  `string`  tensor with shape `[D1...DN]` .   `N`  must be statically known.
 - **`input_encoding`** : String name for the unicode encoding that should be used todecode each string.
 - **`errors`** : Specifies the response when an input string can't be convertedusing the indicated encoding. One of:
@@ -30,10 +30,10 @@ Decodes each string in  `input`  into a sequence of Unicode code points.
     -  `'ignore'` : Skip illegal substrings.
 
 
-#### Returns:
+#### 返回：
 A  `N+1`  dimensional  `int32`  tensor with shape  `[D1...DN, (num_chars)]` .The returned tensor is a [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) if  `input`  is a scalar, or a[ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor) otherwise.
 
-#### Example:
+#### 示例：
 
 
 ```

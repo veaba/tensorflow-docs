@@ -14,7 +14,7 @@ When using these moments for batch normalization (see[ `tf.nn.batch_normalizatio
 - for simple batch normalization pass  `axes=[0]`  (batch only).
 
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` .
 - **`axes`** : Array of ints.  Axes along which to compute mean andvariance.
 - **`shift`** : Not used in the current implementation.
@@ -22,6 +22,6 @@ When using these moments for batch normalization (see[ `tf.nn.batch_normalizatio
 - **`name`** : Name used to scope the operations that compute the moments.
 
 
-#### Returns:
+#### 返回：
 Two  `Tensor`  objects:  `mean`  and  `variance` .
 

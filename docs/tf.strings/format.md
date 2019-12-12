@@ -1,6 +1,6 @@
-Formats a string template using a list of tensors.
+使用张量列表格式化字符串模板。
 
-**Aliases** : [ `tf.compat.v1.strings.format` ](/api_docs/python/tf/strings/format), [ `tf.compat.v2.strings.format` ](/api_docs/python/tf/strings/format)
+**别名** : [ `tf.compat.v1.strings.format` ](/api_docs/python/tf/strings/format), [ `tf.compat.v2.strings.format` ](/api_docs/python/tf/strings/format)
 
 ```
  tf.strings.format(
@@ -15,7 +15,7 @@ Formats a string template using a list of tensors.
 
 Formats a string template using a list of tensors, abbreviating tensors byonly printing the first and last  `summarize`  elements of each dimension(recursively). If formatting only one tensor into a template, the tensor doesnot have to be wrapped in a list.
 
-#### Example:
+#### 示例：
 Formatting a single-tensor template:
 
 ```
@@ -53,7 +53,7 @@ with sess.as_default():
  
 ```
 
-#### Args:
+#### 参数：
 - **`template`** : A string template to format tensor values into.
 - **`inputs`** : A list of  `Tensor`  objects, or a single Tensor.The list of tensors to format into the template string. If a solitarytensor is passed in, the input tensor will automatically be wrapped as alist.
 - **`placeholder`** : An optional  `string` . Defaults to  `{}` .At each placeholder occurring in the template, a subsequent tensorwill be inserted.
@@ -61,8 +61,8 @@ with sess.as_default():
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of type  `string` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the number of placeholders does not match the number ofinputs.

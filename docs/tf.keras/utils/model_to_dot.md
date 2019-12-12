@@ -1,6 +1,6 @@
-Convert a Keras model to dot format.
+将路缘石模型转换为点格式。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.model_to_dot` ](/api_docs/python/tf/keras/utils/model_to_dot), [ `tf.compat.v2.keras.utils.model_to_dot` ](/api_docs/python/tf/keras/utils/model_to_dot)
+**别名** : [ `tf.compat.v1.keras.utils.model_to_dot` ](/api_docs/python/tf/keras/utils/model_to_dot), [ `tf.compat.v2.keras.utils.model_to_dot` ](/api_docs/python/tf/keras/utils/model_to_dot)
 
 ```
  tf.keras.utils.model_to_dot(
@@ -15,7 +15,7 @@ Convert a Keras model to dot format.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`model`** : A Keras model instance.
 - **`show_shapes`** : whether to display shape information.
 - **`show_layer_names`** : whether to display layer names.
@@ -25,8 +25,8 @@ Convert a Keras model to dot format.
 - **`subgraph`** : whether to return a  `pydot.Cluster`  instance.
 
 
-#### Returns:
+#### 返回：
 A  `pydot.Dot`  instance representing the Keras model ora  `pydot.Cluster`  instance representing nested model if `subgraph=True` .
 
-#### Raises:
+#### 加薪：
 - **`ImportError`** : if graphviz or pydot are not available.

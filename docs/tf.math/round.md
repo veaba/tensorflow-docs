@@ -1,6 +1,6 @@
 Rounds the values of a tensor to the nearest integer, element-wise.
 
-**Aliases** : [ `tf.compat.v1.math.round` ](/api_docs/python/tf/math/round), [ `tf.compat.v1.round` ](/api_docs/python/tf/math/round), [ `tf.compat.v2.math.round` ](/api_docs/python/tf/math/round), [ `tf.compat.v2.round` ](/api_docs/python/tf/math/round), [ `tf.round` ](/api_docs/python/tf/math/round)
+**别名** : [ `tf.compat.v1.math.round` ](/api_docs/python/tf/math/round), [ `tf.compat.v1.round` ](/api_docs/python/tf/math/round), [ `tf.compat.v2.math.round` ](/api_docs/python/tf/math/round), [ `tf.compat.v2.round` ](/api_docs/python/tf/math/round), [ `tf.round` ](/api_docs/python/tf/math/round)
 
 ```
  tf.math.round(    x,    name=None) 
@@ -14,11 +14,11 @@ tf.round(x)  # [ 1.0, 2.0, 2.0, 2.0, -4.0 ]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` , or  `int64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of same shape and type as  `x` .
 

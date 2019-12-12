@@ -1,6 +1,6 @@
-Repeats a 2D tensor.
+重复二维张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.repeat` ](/api_docs/python/tf/keras/backend/repeat), [ `tf.compat.v2.keras.backend.repeat` ](/api_docs/python/tf/keras/backend/repeat)
+**别名** : [ `tf.compat.v1.keras.backend.repeat` ](/api_docs/python/tf/keras/backend/repeat), [ `tf.compat.v2.keras.backend.repeat` ](/api_docs/python/tf/keras/backend/repeat)
 
 ```
  tf.keras.backend.repeat(
@@ -12,15 +12,15 @@ Repeats a 2D tensor.
 
 if  `x`  has shape (samples, dim) and  `n`  is  `2` ,the output will have shape  `(samples, 2, dim)` .
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`n`** : Python integer, number of times to repeat.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Example:
+#### 示例：
 
 
 ```

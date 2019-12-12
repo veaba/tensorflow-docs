@@ -1,6 +1,6 @@
 Returns the default float type, as a string.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.floatx` ](/api_docs/python/tf/keras/backend/floatx), [ `tf.compat.v2.keras.backend.floatx` ](/api_docs/python/tf/keras/backend/floatx)
+**别名** : [ `tf.compat.v1.keras.backend.floatx` ](/api_docs/python/tf/keras/backend/floatx), [ `tf.compat.v2.keras.backend.floatx` ](/api_docs/python/tf/keras/backend/floatx)
 
 ```
  tf.keras.backend.floatx() 
@@ -8,10 +8,10 @@ Returns the default float type, as a string.
 
 E.g. 'float16', 'float32', 'float64'.
 
-#### Returns:
+#### 返回：
 String, the current default float type.
 
-#### Example:
+#### 示例：
 
 
 ```

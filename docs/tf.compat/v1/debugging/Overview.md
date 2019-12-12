@@ -1,6 +1,6 @@
-Public API for tf.debugging namespace.
+tf.debugging命名空间的公共api。
 
-## Functions
+## 功能
 [ `Assert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert): Asserts that the given condition is true.
 
 [ `assert_all_finite(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/verify_tensor_all_finite): Assert that the tensor does not contain any NaN's or Inf's.

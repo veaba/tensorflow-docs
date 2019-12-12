@@ -1,10 +1,10 @@
-Experimental API for building input pipelines.
+用于构建输入管道的实验api。
 
 This module contains experimental  `Dataset`  sources and transformations that canbe used in conjunction with the [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) API. Note that the[ `tf.data.experimental` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental) API is not subject to the same backwards compatibilityguarantees as [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data), but we will provide deprecation advice in advance ofremoving existing functionality.
 
-See [Importing Data](https://tensorflow.org/guide/datasets) for an overview.
+有关概述，请参见[导入数据]（https://tensorflow.org/guide/datasets）。
 
-## Classes
+## Class 
 [ `class CheckpointInputPipelineHook` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/CheckpointInputPipelineHook): Checkpoints input pipeline state every N steps or seconds.
 
 [ `class CsvDataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/CsvDataset): A Dataset comprising lines from one or more CSV files.
@@ -31,7 +31,7 @@ See [Importing Data](https://tensorflow.org/guide/datasets) for an overview.
 
 [ `class ThreadingOptions` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/ThreadingOptions): Represents options for dataset threading.
 
-## Functions
+## 功能
 [ `Counter(...)` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/Counter): Creates a  `Dataset`  that counts from  `start`  in steps of size  `step` .
 
 [ `bucket_by_sequence_length(...)` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/bucket_by_sequence_length): A transformation that buckets elements in a  `Dataset`  by length.
@@ -94,7 +94,7 @@ See [Importing Data](https://tensorflow.org/guide/datasets) for an overview.
 
 [ `unique(...)` ](https://tensorflow.google.cn/api_docs/python/tf/data/experimental/unique): Creates a  `Dataset`  from another  `Dataset` , discarding duplicates.
 
-## Other Members
+## 其他成员
 -  `AUTOTUNE = -1`  []()
 -  `INFINITE_CARDINALITY = -1`  []()
 -  `UNKNOWN_CARDINALITY = -2`  []()

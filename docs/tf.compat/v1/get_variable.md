@@ -1,4 +1,4 @@
-Gets an existing variable with these parameters or create a new one.
+获取具有这些参数的现有变量或创建新变量。
 
 ```
  tf.compat.v1.get_variable(    name,    shape=None,    dtype=None,    initializer=None,    regularizer=None,    trainable=None,    collections=None,    caching_device=None,    partitioner=None,    validate_shape=True,    use_resource=None,    custom_getter=None,    constraint=None,    synchronization=tf.VariableSynchronization.AUTO,    aggregation=tf.compat.v1.VariableAggregation.NONE) 
@@ -26,7 +26,7 @@ If a partitioner is provided, a  `PartitionedVariable`  is returned.Accessing th
 
 Some useful partitioners are available.  See, e.g., `variable_axis_size_partitioner`  and  `min_max_variable_partitioner` .
 
-#### Args:
+#### 参数：
 - **`name`** : The name of the new or existing variable.
 - **`shape`** : Shape of the new or existing variable.
 - **`dtype`** : Type of the new or existing variable (defaults to  `DT_FLOAT` ).
@@ -52,8 +52,8 @@ Some useful partitioners are available.  See, e.g., `variable_axis_size_partitio
 - **`aggregation`** : Indicates how a distributed variable will be aggregated.Accepted values are constants defined in the class[ `tf.VariableAggregation` ](https://tensorflow.google.cn/api_docs/python/tf/VariableAggregation).
 
 
-#### Returns:
+#### 返回：
 The created or existing  `Variable`  (or  `PartitionedVariable` , if apartitioner was used).
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : when creating a new variable and shape is not declared,when violating reuse during variable creation, or when  `initializer`  dtypeand  `dtype`  don't match. Reuse is set inside  `variable_scope` .

@@ -1,6 +1,6 @@
-Performs greedy decoding on the logits given in input (best path).
+对输入（最佳路径）中给定的登录执行贪婪解码。
 
-**Aliases** : [ `tf.compat.v1.nn.ctc_greedy_decoder` ](/api_docs/python/tf/nn/ctc_greedy_decoder), [ `tf.compat.v2.nn.ctc_greedy_decoder` ](/api_docs/python/tf/nn/ctc_greedy_decoder)
+**别名** : [ `tf.compat.v1.nn.ctc_greedy_decoder` ](/api_docs/python/tf/nn/ctc_greedy_decoder), [ `tf.compat.v2.nn.ctc_greedy_decoder` ](/api_docs/python/tf/nn/ctc_greedy_decoder)
 
 ```
  tf.nn.ctc_greedy_decoder(
@@ -19,13 +19,13 @@ If  `merge_repeated`  is  `True` , merge repeated classes in output.This means t
 -  `A B B B B`  if  `merge_repeated=False` .
 
 
-#### Args:
+#### 参数：
 - **`inputs`** : 3-D  `float`   `Tensor`  sized  `[max_time, batch_size, num_classes]` .The logits.
 - **`sequence_length`** : 1-D  `int32`  vector containing sequence lengths, having size `[batch_size]` .
 - **`merge_repeated`** : Boolean.  Default: True.
 
 
-#### Returns:
+#### 返回：
 A tuple  `(decoded, neg_sum_logits)`  where
 
 - **`decoded`** : A single-element list.  `decoded[0]` is an  `SparseTensor`  containing the decoded outputs s.t.:

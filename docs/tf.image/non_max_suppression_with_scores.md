@@ -1,6 +1,6 @@
-Greedily selects a subset of bounding boxes in descending order of score.
+贪婪地按分数降序选择边界框的子集。
 
-**Aliases** : [ `tf.compat.v1.image.non_max_suppression_with_scores` ](/api_docs/python/tf/image/non_max_suppression_with_scores), [ `tf.compat.v2.image.non_max_suppression_with_scores` ](/api_docs/python/tf/image/non_max_suppression_with_scores)
+**别名** : [ `tf.compat.v1.image.non_max_suppression_with_scores` ](/api_docs/python/tf/image/non_max_suppression_with_scores), [ `tf.compat.v2.image.non_max_suppression_with_scores` ](/api_docs/python/tf/image/non_max_suppression_with_scores)
 
 ```
  tf.image.non_max_suppression_with_scores(
@@ -29,7 +29,7 @@ This function generalizes the [ `tf.image.non_max_suppression` ](https://tensorf
 
 To enable this Soft-NMS mode, set the  `soft_nms_sigma`  parameter to belarger than 0.  When  `soft_nms_sigma`  equals 0, the behavior of `tf.image.non_max_suppression_v2`  is identical to that of[ `tf.image.non_max_suppression` ](https://tensorflow.google.cn/api_docs/python/tf/image/non_max_suppression) (except for the extra output) both in functionand in running time.
 
-#### Args:
+#### 参数：
 - **`boxes`** : A 2-D float  `Tensor`  of shape  `[num_boxes, 4]` .
 - **`scores`** : A 1-D float  `Tensor`  of shape  `[num_boxes]`  representing a singlescore corresponding to each box (each row of boxes).
 - **`max_output_size`** : A scalar integer  `Tensor`  representing the maximum numberof boxes to be selected by non max suppression.
@@ -39,6 +39,6 @@ To enable this Soft-NMS mode, set the  `soft_nms_sigma`  parameter to belarger t
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`selected_indices`** : A 1-D integer  `Tensor`  of shape  `[M]`  representing theselected indices from the boxes tensor, where  `M <= max_output_size` .
 - **`selected_scores`** : A 1-D float tensor of shape  `[M]`  representing thecorresponding scores for each selected box, where  `M <= max_output_size` .Scores only differ from corresponding input scores when using Soft NMS(i.e. when  `soft_nms_sigma>0` )

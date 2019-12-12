@@ -1,7 +1,7 @@
 
 
 ## Class  `SparseConditionalAccumulator` 
-A conditional accumulator for aggregating sparse gradients.
+聚集稀疏梯度的条件累加器。
 
 Inherits From: [ `ConditionalAccumulatorBase` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ConditionalAccumulatorBase)
 
@@ -11,7 +11,7 @@ Up-to-date gradients (i.e., time step at which gradient was computed isequal to 
 
 Extraction of the average gradient is blocked until the required number ofgradients has been accumulated.
 
-#### Args:
+#### 参数：
 - **`dtype`** : Datatype of the accumulated gradients.
 - **`shape`** : Shape of the accumulated gradients.
 - **`shared_name`** : Optional. If non-empty, this accumulator will be shared underthe given name across multiple sessions.
@@ -33,27 +33,27 @@ Extraction of the average gradient is blocked until the required number ofgradie
  
 ```
 
-Creates a new ConditionalAccumulator.
+创建新的条件累加器。
 
-#### Args:
+#### 参数：
 - **`dtype`** : Datatype of the accumulated gradients.
 - **`shape`** : Shape of the accumulated gradients.
 - **`accumulator_ref`** : A handle to the conditional accumulator, created by sub-classes
 
 
-## Properties
+## 属性
 
 
 ###  `accumulator_ref` 
-The underlying accumulator reference.
+基础累加器引用。
 
 ###  `dtype` 
-The datatype of the gradients accumulated by this accumulator.
+此累加器累积的渐变的数据类型。
 
 ###  `name` 
-The name of the underlying accumulator.
+基础累加器的名称。
 
-## Methods
+## 方法
 
 
 ###  `apply_grad` 
@@ -70,16 +70,16 @@ The name of the underlying accumulator.
  
 ```
 
-Attempts to apply a sparse gradient to the accumulator.
+尝试对累加器应用稀疏渐变。
 
 The attempt is silently dropped if the gradient is stale, i.e.,  `local_step` is less than the accumulator's global time step.
 
 A sparse gradient is represented by its indices, values and possibly emptyor None shape. Indices must be a vector representing the locations ofnon-zero entries in the tensor. Values are the non-zero slices of thegradient, and must have the same first dimension as indices, i.e., the nnzrepresented by indices and values must be consistent. Shape, if not empty orNone, must be consistent with the accumulator's shape (if also provided).
 
-#### Example:
+#### 示例：
 A tensor [[0, 0], [0, 1], [2, 3]] can be represented  indices: [1,2]  values: [[0,1],[2,3]]  shape: [3, 2]
 
-#### Args:
+#### 参数：
 - **`grad_indices`** : Indices of the sparse gradient to be applied.
 - **`grad_values`** : Values of the sparse gradient to be applied.
 - **`grad_shape`** : Shape of the sparse gradient to be applied.
@@ -87,10 +87,10 @@ A tensor [[0, 0], [0, 1], [2, 3]] can be represented  indices: [1,2]  values: [[
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
-The operation that (conditionally) applies a gradient to the accumulator.
+#### 返回：
+（有条件地）对累加器应用梯度的操作。
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : If grad is of the wrong shape
 
 
@@ -106,20 +106,20 @@ The operation that (conditionally) applies a gradient to the accumulator.
  
 ```
 
-Attempts to apply a gradient to the accumulator.
+尝试对累加器应用渐变。
 
 The attempt is silently dropped if the gradient is stale, i.e.,  `local_step` is less than the accumulator's global time step.
 
-#### Args:
+#### 参数：
 - **`grad`** : The gradient  `IndexedSlices`  to be applied.
 - **`local_step`** : Time step at which the gradient was computed.
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
-The operation that (conditionally) applies a gradient to the accumulator.
+#### 返回：
+（有条件地）对累加器应用梯度的操作。
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : If grad is of the wrong shape
 
 
@@ -131,14 +131,14 @@ The operation that (conditionally) applies a gradient to the accumulator.
  
 ```
 
-Number of gradients that have currently been aggregated in accumulator.
+当前已在累加器中聚合的渐变数。
 
-#### Args:
+#### 参数：
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
-Number of accumulated gradients currently in accumulator.
+#### 返回：
+累加器中当前累积的渐变数。
 
 ###  `set_global_step` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/data_flow_ops.py#L1537-L1553)
@@ -151,17 +151,17 @@ Number of accumulated gradients currently in accumulator.
  
 ```
 
-Sets the global time step of the accumulator.
+设置累加器的全局时间步长。
 
 The operation logs a warning if we attempt to set to a time step that islower than the accumulator's own time step.
 
-#### Args:
+#### 参数：
 - **`new_global_step`** : Value of new time step. Can be a variable or a constant
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
-Operation that sets the accumulator's time step.
+#### 返回：
+设置累加器时间步长的操作。
 
 ###  `take_grad` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/data_flow_ops.py#L1469-L1491)
@@ -174,7 +174,7 @@ Operation that sets the accumulator's time step.
  
 ```
 
-Attempts to extract the average gradient from the accumulator.
+尝试从累加器中提取平均梯度。
 
 The operation blocks until sufficient number of gradients have beensuccessfully applied to the accumulator.
 
@@ -185,15 +185,15 @@ Once successful, the following actions are also triggered:
 - Accumulator's internal time step is incremented by 1.
 
 
-#### Args:
+#### 参数：
 - **`num_required`** : Number of gradients that needs to have been aggregated
 - **`name`** : Optional name for the operation
 
 
-#### Returns:
+#### 返回：
 A tuple of indices, values, and shape representing the average gradient.
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : If  `num_required`  < 1
 
 
@@ -208,7 +208,7 @@ A tuple of indices, values, and shape representing the average gradient.
  
 ```
 
-Attempts to extract the average gradient from the accumulator.
+尝试从累加器中提取平均梯度。
 
 The operation blocks until sufficient number of gradients have beensuccessfully applied to the accumulator.
 
@@ -219,13 +219,13 @@ Once successful, the following actions are also triggered:
 - Accumulator's internal time step is incremented by 1.
 
 
-#### Args:
+#### 参数：
 - **`num_required`** : Number of gradients that needs to have been aggregated
 - **`name`** : Optional name for the operation
 
 
-#### Returns:
+#### 返回：
 An  `IndexedSlices`  holding the value of the average gradient.
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : If  `num_required`  < 1

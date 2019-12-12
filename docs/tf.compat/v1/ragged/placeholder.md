@@ -14,15 +14,15 @@ Creates a placeholder for a [ `tf.RaggedTensor` ](https://tensorflow.google.cn/a
 
 @compatibility{eager} Placeholders are not compatible with eager execution.
 
-#### Args:
+#### 参数：
 - **`dtype`** : The data type for the  `RaggedTensor` .
 - **`ragged_rank`** : The ragged rank for the  `RaggedTensor` 
 - **`value_shape`** : The shape for individual flat values in the  `RaggedTensor` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `RaggedTensor`  that may be used as a handle for feeding a value, butnot evaluated directly.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : if eager execution is enabled

@@ -27,7 +27,7 @@ Although in many cases it's not necessary to understand all of the many ways    
 
 More information about SavedModel and signatures can be found here:https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/saved_model/README.md.
 
-#### Args:
+#### 参数：
 - **`session`** : The TensorFlow session from which to save the meta graph andvariables.
 - **`export_dir`** : The path to which the SavedModel will be stored.
 - **`inputs`** : dict mapping string input names to tensors. These are addedto the SignatureDef as the inputs.

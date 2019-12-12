@@ -16,7 +16,7 @@ Max Pooling layer for 1D inputs. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use keras.layers.MaxPooling1D instead.
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : The tensor over which to pool. Must have rank 3.
 - **`pool_size`** : An integer or tuple/list of a single integer,representing the size of the pooling window.
 - **`strides`** : An integer or tuple/list of a single integer, specifying thestrides of the pooling operation.
@@ -25,8 +25,8 @@ Max Pooling layer for 1D inputs. (deprecated)
 - **`name`** : A string, the name of the layer.
 
 
-#### Returns:
+#### 返回：
 The output tensor, of rank 3.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

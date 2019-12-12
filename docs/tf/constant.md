@@ -1,4 +1,4 @@
-Creates a constant tensor.
+创建常量张量。
 
 ```
  tf.constant(
@@ -10,7 +10,7 @@ Creates a constant tensor.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
@@ -18,7 +18,7 @@ Creates a constant tensor.
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 - [Unicode strings](https://tensorflow.google.cn/tutorials/load_data/unicode)
@@ -32,7 +32,7 @@ The argument  `shape`  is optional. If present, it specifies the dimensions ofth
 
 If the argument  `dtype`  is not specified, then the type is inferred fromthe type of  `value` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -56,7 +56,7 @@ tensor = tf.constant(-1.0, shape=[2, 3]) => [[-1. -1. -1.]
 - Because [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) only embeds constant values in the graph, it doesnot support dynamic shapes based on other runtime Tensors, whereas[ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill) does.
 
 
-#### Args:
+#### 参数：
 - **`value`** :          A constant value (or list) of output type  `dtype` .
 
 
@@ -69,8 +69,8 @@ tensor = tf.constant(-1.0, shape=[2, 3]) => [[-1. -1. -1.]
 - **`name`** :           Optional name for the tensor.
 
 
-#### Returns:
-A Constant Tensor.
+#### 返回：
+恒定张量
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if shape is incorrectly specified or unsupported.

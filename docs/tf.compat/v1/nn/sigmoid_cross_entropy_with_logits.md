@@ -42,15 +42,15 @@ Hence, to ensure stability and avoid overflow, the implementation uses thisequiv
 
  `logits`  and  `labels`  must have the same type and shape.
 
-#### Args:
+#### 参数：
 - **`_sentinel`** : Used to prevent positional parameters. Internal, do not use.
 - **`labels`** : A  `Tensor`  of the same type and shape as  `logits` .
 - **`logits`** : A  `Tensor`  of type  `float32`  or  `float64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same shape as  `logits`  with the componentwiselogistic losses.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `logits`  and  `labels`  do not have the same shape.

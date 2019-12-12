@@ -8,7 +8,7 @@ Functional interface for the depthwise separable 1D convolution layer. (deprecat
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.keras.layers.SeparableConv1D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/SeparableConv1D) instead.
 This layer performs a depthwise convolution that acts separately onchannels, followed by a pointwise convolution that mixes channels.If  `use_bias`  is True and a bias initializer is provided,it adds a bias vector to the output.It then optionally applies an activation function to produce the final output.
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Input tensor.
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : A single integer specifying the spatialdimensions of the filters.
@@ -34,8 +34,8 @@ This layer performs a depthwise convolution that acts separately onchannels, fol
 - **`reuse`** : Boolean, whether to reuse the weights of a previous layerby the same name.
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if eager execution is enabled.

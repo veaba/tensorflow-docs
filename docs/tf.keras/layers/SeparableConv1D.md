@@ -1,13 +1,13 @@
 
 
 ## Class  `SeparableConv1D` 
-Depthwise separable 1D convolution.
+可分离的一维反褶积。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.SeparableConv1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.compat.v1.keras.layers.SeparableConvolution1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.compat.v2.keras.layers.SeparableConv1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.compat.v2.keras.layers.SeparableConvolution1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.keras.layers.SeparableConvolution1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D)
+**别名** : [ `tf.compat.v1.keras.layers.SeparableConv1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.compat.v1.keras.layers.SeparableConvolution1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.compat.v2.keras.layers.SeparableConv1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.compat.v2.keras.layers.SeparableConvolution1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D), [ `tf.keras.layers.SeparableConvolution1D` ](/api_docs/python/tf/keras/layers/SeparableConv1D)
 
 This layer performs a depthwise convolution that acts separately onchannels, followed by a pointwise convolution that mixes channels.If  `use_bias`  is True and a bias initializer is provided,it adds a bias vector to the output.It then optionally applies an activation function to produce the final output.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : A single integer specifying the spatialdimensions of the filters.
 - **`strides`** : A single integer specifying the stridesof the convolution.Specifying any  `stride`  value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.

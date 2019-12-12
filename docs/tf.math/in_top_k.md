@@ -2,7 +2,7 @@
 
 Says whether the targets are in the top  `K`  predictions.
 
-**Aliases** : [ `tf.compat.v2.math.in_top_k` ](/api_docs/python/tf/math/in_top_k), [ `tf.compat.v2.nn.in_top_k` ](/api_docs/python/tf/math/in_top_k), [ `tf.nn.in_top_k` ](/api_docs/python/tf/math/in_top_k)
+**别名** : [ `tf.compat.v2.math.in_top_k` ](/api_docs/python/tf/math/in_top_k), [ `tf.compat.v2.nn.in_top_k` ](/api_docs/python/tf/math/in_top_k), [ `tf.nn.in_top_k` ](/api_docs/python/tf/math/in_top_k)
 
 ```
  tf.math.in_top_k(
@@ -24,13 +24,13 @@ predictionsi be the predictions for all classes for example  `i` ,  targetsi be 
 outi=predictionsi,targetsi∈TopKIncludingTies(predictionsi)
 
 
-#### Args:
+#### 参数：
 - **`predictions`** : A  `Tensor`  of type  `float32` .A  `batch_size`  x  `classes`  tensor.
 - **`targets`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A  `batch_size`  vector of class ids.
 - **`k`** : An  `int` . Number of top elements to look at for computing precision.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `bool` . Computed Precision at  `k`  as a  `bool Tensor` .
 

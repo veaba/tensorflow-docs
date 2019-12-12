@@ -1,6 +1,6 @@
 Unpacks the given dimension of a rank- `R`  tensor into rank- `(R-1)`  tensors.
 
-**Aliases** : [ `tf.compat.v1.unstack` ](/api_docs/python/tf/unstack), [ `tf.compat.v2.unstack` ](/api_docs/python/tf/unstack)
+**别名** : [ `tf.compat.v1.unstack` ](/api_docs/python/tf/unstack), [ `tf.compat.v2.unstack` ](/api_docs/python/tf/unstack)
 
 ```
  tf.unstack(
@@ -20,18 +20,18 @@ If  `axis == 0`  then the i'th tensor in  `output`  is the slice   `value[i, :, 
 
 If  `axis == 1`  then the i'th tensor in  `output`  is the slice   `value[:, i, :, :]`  and each tensor in  `output`  will have shape  `(A, C, D)` .Etc.
 
-This is the opposite of stack.
+这与stack相反。
 
-#### Args:
+#### 参数：
 - **`value`** : A rank  `R > 0`   `Tensor`  to be unstacked.
 - **`num`** : An  `int` . The length of the dimension  `axis` . Automatically inferred if `None`  (the default).
 - **`axis`** : An  `int` . The axis to unstack along. Defaults to the first dimension.Negative values wrap around, so the valid range is  `[-R, R)` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The list of  `Tensor`  objects unstacked from  `value` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `num`  is unspecified and cannot be inferred.
 - **`ValueError`** : If  `axis`  is out of the range [-R, R).

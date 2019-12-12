@@ -1,9 +1,9 @@
 
 
 ## Class  `InputContext` 
-A class wrapping information needed by an input function.
+输入函数所需的类包装信息。
 
-**Aliases** : [ `tf.compat.v1.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext), [ `tf.compat.v2.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext)
+**别名** : [ `tf.compat.v1.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext), [ `tf.compat.v2.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext)
 
 This is a context class that is passed to the user's input function andcontains information about the compute replicas and input pipelines. Thenumber of compute replicas (in sync training) helps compute the local batchsize from the desired global batch size for each replica. The input pipelineinformation can be used to return a different subset of the input in eachreplica (for e.g. shard the input pipeline, use a different inputsource etc).
 
@@ -19,27 +19,27 @@ This is a context class that is passed to the user's input function andcontains 
  
 ```
 
-Initializes an InputContext object.
+初始化inputcontext对象。
 
-#### Args:
+#### 参数：
 - **`num_input_pipelines`** : the number of input pipelines in a cluster.
 - **`input_pipeline_id`** : the current input pipeline id, should be an int in[0, `num_input_pipelines` ).
 - **`num_replicas_in_sync`** : the number of replicas that are in sync.
 
 
-## Properties
+## 属性
 
 
 ###  `input_pipeline_id` 
-Returns the input pipeline ID.
+返回输入管道ID。
 
 ###  `num_input_pipelines` 
 Returns the number of input pipelines.
 
 ###  `num_replicas_in_sync` 
-Returns the number of compute replicas in sync.
+返回同步的计算副本数。
 
-## Methods
+## 方法
 
 
 ###  `get_per_replica_batch_size` 
@@ -52,12 +52,12 @@ Returns the number of compute replicas in sync.
 
 Returns the per-replica batch size.
 
-#### Args:
+#### 参数：
 - **`global_batch_size`** : the global batch size which should be divisible by `num_replicas_in_sync` .
 
 
-#### Returns:
+#### 返回：
 the per-replica batch size.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `global_batch_size`  not divisible by `num_replicas_in_sync` .

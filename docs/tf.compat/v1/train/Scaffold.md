@@ -1,9 +1,9 @@
 
 
 ## Class  `Scaffold` 
-Structure to create or gather pieces commonly needed to train a model.
+用于创建或收集训练模型通常需要的片段的结构。
 
-### Used in the guide:
+### 在指南中使用：
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
 When you build a model for training you usually need ops to initializevariables, a  `Saver`  to checkpoint them, an op to collect summaries forthe visualizer, and so on.
 
@@ -19,7 +19,7 @@ The following pieces are directly accessible as attributes of the  `Scaffold` ob
 -  `ready_for_local_init_op` : An op to verify that global state has beeninitialized and it is alright to run  `local_init_op` .  Picked from andstored into the  `READY_FOR_LOCAL_INIT_OP`  collection in the graph bydefault. This is needed when the initialization of local variables dependson the values of global variables.
 -  `local_init_op` : An op to initialize the local variables.  Pickedfrom and stored into the  `LOCAL_INIT_OP`  collection in the graph by default.
 -  `summary_op` : An op to run and merge the summaries in the graph.  Pickedfrom and stored into the  `SUMMARY_OP`  collection in the graph by default.
-You can also pass the following additional pieces to the constructor:
+您还可以将以下附加部分传递给构造函数：
 
 -  `init_feed_dict` : A session feed dictionary that should be used whenrunning the init op.
 -  `init_fn` : A callable to run after the init op to perform additionalinitializations.  The callable will be called as `init_fn(scaffold, session)` .
@@ -43,9 +43,9 @@ You can also pass the following additional pieces to the constructor:
  
 ```
 
-Create a scaffold.
+创建脚手架。
 
-#### Args:
+#### 参数：
 - **`init_op`** : Optional op for initializing variables.
 - **`init_feed_dict`** : Optional session feed dictionary to use when running theinit_op.
 - **`init_fn`** : Optional function to use to initialize the model after runningthe init_op.  Will be called as  `init_fn(scaffold, session)` .
@@ -57,7 +57,7 @@ Create a scaffold.
 - **`copy_from_scaffold`** : Optional scaffold object to copy fields from. Itsfields will be overwritten by the provided fields in this function.
 
 
-## Properties
+## 属性
 
 
 ###  `init_feed_dict` 
@@ -84,7 +84,7 @@ Create a scaffold.
 ###  `summary_op` 
 
 
-## Methods
+## 方法
 
 
 ###  `default_local_init_op` 
@@ -96,12 +96,12 @@ default_local_init_op()
  
 ```
 
-Returns an op that groups the default local init ops.
+返回对默认本地初始化操作进行分组的操作。
 
 This op is used during session initialization when a Scaffold isinitialized without specifying the local_init_op arg. It includes[ `tf.compat.v1.local_variables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/local_variables_initializer),[ `tf.compat.v1.tables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tables_initializer), and alsoinitializes local session resources.
 
-#### Returns:
-The default Scaffold local init op.
+#### 返回：
+默认的scaffold局部初始化操作。
 
 ###  `finalize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L184-L241)
@@ -111,7 +111,7 @@ The default Scaffold local init op.
  
 ```
 
-Creates operations if needed and finalizes the graph.
+根据需要创建操作并完成图形。
 
 ###  `get_or_default` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L275-L290)
@@ -126,5 +126,5 @@ get_or_default(
  
 ```
 
-Get from cache or create a default operation.
+从缓存获取或创建默认操作。
 

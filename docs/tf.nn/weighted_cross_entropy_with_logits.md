@@ -1,10 +1,10 @@
-Computes a weighted cross entropy.
+计算加权交叉熵。
 
 ```
  tf.nn.weighted_cross_entropy_with_logits(    labels,    logits,    pos_weight,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 This is like  `sigmoid_cross_entropy_with_logits()`  except that  `pos_weight` ,allows one to trade off recall and precision by up- or down-weighting thecost of a positive error relative to a negative error.
 
@@ -45,15 +45,15 @@ Setting  `l = (1 + (q - 1) * z)` , to ensure stability and avoid overflow,the im
 
  `logits`  and  `labels`  must have the same type and shape.
 
-#### Args:
+#### 参数：
 - **`labels`** : A  `Tensor`  of the same type and shape as  `logits` .
 - **`logits`** : A  `Tensor`  of type  `float32`  or  `float64` .
 - **`pos_weight`** : A coefficient to use on the positive examples.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same shape as  `logits`  with the componentwiseweighted logistic losses.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `logits`  and  `labels`  do not have the same shape.

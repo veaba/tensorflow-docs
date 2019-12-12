@@ -10,6 +10,6 @@ When building a complex model that uses many queues it is often difficult togath
 
 The companion method  `start_queue_runners()`  can be used to start threads forall the collected queue runners.
 
-#### Args:
+#### 参数：
 - **`qr`** : A  `QueueRunner` .
 - **`collection`** : A  `GraphKey`  specifying the graph collection to addthe queue runner to.  Defaults to  `GraphKeys.QUEUE_RUNNERS` .

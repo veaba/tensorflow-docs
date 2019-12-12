@@ -1,6 +1,6 @@
 3D Pooling.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.pool3d` ](/api_docs/python/tf/keras/backend/pool3d), [ `tf.compat.v2.keras.backend.pool3d` ](/api_docs/python/tf/keras/backend/pool3d)
+**别名** : [ `tf.compat.v1.keras.backend.pool3d` ](/api_docs/python/tf/keras/backend/pool3d), [ `tf.compat.v2.keras.backend.pool3d` ](/api_docs/python/tf/keras/backend/pool3d)
 
 ```
  tf.keras.backend.pool3d(
@@ -14,7 +14,7 @@
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`pool_size`** : tuple of 3 integers.
 - **`strides`** : tuple of 3 integers.
@@ -23,9 +23,9 @@
 - **`pool_mode`** : string,  `"max"`  or  `"avg"` .
 
 
-#### Returns:
+#### 返回：
 A tensor, result of 3D pooling.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `data_format`  is neither  `"channels_last"`  or `"channels_first"` .
 - **`ValueError`** : if  `pool_mode`  is neither  `"max"`  or  `"avg"` .

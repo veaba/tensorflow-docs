@@ -1,37 +1,37 @@
 
 
 ## Class  `Bidirectional` 
-Bidirectional wrapper for RNNs.
+RNN的双向包装。
 
 Inherits From: [ `Wrapper` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Wrapper)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Bidirectional` ](/api_docs/python/tf/keras/layers/Bidirectional), [ `tf.compat.v2.keras.layers.Bidirectional` ](/api_docs/python/tf/keras/layers/Bidirectional)
+**别名** : [ `tf.compat.v1.keras.layers.Bidirectional` ](/api_docs/python/tf/keras/layers/Bidirectional), [ `tf.compat.v2.keras.layers.Bidirectional` ](/api_docs/python/tf/keras/layers/Bidirectional)
 
-### Used in the guide:
+### 在指南中使用：
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Text classification with an RNN](https://tensorflow.google.cn/tutorials/text/text_classification_rnn)
 - [Load text](https://tensorflow.google.cn/tutorials/load_data/text)
 
 
-#### Arguments:
+#### 参数：
 - **`layer`** :  `Recurrent`  instance.
 - **`merge_mode`** : Mode by which outputs of theforward and backward RNNs will be combined.One of {'sum', 'mul', 'concat', 'ave', None}.If None, the outputs will not be combined,they will be returned as a list.
 - **`backward_layer`** : Optional  `Recurrent`  instance to be used to handlebackwards input processing. If  `backward_layer`  is not provided,the layer instance passed as the  `layer`  argument will be used togenerate the backward layer automatically.Note that the provided  `backward_layer`  layer should have propertiesmatching those of the  `layer`  argument, in particular it should have thesame values for  `stateful` ,  `return_states` ,  `return_sequence` , etc.In addition,  `backward_layer`  and  `layer`  should havedifferent  `go_backwards`  argument values.A  `ValueError`  will be raised if these requirements are not met.
 
 
-#### Call arguments:
+#### 调用参数：
 The call arguments for this layer are the same as those of the wrapped RNN  layer.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :   1. If  `layer`  or  `backward_layer`  is not a  `Layer`  instance.
     1. In case of invalid  `merge_mode`  argument.
     2. If  `backward_layer`  has mismatched properties compared to  `layer` .
 
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -69,13 +69,13 @@ model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `constraints` 
 
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 

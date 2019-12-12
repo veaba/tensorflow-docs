@@ -1,6 +1,6 @@
 Splits elements of a dataset into multiple elements on the batch dimension. (deprecated)
 
-**Aliases** : [ `tf.compat.v1.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch), [ `tf.compat.v2.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch)
+**别名** : [ `tf.compat.v1.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch), [ `tf.compat.v2.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch)
 
 ```
  tf.data.experimental.unbatch()
@@ -12,7 +12,7 @@ Splits elements of a dataset into multiple elements on the batch dimension. (dep
 For example, if elements of the dataset are shaped  `[B, a0, a1, ...]` ,where  `B`  may vary for each input element, then for each element in thedataset, the unbatched dataset will contain  `B`  consecutive elementsof shape  `[a0, a1, ...]` .
 
 ```
- # NOTE: The following example uses `{ ... }` to represent the contents
+ # 注意：The following example uses `{ ... }` to represent the contents
 # of a dataset.
 a = { ['a', 'b', 'c'], ['a', 'b'], ['a', 'b', 'c', 'd'] }
 
@@ -21,6 +21,6 @@ a.apply(tf.data.experimental.unbatch()) == {
  
 ```
 
-#### Returns:
+#### 返回：
 A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 

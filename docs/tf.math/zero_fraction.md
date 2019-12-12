@@ -1,6 +1,6 @@
 Returns the fraction of zeros in  `value` .
 
-**Aliases** : [ `tf.compat.v1.math.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.compat.v1.nn.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.compat.v2.math.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.compat.v2.nn.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.nn.zero_fraction` ](/api_docs/python/tf/math/zero_fraction)
+**别名** : [ `tf.compat.v1.math.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.compat.v1.nn.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.compat.v2.math.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.compat.v2.nn.zero_fraction` ](/api_docs/python/tf/math/zero_fraction), [ `tf.nn.zero_fraction` ](/api_docs/python/tf/math/zero_fraction)
 
 ```
  tf.math.zero_fraction(
@@ -20,11 +20,11 @@ This is useful in summaries to measure and report sparsity.  For example,
  
 ```
 
-#### Args:
+#### 参数：
 - **`value`** : A tensor of numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The fraction of zeros in  `value` , with type  `float32` .
 

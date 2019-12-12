@@ -18,7 +18,7 @@ If  `reduction_axes`  has no entries, all dimensions are reduced, and a tensorwi
 
 The values not defined in  `sp_input`  don't participate in the reduce max,as opposed to be implicitly assumed 0 -- hence it can return negative valuesfor sparse  `reduction_axes` . But, in case there are no values in `reduction_axes` , it will reduce to 0. See second example below.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -38,7 +38,7 @@ tf.sparse.reduce_max(x, 1) ==> [-7, 4, 0]
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The SparseTensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce; list or scalar. If  `None`  (thedefault), reduces all dimensions.
 - **`keepdims`** : If true, retain reduced dimensions with length 1.
@@ -46,6 +46,6 @@ tf.sparse.reduce_max(x, 1) ==> [-7, 4, 0]
 - **`keep_dims`** :  Deprecated alias for  `keepdims` .
 
 
-#### Returns:
-The reduced Tensor.
+#### 返回：
+简化张量。
 

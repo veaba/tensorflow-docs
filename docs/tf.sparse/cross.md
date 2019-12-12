@@ -1,6 +1,6 @@
-Generates sparse cross from a list of sparse and dense tensors.
+从稀疏和稠密张量列表生成稀疏交叉。
 
-**Aliases** : [ `tf.compat.v1.sparse.cross` ](/api_docs/python/tf/sparse/cross), [ `tf.compat.v2.sparse.cross` ](/api_docs/python/tf/sparse/cross)
+**别名** : [ `tf.compat.v1.sparse.cross` ](/api_docs/python/tf/sparse/cross), [ `tf.compat.v2.sparse.cross` ](/api_docs/python/tf/sparse/cross)
 
 ```
  tf.sparse.cross(
@@ -24,7 +24,7 @@ For example, if the inputs are
  
 ```
 
-then the output will be:
+那么输出将是：
 
 ```
  shape = [2, 2]
@@ -34,11 +34,11 @@ then the output will be:
  
 ```
 
-#### Args:
+#### 参数：
 - **`inputs`** : An iterable of  `Tensor`  or  `SparseTensor` .
 - **`name`** : Optional name for the op.
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  of type  `string` .
 

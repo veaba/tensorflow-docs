@@ -1,8 +1,8 @@
 
 
-Computes the minimum along segments of a tensor.
+沿张量的线段计算最小值。
 
-**Aliases** : [ `tf.compat.v1.math.unsorted_segment_min` ](/api_docs/python/tf/math/unsorted_segment_min), [ `tf.compat.v1.unsorted_segment_min` ](/api_docs/python/tf/math/unsorted_segment_min), [ `tf.compat.v2.math.unsorted_segment_min` ](/api_docs/python/tf/math/unsorted_segment_min)
+**别名** : [ `tf.compat.v1.math.unsorted_segment_min` ](/api_docs/python/tf/math/unsorted_segment_min), [ `tf.compat.v1.unsorted_segment_min` ](/api_docs/python/tf/math/unsorted_segment_min), [ `tf.compat.v2.math.unsorted_segment_min` ](/api_docs/python/tf/math/unsorted_segment_min)
 
 ```
  tf.math.unsorted_segment_min(
@@ -22,7 +22,7 @@ outputi=minj...data[j...] where min is over tuples  `j...`  suchthat  `segment_i
 
 If the minimum is empty for a given segment ID  `i` , it outputs the largestpossible value for the specific numeric type, `output[i] = numeric_limits<T>::max()` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -35,13 +35,13 @@ tf.unsorted_segment_min(c, tf.constant([0, 1, 0]), num_segments=2)
 
 If the given segment ID  `i`  is negative, then the corresponding value isdropped, and will not be included in the result.
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `int64` ,  `bfloat16` ,  `uint16` ,  `half` ,  `uint32` ,  `uint64` .
 - **`segment_ids`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor whose shape is a prefix of  `data.shape` .
 - **`num_segments`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `data` .
 

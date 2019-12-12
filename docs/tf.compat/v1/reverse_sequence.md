@@ -1,4 +1,4 @@
-Reverses variable length slices.
+反转可变长度切片。
 
 ```
  tf.compat.v1.reverse_sequence(    input,    seq_lengths,    seq_axis=None,    batch_axis=None,    name=None,    seq_dim=None,    batch_dim=None) 
@@ -10,7 +10,7 @@ The elements of  `seq_lengths`  must obey  `seq_lengths[i] <= input.dims[seq_dim
 
 The output slice  `i`  along dimension  `batch_axis`  is then given by inputslice  `i` , with the first  `seq_lengths[i]`  slices along dimension `seq_axis`  reversed.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -57,7 +57,7 @@ output[2:, :, 3, :, ...] = input[2:, :, 3, :, ...]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . The input to reverse.
 - **`seq_lengths`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .1-D with length  `input.dims(batch_dim)`  and `max(seq_lengths) <= input.dims(seq_dim)` 
 - **`seq_axis`** : An  `int` . The dimension which is partially reversed.
@@ -65,6 +65,6 @@ output[2:, :, 3, :, ...] = input[2:, :, 3, :, ...]
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

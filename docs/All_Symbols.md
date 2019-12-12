@@ -1,6 +1,6 @@
 
 
-## Primary symbols
+## 主要符号
 - [ `tf` ](https://tensorflow.google.cn/api_docs/python/tf)
 - [ `tf.AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod)
 - [ `tf.Assert` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert)
@@ -1949,7 +1949,7 @@
 - [ `tf.zeros_like` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_like)
 
 
-## Compat v2 symbols
+## 兼容v2符号
 - [ `tf.compat.v2` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2)
 - [ `tf.compat.v2.AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod)
 - [ `tf.compat.v2.Assert` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert)
@@ -3899,7 +3899,7 @@
 - [ `tf.compat.v2.zeros_like` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_like)
 
 
-## Compat v1 symbols
+## 兼容v1符号
 - [ `tf.compat.v1` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1)
 - [ `tf.compat.v1.AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod)
 - [ `tf.compat.v1.Assert` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert)

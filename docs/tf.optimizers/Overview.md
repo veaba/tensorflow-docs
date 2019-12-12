@@ -1,9 +1,9 @@
 Built-in optimizer classes.
 
-## Modules
+## 模块
 [ `schedules` ](https://tensorflow.google.cn/api_docs/python/tf/optimizers/schedules) module: Public API for tf.keras.optimizers.schedules namespace.
 
-## Classes
+## Class 
 [ `class Adadelta` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adadelta): Optimizer that implements the Adadelta algorithm.
 
 [ `class Adagrad` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adagrad): Optimizer that implements the Adagrad algorithm.
@@ -22,7 +22,7 @@ Built-in optimizer classes.
 
 [ `class SGD` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/SGD): Stochastic gradient descent and momentum optimizer.
 
-## Functions
+## 功能
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/deserialize): Inverse of the  `serialize`  function.
 
 [ `get(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/get): Retrieves a Keras Optimizer instance.

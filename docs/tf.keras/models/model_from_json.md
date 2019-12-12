@@ -1,6 +1,6 @@
-Parses a JSON model configuration file and returns a model instance.
+解析json模型配置文件并返回模型实例。
 
-**Aliases** : [ `tf.compat.v1.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json), [ `tf.compat.v2.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json)
+**别名** : [ `tf.compat.v1.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json), [ `tf.compat.v2.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json)
 
 ```
  tf.keras.models.model_from_json(
@@ -10,16 +10,16 @@ Parses a JSON model configuration file and returns a model instance.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Save and serialize models with Keras](https://tensorflow.google.cn/guide/keras/save_and_serialize)
 - [Keras overview](https://tensorflow.google.cn/guide/keras/overview)
 
 
-#### Arguments:
+#### 参数：
 - **`json_string`** : JSON string encoding a model configuration.
 - **`custom_objects`** : Optional dictionary mapping names(strings) to custom classes or functions to beconsidered during deserialization.
 
 
-#### Returns:
-A Keras model instance (uncompiled).
+#### 返回：
+Keras模型实例（未编译）。
 

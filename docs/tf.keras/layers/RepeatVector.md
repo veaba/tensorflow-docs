@@ -1,34 +1,34 @@
 
 
 ## Class  `RepeatVector` 
-Repeats the input n times.
+重复输入n次。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.RepeatVector` ](/api_docs/python/tf/keras/layers/RepeatVector), [ `tf.compat.v2.keras.layers.RepeatVector` ](/api_docs/python/tf/keras/layers/RepeatVector)
+**别名** : [ `tf.compat.v1.keras.layers.RepeatVector` ](/api_docs/python/tf/keras/layers/RepeatVector), [ `tf.compat.v2.keras.layers.RepeatVector` ](/api_docs/python/tf/keras/layers/RepeatVector)
 
-#### Example:
+#### 示例：
 
 
 ```
  model = Sequential()
 model.add(Dense(32, input_dim=32))
 # now: model.output_shape == (None, 32)
-# note: `None` is the batch dimension
+# 注意：`None` is the batch dimension
 
 model.add(RepeatVector(3))
 # now: model.output_shape == (None, 3, 32)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`n`** : Integer, repetition factor.
 
 
-#### Input shape:
+#### 输入形状：
 2D tensor of shape  `(num_samples, features)` .
 
-#### Output shape:
+#### 输出形状：
 3D tensor of shape  `(num_samples, n, features)` .
 
 ##  `__init__` 

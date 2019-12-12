@@ -1,4 +1,4 @@
-Create a case operation.
+创建案例操作。
 
 ```
  tf.compat.v1.case(
@@ -23,7 +23,7 @@ If an unordered dictionary is used for  `pred_fn_pairs` , the order of thecondit
 
 **Example 1:** 
 
-#### Pseudocode:
+#### 伪码：
 
 
 ```
@@ -32,7 +32,7 @@ else return 23;
  
 ```
 
-#### Expressions:
+#### 表达式：
 
 
 ```
@@ -44,7 +44,7 @@ r = tf.case([(tf.less(x, y), f1)], default=f2)
 
 **Example 2:** 
 
-#### Pseudocode:
+#### 伪码：
 
 
 ```
@@ -55,7 +55,7 @@ else return -1;
  
 ```
 
-#### Expressions:
+#### 表达式：
 
 
 ```
@@ -67,7 +67,7 @@ r = tf.case({tf.less(x, y): f1, tf.greater(x, z): f2},
  
 ```
 
-#### Args:
+#### 参数：
 - **`pred_fn_pairs`** : Dict or list of pairs of a boolean scalar tensor and acallable which returns a list of tensors.
 - **`default`** : Optional callable that returns a list of tensors.
 - **`exclusive`** : True iff at most one predicate is allowed to evaluate to  `True` .
@@ -75,15 +75,15 @@ r = tf.case({tf.less(x, y): f1, tf.greater(x, z): f2},
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 The tensors returned by the first pair whose predicate evaluated to True, orthose returned by  `default`  if none does.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `pred_fn_pairs`  is not a list/dictionary.
 - **`TypeError`** : If  `pred_fn_pairs`  is a list but does not contain 2-tuples.
 - **`TypeError`** : If  `fns[i]`  is not callable for any i, or  `default`  is not       callable.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Unordered dictionaries are not supported in eager mode when  `exclusive=False` .Use a list of tuples instead.
 

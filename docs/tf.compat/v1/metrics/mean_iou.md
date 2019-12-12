@@ -10,7 +10,7 @@ For estimation of the metric over a stream of data, the function creates an `upd
 
 If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask values.
 
-#### Args:
+#### 参数：
 - **`labels`** : A  `Tensor`  of ground truth labels with shape [batch size] and oftype  `int32`  or  `int64` . The tensor will be flattened if its rank > 1.
 - **`predictions`** : A  `Tensor`  of prediction results for semantic labels, whoseshape is [batch size] and type  `int32`  or  `int64` . The tensor will beflattened if its rank > 1.
 - **`num_classes`** : The possible number of labels the prediction task canhave. This value must be provided, since a confusion matrix ofdimension = [num_classes, num_classes] will be allocated.
@@ -20,11 +20,11 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 - **`name`** : An optional variable_scope name.
 
 
-#### Returns:
+#### 返回：
 - **`mean_iou`** : A  `Tensor`  representing the mean intersection-over-union.
 - **`update_op`** : An operation that increments the confusion matrix.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `predictions`  and  `labels`  have mismatched shapes, or if `weights`  is not  `None`  and its shape doesn't match  `predictions` , or ifeither  `metrics_collections`  or  `updates_collections`  are not a list ortuple.
 - **`RuntimeError`** : If eager execution is enabled.

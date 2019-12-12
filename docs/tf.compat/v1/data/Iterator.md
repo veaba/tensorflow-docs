@@ -17,13 +17,13 @@ Represents the state of iterating through a  `Dataset` .
  
 ```
 
-Creates a new iterator from the given iterator resource.
+从给定的迭代器资源创建新的迭代器。
 
 
 **Note:**  Most users will not call this initializer directly, and willinstead use  `Dataset.make_initializable_iterator()`  or `Dataset.make_one_shot_iterator()` .
 
 
-#### Args:
+#### 参数：
 - **`iterator_resource`** : A [ `tf.resource` ](https://tensorflow.google.cn/api_docs/python/tf#resource) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) representing theiterator.
 - **`initializer`** : A [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) that should be run to initialize thisiterator.
 - **`output_types`** : A nested structure of [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) objects corresponding toeach component of an element of this iterator.
@@ -31,22 +31,22 @@ Creates a new iterator from the given iterator resource.
 - **`output_classes`** : A nested structure of Python  `type`  objects correspondingto each component of an element of this iterator.
 
 
-## Properties
+## 属性
 
 
 ###  `element_spec` 
-The type specification of an element of this iterator.
+此迭代器的元素的类型规范。
 
-#### Returns:
+#### 返回：
 A nested structure of [ `tf.TypeSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TypeSpec) objects matching the structure of anelement of this iterator and specifying the type of individual components.
 
 ###  `initializer` 
 A [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) that should be run to initialize this iterator.
 
-#### Returns:
+#### 返回：
 A [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) that should be run to initialize this iterator
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If this iterator initializes itself automatically.
 
 
@@ -57,7 +57,7 @@ Returns the class of each component of an element of this iterator. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.compat.v1.data.get_output_classes(iterator)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/get_output_classes).
 The expected values are [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) and [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-#### Returns:
+#### 返回：
 A nested structure of Python  `type`  objects corresponding to eachcomponent of an element of this dataset.
 
 ###  `output_shapes` 
@@ -67,7 +67,7 @@ Returns the shape of each component of an element of this iterator. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.compat.v1.data.get_output_shapes(iterator)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/get_output_shapes).
 
 
-#### Returns:
+#### 返回：
 A nested structure of [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) objects corresponding to eachcomponent of an element of this dataset.
 
 ###  `output_types` 
@@ -77,10 +77,10 @@ Returns the type of each component of an element of this iterator. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.compat.v1.data.get_output_types(iterator)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/get_output_types).
 
 
-#### Returns:
+#### 返回：
 A nested structure of [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) objects corresponding to each componentof an element of this dataset.
 
-## Methods
+## 方法
 
 
 ###  `from_string_handle` 
@@ -122,14 +122,14 @@ test_loss = sess.run(loss, feed_dict={handle: test_iterator_handle})
  
 ```
 
-#### Args:
+#### 参数：
 - **`string_handle`** : A scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) of type [ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string) that evaluates toa handle produced by the  `Iterator.string_handle()`  method.
 - **`output_types`** : A nested structure of [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) objects corresponding toeach component of an element of this dataset.
 - **`output_shapes`** : (Optional.) A nested structure of [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) objectscorresponding to each component of an element of this dataset. Ifomitted, each component will have an unconstrainted shape.
 - **`output_classes`** : (Optional.) A nested structure of Python  `type`  objectscorresponding to each component of an element of this iterator. Ifomitted, each component is assumed to be of type [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor).
 
 
-#### Returns:
+#### 返回：
 An  `Iterator` .
 
 ###  `from_structure` 
@@ -152,7 +152,7 @@ This iterator-constructing method can be used to create an iterator thatis reusa
 
 The returned iterator is not bound to a particular dataset, and it hasno  `initializer` . To initialize the iterator, run the operation returned by `Iterator.make_initializer(dataset)` .
 
-The following is an example
+下面是一个例子
 
 ```
  iterator = Iterator.from_structure(tf.int64, tf.TensorShape([]))
@@ -189,17 +189,17 @@ for _ in range(num_epochs):
  
 ```
 
-#### Args:
+#### 参数：
 - **`output_types`** : A nested structure of [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) objects corresponding toeach component of an element of this dataset.
 - **`output_shapes`** : (Optional.) A nested structure of [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape) objectscorresponding to each component of an element of this dataset. Ifomitted, each component will have an unconstrainted shape.
 - **`shared_name`** : (Optional.) If non-empty, this iterator will be shared underthe given name across multiple sessions that share the same devices(e.g. when using a remote server).
 - **`output_classes`** : (Optional.) A nested structure of Python  `type`  objectscorresponding to each component of an element of this iterator. Ifomitted, each component is assumed to be of type [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor).
 
 
-#### Returns:
+#### 返回：
 An  `Iterator` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the structures of  `output_shapes`  and  `output_types`  arenot the same.
 
 
@@ -234,13 +234,13 @@ with tf.compat.v1.Session() as sess:
  
 ```
 
-NOTE: It is legitimate to call  `Iterator.get_next()`  multiple times, e.g.when you are distributing different elements to multiple devices in a singlestep. However, a common pitfall arises when users call  `Iterator.get_next()` in each iteration of their training loop.  `Iterator.get_next()`  adds ops tothe graph, and executing each op allocates resources (including threads); asa consequence, invoking it in every iteration of a training loop causesslowdown and eventual resource exhaustion. To guard against this outcome, welog a warning when the number of uses crosses a fixed threshold ofsuspiciousness.
+注意：It is legitimate to call  `Iterator.get_next()`  multiple times, e.g.when you are distributing different elements to multiple devices in a singlestep. However, a common pitfall arises when users call  `Iterator.get_next()` in each iteration of their training loop.  `Iterator.get_next()`  adds ops tothe graph, and executing each op allocates resources (including threads); asa consequence, invoking it in every iteration of a training loop causesslowdown and eventual resource exhaustion. To guard against this outcome, welog a warning when the number of uses crosses a fixed threshold ofsuspiciousness.
 
-#### Args:
+#### 参数：
 - **`name`** : (Optional.) A name for the created operation.
 
 
-#### Returns:
+#### 返回：
 A nested structure of [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects.
 
 ###  `make_initializer` 
@@ -256,15 +256,15 @@ A nested structure of [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/pyth
 
 Returns a [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) that initializes this iterator on  `dataset` .
 
-#### Args:
+#### 参数：
 - **`dataset`** : A  `Dataset`  with compatible structure to this iterator.
 - **`name`** : (Optional.) A name for the created operation.
 
 
-#### Returns:
+#### 返回：
 A [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) that can be run to initialize this iterator on the given `dataset` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `dataset`  and this iterator do not have a compatibleelement structure.
 
 
@@ -278,10 +278,10 @@ A [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) 
 
 Returns a string-valued [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) that represents this iterator.
 
-#### Args:
+#### 参数：
 - **`name`** : (Optional.) A name for the created operation.
 
 
-#### Returns:
+#### 返回：
 A scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) of type [ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string).
 

@@ -16,13 +16,13 @@ sess.run(iterator.initializer)
  
 ```
 
-#### Args:
+#### 参数：
 - **`dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
 - **`shared_name`** : (Optional.) If non-empty, the returned iterator will be sharedunder the given name across multiple sessions that share the same devices(e.g. when using a remote server).
 
 
-#### Returns:
+#### 返回：
 A [ `tf.compat.v1.data.Iterator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/Iterator) over the elements of  `dataset` .
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If eager execution is enabled.

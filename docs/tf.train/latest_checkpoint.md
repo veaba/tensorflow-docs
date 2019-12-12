@@ -1,6 +1,6 @@
-Finds the filename of latest saved checkpoint file.
+查找最近保存的检查点文件的文件名。
 
-**Aliases** : [ `tf.compat.v1.train.latest_checkpoint` ](/api_docs/python/tf/train/latest_checkpoint), [ `tf.compat.v2.train.latest_checkpoint` ](/api_docs/python/tf/train/latest_checkpoint)
+**别名** : [ `tf.compat.v1.train.latest_checkpoint` ](/api_docs/python/tf/train/latest_checkpoint), [ `tf.compat.v2.train.latest_checkpoint` ](/api_docs/python/tf/train/latest_checkpoint)
 
 ```
  tf.train.latest_checkpoint(
@@ -10,12 +10,12 @@ Finds the filename of latest saved checkpoint file.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Text generation with an RNN](https://tensorflow.google.cn/tutorials/text/text_generation)
 - [Distributed training with Keras](https://tensorflow.google.cn/tutorials/distribute/keras)
 - [Save and load a model using a distribution strategy](https://tensorflow.google.cn/tutorials/distribute/save_and_load)
@@ -23,11 +23,11 @@ Finds the filename of latest saved checkpoint file.
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 
 
-#### Args:
+#### 参数：
 - **`checkpoint_dir`** : Directory where the variables were saved.
 - **`latest_filename`** : Optional name for the protocol buffer file thatcontains the list of most recent checkpoint filenames.See the corresponding argument to  `Saver.save()` .
 
 
-#### Returns:
+#### 返回：
 The full path to the latest checkpoint or  `None`  if no checkpoint was found.
 

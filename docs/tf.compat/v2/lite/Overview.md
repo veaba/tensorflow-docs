@@ -1,9 +1,9 @@
-Public API for tf.lite namespace.
+tf.lite命名空间的公共api。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/lite/experimental) module: Public API for tf.lite.experimental namespace.
 
-## Classes
+## Class 
 [ `class Interpreter` ](https://tensorflow.google.cn/api_docs/python/tf/lite/Interpreter): Interpreter interface for TensorFlow Lite Models.
 
 [ `class OpsSet` ](https://tensorflow.google.cn/api_docs/python/tf/lite/OpsSet): Enum class defining the sets of ops available to generate TFLite models.

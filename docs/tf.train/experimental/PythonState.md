@@ -3,7 +3,7 @@
 ## Class  `PythonState` 
 A mixin for putting Python state in an object-based checkpoint.
 
-**Aliases** : [ `tf.compat.v1.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState), [ `tf.compat.v2.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState)
+**别名** : [ `tf.compat.v1.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState), [ `tf.compat.v2.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState)
 
 This is an abstract class which allows extensions to TensorFlow's object-basedcheckpointing (see [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint)). For example a wrapper for NumPyarrays:
 
@@ -46,7 +46,7 @@ assert [1.] == root.numpy.array
  
 ```
 
-## Methods
+## 方法
 
 
 ###  `deserialize` 
@@ -57,7 +57,7 @@ assert [1.] == root.numpy.array
  
 ```
 
-Callback to deserialize the object.
+回调以反序列化对象。
 
 ###  `serialize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/tracking/python_state.py#L77-L79)
@@ -67,5 +67,5 @@ Callback to deserialize the object.
  
 ```
 
-Callback to serialize the object. Returns a string.
+回调以序列化对象。返回字符串。
 

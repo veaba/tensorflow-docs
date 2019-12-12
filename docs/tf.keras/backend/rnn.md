@@ -1,6 +1,6 @@
-Iterates over the time dimension of a tensor.
+在张量的时间维上迭代。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.rnn` ](/api_docs/python/tf/keras/backend/rnn), [ `tf.compat.v2.keras.backend.rnn` ](/api_docs/python/tf/keras/backend/rnn)
+**别名** : [ `tf.compat.v1.keras.backend.rnn` ](/api_docs/python/tf/keras/backend/rnn), [ `tf.compat.v2.keras.backend.rnn` ](/api_docs/python/tf/keras/backend/rnn)
 
 ```
  tf.keras.backend.rnn(
@@ -18,7 +18,7 @@ Iterates over the time dimension of a tensor.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`step_function`** : RNN step function.Args;    input; Tensor with shape  `(samples, ...)`  (no time dimension),        representing input for the batch of samples at a certain        time step.    states; List of tensors.Returns;    output; Tensor with shape  `(samples, output_dim)`         (no time dimension).    new_states; List of tensors, same length and shapes        as 'states'. The first state in the list must be the        output tensor at the previous timestep.
 - **`inputs`** : Tensor of temporal data of shape  `(samples, time, ...)` (at least 3D), or nested tensors, and each of which has shape `(samples, time, ...)` .
 - **`initial_states`** : Tensor with shape  `(samples, state_size)` (no time dimension), containing the initial values for the states usedin the step function. In the case that state_size is in a nestedshape, the shape of initial_states will also follow the nestedstructure.
@@ -31,10 +31,10 @@ Iterates over the time dimension of a tensor.
 - **`zero_output_for_mask`** : Boolean. If True, the output for masked timestepwill be zeros, whereas in the False case, output from previoustimestep is returned.
 
 
-#### Returns:
+#### 返回：
 A tuple,  `(last_output, outputs, new_states)` .    last_output: the latest output of the rnn, of shape  `(samples, ...)`     outputs: tensor with shape  `(samples, time, ...)`  where each        entry  `outputs[s, t]`  is the output of the step function        at time  `t`  for sample  `s` .    new_states: list of tensors, latest states returned by        the step function, of shape  `(samples, ...)` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if input dimension is less than 3.
 - **`ValueError`** : if  `unroll`  is  `True`  but input timestep is not a fixednumber.
 - **`ValueError`** : if  `mask`  is provided (not  `None` ) but states is not provided( `len(states)`  == 0).

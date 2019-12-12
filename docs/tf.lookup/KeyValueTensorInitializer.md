@@ -3,7 +3,7 @@
 ## Class  `KeyValueTensorInitializer` 
 Table initializers given  `keys`  and  `values`  tensors.
 
-**Aliases** : [ `tf.compat.v1.lookup.KeyValueTensorInitializer` ](/api_docs/python/tf/lookup/KeyValueTensorInitializer), [ `tf.compat.v2.lookup.KeyValueTensorInitializer` ](/api_docs/python/tf/lookup/KeyValueTensorInitializer)
+**别名** : [ `tf.compat.v1.lookup.KeyValueTensorInitializer` ](/api_docs/python/tf/lookup/KeyValueTensorInitializer), [ `tf.compat.v2.lookup.KeyValueTensorInitializer` ](/api_docs/python/tf/lookup/KeyValueTensorInitializer)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/lookup_ops.py#L418-L446)
@@ -19,9 +19,9 @@ Table initializers given  `keys`  and  `values`  tensors.
  
 ```
 
-Constructs a table initializer object based on keys and values tensors.
+基于键和值张量构造表初始值设定项对象。
 
-#### Args:
+#### 参数：
 - **`keys`** : The tensor for the keys.
 - **`values`** : The tensor for the values.
 - **`key_dtype`** : The  `keys`  data type. Used when  `keys`  is a python array.
@@ -29,16 +29,16 @@ Constructs a table initializer object based on keys and values tensors.
 - **`name`** : A name for the operation (optional).
 
 
-## Properties
+## 属性
 
 
 ###  `key_dtype` 
-The expected table key dtype.
+所需的表键dtype。
 
 ###  `value_dtype` 
-The expected table value dtype.
+所需的表值DTYPE。
 
-## Methods
+## 方法
 
 
 ###  `initialize` 
@@ -51,12 +51,12 @@ The expected table value dtype.
 
 Initializes the given  `table`  with  `keys`  and  `values`  tensors.
 
-#### Args:
+#### 参数：
 - **`table`** : The table to initialize.
 
 
-#### Returns:
-The operation that initializes the table.
+#### 返回：
+初始化表的操作。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when the keys and values data types do not match the tablekey and value data types.

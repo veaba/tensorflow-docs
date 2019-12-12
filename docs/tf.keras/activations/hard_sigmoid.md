@@ -1,19 +1,19 @@
-Hard sigmoid activation function.
+硬乙状结肠激活功能。
 
-**Aliases** : [ `tf.compat.v1.keras.activations.hard_sigmoid` ](/api_docs/python/tf/keras/activations/hard_sigmoid), [ `tf.compat.v2.keras.activations.hard_sigmoid` ](/api_docs/python/tf/keras/activations/hard_sigmoid)
+**别名** : [ `tf.compat.v1.keras.activations.hard_sigmoid` ](/api_docs/python/tf/keras/activations/hard_sigmoid), [ `tf.compat.v2.keras.activations.hard_sigmoid` ](/api_docs/python/tf/keras/activations/hard_sigmoid)
 
 ```
  tf.keras.activations.hard_sigmoid(x)
  
 ```
 
-Faster to compute than sigmoid activation.
+计算速度比乙状结肠激活快。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input tensor.
 
 
-#### Returns:
+#### 返回：
 Hard sigmoid activation:
 
 -  `0`  if  `x < -2.5` 

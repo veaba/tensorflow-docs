@@ -1,6 +1,6 @@
-Stops gradient computation.
+停止渐变计算。
 
-**Aliases** : [ `tf.compat.v1.stop_gradient` ](/api_docs/python/tf/stop_gradient), [ `tf.compat.v2.stop_gradient` ](/api_docs/python/tf/stop_gradient)
+**别名** : [ `tf.compat.v1.stop_gradient` ](/api_docs/python/tf/stop_gradient), [ `tf.compat.v2.stop_gradient` ](/api_docs/python/tf/stop_gradient)
 
 ```
  tf.stop_gradient(
@@ -21,11 +21,11 @@ This is useful any time you want to compute a value with TensorFlow but needto p
 - Adversarial training, where no backprop should happen through the adversarialexample generation process.
 
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

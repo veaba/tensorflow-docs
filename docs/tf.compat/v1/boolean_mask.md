@@ -1,4 +1,4 @@
-Apply boolean mask to tensor.
+对张量应用布尔掩码。
 
 ```
  tf.compat.v1.boolean_mask(
@@ -24,21 +24,21 @@ In general,  `0 < dim(mask) = K <= dim(tensor)` , and  `mask` 's shape must matc
 
 See also: [ `tf.ragged.boolean_mask` ](https://tensorflow.google.cn/api_docs/python/tf/ragged/boolean_mask), which can be applied to both dense andragged tensors, and can be used if you need to preserve the masked dimensionsof  `tensor`  (rather than flattening them, as [ `tf.boolean_mask` ](https://tensorflow.google.cn/api_docs/python/tf/boolean_mask) does).
 
-#### Args:
+#### 参数：
 - **`tensor`** :  N-D tensor.
 - **`mask`** :  K-D boolean tensor, K <= N and K must be known statically.
 - **`name`** :  A name for this operation (optional).
 - **`axis`** :  A 0-D int Tensor representing the axis in  `tensor`  to mask from. Bydefault, axis is 0 which will mask from the first dimension. Otherwise K +axis <= N.
 
 
-#### Returns:
+#### 返回：
 (N-K+1)-dimensional tensor populated by entries in  `tensor`  correspondingto  `True`  values in  `mask` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :  If shapes do not conform.
 
 
-#### Examples:
+#### 示例：
 
 
 ```

@@ -1,7 +1,7 @@
 
 
 ## Class  `ConditionalAccumulatorBase` 
-A conditional accumulator for aggregating gradients.
+用于聚合渐变的条件累加器。
 
 Up-to-date gradients (i.e., time step at which gradient was computed isequal to the accumulator's time step) are added to the accumulator.
 
@@ -19,27 +19,27 @@ Extraction of the average gradient is blocked until the required number ofgradie
  
 ```
 
-Creates a new ConditionalAccumulator.
+创建新的条件累加器。
 
-#### Args:
+#### 参数：
 - **`dtype`** : Datatype of the accumulated gradients.
 - **`shape`** : Shape of the accumulated gradients.
 - **`accumulator_ref`** : A handle to the conditional accumulator, created by sub-classes
 
 
-## Properties
+## 属性
 
 
 ###  `accumulator_ref` 
-The underlying accumulator reference.
+基础累加器引用。
 
 ###  `dtype` 
-The datatype of the gradients accumulated by this accumulator.
+此累加器累积的渐变的数据类型。
 
 ###  `name` 
-The name of the underlying accumulator.
+基础累加器的名称。
 
-## Methods
+## 方法
 
 
 ###  `num_accumulated` 
@@ -50,14 +50,14 @@ The name of the underlying accumulator.
  
 ```
 
-Number of gradients that have currently been aggregated in accumulator.
+当前已在累加器中聚合的渐变数。
 
-#### Args:
+#### 参数：
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
-Number of accumulated gradients currently in accumulator.
+#### 返回：
+累加器中当前累积的渐变数。
 
 ###  `set_global_step` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/data_flow_ops.py#L1227-L1249)
@@ -70,15 +70,15 @@ Number of accumulated gradients currently in accumulator.
  
 ```
 
-Sets the global time step of the accumulator.
+设置累加器的全局时间步长。
 
 The operation logs a warning if we attempt to set to a time step that islower than the accumulator's own time step.
 
-#### Args:
+#### 参数：
 - **`new_global_step`** : Value of new time step. Can be a variable or a constant
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
-Operation that sets the accumulator's time step.
+#### 返回：
+设置累加器时间步长的操作。
 

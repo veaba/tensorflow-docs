@@ -1,9 +1,9 @@
 
 
 ## Class  `IdToStringEntry` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `key` 

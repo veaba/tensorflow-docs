@@ -1,11 +1,11 @@
 
 
 ## Class  `StackTraceFilter` 
-Allows filtering traceback information by removing superfluous frames.
+允许通过删除多余的帧来过滤回溯信息。
 
 Inherits From: [ `StackTraceTransform` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceTransform)
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

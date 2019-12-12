@@ -6,7 +6,7 @@ BatchToSpace for N-D tensors of type T.
 
 This operation reshapes the "batch" dimension 0 into  `M + 1`  dimensions of shape `block_shape + [batch]` , interleaves these blocks back into the grid defined bythe spatial dimensions  `[1, ..., M]` , to obtain a result with the same rank asthe input.  The spatial dimensions of this intermediate result are thenoptionally cropped according to  `crops`  to produce the output.  This is thereverse of SpaceToBatch.  See below for a precise description.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .N-D with shape  `input_shape = [batch] + spatial_shape + remaining_shape` ,where spatial_shape has M dimensions.
 - **`block_shape`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .1-D with shape  `[M]` , all values must be >= 1.
 - **`crops`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .2-D with shape  `[M, 2]` , all values must be >= 0. `crops[i] = [crop_start, crop_end]`  specifies the amount to crop from inputdimension  `i + 1` , which corresponds to spatial dimension  `i` .  It isrequired that `crop_start[i] + crop_end[i] <= block_shape[i] * input_shape[i + 1]` .
@@ -112,6 +112,6 @@ The output tensor has shape  `[2, 2, 4, 1]`  and value:
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

@@ -1,6 +1,6 @@
-Stacks dynamic partitions of a Tensor or RaggedTensor.
+堆叠张量或raggedtensor的动态分区。
 
-**Aliases** : [ `tf.compat.v1.ragged.stack_dynamic_partitions` ](/api_docs/python/tf/ragged/stack_dynamic_partitions), [ `tf.compat.v2.ragged.stack_dynamic_partitions` ](/api_docs/python/tf/ragged/stack_dynamic_partitions)
+**别名** : [ `tf.compat.v1.ragged.stack_dynamic_partitions` ](/api_docs/python/tf/ragged/stack_dynamic_partitions), [ `tf.compat.v2.ragged.stack_dynamic_partitions` ](/api_docs/python/tf/ragged/stack_dynamic_partitions)
 
 ```
  tf.ragged.stack_dynamic_partitions(
@@ -29,7 +29,7 @@ If  `num_partitions`  is an  `int`  (not a  `Tensor` ), then this is equivalent 
 
 ```
  
-#### Args:
+#### 参数：
 
 
 * **`data`**: A `Tensor` or `RaggedTensor` containing the values to stack.
@@ -43,7 +43,7 @@ If  `num_partitions`  is an  `int`  (not a  `Tensor` ), then this is equivalent 
 * **`name`**: A name prefix for the returned tensor (optional).
 
 
-#### Returns:
+#### 返回：
 
 A `RaggedTensor` containing the stacked partitions.  The returned tensor
 has the same dtype as `data`, and its shape is

@@ -42,7 +42,7 @@ In addition to slot variables which should be colocated with their primaryvariab
 
 *How to update a variable*
 
-The standard pattern for updating variables is to:
+更新变量的标准模式是：
 
 1. In your function passed to [ `tf.distribute.Strategy.experimental_run_v2` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy#experimental_run_v2),compute a list of (update, variable) pairs. For example, the update mightbe a the gradient of the loss with respect to the variable.
 2. Switch to cross-replica mode by calling `tf.distribute.get_replica_context().merge_call()`  with the updates andvariables as arguments.
@@ -68,7 +68,7 @@ Layers are generally called in a replica context, except when defining afunction
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `experimental_between_graph` 
@@ -80,21 +80,21 @@ This is expected to return a constant value that will not be changedthroughout i
 Returns  `True`  if static shape is required;  `False`  otherwise.
 
 ###  `experimental_should_init` 
-Whether initialization is needed.
+是否需要初始化。
 
 ###  `parameter_devices` 
-Returns the tuple of all devices used to place variables.
+返回用于放置变量的所有设备的元组。
 
 ###  `should_checkpoint` 
-Whether checkpointing is needed.
+是否需要检查点。
 
 ###  `should_save_summary` 
-Whether saving summaries is needed.
+是否需要保存摘要。
 
 ###  `worker_devices` 
-Returns the tuple of all devices used to for compute replica execution.
+返回用于计算副本执行的所有设备的元组。
 
-## Methods
+## 方法
 
 
 ###  `batch_reduce_to` 
@@ -110,12 +110,12 @@ Returns the tuple of all devices used to for compute replica execution.
 
 Combine multiple  `reduce_to`  calls into one for faster execution.
 
-#### Args:
+#### 参数：
 - **`reduce_op`** : Reduction type, an instance of [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) enum.
 - **`value_destination_pairs`** : A sequence of (value, destinations)pairs. See  `reduce_to()`  for a description.
 
 
-#### Returns:
+#### 返回：
 A list of mirrored values, one per pair in  `value_destination_pairs` .
 
 ###  `broadcast_to` 
@@ -129,14 +129,14 @@ A list of mirrored values, one per pair in  `value_destination_pairs` .
  
 ```
 
-Mirror a tensor on one device to all worker devices.
+将一个设备上的张量镜像到所有工作设备。
 
-#### Args:
+#### 参数：
 - **`tensor`** : A Tensor value to broadcast.
 - **`destinations`** : A mirrored variable or device string specifying thedestination devices to copy  `tensor`  to.
 
 
-#### Returns:
+#### 返回：
 A value mirrored to  `destinations`  devices.
 
 ###  `call_for_each_replica` 
@@ -181,13 +181,13 @@ with distribution.scope():
  
 ```
 
-#### Args:
+#### 参数：
 - **`fn`** : function to run (will be run once per replica).
 - **`args`** : Tuple or list with positional arguments for  `fn` .
 - **`kwargs`** : Dict with keyword arguments for  `fn` .
 
 
-#### Returns:
+#### 返回：
 Merged return value of  `fn`  across all replicas.
 
 ###  `colocate_vars_with` 
@@ -198,13 +198,13 @@ Merged return value of  `fn`  across all replicas.
  
 ```
 
-Scope that controls which devices variables will be created on.
+控制将在其上创建哪些设备变量的作用域。
 
 No operations should be added to the graph inside this scope, itshould only be used when creating variables (some implementationswork by changing variable creation, others work by using atf.compat.v1.colocate_with() scope).
 
 This may only be used inside  `self.scope()` .
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -224,12 +224,12 @@ This may only be used inside  `self.scope()` .
  
 ```
 
-#### Args:
+#### 参数：
 - **`colocate_with_variable`** : A variable created in this strategy's  `scope()` .Variables created while in the returned context manager will be on thesame set of devices as  `colocate_with_variable` .
 
 
-#### Returns:
-A context manager.
+#### 返回：
+上下文管理器。
 
 ###  `experimental_make_numpy_dataset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L1645-L1663)
@@ -242,16 +242,16 @@ A context manager.
  
 ```
 
-Makes a dataset for input provided via a numpy array.
+为通过numpy数组提供的输入生成数据集。
 
 This avoids adding  `numpy_input`  as a large constant in the graph,and copies the data to the machine or machines that will be processingthe input.
 
-#### Args:
+#### 参数：
 - **`numpy_input`** : A nest of NumPy input arrays that will be distributed evenlyacross all replicas. Note that lists of Numpy arrays are stacked, asthat is normal [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) behavior.
 - **`session`** : (TensorFlow v1.x graph execution only) A session used forinitialization.
 
 
-#### Returns:
+#### 返回：
 A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) representing  `numpy_input` .
 
 ###  `experimental_run_steps_on_iterator` 
@@ -273,14 +273,14 @@ Run  `fn`  with input from  `iterator`  for  `iterations`  times.
 
 This method can be used to run a step function for training a number oftimes using input from a dataset.
 
-#### Args:
+#### 参数：
 - **`fn`** : function to run using this distribution strategy. The function musthave the following signature:  `def fn(context, inputs)` .  `context`  is aninstance of  `MultiStepContext`  that will be passed when  `fn`  is run. `context`  can be used to specify the outputs to be returned from  `fn` by calling  `context.set_last_step_output` . It can also be used tocapture non tensor outputs by  `context.set_non_tensor_output` . See `MultiStepContext`  documentation for more information.  `inputs`  willhave same type/structure as  `iterator.get_next()` . Typically,  `fn` will use  `call_for_each_replica`  method of the strategy to distributethe computation over multiple replicas.
 - **`iterator`** : Iterator of a dataset that represents the input for  `fn` . Thecaller is responsible for initializing the iterator as needed.
 - **`iterations`** : (Optional) Number of iterations that  `fn`  should be run.Defaults to 1.
 - **`initial_loop_values`** : (Optional) Initial values to be passed into theloop that runs  `fn` . Defaults to  `None` . # TODO(priyag): Removeinitial_loop_values argument when we have a mechanism to infer theoutputs of  `fn` .
 
 
-#### Returns:
+#### 返回：
 Returns the  `MultiStepContext`  object which has the following properties,among other things:  - run_op: An op that runs  `fn`   `iterations`  times.  - last_step_outputs: A dictionary containing tensors set using   `context.set_last_step_output` . Evaluating this returns the value of  the tensors after the last iteration.  - non_tensor_outputs: A dictionatry containing anything that was set by     `fn`  by calling  `context.set_non_tensor_output` .
 
 ###  `non_slot_devices` 
@@ -295,11 +295,11 @@ Device(s) for non-slot variables.
 
 Create variables on these devices in a `with colocate_vars_with(non_slot_devices(...)):`  block.Update those using  `update_non_slot()` .
 
-#### Args:
+#### 参数：
 - **`var_list`** : The list of variables being optimized, needed with thedefault [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy).
 
 
-#### Returns:
+#### 返回：
 A sequence of devices for non-slot variables.
 
 ###  `read_var` 
@@ -310,15 +310,15 @@ A sequence of devices for non-slot variables.
  
 ```
 
-Reads the value of a variable.
+读取变量的值。
 
 Returns the aggregate value of a replica-local variable, or the(read-only) value of any other variable.
 
-#### Args:
+#### 参数：
 - **`v`** : A variable allocated within the scope of this [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy).
 
 
-#### Returns:
+#### 返回：
 A tensor representing the value of  `v` , aggregated across replicas ifnecessary.
 
 ###  `reduce_to` 
@@ -333,15 +333,15 @@ A tensor representing the value of  `v` , aggregated across replicas ifnecessary
  
 ```
 
-Combine (via e.g. sum or mean) values across replicas.
+在复制品之间合并（例如通过总和或平均值）。
 
-#### Args:
+#### 参数：
 - **`reduce_op`** : Reduction type, an instance of [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) enum.
 - **`value`** : A per-replica value with one value per replica.
 - **`destinations`** : A mirrored variable, a per-replica tensor, or a devicestring. The return value will be copied to all destination devices (orall the devices where the  `destinations`  value resides). To perform anall-reduction, pass  `value`  to  `destinations` .
 
 
-#### Returns:
+#### 返回：
 A tensor or value mirrored to  `destinations` .
 
 ###  `update` 
@@ -376,7 +376,7 @@ Otherwise this returns  `fn(var, *args, **kwargs)`  colocated with  `var` .
 
 Neither  `args`  nor  `kwargs`  may contain per-replica values.If they contain mirrored values, they will be unwrapped beforecalling  `fn` .
 
-#### Args:
+#### 参数：
 - **`var`** : Variable, possibly mirrored to multiple devices, to operate on.
 - **`fn`** : Function to call. Should take the variable as the first argument.
 - **`args`** : Tuple or list. Additional positional arguments to pass to  `fn()` .
@@ -384,7 +384,7 @@ Neither  `args`  nor  `kwargs`  may contain per-replica values.If they contain m
 - **`group`** : Boolean. Defaults to True. If False, the return value will beunwrapped.
 
 
-#### Returns:
+#### 返回：
 By default, the merged return value of  `fn`  across all replicas.  Themerged result has dependencies to make sure that if it is evaluated atall, the side effects (updates) will happen on every replica. If instead"group=False" is specified, this function will return a nest of listswhere each list has an element per replica, and the caller is responsiblefor ensuring all elements are executed.
 
 ###  `update_non_slot` 
@@ -403,7 +403,7 @@ By default, the merged return value of  `fn`  across all replicas.  Themerged re
 
 Runs  `fn(*args, **kwargs)`  on  `colocate_with`  devices.
 
-#### Args:
+#### 参数：
 - **`colocate_with`** : The return value of  `non_slot_devices()` .
 - **`fn`** : Function to execute.
 - **`args`** : Tuple or list. Positional arguments to pass to  `fn()` .
@@ -411,7 +411,7 @@ Runs  `fn(*args, **kwargs)`  on  `colocate_with`  devices.
 - **`group`** : Boolean. Defaults to True. If False, the return value will beunwrapped.
 
 
-#### Returns:
+#### 返回：
 Return value of  `fn` , possibly merged across devices.
 
 ###  `value_container` 
@@ -424,11 +424,11 @@ Return value of  `fn` , possibly merged across devices.
 
 Returns the container that this per-replica  `value`  belongs to.
 
-#### Args:
+#### 参数：
 - **`value`** : A value returned by  `experimental_run_v2()`  or a variablecreated in  `scope()` .
 
 
-#### Returns:
+#### 返回：
 A container that  `value`  belongs to.If value does not belong to any container (including the case ofcontainer having been destroyed), returns the value itself. `value in experimental_local_results(value_container(value))`  willalways be true.
 
 ###  `variable_created_in_scope` 
@@ -441,7 +441,7 @@ A container that  `value`  belongs to.If value does not belong to any container 
 
 Tests whether  `v`  was created while this strategy scope was active.
 
-Variables created inside the strategy scope are "owned" by it:
+在战略范围内创建的变量由其“拥有”：
 
 ```
  with strategy.scope(): 
@@ -451,7 +451,7 @@ Variables created inside the strategy scope are "owned" by it:
 
 ```
 
-Variables created outside the strategy are not owned by it:
+在策略之外创建的变量不属于它：
 
 ```
  v = tf.Variable(1.) 
@@ -460,10 +460,10 @@ Variables created outside the strategy are not owned by it:
 
 ```
 
-#### Args:
+#### 参数：
 - **`v`** : A [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) instance.
 
 
-#### Returns:
+#### 返回：
 True if  `v`  was created inside the scope, False if not.
 

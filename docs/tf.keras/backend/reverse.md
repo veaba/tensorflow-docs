@@ -1,6 +1,6 @@
-Reverse a tensor along the specified axes.
+沿指定轴反转张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.reverse` ](/api_docs/python/tf/keras/backend/reverse), [ `tf.compat.v2.keras.backend.reverse` ](/api_docs/python/tf/keras/backend/reverse)
+**别名** : [ `tf.compat.v1.keras.backend.reverse` ](/api_docs/python/tf/keras/backend/reverse), [ `tf.compat.v2.keras.backend.reverse` ](/api_docs/python/tf/keras/backend/reverse)
 
 ```
  tf.keras.backend.reverse(
@@ -10,11 +10,11 @@ Reverse a tensor along the specified axes.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor to reverse.
 - **`axes`** : Integer or iterable of integers.Axes to reverse.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

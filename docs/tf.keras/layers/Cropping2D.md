@@ -1,15 +1,15 @@
 
 
 ## Class  `Cropping2D` 
-Cropping layer for 2D input (e.g. picture).
+用于二维输入的裁剪层（如图片）。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Cropping2D` ](/api_docs/python/tf/keras/layers/Cropping2D), [ `tf.compat.v2.keras.layers.Cropping2D` ](/api_docs/python/tf/keras/layers/Cropping2D)
+**别名** : [ `tf.compat.v1.keras.layers.Cropping2D` ](/api_docs/python/tf/keras/layers/Cropping2D), [ `tf.compat.v2.keras.layers.Cropping2D` ](/api_docs/python/tf/keras/layers/Cropping2D)
 
 It crops along spatial dimensions, i.e. height and width.
 
-#### Arguments:
+#### 参数：
 - **`cropping`** : Int, or tuple of 2 ints, or tuple of 2 tuples of 2 ints.
 - **`data_format`** : A string,one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, height, width, channels)`  while  `channels_first` corresponds to inputs with shape `(batch, channels, height, width)` .It defaults to the  `image_data_format`  value found in yourKeras config file at  `~/.keras/keras.json` .If you never set it, then it will be "channels_last".
     - If int: the same symmetric croppingis applied to height and width.
@@ -17,21 +17,21 @@ It crops along spatial dimensions, i.e. height and width.
     - If tuple of 2 tuples of 2 ints:interpreted as `((top_crop, bottom_crop), (left_crop, right_crop))` 
 
 
-#### Input shape:
+#### 输入形状：
 4D tensor with shape:
 
 - If  `data_format`  is  `"channels_last"` : `(batch, rows, cols, channels)` 
 - If  `data_format`  is  `"channels_first"` : `(batch, channels, rows, cols)` 
 
 
-#### Output shape:
+#### 输出形状：
 4D tensor with shape:
 
 - If  `data_format`  is  `"channels_last"` : `(batch, cropped_rows, cropped_cols, channels)` 
 - If  `data_format`  is  `"channels_first"` : `(batch, channels, cropped_rows, cropped_cols)` 
 
 
-#### Examples:
+#### 示例：
 
 
 ```

@@ -20,7 +20,7 @@ Runs a list of tensors to conditionally fill a queue to create batches. (depreca
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Queue-based input pipelines have been replaced by [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data). Use  `tf.data.Dataset.interleave(...).filter(...).batch(batch_size)`  (or  `padded_batch(...)`  if  `dynamic_pad=True` ).
 See docstring in  `batch_join`  for more details.
 
-#### Args:
+#### 参数：
 - **`tensors_list`** : A list of tuples or dictionaries of tensors to enqueue.
 - **`keep_input`** : A  `bool`  Tensor.  This tensor controls whether the input isadded to the queue or not.  If it is a scalar and evaluates  `True` , then `tensors`  are all added to the queue. If it is a vector and  `enqueue_many` is  `True` , then each example is added to the queue only if thecorresponding value in  `keep_input`  is  `True` . This tensor essentiallyacts as a filtering mechanism.
 - **`batch_size`** : An integer. The new batch size pulled from the queue.
@@ -33,8 +33,8 @@ See docstring in  `batch_join`  for more details.
 - **`name`** : (Optional) A name for the operations.
 
 
-#### Returns:
+#### 返回：
 A list or dictionary of tensors with the same number and types as `tensors_list[i]` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `shapes`  are not specified, and cannot beinferred from the elements of  `tensor_list_list` .

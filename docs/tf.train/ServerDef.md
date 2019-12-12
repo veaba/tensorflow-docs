@@ -1,11 +1,11 @@
 
 
 ## Class  `ServerDef` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.ServerDef` ](/api_docs/python/tf/train/ServerDef), [ `tf.compat.v2.train.ServerDef` ](/api_docs/python/tf/train/ServerDef)
+**别名** : [ `tf.compat.v1.train.ServerDef` ](/api_docs/python/tf/train/ServerDef), [ `tf.compat.v2.train.ServerDef` ](/api_docs/python/tf/train/ServerDef)
 
-## Properties
+## 属性
 
 
 ###  `cluster` 

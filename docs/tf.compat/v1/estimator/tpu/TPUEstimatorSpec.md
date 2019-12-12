@@ -35,7 +35,7 @@ __new__(
 
 Creates a validated  `TPUEstimatorSpec`  instance.
 
-## Properties
+## 属性
 
 
 ###  `mode` 
@@ -71,7 +71,7 @@ Creates a validated  `TPUEstimatorSpec`  instance.
 ###  `prediction_hooks` 
 
 
-## Methods
+## 方法
 
 
 ###  `as_estimator_spec` 

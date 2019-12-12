@@ -1,11 +1,11 @@
 
 
 ## Class  `TimeDistributed` 
-This wrapper allows to apply a layer to every temporal slice of an input.
+这个包装器允许对输入的每个时态片应用一个层。
 
 Inherits From: [ `Wrapper` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Wrapper)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.TimeDistributed` ](/api_docs/python/tf/keras/layers/TimeDistributed), [ `tf.compat.v2.keras.layers.TimeDistributed` ](/api_docs/python/tf/keras/layers/TimeDistributed)
+**别名** : [ `tf.compat.v1.keras.layers.TimeDistributed` ](/api_docs/python/tf/keras/layers/TimeDistributed), [ `tf.compat.v2.keras.layers.TimeDistributed` ](/api_docs/python/tf/keras/layers/TimeDistributed)
 
 The input should be at least 3D, and the dimension of index onewill be considered to be the temporal dimension.
 
@@ -42,17 +42,17 @@ model.add(TimeDistributed(Conv2D(64, (3, 3)),
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`layer`** : a layer instance.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : Input tensor.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. This argument is passed to thewrapped layer (only if the layer supports this argument).
 - **`mask`** : Binary tensor of shape  `(samples, timesteps)`  indicating whethera given timestep should be masked. This argument is passed to thewrapped layer (only if the layer supports this argument).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If not initialized with a  `Layer`  instance.
 
 

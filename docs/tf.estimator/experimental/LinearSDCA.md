@@ -1,9 +1,9 @@
 
 
 ## Class  `LinearSDCA` 
-Stochastic Dual Coordinate Ascent helper for linear estimators.
+线性估计器的随机对偶坐标上升辅助。
 
-**Aliases** : [ `tf.compat.v1.estimator.experimental.LinearSDCA` ](/api_docs/python/tf/estimator/experimental/LinearSDCA), [ `tf.compat.v2.estimator.experimental.LinearSDCA` ](/api_docs/python/tf/estimator/experimental/LinearSDCA)
+**别名** : [ `tf.compat.v1.estimator.experimental.LinearSDCA` ](/api_docs/python/tf/estimator/experimental/LinearSDCA), [ `tf.compat.v2.estimator.experimental.LinearSDCA` ](/api_docs/python/tf/estimator/experimental/LinearSDCA)
 
 Objects of this class are intended to be provided as the optimizer argument(though LinearSDCA objects do not implement the  `tf.train.Optimizer`  interface)when creating [ `tf.estimator.LinearClassifier` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/LinearClassifier) or [ `tf.estimator.LinearRegressor` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/LinearRegressor).
 
@@ -15,7 +15,7 @@ SDCA can only be used with  `LinearClassifier`  and  `LinearRegressor`  under th
 - For regression: one-dimensional label.
 
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -54,9 +54,9 @@ The SDCA algorithm was originally introduced in [1] and it was followed bythe L1
  
 ```
 
-Construct a new SDCA optimizer for linear estimators.
+构造一个新的线性估计sdca优化器。
 
-#### Args:
+#### 参数：
 - **`example_id_column`** : The column name containing the example ids.
 - **`num_loss_partitions`** : Number of workers.
 - **`num_table_shards`** : Number of shards of the internal state table, typicallyset to match the number of parameter servers.
@@ -65,7 +65,7 @@ Construct a new SDCA optimizer for linear estimators.
 - **`adaptive`** : A boolean indicating whether to use adaptive sampling.
 
 
-## Methods
+## 方法
 
 
 ###  `get_train_step` 
@@ -85,5 +85,5 @@ Construct a new SDCA optimizer for linear estimators.
  
 ```
 
-Returns the training operation of an SdcaModel optimizer.
+返回SDCAModel优化器的训练操作。
 

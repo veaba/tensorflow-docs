@@ -1,9 +1,9 @@
 
 
 ## Class  `CheckpointSaverListener` 
-Interface for listeners that take action before or after checkpoint save.
+在检查点保存之前或之后执行操作的侦听器的接口。
 
-**Aliases** : [ `tf.compat.v1.estimator.CheckpointSaverListener` ](/api_docs/python/tf/estimator/CheckpointSaverListener), [ `tf.compat.v1.train.CheckpointSaverListener` ](/api_docs/python/tf/estimator/CheckpointSaverListener), [ `tf.compat.v2.estimator.CheckpointSaverListener` ](/api_docs/python/tf/estimator/CheckpointSaverListener)
+**别名** : [ `tf.compat.v1.estimator.CheckpointSaverListener` ](/api_docs/python/tf/estimator/CheckpointSaverListener), [ `tf.compat.v1.train.CheckpointSaverListener` ](/api_docs/python/tf/estimator/CheckpointSaverListener), [ `tf.compat.v2.estimator.CheckpointSaverListener` ](/api_docs/python/tf/estimator/CheckpointSaverListener)
 
  `CheckpointSaverListener`  triggers only in steps when  `CheckpointSaverHook`  istriggered, and provides callbacks at the following points: - before using the session - before each call to  `Saver.save()`  - after each call to  `Saver.save()`  - at the end of session
 
@@ -41,7 +41,7 @@ A  `CheckpointSaverListener`  may simply take some action after everycheckpoint 
 
 A  `CheckpointSaverListener`  can request training to be stopped, by returningTrue in  `after_save` . Please note that, in replicated distributed trainingsetting, only  `chief`  should use this behavior. Otherwise each worker will dotheir own evaluation, which may be wasteful of resources.
 
-## Methods
+## 方法
 
 
 ###  `after_save` 

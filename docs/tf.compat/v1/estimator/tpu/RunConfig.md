@@ -1,7 +1,7 @@
 
 
 ## Class  `RunConfig` 
-RunConfig with TPU support.
+支持tpu的runconfig。
 
 Inherits From: [ `RunConfig` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/RunConfig)
 
@@ -19,9 +19,9 @@ Inherits From: [ `RunConfig` ](https://tensorflow.google.cn/api_docs/python/tf/e
  
 ```
 
-Constructs a RunConfig.
+构造runconfig。
 
-#### Args:
+#### 参数：
 - **`tpu_config`** : the TPUConfig that specifies TPU-specific configuration.
 - **`evaluation_master`** : a string. The address of the master to use for eval.Defaults to master if not set.
 - **`master`** : a string. The address of the master to use for training.
@@ -29,11 +29,11 @@ Constructs a RunConfig.
 - **`**kwargs`** : keyword config parameters.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if cluster is not None and the provided session_config has acluster_def already.
 
 
-## Properties
+## 属性
 
 
 ###  `cluster` 
@@ -57,7 +57,7 @@ Optional [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/pyth
 
 
 ###  `global_id_in_cluster` 
-The global id in the training cluster.
+训练群集中的全局ID。
 
 All global ids in the training cluster are assigned from an increasingsequence of consecutive integers. The first id is 0.
 
@@ -88,8 +88,8 @@ Global id, i.e., this field, is tracking the index of the node among ALLnodes in
  
 ```
 
-#### Returns:
-An integer id.
+#### 返回：
+整数id。
 
 ###  `is_chief` 
 
@@ -116,7 +116,7 @@ An integer id.
 
 
 ###  `protocol` 
-Returns the optional protocol value.
+返回可选协议值。
 
 ###  `save_checkpoints_secs` 
 
@@ -151,7 +151,7 @@ Returns the platform defined (in TF_CONFIG) service dict.
 ###  `train_distribute` 
 Optional [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) for training.
 
-## Methods
+## 方法
 
 
 ###  `replace` 
@@ -164,7 +164,7 @@ Optional [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/pyth
 
 Returns a new instance of  `RunConfig`  replacing specified properties.
 
-Only the properties in the following list are allowed to be replaced:
+仅允许替换以下列表中的属性：
 
 -  `model_dir` ,
 -  `tf_random_seed` ,
@@ -183,14 +183,14 @@ Only the properties in the following list are allowed to be replaced:
 -  `experimental_max_worker_delay_secs` ,
 In addition, either  `save_checkpoints_steps`  or  `save_checkpoints_secs` can be set (should not be both).
 
-#### Args:
+#### 参数：
 - **`**kwargs`** : keyword named properties with new values.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If any property name in  `kwargs`  does not exist or is notallowed to be replaced, or both  `save_checkpoints_steps`  and `save_checkpoints_secs`  are set.
 
 
-#### Returns:
+#### 返回：
 a new instance of  `RunConfig` .
 

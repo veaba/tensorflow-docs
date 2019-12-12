@@ -3,11 +3,11 @@
 ## Class  `Poisson` 
 Computes the Poisson loss between  `y_true`  and  `y_pred` .
 
-**Aliases** : [ `tf.compat.v1.keras.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson), [ `tf.compat.v2.keras.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson), [ `tf.compat.v2.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson), [ `tf.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson)
+**别名** : [ `tf.compat.v1.keras.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson), [ `tf.compat.v2.keras.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson), [ `tf.compat.v2.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson), [ `tf.losses.Poisson` ](/api_docs/python/tf/keras/losses/Poisson)
 
  `loss = y_pred - y_true * log(y_pred)` 
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -38,7 +38,7 @@ model.compile('sgd', loss=tf.keras.losses.Poisson())
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -55,16 +55,16 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Invokes the  `Loss`  instance.
 
-#### Args:
+#### 参数：
 - **`y_true`** : Ground truth values. shape =  `[batch_size, d0, .. dN]` 
 - **`y_pred`** : The predicted values. shape =  `[batch_size, d0, .. dN]` 
 - **`sample_weight`** : Optional  `sample_weight`  acts as acoefficient for the loss. If a scalar is provided, then the loss issimply scaled by the given value. If  `sample_weight`  is a tensor of size `[batch_size]` , then the total loss for each sample of the batch isrescaled by the corresponding element in the  `sample_weight`  vector. Ifthe shape of  `sample_weight`  is  `[batch_size, d0, .. dN-1]`  (or can bebroadcasted to this shape), then each loss element of  `y_pred`  is scaledby the corresponding value of  `sample_weight` . (Note on `dN-1` : all lossfunctions reduce by 1 dimension, usually axis=-1.)
 
 
-#### Returns:
+#### 返回：
 Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has  shape  `[batch_size, d0, .. dN-1]` ; otherwise, it is scalar. (Note  `dN-1`   because all loss functions reduce by 1 dimension, usually axis=-1.)
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `sample_weight`  is invalid.
 
 
@@ -81,11 +81,11 @@ Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has  shape  `
 
 Instantiates a  `Loss`  from its config (output of  `get_config()` ).
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `Loss`  instance.
 
 ###  `get_config` 
@@ -98,7 +98,7 @@ A  `Loss`  instance.
 
 Computes the Poisson loss between y_true and y_pred.
 
-**Aliases** : [ `tf.compat.v1.keras.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v1.keras.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.keras.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.keras.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.keras.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson)
+**别名** : [ `tf.compat.v1.keras.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v1.keras.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.keras.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.keras.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.compat.v2.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.keras.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.losses.poisson` ](/api_docs/python/tf/keras/losses/poisson), [ `tf.metrics.poisson` ](/api_docs/python/tf/keras/losses/poisson)
 
 ```
  tf.keras.losses.poisson(
@@ -110,7 +110,7 @@ Computes the Poisson loss between y_true and y_pred.
 
 The Poisson loss is the mean of the elements of the  `Tensor`  `y_pred - y_true * log(y_pred)` .
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -119,13 +119,13 @@ print('Loss: ', loss.numpy())  # Loss: -0.8045559
  
 ```
 
-#### Args:
+#### 参数：
 - **`y_true`** : Tensor of true targets.
 - **`y_pred`** : Tensor of predicted targets.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the mean Poisson loss.
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : If  `y_true`  and  `y_pred`  have incompatible shapes.

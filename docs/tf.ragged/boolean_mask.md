@@ -1,6 +1,6 @@
 Applies a boolean mask to  `data`  without flattening the mask dimensions.
 
-**Aliases** : [ `tf.compat.v1.ragged.boolean_mask` ](/api_docs/python/tf/ragged/boolean_mask), [ `tf.compat.v2.ragged.boolean_mask` ](/api_docs/python/tf/ragged/boolean_mask)
+**别名** : [ `tf.compat.v1.ragged.boolean_mask` ](/api_docs/python/tf/ragged/boolean_mask), [ `tf.compat.v2.ragged.boolean_mask` ](/api_docs/python/tf/ragged/boolean_mask)
 
 ```
  tf.ragged.boolean_mask(
@@ -20,20 +20,20 @@ Where  `j`  is the  `i` th  `True`  entry of  `mask[a1...aA]` .
 
 Note that  `output`  preserves the mask dimensions  `a1...aA` ; this differsfrom [ `tf.boolean_mask` ](https://tensorflow.google.cn/api_docs/python/tf/boolean_mask), which flattens those dimensions.
 
-#### Args:
+#### 参数：
 - **`data`** : A potentially ragged tensor.
 - **`mask`** : A potentially ragged boolean tensor.   `mask` 's shape must be a prefixof  `data` 's shape.   `rank(mask)`  must be known statically.
 - **`name`** : A name prefix for the returned tensor (optional).
 
 
-#### Returns:
+#### 返回：
 A potentially ragged tensor that is formed by retaining the elements in `data`  where the corresponding value in  `mask`  is  `True` .
 
 -  `rank(output) = rank(data)` .
 -  `output.ragged_rank = max(data.ragged_rank, rank(mask) - 1)` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `rank(mask)`  is not known statically; or if  `mask.shape`  isnot a prefix of  `data.shape` .
 
 

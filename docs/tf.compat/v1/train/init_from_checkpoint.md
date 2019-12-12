@@ -12,7 +12,7 @@ Values are not loaded immediately, but when the initializer is run(typically by 
 
 
 **Note:**  This overrides default initialization ops of specified variables andredefines dtype.
-Assignment map supports following syntax:
+赋值映射支持以下语法：
 
 -  `'checkpoint_scope_name/': 'scope_name/'`  - will load all variables incurrent  `scope_name`  from  `checkpoint_scope_name`  with matching tensornames.
 -  `'checkpoint_scope_name/some_other_variable': 'scope_name/variable_name'`  -will initialize  `scope_name/variable_name`  variablefrom  `checkpoint_scope_name/some_other_variable` .
@@ -21,7 +21,7 @@ Assignment map supports following syntax:
 -  `'/': 'scope_name/'`  - will load all variables in current  `scope_name`  fromcheckpoint's root (e.g. no scope).
 Supports loading into partitioned variables, which are represented as `'<variable>/part_'` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -67,10 +67,10 @@ init_from_checkpoint('/tmp/model.ckpt',
  
 ```
 
-#### Args:
+#### 参数：
 - **`ckpt_dir_or_file`** : Directory with checkpoints file or path to checkpoint.
 - **`assignment_map`** : Dict, where keys are names of the variables in thecheckpoint and values are current variables or names of current variables(in default graph).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If missing variables in current graph, or if missingcheckpoints or tensors in checkpoints.

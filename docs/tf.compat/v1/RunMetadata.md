@@ -1,12 +1,12 @@
 
 
 ## Class  `RunMetadata` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class FunctionGraphs` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/RunMetadata/FunctionGraphs)
 
-## Properties
+## 属性
 
 
 ###  `cost_graph` 

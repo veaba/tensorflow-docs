@@ -1,6 +1,6 @@
 Create a tensor of n-grams based on  `data` .
 
-**Aliases** : [ `tf.compat.v1.strings.ngrams` ](/api_docs/python/tf/strings/ngrams), [ `tf.compat.v2.strings.ngrams` ](/api_docs/python/tf/strings/ngrams)
+**别名** : [ `tf.compat.v1.strings.ngrams` ](/api_docs/python/tf/strings/ngrams), [ `tf.compat.v2.strings.ngrams` ](/api_docs/python/tf/strings/ngrams)
 
 ```
  tf.strings.ngrams(
@@ -21,7 +21,7 @@ The input data can be padded on both the start and end of the sequence, ifdesire
 
 If this op is configured to not have padding, or if it is configured to addpadding with  `padding_width`  set to less than ngram_width-1, it is possiblethat a sequence, or a sequence plus padding, is smaller than the ngramwidth. In that case, no ngrams will be generated for that sequence. This canbe prevented by setting  `preserve_short_sequences` , which will cause the opto always generate at least one ngram per non-empty sequence.
 
-#### Args:
+#### 参数：
 - **`data`** : A Tensor or RaggedTensor containing the source data for the ngrams.
 - **`ngram_width`** : The width(s) of the ngrams to create. If this is a list ortuple, the op will return ngrams of all specified arities in list order.Values must be non-Tensor integers greater than 0.
 - **`separator`** : The separator string used between ngram elements. Must be astring constant, not a Tensor.
@@ -32,9 +32,9 @@ If this op is configured to not have padding, or if it is configured to addpaddi
     1. (Note that 1-grams are never padded, regardless of this value.)
 
 
-#### Returns:
+#### 返回：
 A RaggedTensor of ngrams. If  `data.shape=[D1...DN, S]` , then `output.shape=[D1...DN, NUM_NGRAMS]` , where `NUM_NGRAMS=S-ngram_width+1+2*padding_width` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `pad_values`  is set to an invalid type.
 - **`ValueError`** : if  `pad_values` ,  `padding_width` , or  `ngram_width`  is set to aninvalid value.

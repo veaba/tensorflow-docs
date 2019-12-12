@@ -6,17 +6,17 @@ Given a TensorSummary node_def, retrieve its SummaryDescription.
 
 When a Summary op is instantiated, a SummaryDescription of associatedmetadata is stored in its NodeDef. This method retrieves the description.
 
-#### Args:
+#### 参数：
 - **`node_def`** : the node_def_pb2.NodeDef of a TensorSummary op
 
 
-#### Returns:
+#### 返回：
 a summary_pb2.SummaryDescription
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the node is not a summary op.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Not compatible with eager execution. To write TensorBoardsummaries under eager execution, use  `tf.contrib.summary`  instead.
 

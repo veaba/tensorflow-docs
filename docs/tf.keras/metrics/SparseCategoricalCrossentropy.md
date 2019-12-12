@@ -1,15 +1,15 @@
 
 
 ## Class  `SparseCategoricalCrossentropy` 
-Computes the crossentropy metric between the labels and predictions.
+计算标签和预测之间的交叉熵度量。
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy), [ `tf.compat.v2.keras.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy), [ `tf.compat.v2.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy), [ `tf.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy)
+**别名** : [ `tf.compat.v1.keras.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy), [ `tf.compat.v2.keras.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy), [ `tf.compat.v2.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy), [ `tf.metrics.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/metrics/SparseCategoricalCrossentropy)
 
 Use this crossentropy metric when there are two or more label classes.We expect labels to be provided as integers. If you want to provide labelsusing  `one-hot`  representation, please use  `CategoricalCrossentropy`  metric.There should be  `# classes`  floating point values per feature for  `y_pred` and a single floating point value per feature for  `y_true` .
 
 In the snippet below, there is a single floating point value per example for `y_true`  and  `# classes`  floating pointing values per example for  `y_pred` .The shape of  `y_true`  is  `[batch_size]`  and the shape of  `y_pred`  is `[batch_size, num_classes]` .
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -34,7 +34,7 @@ print('Final result: ', m.result().numpy())  # Final result: 1.176
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -45,7 +45,7 @@ model.compile(
  
 ```
 
-#### Args:
+#### 参数：
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
 - **`from_logits`** : (Optional ) Whether  `y_pred`  is expected to be a logits tensor.By default, we assume that  `y_pred`  encodes a probability distribution.
@@ -67,7 +67,7 @@ model.compile(
 
 Creates a  `MeanMetricWrapper`  instance.
 
-#### Args:
+#### 参数：
 - **`fn`** : The metric function to wrap, with signature `fn(y_true, y_pred, **kwargs)` .
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
@@ -88,7 +88,7 @@ Creates a  `MeanMetricWrapper`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -99,7 +99,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -111,7 +111,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -127,16 +127,16 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates metric statistics.
+累积度量统计。
 
  `y_true`  and  `y_pred`  should have the same shape.
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can bea  `Tensor`  whose rank is either 0, or the same rank as  `y_true` ,and must be broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

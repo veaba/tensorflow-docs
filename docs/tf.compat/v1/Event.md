@@ -1,9 +1,9 @@
 
 
 ## Class  `Event` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `file_version` 

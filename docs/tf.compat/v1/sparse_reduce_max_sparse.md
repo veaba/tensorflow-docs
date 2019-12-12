@@ -21,7 +21,7 @@ Reduces  `sp_input`  along the dimensions given in  `reduction_axes` .  Unless `
 
 If  `reduction_axes`  has no entries, all dimensions are reduced, and a tensorwith a single element is returned.  Additionally, the axes can be negative,which are interpreted according to the indexing rules in Python.
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The SparseTensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce; list or scalar. If  `None`  (thedefault), reduces all dimensions.
 - **`keepdims`** : If true, retain reduced dimensions with length 1.
@@ -29,6 +29,6 @@ If  `reduction_axes`  has no entries, all dimensions are reduced, and a tensorwi
 - **`keep_dims`** : Deprecated alias for  `keepdims` .
 
 
-#### Returns:
-The reduced SparseTensor.
+#### 返回：
+简化的Sparsetensor。
 

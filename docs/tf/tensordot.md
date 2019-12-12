@@ -1,8 +1,8 @@
 
 
-Tensor contraction of a and b along specified axes.
+a和b沿指定轴的张量收缩。
 
-**Aliases** : [ `tf.compat.v1.linalg.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.compat.v1.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.compat.v2.linalg.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.compat.v2.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.linalg.tensordot` ](/api_docs/python/tf/tensordot)
+**别名** : [ `tf.compat.v1.linalg.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.compat.v1.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.compat.v2.linalg.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.compat.v2.tensordot` ](/api_docs/python/tf/tensordot), [ `tf.linalg.tensordot` ](/api_docs/python/tf/tensordot)
 
 ```
  tf.tensordot(
@@ -28,16 +28,16 @@ cjklm=∑iaijkblmi.
 
 In general,  `order(c) = order(a) + order(b) - 2*len(axes[0])` .
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float32`  or  `float64` .
 - **`b`** :  `Tensor`  with the same type as  `a` .
 - **`axes`** : Either a scalar  `N` , or a list or an  `int32`   `Tensor`  of shape [2, k].If axes is a scalar, sum over the last N axes of a and the first N axes ofb in order. If axes is a list or  `Tensor`  the first and second row containthe set of unique integers specifying axes along which the contraction iscomputed, for  `a`  and  `b` , respectively. The number of axes for  `a`  and `b`  must be equal.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `a` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shapes of  `a` ,  `b` , and  `axes`  are incompatible.
 - **`IndexError`** : If the values in axes exceed the rank of the correspondingtensor.

@@ -1,18 +1,18 @@
 
 
 ## Class  `Dropout` 
-Applies Dropout to the input.
+对输入应用辍学。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Dropout` ](/api_docs/python/tf/keras/layers/Dropout), [ `tf.compat.v2.keras.layers.Dropout` ](/api_docs/python/tf/keras/layers/Dropout)
+**别名** : [ `tf.compat.v1.keras.layers.Dropout` ](/api_docs/python/tf/keras/layers/Dropout), [ `tf.compat.v2.keras.layers.Dropout` ](/api_docs/python/tf/keras/layers/Dropout)
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Overfit and underfit](https://tensorflow.google.cn/tutorials/keras/overfit_and_underfit)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
@@ -20,13 +20,13 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - [Create an Estimator from a Keras model](https://tensorflow.google.cn/tutorials/estimator/keras_model_to_estimator)
 Dropout consists in randomly settinga fraction  `rate`  of input units to 0 at each update during training time,which helps prevent overfitting.
 
-#### Arguments:
+#### 参数：
 - **`rate`** : Float between 0 and 1. Fraction of the input units to drop.
 - **`noise_shape`** : 1D integer tensor representing the shape of thebinary dropout mask that will be multiplied with the input.For instance, if your inputs have shape `(batch_size, timesteps, features)`  andyou want the dropout mask to be the same for all timesteps,you can use  `noise_shape=(batch_size, 1, features)` .
 - **`seed`** : A Python integer to use as random seed.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : Input tensor (of any rank).
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode (adding dropout) or in inference mode (doing nothing).
 

@@ -9,12 +9,12 @@ Loads a TensorFlow plugin, containing file system implementation. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.load_library` ](https://tensorflow.google.cn/api_docs/python/tf/load_library) instead.
 Pass  `library_filename`  to a platform-specific mechanism for dynamicallyloading a library. The rules for determining the exact location of thelibrary are platform-specific and are not documented here.
 
-#### Args:
+#### 参数：
 - **`library_filename`** : Path to the plugin.Relative or absolute filesystem path to a dynamic library file.
 
 
-#### Returns:
+#### 返回：
 None.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : when unable to load the library.

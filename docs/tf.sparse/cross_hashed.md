@@ -1,6 +1,6 @@
-Generates hashed sparse cross from a list of sparse and dense tensors.
+从稀疏和稠密张量列表生成哈希稀疏交叉。
 
-**Aliases** : [ `tf.compat.v1.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed), [ `tf.compat.v2.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed)
+**别名** : [ `tf.compat.v1.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed), [ `tf.compat.v2.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed)
 
 ```
  tf.sparse.cross_hashed(
@@ -26,7 +26,7 @@ For example, if the inputs are
  
 ```
 
-then the output will be:
+那么输出将是：
 
 ```
  shape = [2, 2]
@@ -42,13 +42,13 @@ then the output will be:
  
 ```
 
-#### Args:
+#### 参数：
 - **`inputs`** : An iterable of  `Tensor`  or  `SparseTensor` .
 - **`num_buckets`** : An  `int`  that is  `>= 0` .output = hashed_value%num_buckets if num_buckets > 0 else hashed_value.
 - **`hash_key`** : Integer hash_key that will be used by the  `FingerprintCat64` function. If not given, will use a default key.
 - **`name`** : Optional name for the op.
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  of type  `int64` .
 

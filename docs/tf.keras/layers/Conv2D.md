@@ -3,9 +3,9 @@
 ## Class  `Conv2D` 
 2D convolution layer (e.g. spatial convolution over images).
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Conv2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.compat.v1.keras.layers.Convolution2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.compat.v2.keras.layers.Conv2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.compat.v2.keras.layers.Convolution2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.keras.layers.Convolution2D` ](/api_docs/python/tf/keras/layers/Conv2D)
+**别名** : [ `tf.compat.v1.keras.layers.Conv2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.compat.v1.keras.layers.Convolution2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.compat.v2.keras.layers.Conv2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.compat.v2.keras.layers.Convolution2D` ](/api_docs/python/tf/keras/layers/Conv2D), [ `tf.keras.layers.Convolution2D` ](/api_docs/python/tf/keras/layers/Conv2D)
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
@@ -13,7 +13,7 @@
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Custom layers](https://tensorflow.google.cn/tutorials/customization/custom_layers)
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 - [Convolutional Neural Network (CNN)](https://tensorflow.google.cn/tutorials/images/cnn)
@@ -23,7 +23,7 @@ This layer creates a convolution kernel that is convolvedwith the layer input to
 
 When using this layer as the first layer in a model,provide the keyword argument  `input_shape` (tuple of integers, does not include the sample axis),e.g.  `input_shape=(128, 128, 3)`  for 128x128 RGB picturesin  `data_format="channels_last"` .
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 2 integers, specifying theheight and width of the 2D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 2 integers,specifying the strides of the convolution along the height and width.Can be a single integer to specify the same value forall spatial dimensions.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -41,10 +41,10 @@ When using this layer as the first layer in a model,provide the keyword argument
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-#### Input shape:
+#### 输入形状：
 4D tensor with shape: `(samples, channels, rows, cols)`  if data_format='channels_first'or 4D tensor with shape: `(samples, rows, cols, channels)`  if data_format='channels_last'.
 
-#### Output shape:
+#### 输出形状：
 4D tensor with shape: `(samples, filters, new_rows, new_cols)`  if data_format='channels_first'or 4D tensor with shape: `(samples, new_rows, new_cols, filters)`  if data_format='channels_last'. `rows`  and  `cols`  values might have changed due to padding.
 
 ##  `__init__` 

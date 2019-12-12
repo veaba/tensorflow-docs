@@ -1,4 +1,4 @@
-Ragged Tensors.
+参差不齐的张量。
 
 This package defines ops for manipulating ragged tensors ([ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor)),which are tensors with non-uniform shapes.  In particular, each  `RaggedTensor` has one or more *ragged dimensions*, which are dimensions whose slices may havedifferent lengths.  For example, the inner (column) dimension of `rt=[[3, 1, 4, 1], [], [5, 9, 2], [6], []]`  is ragged, since the column slices( `rt[0, :]` , ...,  `rt[4, :]` ) have different lengths.  For a more detaileddescription of ragged tensors, see the [ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor) class documentationand the [Ragged Tensor Guide](/guide/ragged_tensors).
 
@@ -128,10 +128,10 @@ Arguments that accept  `RaggedTensor` s are marked in **bold** .
 - [ `tf.zeros_like` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_like)(**tensor** , dtype= `None` , name= `None` , optimize= `True` )n
 
 
-## Classes
+## Class 
 [ `class RaggedTensorValue` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ragged/RaggedTensorValue): Represents the value of a  `RaggedTensor` .
 
-## Functions
+## 功能
 [ `boolean_mask(...)` ](https://tensorflow.google.cn/api_docs/python/tf/ragged/boolean_mask): Applies a boolean mask to  `data`  without flattening the mask dimensions.
 
 [ `constant(...)` ](https://tensorflow.google.cn/api_docs/python/tf/ragged/constant): Constructs a constant RaggedTensor from a nested Python list.

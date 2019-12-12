@@ -1,6 +1,6 @@
 SpaceToBatch for N-D tensors of type T.
 
-**Aliases** : [ `tf.compat.v2.nn.space_to_batch` ](/api_docs/python/tf/space_to_batch), [ `tf.compat.v2.space_to_batch` ](/api_docs/python/tf/space_to_batch), [ `tf.nn.space_to_batch` ](/api_docs/python/tf/space_to_batch)
+**别名** : [ `tf.compat.v2.nn.space_to_batch` ](/api_docs/python/tf/space_to_batch), [ `tf.compat.v2.space_to_batch` ](/api_docs/python/tf/space_to_batch), [ `tf.nn.space_to_batch` ](/api_docs/python/tf/space_to_batch)
 
 ```
  tf.space_to_batch(
@@ -14,7 +14,7 @@ SpaceToBatch for N-D tensors of type T.
 
 This operation divides "spatial" dimensions  `[1, ..., M]`  of the input into agrid of blocks of shape  `block_shape` , and interleaves these blocks with the"batch" dimension (0) such that in the output, the spatial dimensions `[1, ..., M]`  correspond to the position within the grid, and the batchdimension combines both the position within a spatial block and the originalbatch position.  Prior to division into blocks, the spatial dimensions of theinput are optionally zero padded according to  `paddings` .  See below for aprecise description.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .N-D with shape  `input_shape = [batch] + spatial_shape + remaining_shape` ,where spatial_shape has  `M`  dimensions.
 - **`block_shape`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .1-D with shape  `[M]` , all values must be >= 1.
 - **`paddings`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .2-D with shape  `[M, 2]` , all values must be >= 0. `paddings[i] = [pad_start, pad_end]`  specifies the padding for input dimension `i + 1` , which corresponds to spatial dimension  `i` .  It is required that `block_shape[i]`  divides  `input_shape[i + 1] + pad_start + pad_end` .
@@ -116,6 +116,6 @@ Among others, this operation is useful for reducing atrous convolution into  reg
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

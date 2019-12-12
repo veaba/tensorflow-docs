@@ -1,6 +1,6 @@
-Creates a constant tensor.
+创建常量张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.constant` ](/api_docs/python/tf/keras/backend/constant), [ `tf.compat.v2.keras.backend.constant` ](/api_docs/python/tf/keras/backend/constant)
+**别名** : [ `tf.compat.v1.keras.backend.constant` ](/api_docs/python/tf/keras/backend/constant), [ `tf.compat.v2.keras.backend.constant` ](/api_docs/python/tf/keras/backend/constant)
 
 ```
  tf.keras.backend.constant(
@@ -12,13 +12,13 @@ Creates a constant tensor.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`value`** : A constant value (or list)
 - **`dtype`** : The type of the elements of the resulting tensor.
 - **`shape`** : Optional dimensions of resulting tensor.
 - **`name`** : Optional name for the tensor.
 
 
-#### Returns:
-A Constant Tensor.
+#### 返回：
+恒定张量
 

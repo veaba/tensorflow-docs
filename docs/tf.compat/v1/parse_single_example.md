@@ -12,15 +12,15 @@ For  `SparseTensor` s, the first (batch) column of the indices matrix is removed
 
 One might see performance advantages by batching  `Example`  protos with `parse_example`  instead of using this function directly.
 
-#### Args:
+#### 参数：
 - **`serialized`** : A scalar string Tensor, a single serialized Example.See  `_parse_single_example_raw`  documentation for more details.
 - **`features`** : A  `dict`  mapping feature keys to  `FixedLenFeature`  or `VarLenFeature`  values.
 - **`name`** : A name for this operation (optional).
 - **`example_names`** : (Optional) A scalar string Tensor, the associated name.See  `_parse_single_example_raw`  documentation for more details.
 
 
-#### Returns:
+#### 返回：
 A  `dict`  mapping feature keys to  `Tensor`  and  `SparseTensor`  values.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any feature is invalid.

@@ -1,8 +1,8 @@
 
 
-Bring in all of the public TensorFlow interface into this module.
+将所有公共tensorflow接口引入此模块。
 
-## Modules
+## 模块
 [ `audio` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/audio) module: Public API for tf.audio namespace.
 
 [ `autograph` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/autograph) module: Conversion of plain Python into TensorFlow graph code.
@@ -91,7 +91,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `xla` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/xla) module: Public API for tf.xla namespace.
 
-## Classes
+## Class 
 [ `class AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod): A class listing aggregation methods used to combine gradients.
 
 [ `class CriticalSection` ](https://tensorflow.google.cn/api_docs/python/tf/CriticalSection): Critical section.
@@ -156,7 +156,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `class zeros_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_initializer): Initializer that generates tensors initialized to 0.
 
-## Functions
+## 功能
 [ `Assert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert): Asserts that the given condition is true.
 
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/abs): Computes the absolute value of a tensor.
@@ -515,7 +515,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `zeros_like(...)` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_like): Creates a tensor with all elements set to zero.
 
-## Other Members
+## 其他成员
 -  `__version__ = '2.0.0'`  []()
 -  `bfloat16`  []()
 -  `bool`  []()

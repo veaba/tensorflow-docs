@@ -19,15 +19,15 @@ For each batch  `i`  and class  `j`  we have
  
 ```
 
-#### Args:
+#### 参数：
 - **`logits`** : A non-empty  `Tensor` . Must be one of the following types:  `half` , `float32` ,  `float64` .
 - **`axis`** : The dimension softmax would be performed on. The default is -1 whichindicates the last dimension.
 - **`name`** : A name for the operation (optional).
 - **`dim`** : Deprecated alias for  `axis` .
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `logits` . Same shape as  `logits` .
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : if  `logits`  is empty or  `axis`  is beyond the lastdimension of  `logits` .

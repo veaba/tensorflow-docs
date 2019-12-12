@@ -1,6 +1,6 @@
-Creates a callable TensorFlow graph from a Python function.
+从python函数创建可调用的tensorflow图。
 
-**Aliases** : [ `tf.compat.v1.function` ](/api_docs/python/tf/function), [ `tf.compat.v2.function` ](/api_docs/python/tf/function)
+**别名** : [ `tf.compat.v1.function` ](/api_docs/python/tf/function), [ `tf.compat.v2.function` ](/api_docs/python/tf/function)
 
 ```
  tf.function(
@@ -13,12 +13,12 @@ Creates a callable TensorFlow graph from a Python function.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Neural style transfer](https://tensorflow.google.cn/tutorials/generative/style_transfer)
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
@@ -202,7 +202,7 @@ Other than that, TensorFlow reserves the right to retrace functions as manytimes
 
 To control the tracing behavior, use the following tools: - different [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/function) objects are guaranteed to not share traces; and - specifying a signature or using concrete function objects returned from   get_concrete_function() guarantees that only one function graph will be   built.
 
-#### Args:
+#### 参数：
 - **`func`** : function to be compiled. If  `func`  is None, returns a decorator thatcan be invoked with a single argument -  `func` . The end result isequivalent to providing all the arguments up front. In other words, `tf.function(input_signature=...)(func)`  is equivalent to[ `tf.function(func, input_signature=...)` ](https://tensorflow.google.cn/api_docs/python/tf/function). The former can be used todecorate Python functions, for example:@tf.function(input_signature=...)def foo(...): ...
 - **`input_signature`** : A possibly nested sequence of [ `tf.TensorSpec` ](https://tensorflow.google.cn/api_docs/python/tf/TensorSpec) objectsspecifying the shapes and dtypes of the Tensors that will be supplied tothis function. If  `None` , a separate function is instantiated for eachinferred input signature.  If input_signature is specified, every input to `func`  must be a  `Tensor` , and  `func`  cannot accept  `**kwargs` .
 - **`autograph`** : Whether autograph should be applied on  `func`  before tracing agraph. This allows for dynamic control flow (Python if's, loops etc.)in the traced graph. See https://www.tensorflow.org/guide/autograph formore information.
@@ -210,8 +210,8 @@ To control the tracing behavior, use the following tools: - different [ `tf.func
 - **`experimental_relax_shapes`** : When true, argument shapes may be relaxed toavoid unecessary retracing.
 
 
-#### Returns:
+#### 返回：
 If  `func`  is not None, returns a callable that will execute the compiledfunction (and return zero or more [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects).If  `func`  is None, returns a decorator that, when invoked with a single `func`  argument, returns a callable equivalent to the case above.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `input_signature`  is neither  `None`  nor a sequence of `TensorSpec`  objects.

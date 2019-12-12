@@ -3,11 +3,11 @@
 ## Class  `CustomObjectScope` 
 Provides a scope that changes to  `_GLOBAL_CUSTOM_OBJECTS`  cannot escape.
 
-**Aliases** : [ `tf.compat.v1.keras.utils.CustomObjectScope` ](/api_docs/python/tf/keras/utils/CustomObjectScope), [ `tf.compat.v2.keras.utils.CustomObjectScope` ](/api_docs/python/tf/keras/utils/CustomObjectScope)
+**别名** : [ `tf.compat.v1.keras.utils.CustomObjectScope` ](/api_docs/python/tf/keras/utils/CustomObjectScope), [ `tf.compat.v2.keras.utils.CustomObjectScope` ](/api_docs/python/tf/keras/utils/CustomObjectScope)
 
 Code within a  `with`  statement will be able to access custom objectsby name. Changes to global custom objects persistwithin the enclosing  `with`  statement. At end of the  `with`  statement,global custom objects are reverted to stateat beginning of the  `with`  statement.
 
-#### Example:
+#### 示例：
 Consider a custom object  `MyObject`  (e.g. a class):
 
 ```
@@ -27,7 +27,7 @@ Consider a custom object  `MyObject`  (e.g. a class):
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 

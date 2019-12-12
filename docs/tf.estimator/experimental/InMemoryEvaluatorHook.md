@@ -1,13 +1,13 @@
 
 
 ## Class  `InMemoryEvaluatorHook` 
-Hook to run evaluation in training without a checkpoint.
+在没有检查点的训练中进行挂钩运行评估。
 
 Inherits From: [ `SessionRunHook` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/SessionRunHook)
 
-**Aliases** : [ `tf.compat.v1.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook), [ `tf.compat.v2.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook)
+**别名** : [ `tf.compat.v1.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook), [ `tf.compat.v2.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook)
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -27,7 +27,7 @@ estimator.train(train_input_fn, hooks=[evaluator])
  
 ```
 
-Current limitations of this approach are:
+这种方法目前的局限性是：
 
 - It doesn't support multi-node distributed mode.
 - It doesn't support saveable objects other than variables (such as boostedtree support)
@@ -51,7 +51,7 @@ Current limitations of this approach are:
 
 Initializes a  `InMemoryEvaluatorHook` .
 
-#### Args:
+#### 参数：
 - **`estimator`** : A [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) instance to call evaluate.
 - **`input_fn`** :  Equivalent to the  `input_fn`  arg to  `estimator.evaluate` . Afunction that constructs the input data for evaluation.See [Creating input functions](https://tensorflow.org/guide/premade_estimators#create_input_functions)for more information. The function should construct and return one ofthe following:
 
@@ -72,11 +72,11 @@ Initializes a  `InMemoryEvaluatorHook` .
     - A tuple (features, labels): Where  `features`  is a  `Tensor`  or adictionary of string feature name to  `Tensor`  and  `labels`  is a `Tensor`  or a dictionary of string label name to  `Tensor` . Both `features`  and  `labels`  are consumed by  `model_fn` . They shouldsatisfy the expectation of  `model_fn`  from inputs.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `every_n_iter`  is non-positive or it's not a single machinetraining
 
 
-## Methods
+## 方法
 
 
 ###  `after_create_session` 
@@ -90,7 +90,7 @@ Initializes a  `InMemoryEvaluatorHook` .
  
 ```
 
-Does first run which shows the eval metrics before training.
+进行第一次跑步，显示训练前的评估指标。
 
 ###  `after_run` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
@@ -103,7 +103,7 @@ Does first run which shows the eval metrics before training.
  
 ```
 
-Runs evaluator.
+运行Evaluator。
 
 ###  `before_run` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/session_run_hook.py#L129-L150)
@@ -113,19 +113,19 @@ Runs evaluator.
  
 ```
 
-Called before each call to run().
+在每次调用run（）之前调用。
 
 You can return from this call a  `SessionRunArgs`  object indicating ops ortensors to add to the upcoming  `run()`  call.  These ops/tensors will be runtogether with the ops/tensors originally passed to the original run() call.The run args you return can also contain feeds to be added to the run()call.
 
 The  `run_context`  argument is a  `SessionRunContext`  that providesinformation about the upcoming  `run()`  call: the originally requestedop/tensors, the TensorFlow Session.
 
-At this point graph is finalized and you can not add ops.
+此时图表已完成，无法添加操作。
 
-#### Args:
+#### 参数：
 - **`run_context`** : A  `SessionRunContext`  object.
 
 
-#### Returns:
+#### 返回：
 None or a  `SessionRunArgs`  object.
 
 ###  `begin` 
@@ -136,7 +136,7 @@ None or a  `SessionRunArgs`  object.
  
 ```
 
-Build eval graph and restoring op.
+建立评估图并恢复操作。
 
 ###  `end` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
@@ -146,5 +146,5 @@ Build eval graph and restoring op.
  
 ```
 
-Runs evaluator for final model.
+运行最终模型的计算器。
 

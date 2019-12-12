@@ -23,7 +23,7 @@ The ids and weights may be multi-dimensional. Embeddings are always aggregatedal
 **Note:**  when doing embedding lookup on  `embedding_weights` , "div" partitionstrategy will be used. Support for other partition strategy will be addedlater.
 
 
-#### Args:
+#### 参数：
 - **`embedding_weights`** :  A list of  `P`  float  `Tensor` s or values representingpartitioned embedding  `Tensor` s.  Alternatively, a  `PartitionedVariable` created by partitioning along dimension 0.  The total unpartitioned shapeshould be  `[e_0, e_1, ..., e_m]` , where  `e_0`  represents the vocab sizeand  `e_1, ..., e_m`  are the embedding dimensions.
 - **`sparse_ids`** :  `SparseTensor`  of shape  `[d_0, d_1, ..., d_n]`  containing theids.  `d_0`  is typically batch size.
 - **`sparse_weights`** :  `SparseTensor`  of same shape as  `sparse_ids` , containingfloat weights corresponding to  `sparse_ids` , or  `None`  if all weights arebe assumed to be 1.0.
@@ -33,8 +33,8 @@ The ids and weights may be multi-dimensional. Embeddings are always aggregatedal
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 Dense  `Tensor`  of shape  `[d_0, d_1, ..., d_{n-1}, e_1, ..., e_m]` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `embedding_weights`  is empty.

@@ -13,13 +13,13 @@ Inherits From: [ `BaseListParser` ](https://tensorflow.google.cn/api_docs/python
  
 ```
 
-Initializer.
+初始值设定项。
 
-#### Args:
+#### 参数：
 - **`comma_compat`** : bool, whether to support comma as an additional separator.If False then only whitespace is supported.  This is intended only forbackwards compatibility with flags that used to be comma-separated.
 
 
-## Methods
+## 方法
 
 
 ###  `flag_type` 
@@ -30,7 +30,7 @@ Initializer.
  
 ```
 
-See base class.
+见基类。
 
 ###  `parse` 
 
@@ -44,10 +44,10 @@ Parses argument as whitespace-separated list of strings.
 
 It also parses argument as comma-separated list of strings if requested.
 
-#### Args:
+#### 参数：
 - **`argument`** : string argument passed in the commandline.
 
 
-#### Returns:
+#### 返回：
 [str], the parsed flag value.
 

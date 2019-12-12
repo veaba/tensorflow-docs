@@ -1,7 +1,7 @@
 
 
 ## Class  `FastGFile` 
-File I/O wrappers without thread locking.
+无线程锁定的文件I/O包装器。
 
 Note, that this  is somewhat like builtin Python  file I/O, butthere are  semantic differences to  make it more  efficient forsome backing filesystems.  For example, a write  mode file willnot  be opened  until the  first  write call  (to minimize  RPCinvocations in network filesystems).
 
@@ -16,22 +16,22 @@ Note, that this  is somewhat like builtin Python  file I/O, butthere are  semant
  
 ```
 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use tf.gfile.GFile.
 
 
-## Properties
+## 属性
 
 
 ###  `mode` 
-Returns the mode in which the file was opened.
+返回打开文件的模式。
 
 ###  `name` 
-Returns the file name.
+返回文件名。
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -42,7 +42,7 @@ Returns the file name.
  
 ```
 
-Make usable with "with" statement.
+使用“with”语句。
 
 ###  `__exit__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L206-L208)
@@ -56,7 +56,7 @@ Make usable with "with" statement.
  
 ```
 
-Make usable with "with" statement.
+使用“with”语句。
 
 ###  `__iter__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L210-L211)
@@ -74,7 +74,7 @@ Make usable with "with" statement.
  
 ```
 
-Closes FileIO. Should be called for the WritableFile to be flushed.
+关闭文件IO。应该调用以刷新可写文件。
 
 ###  `flush` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L222-L232)
@@ -84,7 +84,7 @@ Closes FileIO. Should be called for the WritableFile to be flushed.
  
 ```
 
-Flushes the Writable file.
+刷新可写文件。
 
 This only ensures that the data has made its way out of the process withoutany guarantees on whether it's written to disk. This means that thedata would survive an application crash but not necessarily an OS crash.
 
@@ -104,15 +104,15 @@ This only ensures that the data has made its way out of the process withoutany g
  
 ```
 
-Returns the contents of a file as a string.
+以字符串形式返回文件的内容。
 
-Starts reading from current position in file.
+开始读取文件中的当前位置。
 
-#### Args:
+#### 参数：
 - **`n`** : Read 'n' bytes if n != -1. If n = -1, reads to end of file.
 
 
-#### Returns:
+#### 返回：
 'n' bytes of the file (or whole file) in bytes mode or 'n' bytes of thestring if in string (regular) mode.
 
 ###  `readline` 
@@ -133,7 +133,7 @@ Reads the next line from the file. Leaves the '\n' at the end.
  
 ```
 
-Returns all lines from the file in a list.
+返回列表中文件的所有行。
 
 ###  `seek` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L130-L174)
@@ -153,7 +153,7 @@ Seeks to the offset in the file. (deprecated arguments)
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(position)` . They will be removed in a future version.Instructions for updating:position is deprecated in favor of the offset argument.
 
 
-#### Args:
+#### 参数：
 - **`offset`** : The byte count relative to the whence argument.
 - **`whence`** : Valid values for whence are:0: start of the file (default)1: relative to the current position of the file2: relative to the end of file. offset is usually negative.
 
@@ -176,7 +176,7 @@ Returns True as FileIO supports random access ops of seek()/tell()
  
 ```
 
-Returns the size of the file.
+返回文件的大小。
 
 ###  `tell` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L192-L200)
@@ -186,7 +186,7 @@ Returns the size of the file.
  
 ```
 
-Returns the current position in the file.
+返回文件中的当前位置。
 
 ###  `write` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/file_io.py#L104-L108)

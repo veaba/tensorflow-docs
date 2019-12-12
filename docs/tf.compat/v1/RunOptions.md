@@ -1,12 +1,12 @@
 
 
 ## Class  `RunOptions` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class Experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/RunOptions/Experimental)
 
-## Properties
+## 属性
 
 
 ###  `debug_options` 
@@ -30,7 +30,7 @@ A ProtocolMessage
 ###  `trace_level` 
  `TraceLevel trace_level` 
 
-## Class Members
+## Class 成员
 -  `FULL_TRACE = 3`  []()
 -  `HARDWARE_TRACE = 2`  []()
 -  `NO_TRACE = 0`  []()

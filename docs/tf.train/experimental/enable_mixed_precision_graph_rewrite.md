@@ -18,11 +18,11 @@ Currently, mixed precision is only enabled on Volta GPUs and above. TPUsupport i
 
 WARNING: This rewrite silently affects the entire model and can haveunintended consequences. One example: If a NaN occurs during dynamic lossscaling, the data for the batch is silently dropped while theLossScaleOptimizer attempts to find the appropriate scaling value on the nextbatch.
 
-#### Args:
+#### 参数：
 - **`opt`** : An instance of a [ `tf.keras.optimizers.Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer).
 - **`loss_scale`** : Either an int/float, the string "dynamic", or an instance of a[ `tf.train.experimental.LossScale` ](https://tensorflow.google.cn/api_docs/python/tf/train/experimental/LossScale). The loss scale to use. It isrecommended to keep this as its default value of "dynamic".
 
 
-#### Returns:
+#### 返回：
 A version of  `opt`  that will use loss scaling to prevent underflow.
 

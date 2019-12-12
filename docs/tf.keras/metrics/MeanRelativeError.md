@@ -1,17 +1,17 @@
 
 
 ## Class  `MeanRelativeError` 
-Computes the mean relative error by normalizing with the given values.
+通过使用给定值进行规格化来计算平均相对误差。
 
 Inherits From: [ `Mean` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Mean)
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError), [ `tf.compat.v2.keras.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError), [ `tf.compat.v2.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError), [ `tf.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError)
+**别名** : [ `tf.compat.v1.keras.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError), [ `tf.compat.v2.keras.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError), [ `tf.compat.v2.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError), [ `tf.metrics.MeanRelativeError` ](/api_docs/python/tf/keras/metrics/MeanRelativeError)
 
 This metric creates two local variables,  `total`  and  `count`  that are used tocompute the mean relative absolute error. This average is weighted by `sample_weight` , and it is ultimately returned as  `mean_relative_error` :an idempotent operation that simply divides  `total`  by  `count` .
 
 If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -25,7 +25,7 @@ print('Final result: ', m.result().numpy())  # Final result: 1.25
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -50,7 +50,7 @@ model.compile(
 
 Creates a  `MeanRelativeError`  instance.
 
-#### Args:
+#### 参数：
 - **`normalizer`** : The normalizer values with same shape as predictions.
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
@@ -70,7 +70,7 @@ Creates a  `MeanRelativeError`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -81,7 +81,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -93,7 +93,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -109,14 +109,14 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates metric statistics.
+累积度量统计。
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

@@ -1,6 +1,6 @@
 Assert the condition  `x > y`  holds element-wise.
 
-**Aliases** : [ `tf.assert_greater` ](/api_docs/python/tf/debugging/assert_greater), [ `tf.compat.v2.assert_greater` ](/api_docs/python/tf/debugging/assert_greater), [ `tf.compat.v2.debugging.assert_greater` ](/api_docs/python/tf/debugging/assert_greater)
+**别名** : [ `tf.assert_greater` ](/api_docs/python/tf/debugging/assert_greater), [ `tf.compat.v2.assert_greater` ](/api_docs/python/tf/debugging/assert_greater), [ `tf.compat.v2.debugging.assert_greater` ](/api_docs/python/tf/debugging/assert_greater)
 
 ```
  tf.debugging.assert_greater(
@@ -17,7 +17,7 @@ This Op checks that  `x[i] > y[i]`  holds for every pair of (possiblybroadcast) 
 
 If  `x`  is not greater than  `y`  element-wise,  `message` , as well as the first `summarize`  entries of  `x`  and  `y`  are printed, and  `InvalidArgumentError`  israised.
 
-#### Args:
+#### 参数：
 - **`x`** :  Numeric  `Tensor` .
 - **`y`** :  Numeric  `Tensor` , same dtype as and broadcastable to  `x` .
 - **`message`** : A string to prefix to the default message.
@@ -25,13 +25,13 @@ If  `x`  is not greater than  `y`  element-wise,  `message` , as well as the fir
 - **`name`** : A name for this operation (optional).  Defaults to "assert_greater".
 
 
-#### Returns:
+#### 返回：
 Op that raises  `InvalidArgumentError`  if  `x > y`  is False. This can be  used with [ `tf.control_dependencies` ](https://tensorflow.google.cn/api_docs/python/tf/control_dependencies) inside of [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/function)s to block  followup computation until the check has executed.
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : if the check can be performed immediately and `x > y`  is False. The check can be performed immediately during eagerexecution or if  `x`  and  `y`  are statically known.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 returns None
 

@@ -1,4 +1,4 @@
-Counts the number of occurrences of each value in an integer array.
+计算整数数组中每个值的出现次数。
 
 ```
  tf.compat.v1.bincount(
@@ -13,7 +13,7 @@ Counts the number of occurrences of each value in an integer array.
 
 If  `minlength`  and  `maxlength`  are not given, returns a vector with length `tf.reduce_max(arr) + 1`  if  `arr`  is non-empty, and length 0 otherwise.If  `weights`  are non-None, then index  `i`  of the output stores the sum of thevalue in  `weights`  at each index where the corresponding value in  `arr`  is `i` .
 
-#### Args:
+#### 参数：
 - **`arr`** : An int32 tensor of non-negative values.
 - **`weights`** : If non-None, must be the same shape as arr. For each value in `arr` , the bin will be incremented by the corresponding weight instead of1.
 - **`minlength`** : If given, ensures the output has length at least  `minlength` ,padding with zeros at the end if necessary.
@@ -21,6 +21,6 @@ If  `minlength`  and  `maxlength`  are not given, returns a vector with length `
 - **`dtype`** : If  `weights`  is None, determines the type of the output bins.
 
 
-#### Returns:
+#### 返回：
 A vector with the same dtype as  `weights`  or the given  `dtype` . The binvalues.
 

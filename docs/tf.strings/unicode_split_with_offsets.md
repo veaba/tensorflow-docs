@@ -1,6 +1,6 @@
-Splits each string into a sequence of code points with start offsets.
+将每个字符串拆分为一系列具有起始偏移量的代码点。
 
-**Aliases** : [ `tf.compat.v1.strings.unicode_split_with_offsets` ](/api_docs/python/tf/strings/unicode_split_with_offsets), [ `tf.compat.v2.strings.unicode_split_with_offsets` ](/api_docs/python/tf/strings/unicode_split_with_offsets)
+**别名** : [ `tf.compat.v1.strings.unicode_split_with_offsets` ](/api_docs/python/tf/strings/unicode_split_with_offsets), [ `tf.compat.v2.strings.unicode_split_with_offsets` ](/api_docs/python/tf/strings/unicode_split_with_offsets)
 
 ```
  tf.strings.unicode_split_with_offsets(
@@ -21,7 +21,7 @@ Returns a tuple  `(chars, start_offsets)`  where:
 -  `start_offsets[i1...iN, j]`  is the start byte offset for the  `j` thcharacter in  `input[i1...iN]` , when decoded using  `input_encoding` .
 
 
-#### Args:
+#### 参数：
 - **`input`** : An  `N`  dimensional potentially ragged  `string`  tensor with shape `[D1...DN]` .   `N`  must be statically known.
 - **`input_encoding`** : String name for the unicode encoding that should be used todecode each string.
 - **`errors`** : Specifies the response when an input string can't be convertedusing the indicated encoding. One of:
@@ -32,14 +32,14 @@ Returns a tuple  `(chars, start_offsets)`  where:
     -  `'ignore'` : Skip illegal substrings.
 
 
-#### Returns:
+#### 返回：
 A tuple of  `N+1`  dimensional tensors  `(codepoints, start_offsets)` .
 
 -  `codepoints`  is an  `int32`  tensor with shape  `[D1...DN, (num_chars)]` .
 -  `offsets`  is an  `int64`  tensor with shape  `[D1...DN, (num_chars)]` .
 The returned tensors are [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor)s if  `input`  is a scalar, or[ `tf.RaggedTensor` ](https://tensorflow.google.cn/api_docs/python/tf/RaggedTensor)s otherwise.
 
-#### Example:
+#### 示例：
 
 
 ```

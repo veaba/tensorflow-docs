@@ -1,4 +1,4 @@
-Log 'msg % args' at level 'level' only first 'n' times.
+仅在“level”级别记录“msg%args”前“n”次。
 
 ```
  tf.compat.v1.logging.log_first_n(
@@ -10,9 +10,9 @@ Log 'msg % args' at level 'level' only first 'n' times.
  
 ```
 
-Not threadsafe.
+不是线程安全的。
 
-#### Args:
+#### 参数：
 - **`level`** : The level at which to log.
 - **`msg`** : The message to be logged.
 - **`n`** : The number of times this should be called before it is logged.

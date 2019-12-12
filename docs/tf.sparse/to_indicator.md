@@ -1,6 +1,6 @@
 Converts a  `SparseTensor`  of ids into a dense bool indicator tensor.
 
-**Aliases** : [ `tf.compat.v1.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator), [ `tf.compat.v1.sparse_to_indicator` ](/api_docs/python/tf/sparse/to_indicator), [ `tf.compat.v2.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator)
+**别名** : [ `tf.compat.v1.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator), [ `tf.compat.v1.sparse_to_indicator` ](/api_docs/python/tf/sparse/to_indicator), [ `tf.compat.v2.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator)
 
 ```
  tf.sparse.to_indicator(
@@ -45,14 +45,14 @@ Note that repeats are allowed in the input SparseTensor.This op is useful for co
 
 The input  `SparseTensor`  must be in row-major order.
 
-#### Args:
+#### 参数：
 - **`sp_input`** : A  `SparseTensor`  with  `values`  property of type  `int32`  or `int64` .
 - **`vocab_size`** : A scalar int64 Tensor (or Python int) containing the new sizeof the last dimension,  `all(0 <= sp_input.values < vocab_size)` .
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
-A dense bool indicator tensor representing the indices with specified value.
+#### 返回：
+表示具有指定值的索引的稠密bool指示符张量。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .

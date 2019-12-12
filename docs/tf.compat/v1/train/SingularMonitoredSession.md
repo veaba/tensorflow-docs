@@ -13,7 +13,7 @@ Please note that this utility is not recommended for distributed settings.For di
     - To save and restore.
 
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -62,9 +62,9 @@ Exit: At the  `close()` , the hooked session does following things in order:
  
 ```
 
-Creates a SingularMonitoredSession.
+创建奇点监视会话。
 
-#### Args:
+#### 参数：
 - **`hooks`** : An iterable of `SessionRunHook' objects.
 - **`scaffold`** : A  `Scaffold`  used for gathering or building supportive ops. Ifnot specified a default one is created. It's used to finalize the graph.
 - **`master`** :  `String`  representation of the TensorFlow master to use.
@@ -74,16 +74,16 @@ Creates a SingularMonitoredSession.
 - **`checkpoint_filename_with_path`** : A string. Optional path to a checkpointfile from which to restore variables.
 
 
-## Child Classes
+## 子类
 [ `class StepContext` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/MonitoredSession/StepContext)
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-The graph that was launched in this session.
+在此会话中启动的图表。
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -137,18 +137,18 @@ Returns underlying  `TensorFlow.Session`  object.
  
 ```
 
-Run ops in the monitored session.
+在监视的会话中运行操作。
 
 This method is completely compatible with the  `tf.Session.run()`  method.
 
-#### Args:
+#### 参数：
 - **`fetches`** : Same as  `tf.Session.run()` .
 - **`feed_dict`** : Same as  `tf.Session.run()` .
 - **`options`** : Same as  `tf.Session.run()` .
 - **`run_metadata`** : Same as  `tf.Session.run()` .
 
 
-#### Returns:
+#### 返回：
 Same as  `tf.Session.run()` .
 
 ###  `run_step_fn` 
@@ -159,9 +159,9 @@ Same as  `tf.Session.run()` .
  
 ```
 
-Run ops using a step function.
+使用step函数运行ops。
 
-#### Args:
+#### 参数：
 - **`step_fn`** : A function or a method with a single argument of type `StepContext` .  The function may use methods of the argument to performcomputations with access to a raw session.  The returned value of the `step_fn`  will be returned from  `run_step_fn` , unless a stop isrequested.  In that case, the next  `should_stop`  call will return True.Example usage:
 
 
@@ -185,10 +185,10 @@ Run ops using a step function.
  
 ```
 
-#### Returns:
+#### 返回：
 Returns the returned value of  `step_fn` .
 
-#### Raises:
+#### 加薪：
 - **`StopIteration`** : if  `step_fn`  has called  `request_stop()` .  It may becaught by  `with tf.MonitoredSession()`  to close the session.
 - **`ValueError`** : if  `step_fn`  doesn't have a single argument called `step_context` . It may also optionally have  `self`  for cases when itbelongs to an object.
 

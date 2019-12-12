@@ -1,11 +1,11 @@
-Set if JIT compilation is enabled.
+设置是否启用JIT编译。
 
-**Aliases** : [ `tf.compat.v1.config.optimizer.set_jit` ](/api_docs/python/tf/config/optimizer/set_jit), [ `tf.compat.v2.config.optimizer.set_jit` ](/api_docs/python/tf/config/optimizer/set_jit)
+**别名** : [ `tf.compat.v1.config.optimizer.set_jit` ](/api_docs/python/tf/config/optimizer/set_jit), [ `tf.compat.v2.config.optimizer.set_jit` ](/api_docs/python/tf/config/optimizer/set_jit)
 
 ```
  tf.config.optimizer.set_jit(enabled)
  
 ```
 
-#### Args:
+#### 参数：
 - **`enabled`** : Whether to enable JIT compilation.

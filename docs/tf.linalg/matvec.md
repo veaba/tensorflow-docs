@@ -1,6 +1,6 @@
 Multiplies matrix  `a`  by vector  `b` , producing  `a`  *  `b` .
 
-**Aliases** : [ `tf.compat.v1.linalg.matvec` ](/api_docs/python/tf/linalg/matvec), [ `tf.compat.v2.linalg.matvec` ](/api_docs/python/tf/linalg/matvec)
+**别名** : [ `tf.compat.v1.linalg.matvec` ](/api_docs/python/tf/linalg/matvec), [ `tf.compat.v2.linalg.matvec` ](/api_docs/python/tf/linalg/matvec)
 
 ```
  tf.linalg.matvec(    a,    b,    transpose_a=False,    adjoint_a=False,    a_is_sparse=False,    b_is_sparse=False,    name=None) 
@@ -14,7 +14,7 @@ Matrix  `a`  can be transposed or adjointed (conjugated and transposed) onthe fl
 
 If one or both of the inputs contain a lot of zeros, a more efficientmultiplication algorithm can be used by setting the corresponding `a_is_sparse`  or  `b_is_sparse`  flag to  `True` . These are  `False`  by default.This optimization is only available for plain matrices/vectors (rank-2/1tensors) with datatypes  `bfloat16`  or  `float32` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -53,7 +53,7 @@ c = tf.matvec(a, b)
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `complex64` , `complex128`  and rank > 1.
 - **`b`** :  `Tensor`  with same type and rank =  `rank(a) - 1` .
 - **`transpose_a`** : If  `True` ,  `a`  is transposed before multiplication.
@@ -63,7 +63,7 @@ c = tf.matvec(a, b)
 - **`name`** : Name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most vector isthe product of the corresponding matrices in  `a`  and vectors in  `b` , e.g. ifall transpose or adjoint attributes are  `False` :
 
  `output` [..., i] = sum_k ( `a` [..., i, k] *  `b` [..., k]), for all indices i.
@@ -71,5 +71,5 @@ A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most vector is
 - **`Note`** : This is matrix-vector product, not element-wise product.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If transpose_a and adjoint_a are both set to True.

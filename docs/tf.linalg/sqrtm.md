@@ -1,6 +1,6 @@
-Computes the matrix square root of one or more square matrices:
+计算一个或多个方阵的矩阵平方根：
 
-**Aliases** : [ `tf.compat.v1.linalg.sqrtm` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.compat.v1.matrix_square_root` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.compat.v2.linalg.sqrtm` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.compat.v2.matrix_square_root` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.matrix_square_root` ](/api_docs/python/tf/linalg/sqrtm)
+**别名** : [ `tf.compat.v1.linalg.sqrtm` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.compat.v1.matrix_square_root` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.compat.v2.linalg.sqrtm` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.compat.v2.matrix_square_root` ](/api_docs/python/tf/linalg/sqrtm), [ `tf.matrix_square_root` ](/api_docs/python/tf/linalg/sqrtm)
 
 ```
  tf.linalg.sqrtm(    input,    name=None) 
@@ -14,11 +14,11 @@ The matrix square root is computed by first reducing the matrix to quasi-triangu
 
 The input is a tensor of shape  `[..., M, M]`  whose inner-most 2 dimensionsform square matrices. The output is a tensor of the same shape as the inputcontaining the matrix square root for all input submatrices  `[..., :, :]` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `float64` ,  `float32` ,  `half` ,  `complex64` ,  `complex128` .Shape is  `[..., M, M]` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

@@ -3,21 +3,21 @@
 ## Class  `MaxPool3D` 
 Max pooling operation for 3D data (spatial or spatio-temporal).
 
-**Aliases** : [ `tf.compat.v1.keras.layers.MaxPool3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.compat.v1.keras.layers.MaxPooling3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.compat.v2.keras.layers.MaxPool3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.compat.v2.keras.layers.MaxPooling3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.keras.layers.MaxPooling3D` ](/api_docs/python/tf/keras/layers/MaxPool3D)
+**别名** : [ `tf.compat.v1.keras.layers.MaxPool3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.compat.v1.keras.layers.MaxPooling3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.compat.v2.keras.layers.MaxPool3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.compat.v2.keras.layers.MaxPooling3D` ](/api_docs/python/tf/keras/layers/MaxPool3D), [ `tf.keras.layers.MaxPooling3D` ](/api_docs/python/tf/keras/layers/MaxPool3D)
 
-#### Arguments:
+#### 参数：
 - **`pool_size`** : Tuple of 3 integers,factors by which to downscale (dim1, dim2, dim3). `(2, 2, 2)`  will halve the size of the 3D input in each dimension.
 - **`strides`** : tuple of 3 integers, or None. Strides values.
 - **`padding`** : One of  `"valid"`  or  `"same"`  (case-insensitive).
 - **`data_format`** : A string,one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, spatial_dim1, spatial_dim2, spatial_dim3, channels)` while  `channels_first`  corresponds to inputs with shape `(batch, channels, spatial_dim1, spatial_dim2, spatial_dim3)` .It defaults to the  `image_data_format`  value found in yourKeras config file at  `~/.keras/keras.json` .If you never set it, then it will be "channels_last".
 
 
-#### Input shape:
+#### 输入形状：
 - If  `data_format='channels_last'` :5D tensor with shape: `(batch_size, spatial_dim1, spatial_dim2, spatial_dim3, channels)` 
 - If  `data_format='channels_first'` :5D tensor with shape: `(batch_size, channels, spatial_dim1, spatial_dim2, spatial_dim3)` 
 
 
-#### Output shape:
+#### 输出形状：
 - If  `data_format='channels_last'` :5D tensor with shape: `(batch_size, pooled_dim1, pooled_dim2, pooled_dim3, channels)` 
 - If  `data_format='channels_first'` :5D tensor with shape: `(batch_size, channels, pooled_dim1, pooled_dim2, pooled_dim3)` 
 

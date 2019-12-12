@@ -1,9 +1,9 @@
 
 
 ## Class  `StaticHashTable` 
-A generic hash table that is immutable once initialized.
+初始化后不可变的通用哈希表。
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -32,34 +32,34 @@ Creates a non-initialized  `HashTable`  object.
 
 Creates a table, the type of its keys and values are specified by theinitializer.Before using the table you will have to initialize it. After initializationthe table will be immutable.
 
-#### Args:
+#### 参数：
 - **`initializer`** : The table initializer to use. See  `HashTable`  kernel forsupported key and value types.
 - **`default_value`** : The value to use if a key is missing in the table.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `HashTable`  object.
 
-## Properties
+## 属性
 
 
 ###  `default_value` 
-The default value of the table.
+表的默认值。
 
 ###  `key_dtype` 
-The table key dtype.
+表键dtype。
 
 ###  `name` 
-The name of the table.
+表的名称。
 
 ###  `resource_handle` 
-Returns the resource handle associated with this Resource.
+返回与此资源关联的资源句柄。
 
 ###  `value_dtype` 
-The table value dtype.
+表值dtype。
 
-## Methods
+## 方法
 
 
 ###  `export` 
@@ -70,13 +70,13 @@ The table value dtype.
  
 ```
 
-Returns tensors of all keys and values in the table.
+返回表中所有键和值的张量。
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A pair of tensors with the first tensor containing all keys and the  second tensors containing all values in the table.
 
 ###  `lookup` 
@@ -94,15 +94,15 @@ Looks up  `keys`  in a table, outputs the corresponding values.
 
 The  `default_value`  is used for keys not present in the table.
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to look up. May be either a  `SparseTensor`  or dense  `Tensor` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  if keys are sparse, otherwise a dense  `Tensor` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  or  `default_value`  doesn't match the table datatypes.
 
 
@@ -114,12 +114,12 @@ A  `SparseTensor`  if keys are sparse, otherwise a dense  `Tensor` .
  
 ```
 
-Compute the number of elements in this table.
+计算此表中的元素数。
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-A scalar tensor containing the number of elements in this table.
+#### 返回：
+包含此表中元素数的标量张量。
 

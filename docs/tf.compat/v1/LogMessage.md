@@ -1,9 +1,9 @@
 
 
 ## Class  `LogMessage` 
-A ProtocolMessage
+原始信息
 
-## Properties
+## 属性
 
 
 ###  `level` 
@@ -12,7 +12,7 @@ A ProtocolMessage
 ###  `message` 
  `string message` 
 
-## Class Members
+## Class 成员
 -  `DEBUGGING = 10`  []()
 -  `ERROR = 40`  []()
 -  `FATAL = 50`  []()

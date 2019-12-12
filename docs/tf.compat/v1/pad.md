@@ -1,4 +1,4 @@
-Pads a tensor.
+垫张量。
 
 ```
  tf.compat.v1.pad(    tensor,    paddings,    mode='CONSTANT',    name=None,    constant_values=0) 
@@ -6,11 +6,11 @@ Pads a tensor.
 
 This operation pads a  `tensor`  according to the  `paddings`  you specify. `paddings`  is an integer tensor with shape  `[n, 2]` , where n is the rank of `tensor` . For each dimension D of  `input` ,  `paddings[D, 0]`  indicates howmany values to add before the contents of  `tensor`  in that dimension, and `paddings[D, 1]`  indicates how many values to add after the contents of `tensor`  in that dimension. If  `mode`  is "REFLECT" then both  `paddings[D, 0]` and  `paddings[D, 1]`  must be no greater than  `tensor.dim_size(D) - 1` . If `mode`  is "SYMMETRIC" then both  `paddings[D, 0]`  and  `paddings[D, 1]`  must beno greater than  `tensor.dim_size(D)` .
 
-The padded size of each dimension D of the output is:
+输出的每个维度d的填充大小为：
 
  `paddings[D, 0] + tensor.dim_size(D) + paddings[D, 1]` 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -35,7 +35,7 @@ tf.pad(t, paddings, "SYMMETRIC")  # [[2, 1, 1, 2, 3, 3, 2],
  
 ```
 
-#### Args:
+#### 参数：
 - **`tensor`** : A  `Tensor` .
 - **`paddings`** : A  `Tensor`  of type  `int32` .
 - **`mode`** : One of "CONSTANT", "REFLECT", or "SYMMETRIC" (case-insensitive)
@@ -43,8 +43,8 @@ tf.pad(t, paddings, "SYMMETRIC")  # [[2, 1, 1, 2, 3, 3, 2],
 - **`constant_values`** : In "CONSTANT" mode, the scalar pad value to use. Must besame type as  `tensor` .
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `tensor` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : When mode is not one of "CONSTANT", "REFLECT", or "SYMMETRIC".

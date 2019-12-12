@@ -4,12 +4,12 @@ Resize  `images`  to  `size`  using the specified  `method` .
  tf.image.resize(    images,    size,    method=ResizeMethod.BILINEAR,    preserve_aspect_ratio=False,    antialias=False,    name=None) 
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 - [Estimators](https://tensorflow.google.cn/guide/estimator)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Image segmentation](https://tensorflow.google.cn/tutorials/images/segmentation)
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
@@ -31,7 +31,7 @@ Note that near image edges the filtering kernel may be partially outside theimag
 
 The return value has the same type as  `images`  if  `method`  is[ `ResizeMethod.NEAREST_NEIGHBOR` ](https://tensorflow.google.cn/api_docs/python/tf/image/ResizeMethod#NEAREST_NEIGHBOR). Otherwise, the return value has type `float32` .
 
-#### Args:
+#### 参数：
 - **`images`** : 4-D Tensor of shape  `[batch, height, width, channels]`  or 3-D Tensorof shape  `[height, width, channels]` .
 - **`size`** : A 1-D int32 Tensor of 2 elements:  `new_height, new_width` .  The newsize for the images.
 - **`method`** : ResizeMethod.  Defaults to  `bilinear` .
@@ -40,12 +40,12 @@ The return value has the same type as  `images`  if  `method`  is[ `ResizeMethod
 - **`name`** : A name for this operation (optional).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the shape of  `images`  is incompatible with theshape arguments to this function
 - **`ValueError`** : if  `size`  has invalid shape or type.
 - **`ValueError`** : if an unsupported resize method is specified.
 
 
-#### Returns:
+#### 返回：
 If  `images`  was 4-D, a 4-D float Tensor of shape `[batch, new_height, new_width, channels]` .If  `images`  was 3-D, a 3-D float Tensor of shape `[new_height, new_width, channels]` .
 

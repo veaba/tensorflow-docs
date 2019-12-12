@@ -1,8 +1,8 @@
-Signal processing operations.
+信号处理操作。
 
 See the [tf.signal](https://tensorflow.org/api_guides/python/contrib.signal)guide.
 
-## Functions
+## 功能
 [ `dct(...)` ](https://tensorflow.google.cn/api_docs/python/tf/signal/dct): Computes the 1D [Discrete Cosine Transform (DCT)][dct] of  `input` .
 
 [ `fft(...)` ](https://tensorflow.google.cn/api_docs/python/tf/signal/fft): Fast Fourier transform.

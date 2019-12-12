@@ -3,7 +3,7 @@
 ## Class  `KerasClassifier` 
 Implementation of the scikit-learn classifier API for Keras.
 
-**Aliases** : [ `tf.compat.v1.keras.wrappers.scikit_learn.KerasClassifier` ](/api_docs/python/tf/keras/wrappers/scikit_learn/KerasClassifier), [ `tf.compat.v2.keras.wrappers.scikit_learn.KerasClassifier` ](/api_docs/python/tf/keras/wrappers/scikit_learn/KerasClassifier)
+**别名** : [ `tf.compat.v1.keras.wrappers.scikit_learn.KerasClassifier` ](/api_docs/python/tf/keras/wrappers/scikit_learn/KerasClassifier), [ `tf.compat.v2.keras.wrappers.scikit_learn.KerasClassifier` ](/api_docs/python/tf/keras/wrappers/scikit_learn/KerasClassifier)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/wrappers/scikit_learn.py#L74-L77)
@@ -18,7 +18,7 @@ Implementation of the scikit-learn classifier API for Keras.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `check_params` 
@@ -31,11 +31,11 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Checks for user typos in  `params` .
 
-#### Arguments:
+#### 参数：
 - **`params`** : dictionary; the parameters to be checked
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any member of  `params`  is not a valid argument.
 
 
@@ -52,12 +52,12 @@ Checks for user typos in  `params` .
 
 Filters  `sk_params`  and returns those in  `fn` 's arguments.
 
-#### Arguments:
+#### 参数：
 - **`fn`** : arbitrary function
 - **`override`** : dictionary, values to override  `sk_params` 
 
 
-#### Returns:
+#### 返回：
 - **`res`** : dictionary containing variablesin both  `sk_params`  and  `fn` 's arguments.
 
 
@@ -75,17 +75,17 @@ Filters  `sk_params`  and returns those in  `fn` 's arguments.
 
 Constructs a new model with  `build_fn`  &amp; fit the model to  `(x, y)` .
 
-#### Arguments:
+#### 参数：
 - **`x`** : array-like, shape  `(n_samples, n_features)` Training samples where  `n_samples`  is the number of samplesand  `n_features`  is the number of features.
 - **`y`** : array-like, shape  `(n_samples,)`  or  `(n_samples, n_outputs)` True labels for  `x` .
 - **`**kwargs`** : dictionary argumentsLegal arguments are the arguments of [ `Sequential.fit` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model#fit)
 
 
-#### Returns:
+#### 返回：
 - **`history`** : objectdetails about the training history at each epoch.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case of invalid shape for  `y`  argument.
 
 
@@ -97,14 +97,14 @@ Constructs a new model with  `build_fn`  &amp; fit the model to  `(x, y)` .
  
 ```
 
-Gets parameters for this estimator.
+获取此估计器的参数。
 
-#### Arguments:
+#### 参数：
 - **`**params`** : ignored (exists for API compatibility).
 
 
-#### Returns:
-Dictionary of parameter names mapped to their values.
+#### 返回：
+映射到其值的参数名字典。
 
 ###  `predict` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/wrappers/scikit_learn.py#L225-L242)
@@ -117,14 +117,14 @@ Dictionary of parameter names mapped to their values.
  
 ```
 
-Returns the class predictions for the given test data.
+返回给定测试数据的类预测。
 
-#### Arguments:
+#### 参数：
 - **`x`** : array-like, shape  `(n_samples, n_features)` Test samples where  `n_samples`  is the number of samplesand  `n_features`  is the number of features.
 - **`**kwargs`** : dictionary argumentsLegal arguments are the argumentsof [ `Sequential.predict_classes` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Sequential#predict_classes).
 
 
-#### Returns:
+#### 返回：
 - **`preds`** : array-like, shape  `(n_samples,)` Class predictions.
 
 
@@ -139,14 +139,14 @@ Returns the class predictions for the given test data.
  
 ```
 
-Returns class probability estimates for the given test data.
+返回给定测试数据的类概率估计。
 
-#### Arguments:
+#### 参数：
 - **`x`** : array-like, shape  `(n_samples, n_features)` Test samples where  `n_samples`  is the number of samplesand  `n_features`  is the number of features.
 - **`**kwargs`** : dictionary argumentsLegal arguments are the argumentsof [ `Sequential.predict_classes` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Sequential#predict_classes).
 
 
-#### Returns:
+#### 返回：
 - **`proba`** : array-like, shape  `(n_samples, n_outputs)` Class probability estimates.In the case of binary classification,to match the scikit-learn API,will return an array of shape  `(n_samples, 2)` (instead of  `(n_sample, 1)`  as in Keras).
 
 
@@ -162,19 +162,19 @@ Returns class probability estimates for the given test data.
  
 ```
 
-Returns the mean accuracy on the given test data and labels.
+返回给定测试数据和标签的平均精度。
 
-#### Arguments:
+#### 参数：
 - **`x`** : array-like, shape  `(n_samples, n_features)` Test samples where  `n_samples`  is the number of samplesand  `n_features`  is the number of features.
 - **`y`** : array-like, shape  `(n_samples,)`  or  `(n_samples, n_outputs)` True labels for  `x` .
 - **`**kwargs`** : dictionary argumentsLegal arguments are the arguments of [ `Sequential.evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model#evaluate).
 
 
-#### Returns:
+#### 返回：
 - **`score`** : floatMean accuracy of predictions on  `x`  wrt.  `y` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the underlying model isn't configured tocompute accuracy. You should pass  `metrics=["accuracy"]`  tothe  `.compile()`  method of the model.
 
 
@@ -186,12 +186,12 @@ Returns the mean accuracy on the given test data and labels.
  
 ```
 
-Sets the parameters of this estimator.
+设置此估计器的参数。
 
-#### Arguments:
+#### 参数：
 - **`**params`** : Dictionary of parameter names mapped to their values.
 
 
-#### Returns:
-self
+#### 返回：
+自己
 

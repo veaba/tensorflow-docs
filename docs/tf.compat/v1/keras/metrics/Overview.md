@@ -1,6 +1,6 @@
 Built-in metrics.
 
-## Classes
+## Class 
 [ `class AUC` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/AUC): Computes the approximate AUC (Area under the curve) via a Riemann sum.
 
 [ `class Accuracy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Accuracy): Calculates how often predictions matches labels.
@@ -73,7 +73,7 @@ Built-in metrics.
 
 [ `class TruePositives` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/TruePositives): Calculates the number of true positives.
 
-## Functions
+## 功能
 [ `KLD(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/KLD): Computes Kullback-Leibler divergence loss between  `y_true`  and  `y_pred` .
 
 [ `MAE(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/MAE)

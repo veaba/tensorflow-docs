@@ -31,7 +31,7 @@ for step in range(100):
  
 ```
 
-Example usage with legacy TF 1.x graph execution:
+使用传统tf 1.x图形执行的示例：
 
 ```
  with tf.compat.v1.Graph().as_default():
@@ -52,13 +52,13 @@ Example usage with legacy TF 1.x graph execution:
  
 ```
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/summary/experimental) module: Public API for tf.summary.experimental namespace.
 
-## Classes
+## Class 
 [ `class SummaryWriter` ](https://tensorflow.google.cn/api_docs/python/tf/summary/SummaryWriter): Interface representing a stateful summary writer object.
 
-## Functions
+## 功能
 [ `audio(...)` ](https://tensorflow.google.cn/api_docs/python/tf/summary/audio): Write an audio summary.
 
 [ `create_file_writer(...)` ](https://tensorflow.google.cn/api_docs/python/tf/summary/create_file_writer): Creates a summary file writer for the given log directory.

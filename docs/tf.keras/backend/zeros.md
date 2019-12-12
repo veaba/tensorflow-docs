@@ -1,6 +1,6 @@
 Instantiates an all-zeros variable and returns it.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.zeros` ](/api_docs/python/tf/keras/backend/zeros), [ `tf.compat.v2.keras.backend.zeros` ](/api_docs/python/tf/keras/backend/zeros)
+**别名** : [ `tf.compat.v1.keras.backend.zeros` ](/api_docs/python/tf/keras/backend/zeros), [ `tf.compat.v2.keras.backend.zeros` ](/api_docs/python/tf/keras/backend/zeros)
 
 ```
  tf.keras.backend.zeros(
@@ -11,20 +11,20 @@ Instantiates an all-zeros variable and returns it.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`shape`** : Tuple or list of integers, shape of returned Keras variable
 - **`dtype`** : data type of returned Keras variable
 - **`name`** : name of returned Keras variable
 
 
-#### Returns:
+#### 返回：
 A variable (including Keras metadata), filled with  `0.0` .Note that if  `shape`  was symbolic, we cannot return a variable,and will return a dynamically-shaped tensor instead.
 
-#### Example:
+#### 示例：
 
 
 ```
- from tensorflow.keras import backend as K
+从tensorflow.keras导入后端作为k
 kvar = K.zeros((3,4))
 K.eval(kvar)
 # array([[ 0.,  0.,  0.,  0.], [ 0.,  0.,  0.,  0.],

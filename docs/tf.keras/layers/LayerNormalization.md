@@ -5,13 +5,13 @@ Layer normalization layer (Ba et al., 2016).
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.LayerNormalization` ](/api_docs/python/tf/keras/layers/LayerNormalization), [ `tf.compat.v2.keras.layers.LayerNormalization` ](/api_docs/python/tf/keras/layers/LayerNormalization)
+**别名** : [ `tf.compat.v1.keras.layers.LayerNormalization` ](/api_docs/python/tf/keras/layers/LayerNormalization), [ `tf.compat.v2.keras.layers.LayerNormalization` ](/api_docs/python/tf/keras/layers/LayerNormalization)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 Normalize the activations of the previous layer for each given example in abatch independently, rather than across a batch like Batch Normalization.i.e. applies a transformation that maintains the mean activation within eachexample close to 0 and the activation standard deviation close to 1.
 
-#### Arguments:
+#### 参数：
 - **`axis`** : Integer or List/Tuple. The axis that should be normalized(typically the features axis).
 - **`epsilon`** : Small float added to variance to avoid dividing by zero.
 - **`center`** : If True, add offset of  `beta`  to normalized tensor.If False,  `beta`  is ignored.
@@ -25,13 +25,13 @@ Normalize the activations of the previous layer for each given example in abatch
 - **`trainable`** : Boolean, if  `True`  the variables will be marked as trainable.
 
 
-#### Input shape:
+#### 输入形状：
 Arbitrary. Use the keyword argument  `input_shape` (tuple of integers, does not include the samples axis)when using this layer as the first layer in a model.
 
-#### Output shape:
-Same shape as input.
+#### 输出形状：
+与输入形状相同。
 
-#### References:
+#### 参考文献：
 - [Layer Normalization](https://arxiv.org/abs/1607.06450)
 
 

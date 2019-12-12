@@ -1,9 +1,9 @@
 
 
 ## Class  `RegisterGradient` 
-A decorator for registering the gradient function for an op type.
+用于为操作类型注册渐变函数的修饰程序。
 
-**Aliases** : [ `tf.compat.v1.RegisterGradient` ](/api_docs/python/tf/RegisterGradient), [ `tf.compat.v2.RegisterGradient` ](/api_docs/python/tf/RegisterGradient)
+**别名** : [ `tf.compat.v1.RegisterGradient` ](/api_docs/python/tf/RegisterGradient), [ `tf.compat.v2.RegisterGradient` ](/api_docs/python/tf/RegisterGradient)
 
 This decorator is only used when defining a new op type. For an opwith  `m`  inputs and  `n`  outputs, the gradient function is a functionthat takes the original  `Operation`  and  `n`   `Tensor`  objects(representing the gradients with respect to each output of the op),and returns  `m`   `Tensor`  objects (representing the partial gradientswith respect to each input of the op).
 
@@ -28,15 +28,15 @@ The decorator argument  `op_type`  is the string type of anoperation. This corre
 
 Creates a new decorator with  `op_type`  as the Operation type.
 
-#### Args:
+#### 参数：
 - **`op_type`** : The string type of an operation. This corresponds to the `OpDef.name`  field for the proto that defines the operation.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `op_type`  is not string.
 
 
-## Methods
+## 方法
 
 
 ###  `__call__` 

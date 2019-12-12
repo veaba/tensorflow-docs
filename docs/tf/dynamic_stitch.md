@@ -1,6 +1,6 @@
 Interleave the values from the  `data`  tensors into a single tensor.
 
-**Aliases** : [ `tf.compat.v1.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch), [ `tf.compat.v2.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch)
+**别名** : [ `tf.compat.v1.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch), [ `tf.compat.v2.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch)
 
 ```
  tf.dynamic_stitch(
@@ -11,7 +11,7 @@ Interleave the values from the  `data`  tensors into a single tensor.
  
 ```
 
-Builds a merged tensor such that
+建立一个合并的张量
 
 ```
      merged[indices[m][i, ..., j], ...] = data[m][i, ..., j, ...]
@@ -38,7 +38,7 @@ Each  `data[i].shape`  must start with the corresponding  `indices[i].shape` ,an
 
 Values are merged in order, so if an index appears in both  `indices[m][i]`  and `indices[n][j]`  for  `(m,i) < (n,j)`  the slice  `data[n][j]`  will appear in themerged result. If you do not need this guarantee, ParallelDynamicStitch mightperform better on some devices.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -73,12 +73,12 @@ This method can be used to merge partitions created by  `dynamic_partition` as i
 
 ![](https://tensorflow.google.cn/images/DynamicStitch.png)
 
-#### Args:
+#### 参数：
 - **`indices`** : A list of at least 1  `Tensor`  objects with type  `int32` .
 - **`data`** : A list with the same length as  `indices`  of  `Tensor`  objects with the same type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `data` .
 

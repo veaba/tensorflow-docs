@@ -1,6 +1,6 @@
-Returns a list of tensors with the same shapes and contents as the input
+返回与输入形状和内容相同的张量列表
 
-**Aliases** : [ `tf.compat.v1.identity_n` ](/api_docs/python/tf/identity_n), [ `tf.compat.v2.identity_n` ](/api_docs/python/tf/identity_n)
+**别名** : [ `tf.compat.v1.identity_n` ](/api_docs/python/tf/identity_n), [ `tf.compat.v2.identity_n` ](/api_docs/python/tf/identity_n)
 
 ```
  tf.identity_n(
@@ -10,7 +10,7 @@ Returns a list of tensors with the same shapes and contents as the input
  
 ```
 
-tensors.
+张量。
 
 This op can be used to override the gradient for complicated functions. Forexample, suppose y = f(x) and we wish to apply a custom function g for backpropsuch that dx = g(dy). In Python,
 
@@ -25,11 +25,11 @@ def ApplyG(op, dy, _):
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A list of  `Tensor`  objects.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A list of  `Tensor`  objects. Has the same type as  `input` .
 

@@ -1,16 +1,16 @@
 
 
 ## Class  `Summary` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class Audio` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Summary/Audio)
 
 [ `class Image` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Summary/Image)
 
 [ `class Value` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Summary/Value)
 
-## Properties
+## 属性
 
 
 ###  `value` 

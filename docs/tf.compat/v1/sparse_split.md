@@ -15,7 +15,7 @@ If the  `sp_input.dense_shape[axis]`  is not an integer multiple of  `num_split`
  
 ```
 
-Graphically the output tensors are:
+从图形上看，输出张量为：
 
 ```
  output_tensor[0] =
@@ -28,7 +28,7 @@ output_tensor[1] =
  
 ```
 
-#### Args:
+#### 参数：
 - **`keyword_required`** : Python 2 standin for * (temporary for argument reorder)
 - **`sp_input`** : The  `SparseTensor`  to split.
 - **`num_split`** : A Python integer. The number of ways to split.
@@ -37,9 +37,9 @@ output_tensor[1] =
 - **`split_dim`** : Deprecated old name for axis.
 
 
-#### Returns:
+#### 返回：
  `num_split`   `SparseTensor`  objects resulting from splitting  `value` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
 - **`ValueError`** : If the deprecated  `split_dim`  and  `axis`  are both non None.

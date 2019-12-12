@@ -10,7 +10,7 @@ Computes softmax cross entropy between  `logits`  and  `labels` .
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Distributed training with TensorFlow](https://tensorflow.google.cn/guide/distributed_training)
 Measures the probability error in discrete classification tasks in which theclasses are mutually exclusive (each entry is in exactly one class).  Forexample, each CIFAR-10 image is labeled with one and only one label: an imagecan be a dog or a truck, but not both.
 
@@ -28,13 +28,13 @@ Backpropagation will happen into both  `logits`  and  `labels` .  To disallowbac
 
 **Note that to avoid confusion, it is required to pass only named arguments tothis function.** 
 
-#### Args:
+#### 参数：
 - **`labels`** : Each vector along the class dimension should hold a validprobability distribution e.g. for the case in which labels are of shape `[batch_size, num_classes]` , each row of  `labels[i]`  must be a validprobability distribution.
 - **`logits`** : Per-label activations, typically a linear output. These activationenergies are interpreted as unnormalized log probabilities.
 - **`axis`** : The class dimension. Defaulted to -1 which is the last dimension.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that contains the softmax cross entropy loss. Its type is thesame as  `logits`  and its shape is the same as  `labels`  except that it doesnot have the last dimension of  `labels` .
 

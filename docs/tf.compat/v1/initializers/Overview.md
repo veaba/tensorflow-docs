@@ -1,6 +1,6 @@
-Public API for tf.initializers namespace.
+tf.initializers命名空间的公共api。
 
-## Classes
+## Class 
 [ `class constant` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Constant): Initializer that generates tensors with constant values.
 
 [ `class glorot_normal` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/glorot_normal): The Glorot normal initializer, also called Xavier normal initializer.
@@ -25,7 +25,7 @@ Public API for tf.initializers namespace.
 
 [ `class zeros` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Zeros): Initializer that generates tensors initialized to 0.
 
-## Functions
+## 功能
 [ `global_variables(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/global_variables_initializer): Returns an Op that initializes global variables.
 
 [ `he_normal(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/he_normal): He normal initializer.

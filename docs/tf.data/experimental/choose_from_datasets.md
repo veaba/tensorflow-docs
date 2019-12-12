@@ -29,13 +29,13 @@ The elements of  `result`  will be:
  
 ```
 
-#### Args:
+#### 参数：
 - **`datasets`** : A list of [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) objects with compatible structure.
 - **`choice_dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) of scalar [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) tensors between `0`  and  `len(datasets) - 1` .
 
 
-#### Returns:
+#### 返回：
 A dataset that interleaves elements from  `datasets`  according to the valuesof  `choice_dataset` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the  `datasets`  or  `choice_dataset`  arguments have the wrongtype.

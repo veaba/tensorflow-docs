@@ -8,7 +8,7 @@ Updates the content of the 'checkpoint' file. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.train.CheckpointManager` ](https://tensorflow.google.cn/api_docs/python/tf/train/CheckpointManager) to manage checkpoints rather than manually editing the Checkpoint proto.
 This updates the checkpoint file containing a CheckpointStateproto.
 
-#### Args:
+#### 参数：
 - **`save_dir`** : Directory where the model was saved.
 - **`model_checkpoint_path`** : The checkpoint file.
 - **`all_model_checkpoint_paths`** : List of strings.  Paths to all not-yet-deletedcheckpoints, sorted from oldest to newest.  If this is a non-empty list,the last element must be equal to model_checkpoint_path.  These pathsare also saved in the CheckpointState proto.
@@ -17,5 +17,5 @@ This updates the checkpoint file containing a CheckpointStateproto.
 - **`last_preserved_timestamp`** : A float, indicating the number of seconds sincethe Epoch when the last preserved checkpoint was written, e.g. due to a `keep_checkpoint_every_n_hours`  parameter (see `tf.contrib.checkpoint.CheckpointManager`  for an implementation).
 
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If any of the model checkpoint paths conflict with the filecontaining CheckpointSate.

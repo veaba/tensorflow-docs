@@ -1,11 +1,11 @@
 [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) API for input pipelines.
 
-See [Importing Data](https://tensorflow.org/guide/datasets) for an overview.
+有关概述，请参见[导入数据]（https://tensorflow.org/guide/datasets）。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/experimental) module: Experimental API for building input pipelines.
 
-## Classes
+## Class 
 [ `class Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/Dataset): Represents a potentially large set of elements.
 
 [ `class DatasetSpec` ](https://tensorflow.google.cn/api_docs/python/tf/data/DatasetSpec): Type specification for [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
@@ -20,7 +20,7 @@ See [Importing Data](https://tensorflow.org/guide/datasets) for an overview.
 
 [ `class TextLineDataset` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/TextLineDataset): A  `Dataset`  comprising lines from one or more text files.
 
-## Functions
+## 功能
 [ `get_output_classes(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/get_output_classes): Returns the output classes of a  `Dataset`  or  `Iterator`  elements.
 
 [ `get_output_shapes(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/get_output_shapes): Returns the output shapes of a  `Dataset`  or  `Iterator`  elements.

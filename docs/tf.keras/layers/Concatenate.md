@@ -1,16 +1,16 @@
 
 
 ## Class  `Concatenate` 
-Layer that concatenates a list of inputs.
+连接输入列表的层。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Concatenate` ](/api_docs/python/tf/keras/layers/Concatenate), [ `tf.compat.v2.keras.layers.Concatenate` ](/api_docs/python/tf/keras/layers/Concatenate)
+**别名** : [ `tf.compat.v1.keras.layers.Concatenate` ](/api_docs/python/tf/keras/layers/Concatenate), [ `tf.compat.v2.keras.layers.Concatenate` ](/api_docs/python/tf/keras/layers/Concatenate)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 - [Image segmentation](https://tensorflow.google.cn/tutorials/images/segmentation)
 It takes as input a list of tensors,all of the same shape except for the concatenation axis,and returns a single tensor, the concatenation of all inputs.
 
-#### Arguments:
+#### 参数：
 - **`axis`** : Axis along which to concatenate.
 - **`**kwargs`** : standard layer keyword arguments.
 
@@ -28,7 +28,7 @@ It takes as input a list of tensors,all of the same shape except for the concate
 
 Functional interface to the  `Concatenate`  layer.
 
-**Aliases** : [ `tf.compat.v1.keras.layers.concatenate` ](/api_docs/python/tf/keras/layers/concatenate), [ `tf.compat.v2.keras.layers.concatenate` ](/api_docs/python/tf/keras/layers/concatenate)
+**别名** : [ `tf.compat.v1.keras.layers.concatenate` ](/api_docs/python/tf/keras/layers/concatenate), [ `tf.compat.v2.keras.layers.concatenate` ](/api_docs/python/tf/keras/layers/concatenate)
 
 ```
  tf.keras.layers.concatenate(
@@ -39,21 +39,21 @@ Functional interface to the  `Concatenate`  layer.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : A list of input tensors (at least 2).
 - **`axis`** : Concatenation axis.
 - **`**kwargs`** : Standard layer keyword arguments.
 
 
-#### Returns:
+#### 返回：
 A tensor, the concatenation of the inputs alongside axis  `axis` .
 

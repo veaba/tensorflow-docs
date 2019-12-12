@@ -1,6 +1,6 @@
-Softmax of a tensor.
+张量的softmax。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.softmax` ](/api_docs/python/tf/keras/backend/softmax), [ `tf.compat.v2.keras.backend.softmax` ](/api_docs/python/tf/keras/backend/softmax)
+**别名** : [ `tf.compat.v1.keras.backend.softmax` ](/api_docs/python/tf/keras/backend/softmax), [ `tf.compat.v2.keras.backend.softmax` ](/api_docs/python/tf/keras/backend/softmax)
 
 ```
  tf.keras.backend.softmax(
@@ -10,11 +10,11 @@ Softmax of a tensor.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : A tensor or variable.
 - **`axis`** : The dimension softmax would be performed on.The default is -1 which indicates the last dimension.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

@@ -1,6 +1,6 @@
 Fills empty rows in the input 2-D  `SparseTensor`  with a default value.
 
-**Aliases** : [ `tf.compat.v1.sparse.fill_empty_rows` ](/api_docs/python/tf/sparse/fill_empty_rows), [ `tf.compat.v1.sparse_fill_empty_rows` ](/api_docs/python/tf/sparse/fill_empty_rows), [ `tf.compat.v2.sparse.fill_empty_rows` ](/api_docs/python/tf/sparse/fill_empty_rows)
+**别名** : [ `tf.compat.v1.sparse.fill_empty_rows` ](/api_docs/python/tf/sparse/fill_empty_rows), [ `tf.compat.v1.sparse_fill_empty_rows` ](/api_docs/python/tf/sparse/fill_empty_rows), [ `tf.compat.v2.sparse.fill_empty_rows` ](/api_docs/python/tf/sparse/fill_empty_rows)
 
 ```
  tf.sparse.fill_empty_rows(
@@ -39,23 +39,23 @@ Note that the input may have empty columns at the end, with no effect onthis op.
 
 The output  `SparseTensor`  will be in row-major order and will have thesame shape as the input.
 
-This op also returns an indicator vector such that
+此操作还返回一个指示符向量，以便
 
 ```
  empty_row_indicator[i] = True iff row i was an empty row.
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : A  `SparseTensor`  with shape  `[N, M]` .
 - **`default_value`** : The value to fill for empty rows, with the same type as `sp_input.` 
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
+#### 返回：
 - **`sp_ordered_output`** : A  `SparseTensor`  with shape  `[N, M]` , and with all emptyrows filled in with  `default_value` .
 - **`empty_row_indicator`** : A bool vector of length  `N`  indicating whether eachinput row was empty.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .

@@ -1,6 +1,6 @@
-Casts a tensor to a different dtype and returns it.
+将张量转换为不同的数据类型并返回它。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast), [ `tf.compat.v2.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast)
+**别名** : [ `tf.compat.v1.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast), [ `tf.compat.v2.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast)
 
 ```
  tf.keras.backend.cast(
@@ -10,18 +10,18 @@ Casts a tensor to a different dtype and returns it.
  
 ```
 
-You can cast a Keras variable but it still returns a Keras tensor.
+可以强制转换keras变量，但它仍然返回keras张量。
 
-#### Arguments:
+#### 参数：
 - **`x`** : Keras tensor (or variable).
 - **`dtype`** : String, either ( `'float16'` ,  `'float32'` , or  `'float64'` ).
 
 
-#### Returns:
+#### 返回：
 Keras tensor with dtype  `dtype` .
 
-#### Examples:
-Cast a float32 variable to a float64 tensor
+#### 示例：
+将float32变量转换为float64张量
 
 ```
      >>> import tensorflow as tf

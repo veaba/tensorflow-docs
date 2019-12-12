@@ -1,6 +1,6 @@
 Computes inverse hyperbolic sine of x element-wise.
 
-**Aliases** : [ `tf.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v1.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v1.math.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v2.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v2.math.asinh` ](/api_docs/python/tf/math/asinh)
+**别名** : [ `tf.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v1.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v1.math.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v2.asinh` ](/api_docs/python/tf/math/asinh), [ `tf.compat.v2.math.asinh` ](/api_docs/python/tf/math/asinh)
 
 ```
  tf.math.asinh(
@@ -18,11 +18,11 @@ tf.math.asinh(x) ==> [-inf -1.4436355 -0.4812118 0.8813736 1.0159732 5.991471 9.
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

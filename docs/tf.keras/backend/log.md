@@ -1,16 +1,16 @@
 Element-wise log.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.log` ](/api_docs/python/tf/keras/backend/log), [ `tf.compat.v2.keras.backend.log` ](/api_docs/python/tf/keras/backend/log)
+**别名** : [ `tf.compat.v1.keras.backend.log` ](/api_docs/python/tf/keras/backend/log), [ `tf.compat.v2.keras.backend.log` ](/api_docs/python/tf/keras/backend/log)
 
 ```
  tf.keras.backend.log(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

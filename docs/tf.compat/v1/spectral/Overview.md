@@ -1,6 +1,6 @@
-Public API for tf.spectral namespace.
+tf.spectral命名空间的公共api。
 
-## Functions
+## 功能
 [ `dct(...)` ](https://tensorflow.google.cn/api_docs/python/tf/signal/dct): Computes the 1D [Discrete Cosine Transform (DCT)][dct] of  `input` .
 
 [ `fft(...)` ](https://tensorflow.google.cn/api_docs/python/tf/signal/fft): Fast Fourier transform.

@@ -42,7 +42,7 @@ writer = tf.compat.v1.summary.FileWriter(<some-directory>, sess.graph)
 
 The  `session`  argument to the constructor makes the returned  `FileWriter`  acompatibility layer over new graph-based summaries ( `tf.contrib.summary` ).Crucially, this means the underlying writer resource and events file willbe shared with any other  `FileWriter`  using the same  `session`  and  `logdir` ,and with any  `tf.contrib.summary.SummaryWriter`  in this session using thethe same shared resource name (which by default scoped to the logdir). Ifno such resource exists, one will be created using the remaining argumentsto this constructor, but if one already exists those arguments are ignored.In either case, ops will be added to  `session.graph`  to control theunderlying file writer resource. See  `tf.contrib.summary`  for more details.
 
-#### Args:
+#### 参数：
 - **`logdir`** : A string. Directory where event file will be written.
 - **`graph`** : A  `Graph`  object, such as  `sess.graph` .
 - **`max_queue`** : Integer. Size of the queue for pending events and summaries.
@@ -52,14 +52,14 @@ The  `session`  argument to the constructor makes the returned  `FileWriter`  ac
 - **`session`** : A [ `tf.compat.v1.Session` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session) object. See details above.
 
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called with eager execution enabled.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
  `FileWriter`  is not compatible with eager execution. To write TensorBoardsummaries under eager execution, use  `tf.contrib.summary`  instead.
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -70,7 +70,7 @@ The  `session`  argument to the constructor makes the returned  `FileWriter`  ac
  
 ```
 
-Make usable with "with" statement.
+使用“with”语句。
 
 ###  `__exit__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/summary/writer/writer.py#L376-L378)
@@ -84,7 +84,7 @@ Make usable with "with" statement.
  
 ```
 
-Make usable with "with" statement.
+使用“with”语句。
 
 ###  `add_event` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/summary/writer/writer.py#L394-L401)
@@ -94,9 +94,9 @@ Make usable with "with" statement.
  
 ```
 
-Adds an event to the event file.
+将事件添加到事件文件。
 
-#### Args:
+#### 参数：
 - **`event`** : An  `Event`  protocol buffer.
 
 
@@ -116,13 +116,13 @@ Adds a  `Graph`  to the event file.
 
 The graph described by the protocol buffer will be displayed byTensorBoard. Most users pass a graph in the constructor instead.
 
-#### Args:
+#### 参数：
 - **`graph`** : A  `Graph`  object, such as  `sess.graph` .
 - **`global_step`** : Number. Optional global step counter to record with thegraph.
 - **`graph_def`** : DEPRECATED. Use the  `graph`  parameter instead.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both graph and graph_def are passed to the method.
 
 
@@ -141,12 +141,12 @@ Adds a  `MetaGraphDef`  to the event file.
 
 The  `MetaGraphDef`  allows running the given graph via `saver.import_meta_graph()` .
 
-#### Args:
+#### 参数：
 - **`meta_graph_def`** : A  `MetaGraphDef`  object, often as returned by `saver.export_meta_graph()` .
 - **`global_step`** : Number. Optional global step counter to record with thegraph.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If both  `meta_graph_def`  is not an instance of  `MetaGraphDef` .
 
 
@@ -162,15 +162,15 @@ The  `MetaGraphDef`  allows running the given graph via `saver.import_meta_graph
  
 ```
 
-Adds a metadata information for a single session.run() call.
+为单个session.run（）调用添加元数据信息。
 
-#### Args:
+#### 参数：
 - **`run_metadata`** : A  `RunMetadata`  protobuf object.
 - **`tag`** : The tag name for this metadata.
 - **`global_step`** : Number. Optional global step counter to record with theStepStats.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the provided tag was already used for this type of event.
 
 
@@ -189,7 +189,7 @@ Adds a  `SessionLog`  protocol buffer to the event file.
 
 This method wraps the provided session in an  `Event`  protocol bufferand adds it to the event file.
 
-#### Args:
+#### 参数：
 - **`session_log`** : A  `SessionLog`  protocol buffer.
 - **`global_step`** : Number. Optional global step value to record with thesummary.
 
@@ -211,7 +211,7 @@ This method wraps the provided summary in an  `Event`  protocol bufferand adds i
 
 You can pass the result of evaluating any summary op, using `tf.Session.run`  or[ `tf.Tensor.eval` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#eval), to thisfunction. Alternatively, you can pass a [ `tf.compat.v1.Summary` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Summary) protocolbuffer that you populate with your own data. The latter iscommonly done to report evaluation results in event files.
 
-#### Args:
+#### 参数：
 - **`summary`** : A  `Summary`  protocol buffer, optionally serialized as a string.
 - **`global_step`** : Number. Optional global step value to record with thesummary.
 
@@ -224,9 +224,9 @@ You can pass the result of evaluating any summary op, using `tf.Session.run`  or
  
 ```
 
-Flushes the event file to disk and close the file.
+将事件文件刷新到磁盘并关闭该文件。
 
-Call this method when you do not need the summary writer anymore.
+当不再需要摘要编写器时调用此方法。
 
 ###  `flush` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/summary/writer/writer.py#L403-L412)
@@ -236,7 +236,7 @@ Call this method when you do not need the summary writer anymore.
  
 ```
 
-Flushes the event file to disk.
+将事件文件刷新到磁盘。
 
 Call this method to make sure that all pending events have been written todisk.
 
@@ -248,7 +248,7 @@ Call this method to make sure that all pending events have been written todisk.
  
 ```
 
-Returns the directory where event file will be written.
+返回将写入事件文件的目录。
 
 ###  `reopen` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/summary/writer/writer.py#L422-L431)
@@ -258,9 +258,9 @@ Returns the directory where event file will be written.
  
 ```
 
-Reopens the EventFileWriter.
+重新打开EventFileWriter。
 
 Can be called after  `close()`  to add more events in the same directory.The events will go into a new events file.
 
-Does nothing if the EventFileWriter was not closed.
+如果EventFileWriter未关闭，则不执行任何操作。
 

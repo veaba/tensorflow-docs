@@ -1,6 +1,6 @@
-Pads the 2nd and 3rd dimensions of a 4D tensor.
+垫4D张量的第2和第3维度。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.spatial_2d_padding` ](/api_docs/python/tf/keras/backend/spatial_2d_padding), [ `tf.compat.v2.keras.backend.spatial_2d_padding` ](/api_docs/python/tf/keras/backend/spatial_2d_padding)
+**别名** : [ `tf.compat.v1.keras.backend.spatial_2d_padding` ](/api_docs/python/tf/keras/backend/spatial_2d_padding), [ `tf.compat.v2.keras.backend.spatial_2d_padding` ](/api_docs/python/tf/keras/backend/spatial_2d_padding)
 
 ```
  tf.keras.backend.spatial_2d_padding(
@@ -11,14 +11,14 @@ Pads the 2nd and 3rd dimensions of a 4D tensor.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`padding`** : Tuple of 2 tuples, padding pattern.
 - **`data_format`** : One of  `channels_last`  or  `channels_first` .
 
 
-#### Returns:
-A padded 4D tensor.
+#### 返回：
+加垫的4D张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `data_format`  is neither `channels_last`  or  `channels_first` .

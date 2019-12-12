@@ -3,13 +3,13 @@
 ## Class  `Conv3D` 
 3D convolution layer (e.g. spatial convolution over volumes).
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Conv3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.compat.v1.keras.layers.Convolution3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.compat.v2.keras.layers.Conv3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.compat.v2.keras.layers.Convolution3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.keras.layers.Convolution3D` ](/api_docs/python/tf/keras/layers/Conv3D)
+**别名** : [ `tf.compat.v1.keras.layers.Conv3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.compat.v1.keras.layers.Convolution3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.compat.v2.keras.layers.Conv3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.compat.v2.keras.layers.Convolution3D` ](/api_docs/python/tf/keras/layers/Conv3D), [ `tf.keras.layers.Convolution3D` ](/api_docs/python/tf/keras/layers/Conv3D)
 
 This layer creates a convolution kernel that is convolvedwith the layer input to produce a tensor ofoutputs. If  `use_bias`  is True,a bias vector is created and added to the outputs. Finally, if `activation`  is not  `None` , it is applied to the outputs as well.
 
 When using this layer as the first layer in a model,provide the keyword argument  `input_shape` (tuple of integers, does not include the sample axis),e.g.  `input_shape=(128, 128, 128, 1)`  for 128x128x128 volumeswith a single channel,in  `data_format="channels_last"` .
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 3 integers, specifying thedepth, height and width of the 3D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 3 integers,specifying the strides of the convolution along each spatialdimension.Can be a single integer to specify the same value forall spatial dimensions.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -27,10 +27,10 @@ When using this layer as the first layer in a model,provide the keyword argument
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-#### Input shape:
+#### 输入形状：
 5D tensor with shape: `(samples, channels, conv_dim1, conv_dim2, conv_dim3)`  if  data_format='channels_first'or 5D tensor with shape: `(samples, conv_dim1, conv_dim2, conv_dim3, channels)`  if  data_format='channels_last'.
 
-#### Output shape:
+#### 输出形状：
 5D tensor with shape: `(samples, filters, new_conv_dim1, new_conv_dim2, new_conv_dim3)`  if  data_format='channels_first'or 5D tensor with shape: `(samples, new_conv_dim1, new_conv_dim2, new_conv_dim3, filters)`  if  data_format='channels_last'. `new_conv_dim1` ,  `new_conv_dim2`  and  `new_conv_dim3`  values might have  changed due to padding.
 
 ##  `__init__` 

@@ -1,6 +1,6 @@
 Element-wise exponentiation.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow), [ `tf.compat.v2.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow)
+**别名** : [ `tf.compat.v1.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow), [ `tf.compat.v2.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow)
 
 ```
  tf.keras.backend.pow(
@@ -10,11 +10,11 @@ Element-wise exponentiation.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`a`** : Python integer.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

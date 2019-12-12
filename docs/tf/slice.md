@@ -1,6 +1,6 @@
-Extracts a slice from a tensor.
+从张量中提取一片。
 
-**Aliases** : [ `tf.compat.v1.slice` ](/api_docs/python/tf/slice), [ `tf.compat.v2.slice` ](/api_docs/python/tf/slice)
+**别名** : [ `tf.compat.v1.slice` ](/api_docs/python/tf/slice), [ `tf.compat.v2.slice` ](/api_docs/python/tf/slice)
 
 ```
  tf.slice(
@@ -20,11 +20,11 @@ Note that [ `tf.Tensor.**getitem** ` ](https://tensorflow.google.cn/api_docs/pyt
 
  `size[i] = input_.dim_size(i) - begin[i]` 
 
-This operation requires that:
+此操作要求：
 
  `0 <= begin[i] <= begin[i] + size[i] <= Di  for i in [0, n]` 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -39,13 +39,13 @@ tf.slice(t, [1, 0, 0], [2, 1, 3])  # [[[3, 3, 3]],
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_`** : A  `Tensor` .
 - **`begin`** : An  `int32`  or  `int64`   `Tensor` .
 - **`size`** : An  `int32`  or  `int64`   `Tensor` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  the same type as  `input_` .
 

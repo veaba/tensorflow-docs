@@ -16,7 +16,7 @@ Computes the norm of vectors, matrices, and tensors. (deprecated arguments)
 **Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(keep_dims)` . They will be removed in a future version.Instructions for updating:keep_dims is deprecated, use keepdims instead
 This function can compute several different vector norms (the 1-norm, theEuclidean or 2-norm, the inf-norm, and in general the p-norm for p > 0) andmatrix norms (Frobenius, 1-norm, 2-norm and inf-norm).
 
-#### Args:
+#### 参数：
 - **`tensor`** :  `Tensor`  of types  `float32` ,  `float64` ,  `complex64` ,  `complex128` 
 - **`ord`** : Order of the norm. Supported values are 'fro', 'euclidean', `1` ,  `2` ,  `np.inf`  and any positive real number yielding the correspondingp-norm. Default is 'euclidean' which is equivalent to Frobenius norm if `tensor`  is a matrix and equivalent to 2-norm for vectors.Some restrictions apply:a) The Frobenius norm  `fro`  is not defined for vectors,b) If axis is a 2-tuple (matrix norm), only 'euclidean', 'fro',  `1` ,    `2` ,  `np.inf`  are supported.See the description of  `axis`  on how to compute norms for a batch ofvectors or matrices stored in a tensor.
 - **`axis`** : If  `axis`  is  `None`  (the default), the input is considered a vectorand a single vector norm is computed over the entire set of values in thetensor, i.e.  `norm(tensor, ord=ord)`  is equivalent to `norm(reshape(tensor, [-1]), ord=ord)` .If  `axis`  is a Python integer, the input is considered a batch of vectors,and  `axis`  determines the axis in  `tensor`  over which to compute vectornorms.If  `axis`  is a 2-tuple of Python integers it is considered a batch ofmatrices and  `axis`  determines the axes in  `tensor`  over which to computea matrix norm.Negative indices are supported. Example: If you are passing a tensor thatcan be either a matrix or a batch of matrices at runtime, pass `axis=[-2,-1]`  instead of  `axis=None`  to make sure that matrix norms arecomputed.
@@ -25,14 +25,14 @@ This function can compute several different vector norms (the 1-norm, theEuclide
 - **`keep_dims`** : Deprecated alias for  `keepdims` .
 
 
-#### Returns:
+#### 返回：
 - **`output`** : A  `Tensor`  of the same type as tensor, containing the vector ormatrix norms. If  `keepdims`  is True then the rank of output is equal tothe rank of  `tensor` . Otherwise, if  `axis`  is none the output is a scalar,if  `axis`  is an integer, the rank of  `output`  is one less than the rankof  `tensor` , if  `axis`  is a 2-tuple the rank of  `output`  is two lessthan the rank of  `tensor` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `ord`  or  `axis`  is invalid.
 
 
-#### Numpy Compatibility
+#### numpy兼容性
 Mostly equivalent to numpy.linalg.norm.Not supported: ord <= 0, 2-norm for matrices, nuclear norm.Other differences:  a) If axis is  `None` , treats the flattened  `tensor`  as a vector   regardless of rank.  b) Explicitly supports 'euclidean' norm as the default, including for   higher order tensors.
 

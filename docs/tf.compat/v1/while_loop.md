@@ -24,7 +24,7 @@ Note that  `while_loop`  calls  `cond`  and  `body`  *exactly once* (inside thec
 
 For correctness, [ `tf.while_loop()` ](https://tensorflow.google.cn/api_docs/python/tf/while_loop) strictly enforces shape invariants forthe loop variables. A shape invariant is a (possibly partial) shape thatis unchanged across the iterations of the loop. An error will be raisedif the shape of a loop variable after an iteration is determined to be moregeneral than or incompatible with its shape invariant. For example, a shapeof [11, None] is more general than a shape of [11, 17], and [11, 21] is notcompatible with [11, 17]. By default (if the argument  `shape_invariants`  isnot specified), it is assumed that the initial shape of each tensor in `loop_vars`  is the same in every iteration. The  `shape_invariants`  argumentallows the caller to specify a less specific shape invariant for each loopvariable, which is needed if the shape varies between iterations. The[ `tf.Tensor.set_shape` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#set_shape)function may also be used in the  `body`  function to indicate thatthe output loop variable has a particular shape. The shape invariant forSparseTensor and IndexedSlices are treated specially as follows:
 
-a) If a loop variable is a SparseTensor, the shape invariant must beTensorShape([r]) where r is the rank of the dense tensor representedby the sparse tensor. It means the shapes of the three tensors of theSparseTensor are ([None], [None, r], [r]). NOTE: The shape invariant hereis the shape of the SparseTensor.dense_shape property. It must be the shape ofa vector.
+a) If a loop variable is a SparseTensor, the shape invariant must beTensorShape([r]) where r is the rank of the dense tensor representedby the sparse tensor. It means the shapes of the three tensors of theSparseTensor are ([None], [None, r], [r]). 注意：The shape invariant hereis the shape of the SparseTensor.dense_shape property. It must be the shape ofa vector.
 
 b) If a loop variable is an IndexedSlices, the shape invariant must bea shape invariant of the values tensor of the IndexedSlices. It meansthe shapes of the three tensors of the IndexedSlices are (shape, [shape[0]],[shape.ndims]).
 
@@ -32,7 +32,7 @@ b) If a loop variable is an IndexedSlices, the shape invariant must bea shape in
 
 For training, TensorFlow stores the tensors that are produced in theforward inference and are needed in back propagation. These tensors are amain source of memory consumption and often cause OOM errors when trainingon GPUs. When the flag swap_memory is true, we swap out these tensors fromGPU to CPU. This for example allows us to train RNN models with very longsequences and large batches.
 
-#### Args:
+#### 参数：
 - **`cond`** : A callable that represents the termination condition of the loop.
 - **`body`** : A callable that represents the loop body.
 - **`loop_vars`** : A (possibly nested) tuple, namedtuple or list of numpy array, `Tensor` , and  `TensorArray`  objects.
@@ -45,15 +45,15 @@ For training, TensorFlow stores the tensors that are produced in theforward infe
 - **`return_same_structure`** : If True, output has same structure as  `loop_vars` . Ifeager execution is enabled, this is ignored (and always treated as True).
 
 
-#### Returns:
+#### 返回：
 The output tensors for the loop variables after the loop. If  `return_same_structure`  is True, the return value has the same structure as  `loop_vars` . If  `return_same_structure`  is False, the return value is a Tensor, TensorArray or IndexedSlice if the length of  `loop_vars`  is 1, or a list otherwise.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `cond`  or  `body`  is not callable.
 - **`ValueError`** : if  `loop_vars`  is empty.
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -64,7 +64,7 @@ r = tf.while_loop(c, b, [i])
  
 ```
 
-Example with nesting and a namedtuple:
+嵌套和namedtuple的示例：
 
 ```
  import collections

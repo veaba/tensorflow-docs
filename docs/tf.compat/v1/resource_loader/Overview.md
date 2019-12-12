@@ -1,6 +1,6 @@
-Resource management library.
+资源管理库。
 
-## Functions
+## 功能
 [ `get_data_files_path(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/resource_loader/get_data_files_path): Get a direct path to the data files colocated with the script.
 
 [ `get_path_to_datafile(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/resource_loader/get_path_to_datafile): Get the path to the specified file in the data dependencies.

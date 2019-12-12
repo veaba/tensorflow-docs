@@ -1,9 +1,9 @@
-Public API for tf.dtypes namespace.
+tf.dtypes命名空间的公共API。
 
-## Classes
+## Class 
 [ `class DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType): Represents the type of the elements in a  `Tensor` .
 
-## Functions
+## 功能
 [ `as_dtype(...)` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/as_dtype): Converts the given  `type_value`  to a  `DType` .
 
 [ `cast(...)` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/cast): Casts a tensor to a new type.
@@ -12,7 +12,7 @@ Public API for tf.dtypes namespace.
 
 [ `saturate_cast(...)` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/saturate_cast): Performs a safe saturating cast of  `value`  to  `dtype` .
 
-## Other Members
+## 其他成员
 -  `QUANTIZED_DTYPES`  []()
 -  `bfloat16`  []()
 -  `bool`  []()

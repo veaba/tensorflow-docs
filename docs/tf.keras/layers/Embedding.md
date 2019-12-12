@@ -1,19 +1,19 @@
 
 
 ## Class  `Embedding` 
-Turns positive integers (indexes) into dense vectors of fixed size.
+将正整数（索引）转换为固定大小的密集向量。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Embedding` ](/api_docs/python/tf/keras/layers/Embedding), [ `tf.compat.v2.keras.layers.Embedding` ](/api_docs/python/tf/keras/layers/Embedding)
+**别名** : [ `tf.compat.v1.keras.layers.Embedding` ](/api_docs/python/tf/keras/layers/Embedding), [ `tf.compat.v2.keras.layers.Embedding` ](/api_docs/python/tf/keras/layers/Embedding)
 
-### Used in the guide:
+### 在指南中使用：
 - [Masking and padding with Keras](https://tensorflow.google.cn/guide/keras/masking_and_padding)
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
 - [Text classification with an RNN](https://tensorflow.google.cn/tutorials/text/text_classification_rnn)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
@@ -21,9 +21,9 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - [Text classification with preprocessed text: Movie reviews](https://tensorflow.google.cn/tutorials/keras/text_classification)
 e.g.  `[[4], [20]] -> [[0.25, 0.1], [0.6, -0.2]]` 
 
-This layer can only be used as the first layer in a model.
+此层只能用作模型中的第一层。
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -44,7 +44,7 @@ assert output_array.shape == (32, 10, 64)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`input_dim`** : int > 0. Size of the vocabulary,i.e. maximum integer index + 1.
 - **`output_dim`** : int >= 0. Dimension of the dense embedding.
 - **`embeddings_initializer`** : Initializer for the  `embeddings`  matrix.
@@ -54,10 +54,10 @@ assert output_array.shape == (32, 10, 64)
 - **`input_length`** : Length of input sequences, when it is constant.This argument is required if you are going to connect `Flatten`  then  `Dense`  layers upstream(without it, the shape of the dense outputs cannot be computed).
 
 
-#### Input shape:
+#### 输入形状：
 2D tensor with shape:  `(batch_size, input_length)` .
 
-#### Output shape:
+#### 输出形状：
 3D tensor with shape:  `(batch_size, input_length, output_dim)` .
 
 ##  `__init__` 

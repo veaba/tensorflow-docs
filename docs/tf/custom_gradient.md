@@ -1,6 +1,6 @@
-Decorator to define a function with a custom gradient.
+decorator定义具有自定义渐变的函数。
 
-**Aliases** : [ `tf.compat.v1.custom_gradient` ](/api_docs/python/tf/custom_gradient), [ `tf.compat.v2.custom_gradient` ](/api_docs/python/tf/custom_gradient)
+**别名** : [ `tf.compat.v1.custom_gradient` ](/api_docs/python/tf/custom_gradient), [ `tf.compat.v2.custom_gradient` ](/api_docs/python/tf/custom_gradient)
 
 ```
  tf.custom_gradient(f)
@@ -44,7 +44,7 @@ See also [ `tf.RegisterGradient` ](https://tensorflow.google.cn/api_docs/python/
 
 Note that if the decorated function uses  `Variable` s, the enclosing variablescope must be using  `ResourceVariable` s.
 
-#### Args:
+#### 参数：
 - **`f`** : function  `f(*x)`  that returns a tuple  `(y, grad_fn)`  where:
 
 
@@ -55,6 +55,6 @@ Note that if the decorated function uses  `Variable` s, the enclosing variablesc
 If  `f`  uses  `Variable` s (that are not part of theinputs), i.e. through  `get_variable` , then  `grad_fn`  should havesignature  `g(*grad_ys, variables=None)` , where  `variables`  is a list ofthe  `Variable` s, and return a 2-tuple  `(grad_xs, grad_vars)` , where `grad_xs`  is the same as above, and  `grad_vars`  is a  `list<Tensor>` with the derivatives of  `Tensor` s in  `y`  with respect to the variables(that is, grad_vars has one Tensor per variable in variables).
 
 
-#### Returns:
+#### 返回：
 A function  `h(x)`  which returns the same value as  `f(x)[0]`  and whosegradient (as calculated by [ `tf.gradients` ](https://tensorflow.google.cn/api_docs/python/tf/gradients)) is determined by  `f(x)[1]` .
 

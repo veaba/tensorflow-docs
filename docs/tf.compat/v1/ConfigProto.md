@@ -1,14 +1,14 @@
 
 
 ## Class  `ConfigProto` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class DeviceCountEntry` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ConfigProto/DeviceCountEntry)
 
 [ `class Experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/ConfigProto/Experimental)
 
-## Properties
+## 属性
 
 
 ###  `allow_soft_placement` 

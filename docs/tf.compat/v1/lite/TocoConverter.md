@@ -5,7 +5,7 @@ Convert a TensorFlow model into  `output_format`  using TOCO.
 
 This class has been deprecated. Please use [ `lite.TFLiteConverter` ](/api_docs/python/tf/lite/TFLiteConverter) instead.
 
-## Methods
+## 方法
 
 
 ###  `from_frozen_graph` 

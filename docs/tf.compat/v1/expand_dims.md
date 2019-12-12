@@ -16,7 +16,7 @@ Given a tensor  `input` , this operation inserts a dimension of 1 at thedimensio
 
 This operation is useful if you want to add a batch dimension to a singleelement. For example, if you have a single image of shape  `[height, width,channels]` , you can make it a batch of 1 image with  `expand_dims(image, 0)` ,which will make the shape  `[1, height, width, channels]` .
 
-#### Other examples:
+#### 其他示例：
 
 
 ```
@@ -32,21 +32,21 @@ tf.shape(tf.expand_dims(t2, 3))  # [2, 3, 5, 1]
  
 ```
 
-This operation requires that:
+此操作要求：
 
  `-1-input.dims() <= dim <= input.dims()` 
 
 This operation is related to  `squeeze()` , which removes dimensions ofsize 1.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .
 - **`axis`** : 0-D (scalar). Specifies the dimension index at which to expand theshape of  `input` . Must be in the range  `[-rank(input) - 1, rank(input)]` .
 - **`name`** : The name of the output  `Tensor`  (optional).
 - **`dim`** : 0-D (scalar). Equivalent to  `axis` , to be deprecated.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same data as  `input` , but its shape has an additionaldimension of size 1 added.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if either both or neither of  `dim`  and  `axis`  are specified.

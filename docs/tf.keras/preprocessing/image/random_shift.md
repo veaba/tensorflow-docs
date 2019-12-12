@@ -1,6 +1,6 @@
-Performs a random spatial shift of a Numpy image tensor.
+执行numpy图像张量的随机空间偏移。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift), [ `tf.compat.v2.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift), [ `tf.compat.v2.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift)
 
 ```
  tf.keras.preprocessing.image.random_shift(
@@ -21,7 +21,7 @@ Performs a random spatial shift of a Numpy image tensor.
 
 
 ```
- x: Input tensor. Must be 3D.
+x：输入张量。必须是三维的。
 wrg: Width shift range, as a float fraction of the width.
 hrg: Height shift range, as a float fraction of the height.
 row_axis: Index of axis for rows in the input tensor.
@@ -30,7 +30,7 @@ channel_axis: Index of axis for channels in the input tensor.
 fill_mode: Points outside the boundaries of the input
     are filled according to the given mode
     (one of `{'constant', 'nearest', 'reflect', 'wrap'}`).
-cval: Value used for points outside the boundaries
+cval：用于边界外点的值
     of the input if `mode='constant'`.
 interpolation_order: int, order of spline interpolation.
     see `ndimage.interpolation.affine_transform`
@@ -41,7 +41,7 @@ interpolation_order: int, order of spline interpolation.
 
 
 ```
- Shifted Numpy image tensor.
+移位的核图像张量。
  
 ```
 

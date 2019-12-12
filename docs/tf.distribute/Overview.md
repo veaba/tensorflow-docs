@@ -1,4 +1,4 @@
-Library for running a computation across multiple devices.
+用于跨多个设备运行计算的库。
 
 See the guide for overview and examples:[TensorFlow v1.x](https://tensorflow.google.cn/guide/distribute_strategy),[TensorFlow v2.x](https://tensorflow.google.cn/alpha/guide/distribute_strategy).
 
@@ -6,7 +6,7 @@ The intent of this library is that you can write an algorithm in a stylized waya
 
 *Glossary*
 
-- *Data parallelism* is where we run multiple copies of the modelon different slices of the input data. This is in contrast to*model parallelism* where we divide up a single copy of a modelacross multiple devices.Note: we only support data parallelism for now, buthope to add support for model parallelism in the future.
+- *Data parallelism* is where we run multiple copies of the modelon different slices of the input data. This is in contrast to*model parallelism* where we divide up a single copy of a modelacross multiple devices.注意：we only support data parallelism for now, buthope to add support for model parallelism in the future.
 - A *device* is a CPU or accelerator (e.g. GPUs, TPUs) on some machine thatTensorFlow can run operations on (see e.g. [ `tf.device` ](https://tensorflow.google.cn/api_docs/python/tf/device)). You may have multipledevices on a single machine, or be connected to devices on multiplemachines. Devices used to run computations are called *worker devices*.Devices used to store variables are *parameter devices*. For some strategies,such as [ `tf.distribute.MirroredStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/MirroredStrategy), the worker and parameter deviceswill be the same (see mirrored variables below). For others they will bedifferent.  For example, [ `tf.distribute.experimental.CentralStorageStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental/CentralStorageStrategy)puts the variables on a single device (which may be a worker device or may bethe CPU), and [ `tf.distribute.experimental.ParameterServerStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental/ParameterServerStrategy) puts thevariables on separate machines called parameter servers (see below).
 - A *replica* is one copy of the model, running on one slice of theinput data. Right now each replica is executed on its ownworker device, but once we add support for model parallelisma replica may span multiple worker devices.
 - A *host* is the CPU device on a machine with worker devices, typicallyused for running input pipelines.
@@ -17,12 +17,12 @@ The intent of this library is that you can write an algorithm in a stylized waya
 - Reductions and all-reduce: A *reduction* is some method of aggregatingmultiple values into one value, like "sum" or "mean". If a strategy is doingsync training, we will perform a reduction on the gradients to a parameterfrom all replicas before applying the update. *All-reduce* is an algorithm forperforming a reduction on values from multiple devices and making the resultavailable on all of those devices.
 Note that we provide a default version of [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) that isused when no other strategy is in scope, that provides the same API withreasonable default behavior.
 
-## Modules
+## 模块
 [ `cluster_resolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver) module: Library imports for ClusterResolvers.
 
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental) module: Experimental Distribution Strategy library.
 
-## Classes
+## Class 
 [ `class CrossDeviceOps` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/CrossDeviceOps): Base class for cross-device reduction and broadcasting algorithms.
 
 [ `class HierarchicalCopyAllReduce` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/HierarchicalCopyAllReduce): Reduction using hierarchical copy all-reduce.
@@ -49,7 +49,7 @@ Note that we provide a default version of [ `tf.distribute.Strategy` ](https://t
 
 [ `class StrategyExtended` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/StrategyExtended): Additional APIs for algorithms that need to be distribution-aware.
 
-## Functions
+## 功能
 [ `experimental_set_strategy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental_set_strategy): Set a [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) as current without  `with strategy.scope()` .
 
 [ `get_replica_context(...)` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/get_replica_context): Returns the current [ `tf.distribute.ReplicaContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReplicaContext) or  `None` .

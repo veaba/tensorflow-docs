@@ -1,6 +1,6 @@
-Sets the current thread device policy.
+设置当前线程设备策略。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.set_device_policy` ](/api_docs/python/tf/config/experimental/set_device_policy), [ `tf.compat.v2.config.experimental.set_device_policy` ](/api_docs/python/tf/config/experimental/set_device_policy)
+**别名** : [ `tf.compat.v1.config.experimental.set_device_policy` ](/api_docs/python/tf/config/experimental/set_device_policy), [ `tf.compat.v2.config.experimental.set_device_policy` ](/api_docs/python/tf/config/experimental/set_device_policy)
 
 ```
  tf.config.experimental.set_device_policy(device_policy)
@@ -13,7 +13,7 @@ When using the default, an appropriate policy will be picked automatically.The d
 
 This function only sets the device policy for the current thread. Anysubsequently started thread will again use the default policy.
 
-#### Args:
+#### 参数：
 - **`device_policy`** : A device policy.Valid values:
     - None: Switch to a system default.
     - 'warn': Copies the tensors which are not on the right device and logsa warning.
@@ -22,5 +22,5 @@ This function only sets the device policy for the current thread. Anysubsequentl
     - 'silent_for_int32': silently copies  `int32`  tensors, raising errors onthe other ones.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If an invalid  `device_policy`  is passed.

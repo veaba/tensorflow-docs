@@ -1,17 +1,17 @@
-Initialize the TPU devices.
+初始化TPU设备。
 
-**Aliases** : [ `tf.compat.v1.tpu.experimental.initialize_tpu_system` ](/api_docs/python/tf/tpu/experimental/initialize_tpu_system), [ `tf.compat.v2.tpu.experimental.initialize_tpu_system` ](/api_docs/python/tf/tpu/experimental/initialize_tpu_system)
+**别名** : [ `tf.compat.v1.tpu.experimental.initialize_tpu_system` ](/api_docs/python/tf/tpu/experimental/initialize_tpu_system), [ `tf.compat.v2.tpu.experimental.initialize_tpu_system` ](/api_docs/python/tf/tpu/experimental/initialize_tpu_system)
 
 ```
  tf.tpu.experimental.initialize_tpu_system(cluster_resolver=None) 
 ```
 
-#### Args:
+#### 参数：
 - **`cluster_resolver`** : A tf.distribute.cluster_resolver.TPUClusterResolver,which provides information about the TPU cluster.
 
 
-#### Returns:
-The tf.tpu.Topology object for the topology of the TPU cluster.
+#### 返回：
+tpu集群拓扑的tf.tpu.topology对象。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If no TPU devices found for eager execution.

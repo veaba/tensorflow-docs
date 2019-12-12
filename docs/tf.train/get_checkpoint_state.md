@@ -1,6 +1,6 @@
-Returns CheckpointState proto from the "checkpoint" file.
+从“checkpoint”文件返回checkpointstate proto。
 
-**Aliases** : [ `tf.compat.v1.train.get_checkpoint_state` ](/api_docs/python/tf/train/get_checkpoint_state), [ `tf.compat.v2.train.get_checkpoint_state` ](/api_docs/python/tf/train/get_checkpoint_state)
+**别名** : [ `tf.compat.v1.train.get_checkpoint_state` ](/api_docs/python/tf/train/get_checkpoint_state), [ `tf.compat.v2.train.get_checkpoint_state` ](/api_docs/python/tf/train/get_checkpoint_state)
 
 ```
  tf.train.get_checkpoint_state(    checkpoint_dir,    latest_filename=None) 
@@ -8,13 +8,13 @@ Returns CheckpointState proto from the "checkpoint" file.
 
 If the "checkpoint" file contains a valid CheckpointStateproto, returns it.
 
-#### Args:
+#### 参数：
 - **`checkpoint_dir`** : The directory of checkpoints.
 - **`latest_filename`** : Optional name of the checkpoint file.  Default to'checkpoint'.
 
 
-#### Returns:
+#### 返回：
 A CheckpointState if the state was available, Noneotherwise.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the checkpoint read doesn't have model_checkpoint_path set.

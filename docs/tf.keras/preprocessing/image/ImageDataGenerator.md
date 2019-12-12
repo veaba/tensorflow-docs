@@ -3,20 +3,20 @@
 ## Class  `ImageDataGenerator` 
 Generate batches of tensor image data with real-time data augmentation.
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator), [ `tf.compat.v2.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator), [ `tf.compat.v2.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator)
 
-### Used in the guide:
+### 在指南中使用：
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Transfer learning with TensorFlow Hub](https://tensorflow.google.cn/tutorials/images/transfer_learning_with_hub)
 - [Load images](https://tensorflow.google.cn/tutorials/load_data/images)
 
 The data will be looped over (in batches).
 
 
-#### Arguments:
+#### 参数：
 - **`featurewise_center`** : Boolean.Set input mean to 0 over the dataset, feature-wise.
 - **`samplewise_center`** : Boolean. Set each sample mean to 0.
 - **`featurewise_std_normalization`** : Boolean.Divide inputs by std of the dataset, feature-wise.
@@ -53,7 +53,7 @@ The data will be looped over (in batches).
     - 'wrap':  abcdabcd|abcd|abcdabcd
 
 
-#### Examples:
+#### 示例：
 Example of using  `.flow(x, y)` :
 
 ```
@@ -115,7 +115,7 @@ model.fit_generator(
  
 ```
 
-Example of transforming images and masks together.
+将图像和遮罩转换到一起的示例。
 
 ```
  # we create two instances with the same arguments
@@ -181,7 +181,7 @@ model.fit_generator(
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `apply_transform` 
@@ -195,7 +195,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Applies a transformation to an image according to given parameters.
+根据给定参数对图像应用转换。
 
 # Arguments
 
@@ -223,7 +223,7 @@ transform_parameters: Dictionary with string - parameter pairs
 
 
 ```
- A transformed version of the input (same shape).
+输入的转换版本（相同的形状）。
  
 ```
 
@@ -240,7 +240,7 @@ transform_parameters: Dictionary with string - parameter pairs
  
 ```
 
-Fits the data generator to some sample data.
+使数据生成器适合某些示例数据。
 
 This computes the internal data stats related to thedata-dependent transformations, based on an array of sample data.
 
@@ -250,17 +250,17 @@ Only required if  `featurewise_center`  or `featurewise_std_normalization`  or  
 
 
 ```
- x: Sample data. Should have rank 4.
+X：样本数据。应该是4级。
  In case of grayscale data,
  the channels axis should have value 1, in case
  of RGB data, it should have value 3, and in case
  of RGBA data, it should have value 4.
-augment: Boolean (default: False).
+augment:boolean（默认值：false）。
     Whether to fit on randomly augmented samples.
-rounds: Int (default: 1).
+轮次：int（默认值：1）。
     If using data augmentation (`augment=True`),
     this is how many augmentation passes over the data to use.
-seed: Int (default: None). Random seed.
+种子：int（默认值：none）。随机种子。
  
 ```
 
@@ -289,7 +289,7 @@ Takes data &amp; label arrays, generates batches of augmented data.
 
 
 ```
- x: Input data. Numpy array of rank 4 or a tuple.
+X：输入数据。列4或元组的numpy数组。
     If tuple, the first element
     should contain the images and the second element
     another numpy array or a list of numpy arrays
@@ -301,11 +301,11 @@ Takes data &amp; label arrays, generates batches of augmented data.
     should have value 1, in case
     of RGB data, it should have value 3, and in case
     of RGBA data, it should have value 4.
-y: Labels.
+Y:标签。
 batch_size: Int (default: 32).
-shuffle: Boolean (default: True).
+shuffle:boolean（默认值：true）。
 sample_weight: Sample weights.
-seed: Int (default: None).
+种子：int（默认值：none）。
 save_to_dir: None or str (default: None).
     This allows you to optionally specify a directory
     to which to save the augmented pictures being generated
@@ -315,7 +315,7 @@ save_prefix: Str (default: `''`).
     (only relevant if `save_to_dir` is set).
 save_format: one of "png", "jpeg"
     (only relevant if `save_to_dir` is set). Default: "png".
-subset: Subset of data (`"training"` or `"validation"`) if
+subset：如果
     `validation_split` is set in `ImageDataGenerator`.
  
 ```
@@ -363,7 +363,7 @@ subset: Subset of data (`"training"` or `"validation"`) if
  
 ```
 
-Takes the dataframe and the path to a directory and generates batches of augmented/normalized data.
+获取数据帧和目录路径，并生成成批增强/规范化数据。
 
 **A simple tutorial can be found **[here](http://bit.ly/keras_flow_from_dataframe).
 
@@ -371,7 +371,7 @@ Takes the dataframe and the path to a directory and generates batches of augment
 
 
 ```
- dataframe: Pandas dataframe containing the filepaths relative to
+dataframe:pandas dataframe包含相对于
     `directory` (or absolute paths if `directory` is None) of the
     images in a string column. It should include other column/s
     depending on the `class_mode`:
@@ -417,7 +417,7 @@ class_mode: one of "binary", "categorical", "input", "multi_output",
         `model.predict_generator()`).
 batch_size: size of the batches of data (default: 32).
 shuffle: whether to shuffle the data (default: True)
-seed: optional random seed for shuffling and transformations.
+种子：可选的随机种子洗牌和转换。
 save_to_dir: None or str (default: None).
     This allows you to optionally specify a directory
     to which to save the augmented pictures being generated
@@ -428,9 +428,9 @@ save_format: one of "png", "jpeg"
     (only relevant if `save_to_dir` is set). Default: "png".
 follow_links: whether to follow symlinks inside class subdirectories
     (default: False).
-subset: Subset of data (`"training"` or `"validation"`) if
+subset：如果
     `validation_split` is set in `ImageDataGenerator`.
-interpolation: Interpolation method used to resample the image if the
+插值：用于对图像重新采样的插值方法，如果
     target size is different from that of the loaded image.
     Supported methods are `"nearest"`, `"bilinear"`, and `"bicubic"`.
     If PIL version 1.1.3 or newer is installed, `"lanczos"` is also
@@ -524,7 +524,7 @@ class_mode: One of "categorical", "binary", "sparse",
 batch_size: Size of the batches of data (default: 32).
 shuffle: Whether to shuffle the data (default: True)
     If set to False, sorts the data in alphanumeric order.
-seed: Optional random seed for shuffling and transformations.
+种子：可选的随机种子洗牌和转换。
 save_to_dir: None or str (default: None).
     This allows you to optionally specify
     a directory to which to save
@@ -536,9 +536,9 @@ save_format: One of "png", "jpeg"
     (only relevant if `save_to_dir` is set). Default: "png".
 follow_links: Whether to follow symlinks inside
     class subdirectories (default: False).
-subset: Subset of data (`"training"` or `"validation"`) if
+subset：如果
     `validation_split` is set in `ImageDataGenerator`.
-interpolation: Interpolation method used to
+插值：用于
     resample the image if the
     target size is different from that of the loaded image.
     Supported methods are `"nearest"`, `"bilinear"`,
@@ -572,13 +572,13 @@ interpolation: Interpolation method used to
  
 ```
 
-Generates random parameters for a transformation.
+为转换生成随机参数。
 
 # Arguments
 
 
 ```
- seed: Random seed.
+种子：随机种子。
 img_shape: Tuple of integers.
     Shape of the image that is transformed.
  
@@ -588,8 +588,8 @@ img_shape: Tuple of integers.
 
 
 ```
- A dictionary containing randomly chosen parameters describing the
-transformation.
+包含随机选择的参数的字典，描述
+转变。
  
 ```
 
@@ -604,14 +604,14 @@ transformation.
  
 ```
 
-Applies a random transformation to an image.
+对图像应用随机变换。
 
 # Arguments
 
 
 ```
  x: 3D tensor, single image.
-seed: Random seed.
+种子：随机种子。
  
 ```
 
@@ -619,7 +619,7 @@ seed: Random seed.
 
 
 ```
- A randomly transformed version of the input (same shape).
+输入的随机转换版本（相同形状）。
  
 ```
 
@@ -641,7 +641,7 @@ standarize(np.copy(x))
 
 
 ```
- x: Batch of inputs to be normalized.
+X：要规范化的一批输入。
  
 ```
 

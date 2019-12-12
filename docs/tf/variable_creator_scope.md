@@ -1,4 +1,4 @@
-Scope which defines a variable creation function to be used by variable().
+定义变量创建函数以供variable（）使用的范围。
 
 ```
  tf.variable_creator_scope(variable_creator)
@@ -20,10 +20,10 @@ The valid keyword arguments in kwds are:    initial_value: A  `Tensor` , or Pyth
 
 This set may grow over time, so it's important the signature of creators is asmentioned above.
 
-#### Args:
+#### 参数：
 - **`variable_creator`** : the passed creator
 
 
-#### Yields:
-A scope in which the creator is active
+#### 收益率：
+创建者处于活动状态的作用域
 

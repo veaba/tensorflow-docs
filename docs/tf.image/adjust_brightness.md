@@ -1,6 +1,6 @@
-Adjust the brightness of RGB or Grayscale images.
+调整RGB或灰度图像的亮度。
 
-**Aliases** : [ `tf.compat.v1.image.adjust_brightness` ](/api_docs/python/tf/image/adjust_brightness), [ `tf.compat.v2.image.adjust_brightness` ](/api_docs/python/tf/image/adjust_brightness)
+**别名** : [ `tf.compat.v1.image.adjust_brightness` ](/api_docs/python/tf/image/adjust_brightness), [ `tf.compat.v2.image.adjust_brightness` ](/api_docs/python/tf/image/adjust_brightness)
 
 ```
  tf.image.adjust_brightness(
@@ -14,15 +14,15 @@ This is a convenience method that converts RGB images to floatrepresentation, ad
 
 The value  `delta`  is added to all components of the tensor  `image` .  `image`  isconverted to  `float`  and scaled appropriately if it is in fixed-pointrepresentation, and  `delta`  is converted to the same data type. For regularimages,  `delta`  should be in the range  `[0,1)` , as it is added to the image infloating point representation, where pixel values are in the  `[0,1)`  range.
 
-#### Args:
+#### 参数：
 - **`image`** : RGB image or images to adjust.
 - **`delta`** : A scalar. Amount to add to the pixel values.
 
 
-#### Returns:
+#### 返回：
 A brightness-adjusted tensor of the same shape and type as  `image` .
 
-#### Usage Example:
+#### 用法示例：
 
 
 ```

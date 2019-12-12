@@ -5,7 +5,7 @@ Creates a  `Head`  for single label binary classification.
 
 Inherits From: [ `Head` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Head)
 
-**Aliases** : [ `tf.compat.v1.estimator.BinaryClassHead` ](/api_docs/python/tf/estimator/BinaryClassHead), [ `tf.compat.v2.estimator.BinaryClassHead` ](/api_docs/python/tf/estimator/BinaryClassHead)
+**别名** : [ `tf.compat.v1.estimator.BinaryClassHead` ](/api_docs/python/tf/estimator/BinaryClassHead), [ `tf.compat.v2.estimator.BinaryClassHead` ](/api_docs/python/tf/estimator/BinaryClassHead)
 
 Uses  `sigmoid_cross_entropy_with_logits`  loss.
 
@@ -19,7 +19,7 @@ The loss is the weighted sum over the input dimensions. Namely, if the inputlabe
 
 Also supports custom  `loss_fn` .  `loss_fn`  takes  `(labels, logits)`  or `(labels, logits, features, loss_reduction)`  as arguments and returns losswith shape  `[D0, D1, ... DN, 1]` .  `loss_fn`  must support float  `labels`  withshape  `[D0, D1, ... DN, 1]` . Namely, the head applies  `label_vocabulary`  tothe input labels before passing them to  `loss_fn` .
 
-#### Args:
+#### 参数：
 - **`weight_column`** : A string or a  `NumericColumn`  created by[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representingweights. It is used to down weight or boost examples during training. Itwill be multiplied by the loss of the example.
 - **`thresholds`** : Iterable of floats in the range  `(0, 1)` . For binaryclassification metrics such as precision and recall, an eval metric isgenerated for each threshold value. This threshold is applied to thelogistic values to determine the binary classification (i.e., above thethreshold is  `true` , below is  `false` .
 - **`label_vocabulary`** : A list or tuple of strings representing possible labelvalues. If it is not given, that means labels are already encoded within[0, 1]. If given, labels must be string type and have any value in `label_vocabulary` . Note that errors will be raised if  `label_vocabulary` is not provided but labels are strings.
@@ -45,7 +45,7 @@ Also supports custom  `loss_fn` .  `loss_fn`  takes  `(labels, logits)`  or `(la
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `logits_dimension` 
@@ -57,7 +57,7 @@ See  `base_head.Head`  for details.
 ###  `name` 
 See  `base_head.Head`  for details.
 
-## Methods
+## 方法
 
 
 ###  `create_estimator_spec` 
@@ -80,9 +80,9 @@ See  `base_head.Head`  for details.
 
 Returns  `EstimatorSpec`  that a model_fn can return.
 
-It is recommended to pass all args via name.
+建议通过名称传递所有参数。
 
-#### Args:
+#### 参数：
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
 - **`mode`** : Estimator's  `ModeKeys` .
 - **`logits`** : Logits  `Tensor`  to be used by the head.
@@ -94,7 +94,7 @@ It is recommended to pass all args via name.
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
  `EstimatorSpec` .
 
 ###  `loss` 
@@ -136,13 +136,13 @@ Creates metrics. See  `base_head.Head`  for details.
 
 Return predictions based on keys. See  `base_head.Head`  for details.
 
-#### Args:
+#### 参数：
 - **`logits`** : logits  `Tensor`  with shape  `[D0, D1, ... DN, logits_dimension]` .For many applications, the shape is  `[batch_size, logits_dimension]` .
 - **`keys`** : a list or tuple of prediction keys. Each key can be either the classvariable of prediction_keys.PredictionKeys or its string value, such as:prediction_keys.PredictionKeys.CLASSES or 'classes'. If not specified,it will return the predictions for all valid keys.
 
 
-#### Returns:
-A dict of predictions.
+#### 返回：
+预言的名言
 
 ###  `update_metrics` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/binary_class_head.py)

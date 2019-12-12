@@ -1,9 +1,9 @@
-Public API for tf.config.experimental namespace.
+tf.config.experimental命名空间的公共API。
 
-## Classes
+## Class 
 [ `class VirtualDeviceConfiguration` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration): Configuration class for virtual devices for a PhysicalDevice.
 
-## Functions
+## 功能
 [ `get_device_policy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/get_device_policy): Gets the current device policy.
 
 [ `get_memory_growth(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/get_memory_growth): Get if memory growth is enabled for a PhysicalDevice.

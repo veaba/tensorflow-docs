@@ -1,17 +1,17 @@
 
 
 ## Class  `Conv2DTranspose` 
-Transposed convolution layer (sometimes called Deconvolution).
+转置卷积层（有时称为反卷积）。
 
 Inherits From: [ `Conv2D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2D)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v1.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v2.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v2.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
+**别名** : [ `tf.compat.v1.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v1.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v2.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v2.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
@@ -20,7 +20,7 @@ The need for transposed convolutions generally arisesfrom the desire to use a tr
 
 When using this layer as the first layer in a model,provide the keyword argument  `input_shape` (tuple of integers, does not include the sample axis),e.g.  `input_shape=(128, 128, 3)`  for 128x128 RGB picturesin  `data_format="channels_last"` .
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 2 integers, specifying theheight and width of the 2D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 2 integers,specifying the strides of the convolution along the height and width.Can be a single integer to specify the same value forall spatial dimensions.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -39,13 +39,13 @@ When using this layer as the first layer in a model,provide the keyword argument
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-#### Input shape:
+#### 输入形状：
 4D tensor with shape: `(batch, channels, rows, cols)`  if data_format='channels_first'or 4D tensor with shape: `(batch, rows, cols, channels)`  if data_format='channels_last'.
 
-#### Output shape:
+#### 输出形状：
 4D tensor with shape: `(batch, filters, new_rows, new_cols)`  if data_format='channels_first'or 4D tensor with shape: `(batch, new_rows, new_cols, filters)`  if data_format='channels_last'. `rows`  and  `cols`  values might have changed due to padding.
 
-#### References:
+#### 参考文献：
 - [A guide to convolution arithmetic for deeplearning](https://arxiv.org/abs/1603.07285v1)
 - [DeconvolutionalNetworks](https://www.matthewzeiler.com/mattzeiler/deconvolutionalnetworks.pdf)
 

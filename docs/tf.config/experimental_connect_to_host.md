@@ -1,6 +1,6 @@
-Connects to a single machine to enable remote execution on it.
+连接到单个计算机以在其上启用远程执行。
 
-**Aliases** : [ `tf.compat.v1.config.experimental_connect_to_host` ](/api_docs/python/tf/config/experimental_connect_to_host), [ `tf.compat.v2.config.experimental_connect_to_host` ](/api_docs/python/tf/config/experimental_connect_to_host)
+**别名** : [ `tf.compat.v1.config.experimental_connect_to_host` ](/api_docs/python/tf/config/experimental_connect_to_host), [ `tf.compat.v2.config.experimental_connect_to_host` ](/api_docs/python/tf/config/experimental_connect_to_host)
 
 ```
  tf.config.experimental_connect_to_host(    remote_host=None,    job_name='worker') 

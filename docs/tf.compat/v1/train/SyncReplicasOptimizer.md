@@ -9,7 +9,7 @@ This class is deprecated. For synchrononous training, please use [DistributionSt
 
 In a typical asynchronous training environment, it's common to have somestale gradients. For example, with a N-replica asynchronous training,gradients will be applied to the variables N times independently. Dependingon each replica's training speed, some gradients might be calculated fromcopies of the variable from several steps back (N-1 steps on average). Thisoptimizer avoids stale gradients by collecting gradients from all replicas,averaging them, then applying them to the variables in one shot, afterwhich replicas can fetch the new variables and continue.
 
-The following accumulators/queue are created:
+将创建以下累加器/队列：
 
 - N  `gradient accumulators` , one per variable to train. Gradients are pushedto them and the chief worker will wait until enough gradients are collectedand then average them before applying to variables. The accumulator willdrop all stale gradients (more details in the accumulator op).
 - 1  `token`  queue where the optimizer pushes the new global_step value afterall variables are updated.
@@ -25,14 +25,14 @@ The optimizer adds nodes to the graph to collect gradients and pause thetrainers
 5. Only after step 4, pushes  `global_step`  in the  `token_queue` , once foreach worker replica. The workers can now fetch the global step, use it toupdate its local_step variable and start the next batch. Please note thatsome workers can consume multiple minibatches, while some may not consumeeven one. This is because each worker fetches minibatches as long asa token exists. If one worker is stuck for some reason and does notconsume a token, another worker can use it.
 
 
-#### For the replicas:
+#### 对于副本：
 1. Start a step: fetch variables and compute gradients.
 2. Once the gradients have been computed, push them into gradientaccumulators. Each accumulator will check the staleness and drop the stale.
 3. After pushing all the gradients, dequeue an updated value of global_stepfrom the token queue and record that step to its local_step variable. Notethat this is effectively a barrier.
 4. Start the next batch.
 
 
-### Usage
+### 用法
 
 
 ```
@@ -101,7 +101,7 @@ Construct a sync_replicas optimizer. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:The  `SyncReplicaOptimizer`  class is deprecated. For synchrononous training, please use [Distribution Strategies](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/distribute).
 
 
-#### Args:
+#### 参数：
 - **`opt`** : The actual optimizer that will be used to compute and apply thegradients. Must be one of the Optimizer classes.
 - **`replicas_to_aggregate`** : number of replicas to aggregate for each variableupdate.
 - **`total_num_replicas`** : Total number of tasks/workers/replicas, could bedifferent from replicas_to_aggregate.If total_num_replicas > replicas_to_aggregate: it is backup_replicas +replicas_to_aggregate.If total_num_replicas < replicas_to_aggregate: Replicas computemultiple batches per update to variables.
@@ -111,7 +111,7 @@ Construct a sync_replicas optimizer. (deprecated)
 - **`name`** : string. Optional name of the returned operation.
 
 
-## Methods
+## 方法
 
 
 ###  `apply_gradients` 
@@ -126,21 +126,21 @@ Construct a sync_replicas optimizer. (deprecated)
  
 ```
 
-Apply gradients to variables.
+对变量应用渐变。
 
 This contains most of the synchronization implementation and also wraps theapply_gradients() from the real optimizer.
 
-#### Args:
+#### 参数：
 - **`grads_and_vars`** : List of (gradient, variable) pairs as returned bycompute_gradients().
 - **`global_step`** : Optional Variable to increment by one after thevariables have been updated.
 - **`name`** : Optional name for the returned operation.  Default to thename passed to the Optimizer constructor.
 
 
-#### Returns:
+#### 返回：
 - **`train_op`** : The op to dequeue a token so the replicas can exit this batchand start the next one. This is executed by each replica.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the grads_and_vars is empty.
 - **`ValueError`** : If global step is not provided, the staleness cannot bechecked.
 
@@ -160,12 +160,12 @@ Compute gradients of "loss" for the variables in "var_list".
 
 This simply wraps the compute_gradients() from the real optimizer. Thegradients will be aggregated in the apply_gradients() so that user canmodify the gradients like clipping with per replica global norm if needed.The global norm with aggregated gradients can be bad as one replica's hugegradients can hurt the gradients from other replicas.
 
-#### Args:
+#### 参数：
 - **`*args`** : Arguments for compute_gradients().
 - **`**kwargs`** : Keyword arguments for compute_gradients().
 
 
-#### Returns:
+#### 返回：
 A list of (gradient, variable) pairs.
 
 ###  `get_chief_queue_runner` 
@@ -176,16 +176,16 @@ A list of (gradient, variable) pairs.
  
 ```
 
-Returns the QueueRunner for the chief to execute.
+返回首席执行官要执行的QueueRunner。
 
 This includes the operations to synchronize replicas: aggregate gradients,apply to variables, increment global step, insert tokens to token queue.
 
 Note that this can only be called after calling apply_gradients() whichactually generates this queuerunner.
 
-#### Returns:
+#### 返回：
 A  `QueueRunner`  for chief to execute.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If this is called before apply_gradients().
 
 
@@ -201,14 +201,14 @@ Returns the op to fill the sync_token_queue with the tokens.
 
 This is supposed to be executed in the beginning of the chief/sync threadso that even if the total_num_replicas is less than replicas_to_aggregate,the model can still proceed as the replicas can compute multiple steps pervariable update. Make sure: `num_tokens >= replicas_to_aggregate - total_num_replicas` .
 
-#### Args:
+#### 参数：
 - **`num_tokens`** : Number of tokens to add to the queue.
 
 
-#### Returns:
-An op for the chief/sync replica to fill the token queue.
+#### 返回：
+主/同步复制副本填充令牌队列的操作。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If this is called before apply_gradients().
 - **`ValueError`** : If num_tokens are smaller than replicas_to_aggregate -total_num_replicas.
 
@@ -232,16 +232,16 @@ An op for the chief/sync replica to fill the token queue.
  
 ```
 
-Return a slot named "name" created for "var" by the Optimizer.
+返回优化器为“var”创建的名为“name”的槽。
 
 This simply wraps the get_slot() from the actual optimizer.
 
-#### Args:
+#### 参数：
 - **`*args`** : Arguments for get_slot().
 - **`**kwargs`** : Keyword arguments for get_slot().
 
 
-#### Returns:
+#### 返回：
 The  `Variable`  for the slot if it was created,  `None`  otherwise.
 
 ###  `get_slot_names` 
@@ -259,13 +259,13 @@ Return a list of the names of slots created by the  `Optimizer` .
 
 This simply wraps the get_slot_names() from the actual optimizer.
 
-#### Args:
+#### 参数：
 - **`*args`** : Arguments for get_slot().
 - **`**kwargs`** : Keyword arguments for get_slot().
 
 
-#### Returns:
-A list of strings.
+#### 返回：
+字符串列表。
 
 ###  `make_session_run_hook` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/sync_replicas_optimizer.py#L461-L463)
@@ -278,7 +278,7 @@ A list of strings.
  
 ```
 
-Creates a hook to handle SyncReplicasHook ops such as initialization.
+创建一个钩子来处理syncreplicasharked操作，如初始化。
 
 ###  `minimize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/optimizer.py#L355-L413)
@@ -301,7 +301,7 @@ Add operations to minimize  `loss`  by updating  `var_list` .
 
 This method simply combines calls  `compute_gradients()`  and `apply_gradients()` . If you want to process the gradient before applyingthem call  `compute_gradients()`  and  `apply_gradients()`  explicitly insteadof using this function.
 
-#### Args:
+#### 参数：
 - **`loss`** : A  `Tensor`  containing the value to minimize.
 - **`global_step`** : Optional  `Variable`  to increment by one after thevariables have been updated.
 - **`var_list`** : Optional list or tuple of  `Variable`  objects to update tominimize  `loss` .  Defaults to the list of variables collected inthe graph under the key  `GraphKeys.TRAINABLE_VARIABLES` .
@@ -312,14 +312,14 @@ This method simply combines calls  `compute_gradients()`  and `apply_gradients()
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 
 
-#### Returns:
+#### 返回：
 An Operation that updates the variables in  `var_list` .  If  `global_step` was not  `None` , that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If some of the variables are not  `Variable`  objects.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 When eager execution is enabled,  `loss`  should be a Python function thattakes no arguments and computes the value to be minimized. Minimization (andgradient computation) is done with respect to the elements of  `var_list`  ifnot None, else with respect to any trainable variables created during theexecution of the  `loss`  function.  `gate_gradients` ,  `aggregation_method` , `colocate_gradients_with_ops`  and  `grad_loss`  are ignored when eagerexecution is enabled.
 
 ###  `variables` 
@@ -330,14 +330,14 @@ When eager execution is enabled,  `loss`  should be a Python function thattakes 
  
 ```
 
-Fetches a list of optimizer variables in the default graph.
+获取默认图中优化器变量的列表。
 
 This wraps  `variables()`  from the actual optimizer. It does not includethe  `SyncReplicasOptimizer` 's local step.
 
-#### Returns:
-A list of variables.
+#### 返回：
+变量列表。
 
-## Class Members
+## Class 成员
 -  `GATE_GRAPH = 2`  []()
 -  `GATE_NONE = 0`  []()
 -  `GATE_OP = 1`  []()

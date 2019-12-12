@@ -4,7 +4,7 @@ Parses a single  `Example`  proto.
  tf.io.parse_single_example(    serialized,    features,    example_names=None,    name=None) 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
 Similar to  `parse_example` , except:
 
@@ -14,15 +14,15 @@ For  `SparseTensor` s, the first (batch) column of the indices matrix is removed
 
 One might see performance advantages by batching  `Example`  protos with `parse_example`  instead of using this function directly.
 
-#### Args:
+#### 参数：
 - **`serialized`** : A scalar string Tensor, a single serialized Example.See  `_parse_single_example_raw`  documentation for more details.
 - **`features`** : A  `dict`  mapping feature keys to  `FixedLenFeature`  or `VarLenFeature`  values.
 - **`example_names`** : (Optional) A scalar string Tensor, the associated name.See  `_parse_single_example_raw`  documentation for more details.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `dict`  mapping feature keys to  `Tensor`  and  `SparseTensor`  values.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any feature is invalid.

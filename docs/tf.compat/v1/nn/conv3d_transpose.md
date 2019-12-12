@@ -18,7 +18,7 @@ The transpose of  `conv3d` .
 
 This operation is sometimes called "deconvolution" after [DeconvolutionalNetworks](https://www.matthewzeiler.com/mattzeiler/deconvolutionalnetworks.pdf),but is really the transpose (gradient) of  `conv3d`  rather than an actualdeconvolution.
 
-#### Args:
+#### 参数：
 - **`value`** : A 5-D  `Tensor`  of type  `float`  and shape `[batch, depth, height, width, in_channels]` .
 - **`filter`** : A 5-D  `Tensor`  with the same type as  `value`  and shape `[depth, height, width, output_channels, in_channels]` .   `filter` 's `in_channels`  dimension must match that of  `value` .
 - **`output_shape`** : A 1-D  `Tensor`  representing the output shape of thedeconvolution op.
@@ -31,8 +31,8 @@ This operation is sometimes called "deconvolution" after [DeconvolutionalNetwork
 - **`dilations`** : An int or list of  `ints`  that has length  `1` ,  `3`  or  `5` ,defaults to 1. The dilation factor for each dimension of `input` . If asingle value is given it is replicated in the  `D` ,  `H`  and  `W`  dimension.By default the  `N`  and  `C`  dimensions are set to 1. If set to k > 1, therewill be k-1 skipped cells between each filter element on that dimension.The dimension order is determined by the value of  `data_format` , see abovefor details. Dilations in the batch and depth dimensions if a 5-d tensormust be 1.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `value` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If input/output depth does not match  `filter` 's shape, or ifpadding is other than  `'VALID'`  or  `'SAME'` .

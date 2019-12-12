@@ -1,6 +1,6 @@
-Instantiate an identity matrix and returns it.
+实例化一个标识矩阵并返回它。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.eye` ](/api_docs/python/tf/keras/backend/eye), [ `tf.compat.v2.keras.backend.eye` ](/api_docs/python/tf/keras/backend/eye)
+**别名** : [ `tf.compat.v1.keras.backend.eye` ](/api_docs/python/tf/keras/backend/eye), [ `tf.compat.v2.keras.backend.eye` ](/api_docs/python/tf/keras/backend/eye)
 
 ```
  tf.keras.backend.eye(
@@ -11,16 +11,16 @@ Instantiate an identity matrix and returns it.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`size`** : Integer, number of rows/columns.
 - **`dtype`** : String, data type of returned Keras variable.
 - **`name`** : String, name of returned Keras variable.
 
 
-#### Returns:
+#### 返回：
 A Keras variable, an identity matrix.
 
-#### Example:
+#### 示例：
 
 
 ```

@@ -1,6 +1,6 @@
 Applies batch normalization on x given mean, var, beta and gamma.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.batch_normalization` ](/api_docs/python/tf/keras/backend/batch_normalization), [ `tf.compat.v2.keras.backend.batch_normalization` ](/api_docs/python/tf/keras/backend/batch_normalization)
+**别名** : [ `tf.compat.v1.keras.backend.batch_normalization` ](/api_docs/python/tf/keras/backend/batch_normalization), [ `tf.compat.v2.keras.backend.batch_normalization` ](/api_docs/python/tf/keras/backend/batch_normalization)
 
 ```
  tf.keras.backend.batch_normalization(
@@ -17,7 +17,7 @@ Applies batch normalization on x given mean, var, beta and gamma.
 
 I.e. returns: `output = (x - mean) / (sqrt(var) + epsilon) * gamma + beta` 
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input tensor or variable.
 - **`mean`** : Mean of batch.
 - **`var`** : Variance of batch.
@@ -27,6 +27,6 @@ I.e. returns: `output = (x - mean) / (sqrt(var) + epsilon) * gamma + beta`
 - **`epsilon`** : Fuzz factor.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

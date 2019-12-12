@@ -12,7 +12,7 @@ Calculates how often  `predictions`  matches  `labels` .
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 The  `accuracy`  function creates two local variables,  `total`  and `count`  that are used to compute the frequency with which  `predictions` matches  `labels` . This frequency is ultimately returned as  `accuracy` : anidempotent operation that simply divides  `total`  by  `count` .
 
@@ -20,7 +20,7 @@ For estimation of the metric over a stream of data, the function creates an `upd
 
 If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask values.
 
-#### Args:
+#### 参数：
 - **`labels`** : The ground truth values, a  `Tensor`  whose shape matches `predictions` .
 - **`predictions`** : The predicted values, a  `Tensor`  of any shape.
 - **`weights`** : Optional  `Tensor`  whose rank is either 0, or the same rank as `labels` , and must be broadcastable to  `labels`  (i.e., all dimensions mustbe either  `1` , or the same as the corresponding  `labels`  dimension).
@@ -29,11 +29,11 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 - **`name`** : An optional variable_scope name.
 
 
-#### Returns:
+#### 返回：
 - **`accuracy`** : A  `Tensor`  representing the accuracy, the value of  `total`  dividedby  `count` .
 - **`update_op`** : An operation that increments the  `total`  and  `count`  variablesappropriately and whose value matches  `accuracy` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `predictions`  and  `labels`  have mismatched shapes, or if `weights`  is not  `None`  and its shape doesn't match  `predictions` , or ifeither  `metrics_collections`  or  `updates_collections`  are not a list ortuple.
 - **`RuntimeError`** : If eager execution is enabled.

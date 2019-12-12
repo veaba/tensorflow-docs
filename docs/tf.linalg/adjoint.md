@@ -1,6 +1,6 @@
 Transposes the last two dimensions of and conjugates tensor  `matrix` .
 
-**Aliases** : [ `tf.compat.v1.linalg.adjoint` ](/api_docs/python/tf/linalg/adjoint), [ `tf.compat.v2.linalg.adjoint` ](/api_docs/python/tf/linalg/adjoint)
+**别名** : [ `tf.compat.v1.linalg.adjoint` ](/api_docs/python/tf/linalg/adjoint), [ `tf.compat.v2.linalg.adjoint` ](/api_docs/python/tf/linalg/adjoint)
 
 ```
  tf.linalg.adjoint(
@@ -10,7 +10,7 @@ Transposes the last two dimensions of and conjugates tensor  `matrix` .
  
 ```
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -22,11 +22,11 @@ tf.linalg.adjoint(x)  # [[1 - 1j, 4 - 4j],
  
 ```
 
-#### Args:
+#### 参数：
 - **`matrix`** :  A  `Tensor` . Must be  `float16` ,  `float32` ,  `float64` ,  `complex64` ,or  `complex128`  with shape  `[..., M, M]` .
 - **`name`** :  A name to give this  `Op`  (optional).
 
 
-#### Returns:
+#### 返回：
 The adjoint (a.k.a. Hermitian transpose a.k.a. conjugate transpose) ofmatrix.
 

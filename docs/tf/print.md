@@ -1,6 +1,6 @@
-Print the specified inputs.
+打印指定的输入。
 
-**Aliases** : [ `tf.compat.v1.print` ](/api_docs/python/tf/print), [ `tf.compat.v2.print` ](/api_docs/python/tf/print)
+**别名** : [ `tf.compat.v1.print` ](/api_docs/python/tf/print), [ `tf.compat.v2.print` ](/api_docs/python/tf/print)
 
 ```
  tf.print(
@@ -10,17 +10,17 @@ Print the specified inputs.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 - [Better performance with the tf.data API](https://tensorflow.google.cn/guide/data_performance)
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 A TensorFlow operator that prints the specified inputs to a desiredoutput stream or logging level. The inputs may be dense or sparse Tensors,primitive python objects, data structures that contain tensors, and printablePython objects. Printed tensors will recursively show the first and lastelements of each dimension to summarize.
 
-#### Example:
+#### 示例：
 Single-input usage:
 
 ```
@@ -41,7 +41,7 @@ tf.print("tensors:", tensor, {2: tensor * 2}, output_stream=sys.stdout)
 
 (This prints "tensors: [0 1 2 ... 7 8 9] {2: [0 2 4 ... 14 16 18]}" tosys.stdout)
 
-Changing the input separator:
+更改输入分隔符：
 
 ```
  tensor_a = tf.range(2)
@@ -69,7 +69,7 @@ range_tensor = f()
 
 @compatibility(TF 1.x Graphs and Sessions)In graphs manually created outside of [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/function), this method returnsthe created TF operator that prints the data. To make sure theoperator runs, users need to pass the produced op to[ `tf.compat.v1.Session` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Session)'s run method, or to use the op as a controldependency for executed ops by specifying `with tf.compat.v1.control_dependencies([print_op])` .@end_compatibility
 
-Compatibility usage in TF 1.x graphs:
+tf 1.x图中的兼容性用法：
 
 ```
  sess = tf.compat.v1.Session()
@@ -89,7 +89,7 @@ with sess.as_default():
 **Note:**  In Jupyter notebooks and colabs, [ `tf.print` ](https://tensorflow.google.cn/api_docs/python/tf/print) prints to the notebook  cell outputs. It will not write to the notebook kernel's console logs.
 
 
-#### Args:
+#### 参数：
 - **`*inputs`** : Positional arguments that are the inputs to print. Inputs in theprinted output will be separated by spaces. Inputs may be pythonprimitives, tensors, data structures such as dicts and lists that maycontain tensors (with the data structures possibly nested in arbitraryways), and printable python objects.
 - **`output_stream`** : The output stream, logging level, or file to print to.Defaults to sys.stderr, but sys.stdout, tf.compat.v1.logging.info,tf.compat.v1.logging.warning, tf.compat.v1.logging.error,absl.logging.info, absl.logging.warning and absl.loogging,error are alsosupported. To print to a file, pass a string started with "file://"followed by the file path, e.g., "file:///tmp/foo.out".
 - **`summarize`** : The first and last  `summarize`  elements within each dimension arerecursively printed per Tensor. If None, then the first 3 and last 3elements of each dimension are printed for each tensor. If set to -1, itwill print all elements of every tensor.
@@ -98,13 +98,13 @@ with sess.as_default():
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 None when executing eagerly. During graph tracing this returnsa TF operator that prints the specified inputs in the specified outputstream or logging level. This operator will be automatically executedexcept inside of [ `tf.compat.v1` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1) graphs and sessions.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If an unsupported output stream is specified.
 
 
-#### Python2 Compatibility
+#### python2相容性
 In python 2.7, make sure to import the following: `from __future__ import print_function` 
 

@@ -5,9 +5,9 @@ Computes root mean squared error metric between  `y_true`  and  `y_pred` .
 
 Inherits From: [ `Mean` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Mean)
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError), [ `tf.compat.v2.keras.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError), [ `tf.compat.v2.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError), [ `tf.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError)
+**别名** : [ `tf.compat.v1.keras.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError), [ `tf.compat.v2.keras.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError), [ `tf.compat.v2.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError), [ `tf.metrics.RootMeanSquaredError` ](/api_docs/python/tf/keras/metrics/RootMeanSquaredError)
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -17,7 +17,7 @@ print('Final result: ', m.result().numpy())  # Final result: 2.449
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -38,7 +38,7 @@ model.compile('sgd', metrics=[tf.keras.metrics.RootMeanSquaredError()])
 
 Creates a  `Mean`  instance.
 
-#### Args:
+#### 参数：
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
 
@@ -57,7 +57,7 @@ Creates a  `Mean`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -68,7 +68,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -80,7 +80,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -96,14 +96,14 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates root mean squared error statistics.
+累积均方根误差统计。
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

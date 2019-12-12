@@ -1,18 +1,18 @@
 
 
 ## Class  `TensorBoard` 
-Enable visualizations for TensorBoard.
+启用TensorBoard的可视化。
 
 Inherits From: [ `Callback` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/Callback)
 
-### Used in the guide:
+### 在指南中使用：
 - [Keras overview](https://tensorflow.google.cn/guide/keras/overview)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Distributed training with Keras](https://tensorflow.google.cn/tutorials/distribute/keras)
 - [Overfit and underfit](https://tensorflow.google.cn/tutorials/keras/overfit_and_underfit)
-TensorBoard is a visualization tool provided with TensorFlow.
+TensorBoard是TensorFlow提供的可视化工具。
 
 This callback logs events for TensorBoard, including:
 
@@ -29,7 +29,7 @@ If you have installed TensorFlow with pip, you should be ableto launch TensorBoa
 
 You can find more information about TensorBoard[here](https://tensorflow.google.cn/get_started/summaries_and_tensorboard).
 
-#### Arguments:
+#### 参数：
 - **`log_dir`** : the path of the directory where to save the log files to beparsed by TensorBoard.
 - **`histogram_freq`** : frequency (in epochs) at which to compute activation andweight histograms for the layers of the model. If set to 0, histogramswon't be computed. Validation data (or split) must be specified forhistogram visualizations.
 - **`write_graph`** : whether to visualize the graph in TensorBoard. The log filecan become quite large when write_graph is set to True.
@@ -40,7 +40,7 @@ You can find more information about TensorBoard[here](https://tensorflow.google.
 - **`embeddings_metadata`** : a dictionary which maps layer name to a file name inwhich metadata for this embedding layer is saved. See the[details](https://tensorflow.google.cn/how_tos/embedding_viz/#metadata_optional)about metadata files format. In case if the same metadata file isused for all embedding layers, string can be passed.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If histogram_freq is set and no validation data is provided.
 
 
@@ -64,7 +64,7 @@ You can find more information about TensorBoard[here](https://tensorflow.google.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `on_batch_begin` 
@@ -91,11 +91,11 @@ A backwards compatibility alias for  `on_train_batch_begin` .
  
 ```
 
-Writes scalar summaries for metrics on every training batch.
+为每个培训批次的指标编写标量摘要。
 
 Performs profiling if current batch is in profiler_batches.
 
-#### Arguments:
+#### 参数：
 - **`batch`** : Integer, index of batch within the current epoch.
 - **`logs`** : Dict. Metric results for this batch.
 
@@ -111,11 +111,11 @@ Performs profiling if current batch is in profiler_batches.
  
 ```
 
-Called at the start of an epoch.
+在一个新纪元开始时被召唤。
 
 Subclasses should override for any actions to run. This function should onlybe called during TRAIN mode.
 
-#### Arguments:
+#### 参数：
 - **`epoch`** : integer, index of epoch.
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
@@ -131,7 +131,7 @@ Subclasses should override for any actions to run. This function should onlybe c
  
 ```
 
-Runs metrics and histogram summaries at epoch end.
+在历元结束时运行度量和直方图摘要。
 
 ###  `on_predict_batch_begin` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/callbacks.py#L547-L556)
@@ -146,9 +146,9 @@ Runs metrics and histogram summaries at epoch end.
 
 Called at the beginning of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -166,9 +166,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -181,11 +181,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of prediction.
+在预测开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -197,11 +197,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of prediction.
+在预测结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -220,9 +220,9 @@ Called at the beginning of a batch in  `evaluate`  methods.
 
 Also called at the beginning of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -242,9 +242,9 @@ Called at the end of a batch in  `evaluate`  methods.
 
 Also called at the end of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -257,11 +257,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of evaluation or validation.
+在评估或验证开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -273,11 +273,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of evaluation or validation.
+在评估或验证结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -294,9 +294,9 @@ Subclasses should override for any actions to run.
 
 Called at the beginning of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -314,9 +314,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -329,11 +329,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of training.
+在训练开始时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -345,11 +345,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of training.
+训练结束时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -361,7 +361,7 @@ Subclasses should override for any actions to run.
  
 ```
 
-Sets Keras model and writes graph if specified.
+设置keras模型并在指定时写入图形。
 
 ###  `set_params` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/callbacks.py#L458-L459)

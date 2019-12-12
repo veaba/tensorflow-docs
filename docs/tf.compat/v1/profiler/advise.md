@@ -1,4 +1,4 @@
-Auto profile and advise.
+自动配置文件和建议。
 
 ```
  tf.compat.v1.profiler.advise(
@@ -11,12 +11,12 @@ Auto profile and advise.
 
 Builds profiles and automatically check anomalies of various  aspects. For more details:  https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/README.md
 
-#### Args:
+#### 参数：
 - **`graph`** : tf.Graph. If None and eager execution is not enabled, usedefault graph.
 - **`run_meta`** : optional tensorflow.RunMetadata proto. It is necessary toto support run time information profiling, such as time and memory.
 - **`options`** : see ALL_ADVICE example above. Default checks everything.
 
 
-#### Returns:
-Returns AdviceProto proto
+#### 返回：
+返回adviceproto proto
 

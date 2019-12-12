@@ -1,11 +1,11 @@
 
 
 ## Class  `Regularizer` 
-Regularizer base class.
+正则化基类。
 
-**Aliases** : [ `tf.compat.v1.keras.regularizers.Regularizer` ](/api_docs/python/tf/keras/regularizers/Regularizer), [ `tf.compat.v2.keras.regularizers.Regularizer` ](/api_docs/python/tf/keras/regularizers/Regularizer)
+**别名** : [ `tf.compat.v1.keras.regularizers.Regularizer` ](/api_docs/python/tf/keras/regularizers/Regularizer), [ `tf.compat.v2.keras.regularizers.Regularizer` ](/api_docs/python/tf/keras/regularizers/Regularizer)
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -16,7 +16,7 @@ Regularizer base class.
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/regularizers.py#L38-L40)

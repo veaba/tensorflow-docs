@@ -52,7 +52,7 @@ Setting  `l = (1 + (q - 1) * z)` , to ensure stability and avoid overflow,the im
 
  `logits`  and  `labels`  must have the same type and shape.
 
-#### Args:
+#### 参数：
 - **`labels`** : A  `Tensor`  of the same type and shape as  `logits` .
 - **`logits`** : A  `Tensor`  of type  `float32`  or  `float64` .
 - **`pos_weight`** : A coefficient to use on the positive examples.
@@ -60,8 +60,8 @@ Setting  `l = (1 + (q - 1) * z)` , to ensure stability and avoid overflow,the im
 - **`targets`** : Deprecated alias for labels.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same shape as  `logits`  with the componentwiseweighted logistic losses.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `logits`  and  `labels`  do not have the same shape.

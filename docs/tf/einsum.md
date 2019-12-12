@@ -1,6 +1,6 @@
-A generalized contraction between tensors of arbitrary dimension.
+任意维张量之间的广义收缩。
 
-**Aliases** : [ `tf.compat.v1.einsum` ](/api_docs/python/tf/einsum), [ `tf.compat.v1.linalg.einsum` ](/api_docs/python/tf/einsum), [ `tf.compat.v2.einsum` ](/api_docs/python/tf/einsum), [ `tf.compat.v2.linalg.einsum` ](/api_docs/python/tf/einsum), [ `tf.linalg.einsum` ](/api_docs/python/tf/einsum)
+**别名** : [ `tf.compat.v1.einsum` ](/api_docs/python/tf/einsum), [ `tf.compat.v1.linalg.einsum` ](/api_docs/python/tf/einsum), [ `tf.compat.v2.einsum` ](/api_docs/python/tf/einsum), [ `tf.compat.v2.linalg.einsum` ](/api_docs/python/tf/einsum), [ `tf.linalg.einsum` ](/api_docs/python/tf/einsum)
 
 ```
  tf.einsum(
@@ -11,11 +11,11 @@ A generalized contraction between tensors of arbitrary dimension.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Neural style transfer](https://tensorflow.google.cn/tutorials/generative/style_transfer)
 This function returns a tensor whose elements are defined by  `equation` ,which is written in a shorthand form inspired by the Einstein summationconvention.  As an example, consider multiplying two matricesA and B to form a matrix C.  The elements of C are given by:
 
@@ -89,16 +89,16 @@ This function behaves like  `numpy.einsum` , but does not support:
 - Subscripts where an axis appears more than once for a single input(e.g.  `ijj,k->ik` ) unless it is a trace (e.g.  `ijji` ).
 
 
-#### Args:
+#### 参数：
 - **`equation`** : a  `str`  describing the contraction, in the same format as `numpy.einsum` .
 - **`*inputs`** : the inputs to contract (each one a  `Tensor` ), whose shapes shouldbe consistent with  `equation` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The contracted  `Tensor` , with shape determined by  `equation` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If
     - the format of  `equation`  is incorrect,
     - the number of inputs implied by  `equation`  does not match  `len(inputs)` ,

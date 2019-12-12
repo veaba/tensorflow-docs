@@ -1,20 +1,20 @@
 Returns the dtype of a Keras tensor or variable, as a string.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.dtype` ](/api_docs/python/tf/keras/backend/dtype), [ `tf.compat.v2.keras.backend.dtype` ](/api_docs/python/tf/keras/backend/dtype)
+**别名** : [ `tf.compat.v1.keras.backend.dtype` ](/api_docs/python/tf/keras/backend/dtype), [ `tf.compat.v2.keras.backend.dtype` ](/api_docs/python/tf/keras/backend/dtype)
 
 ```
  tf.keras.backend.dtype(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 
 
-#### Returns:
+#### 返回：
 String, dtype of  `x` .
 
-#### Examples:
+#### 示例：
 
 
 ```

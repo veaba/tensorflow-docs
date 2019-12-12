@@ -1,4 +1,4 @@
-Creates resource variables by default.
+默认情况下创建资源变量。
 
 ```
  tf.compat.v1.enable_resource_variables()

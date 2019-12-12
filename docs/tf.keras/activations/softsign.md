@@ -1,16 +1,16 @@
-Softsign activation function.
+软标志激活功能。
 
-**Aliases** : [ `tf.compat.v1.keras.activations.softsign` ](/api_docs/python/tf/keras/activations/softsign), [ `tf.compat.v2.keras.activations.softsign` ](/api_docs/python/tf/keras/activations/softsign)
+**别名** : [ `tf.compat.v1.keras.activations.softsign` ](/api_docs/python/tf/keras/activations/softsign), [ `tf.compat.v2.keras.activations.softsign` ](/api_docs/python/tf/keras/activations/softsign)
 
 ```
  tf.keras.activations.softsign(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Input tensor.
 
 
-#### Returns:
+#### 返回：
 The softplus activation:  `x / (abs(x) + 1)` .
 

@@ -1,4 +1,4 @@
-Assert that the tensor does not contain any NaN's or Inf's.
+断言张量不包含任何nan或inf。
 
 ```
  tf.debugging.assert_all_finite(
@@ -9,12 +9,12 @@ Assert that the tensor does not contain any NaN's or Inf's.
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : Tensor to check.
 - **`message`** : Message to log on failure.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 Same tensor as  `x` .
 

@@ -1,13 +1,13 @@
 
 
 ## Class  `ConvLSTM2D` 
-Convolutional LSTM.
+卷积LSTM。
 
-**Aliases** : [ `tf.compat.v1.keras.layers.ConvLSTM2D` ](/api_docs/python/tf/keras/layers/ConvLSTM2D), [ `tf.compat.v2.keras.layers.ConvLSTM2D` ](/api_docs/python/tf/keras/layers/ConvLSTM2D)
+**别名** : [ `tf.compat.v1.keras.layers.ConvLSTM2D` ](/api_docs/python/tf/keras/layers/ConvLSTM2D), [ `tf.compat.v2.keras.layers.ConvLSTM2D` ](/api_docs/python/tf/keras/layers/ConvLSTM2D)
 
 It is similar to an LSTM layer, but the input transformationsand recurrent transformations are both convolutional.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of n integers, specifying thedimensions of the convolution window.
 - **`strides`** : An integer or tuple/list of n integers,specifying the strides of the convolution.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
@@ -35,19 +35,19 @@ It is similar to an LSTM layer, but the input transformationsand recurrent trans
 - **`recurrent_dropout`** : Float between 0 and 1.Fraction of the units to drop forthe linear transformation of the recurrent state.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : A 5D tensor.
 - **`mask`** : Binary tensor of shape  `(samples, timesteps)`  indicating whethera given timestep should be masked.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. This argument is passed to the cellwhen calling it. This is only relevant if  `dropout`  or  `recurrent_dropout` are set.
 - **`initial_state`** : List of initial state tensors to be passed to the firstcall of the cell.
 
 
-#### Input shape:
+#### 输入形状：
 - If data_format='channels_first'5D tensor with shape: `(samples, time, channels, rows, cols)` 
 - If data_format='channels_last'5D tensor with shape: `(samples, time, rows, cols, channels)` 
 
 
-#### Output shape:
+#### 输出形状：
 - If  `return_sequences` 
 - Else
     - If data_format='channels_first'5D tensor with shape: `(samples, time, filters, output_row, output_col)` 
@@ -56,11 +56,11 @@ It is similar to an LSTM layer, but the input transformationsand recurrent trans
     - If data_format='channels_last'4D tensor with shape: `(samples, output_row, output_col, filters)` where  `o_row`  and  `o_col`  depend on the shape of the filter andthe padding
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : in case of invalid constructor arguments.
 
 
-#### References:
+#### 参考文献：
 - [Convolutional LSTM Network: A Machine Learning Approach forPrecipitation Nowcasting](http://arxiv.org/abs/1506.04214v1)The current implementation does not include the feedback loop on thecells output.
 
 
@@ -99,7 +99,7 @@ It is similar to an LSTM layer, but the input transformationsand recurrent trans
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `activation` 
@@ -168,7 +168,7 @@ It is similar to an LSTM layer, but the input transformationsand recurrent trans
 ###  `use_bias` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

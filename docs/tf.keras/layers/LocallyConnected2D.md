@@ -5,11 +5,11 @@ Locally-connected layer for 2D inputs.
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.LocallyConnected2D` ](/api_docs/python/tf/keras/layers/LocallyConnected2D), [ `tf.compat.v2.keras.layers.LocallyConnected2D` ](/api_docs/python/tf/keras/layers/LocallyConnected2D)
+**别名** : [ `tf.compat.v1.keras.layers.LocallyConnected2D` ](/api_docs/python/tf/keras/layers/LocallyConnected2D), [ `tf.compat.v2.keras.layers.LocallyConnected2D` ](/api_docs/python/tf/keras/layers/LocallyConnected2D)
 
 The  `LocallyConnected2D`  layer works similarlyto the  `Conv2D`  layer, except that weights are unshared,that is, a different set of filters is applied at eachdifferent patch of the input.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -26,7 +26,7 @@ The  `LocallyConnected2D`  layer works similarlyto the  `Conv2D`  layer, except 
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
 - **`kernel_size`** : An integer or tuple/list of 2 integers, specifying thewidth and height of the 2D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
 - **`strides`** : An integer or tuple/list of 2 integers,specifying the strides of the convolution along the width and height.Can be a single integer to specify the same value forall spatial dimensions.
@@ -47,7 +47,7 @@ The  `LocallyConnected2D`  layer works similarlyto the  `Conv2D`  layer, except 
 
  `3`  stores layer weights in a sparse tensor and implements the forwardpass as a single sparse matrix-multiply.
 
-How to choose:
+如何选择：
 
  `1` : large, dense models, `2` : small models, `3` : large, sparse models,
 
@@ -61,10 +61,10 @@ Also, only  `padding="valid"`  is supported by  `implementation=1` .
     - np.prod(strides)) `, where inputs to and outputs of the layer areassumed to have shapes` input_size + (input_filters,) `,` output_size + (filters,)` respectively.
 
 
-#### Input shape:
+#### 输入形状：
 4D tensor with shape: `(samples, channels, rows, cols)`  if data_format='channels_first'or 4D tensor with shape: `(samples, rows, cols, channels)`  if data_format='channels_last'.
 
-#### Output shape:
+#### 输出形状：
 4D tensor with shape: `(samples, filters, new_rows, new_cols)`  if data_format='channels_first'or 4D tensor with shape: `(samples, new_rows, new_cols, filters)`  if data_format='channels_last'. `rows`  and  `cols`  values might have changed due to padding.
 
 ##  `__init__` 

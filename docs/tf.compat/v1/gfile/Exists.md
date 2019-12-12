@@ -1,16 +1,16 @@
-Determines whether a path exists or not.
+确定路径是否存在。
 
 ```
  tf.compat.v1.gfile.Exists(filename)
  
 ```
 
-#### Args:
+#### 参数：
 - **`filename`** : string, a path
 
 
-#### Returns:
+#### 返回：
 True if the path exists, whether it's a file or a directory.False if the path does not exist and there are no filesystem errors.
 
-#### Raises:
+#### 加薪：
 - **[ `errors.OpError` ](/api_docs/python/tf/errors/OpError)** : Propagates any errors reported by the FileSystem API.

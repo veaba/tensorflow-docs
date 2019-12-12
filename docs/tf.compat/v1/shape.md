@@ -1,4 +1,4 @@
-Returns the shape of a tensor.
+返回张量的形状。
 
 ```
  tf.compat.v1.shape(
@@ -11,7 +11,7 @@ Returns the shape of a tensor.
 
 This operation returns a 1-D integer tensor representing the shape of  `input` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -20,12 +20,12 @@ tf.shape(t)  # [2, 2, 3]
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  or  `SparseTensor` .
 - **`name`** : A name for the operation (optional).
 - **`out_type`** : (Optional) The specified output type of the operation ( `int32`  or `int64` ). Defaults to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `out_type` .
 

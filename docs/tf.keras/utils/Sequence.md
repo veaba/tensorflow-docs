@@ -3,14 +3,14 @@
 ## Class  `Sequence` 
 Base object for fitting to a sequence of data, such as a dataset.
 
-**Aliases** : [ `tf.compat.v1.keras.utils.Sequence` ](/api_docs/python/tf/keras/utils/Sequence), [ `tf.compat.v2.keras.utils.Sequence` ](/api_docs/python/tf/keras/utils/Sequence)
+**别名** : [ `tf.compat.v1.keras.utils.Sequence` ](/api_docs/python/tf/keras/utils/Sequence), [ `tf.compat.v2.keras.utils.Sequence` ](/api_docs/python/tf/keras/utils/Sequence)
 
 Every  `Sequence`  must implement the  `__getitem__`  and the  `__len__`  methods.If you want to modify your dataset between epochs you may implement `on_epoch_end` .The method  `__getitem__`  should return a complete batch.
 
-#### Notes:
+#### 注：
  `Sequence`  are a safer way to do multiprocessing. This structure guaranteesthat the network will only train once on each sample per epoch which is not the case with generators.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -43,7 +43,7 @@ Every  `Sequence`  must implement the  `__getitem__`  and the  `__len__`  method
  
 ```
 
-## Methods
+## 方法
 
 
 ###  `__getitem__` 
@@ -56,12 +56,12 @@ Every  `Sequence`  must implement the  `__getitem__`  and the  `__len__`  method
 
 Gets batch at position  `index` .
 
-#### Arguments:
+#### 参数：
 - **`index`** : position of the batch in the Sequence.
 
 
-#### Returns:
-A batch
+#### 返回：
+一批
 
 ###  `__iter__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L403-L406)
@@ -71,7 +71,7 @@ A batch
  
 ```
 
-Create a generator that iterate over the Sequence.
+创建一个遍历序列的生成器。
 
 ###  `__len__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L389-L396)
@@ -81,10 +81,10 @@ Create a generator that iterate over the Sequence.
  
 ```
 
-Number of batch in the Sequence.
+序列中的批数。
 
-#### Returns:
-The number of batches in the Sequence.
+#### 返回：
+序列中的批数。
 
 ###  `on_epoch_end` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L398-L401)
@@ -94,5 +94,5 @@ The number of batches in the Sequence.
  
 ```
 
-Method called at the end of every epoch.
+方法在每个纪元结束时调用。
 

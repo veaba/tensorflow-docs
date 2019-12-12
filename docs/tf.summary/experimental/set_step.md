@@ -1,4 +1,4 @@
-Sets the default summary step for the current thread.
+设置当前线程的默认摘要步骤。
 
 ```
  tf.summary.experimental.set_step(step) 
@@ -10,5 +10,5 @@ For convenience, this function sets a default value for the  `step`  parameterus
 **Note:**  when using this with @tf.functions, the step value will be captured atthe time the function is traced, so changes to the step outside the functionwill not be reflected inside the function unless using a [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) step.
 
 
-#### Args:
+#### 参数：
 - **`step`** : An  `int64` -castable default step value, or None to unset.

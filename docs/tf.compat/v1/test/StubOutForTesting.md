@@ -1,10 +1,10 @@
 
 
 ## Class  `StubOutForTesting` 
-Support class for stubbing methods out for unit testing.
+用于单元测试的stubbing方法的支持类。
 
-#### Sample Usage:
-You want os.path.exists() to always return true during testing.
+#### 示例用法：
+您希望os.path.exists（）在测试期间始终返回true。
 
 stubs = StubOutForTesting()   stubs.Set(os.path, 'exists', lambda x: 1)     ...   stubs.CleanUp()
 
@@ -20,7 +20,7 @@ The above changes os.path.exists into a lambda that returns 1.  Oncethe ... part
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `CleanUp` 
@@ -51,7 +51,7 @@ The parent could be a module when the child is a function atmodule scope.  Or th
 
 This method supports the case where child_name is a staticmethod or aclassmethod of parent.
 
-#### Args:
+#### 参数：
 - **`parent`** : The context in which the attribute child_name is to be changed.
 - **`child_name`** : The name of the attribute to change.
 - **`new_child`** : The new value of the attribute.
@@ -75,18 +75,18 @@ This method is smart and works at the module, class, and instance levelwhile pre
 
 This method supports the case where attr_name is a staticmethod or aclassmethod of obj.
 
-#### Notes:
+#### 注：
 - If obj is an instance, then it is its class that will actually bestubbed. Note that the method Set() does not do that: if obj isan instance, it (and not its class) will be stubbed.
 - The stubbing is using the builtin getattr and setattr. So, the **get** and **set**  will be called when stubbing (TODO: A better idea wouldprobably be to manipulate obj.**dict**  instead of getattr() andsetattr()).
 
 
-#### Args:
+#### 参数：
 - **`obj`** : The object whose attributes we want to modify.
 - **`attr_name`** : The name of the attribute to modify.
 - **`new_attr`** : The new value for the attribute.
 
 
-#### Raises:
+#### 加薪：
 - **`AttributeError`** : If the attribute cannot be found.
 
 

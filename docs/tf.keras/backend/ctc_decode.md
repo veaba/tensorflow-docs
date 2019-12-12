@@ -1,6 +1,6 @@
-Decodes the output of a softmax.
+解码SoftMax的输出。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.ctc_decode` ](/api_docs/python/tf/keras/backend/ctc_decode), [ `tf.compat.v2.keras.backend.ctc_decode` ](/api_docs/python/tf/keras/backend/ctc_decode)
+**别名** : [ `tf.compat.v1.keras.backend.ctc_decode` ](/api_docs/python/tf/keras/backend/ctc_decode), [ `tf.compat.v2.keras.backend.ctc_decode` ](/api_docs/python/tf/keras/backend/ctc_decode)
 
 ```
  tf.keras.backend.ctc_decode(
@@ -15,7 +15,7 @@ Decodes the output of a softmax.
 
 Can use either greedy search (also known as best path)or a constrained dictionary search.
 
-#### Arguments:
+#### 参数：
 - **`y_pred`** : tensor  `(samples, time_steps, num_categories)` containing the prediction, or output of the softmax.
 - **`input_length`** : tensor  `(samples, )`  containing the sequence length foreach batch item in  `y_pred` .
 - **`greedy`** : perform much faster best-path search if  `true` .This does not use a dictionary.
@@ -23,5 +23,5 @@ Can use either greedy search (also known as best path)or a constrained dictionar
 - **`top_paths`** : if  `greedy`  is  `false` ,how many of the most probable paths will be returned.
 
 
-#### Returns:
+#### 返回：
 - **`Tuple`** :     List: if  `greedy`  is  `true` , returns a list of one element that    contains the decoded sequence.    If  `false` , returns the  `top_paths`  most probable    decoded sequences.    Important: blank labels are returned as  `-1` .Tensor  `(top_paths, )`  that contains    the log probability of each decoded sequence.

@@ -1,4 +1,4 @@
-Scope class for bfloat16 variables so that the model uses custom getter.
+bfloat16变量的作用域类，以便模型使用自定义getter。
 
 ```
  tf.compat.v1.tpu.bfloat16_scope() 

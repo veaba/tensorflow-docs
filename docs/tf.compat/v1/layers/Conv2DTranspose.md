@@ -1,13 +1,13 @@
 
 
 ## Class  `Conv2DTranspose` 
-Transposed 2D convolution layer (sometimes called 2D Deconvolution).
+转置二维卷积层（有时称为二维反卷积）。
 
 Inherits From: [ `Conv2DTranspose` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
 The need for transposed convolutions generally arisesfrom the desire to use a transformation going in the opposite directionof a normal convolution, i.e., from something that has the shape of theoutput of some convolution to something that has the shape of its inputwhile maintaining a connectivity pattern that is compatible withsaid convolution.
 
-#### Arguments:
+#### 参数：
 - **`filters`** : Integer, the dimensionality of the output space (i.e. the numberof filters in the convolution).
 - **`kernel_size`** : A tuple or list of 2 positive integers specifying the spatialdimensions of the filters. Can be a single integer to specify the samevalue for all spatial dimensions.
 - **`strides`** : A tuple or list of 2 positive integers specifying the stridesof the convolution. Can be a single integer to specify the same value forall spatial dimensions.
@@ -52,11 +52,11 @@ The need for transposed convolutions generally arisesfrom the desire to use a tr
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

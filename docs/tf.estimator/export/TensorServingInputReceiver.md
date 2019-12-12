@@ -3,7 +3,7 @@
 ## Class  `TensorServingInputReceiver` 
 A return type for a serving_input_receiver_fn.
 
-**Aliases** : [ `tf.compat.v1.estimator.export.TensorServingInputReceiver` ](/api_docs/python/tf/estimator/export/TensorServingInputReceiver), [ `tf.compat.v2.estimator.export.TensorServingInputReceiver` ](/api_docs/python/tf/estimator/export/TensorServingInputReceiver)
+**别名** : [ `tf.compat.v1.estimator.export.TensorServingInputReceiver` ](/api_docs/python/tf/estimator/export/TensorServingInputReceiver), [ `tf.compat.v2.estimator.export.TensorServingInputReceiver` ](/api_docs/python/tf/estimator/export/TensorServingInputReceiver)
 
 This is for use with models that expect a single  `Tensor`  or  `SparseTensor` as an input feature, as opposed to a dict of features.
 
@@ -29,7 +29,7 @@ __new__(
 
 Create new instance of TensorServingInputReceiver(features, receiver_tensors, receiver_tensors_alternatives)
 
-## Properties
+## 属性
 
 
 ###  `features` 

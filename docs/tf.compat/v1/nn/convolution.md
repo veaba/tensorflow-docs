@@ -47,7 +47,7 @@ convolution(input, data_format, **kwargs) =    tf.transpose(convolution(tf.trans
 
 It is required that 1 <= N <= 3.
 
-#### Args:
+#### 参数：
 - **`input`** : An (N+2)-D  `Tensor`  of type  `T` , of shape `[batch_size] + input_spatial_shape + [in_channels]`  if data_format doesnot start with "NC" (default), or `[batch_size, in_channels] + input_spatial_shape`  if data_format startswith "NC".
 - **`filter`** : An (N+2)-D  `Tensor`  with the same type as  `input`  and shape `spatial_filter_shape + [in_channels, out_channels]` .
 - **`padding`** : A string, either  `"VALID"`  or  `"SAME"` . The padding algorithm.
@@ -59,7 +59,7 @@ It is required that 1 <= N <= 3.
 - **`dilations`** : Alias of dilation_rate.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `input`  of shape
 
 ```
@@ -80,5 +80,5 @@ If padding == "SAME":  output_spatial_shape[i] = ceil(input_spatial_shape[i] / s
 
 If padding == "VALID":  output_spatial_shape[i] =    ceil((input_spatial_shape[i] -          (spatial_filter_shape[i]-1) * dilation_rate[i])         / strides[i]).
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If input/output depth does not match  `filter`  shape, if paddingis other than  `"VALID"`  or  `"SAME"` , or if data_format is invalid.

@@ -1,7 +1,7 @@
 
 
 ## Class  `StatsAggregator` 
-A stateful resource that aggregates statistics from one or more iterators.
+从一个或多个迭代器聚合统计信息的有状态资源。
 
 To record statistics, use one of the custom transformation functions definedin this module when defining your [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset). All statistics will beaggregated by the  `StatsAggregator`  that is associated with a particulariterator (see below). For example, to record the latency of producing eachelement by iterating over a dataset:
 

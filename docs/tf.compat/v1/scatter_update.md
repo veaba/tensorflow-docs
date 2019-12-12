@@ -1,4 +1,4 @@
-Applies sparse updates to a variable reference.
+对变量引用应用稀疏更新。
 
 ```
  tf.compat.v1.scatter_update(
@@ -11,7 +11,7 @@ Applies sparse updates to a variable reference.
  
 ```
 
-This operation computes
+此操作计算
 
 ```
      # Scalar indices
@@ -33,7 +33,7 @@ Requires  `updates.shape = indices.shape + ref.shape[1:]` .
 
 ![](https://tensorflow.google.cn/images/ScatterUpdate.png)
 
-#### Args:
+#### 参数：
 - **`ref`** : A  `Variable` .
 - **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor of indices into the first dimension of  `ref` .
 - **`updates`** : A  `Tensor` . Must have the same type as  `ref` .A tensor of updated values to store in  `ref` .
@@ -41,6 +41,6 @@ Requires  `updates.shape = indices.shape + ref.shape[1:]` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 Same as  `ref` .  Returned as a convenience for operations that wantto use the updated values after the update is done.
 

@@ -1,6 +1,6 @@
 Public API for tf.saved_model namespace.
 
-## Modules
+## 模块
 [ `builder` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/builder) module: SavedModel builder.
 
 [ `constants` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/constants) module: Constants for SavedModel save and restore operations.
@@ -19,14 +19,14 @@ Public API for tf.saved_model namespace.
 
 [ `utils` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/utils) module: SavedModel utility functions.
 
-## Classes
+## Class 
 [ `class Asset` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/Asset): Represents a file asset to hermetically include in a SavedModel.
 
 [ `class Builder` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/Builder): Builds the  `SavedModel`  protocol buffer and saves variables and assets.
 
 [ `class SaveOptions` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/SaveOptions): Options for saving to SavedModel.
 
-## Functions
+## 功能
 [ `build_signature_def(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/build_signature_def): Utility function to build a SignatureDef protocol buffer.
 
 [ `build_tensor_info(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/build_tensor_info): Utility function to build TensorInfo proto from a Tensor. (deprecated)
@@ -55,7 +55,7 @@ Public API for tf.saved_model namespace.
 
 [ `simple_save(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/simple_save): Convenience function to build a SavedModel suitable for serving. (deprecated)
 
-## Other Members
+## 其他成员
 -  `ASSETS_DIRECTORY = 'assets'`  []()
 -  `ASSETS_KEY = 'saved_model_assets'`  []()
 -  `CLASSIFY_INPUTS = 'inputs'`  []()

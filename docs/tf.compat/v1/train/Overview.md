@@ -1,13 +1,13 @@
-Support for training models.
+支持培训模式。
 
 See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/experimental) module: Public API for tf.train.experimental namespace.
 
 [ `queue_runner` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/queue_runner) module: Public API for tf.train.queue_runner namespace.
 
-## Classes
+## Class 
 [ `class AdadeltaOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/AdadeltaOptimizer): Optimizer that implements the Adadelta algorithm.
 
 [ `class AdagradDAOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/AdagradDAOptimizer): Adagrad Dual Averaging algorithm for sparse linear models.
@@ -128,7 +128,7 @@ See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 
 [ `class WorkerSessionCreator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/WorkerSessionCreator): Creates a tf.compat.v1.Session for a worker.
 
-## Functions
+## 功能
 [ `MonitoredTrainingSession(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/MonitoredTrainingSession): Creates a  `MonitoredSession`  for training.
 
 [ `NewCheckpointReader(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/NewCheckpointReader)

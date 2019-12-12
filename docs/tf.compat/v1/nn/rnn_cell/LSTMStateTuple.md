@@ -21,7 +21,7 @@ Only used when  `state_is_tuple=True` .
 
 Create new instance of LSTMStateTuple(c, h)
 
-## Properties
+## 属性
 
 
 ###  `c` 

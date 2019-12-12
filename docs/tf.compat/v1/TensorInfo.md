@@ -1,12 +1,12 @@
 
 
 ## Class  `TensorInfo` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class CooSparse` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/TensorInfo/CooSparse)
 
-## Properties
+## 属性
 
 
 ###  `coo_sparse` 

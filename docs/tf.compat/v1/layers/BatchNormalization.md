@@ -19,8 +19,8 @@ Keras APIs handle BatchNormalization updates to the moving_mean andmoving_varian
  
 ```
 
-#### Arguments:
-- **`axis`** : An  `int`  or list of  `int` , the axis or axes that should benormalized, typically the features axis/axes. For instance, after a `Conv2D`  layer with  `data_format="channels_first"` , set  `axis=1` . If alist of axes is provided, each axis in  `axis`  will be normalizedsimultaneously. Default is  `-1`  which uses the last axis. Note: whenusing multi-axis batch norm, the  `beta` ,  `gamma` ,  `moving_mean` , and `moving_variance`  variables are the same rank as the input Tensor, withdimension size 1 in all reduced (non-axis) dimensions).
+#### 参数：
+- **`axis`** : An  `int`  or list of  `int` , the axis or axes that should benormalized, typically the features axis/axes. For instance, after a `Conv2D`  layer with  `data_format="channels_first"` , set  `axis=1` . If alist of axes is provided, each axis in  `axis`  will be normalizedsimultaneously. Default is  `-1`  which uses the last axis. 注意：whenusing multi-axis batch norm, the  `beta` ,  `gamma` ,  `moving_mean` , and `moving_variance`  variables are the same rank as the input Tensor, withdimension size 1 in all reduced (non-axis) dimensions).
 - **`momentum`** : Momentum for the moving average.
 - **`epsilon`** : Small float added to variance to avoid dividing by zero.
 - **`center`** : If True, add offset of  `beta`  to normalized tensor. If False,  `beta` is ignored.
@@ -74,11 +74,11 @@ Keras APIs handle BatchNormalization updates to the moving_mean andmoving_varian
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.

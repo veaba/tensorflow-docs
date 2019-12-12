@@ -1,4 +1,4 @@
-Batch normalization.
+批量标准化。
 
 ```
  tf.compat.v1.nn.fused_batch_norm(    x,    scale,    offset,    mean=None,    variance=None,    epsilon=0.001,    data_format='NHWC',    is_training=True,    name=None) 
@@ -6,7 +6,7 @@ Batch normalization.
 
 See Source: [Batch Normalization: Accelerating Deep Network Training byReducing Internal Covariate Shift; S. Ioffe, C. Szegedy](http://arxiv.org/abs/1502.03167).
 
-#### Args:
+#### 参数：
 - **`x`** : Input  `Tensor`  of 4 dimensions.
 - **`scale`** : A  `Tensor`  of 1 dimension for scaling.
 - **`offset`** : A  `Tensor`  of 1 dimension for bias.
@@ -18,11 +18,11 @@ See Source: [Batch Normalization: Accelerating Deep Network Training byReducing 
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`y`** : A 4D Tensor for the normalized, scaled, offsetted x.
 - **`batch_mean`** : A 1D Tensor for the mean of x.
 - **`batch_var`** : A 1D Tensor for the variance of x.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If mean or variance is not None when is_training is True.

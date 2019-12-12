@@ -1,9 +1,9 @@
 
 
 ## Class  `CosineSimilarity` 
-Computes the cosine similarity between the labels and predictions.
+计算标签和预测之间的余弦相似性。
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.compat.v2.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.compat.v2.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
+**别名** : [ `tf.compat.v1.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.compat.v2.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.compat.v2.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
 
 cosine similarity = (a . b) / ||a|| ||b||[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
 
@@ -11,7 +11,7 @@ For example, if  `y_true`  is [0, 1, 1], and  `y_pred`  is [1, 0, 1], the cosine
 
 This metric keeps the average cosine similarity between  `predictions`  and `labels`  over a stream of data.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -27,7 +27,7 @@ print('Final result: ', m.result().numpy())  # Final result: 0.5
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -52,7 +52,7 @@ model.compile(
 
 Creates a  `CosineSimilarity`  instance.
 
-#### Args:
+#### 参数：
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
 - **`axis`** : (Optional) Defaults to -1. The dimension along which the cosinesimilarity is computed.
@@ -72,7 +72,7 @@ Creates a  `CosineSimilarity`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -83,7 +83,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -95,7 +95,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -111,16 +111,16 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates metric statistics.
+累积度量统计。
 
  `y_true`  and  `y_pred`  should have the same shape.
 
-#### Args:
+#### 参数：
 - **`y_true`** : The ground truth values.
 - **`y_pred`** : The predicted values.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can bea  `Tensor`  whose rank is either 0, or the same rank as  `y_true` ,and must be broadcastable to  `y_true` .
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

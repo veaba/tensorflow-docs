@@ -4,7 +4,7 @@ Shards  `computation`  along the batch dimension for parallel execution.
  tf.compat.v1.tpu.batch_parallel(    computation,    inputs=None,    num_shards=1,    infeed_queue=None,    device_assignment=None,    name=None) 
 ```
 
-Convenience wrapper around shard().
+shard（）周围的便利包装。
 
  `inputs`  must be a list of Tensors or None (equivalent to an empty list).Each input is split into  `num_shards`  pieces along the 0-th dimension, andcomputation is applied to each shard in parallel.
 
@@ -16,7 +16,7 @@ The outputs from all shards are concatenated back together along their 0-thdimen
 
 Inputs and outputs of the computation must be at least rank-1 Tensors.
 
-#### Args:
+#### 参数：
 - **`computation`** : A Python function that builds a computation to apply to eachshard of the input.
 - **`inputs`** : A list of input tensors or None (equivalent to an empty list). The0-th dimension of each Tensor must have size divisible by  `num_shards` .
 - **`num_shards`** : The number of shards.
@@ -25,8 +25,8 @@ Inputs and outputs of the computation must be at least rank-1 Tensors.
 - **`name`** : (Deprecated) Does nothing.
 
 
-#### Returns:
-A list of output tensors.
+#### 返回：
+输出张量的列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `num_shards <= 0` 

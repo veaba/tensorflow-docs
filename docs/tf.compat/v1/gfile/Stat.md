@@ -1,16 +1,16 @@
-Returns file statistics for a given path.
+返回给定路径的文件统计信息。
 
 ```
  tf.compat.v1.gfile.Stat(filename)
  
 ```
 
-#### Args:
+#### 参数：
 - **`filename`** : string, path to a file
 
 
-#### Returns:
-FileStatistics struct that contains information about the path
+#### 返回：
+包含路径信息的文件统计结构
 
-#### Raises:
+#### 加薪：
 - **[ `errors.OpError` ](/api_docs/python/tf/errors/OpError)** : If the operation fails.

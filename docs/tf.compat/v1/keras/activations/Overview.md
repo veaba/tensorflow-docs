@@ -1,6 +1,6 @@
 Built-in activation functions.
 
-## Functions
+## 功能
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/activations/deserialize)
 
 [ `elu(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/activations/elu): Exponential linear unit.

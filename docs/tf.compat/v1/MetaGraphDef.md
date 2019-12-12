@@ -1,16 +1,16 @@
 
 
 ## Class  `MetaGraphDef` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class CollectionDefEntry` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/MetaGraphDef/CollectionDefEntry)
 
 [ `class MetaInfoDef` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/MetaGraphDef/MetaInfoDef)
 
 [ `class SignatureDefEntry` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/MetaGraphDef/SignatureDefEntry)
 
-## Properties
+## 属性
 
 
 ###  `asset_file_def` 

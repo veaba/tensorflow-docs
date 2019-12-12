@@ -5,13 +5,13 @@ Fully-connected RNN where the output is to be fed back to input.
 
 Inherits From: [ `RNN` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/RNN)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.SimpleRNN` ](/api_docs/python/tf/keras/layers/SimpleRNN), [ `tf.compat.v2.keras.layers.SimpleRNN` ](/api_docs/python/tf/keras/layers/SimpleRNN)
+**别名** : [ `tf.compat.v1.keras.layers.SimpleRNN` ](/api_docs/python/tf/keras/layers/SimpleRNN), [ `tf.compat.v2.keras.layers.SimpleRNN` ](/api_docs/python/tf/keras/layers/SimpleRNN)
 
-### Used in the guide:
+### 在指南中使用：
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 
-#### Arguments:
+#### 参数：
 - **`units`** : Positive integer, dimensionality of the output space.
 - **`activation`** : Activation function to use.Default: hyperbolic tangent ( `tanh` ).If you pass None, no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`use_bias`** : Boolean, whether the layer uses a bias vector.
@@ -34,7 +34,7 @@ Inherits From: [ `RNN` ](https://tensorflow.google.cn/api_docs/python/tf/keras/l
 - **`unroll`** : Boolean (default False).If True, the network will be unrolled,else a symbolic loop will be used.Unrolling can speed-up a RNN,although it tends to be more memory-intensive.Unrolling is only suitable for short sequences.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : A 3D tensor.
 - **`mask`** : Binary tensor of shape  `(samples, timesteps)`  indicating whethera given timestep should be masked.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. This argument is passed to the cellwhen calling it. This is only relevant if  `dropout`  or `recurrent_dropout`  is used.
@@ -71,7 +71,7 @@ Inherits From: [ `RNN` ](https://tensorflow.google.cn/api_docs/python/tf/keras/l
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `activation` 
@@ -119,7 +119,7 @@ Inherits From: [ `RNN` ](https://tensorflow.google.cn/api_docs/python/tf/keras/l
 ###  `use_bias` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

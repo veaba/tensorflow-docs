@@ -3,9 +3,9 @@
 ## Class  `CosineSimilarity` 
 Computes the cosine similarity between  `y_true`  and  `y_pred` .
 
-**Aliases** : [ `tf.compat.v1.keras.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity), [ `tf.compat.v2.keras.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity), [ `tf.compat.v2.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity), [ `tf.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity)
+**别名** : [ `tf.compat.v1.keras.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity), [ `tf.compat.v2.keras.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity), [ `tf.compat.v2.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity), [ `tf.losses.CosineSimilarity` ](/api_docs/python/tf/keras/losses/CosineSimilarity)
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -29,7 +29,7 @@ model.compile('sgd', loss=tf.keras.losses.CosineSimilarity(axis=1))
  
 ```
 
-#### Args:
+#### 参数：
 - **`axis`** : (Optional) Defaults to -1. The dimension along which the cosinesimilarity is computed.
 - **`reduction`** : (Optional) Type of [ `tf.keras.losses.Reduction` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/Reduction) to apply to loss.Default value is  `AUTO` .  `AUTO`  indicates that the reduction option willbe determined by the usage context. For almost all cases this defaults to `SUM_OVER_BATCH_SIZE` .When used with [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy), outside of built-in trainingloops such as [ `tf.keras` ](https://tensorflow.google.cn/api_docs/python/tf/keras)  `compile`  and  `fit` , using  `AUTO`  or `SUM_OVER_BATCH_SIZE`  will raise an error. Please seehttps://www.tensorflow.org/alpha/tutorials/distribute/training_loopsfor more details on this.
 - **`name`** : Optional name for the op.
@@ -49,7 +49,7 @@ model.compile('sgd', loss=tf.keras.losses.CosineSimilarity(axis=1))
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -66,16 +66,16 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Invokes the  `Loss`  instance.
 
-#### Args:
+#### 参数：
 - **`y_true`** : Ground truth values. shape =  `[batch_size, d0, .. dN]` 
 - **`y_pred`** : The predicted values. shape =  `[batch_size, d0, .. dN]` 
 - **`sample_weight`** : Optional  `sample_weight`  acts as acoefficient for the loss. If a scalar is provided, then the loss issimply scaled by the given value. If  `sample_weight`  is a tensor of size `[batch_size]` , then the total loss for each sample of the batch isrescaled by the corresponding element in the  `sample_weight`  vector. Ifthe shape of  `sample_weight`  is  `[batch_size, d0, .. dN-1]`  (or can bebroadcasted to this shape), then each loss element of  `y_pred`  is scaledby the corresponding value of  `sample_weight` . (Note on `dN-1` : all lossfunctions reduce by 1 dimension, usually axis=-1.)
 
 
-#### Returns:
+#### 返回：
 Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has  shape  `[batch_size, d0, .. dN-1]` ; otherwise, it is scalar. (Note  `dN-1`   because all loss functions reduce by 1 dimension, usually axis=-1.)
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `sample_weight`  is invalid.
 
 
@@ -92,11 +92,11 @@ Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has  shape  `
 
 Instantiates a  `Loss`  from its config (output of  `get_config()` ).
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `Loss`  instance.
 
 ###  `get_config` 

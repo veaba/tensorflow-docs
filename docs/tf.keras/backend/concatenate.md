@@ -1,6 +1,6 @@
-Concatenates a list of tensors alongside the specified axis.
+沿着指定轴连接一个张量列表。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.concatenate` ](/api_docs/python/tf/keras/backend/concatenate), [ `tf.compat.v2.keras.backend.concatenate` ](/api_docs/python/tf/keras/backend/concatenate)
+**别名** : [ `tf.compat.v1.keras.backend.concatenate` ](/api_docs/python/tf/keras/backend/concatenate), [ `tf.compat.v2.keras.backend.concatenate` ](/api_docs/python/tf/keras/backend/concatenate)
 
 ```
  tf.keras.backend.concatenate(
@@ -10,15 +10,15 @@ Concatenates a list of tensors alongside the specified axis.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`tensors`** : list of tensors to concatenate.
 - **`axis`** : concatenation axis.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Example:
+#### 示例：
 
 
 ```

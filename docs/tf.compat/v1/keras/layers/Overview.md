@@ -1,6 +1,6 @@
-Keras layers API.
+Keras层API。
 
-## Classes
+## Class 
 [ `class AbstractRNNCell` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/AbstractRNNCell): Abstract object representing an RNN cell.
 
 [ `class Activation` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Activation): Applies an activation function to an output.
@@ -209,7 +209,7 @@ Keras layers API.
 
 [ `class ZeroPadding3D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/ZeroPadding3D): Zero-padding layer for 3D data (spatial or spatio-temporal).
 
-## Functions
+## 功能
 [ `Input(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Input):  `Input()`  is used to instantiate a Keras tensor.
 
 [ `add(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/add): Functional interface to the  `Add`  layer.

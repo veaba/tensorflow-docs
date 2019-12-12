@@ -1,6 +1,6 @@
 Returns whether  `x`  is a Keras tensor.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.is_keras_tensor` ](/api_docs/python/tf/keras/backend/is_keras_tensor), [ `tf.compat.v2.keras.backend.is_keras_tensor` ](/api_docs/python/tf/keras/backend/is_keras_tensor)
+**别名** : [ `tf.compat.v1.keras.backend.is_keras_tensor` ](/api_docs/python/tf/keras/backend/is_keras_tensor), [ `tf.compat.v2.keras.backend.is_keras_tensor` ](/api_docs/python/tf/keras/backend/is_keras_tensor)
 
 ```
  tf.keras.backend.is_keras_tensor(x)
@@ -9,18 +9,18 @@ Returns whether  `x`  is a Keras tensor.
 
 A "Keras tensor" is a tensor that was returned by a Keras layer,( `Layer`  class) or by  `Input` .
 
-#### Arguments:
+#### 参数：
 - **`x`** : A candidate tensor.
 
 
-#### Returns:
-A boolean: Whether the argument is a Keras tensor.
+#### 返回：
+布尔值：参数是否为keras张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case  `x`  is not a symbolic tensor.
 
 
-#### Examples:
+#### 示例：
 
 
 ```

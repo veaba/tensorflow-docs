@@ -3,7 +3,7 @@
 ## Class  `DatasetSpec` 
 Type specification for [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
 
-**Aliases** : [ `tf.compat.v1.data.DatasetSpec` ](/api_docs/python/tf/data/DatasetSpec), [ `tf.compat.v1.data.experimental.DatasetStructure` ](/api_docs/python/tf/data/DatasetSpec), [ `tf.compat.v2.data.DatasetSpec` ](/api_docs/python/tf/data/DatasetSpec)
+**别名** : [ `tf.compat.v1.data.DatasetSpec` ](/api_docs/python/tf/data/DatasetSpec), [ `tf.compat.v1.data.experimental.DatasetStructure` ](/api_docs/python/tf/data/DatasetSpec), [ `tf.compat.v2.data.DatasetSpec` ](/api_docs/python/tf/data/DatasetSpec)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/ops/dataset_ops.py#L2468-L2470)
@@ -18,13 +18,13 @@ Type specification for [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_do
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `value_type` 
-The Python type for values that are compatible with this TypeSpec.
+与此类型规范兼容的值的python类型。
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -76,9 +76,9 @@ Returns true if  `spec_or_value`  is compatible with this TypeSpec.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

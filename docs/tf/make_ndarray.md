@@ -1,20 +1,20 @@
-Create a numpy ndarray from a tensor.
+从张量创建一个numpy-ndarray。
 
-**Aliases** : [ `tf.compat.v1.make_ndarray` ](/api_docs/python/tf/make_ndarray), [ `tf.compat.v2.make_ndarray` ](/api_docs/python/tf/make_ndarray)
+**别名** : [ `tf.compat.v1.make_ndarray` ](/api_docs/python/tf/make_ndarray), [ `tf.compat.v2.make_ndarray` ](/api_docs/python/tf/make_ndarray)
 
 ```
  tf.make_ndarray(tensor)
  
 ```
 
-Create a numpy ndarray with the same shape and data as the tensor.
+创建一个与张量具有相同形状和数据的numpy ndarray。
 
-#### Args:
+#### 参数：
 - **`tensor`** : A TensorProto.
 
 
-#### Returns:
-A numpy array with the tensor contents.
+#### 返回：
+具有张量内容的numpy数组。
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if tensor has unsupported type.

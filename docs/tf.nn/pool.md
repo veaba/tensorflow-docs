@@ -29,7 +29,7 @@ In the case that  `data_format`  starts with  `"NC"` , the  `input`  and output 
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : Tensor of rank N+2, of shape  `[batch_size] + input_spatial_shape +[num_channels]`  if data_format does not start with "NC" (default), or `[batch_size, num_channels] + input_spatial_shape`  if data_format startswith "NC".  Pooling happens over the spatial dimensions only.
 - **`window_shape`** : Sequence of N ints >= 1.
 - **`pooling_type`** : Specifies pooling operation, must be "AVG" or "MAX".
@@ -40,7 +40,7 @@ In the case that  `data_format`  starts with  `"NC"` , the  `input`  and output 
 - **`name`** : Optional. Name of the op.
 
 
-#### Returns:
+#### 返回：
 Tensor of rank N+2, of shape  [batch_size] + output_spatial_shape + [num_channels]
 
 if data_format is None or does not start with "NC", or
@@ -53,5 +53,5 @@ If padding = "SAME":  output_spatial_shape[i] = ceil(input_spatial_shape[i] / st
 
 If padding = "VALID":  output_spatial_shape[i] =    ceil((input_spatial_shape[i] - (window_shape[i] - 1) * dilation_rate[i])         / strides[i]).
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if arguments are invalid.

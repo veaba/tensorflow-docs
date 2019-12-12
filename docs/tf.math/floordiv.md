@@ -1,6 +1,6 @@
 Divides  `x / y`  elementwise, rounding toward the most negative integer.
 
-**Aliases** : [ `tf.compat.v1.floordiv` ](/api_docs/python/tf/math/floordiv), [ `tf.compat.v1.math.floordiv` ](/api_docs/python/tf/math/floordiv), [ `tf.compat.v2.math.floordiv` ](/api_docs/python/tf/math/floordiv)
+**别名** : [ `tf.compat.v1.floordiv` ](/api_docs/python/tf/math/floordiv), [ `tf.compat.v1.math.floordiv` ](/api_docs/python/tf/math/floordiv), [ `tf.compat.v2.math.floordiv` ](/api_docs/python/tf/math/floordiv)
 
 ```
  tf.math.floordiv(
@@ -15,14 +15,14 @@ The same as [ `tf.compat.v1.div(x,y)` ](https://tensorflow.google.cn/api_docs/py
 
  `x`  and  `y`  must have the same type, and the result will have the same typeas well.
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  numerator of real numeric type.
 - **`y`** :  `Tensor`  denominator of real numeric type.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
  `x / y`  rounded down.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the inputs are complex.

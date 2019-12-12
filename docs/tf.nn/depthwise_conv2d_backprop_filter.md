@@ -1,6 +1,6 @@
-Computes the gradients of depthwise convolution with respect to the filter.
+计算相对于滤波器的深度卷积的梯度。
 
-**Aliases** : [ `tf.compat.v1.nn.depthwise_conv2d_backprop_filter` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_filter), [ `tf.compat.v1.nn.depthwise_conv2d_native_backprop_filter` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_filter), [ `tf.compat.v2.nn.depthwise_conv2d_backprop_filter` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_filter)
+**别名** : [ `tf.compat.v1.nn.depthwise_conv2d_backprop_filter` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_filter), [ `tf.compat.v1.nn.depthwise_conv2d_native_backprop_filter` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_filter), [ `tf.compat.v2.nn.depthwise_conv2d_backprop_filter` ](/api_docs/python/tf/nn/depthwise_conv2d_backprop_filter)
 
 ```
  tf.nn.depthwise_conv2d_backprop_filter(
@@ -16,7 +16,7 @@ Computes the gradients of depthwise convolution with respect to the filter.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` ,  `float64` .4-D with shape based on  `data_format` .  For example, if `data_format`  is 'NHWC' then  `input`  is a 4-D  `[batch, in_height,in_width, in_channels]`  tensor.
 - **`filter_sizes`** : A  `Tensor`  of type  `int32` .An integer vector representing the tensor shape of  `filter` ,where  `filter`  is a 4-D `[filter_height, filter_width, in_channels, depthwise_multiplier]`  tensor.
 - **`out_backprop`** : A  `Tensor` . Must have the same type as  `input` .4-D with shape  based on  `data_format` .For example, if  `data_format`  is 'NHWC' thenout_backprop shape is  `[batch, out_height, out_width, out_channels]` .Gradients w.r.t. the output of the convolution.
@@ -27,6 +27,6 @@ Computes the gradients of depthwise convolution with respect to the filter.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

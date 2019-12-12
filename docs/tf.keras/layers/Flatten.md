@@ -1,19 +1,19 @@
 
 
 ## Class  `Flatten` 
-Flattens the input. Does not affect the batch size.
+使输入变平。不影响批处理大小。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Flatten` ](/api_docs/python/tf/keras/layers/Flatten), [ `tf.compat.v2.keras.layers.Flatten` ](/api_docs/python/tf/keras/layers/Flatten)
+**别名** : [ `tf.compat.v1.keras.layers.Flatten` ](/api_docs/python/tf/keras/layers/Flatten), [ `tf.compat.v2.keras.layers.Flatten` ](/api_docs/python/tf/keras/layers/Flatten)
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 - [Estimators](https://tensorflow.google.cn/guide/estimator)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Distributed training with Keras](https://tensorflow.google.cn/tutorials/distribute/keras)
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
 - [Multi-worker training with Keras](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_keras)
@@ -21,11 +21,11 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
 If inputs are shaped  `(batch,)`  without a channel dimension, then flatteningadds an extra channel dimension and output shapes are  `(batch, 1)` .
 
-#### Arguments:
+#### 参数：
 - **`data_format`** : A string,one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, ..., channels)`  while  `channels_first`  corresponds toinputs with shape  `(batch, channels, ...)` .It defaults to the  `image_data_format`  value found in yourKeras config file at  `~/.keras/keras.json` .If you never set it, then it will be "channels_last".
 
 
-#### Example:
+#### 示例：
 
 
 ```

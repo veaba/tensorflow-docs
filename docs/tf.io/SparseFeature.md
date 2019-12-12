@@ -3,7 +3,7 @@
 ## Class  `SparseFeature` 
 Configuration for parsing a sparse input feature from an  `Example` .
 
-**Aliases** : [ `tf.compat.v1.SparseFeature` ](/api_docs/python/tf/io/SparseFeature), [ `tf.compat.v1.io.SparseFeature` ](/api_docs/python/tf/io/SparseFeature), [ `tf.compat.v2.io.SparseFeature` ](/api_docs/python/tf/io/SparseFeature)
+**别名** : [ `tf.compat.v1.SparseFeature` ](/api_docs/python/tf/io/SparseFeature), [ `tf.compat.v1.io.SparseFeature` ](/api_docs/python/tf/io/SparseFeature), [ `tf.compat.v2.io.SparseFeature` ](/api_docs/python/tf/io/SparseFeature)
 
 Note, preferably use  `VarLenFeature`  (possibly in combination with a `SequenceExample` ) in order to parse out  `SparseTensor` s instead of `SparseFeature`  due to its simplicity.
 
@@ -47,7 +47,7 @@ and  `SparseFeature`  config with 2  `index_key` s
  
 ```
 
-#### Fields:
+#### 字段：
 - **`index_key`** : A single string name or a list of string names of index features.For each key the underlying feature's type must be  `int64`  and its lengthmust always match that of the  `value_key`  feature.To represent  `SparseTensor` s with a  `dense_shape`  of  `rank`  higher than 1a list of length  `rank`  should be used.
 - **`value_key`** : Name of value feature.  The underlying feature's type mustbe  `dtype`  and its length must always match that of all the  `index_key` s'features.
 - **`dtype`** : Data type of the  `value_key`  feature.
@@ -73,7 +73,7 @@ __new__(
 
 Create new instance of SparseFeature(index_key, value_key, dtype, size, already_sorted)
 
-## Properties
+## 属性
 
 
 ###  `index_key` 

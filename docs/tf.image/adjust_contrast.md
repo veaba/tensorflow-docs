@@ -1,6 +1,6 @@
-Adjust contrast of RGB or grayscale images.
+调整RGB或灰度图像的对比度。
 
-**Aliases** : [ `tf.compat.v1.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast), [ `tf.compat.v2.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast)
+**别名** : [ `tf.compat.v1.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast), [ `tf.compat.v2.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast)
 
 ```
  tf.image.adjust_contrast(
@@ -14,19 +14,19 @@ This is a convenience method that converts RGB images to floatrepresentation, ad
 
  `images`  is a tensor of at least 3 dimensions.  The last 3 dimensions areinterpreted as  `[height, width, channels]` .  The other dimensions onlyrepresent a collection of images, such as  `[batch, height, width, channels].` 
 
-Contrast is adjusted independently for each channel of each image.
+为每个图像的每个通道独立地调整对比度。
 
 For each channel, this Op computes the mean of the image pixels in thechannel and then adjusts each component  `x`  of each pixel to `(x - mean) * contrast_factor + mean` .
 
-#### Args:
+#### 参数：
 - **`images`** : Images to adjust.  At least 3-D.
 - **`contrast_factor`** : A float multiplier for adjusting contrast.
 
 
-#### Returns:
+#### 返回：
 The contrast-adjusted image or images.
 
-#### Usage Example:
+#### 用法示例：
 
 
 ```

@@ -1,9 +1,9 @@
 
 
 ## Class  `Benchmark` 
-Abstract class that provides helpers for TensorFlow benchmarks.
+为TensorFlow基准提供帮助程序的抽象类。
 
-**Aliases** : [ `tf.compat.v1.test.Benchmark` ](/api_docs/python/tf/test/Benchmark), [ `tf.compat.v2.test.Benchmark` ](/api_docs/python/tf/test/Benchmark)
+**别名** : [ `tf.compat.v1.test.Benchmark` ](/api_docs/python/tf/test/Benchmark), [ `tf.compat.v2.test.Benchmark` ](/api_docs/python/tf/test/Benchmark)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/platform/benchmark.py#L234-L238)
@@ -15,7 +15,7 @@ Abstract class that provides helpers for TensorFlow benchmarks.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `evaluate` 
@@ -26,14 +26,14 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Evaluates tensors and returns numpy values.
+计算张量并返回numpy值。
 
-#### Args:
+#### 参数：
 - **`tensors`** : A Tensor or a nested list/tuple of Tensors.
 
 
-#### Returns:
-tensors numpy values.
+#### 返回：
+张量numpy值。
 
 ###  `is_abstract` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/platform/benchmark.py#L240-L244)
@@ -60,9 +60,9 @@ is_abstract(cls)
  
 ```
 
-Report a benchmark.
+报告基准。
 
-#### Args:
+#### 参数：
 - **`iters`** : (optional) How many iterations were run
 - **`cpu_time`** : (optional) Median or mean cpu time in seconds.
 - **`wall_time`** : (optional) Median or mean wall time in seconds.
@@ -93,7 +93,7 @@ Report a benchmark.
 
 Run an op or tensor in the given session.  Report the results.
 
-#### Args:
+#### 参数：
 - **`sess`** :  `Session`  object to use for timing.
 - **`op_or_tensor`** :  `Operation`  or  `Tensor`  to benchmark.
 - **`feed_dict`** : A  `dict`  of values to feed for each op iteration (see the `feed_dict`  parameter of  `Session.run` ).
@@ -106,6 +106,6 @@ Run an op or tensor in the given session.  Report the results.
 - **`mbs`** : (optional) The number of megabytes moved by this op, used tocalculate the ops throughput.
 
 
-#### Returns:
+#### 返回：
 A  `dict`  containing the key-value pairs that were passed to `report_benchmark` . If  `store_trace`  option is used, then `full_chrome_trace_format`  will be included in return dictionary eventhough it is not passed to  `report_benchmark`  with  `extras` .
 

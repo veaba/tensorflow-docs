@@ -1,5 +1,5 @@
 
 
 ## Class  `Error` 
-The base class for all flags errors.
+所有标志错误的基类。
 

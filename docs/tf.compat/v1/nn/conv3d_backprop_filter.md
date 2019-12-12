@@ -14,7 +14,7 @@ Computes the gradients of 3-D convolution with respect to the filter.
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` ,  `float64` .Shape  `[batch, depth, rows, cols, in_channels]` .
 - **`filter_sizes`** : A  `Tensor`  of type  `int32` .An integer vector representing the tensor shape of  `filter` ,where  `filter`  is a 5-D `[filter_depth, filter_height, filter_width, in_channels, out_channels]` tensor.
 - **`out_backprop`** : A  `Tensor` . Must have the same type as  `input` .Backprop signal of shape  `[batch, out_depth, out_rows, out_cols,out_channels]` .
@@ -25,6 +25,6 @@ Computes the gradients of 3-D convolution with respect to the filter.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

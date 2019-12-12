@@ -1,6 +1,6 @@
 Returns the next representable value of  `x1`  in the direction of  `x2` , element-wise.
 
-**Aliases** : [ `tf.compat.v1.math.nextafter` ](/api_docs/python/tf/math/nextafter), [ `tf.compat.v2.math.nextafter` ](/api_docs/python/tf/math/nextafter)
+**别名** : [ `tf.compat.v1.math.nextafter` ](/api_docs/python/tf/math/nextafter), [ `tf.compat.v2.math.nextafter` ](/api_docs/python/tf/math/nextafter)
 
 ```
  tf.math.nextafter(
@@ -11,19 +11,19 @@ Returns the next representable value of  `x1`  in the direction of  `x2` , eleme
  
 ```
 
-This operation returns the same result as the C++ std::nextafter function.
+此操作返回与c++std：：nextafter函数相同的结果。
 
-It can also return a subnormal number.
+它还可以返回一个次正规数。
 
-#### Args:
+#### 参数：
 - **`x1`** : A  `Tensor` . Must be one of the following types:  `float64` ,  `float32` .
 - **`x2`** : A  `Tensor` . Must have the same type as  `x1` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x1` .
 
-#### Cpp Compatibility
-Equivalent to C++ std::nextafter function.
+####CPP兼容性
+相当于c++std：：nextafter函数。
 

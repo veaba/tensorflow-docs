@@ -10,7 +10,7 @@ Produces the integers from 0 to limit-1 in a queue. (deprecated)
 **Note:**  if  `num_epochs`  is not  `None` , this function creates local counter `epochs` . Use  `local_variables_initializer()`  to initialize local variables.
 
 
-#### Args:
+#### 参数：
 - **`limit`** : An int32 scalar tensor.
 - **`num_epochs`** : An integer (optional). If specified,  `range_input_producer` produces each integer  `num_epochs`  times before generating anOutOfRange error. If not specified,  `range_input_producer`  can cyclethrough the integers an unlimited number of times.
 - **`shuffle`** : Boolean. If true, the integers are randomly shuffled within eachepoch.
@@ -20,9 +20,9 @@ Produces the integers from 0 to limit-1 in a queue. (deprecated)
 - **`name`** : A name for the operations (optional).
 
 
-#### Returns:
+#### 返回：
 A Queue with the output integers.  A  `QueueRunner`  for the Queueis added to the current  `Graph` 's  `QUEUE_RUNNER`  collection.
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Input pipelines based on Queues are not supported when eager execution isenabled. Please use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API to ingest data under eager execution.
 

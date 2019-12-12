@@ -1,6 +1,6 @@
-A sequence of categorical terms where ids use a vocabulary file.
+ids使用词汇表文件的一系列分类术语。
 
-**Aliases** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_vocabulary_file` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_file), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_vocabulary_file` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_file)
+**别名** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_vocabulary_file` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_file), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_vocabulary_file` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_file)
 
 ```
  tf.feature_column.sequence_categorical_column_with_vocabulary_file(
@@ -16,7 +16,7 @@ A sequence of categorical terms where ids use a vocabulary file.
 
 Pass this to  `embedding_column`  or  `indicator_column`  to convert sequencecategorical data into dense representation for input to sequence NN, such asRNN.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -37,7 +37,7 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
  
 ```
 
-#### Args:
+#### 参数：
 - **`key`** : A unique string identifying the input feature.
 - **`vocabulary_file`** : The vocabulary file name.
 - **`vocabulary_size`** : Number of the elements in the vocabulary. This must be nogreater than length of  `vocabulary_file` , if less than length, latervalues are ignored. If None, it is set to the length of  `vocabulary_file` .
@@ -46,10 +46,10 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
 - **`dtype`** : The type of features. Only string and integer types are supported.
 
 
-#### Returns:
+#### 返回：
 A  `SequenceCategoricalColumn` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :  `vocabulary_file`  is missing or cannot be opened.
 - **`ValueError`** :  `vocabulary_size`  is missing or < 1.
 - **`ValueError`** :  `num_oov_buckets`  is a negative integer.

@@ -1,14 +1,14 @@
-Registers a generic Flag object.
+注册泛型标志对象。
 
 ```
  tf.compat.v1.flags.DEFINE(    parser,    name,    default,    help,    flag_values=_flagvalues.FLAGS,    serializer=None,    module_name=None,    **args) 
 ```
 
-NOTE: in the docstrings of all DEFINE* functions, "registers" is shortfor "creates a new flag and registers it".
+注意：in the docstrings of all DEFINE* functions, "registers" is shortfor "creates a new flag and registers it".
 
 Auxiliary function: clients should use the specialized DEFINE_<type>function instead.</type>
 
-#### Args:
+#### 参数：
 - **`parser`** : ArgumentParser, used to parse the flag arguments.
 - **`name`** : str, the flag name.
 - **`default`** : The default value of the flag.

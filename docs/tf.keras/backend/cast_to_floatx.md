@@ -1,20 +1,20 @@
-Cast a Numpy array to the default Keras float type.
+将numpy数组强制转换为默认的keras float类型。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.cast_to_floatx` ](/api_docs/python/tf/keras/backend/cast_to_floatx), [ `tf.compat.v2.keras.backend.cast_to_floatx` ](/api_docs/python/tf/keras/backend/cast_to_floatx)
+**别名** : [ `tf.compat.v1.keras.backend.cast_to_floatx` ](/api_docs/python/tf/keras/backend/cast_to_floatx), [ `tf.compat.v2.keras.backend.cast_to_floatx` ](/api_docs/python/tf/keras/backend/cast_to_floatx)
 
 ```
  tf.keras.backend.cast_to_floatx(x)
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Numpy array or TensorFlow tensor.
 
 
-#### Returns:
+#### 返回：
 The same array (Numpy array if  `x`  was a Numpy array, or TensorFlow tensorif  `x`  was a tensor), cast to its new type.
 
-#### Example:
+#### 示例：
 
 
 ```

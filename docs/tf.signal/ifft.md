@@ -1,6 +1,6 @@
-Inverse fast Fourier transform.
+逆快速傅里叶变换。
 
-**Aliases** : [ `tf.compat.v1.ifft` ](/api_docs/python/tf/signal/ifft), [ `tf.compat.v1.signal.ifft` ](/api_docs/python/tf/signal/ifft), [ `tf.compat.v1.spectral.ifft` ](/api_docs/python/tf/signal/ifft), [ `tf.compat.v2.signal.ifft` ](/api_docs/python/tf/signal/ifft)
+**别名** : [ `tf.compat.v1.ifft` ](/api_docs/python/tf/signal/ifft), [ `tf.compat.v1.signal.ifft` ](/api_docs/python/tf/signal/ifft), [ `tf.compat.v1.spectral.ifft` ](/api_docs/python/tf/signal/ifft), [ `tf.compat.v2.signal.ifft` ](/api_docs/python/tf/signal/ifft)
 
 ```
  tf.signal.ifft(
@@ -12,11 +12,11 @@ Inverse fast Fourier transform.
 
 Computes the inverse 1-dimensional discrete Fourier transform over theinner-most dimension of  `input` .
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `complex64` ,  `complex128` .A complex tensor.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

@@ -1,6 +1,6 @@
-Computes SSIM index between img1 and img2.
+计算img1和img2之间的ssim索引。
 
-**Aliases** : [ `tf.compat.v1.image.ssim` ](/api_docs/python/tf/image/ssim), [ `tf.compat.v2.image.ssim` ](/api_docs/python/tf/image/ssim)
+**别名** : [ `tf.compat.v1.image.ssim` ](/api_docs/python/tf/image/ssim), [ `tf.compat.v2.image.ssim` ](/api_docs/python/tf/image/ssim)
 
 ```
  tf.image.ssim(
@@ -21,12 +21,12 @@ This function is based on the standard SSIM implementation from:Wang, Z., Bovik,
 **Note:**  The true SSIM is only defined on grayscale.  This function does notperform any colorspace transform.  (If input is already YUV, then it willcompute YUV SSIM average.)
 
 
-#### Details:
+#### 详细信息：
 - 11x11 Gaussian filter of width 1.5 is used.
 - k1 = 0.01, k2 = 0.03 as in the original paper.
-The image sizes must be at least 11x11 because of the filter size.
+由于筛选器的大小，图像大小必须至少为11x11。
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -46,7 +46,7 @@ The image sizes must be at least 11x11 because of the filter size.
  
 ```
 
-#### Args:
+#### 参数：
 - **`img1`** : First image batch.
 - **`img2`** : Second image batch.
 - **`max_val`** : The dynamic range of the images (i.e., the difference between themaximum the and minimum allowed values).
@@ -56,6 +56,6 @@ The image sizes must be at least 11x11 because of the filter size.
 - **`k2`** : Default value 0.03 (SSIM is less sensitivity to K2 for lower values, soit would be better if we taken the values in range of 0< K2 <0.4).
 
 
-#### Returns:
+#### 返回：
 A tensor containing an SSIM value for each image in batch.  Returned SSIMvalues are in range (-1, 1], when pixel values are non-negative. Returnsa tensor with shape: broadcast(img1.shape[:-3], img2.shape[:-3]).
 

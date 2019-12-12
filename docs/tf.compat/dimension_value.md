@@ -1,6 +1,6 @@
-Compatibility utility required to allow for both V1 and V2 behavior in TF.
+在tf中同时允许v1和v2行为所需的兼容性实用程序。
 
-**Aliases** : [ `tf.compat.v1.compat.dimension_value` ](/api_docs/python/tf/compat/dimension_value), [ `tf.compat.v1.dimension_value` ](/api_docs/python/tf/compat/dimension_value), [ `tf.compat.v2.compat.dimension_value` ](/api_docs/python/tf/compat/dimension_value)
+**别名** : [ `tf.compat.v1.compat.dimension_value` ](/api_docs/python/tf/compat/dimension_value), [ `tf.compat.v1.dimension_value` ](/api_docs/python/tf/compat/dimension_value), [ `tf.compat.v2.compat.dimension_value` ](/api_docs/python/tf/compat/dimension_value)
 
 ```
  tf.compat.dimension_value(dimension)
@@ -23,10 +23,10 @@ value = tensor_shape[i]  # Warning: this will return the dim value in V2!
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`dimension`** : Either a  `Dimension`  instance, an integer, or None.
 
 
-#### Returns:
+#### 返回：
 A plain value, i.e. an integer or None.
 

@@ -1,7 +1,7 @@
 
 
 ## Class  `SessionManager` 
-Training helper that restores from checkpoint and creates session.
+从检查点恢复并创建会话的训练助手。
 
 This class is a small wrapper that takes care of session creation andcheckpoint recovery. It also provides functions that to facilitatecoordination among multiple training threads or processes.
 
@@ -9,7 +9,7 @@ This class is a small wrapper that takes care of session creation andcheckpoint 
 - Initializing variables on startup, restoring them from the most recentcheckpoint after a crash, or wait for checkpoints to become available.
 
 
-### Usage:
+### 用法：
 
 
 ```
@@ -26,7 +26,7 @@ This class is a small wrapper that takes care of session creation andcheckpoint 
 
  `prepare_session()`  initializes or restores a model. It requires  `init_op` and  `saver`  as an argument.
 
-A second process could wait for the model to be ready by doing the following:
+第二个进程可以通过执行以下操作等待模型就绪：
 
 ```
  with tf.Graph().as_default():
@@ -57,7 +57,7 @@ A second process could wait for the model to be ready by doing the following:
  
 ```
 
-Creates a SessionManager.
+创建SessionManager。
 
 The  `local_init_op`  is an  `Operation`  that is run always after a new sessionwas created. If  `None` , this step is skipped.
 
@@ -69,7 +69,7 @@ If  `ready_op`  is  `None` , the model is not checked for readiness.
 
  `recovery_wait_secs`  is the number of seconds between checks thatthe model is ready.  It is used by processes to wait for a model tobe initialized or restored.  Defaults to 30 seconds.
 
-#### Args:
+#### 参数：
 - **`local_init_op`** : An  `Operation`  run immediately after session creation.Usually used to initialize tables and local variables.
 - **`ready_op`** : An  `Operation`  to check if the model is initialized.
 - **`ready_for_local_init_op`** : An  `Operation`  to check if the model is readyto run local_init_op.
@@ -78,11 +78,11 @@ If  `ready_op`  is  `None` , the model is not checked for readiness.
 - **`local_init_run_options`** : RunOptions to be passed to session.run whenexecuting the local_init_op.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If ready_for_local_init_op is not None but local_init_op isNone
 
 
-## Methods
+## 方法
 
 
 ###  `prepare_session` 
@@ -114,7 +114,7 @@ If the model is recovered from a checkpoint it is assumed that allglobal variabl
 
 It is an error if the model cannot be recovered and no  `init_op` or  `init_fn`  or  `local_init_op`  are passed.
 
-#### Args:
+#### 参数：
 - **`master`** :  `String`  representation of the TensorFlow master to use.
 - **`init_op`** : Optional  `Operation`  used to initialize the model.
 - **`saver`** : A  `Saver`  object used to restore a model.
@@ -127,10 +127,10 @@ It is an error if the model cannot be recovered and no  `init_op` or  `init_fn` 
 - **`init_fn`** : Optional callable used to initialize the model. Called after theoptional  `init_op`  is called.  The callable must accept one argument,the session being initialized.
 
 
-#### Returns:
+#### 返回：
 A  `Session`  object that can be used to drive the model.
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If the model cannot be initialized or recovered.
 - **`ValueError`** : If both checkpoint_dir and checkpoint_filename_with_path areset.
 
@@ -155,7 +155,7 @@ Creates a  `Session` , recovering if possible.
 
 Creates a new session on 'master'.  If the session is not initializedand can be recovered from a checkpoint, recover it.
 
-#### Args:
+#### 参数：
 - **`master`** :  `String`  representation of the TensorFlow master to use.
 - **`saver`** : A  `Saver`  object used to restore a model.
 - **`checkpoint_dir`** : Path to the checkpoint files. The latest checkpoint in thedir will be used to restore.
@@ -165,10 +165,10 @@ Creates a new session on 'master'.  If the session is not initializedand can be 
 - **`config`** : Optional  `ConfigProto`  proto used to configure the session.
 
 
-#### Returns:
+#### 返回：
 A pair (sess, initialized) where 'initialized' is  `True`  ifthe session could be recovered and initialized,  `False`  otherwise.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both checkpoint_dir and checkpoint_filename_with_path areset.
 
 
@@ -190,14 +190,14 @@ Creates a new  `Session`  on 'master'.  Waits for the model to beinitialized or 
 
 NB: The amount of time this method waits for the session is boundedby max_wait_secs. By default, this function will wait indefinitely.
 
-#### Args:
+#### 参数：
 - **`master`** :  `String`  representation of the TensorFlow master to use.
 - **`config`** : Optional ConfigProto proto used to configure the session.
 - **`max_wait_secs`** : Maximum time to wait for the session to become available.
 
 
-#### Returns:
+#### 返回：
 A  `Session` . May be None if the operation exceeds the timeoutspecified by config.operation_timeout_in_ms.
 
-#### Raises:
+#### 加薪：
 - **`tf.DeadlineExceededError`** : if the session is not available aftermax_wait_secs.

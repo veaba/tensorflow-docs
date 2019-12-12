@@ -12,7 +12,7 @@ For more details, see the documentation for  `keras_style_scope` .
 
 Note, once keras style has been set, it is set globally for the entireprogram and cannot be unset.
 
-#### Example:
+#### 示例：
 
 
 ```

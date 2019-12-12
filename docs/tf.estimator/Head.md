@@ -1,9 +1,9 @@
 
 
 ## Class  `Head` 
-Interface for the head/top of a model.
+模型头部/顶部的接口。
 
-**Aliases** : [ `tf.compat.v1.estimator.Head` ](/api_docs/python/tf/estimator/Head), [ `tf.compat.v2.estimator.Head` ](/api_docs/python/tf/estimator/Head)
+**别名** : [ `tf.compat.v1.estimator.Head` ](/api_docs/python/tf/estimator/Head), [ `tf.compat.v2.estimator.Head` ](/api_docs/python/tf/estimator/Head)
 
 Head sits on top of the model network and handles computing the outputs ofthe network. Given logits (or output of a hidden layer), a Head knows how tocompute predictions, loss, train_op, metrics and export outputs. It is meantto:
 
@@ -12,7 +12,7 @@ Head sits on top of the model network and handles computing the outputs ofthe ne
 3. Support wide range of machine learning models. Since most heads can workwith logits, they can support DNN, RNN, Wide, Wide&amp;Deep,Global objectives, Gradient boosted trees and many other typesof machine learning models.
 
 
-#### Common usage:
+#### 常用用法：
 Here is simplified model_fn to build a DNN regression model.
 
 ```
@@ -33,7 +33,7 @@ Here is simplified model_fn to build a DNN regression model.
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `logits_dimension` 
@@ -41,7 +41,7 @@ Size of the last dimension of the logits  `Tensor` .
 
 Often is the number of classes, labels, or real values to be predicted.Typically, logits is of shape  `[batch_size, logits_dimension]` .
 
-#### Returns:
+#### 返回：
 The expected size of the  `logits`  tensor.
 
 ###  `loss_reduction` 
@@ -49,16 +49,16 @@ One of [ `tf.losses.Reduction` ](https://tensorflow.google.cn/api_docs/python/tf
 
 Describes how to reduce training loss over batch, such as mean or sum.
 
-#### Returns:
-The type of loss reduction used in the head.
+#### 返回：
+头部使用的减少损失的类型。
 
 ###  `name` 
-The name of this head.
+这个头的名字。
 
-#### Returns:
-A string.
+#### 返回：
+一根绳子。
 
-## Methods
+## 方法
 
 
 ###  `create_estimator_spec` 
@@ -81,9 +81,9 @@ A string.
 
 Returns  `EstimatorSpec`  that a model_fn can return.
 
-It is recommended to pass all args via name.
+建议通过名称传递所有参数。
 
-#### Args:
+#### 参数：
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
 - **`mode`** : Estimator's  `ModeKeys` .
 - **`logits`** : Logits  `Tensor`  to be used by the head.
@@ -95,7 +95,7 @@ It is recommended to pass all args via name.
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
  `EstimatorSpec` .
 
 ###  `loss` 
@@ -116,7 +116,7 @@ Returns a loss  `Tensor`  from provided arguments.
 
 Note that, the args of  `features`  and  `mode`  are most likely not used, butsome Head implementations may require them.
 
-#### Args:
+#### 参数：
 - **`labels`** : Labels  `Tensor` , or  `dict`  mapping string label names to  `Tensor` objects of the label values.
 - **`logits`** : Logits  `Tensor`  to be used for loss construction.
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
@@ -124,7 +124,7 @@ Note that, the args of  `features`  and  `mode`  are most likely not used, butso
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  representing regularized training loss used in train andeval.
 
 ###  `metrics` 
@@ -137,11 +137,11 @@ A scalar  `Tensor`  representing regularized training loss used in train andeval
 
 Returns a  `dict`  of metric objects.
 
-#### Args:
+#### 参数：
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
 A  `dict`  of metrics keyed by string name. The value is an instance of `Metric`  class.
 
 ###  `predictions` 
@@ -157,12 +157,12 @@ A  `dict`  of metrics keyed by string name. The value is an instance of `Metric`
 
 Returns a  `dict`  of predictions from provided logits.
 
-#### Args:
+#### 参数：
 - **`logits`** : Logits  `Tensor`  to be used for prediction construction.
 - **`keys`** : A list of  `string`  for prediction keys. Defaults to  `None` , meaningif not specified, predictions will be created for all the pre-definedvalid keys in the head.
 
 
-#### Returns:
+#### 返回：
 A  `dict`  of predicted  `Tensor`  keyed by prediction name.
 
 ###  `update_metrics` 
@@ -182,7 +182,7 @@ A  `dict`  of predicted  `Tensor`  keyed by prediction name.
 
 Updates metric objects and returns a  `dict`  of the updated metrics.
 
-#### Args:
+#### 参数：
 - **`eval_metrics`** : A  `dict`  of metrics to be updated.
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
 - **`logits`** : logits  `Tensor`  to be used for metrics update.
@@ -191,6 +191,6 @@ Updates metric objects and returns a  `dict`  of the updated metrics.
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training and evaluation loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
 A  `dict`  of updated metrics keyed by name. The value is an instance of `Metric`  class.
 

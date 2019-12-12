@@ -4,7 +4,7 @@ Outputs a  `Summary`  protocol buffer with a serialized tensor.proto.
  tf.compat.v1.summary.tensor_summary(    name,    tensor,    summary_description=None,    collections=None,    summary_metadata=None,    family=None,    display_name=None) 
 ```
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the generated node. If display_name is not set, it willalso serve as the tag name in TensorBoard. (In that case, the tagname will inherit tf name scopes.)
 - **`tensor`** : A tensor of any type and shape to serialize.
 - **`summary_description`** : A long description of the summary sequence. Markdownis supported.
@@ -14,6 +14,6 @@ Outputs a  `Summary`  protocol buffer with a serialized tensor.proto.
 - **`display_name`** : A string used to name this data in TensorBoard. If this isnot set, then the node name will be used instead.
 
 
-#### Returns:
+#### 返回：
 A scalar  `Tensor`  of type  `string` . The serialized  `Summary`  protocolbuffer.
 

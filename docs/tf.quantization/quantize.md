@@ -1,6 +1,6 @@
-Quantize the 'input' tensor of type float to 'output' tensor of type 'T'.
+将float类型的“input”张量量化为“t”类型的“output”张量。
 
-**Aliases** : [ `tf.compat.v1.quantization.quantize` ](/api_docs/python/tf/quantization/quantize), [ `tf.compat.v1.quantize` ](/api_docs/python/tf/quantization/quantize), [ `tf.compat.v2.quantization.quantize` ](/api_docs/python/tf/quantization/quantize)
+**别名** : [ `tf.compat.v1.quantization.quantize` ](/api_docs/python/tf/quantization/quantize), [ `tf.compat.v1.quantize` ](/api_docs/python/tf/quantization/quantize), [ `tf.compat.v2.quantization.quantize` ](/api_docs/python/tf/quantization/quantize)
 
 ```
  tf.quantization.quantize(
@@ -87,7 +87,7 @@ From this we compute our scaling factor, s:
  
 ```
 
-Now we can quantize the elements of our tensor:
+现在我们可以量化张量的元素：
 
 ```
  result = round(input * s)
@@ -96,7 +96,7 @@ Now we can quantize the elements of our tensor:
 
 One thing to watch out for is that the operator may choose to adjust therequested minimum and maximum values slightly during the quantization process,so you should always use the output ports as the range for further calculations.For example, if the requested minimum and maximum values are close to equal,they will be separated by a small epsilon value to prevent ill-formed quantizedbuffers from being created. Otherwise, you can end up with buffers where all thequantized values map to the same float value, which causes problems foroperations that have to perform further calculations on them.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `float32` .
 - **`min_range`** : A  `Tensor`  of type  `float32` .The minimum scalar value possibly produced for the input.
 - **`max_range`** : A  `Tensor`  of type  `float32` .The maximum scalar value possibly produced for the input.
@@ -106,7 +106,7 @@ One thing to watch out for is that the operator may choose to adjust therequeste
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (output, output_min, output_max).
 
 - **`output`** : A  `Tensor`  of type  `T` .

@@ -32,7 +32,7 @@ Backpropagation will happen only into  `logits` .  To calculate a cross entropyl
 
 **Note that to avoid confusion, it is required to pass only named arguments tothis function.** 
 
-#### Args:
+#### 参数：
 - **`_sentinel`** : Used to prevent positional parameters. Internal, do not use.
 - **`labels`** : Each vector along the class dimension should hold a validprobability distribution e.g. for the case in which labels are of shape `[batch_size, num_classes]` , each row of  `labels[i]`  must be a validprobability distribution.
 - **`logits`** : Per-label activations, typically a linear output. These activationenergies are interpreted as unnormalized log probabilities.
@@ -41,6 +41,6 @@ Backpropagation will happen only into  `logits` .  To calculate a cross entropyl
 - **`axis`** : Alias for dim.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that contains the softmax cross entropy loss. Its type is thesame as  `logits`  and its shape is the same as  `labels`  except that it doesnot have the last dimension of  `labels` .
 

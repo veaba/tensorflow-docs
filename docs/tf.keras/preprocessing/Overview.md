@@ -1,6 +1,6 @@
-Keras data preprocessing utils.
+Keras数据预处理实用程序。
 
-## Modules
+## 模块
 [ `image` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image) module: Set of tools for real-time data augmentation on image data.
 
 [ `sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/sequence) module: Utilities for preprocessing sequence data.

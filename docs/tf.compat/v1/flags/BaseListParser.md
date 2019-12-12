@@ -1,7 +1,7 @@
 
 
 ## Class  `BaseListParser` 
-Base class for a parser of lists of strings.
+字符串列表分析器的基类。
 
 Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentParser)
 
@@ -27,7 +27,7 @@ where token is a character used to tokenize, and name is a descriptionof the sep
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `flag_type` 
@@ -38,7 +38,7 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-See base class.
+见基类。
 
 ###  `parse` 
 
@@ -48,5 +48,5 @@ See base class.
  
 ```
 
-See base class.
+见基类。
 

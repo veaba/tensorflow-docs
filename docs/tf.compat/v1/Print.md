@@ -20,7 +20,7 @@ This is an identity op (behaves like [ `tf.identity` ](https://tensorflow.google
 **Note:**  This op prints to the standard error. It is not currently compatible  with jupyter notebook (printing to the notebook *server's* output, not into  the notebook).
 
 
-#### Args:
+#### 参数：
 - **`input_`** : A tensor passed through this op.
 - **`data`** : A list of tensors to print out when op is evaluated.
 - **`message`** : A string, prefix of the error message.
@@ -29,7 +29,7 @@ This is an identity op (behaves like [ `tf.identity` ](https://tensorflow.google
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type and contents as  `input_` .
 
 ```

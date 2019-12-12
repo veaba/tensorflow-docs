@@ -1,11 +1,11 @@
 
 
 ## Class  `Initializer` 
-Initializer base class: all initializers inherit from this class.
+初始化器基类：所有初始化器都继承自该类。
 
-**Aliases** : [ `tf.compat.v2.initializers.Initializer` ](/api_docs/python/tf/keras/initializers/Initializer), [ `tf.compat.v2.keras.initializers.Initializer` ](/api_docs/python/tf/keras/initializers/Initializer), [ `tf.initializers.Initializer` ](/api_docs/python/tf/keras/initializers/Initializer)
+**别名** : [ `tf.compat.v2.initializers.Initializer` ](/api_docs/python/tf/keras/initializers/Initializer), [ `tf.compat.v2.keras.initializers.Initializer` ](/api_docs/python/tf/keras/initializers/Initializer), [ `tf.initializers.Initializer` ](/api_docs/python/tf/keras/initializers/Initializer)
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -19,9 +19,9 @@ Initializer base class: all initializers inherit from this class.
  
 ```
 
-Returns a tensor object initialized as specified by the initializer.
+返回按初始值设定项指定初始化的张量对象。
 
-#### Args:
+#### 参数：
 - **`shape`** : Shape of the tensor.
 - **`dtype`** : Optional dtype of the tensor. If not provided will return tensorof [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32).
 
@@ -38,9 +38,9 @@ from_config(
  
 ```
 
-Instantiates an initializer from a configuration dictionary.
+从配置字典实例化初始值设定项。
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -50,12 +50,12 @@ initializer = RandomUniform.from_config(config)
  
 ```
 
-#### Args:
+#### 参数：
 - **`config`** : A Python dictionary.It will typically be the output of  `get_config` .
 
 
-#### Returns:
-An Initializer instance.
+#### 返回：
+初始化器实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops_v2.py#L61-L67)
@@ -67,6 +67,6 @@ An Initializer instance.
 
 Returns the configuration of the initializer as a JSON-serializable dict.
 
-#### Returns:
+#### 返回：
 A JSON-serializable Python dict.
 

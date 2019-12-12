@@ -1,6 +1,6 @@
 Built-in loss functions.
 
-## Classes
+## Class 
 [ `class BinaryCrossentropy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/BinaryCrossentropy): Computes the cross-entropy loss between true labels and predicted labels.
 
 [ `class CategoricalCrossentropy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/CategoricalCrossentropy): Computes the crossentropy loss between the labels and predictions.
@@ -33,7 +33,7 @@ Built-in loss functions.
 
 [ `class SquaredHinge` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/SquaredHinge): Computes the squared hinge loss between  `y_true`  and  `y_pred` .
 
-## Functions
+## 功能
 [ `KLD(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/KLD): Computes Kullback-Leibler divergence loss between  `y_true`  and  `y_pred` .
 
 [ `MAE(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/MAE)

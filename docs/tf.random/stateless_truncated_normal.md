@@ -1,6 +1,6 @@
 Outputs deterministic pseudorandom values, truncated normally distributed.
 
-**Aliases** : [ `tf.compat.v1.random.stateless_truncated_normal` ](/api_docs/python/tf/random/stateless_truncated_normal), [ `tf.compat.v2.random.stateless_truncated_normal` ](/api_docs/python/tf/random/stateless_truncated_normal)
+**别名** : [ `tf.compat.v1.random.stateless_truncated_normal` ](/api_docs/python/tf/random/stateless_truncated_normal), [ `tf.compat.v2.random.stateless_truncated_normal` ](/api_docs/python/tf/random/stateless_truncated_normal)
 
 ```
  tf.random.stateless_truncated_normal(
@@ -18,7 +18,7 @@ This is a stateless version of [ `tf.random.truncated_normal` ](https://tensorfl
 
 The generated values follow a normal distribution with specified mean andstandard deviation, except that values whose magnitude is more than 2 standarddeviations from the mean are dropped and re-picked.
 
-#### Args:
+#### 参数：
 - **`shape`** : A 1-D integer Tensor or Python array. The shape of the output tensor.
 - **`seed`** : A shape [2] integer Tensor of seeds to the random number generator.
 - **`mean`** : A 0-D Tensor or Python value of type  `dtype` . The mean of thetruncated normal distribution.
@@ -27,6 +27,6 @@ The generated values follow a normal distribution with specified mean andstandar
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-A tensor of the specified shape filled with random truncated normal values.
+#### 返回：
+指定形状的张量，填充随机截断的法值。
 

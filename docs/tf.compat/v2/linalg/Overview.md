@@ -1,6 +1,6 @@
-Operations for linear algebra.
+线性代数的运算。
 
-## Classes
+## Class 
 [ `class LinearOperator` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperator): Base class defining a [batch of] linear operator[s].
 
 [ `class LinearOperatorAdjoint` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperatorAdjoint):  `LinearOperator`  representing the adjoint of another operator.
@@ -37,7 +37,7 @@ Operations for linear algebra.
 
 [ `class LinearOperatorZeros` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperatorZeros):  `LinearOperator`  acting like a [batch] zero matrix.
 
-## Functions
+## 功能
 [ `adjoint(...)` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/adjoint): Transposes the last two dimensions of and conjugates tensor  `matrix` .
 
 [ `band_part(...)` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/band_part): Copy a tensor setting everything outside a central band in each innermost matrix

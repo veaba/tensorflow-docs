@@ -1,9 +1,9 @@
-Public API for tf.io namespace.
+tf.io命名空间的公共api。
 
-## Modules
+## 模块
 [ `gfile` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile) module: Public API for tf.io.gfile namespace.
 
-## Classes
+## Class 
 [ `class FixedLenFeature` ](https://tensorflow.google.cn/api_docs/python/tf/io/FixedLenFeature): Configuration for parsing a fixed-length input feature.
 
 [ `class FixedLenSequenceFeature` ](https://tensorflow.google.cn/api_docs/python/tf/io/FixedLenSequenceFeature): Configuration for parsing a variable-length input feature into a  `Tensor` .
@@ -16,7 +16,7 @@ Public API for tf.io namespace.
 
 [ `class VarLenFeature` ](https://tensorflow.google.cn/api_docs/python/tf/io/VarLenFeature): Configuration for parsing a variable-length input feature.
 
-## Functions
+## 功能
 [ `decode_and_crop_jpeg(...)` ](https://tensorflow.google.cn/api_docs/python/tf/io/decode_and_crop_jpeg): Decode and Crop a JPEG-encoded image to a uint8 tensor.
 
 [ `decode_base64(...)` ](https://tensorflow.google.cn/api_docs/python/tf/io/decode_base64): Decode web-safe base64-encoded strings.

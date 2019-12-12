@@ -1,13 +1,13 @@
 
 
 ## Class  `Metric` 
-Encapsulates metric logic and state.
+封装度量逻辑和状态。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric), [ `tf.compat.v2.keras.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric), [ `tf.compat.v2.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric), [ `tf.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric)
+**别名** : [ `tf.compat.v1.keras.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric), [ `tf.compat.v2.keras.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric), [ `tf.compat.v2.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric), [ `tf.metrics.Metric` ](/api_docs/python/tf/keras/metrics/Metric)
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -18,7 +18,7 @@ print('Final result: ', m.result().numpy())
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Sequential()
@@ -46,7 +46,7 @@ To be implemented by subclasses:
 -  `__init__()` : All state variables should be created in this method bycalling  `self.add_weight()`  like:  `self.var = self.add_weight(...)` 
 -  `update_state()` : Has all updates to the state variables like:self.var.assign_add(...).
 -  `result()` : Computes and returns a value for the metricfrom the state variables.
-Example subclass implementation:
+子类实现示例：
 
 ```
  class BinaryTruePositives(tf.keras.metrics.Metric):
@@ -99,7 +99,7 @@ __new__(
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `add_weight` 
@@ -117,7 +117,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Adds state variable. Only for use by subclasses.
+添加状态变量。只供子类使用。
 
 ###  `reset_states` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L203-L209)
@@ -127,7 +127,7 @@ Adds state variable. Only for use by subclasses.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -139,7 +139,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -154,11 +154,11 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates statistics for the metric.
+累积度量的统计信息。
 
 
 **Note:**  This function is executed as a graph function in graph mode.This means:  a) Operations on the same resource are executed in textual order.     This should make it easier to do things like add the updated     value of a variable to another, for example.  b) You don't need to worry about collecting the update ops to execute.     All update ops added to the graph by this function will be executed.  As a result, code should generally work the same way with graph or  eager execution.
 Please use [ `tf.config.experimental_run_functions_eagerly(True)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental_run_functions_eagerly) to executethis function eagerly for debugging or profiling.
 
-#### Args:
+#### 参数：
 - **`*args`** : * **`**kwargs`** : A mini-batch of inputs to the Metric.

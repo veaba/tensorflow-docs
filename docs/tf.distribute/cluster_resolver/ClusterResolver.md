@@ -1,9 +1,9 @@
 
 
 ## Class  `ClusterResolver` 
-Abstract class for all implementations of ClusterResolvers.
+所有ClusterResolver实现的抽象类。
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.ClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.ClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.ClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.ClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
 This defines the skeleton for all implementations of ClusterResolvers.ClusterResolvers are a way for TensorFlow to communicate with various clustermanagement systems (e.g. GCE, AWS, etc...).
 
@@ -16,11 +16,11 @@ Note to Implementors: In addition to these abstract methods, you must alsoimplem
 - rpc_layer is the protocol used by TensorFlow to communicate with otherTensorFlow servers in a distributed environment.
 
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
 There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
@@ -28,7 +28,7 @@ If you are implementing a ClusterResolver that works in both the Googleenvironme
 
 Otherwise, if you are implementing a ClusterResolver that will only workin open-source TensorFlow, you do not need to implement this property.
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -39,9 +39,9 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
  
 ```
 
-Retrieve the current state of the cluster and return a ClusterSpec.
+检索集群的当前状态并返回集群规范。
 
-#### Returns:
+#### 返回：
 A ClusterSpec representing the state of the cluster at the moment thisfunction is called.
 
 Implementors of this function must take care in ensuring that theClusterSpec returned is up-to-date at the time of calling this function.This usually means retrieving the information from the underlying clustermanagement system every time this function is invoked and reconstructinga cluster_spec, rather than attempting to cache anything.
@@ -58,16 +58,16 @@ Implementors of this function must take care in ensuring that theClusterSpec ret
  
 ```
 
-Retrieves the name or URL of the session master.
+检索会话主机的名称或url。
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the master.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the master.
 - **`rpc_layer`** : (Optional) The RPC protocol for the given cluster.
 
 
-#### Returns:
-The name or URL of the session master.
+#### 返回：
+会话主机的名称或url。
 
 Implementors of this function must take care in ensuring that the masterreturned is up-to-date at the time to calling this function. This usuallymeans retrieving the master every time this function is invoked.
 
@@ -83,18 +83,18 @@ Implementors of this function must take care in ensuring that the masterreturned
  
 ```
 
-Returns the number of accelerator cores per worker.
+返回每个工作进程的加速器核心数。
 
 This returns the number of accelerator cores (such as GPUs and TPUs)available per worker.
 
 Optionally, we allow callers to specify the task_type, and task_id, forif they want to target a specific TensorFlow process to querythe number of accelerators. This is to support heterogenous environments,where the number of accelerators cores per host is different.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the machine wewant to query.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the machine wewant to query.
 - **`config_proto`** : (Optional) Configuration for starting a new session toquery how many accelerator cores it has.
 
 
-#### Returns:
-A map of accelerator types to number of cores.
+#### 返回：
+加速器类型与核心数的映射。
 

@@ -1,11 +1,11 @@
 
 
 ## Class  `HDF5Matrix` 
-Representation of HDF5 dataset to be used instead of a Numpy array.
+要使用的HDF5数据集的表示形式，而不是numpy数组。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.HDF5Matrix` ](/api_docs/python/tf/keras/utils/HDF5Matrix), [ `tf.compat.v2.keras.utils.HDF5Matrix` ](/api_docs/python/tf/keras/utils/HDF5Matrix)
+**别名** : [ `tf.compat.v1.keras.utils.HDF5Matrix` ](/api_docs/python/tf/keras/utils/HDF5Matrix), [ `tf.compat.v2.keras.utils.HDF5Matrix` ](/api_docs/python/tf/keras/utils/HDF5Matrix)
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -18,7 +18,7 @@ Providing  `start`  and  `end`  allows use of a slice of the dataset.
 
 Optionally, a normalizer function (or lambda) can be given. This willbe called on every slice of data retrieved.
 
-#### Arguments:
+#### 参数：
 - **`datapath`** : string, path to a HDF5 file
 - **`dataset`** : string, name of the HDF5 dataset in the file specifiedin datapath
 - **`start`** : int, start of desired slice of the specified dataset
@@ -26,7 +26,7 @@ Optionally, a normalizer function (or lambda) can be given. This willbe called o
 - **`normalizer`** : function to be called on data when retrieved
 
 
-#### Returns:
+#### 返回：
 An array-like HDF5 dataset.
 
 ##  `__init__` 
@@ -45,34 +45,34 @@ An array-like HDF5 dataset.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `dtype` 
-Gets the datatype of the dataset.
+获取数据集的数据类型。
 
-#### Returns:
-A numpy dtype string.
+#### 返回：
+numpy数据类型字符串。
 
 ###  `ndim` 
-Gets the number of dimensions (rank) of the dataset.
+获取数据集的维度（列组）数。
 
-#### Returns:
-An integer denoting the number of dimensions (rank) of the dataset.
+#### 返回：
+表示数据集维数（秩）的整数。
 
 ###  `shape` 
 Gets a numpy-style shape tuple giving the dataset dimensions.
 
-#### Returns:
+#### 返回：
 A numpy-style shape tuple.
 
 ###  `size` 
-Gets the total dataset size (number of elements).
+获取数据集的总大小（元素数）。
 
-#### Returns:
-An integer denoting the number of elements in the dataset.
+#### 返回：
+表示数据集中元素数的整数。
 
-## Methods
+## 方法
 
 
 ###  `__getitem__` 
@@ -91,5 +91,5 @@ An integer denoting the number of elements in the dataset.
  
 ```
 
-## Class Members
+## Class 成员
 -  `refs`  []()

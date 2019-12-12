@@ -1,6 +1,6 @@
 Returns  `True`  if the elements of  `tensor`  are numbers.
 
-**Aliases** : [ `tf.compat.v1.debugging.is_numeric_tensor` ](/api_docs/python/tf/debugging/is_numeric_tensor), [ `tf.compat.v1.is_numeric_tensor` ](/api_docs/python/tf/debugging/is_numeric_tensor), [ `tf.compat.v2.debugging.is_numeric_tensor` ](/api_docs/python/tf/debugging/is_numeric_tensor)
+**别名** : [ `tf.compat.v1.debugging.is_numeric_tensor` ](/api_docs/python/tf/debugging/is_numeric_tensor), [ `tf.compat.v1.is_numeric_tensor` ](/api_docs/python/tf/debugging/is_numeric_tensor), [ `tf.compat.v2.debugging.is_numeric_tensor` ](/api_docs/python/tf/debugging/is_numeric_tensor)
 
 ```
  tf.debugging.is_numeric_tensor(tensor)

@@ -1,11 +1,11 @@
 
 
 ## Class  `SlurmClusterResolver` 
-ClusterResolver for system with Slurm workload manager.
+具有slurm工作负载管理器的系统的ClusterResolver。
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.SlurmClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SlurmClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.SlurmClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SlurmClusterResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.SlurmClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SlurmClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.SlurmClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SlurmClusterResolver)
 
 This is an implementation of cluster resolvers for Slurm clusters. This allowsthe specification of jobs and task counts, number of tasks per node, number ofGPUs on each node and number of GPUs for each task. It retrieves systemattributes by Slurm environment variables, resolves allocated computing nodenames, constructs a cluster and returns a ClusterResolver object which can beuse for distributed TensorFlow.
 
@@ -25,11 +25,11 @@ This is an implementation of cluster resolvers for Slurm clusters. This allowsth
  
 ```
 
-Creates a new SlurmClusterResolver object.
+创建新的slurmClusterResolver对象。
 
 This takes in parameters and creates a SlurmClusterResolver object. It usesthose parameters to check which nodes will processes reside on and resolvestheir hostnames. With the number of the GPUs on each node and number of GPUsfor each task it offsets the port number for each process and allocatesGPUs to tasks by setting environment variables. The resolver currentlysupports homogeneous tasks and default Slurm process allocation.
 
-#### Args:
+#### 参数：
 - **`jobs`** : Dictionary with job names as key and number of tasks in the job asvalue.
 - **`port_base`** : The first port number to start with for processes on a node.
 - **`gpus_per_node`** : Number of GPUs available on each node.
@@ -39,18 +39,18 @@ This takes in parameters and creates a SlurmClusterResolver object. It usesthose
 - **`rpc_layer`** : (Optional) The protocol TensorFlow uses to communicate betweennodes. Defaults to 'grpc'.
 
 
-#### Returns:
-A ClusterResolver object which can be used with distributed TensorFlow.
+#### 返回：
+可用于分布式TensorFlow的ClusterResolver对象。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If requested more GPUs per node then available or requestedmore tasks then assigned tasks.
 
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
 There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
@@ -58,7 +58,7 @@ If you are implementing a ClusterResolver that works in both the Googleenvironme
 
 Otherwise, if you are implementing a ClusterResolver that will only workin open-source TensorFlow, you do not need to implement this property.
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -69,11 +69,11 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
  
 ```
 
-Returns a ClusterSpec object based on the latest instance group info.
+根据最新的实例组信息返回ClusterSpec对象。
 
 This returns a ClusterSpec object for use based on information from thespecified initialization parameters and Slurm environment variables. Thecluster specification is resolved each time this function is called. Theresolver extract hostnames of nodes by scontrol and pack tasks in thatorder until a node a has number of tasks that is equal to specification.GPUs on nodes are allocated to tasks by specification through settingCUDA_VISIBLE_DEVICES environment variable.
 
-#### Returns:
+#### 返回：
 A ClusterSpec containing host information retrieved from Slurm's  environment variables.
 
 ###  `get_task_info` 
@@ -88,7 +88,7 @@ Returns job name and task_id for the process which calls this.
 
 This returns the job name and task index for the process which calls thisfunction according to its rank and cluster specification. The job name andtask index are set after a cluster is constructed by cluster_spec otherwisedefaults to None.
 
-#### Returns:
+#### 返回：
 A string specifying job name the process belongs to and an integner  specifying the task index the process belongs to in that job.
 
 ###  `master` 
@@ -103,16 +103,16 @@ A string specifying job name the process belongs to and an integner  specifying 
  
 ```
 
-Returns the master string for connecting to a TensorFlow master.
+返回用于连接TensorFlow主控形状的主字符串。
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) Overrides the default auto-selected task type.
 - **`task_id`** : (Optional) Overrides the default auto-slected task index.
 - **`rpc_layer`** : (Optional) Overrides the default RPC protocol TensorFlow usesto communicate across nodes.
 
 
-#### Returns:
-A connection string for connecting to a TensorFlow master.
+#### 返回：
+用于连接tensorflow主机的连接字符串。
 
 ###  `num_accelerators` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/slurm_cluster_resolver.py#L220-L226)
@@ -126,18 +126,18 @@ A connection string for connecting to a TensorFlow master.
  
 ```
 
-Returns the number of accelerator cores per worker.
+返回每个工作进程的加速器核心数。
 
 This returns the number of accelerator cores (such as GPUs and TPUs)available per worker.
 
 Optionally, we allow callers to specify the task_type, and task_id, forif they want to target a specific TensorFlow process to querythe number of accelerators. This is to support heterogenous environments,where the number of accelerators cores per host is different.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the machine wewant to query.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the machine wewant to query.
 - **`config_proto`** : (Optional) Configuration for starting a new session toquery how many accelerator cores it has.
 
 
-#### Returns:
-A map of accelerator types to number of cores.
+#### 返回：
+加速器类型与核心数的映射。
 

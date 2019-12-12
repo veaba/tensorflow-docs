@@ -18,7 +18,7 @@ If input_tensor is  `["emerson", "lake", "palmer", "king", "crimson"]` ,the look
 
 If  `initializer`  is None, only out-of-vocabulary buckets are used.
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -49,34 +49,34 @@ The hash function used for generating out-of-vocabulary buckets ID isFingerprint
 
 Construct a  `StaticVocabularyTable`  object.
 
-#### Args:
+#### 参数：
 - **`initializer`** : A TableInitializerBase object that contains the data used toinitialize the table. If None, then we only use out-of-vocab buckets.
 - **`num_oov_buckets`** : Number of buckets to use for out-of-vocabulary keys. Mustbe greater than zero.
 - **`lookup_key_dtype`** : Data type of keys passed to  `lookup` . Defaults to `initializer.key_dtype`  if  `initializer`  is specified, otherwise[ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string). Must be string or integer, and must be castable to `initializer.key_dtype` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : when  `num_oov_buckets`  is not positive.
 - **`TypeError`** : when lookup_key_dtype or initializer.key_dtype are notinteger or string. Also when initializer.value_dtype != int64.
 
 
-## Properties
+## 属性
 
 
 ###  `key_dtype` 
-The table key dtype.
+表键dtype。
 
 ###  `name` 
-The name of the table.
+表的名称。
 
 ###  `resource_handle` 
-Returns the resource handle associated with this Resource.
+返回与此资源关联的资源句柄。
 
 ###  `value_dtype` 
-The table value dtype.
+表值dtype。
 
-## Methods
+## 方法
 
 
 ###  `lookup` 
@@ -94,15 +94,15 @@ Looks up  `keys`  in the table, outputs the corresponding values.
 
 It assigns out-of-vocabulary keys to buckets based in their hashes.
 
-#### Args:
+#### 参数：
 - **`keys`** : Keys to look up. May be either a  `SparseTensor`  or dense  `Tensor` .
 - **`name`** : Optional name for the op.
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  if keys are sparse, otherwise a dense  `Tensor` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : when  `keys`  doesn't match the table key data type.
 
 
@@ -114,5 +114,5 @@ A  `SparseTensor`  if keys are sparse, otherwise a dense  `Tensor` .
  
 ```
 
-Compute the number of elements in this table.
+计算此表中的元素数。
 

@@ -1,4 +1,4 @@
-Counts the number of occurrences of each value in an integer array.
+计算整数数组中每个值的出现次数。
 
 ```
  tf.math.bincount(
@@ -33,7 +33,7 @@ tf.math.bincount(values, weights=weights) #[0 6 0 1 9 5]
 
 Bin will be incremented by the corresponding weight instead of 1.Here, index 1 in output has a value 6. This is the summation of weightscorresponding to the value in  `values` .
 
-#### Args:
+#### 参数：
 - **`arr`** : An int32 tensor of non-negative values.
 - **`weights`** : If non-None, must be the same shape as arr. For each value in `arr` , the bin will be incremented by the corresponding weight instead of1.
 - **`minlength`** : If given, ensures the output has length at least  `minlength` ,padding with zeros at the end if necessary.
@@ -42,9 +42,9 @@ Bin will be incremented by the corresponding weight instead of 1.Here, index 1 i
 - **`name`** : A name scope for the associated operations (optional).
 
 
-#### Returns:
+#### 返回：
 A vector with the same dtype as  `weights`  or the given  `dtype` . The binvalues.
 
-#### Raises:
+#### 加薪：
  `InvalidArgumentError`  if negative values are provided as an input.
 

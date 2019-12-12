@@ -1,6 +1,6 @@
-Callbacks: utilities called at certain points during model training.
+回调：模型训练期间在某些点调用的实用程序。
 
-## Classes
+## Class 
 [ `class BaseLogger` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/BaseLogger): Callback that accumulates epoch averages of metrics.
 
 [ `class CSVLogger` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/CSVLogger): Callback that streams epoch results to a csv file.

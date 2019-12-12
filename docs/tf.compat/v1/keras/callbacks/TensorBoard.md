@@ -1,11 +1,11 @@
 
 
 ## Class  `TensorBoard` 
-Enable visualizations for TensorBoard.
+启用TensorBoard的可视化。
 
 Inherits From: [ `Callback` ](https://tensorflow.google.cn/api_docs/python/tf/keras/callbacks/Callback)
 
-TensorBoard is a visualization tool provided with TensorFlow.
+TensorBoard是TensorFlow提供的可视化工具。
 
 This callback logs events for TensorBoard, including:
 
@@ -22,7 +22,7 @@ If you have installed TensorFlow with pip, you should be ableto launch TensorBoa
 
 You can find more information about TensorBoard[here](https://tensorflow.google.cn/get_started/summaries_and_tensorboard).
 
-#### Arguments:
+#### 参数：
 - **`log_dir`** : the path of the directory where to save the log files to beparsed by TensorBoard.
 - **`histogram_freq`** : frequency (in epochs) at which to compute activation andweight histograms for the layers of the model. If set to 0, histogramswon't be computed. Validation data (or split) must be specified forhistogram visualizations.
 - **`write_graph`** : whether to visualize the graph in TensorBoard. The log filecan become quite large when write_graph is set to True.
@@ -37,11 +37,11 @@ You can find more information about TensorBoard[here](https://tensorflow.google.
 - **`profile_batch`** : Profile the batch to sample compute characteristics. Bydefault, it will profile the second batch. Set profile_batch=0 todisable profiling.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If histogram_freq is set and no validation data is provided.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Using the  `TensorBoard`  callback will work when eager execution is enabled,with the restriction that outputting histogram summaries of weights andgradients is not supported. Consequently,  `histogram_freq`  will be ignored.
 
 ##  `__init__` 
@@ -67,7 +67,7 @@ Using the  `TensorBoard`  callback will work when eager execution is enabled,wit
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `on_batch_begin` 
@@ -94,7 +94,7 @@ A backwards compatibility alias for  `on_train_batch_begin` .
  
 ```
 
-Writes scalar summaries for metrics on every training batch.
+为每个培训批次的指标编写标量摘要。
 
 Performs profiling if current batch is in profiler_batches.
 
@@ -137,9 +137,9 @@ Checks if summary ops should run next epoch, logs scalar summaries.
 
 Called at the beginning of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -157,9 +157,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a batch in  `predict`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -172,11 +172,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of prediction.
+在预测开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -188,11 +188,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of prediction.
+在预测结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -211,9 +211,9 @@ Called at the beginning of a batch in  `evaluate`  methods.
 
 Also called at the beginning of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -233,9 +233,9 @@ Called at the end of a batch in  `evaluate`  methods.
 
 Also called at the end of a validation batch in the  `fit` methods, if validation data is provided.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -248,11 +248,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of evaluation or validation.
+在评估或验证开始时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -264,11 +264,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of evaluation or validation.
+在评估或验证结束时调用。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -285,9 +285,9 @@ Subclasses should override for any actions to run.
 
 Called at the beginning of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Has keys  `batch`  and  `size`  representing the current batchnumber and the size of the batch.
 
@@ -305,9 +305,9 @@ Subclasses should override for any actions to run.
 
 Called at the end of a training batch in  `fit`  methods.
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`batch`** : integer, index of batch within the current epoch.
 - **`logs`** : dict. Metric results for this batch.
 
@@ -320,11 +320,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the beginning of training.
+在训练开始时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -336,11 +336,11 @@ Subclasses should override for any actions to run.
  
 ```
 
-Called at the end of training.
+训练结束时打电话来。
 
-Subclasses should override for any actions to run.
+子类应该重写以运行任何操作。
 
-#### Arguments:
+#### 参数：
 - **`logs`** : dict. Currently no data is passed to this argument for this methodbut that may change in the future.
 
 
@@ -352,7 +352,7 @@ Subclasses should override for any actions to run.
  
 ```
 
-Sets Keras model and creates summary ops.
+设置Keras模型并创建摘要操作。
 
 ###  `set_params` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/callbacks.py#L458-L459)

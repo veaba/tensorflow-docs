@@ -1,6 +1,6 @@
 Reshapes a  `SparseTensor`  to represent values in a new dense shape.
 
-**Aliases** : [ `tf.compat.v1.sparse.reshape` ](/api_docs/python/tf/sparse/reshape), [ `tf.compat.v1.sparse_reshape` ](/api_docs/python/tf/sparse/reshape), [ `tf.compat.v2.sparse.reshape` ](/api_docs/python/tf/sparse/reshape)
+**别名** : [ `tf.compat.v1.sparse.reshape` ](/api_docs/python/tf/sparse/reshape), [ `tf.compat.v1.sparse_reshape` ](/api_docs/python/tf/sparse/reshape), [ `tf.compat.v2.sparse.reshape` ](/api_docs/python/tf/sparse/reshape)
 
 ```
  tf.sparse.reshape(
@@ -37,16 +37,16 @@ and  `shape`  is  `[9, -1]` , then the output will be a  `SparseTensor`  ofshape
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The input  `SparseTensor` .
 - **`shape`** : A 1-D (vector) int64  `Tensor`  specifying the new dense shape of therepresented  `SparseTensor` .
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  with the same non-empty values but with indices calculatedby the new dense shape.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
 - **`ValueError`** :  If argument  `shape`  requests a  `SparseTensor`  with a differentnumber of elements than  `sp_input` .
 - **`ValueError`** :  If  `shape`  has more than one inferred (== -1) dimension.

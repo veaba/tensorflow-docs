@@ -1,7 +1,7 @@
 
 
 ## Class  `name_scope` 
-A context manager for use when defining a Python op.
+定义python操作时使用的上下文管理器。
 
 This context manager validates that the given  `values`  are from thesame graph, makes that graph the default graph, and pushes aname scope in that graph (see[ `tf.Graph.name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/Graph#name_scope)for more details on that).
 
@@ -28,25 +28,25 @@ For example, to define a new Python op called  `my_op` :
  
 ```
 
-Initialize the context manager.
+初始化上下文管理器。
 
-#### Args:
+#### 参数：
 - **`name`** : The name argument that is passed to the op function.
 - **`default_name`** : The default name to use if the  `name`  argument is  `None` .
 - **`values`** : The list of  `Tensor`  arguments that are passed to the op function.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if  `default_name`  is passed in but not a string.
 
 
-## Properties
+## 属性
 
 
 ###  `name` 
 
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -57,12 +57,12 @@ Initialize the context manager.
  
 ```
 
-Start the scope block.
+启动范围块。
 
-#### Returns:
-The scope name.
+#### 返回：
+作用域名称。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if neither  `name`  nor  `default_name`  is providedbut  `values`  are.
 
 

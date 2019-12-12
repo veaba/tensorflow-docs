@@ -1,9 +1,9 @@
 
 
 ## Class  `TFRecordOptions` 
-Options used for manipulating TFRecord files.
+用于操作tfrecord文件的选项。
 
-**Aliases** : [ `tf.compat.v1.io.TFRecordOptions` ](/api_docs/python/tf/io/TFRecordOptions), [ `tf.compat.v1.python_io.TFRecordOptions` ](/api_docs/python/tf/io/TFRecordOptions), [ `tf.compat.v2.io.TFRecordOptions` ](/api_docs/python/tf/io/TFRecordOptions)
+**别名** : [ `tf.compat.v1.io.TFRecordOptions` ](/api_docs/python/tf/io/TFRecordOptions), [ `tf.compat.v1.python_io.TFRecordOptions` ](/api_docs/python/tf/io/TFRecordOptions), [ `tf.compat.v2.io.TFRecordOptions` ](/api_docs/python/tf/io/TFRecordOptions)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/lib/io/tf_record.py#L52-L100)
@@ -27,7 +27,7 @@ Creates a  `TFRecordOptions`  instance.
 
 Options only effect TFRecordWriter when compression_type is not  `None` .Documentation, details, and defaults can be found in[ `zlib_compression_options.h` ](https://tensorflow.google.cn/code/tensorflow/core/lib/io/zlib_compression_options.h)and in the [zlib manual](http://www.zlib.net/manual.html).Leaving an option as  `None`  allows C++ to set a reasonable default.
 
-#### Args:
+#### 参数：
 - **`compression_type`** :  `"GZIP"` ,  `"ZLIB"` , or  `""`  (no compression).
 - **`flush_mode`** : flush mode or  `None` , Default: Z_NO_FLUSH.
 - **`input_buffer_size`** : int or  `None` .
@@ -39,14 +39,14 @@ Options only effect TFRecordWriter when compression_type is not  `None` .Documen
 - **`compression_strategy`** : strategy or  `None` . Default: Z_DEFAULT_STRATEGY.
 
 
-#### Returns:
+#### 返回：
 A  `TFRecordOptions`  object.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If compression_type is invalid.
 
 
-## Methods
+## 方法
 
 
 ###  `get_compression_type_string` 
@@ -61,18 +61,18 @@ get_compression_type_string(
  
 ```
 
-Convert various option types to a unified string.
+将各种选项类型转换为统一字符串。
 
-#### Args:
+#### 参数：
 - **`options`** :  `TFRecordOption` ,  `TFRecordCompressionType` , or string.
 
 
-#### Returns:
+#### 返回：
 Compression type as string (e.g.  `'ZLIB'` ,  `'GZIP'` , or  `''` ).
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If compression_type is invalid.
 
 
-## Class Members
+## Class 成员
 -  `compression_type_map`  []()

@@ -1,9 +1,9 @@
 
 
 ## Class  `TestCase` 
-Base class for tests that need to test TensorFlow.
+需要测试tensorflow的测试的基类。
 
-**Aliases** : [ `tf.compat.v1.test.TestCase` ](/api_docs/python/tf/test/TestCase), [ `tf.compat.v2.test.TestCase` ](/api_docs/python/tf/test/TestCase)
+**别名** : [ `tf.compat.v1.test.TestCase` ](/api_docs/python/tf/test/TestCase), [ `tf.compat.v2.test.TestCase` ](/api_docs/python/tf/test/TestCase)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/test_util.py#L1757-L1769)
@@ -14,10 +14,10 @@ Base class for tests that need to test TensorFlow.
 
 Create an instance of the class that will use the named testmethod when executed. Raises a ValueError if the instance doesnot have a method with the specified name.
 
-## Child Classes
+## 子类
 [ `class failureException` ](https://tensorflow.google.cn/api_docs/python/tf/test/TestCase/failureException)
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -27,7 +27,7 @@ Create an instance of the class that will use the named testmethod when executed
  __call__(    *args,    **kwds) 
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `__eq__` 
 
@@ -53,7 +53,7 @@ Return self==value.
 
 Add a function, with arguments, to be called when the test iscompleted. Functions added are called on a LIFO basis and arecalled after tearDown on test failure or success.
 
-Cleanup items are called even if setUp fails (unlike tearDown).
+即使安装失败，也会调用清理项（与拆卸不同）。
 
 ###  `addTypeEqualityFunc` 
 
@@ -66,11 +66,11 @@ Cleanup items are called even if setUp fails (unlike tearDown).
  
 ```
 
-Add a type specific assertEqual style function to compare a type.
+添加特定于类型的asserteQual样式函数以比较类型。
 
 This method is for use by TestCase subclasses that need to registertheir own type equality functions to provide nicer error messages.
 
-#### Args:
+#### 参数：
 - **`typeobj`** : The data type to call this function on when both values    are of the same type in assertEqual().
 - **`function`** : The callable taking two arguments and an optional    msg= argument that raises self.failureException with a    useful error message when the two arguments are not equal.
 
@@ -93,7 +93,7 @@ Asserts that two structures of numpy arrays or Tensors, have near values.
 
  `a`  and  `b`  can be arbitrarily nested structures. A layer of a nestedstructure can be a  `dict` ,  `namedtuple` ,  `tuple`  or  `list` .
 
-#### Args:
+#### 参数：
 - **`a`** : The expected numpy  `ndarray` , or anything that can be converted into anumpy  `ndarray`  (including Tensor), or any arbitrarily nested ofstructure of these.
 - **`b`** : The actual numpy  `ndarray` , or anything that can be converted into anumpy  `ndarray`  (including Tensor), or any arbitrarily nested ofstructure of these.
 - **`rtol`** : relative tolerance.
@@ -101,7 +101,7 @@ Asserts that two structures of numpy arrays or Tensors, have near values.
 - **`msg`** : Optional message to report on failure.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if only one of  `a[p]`  and  `b[p]`  is a dict or `a[p]`  and  `b[p]`  have different length, where  `[p]`  denotes a pathto the nested structure, e.g. given  `a = [(1, 1), {'d': (6, 7)}]`  and `[p] = [1]['d']` , then  `a[p] = (6, 7)` .
 
 
@@ -129,7 +129,7 @@ Like assertAllClose, but also suitable for comparing fp16 arrays.
 
 In particular, the tolerance is reduced to 1e-3 if at leastone of the arguments is of type float16.
 
-#### Args:
+#### 参数：
 - **`a`** : the expected numpy ndarray or anything can be converted to one.
 - **`b`** : the actual numpy ndarray or anything can be converted to one.
 - **`rtol`** : relative tolerance.
@@ -155,9 +155,9 @@ In particular, the tolerance is reduced to 1e-3 if at leastone of the arguments 
  
 ```
 
-Asserts that two numpy arrays or Tensors have the same values.
+断言两个numpy数组或张量具有相同的值。
 
-#### Args:
+#### 参数：
 - **`a`** : the expected numpy ndarray or anything can be converted to one.
 - **`b`** : the actual numpy ndarray or anything can be converted to one.
 - **`msg`** : Optional message to report on failure.
@@ -174,9 +174,9 @@ Asserts that two numpy arrays or Tensors have the same values.
  
 ```
 
-Assert element values are all greater than a target value.
+断言元素值都大于目标值。
 
-#### Args:
+#### 参数：
 - **`a`** : The numpy  `ndarray` , or anything that can be converted into a numpy `ndarray`  (including Tensor).
 - **`comparison_target`** : The target value of comparison.
 
@@ -192,9 +192,9 @@ Assert element values are all greater than a target value.
  
 ```
 
-Assert element values are all greater than or equal to a target value.
+断言元素值都大于或等于目标值。
 
-#### Args:
+#### 参数：
 - **`a`** : The numpy  `ndarray` , or anything that can be converted into a numpy `ndarray`  (including Tensor).
 - **`comparison_target`** : The target value of comparison.
 
@@ -213,9 +213,9 @@ Assert element values are all greater than or equal to a target value.
  
 ```
 
-Assert that elements in a Tensor are all in a given range.
+断言张量中的元素都在给定的范围内。
 
-#### Args:
+#### 参数：
 - **`target`** : The numpy  `ndarray` , or anything that can be converted into anumpy  `ndarray`  (including Tensor).
 - **`lower_bound`** : lower bound of the range
 - **`upper_bound`** : upper bound of the range
@@ -223,7 +223,7 @@ Assert that elements in a Tensor are all in a given range.
 - **`open_upper_bound`** : ( `bool` ) whether the upper bound is open (i.e., < ratherthan the default <=)
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** :   if the value tensor does not have an ordered numeric type (float* orint*), orif there are nan values, orif any of the elements do not fall in the specified range.
 
 
@@ -238,14 +238,14 @@ Assert that elements in a Tensor are all in a given range.
  
 ```
 
-Assert that elements of a Tensor are all in a given closed set.
+断言张量的元素都在给定的闭集中。
 
-#### Args:
+#### 参数：
 - **`target`** : The numpy  `ndarray` , or anything that can be converted into anumpy  `ndarray`  (including Tensor).
 - **`expected_set`** : ( `list` ,  `tuple`  or  `set` ) The closed set that the elementsof the value of  `target`  are expected to fall into.
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** :   if any of the elements do not fall into  `expected_set` .
 
 
@@ -260,9 +260,9 @@ Assert that elements of a Tensor are all in a given closed set.
  
 ```
 
-Assert element values are all less than a target value.
+断言元素值都小于目标值。
 
-#### Args:
+#### 参数：
 - **`a`** : The numpy  `ndarray` , or anything that can be converted into a numpy `ndarray`  (including Tensor).
 - **`comparison_target`** : The target value of comparison.
 
@@ -278,9 +278,9 @@ Assert element values are all less than a target value.
  
 ```
 
-Assert element values are all less than or equal to a target value.
+断言元素值都小于或等于目标值。
 
-#### Args:
+#### 参数：
 - **`a`** : The numpy  `ndarray` , or anything that can be converted into a numpy `ndarray`  (including Tensor).
 - **`comparison_target`** : The target value of comparison.
 
@@ -329,11 +329,11 @@ If the two objects compare equal then they will automaticallycompare almost equa
  
 ```
 
-Asserts that two float arrays are near each other.
+断言两个浮点数组彼此靠近。
 
 Checks that for all elements of farray1 and farray2|f1 - f2| < err.  Asserts a test failure if not.
 
-#### Args:
+#### 参数：
 - **`farray1`** : a list of float values.
 - **`farray2`** : a list of float values.
 - **`err`** : a float value.
@@ -353,7 +353,7 @@ Checks that for all elements of farray1 and farray2|f1 - f2| < err.  Asserts a t
  
 ```
 
-Asserts that value is between minv and maxv (inclusive).
+断言该值介于minv和maxv（包括）之间。
 
 ###  `assertCommandFails` 
 
@@ -369,12 +369,12 @@ Asserts that value is between minv and maxv (inclusive).
  
 ```
 
-Asserts a shell command fails and the error matches a regex in a list.
+断言shell命令失败，错误与列表中的正则表达式匹配。
 
-#### Args:
+#### 参数：
 - **`command`** : List or string representing the command to run.
 - **`regexes`** : the list of regular expression strings.
-- **`env`** : Dictionary of environment variable settings. If None, no environmentvariables will be set for the child process. This is to make testsmore hermetic. NOTE: this behavior is different than the standardsubprocess module.
+- **`env`** : Dictionary of environment variable settings. If None, no environmentvariables will be set for the child process. This is to make testsmore hermetic. 注意：this behavior is different than the standardsubprocess module.
 - **`close_fds`** : Whether or not to close all open fd's in the child afterforking.
 - **`msg`** : Optional message to report on failure.
 
@@ -395,10 +395,10 @@ Asserts a shell command fails and the error matches a regex in a list.
 
 Asserts that a shell command succeeds (i.e. exits with code 0).
 
-#### Args:
+#### 参数：
 - **`command`** : List or string representing the command to run.
 - **`regexes`** : List of regular expression byte strings that match success.
-- **`env`** : Dictionary of environment variable settings. If None, no environmentvariables will be set for the child process. This is to make testsmore hermetic. NOTE: this behavior is different than the standardsubprocess module.
+- **`env`** : Dictionary of environment variable settings. If None, no environmentvariables will be set for the child process. This is to make testsmore hermetic. 注意：this behavior is different than the standardsubprocess module.
 - **`close_fds`** : Whether or not to close all open fd's in the child afterforking.
 - **`msg`** : Optional message to report on failure.
 
@@ -415,11 +415,11 @@ Asserts that a shell command succeeds (i.e. exits with code 0).
  
 ```
 
-Asserts that "container" contains "subsequence" as an exact subsequence.
+断言“container”包含“subsequence”作为确切的子序列。
 
 Asserts that "container" contains all the elements of "subsequence", inorder, and without other elements interspersed. For example, [1, 2, 3] is anexact subsequence of [0, 0, 1, 2, 3, 0] but not of [0, 0, 1, 2, 0, 3, 0].
 
-#### Args:
+#### 参数：
 - **`container`** : the list we're testing for subsequence inclusion.
 - **`subsequence`** : the list we hope will be an exact subsequence of container.
 - **`msg`** : Optional message to report on failure.
@@ -437,11 +437,11 @@ Asserts that "container" contains all the elements of "subsequence", inorder, an
  
 ```
 
-Asserts that the strings provided are found in the target in order.
+断言提供的字符串按顺序在目标中找到。
 
-This may be useful for checking HTML output.
+这对于检查html输出可能很有用。
 
-#### Args:
+#### 参数：
 - **`strings`** : A list of strings, such as [ 'fox', 'dog' ]
 - **`target`** : A target string in which to look for the strings, such as'The quick brown fox jumped over the lazy dog'.
 - **`msg`** : Optional message to report on failure.
@@ -459,11 +459,11 @@ This may be useful for checking HTML output.
  
 ```
 
-Asserts that "container" contains "subsequence" as a subsequence.
+断言“container”包含作为子序列的“subsequence”。
 
 Asserts that "container" contains all the elements of "subsequence", inorder, but possibly with other elements interspersed. For example, [1, 2, 3]is a subsequence of [0, 0, 1, 2, 0, 3, 0] but not of [0, 0, 1, 3, 0, 2, 0].
 
-#### Args:
+#### 参数：
 - **`container`** : the list we're testing for subsequence inclusion.
 - **`subsequence`** : the list we hope will be a subsequence of container.
 - **`msg`** : Optional message to report on failure.
@@ -481,7 +481,7 @@ Asserts that "container" contains all the elements of "subsequence", inorder, bu
  
 ```
 
-Checks whether actual iterable is a superset of expected iterable.
+检查实际iterable是否为预期iterable的超集。
 
 ###  `assertCountEqual` 
 
@@ -516,9 +516,9 @@ Example:    - [0, 1, 1] and [1, 0, 1] compare equal.    - [0, 0, 1] and [0, 1] c
  
 ```
 
-Assert ndarray data type is equal to expected.
+assert ndarray数据类型等于预期值。
 
-#### Args:
+#### 参数：
 - **`target`** : The numpy  `ndarray` , or anything that can be converted into anumpy  `ndarray`  (including Tensor).
 - **`expected_dtype`** : Expected data type.
 
@@ -535,9 +535,9 @@ Assert ndarray data type is equal to expected.
  
 ```
 
-Asserts that the two given devices are the same.
+断言两个给定的设备是相同的。
 
-#### Args:
+#### 参数：
 - **`device1`** : A string device name or TensorFlow  `DeviceSpec`  object.
 - **`device2`** : A string device name or TensorFlow  `DeviceSpec`  object.
 - **`msg`** : Optional message to report on failure.
@@ -555,7 +555,7 @@ Asserts that the two given devices are the same.
  
 ```
 
-Checks whether dictionary is a superset of subset.
+检查字典是否为子集的超集。
 
 ###  `assertDictEqual` 
 
@@ -569,15 +569,15 @@ Checks whether dictionary is a superset of subset.
  
 ```
 
-Raises AssertionError if a and b are not equal dictionaries.
+如果a和b不是相等的字典，则引发断言错误。
 
-#### Args:
+#### 参数：
 - **`a`** : A dict, the expected value.
 - **`b`** : A dict, the actual value.
 - **`msg`** : An optional str, the associated message.
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** : if the dictionaries are not equal.
 
 
@@ -592,9 +592,9 @@ Raises AssertionError if a and b are not equal dictionaries.
  
 ```
 
-Asserts that an object has zero length.
+断言对象的长度为零。
 
-#### Args:
+#### 参数：
 - **`container`** : Anything that implements the collections.abc.Sized interface.
 - **`msg`** : Optional message to report on failure.
 
@@ -613,7 +613,7 @@ Asserts that an object has zero length.
 
 Asserts that actual.endswith(expected_end) is True.
 
-#### Args:
+#### 参数：
 - **`actual`** : str
 - **`expected_end`** : str
 - **`msg`** : Optional message to report on failure.
@@ -655,7 +655,7 @@ Fail if the two objects are unequal as determined by the '=='operator.
  
 ```
 
-Check that the expression is false.
+检查表达式是否为false。
 
 ###  `assertGreater` 
 
@@ -765,7 +765,7 @@ Just like self.assertTrue(a is not b), but with a nicer default message.
  
 ```
 
-Included for symmetry with assertIsNone.
+包括对称与断言。
 
 ###  `assertItemsEqual` 
 
@@ -801,11 +801,11 @@ Example:    - [0, 1, 1] and [1, 0, 1] compare equal.    - [0, 0, 1] and [0, 1] c
  
 ```
 
-Asserts that the JSON objects defined in two strings are equal.
+断言在两个字符串中定义的json对象是相等的。
 
 A summary of the differences will be included in the failure messageusing assertSameStructure.
 
-#### Args:
+#### 参数：
 - **`first`** : A string containing JSON to decode and compare to second.
 - **`second`** : A string containing JSON to decode and compare to first.
 - **`msg`** : Additional text to include in the failure message.
@@ -823,9 +823,9 @@ A summary of the differences will be included in the failure messageusing assert
  
 ```
 
-Asserts that an object has the expected length.
+断言对象具有预期的长度。
 
-#### Args:
+#### 参数：
 - **`container`** : Anything that implements the collections.abc.Sized interface.
 - **`expected_len`** : The expected length of the container.
 - **`msg`** : Optional message to report on failure.
@@ -873,7 +873,7 @@ Just like self.assertTrue(a <= b), but with a nicer default message.
 
 A list-specific equality assertion.
 
-#### Args:
+#### 参数：
 - **`list1`** : The first list to compare.
 - **`list2`** : The second list to compare.
 - **`msg`** : Optional message to use on failure instead of a list of    differences.
@@ -894,7 +894,7 @@ Fail unless a log message of level *level* or higher is emittedon *logger_name* 
 
 This method must be used as a context manager, and will yielda recording object with two attributes:  `output`  and  `records` .At the end of the context manager, the  `output`  attribute willbe a list of the matching formatted log messages and the `records`  attribute will be a list of the corresponding LogRecordobjects.
 
-Example::
+例子：：
 
 ```
  with self.assertLogs('foo', level='INFO') as cm:
@@ -933,9 +933,9 @@ Asserts that two multi-line strings are equal.
  
 ```
 
-Asserts that two numpy arrays have near values.
+断言两个numpy数组有接近的值。
 
-#### Args:
+#### 参数：
 - **`ndarray1`** : a numpy ndarray.
 - **`ndarray2`** : a numpy ndarray.
 - **`err`** : a float. The maximum absolute difference allowed.
@@ -955,11 +955,11 @@ Asserts that two numpy arrays have near values.
  
 ```
 
-Asserts that two floats are near each other.
+断言两个浮标彼此靠近。
 
 Checks that |f1 - f2| < err and asserts a test failureif not.
 
-#### Args:
+#### 参数：
 - **`f1`** : A float value.
 - **`f2`** : A float value.
 - **`err`** : A float value.
@@ -978,7 +978,7 @@ Checks that |f1 - f2| < err and asserts a test failureif not.
  
 ```
 
-Checks whether actual iterable and expected iterable are disjoint.
+检查实际iterable和预期iterable是否不相交。
 
 ###  `assertNotAllClose` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/test_util.py#L2461-L2478)
@@ -994,13 +994,13 @@ Checks whether actual iterable and expected iterable are disjoint.
 
 Assert that two numpy arrays, or Tensors, do not have near values.
 
-#### Args:
+#### 参数：
 - **`a`** : the first value to compare.
 - **`b`** : the second value to compare.
 - **`**kwargs`** : additional keyword arguments to be passed to the underlying `assertAllClose`  call.
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** : If  `a`  and  `b`  are unexpectedly close at all elements.
 
 
@@ -1016,9 +1016,9 @@ Assert that two numpy arrays, or Tensors, do not have near values.
  
 ```
 
-Asserts that two numpy arrays or Tensors do not have the same values.
+断言两个numpy数组或张量的值不相同。
 
-#### Args:
+#### 参数：
 - **`a`** : the expected numpy ndarray or anything can be converted to one.
 - **`b`** : the actual numpy ndarray or anything can be converted to one.
 - **`msg`** : Optional message to report on failure.
@@ -1042,7 +1042,7 @@ Fail if the two objects are equal as determined by theirdifference rounded to th
 
 Note that decimal places (from zero) are usually not the sameas significant digits (measured from the most significant digit).
 
-Objects that are equal automatically fail.
+相等的对象将自动失败。
 
 ###  `assertNotAlmostEquals` 
 
@@ -1068,7 +1068,7 @@ Objects that are equal automatically fail.
 
 Asserts that an object has non-zero length.
 
-#### Args:
+#### 参数：
 - **`container`** : Anything that implements the collections.abc.Sized interface.
 - **`msg`** : Optional message to report on failure.
 
@@ -1087,7 +1087,7 @@ Asserts that an object has non-zero length.
 
 Asserts that actual.endswith(unexpected_end) is False.
 
-#### Args:
+#### 参数：
 - **`actual`** : str
 - **`unexpected_end`** : str
 - **`msg`** : Optional message to report on failure.
@@ -1144,7 +1144,7 @@ Just like self.assertTrue(a not in b), but with a nicer default message.
  
 ```
 
-Included for symmetry with assertIsInstance.
+包括对称性和断言性。
 
 ###  `assertNotRegex` 
 
@@ -1158,7 +1158,7 @@ Included for symmetry with assertIsInstance.
  
 ```
 
-Fail the test if the text matches the regular expression.
+如果文本与正则表达式匹配，则测试失败。
 
 ###  `assertNotRegexpMatches` 
 
@@ -1185,7 +1185,7 @@ Fail the test if the text matches the regular expression.
 
 Asserts that actual.startswith(unexpected_start) is False.
 
-#### Args:
+#### 参数：
 - **`actual`** : str
 - **`unexpected_start`** : str
 - **`msg`** : Optional message to report on failure.
@@ -1207,7 +1207,7 @@ Asserts that message is same as parsed expected_message_ascii.
 
 Creates another prototype of message, reads the ascii message into it andthen compares them using self._AssertProtoEqual().
 
-#### Args:
+#### 参数：
 - **`expected_message_maybe_ascii`** : proto message in original or ascii form.
 - **`message`** : the message to validate.
 - **`msg`** : Optional message to report on failure.
@@ -1282,9 +1282,9 @@ self.assertEqual(the_exception.error_code, 3)
  
 ```
 
-Asserts that the message in a raised exception matches a regex.
+断言引发的异常中的消息与正则表达式匹配。
 
-#### Args:
+#### 参数：
 - **`expected_exception`** : Exception class expected to be raised.
 - **`expected_regex`** : Regex (re pattern object or string) expected    to be found in error message.
 - **`args`** : Function to be called and extra positional args.
@@ -1305,9 +1305,9 @@ Asserts that the message in a raised exception matches a regex.
  
 ```
 
-Asserts that the message in a raised exception matches a regex.
+断言引发的异常中的消息与正则表达式匹配。
 
-#### Args:
+#### 参数：
 - **`expected_exception`** : Exception class expected to be raised.
 - **`expected_regex`** : Regex (re pattern object or string) expected    to be found in error message.
 - **`args`** : Function to be called and extra positional args.
@@ -1329,13 +1329,13 @@ Asserts that the message in a raised exception matches a regex.
  
 ```
 
-Asserts that the message in a raised exception equals the given string.
+断言引发的异常中的消息等于给定的字符串。
 
 Unlike assertRaisesRegex, this method takes a literal string, nota regular expression.
 
 with self.assertRaisesWithLiteralMatch(ExType, 'message'):  DoSomething()
 
-#### Args:
+#### 参数：
 - **`expected_exception`** : Exception class expected to be raised.
 - **`expected_exception_message`** : String message expected in the raisedexception.  For a raise exception e, expected_exception_message mustequal str(e).
 - **`callable_obj`** : Function to be called, or None to return a context.
@@ -1343,10 +1343,10 @@ with self.assertRaisesWithLiteralMatch(ExType, 'message'):  DoSomething()
 - **`**kwargs`** : Extra kwargs.
 
 
-#### Returns:
+#### 返回：
 A context manager if callable_obj is None. Otherwise, None.
 
-#### Raises:
+#### 加薪：
 self.failureException if callable_obj does not raise a matching exception.
 
 ###  `assertRaisesWithPredicateMatch` 
@@ -1360,16 +1360,16 @@ self.failureException if callable_obj does not raise a matching exception.
  
 ```
 
-Returns a context manager to enclose code expected to raise an exception.
+返回一个上下文管理器，将引发异常的代码括起来。
 
 If the exception is an OpError, the op stack is also included in the messagepredicate search.
 
-#### Args:
+#### 参数：
 - **`exception_type`** : The expected type of exception that should be raised.
 - **`expected_err_re_or_predicate`** : If this is callable, it should be a functionof one argument that inspects the passed-in exception and returns True(success) or False (please fail the test). Otherwise, the error messageis expected to match this regular expression partially.
 
 
-#### Returns:
+#### 返回：
 A context manager to surround code that is expected to raise anexception.
 
 ###  `assertRegex` 
@@ -1384,7 +1384,7 @@ A context manager to surround code that is expected to raise anexception.
  
 ```
 
-Fail the test unless the text matches the regular expression.
+除非文本与正则表达式匹配，否则测试将失败。
 
 ###  `assertRegexMatch` 
 
@@ -1398,11 +1398,11 @@ Fail the test unless the text matches the regular expression.
  
 ```
 
-Asserts that at least one regex in regexes matches str.
+断言正则表达式中至少有一个正则表达式与str匹配。
 
 If possible you should use  `assertRegex` , which is a simplerversion of this method.  `assertRegex`  takes a single regularexpression (a string or re compiled object) instead of a list.
 
-#### Notes:
+#### 注：
 1. This function uses substring matching, i.e. the matchingsucceeds if *any* substring of the error message matches *any*regex in the list.  This is more convenient for the user thanfull-string matching.
 
 
@@ -1421,7 +1421,7 @@ If possible you should use  `assertRegex` , which is a simplerversion of this me
 6. An exception will be thrown if regexes contains an invalidregex.
 
 
-#### Args:
+#### 参数：
 - **`actual_str`** :  The string we try to match with the items in regexes.
 - **`regexes`** :  The regular expressions we want to match against str.See "Notes" above for detailed notes on how this is interpreted.
 - **`message`** :  The message to be printed if the test fails.
@@ -1450,7 +1450,7 @@ If possible you should use  `assertRegex` , which is a simplerversion of this me
  
 ```
 
-Asserts that two sequences have the same elements (in any order).
+断言两个序列具有相同的元素（以任何顺序）。
 
 This method, unlike assertCountEqual, doesn't care about anyduplicates in the expected and actual sequences.
 
@@ -1460,7 +1460,7 @@ This method, unlike assertCountEqual, doesn't care about anyduplicates in the ex
 
 If possible, you should use assertCountEqual instead ofassertSameElements.
 
-#### Args:
+#### 参数：
 - **`expected_seq`** : A sequence containing elements we are expecting.
 - **`actual_seq`** : The sequence that we are testing.
 - **`msg`** : The message to be printed if the test fails.
@@ -1480,13 +1480,13 @@ If possible, you should use assertCountEqual instead ofassertSameElements.
  
 ```
 
-Asserts that two values contain the same structural content.
+断言两个值包含相同的结构内容。
 
 The two arguments should be data trees consisting of trees of dicts andlists. They will be deeply compared by walking into the contents of dictsand lists; other items will be compared using the == operator.If the two structures differ in content, the failure message will indicatethe location within the structures where the first difference is found.This may be helpful when comparing large structures.
 
 Mixed Sequence and Set types are supported. Mixed Mapping types aresupported, but the order of the keys will not be considered in thecomparison.
 
-#### Args:
+#### 参数：
 - **`a`** : The first structure to compare.
 - **`b`** : The second structure to compare.
 - **`aname`** : Variable name to use for the first structure in assertion messages.
@@ -1508,7 +1508,7 @@ Mixed Sequence and Set types are supported. Mixed Mapping types aresupported, bu
  
 ```
 
-An approximate equality assertion for ordered sequences.
+有序序列的近似相等断言。
 
 Fail if the two sequences are unequal as determined by their valuedifferences rounded to the given number of decimal places (default 7) andcomparing to zero, or by comparing that the difference between each valuein the two sequences is more than the given delta.
 
@@ -1516,7 +1516,7 @@ Note that decimal places (from zero) are usually not the same as significantdigi
 
 If the two sequences compare equal then they will automatically comparealmost equal.
 
-#### Args:
+#### 参数：
 - **`expected_seq`** : A sequence containing elements we are expecting.
 - **`actual_seq`** : The sequence that we are testing.
 - **`places`** : The number of decimal places to compare.
@@ -1537,11 +1537,11 @@ If the two sequences compare equal then they will automatically comparealmost eq
  
 ```
 
-An equality assertion for ordered sequences (like lists and tuples).
+有序序列（如列表和元组）的相等断言。
 
 For the purposes of this function, a valid ordered sequence type is onewhich can be indexed, has a length, and has an equality operator.
 
-#### Args:
+#### 参数：
 - **`seq1`** : The first sequence to compare.
 - **`seq2`** : The second sequence to compare.
 - **`seq_type`** : The expected datatype of the sequences, or None if no    datatype should be enforced.
@@ -1560,13 +1560,13 @@ For the purposes of this function, a valid ordered sequence type is onewhich can
  
 ```
 
-An equality assertion for the beginning of ordered sequences.
+顺序序列开头的相等断言。
 
 If prefix is an empty sequence, it will raise an error unless whole is alsoan empty sequence.
 
 If prefix is not a sequence, it will raise an error if the first element ofwhole does not match.
 
-#### Args:
+#### 参数：
 - **`prefix`** : A sequence expected at the beginning of the whole parameter.
 - **`whole`** : The sequence in which to look for prefix.
 - **`msg`** : Optional message to report on failure.
@@ -1586,7 +1586,7 @@ If prefix is not a sequence, it will raise an error if the first element ofwhole
 
 A set-specific equality assertion.
 
-#### Args:
+#### 参数：
 - **`set1`** : The first set to compare.
 - **`set2`** : The second set to compare.
 - **`msg`** : Optional message to use on failure instead of a list of    differences.
@@ -1604,15 +1604,15 @@ assertSetEqual uses ducktyping to support different types of sets, andis optimiz
  
 ```
 
-Asserts that a Numpy ndarray and a TensorFlow tensor have the same shape.
+断言numpy-ndarray和tensorflow张量具有相同的形状。
 
-#### Args:
+#### 参数：
 - **`np_array`** : A Numpy ndarray or Numpy scalar.
 - **`tf_tensor`** : A Tensor.
 - **`msg`** : Optional message to report on failure.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If the arguments have the wrong type.
 
 
@@ -1630,7 +1630,7 @@ Asserts that a Numpy ndarray and a TensorFlow tensor have the same shape.
 
 Assert that actual.startswith(expected_start) is True.
 
-#### Args:
+#### 参数：
 - **`actual`** : str
 - **`expected_start`** : str
 - **`msg`** : Optional message to report on failure.
@@ -1647,7 +1647,7 @@ Assert that actual.startswith(expected_start) is True.
  
 ```
 
-Asserts that total ordering has been implemented correctly.
+断言已正确实现总排序。
 
 For example, say you have a class A that compares only on its attribute x.Comparators other than **lt**  are omitted for brevity.
 
@@ -1661,7 +1661,7 @@ assertTotallyOrdered will check that instances can be ordered correctly.For exam
 
 self.assertTotallyOrdered(  [None],  # None should come before everything else.  [1],     # Integers sort earlier.  [A(1, 'a')],  [A(2, 'b')],  # 2 is after 1.  [A(3, 'c'), A(3, 'd')],  # The second argument is irrelevant.  [A(4, 'z')],  ['foo'])  # Strings sort last.
 
-#### Args:
+#### 参数：
 - **`*groups`** : A list of groups of elements.  Each group of elements is a listof objects that are equal.  The elements in each group must be lessthan the elements in the group after it.  For example, these groups aretotally ordered: [None], [1], [2, 2], [3].**kwargs: optional msg keyword argument can be passed.
 
 
@@ -1676,7 +1676,7 @@ self.assertTotallyOrdered(  [None],  # None should come before everything else. 
  
 ```
 
-Check that the expression is true.
+检查表达式是否为真。
 
 ###  `assertTupleEqual` 
 
@@ -1692,7 +1692,7 @@ Check that the expression is true.
 
 A tuple-specific equality assertion.
 
-#### Args:
+#### 参数：
 - **`tuple1`** : The first tuple to compare.
 - **`tuple2`** : The second tuple to compare.
 - **`msg`** : Optional message to use on failure instead of a list of    differences.
@@ -1761,7 +1761,7 @@ self.assertEqual(the_warning.some_attribute, 147)
 
 Asserts that the message in a triggered warning matches a regexp.Basic functioning is similar to assertWarns() with the additionthat only warnings whose messages also match the regular expressionare considered successful matches.
 
-#### Args:
+#### 参数：
 - **`expected_warning`** : Warning class expected to be triggered.
 - **`expected_regex`** : Regex (re pattern object or string) expected    to be found in error message.
 - **`args`** : Function to be called and extra positional args.
@@ -1791,13 +1791,13 @@ Asserts that the message in a triggered warning matches a regexp.Basic functioni
  
 ```
 
-Returns a TensorFlow Session for use in executing tests.
+返回用于执行测试的tensorflow会话。
 
 This method behaves differently than self.session(): for performance reasons `cached_session`  will by default reuse the same session within the sametest. The session returned by this function will only be closed at the endof the test (in the TearDown function).
 
 Use the  `use_gpu`  and  `force_gpu`  options to control where ops are run. If `force_gpu`  is True, all ops are pinned to  `/device:GPU:0` . Otherwise, if `use_gpu`  is True, TensorFlow tries to run as many ops on the GPU aspossible. If both  `force_gpu and` use_gpu` are False, all ops are pinned tothe CPU.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -1813,14 +1813,14 @@ Use the  `use_gpu`  and  `force_gpu`  options to control where ops are run. If `
  
 ```
 
-#### Args:
+#### 参数：
 - **`graph`** : Optional graph to use during the returned session.
 - **`config`** : An optional config_pb2.ConfigProto to use to configure thesession.
 - **`use_gpu`** : If True, attempt to run as many ops as possible on GPU.
 - **`force_gpu`** : If True, pin all ops to  `/device:GPU:0` .
 
 
-#### Yields:
+#### 收益率：
 A Session object that should be used as a context manager to surroundthe graph building and execution code in a test case.
 
 ###  `captureWritesToStream` 
@@ -1834,13 +1834,13 @@ A Session object that should be used as a context manager to surroundthe graph b
  
 ```
 
-A context manager that captures the writes to a given stream.
+捕获对给定流的写入的上下文管理器。
 
 This context manager captures all writes to a given stream inside of a `CapturedWrites`  object. When this context manager is created, it yieldsthe  `CapturedWrites`  object. The captured contents can be accessed  bycalling  `.contents()`  on the  `CapturedWrites` .
 
 For this function to work, the stream must have a file descriptor thatcan be modified using  `os.dup`  and  `os.dup2` , and the stream must supporta  `.flush()`  method. The default python sys.stdout and sys.stderr areexamples of this. Note that this does not work in Colab or Jupyternotebooks, because those use alternate stdout streams.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -1853,11 +1853,11 @@ For this function to work, the stream must have a file descriptor thatcan be mod
  
 ```
 
-#### Args:
+#### 参数：
 - **`stream`** : The stream whose writes should be captured. This stream must havea file descriptor, support writing via using that file descriptor, andmust have a  `.flush()`  method.
 
 
-#### Yields:
+#### 收益率：
 A  `CapturedWrites`  object that contains all writes to the specified streammade during this context.
 
 ###  `checkedThread` 
@@ -1872,18 +1872,18 @@ A  `CapturedWrites`  object that contains all writes to the specified streammade
  
 ```
 
-Returns a Thread wrapper that asserts 'target' completes successfully.
+返回断言“target”已成功完成的线程包装器。
 
 This method should be used to create all threads in test cases, asotherwise there is a risk that a thread will silently fail, and/orassertions made in the thread will not be respected.
 
-#### Args:
+#### 参数：
 - **`target`** : A callable object to be executed in the thread.
 - **`args`** : The argument tuple for the target invocation. Defaults to ().
 - **`kwargs`** : A dictionary of keyword arguments for the target invocation.Defaults to {}.
 
 
-#### Returns:
-A wrapper for threading.Thread that supports start() and join() methods.
+#### 返回：
+支持start（）和join（）方法的threading.thread的包装器。
 
 ###  `countTestCases` 
 
@@ -1904,20 +1904,20 @@ A wrapper for threading.Thread that supports start() and join() methods.
  
 ```
 
-Create a temporary directory specific to the test.
+创建特定于测试的临时目录。
 
-NOTE: The directory and its contents will be recursively cleared beforecreation. This ensures that there is no pre-existing state.
+注意：The directory and its contents will be recursively cleared beforecreation. This ensures that there is no pre-existing state.
 
 This creates a named directory on disk that is isolated to this test, andwill be properly cleaned up by the test. This avoids several pitfalls ofcreating temporary directories for test purposes, as well as makes it easierto setup directories and verify their contents.
 
 See also:  `create_tempfile()`  for creating temporary files.
 
-#### Args:
+#### 参数：
 - **`name`** : Optional name of the directory. If not given, a uniquename will be generated and used.
 - **`cleanup`** : Optional cleanup policy on when/if to remove the directory (andall its contents) at the end of the test. If None, then uses `self.tempfile_cleanup` .
 
 
-#### Returns:
+#### 返回：
 A _TempDir representing the created directory.
 
 ###  `create_tempfile` 
@@ -1935,16 +1935,16 @@ A _TempDir representing the created directory.
  
 ```
 
-Create a temporary file specific to the test.
+创建特定于测试的临时文件。
 
 This creates a named file on disk that is isolated to this test, and willbe properly cleaned up by the test. This avoids several pitfalls ofcreating temporary files for test purposes, as well as makes it easierto setup files, their data, read them back, and inspect them whena test fails.
 
-NOTE: This will zero-out the file. This ensures there is no pre-existingstate.NOTE: If the file already exists, it will be made writable and overwritten.
+注意：This will zero-out the file. This ensures there is no pre-existingstate.注意：If the file already exists, it will be made writable and overwritten.
 
 See also:  `create_tempdir()`  for creating temporary directories, and `_TempDir.create_file`  for creating files within a temporary directory.
 
-#### Args:
-- **`file_path`** : Optional file path for the temp file. If not given, a uniquefile name will be generated and used. Slashes are allowed in the name;any missing intermediate directories will be created. NOTE: This path isthe path that will be cleaned up, including any directories in the path,e.g., 'foo/bar/baz.txt' will  `rm -r foo` .
+#### 参数：
+- **`file_path`** : Optional file path for the temp file. If not given, a uniquefile name will be generated and used. Slashes are allowed in the name;any missing intermediate directories will be created. 注意：This path isthe path that will be cleaned up, including any directories in the path,e.g., 'foo/bar/baz.txt' will  `rm -r foo` .
 - **`content`** : Optional string orbytes to initially write to the file. If notspecified, then an empty file is created.
 - **`mode`** : Mode string to use when writing content. Only used if  `content`  isnon-empty.
 - **`encoding`** : Encoding to use when writing string content. Only used if `content`  is text.
@@ -1952,7 +1952,7 @@ See also:  `create_tempdir()`  for creating temporary directories, and `_TempDir
 - **`cleanup`** : Optional cleanup policy on when/if to remove the directory (andall its contents) at the end of the test. If None, then uses `self.tempfile_cleanup` .
 
 
-#### Returns:
+#### 返回：
 A _TempFile representing the created file.
 
 ###  `debug` 
@@ -1963,7 +1963,7 @@ A _TempFile representing the created file.
  
 ```
 
-Run the test without collecting errors in a TestResult
+在不收集测试结果错误的情况下运行测试
 
 ###  `defaultTestResult` 
 
@@ -1991,14 +1991,14 @@ Execute all cleanup functions. Normally called for you aftertearDown.
  
 ```
 
-Evaluates tensors and returns numpy values.
+计算张量并返回numpy值。
 
-#### Args:
+#### 参数：
 - **`tensors`** : A Tensor or a nested list/tuple of Tensors.
 
 
-#### Returns:
-tensors numpy values.
+#### 返回：
+张量numpy值。
 
 ###  `fail` 
 
@@ -2098,11 +2098,11 @@ Fail immediately with the given message, optionally prefixed.
  
 ```
 
-Returns a unique temporary directory for the test to use.
+返回测试要使用的唯一临时目录。
 
 If you call this method multiple times during in a test, it will return thesame folder. However, across different runs the directories will bedifferent. This will ensure that across different runs tests will not beable to pollute each others environment.If you need multiple unique directories within a single test, you shoulduse tempfile.mkdtemp as follows:  tempfile.mkdtemp(dir=self.get_temp_dir()):
 
-#### Returns:
+#### 返回：
 string, the path to the unique temporary directory created for this test.
 
 ###  `id` 
@@ -2132,13 +2132,13 @@ string, the path to the unique temporary directory created for this test.
  
 ```
 
-Returns a TensorFlow Session for use in executing tests.
+返回用于执行测试的tensorflow会话。
 
-Note that this will set this session and the graph as global defaults.
+请注意，这会将此会话和图形设置为全局默认值。
 
 Use the  `use_gpu`  and  `force_gpu`  options to control where ops are run. If `force_gpu`  is True, all ops are pinned to  `/device:GPU:0` . Otherwise, if `use_gpu`  is True, TensorFlow tries to run as many ops on the GPU aspossible. If both  `force_gpu and` use_gpu` are False, all ops are pinned tothe CPU.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -2154,14 +2154,14 @@ Use the  `use_gpu`  and  `force_gpu`  options to control where ops are run. If `
  
 ```
 
-#### Args:
+#### 参数：
 - **`graph`** : Optional graph to use during the returned session.
 - **`config`** : An optional config_pb2.ConfigProto to use to configure thesession.
 - **`use_gpu`** : If True, attempt to run as many ops as possible on GPU.
 - **`force_gpu`** : If True, pin all ops to  `/device:GPU:0` .
 
 
-#### Yields:
+#### 收益率：
 A Session object that should be used as a context manager to surroundthe graph building and execution code in a test case.
 
 ###  `setUp` 
@@ -2172,7 +2172,7 @@ A Session object that should be used as a context manager to surroundthe graph b
  
 ```
 
-Hook method for setting up the test fixture before exercising it.
+在使用前设置测试夹具的钩子法。
 
 ###  `setUpClass` 
 
@@ -2182,7 +2182,7 @@ Hook method for setting up the test fixture before exercising it.
  
 ```
 
-Hook method for setting up class fixture before running tests in the class.
+在类中运行测试之前设置类fixture的钩子方法。
 
 ###  `shortDescription` 
 
@@ -2192,13 +2192,13 @@ Hook method for setting up class fixture before running tests in the class.
  
 ```
 
-Formats both the test method name and the first line of its docstring.
+格式化测试方法名及其docstring的第一行。
 
 If no docstring is given, only returns the method name.
 
 This method overrides unittest.TestCase.shortDescription(), whichonly returns the first line of the docstring, obscuring the nameof the test upon failure.
 
-#### Returns:
+#### 返回：
 - **`desc`** : A short description of a test method.
 
 
@@ -2210,7 +2210,7 @@ This method overrides unittest.TestCase.shortDescription(), whichonly returns th
  
 ```
 
-Skip this test.
+跳过这个测试。
 
 ###  `subTest` 
 
@@ -2233,7 +2233,7 @@ Return a context manager that will return the enclosed blockof code in a subtest
  
 ```
 
-Hook method for deconstructing the test fixture after testing it.
+试验夹具试验后解构的钩子法。
 
 ###  `tearDownClass` 
 
@@ -2243,7 +2243,7 @@ Hook method for deconstructing the test fixture after testing it.
  
 ```
 
-Hook method for deconstructing the class fixture after running all tests in the class.
+hook方法，用于在运行类中的所有测试之后解构类fixture。
 
 ###  `test_session` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/test_util.py#L2076-L2098)
@@ -2264,6 +2264,6 @@ Use cached_session instead. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use  `self.session()`  or  `self.cached_session()`  instead.
 
 
-## Class Members
+## Class 成员
 -  `maxDiff = 1600`  []()
 -  `tempfile_cleanup`  []()

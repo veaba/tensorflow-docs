@@ -1,6 +1,6 @@
 Exports a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) as a Tensorflow SavedModel. (deprecated)
 
-**Aliases** : [ `tf.compat.v1.keras.experimental.export_saved_model` ](/api_docs/python/tf/keras/experimental/export_saved_model), [ `tf.compat.v2.keras.experimental.export_saved_model` ](/api_docs/python/tf/keras/experimental/export_saved_model)
+**别名** : [ `tf.compat.v1.keras.experimental.export_saved_model` ](/api_docs/python/tf/keras/experimental/export_saved_model), [ `tf.compat.v2.keras.experimental.export_saved_model` ](/api_docs/python/tf/keras/experimental/export_saved_model)
 
 ```
  tf.keras.experimental.export_saved_model(
@@ -27,7 +27,7 @@ The  `SavedModel`  contains:
 3. the model's json config. If the model is subclassed, this will only beincluded if the model's  `get_config()`  method is overwritten.
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -48,7 +48,7 @@ new_model.summary()
  
 ```
 
-#### Args:
+#### 参数：
 - **`model`** : A [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) to be saved. If the model is subclassed, the flag `serving_only`  must be set to True.
 - **`saved_model_path`** : a string specifying the path to the SavedModel directory.
 - **`custom_objects`** : Optional dictionary mapping string names to custom classesor functions (e.g. custom loss functions).
@@ -57,7 +57,7 @@ new_model.summary()
 - **`serving_only`** : bool,  `False`  by default. When this is true, only theprediction graph is saved.
 
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** : If the model is a subclassed model, and serving_only isFalse.
 - **`ValueError`** : If the input signature cannot be inferred from the model.
 - **`AssertionError`** : If the SavedModel directory already exists and isn't empty.

@@ -12,7 +12,7 @@ If  `axis`  has no entries, all dimensions are reduced, and atensor with a singl
 
 This function is more numerically stable than log(sum(exp(input))). It avoidsoverflows caused by taking the exp of large inputs and underflows caused bytaking the log of small inputs.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -25,7 +25,7 @@ tf.reduce_logsumexp(x, [0, 1])  # log(6)
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The tensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
@@ -34,6 +34,6 @@ tf.reduce_logsumexp(x, [0, 1])  # log(6)
 - **`keep_dims`** : Deprecated alias for  `keepdims` .
 
 
-#### Returns:
-The reduced tensor.
+#### 返回：
+简化张量。
 

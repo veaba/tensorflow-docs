@@ -1,6 +1,6 @@
 Joins the elements of  `inputs`  based on  `segment_ids` .
 
-**Aliases** : [ `tf.compat.v1.strings.unsorted_segment_join` ](/api_docs/python/tf/strings/unsorted_segment_join), [ `tf.compat.v2.strings.unsorted_segment_join` ](/api_docs/python/tf/strings/unsorted_segment_join)
+**别名** : [ `tf.compat.v1.strings.unsorted_segment_join` ](/api_docs/python/tf/strings/unsorted_segment_join), [ `tf.compat.v2.strings.unsorted_segment_join` ](/api_docs/python/tf/strings/unsorted_segment_join)
 
 ```
  tf.strings.unsorted_segment_join(
@@ -22,7 +22,7 @@ Computes the string join along segments of a tensor.Given  `segment_ids`  with r
 
 where the join is over all [j1...jN] such that segment_ids[j1...jN] = i.Strings are joined in row-major order.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -43,7 +43,7 @@ output_array = string_ops.unsorted_segment_join(inputs=inputs,
  
 ```
 
-#### Args:
+#### 参数：
 - **`inputs`** : A  `Tensor`  of type  `string` . The input to be joined.
 - **`segment_ids`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor whose shape is a prefix of data.shape.  Negative segment ids are notsupported.
 - **`num_segments`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A scalar.
@@ -51,6 +51,6 @@ output_array = string_ops.unsorted_segment_join(inputs=inputs,
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

@@ -18,7 +18,7 @@ In signal processing, cross-correlation is a measure of similarity oftwo wavefor
 
 Our Conv3D implements a form of cross-correlation.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` . Must be one of the following types:  `half` ,  `bfloat16` ,  `float32` ,  `float64` .Shape  `[batch, in_depth, in_height, in_width, in_channels]` .
 - **`filter`** : A  `Tensor` . Must have the same type as  `input` .Shape  `[filter_depth, filter_height, filter_width, in_channels,out_channels]` .  `in_channels`  must match between  `input`  and  `filter` .
 - **`strides`** : A list of  `ints`  that has length  `>= 5` .1-D tensor of length 5. The stride of the sliding window for eachdimension of  `input` . Must have  `strides[0] = strides[4] = 1` .
@@ -28,6 +28,6 @@ Our Conv3D implements a form of cross-correlation.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

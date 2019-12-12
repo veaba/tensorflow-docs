@@ -18,15 +18,15 @@ The  `condition`  tensor acts as a mask that chooses, based on the value at each
 
 If  `condition`  is a vector and  `x`  and  `y`  are higher rank matrices, then itchooses which row (outer dimension) to copy from  `x`  and  `y` . If  `condition` has the same shape as  `x`  and  `y` , then it chooses which element to copy from `x`  and  `y` .
 
-#### Args:
+#### 参数：
 - **`condition`** : A  `Tensor`  of type  `bool` 
 - **`x`** : A Tensor which may have the same shape as  `condition` . If  `condition`  isrank 1,  `x`  may have higher rank, but its first dimension must match thesize of  `condition` .
 - **`y`** : A  `tensor`  with the same shape and type as  `x` .
 - **`name`** : A name of the operation (optional)
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type and shape as  `x` ,  `y`  if they are non-None.Otherwise, a  `Tensor`  with shape  `(num_true, rank(condition))` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : When exactly one of  `x`  or  `y`  is non-None.

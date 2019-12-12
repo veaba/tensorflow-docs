@@ -1,7 +1,7 @@
 
 
 ## Class  `name_scope` 
-A context manager for use when defining a Python op.
+定义python操作时使用的上下文管理器。
 
 Inherits From: [ `name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/backend/name_scope)
 
@@ -30,23 +30,23 @@ If the scope name already exists, the name will be made unique by appending `_n`
  
 ```
 
-Initialize the context manager.
+初始化上下文管理器。
 
-#### Args:
+#### 参数：
 - **`name`** : The prefix to use on all names created within the name scope.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If name is None, or not a string.
 
 
-## Properties
+## 属性
 
 
 ###  `name` 
 
 
-## Methods
+## 方法
 
 
 ###  `__enter__` 
@@ -57,12 +57,12 @@ Initialize the context manager.
  
 ```
 
-Start the scope block.
+启动范围块。
 
-#### Returns:
-The scope name.
+#### 返回：
+作用域名称。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if neither  `name`  nor  `default_name`  is providedbut  `values`  are.
 
 

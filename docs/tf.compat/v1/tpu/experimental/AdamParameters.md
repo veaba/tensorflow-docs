@@ -1,7 +1,7 @@
 
 
 ## Class  `AdamParameters` 
-Optimization parameters for Adam with TPU embeddings.
+带tpu嵌入的adam优化参数。
 
 Pass this to  `tf.estimator.tpu.experimental.EmbeddingConfigSpec`  via the `optimization_parameters`  argument to set the optimizer and its parameters.See the documentation for  `tf.estimator.tpu.experimental.EmbeddingConfigSpec` for more details.
 
@@ -33,9 +33,9 @@ Pass this to  `tf.estimator.tpu.experimental.EmbeddingConfigSpec`  via the `opti
  
 ```
 
-Optimization parameters for Adam.
+ADAM的优化参数。
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : a floating point value. The learning rate.
 - **`beta1`** : A float value.The exponential decay rate for the 1st moment estimates.
 - **`beta2`** : A float value.The exponential decay rate for the 2nd moment estimates.

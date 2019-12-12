@@ -1,11 +1,11 @@
 
 
 ## Class  `Module` 
-Base neural network module class.
+基本神经网络模块类。
 
-**Aliases** : [ `tf.compat.v1.Module` ](/api_docs/python/tf/Module), [ `tf.compat.v2.Module` ](/api_docs/python/tf/Module)
+**别名** : [ `tf.compat.v1.Module` ](/api_docs/python/tf/Module), [ `tf.compat.v2.Module` ](/api_docs/python/tf/Module)
 
-### Used in the guide:
+### 在指南中使用：
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 A module is a named container for [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable)s, other [ `tf.Module` ](https://tensorflow.google.cn/api_docs/python/tf/Module)s andfunctions which apply to user input. For example a dense layer in a neuralnetwork might be implemented as a [ `tf.Module` ](https://tensorflow.google.cn/api_docs/python/tf/Module):
 
@@ -23,7 +23,7 @@ A module is a named container for [ `tf.Variable` ](https://tensorflow.google.cn
  
 ```
 
-You can use the Dense layer as you would expect:
+可以按预期使用密集层：
 
 ```
  d = Dense(input_features=64, output_features=10)
@@ -35,7 +35,7 @@ d(tf.ones([100, 64]))
 By subclassing [ `tf.Module` ](https://tensorflow.google.cn/api_docs/python/tf/Module) instead of  `object`  any [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) or[ `tf.Module` ](https://tensorflow.google.cn/api_docs/python/tf/Module) instances assigned to object properties can be collected usingthe  `variables` ,  `trainable_variables`  or  `submodules`  property:
 
 ```
- d.variables
+d.变量
 #==> (<tf.Variable 'b:0' ...>, <tf.Variable 'w:0' ...>)
  
 ```
@@ -72,13 +72,13 @@ All [ `tf.Module` ](https://tensorflow.google.cn/api_docs/python/tf/Module) clas
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `name` 
-Returns the name of this module as passed or determined in the ctor.
+返回在ctor中传递或确定的此模块的名称。
 
-NOTE: This is not the same as the  `self.name_scope.name`  which includesparent module names.
+注意：This is not the same as the  `self.name_scope.name`  which includesparent module names.
 
 ###  `name_scope` 
 Returns a [ `tf.name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/name_scope) instance for this class.
@@ -100,30 +100,30 @@ assert list(c.submodules) == []
  
 ```
 
-#### Returns:
-A sequence of all submodules.
+#### 返回：
+所有子模块的序列。
 
 ###  `trainable_variables` 
-Sequence of variables owned by this module and it's submodules.
+此模块及其子模块拥有的变量序列。
 
 
 **Note:**  this method uses reflection to find variables on the current instanceand submodules. For performance reasons you may wish to cache the resultof calling this method if you don't expect the return value to change.
 
 
-#### Returns:
+#### 返回：
 A sequence of variables for the current module (sorted by attributename) followed by variables from all submodules recursively (breadthfirst).
 
 ###  `variables` 
-Sequence of variables owned by this module and it's submodules.
+此模块及其子模块拥有的变量序列。
 
 
 **Note:**  this method uses reflection to find variables on the current instanceand submodules. For performance reasons you may wish to cache the resultof calling this method if you don't expect the return value to change.
 
 
-#### Returns:
+#### 返回：
 A sequence of variables for the current module (sorted by attributename) followed by variables from all submodules recursively (breadthfirst).
 
-## Methods
+## 方法
 
 
 ###  `with_name_scope` 
@@ -138,7 +138,7 @@ with_name_scope(
  
 ```
 
-Decorator to automatically enter the module name scope.
+decorator自动输入模块名作用域。
 
 ```
  class MyModule(tf.Module):
@@ -156,15 +156,15 @@ Using the above module would produce [ `tf.Variable` ](https://tensorflow.google
  mod = MyModule()
 mod(tf.ones([8, 32]))
 # ==> <tf.Tensor: ...>
-mod.w
+W型
 # ==> <tf.Variable ...'my_module/w:0'>
  
 ```
 
-#### Args:
+#### 参数：
 - **`method`** : The method to wrap.
 
 
-#### Returns:
-The original method wrapped such that it enters the module's name scope.
+#### 返回：
+原来的方法被包装成进入模块的名称范围。
 

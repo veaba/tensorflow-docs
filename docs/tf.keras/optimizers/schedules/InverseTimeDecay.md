@@ -1,13 +1,13 @@
 
 
 ## Class  `InverseTimeDecay` 
-A LearningRateSchedule that uses an inverse time decay schedule.
+使用反时间衰减计划的LearningRateSchedule。
 
 Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
 
-**Aliases** : [ `tf.compat.v1.keras.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay), [ `tf.compat.v2.keras.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay), [ `tf.compat.v2.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay), [ `tf.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay)
+**别名** : [ `tf.compat.v1.keras.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay), [ `tf.compat.v2.keras.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay), [ `tf.compat.v2.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay), [ `tf.optimizers.schedules.InverseTimeDecay` ](/api_docs/python/tf/keras/optimizers/schedules/InverseTimeDecay)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Overfit and underfit](https://tensorflow.google.cn/tutorials/keras/overfit_and_underfit)
 
 
@@ -25,7 +25,7 @@ Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/
  
 ```
 
-Applies inverse time decay to the initial learning rate.
+对初始学习率应用逆时间衰减。
 
 When training a model, it is often recommended to lower the learning rate asthe training progresses. This schedule applies the inverse decay functionto an optimizer step, given a provided initial learning rate.It requires a  `step`  value to compute the decayed learning rate. You canjust pass a TensorFlow variable that you increment at each training step.
 
@@ -64,7 +64,7 @@ model.fit(data, labels, epochs=5)
  
 ```
 
-#### Args:
+#### 参数：
 - **`initial_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The initial learning rate.
 - **`decay_steps`** : How often to apply decay.
 - **`decay_rate`** : A Python number.  The decay rate.
@@ -72,10 +72,10 @@ model.fit(data, labels, epochs=5)
 - **`name`** : String.  Optional name of the operation.  Defaults to'InverseTimeDecay'.
 
 
-#### Returns:
+#### 返回：
 A 1-arg callable learning rate schedule that takes the current optimizerstep and outputs the decayed learning rate, a scalar  `Tensor`  of the sametype as  `initial_learning_rate` .
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -86,7 +86,7 @@ A 1-arg callable learning rate schedule that takes the current optimizerstep and
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
@@ -101,11 +101,11 @@ Call self as a function.
 
 Instantiates a  `LearningRateSchedule`  from its config.
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `LearningRateSchedule`  instance.
 
 ###  `get_config` 

@@ -1,6 +1,6 @@
-Greedily selects a subset of bounding boxes in descending order of score.
+贪婪地按分数降序选择边界框的子集。
 
-**Aliases** : [ `tf.compat.v1.image.non_max_suppression_padded` ](/api_docs/python/tf/image/non_max_suppression_padded), [ `tf.compat.v2.image.non_max_suppression_padded` ](/api_docs/python/tf/image/non_max_suppression_padded)
+**别名** : [ `tf.compat.v1.image.non_max_suppression_padded` ](/api_docs/python/tf/image/non_max_suppression_padded), [ `tf.compat.v2.image.non_max_suppression_padded` ](/api_docs/python/tf/image/non_max_suppression_padded)
 
 ```
  tf.image.non_max_suppression_padded(
@@ -27,7 +27,7 @@ selected_boxes = tf.gather(boxes, selected_indices)
  
 ```
 
-#### Args:
+#### 参数：
 - **`boxes`** : A 2-D float  `Tensor`  of shape  `[num_boxes, 4]` .
 - **`scores`** : A 1-D float  `Tensor`  of shape  `[num_boxes]`  representing a singlescore corresponding to each box (each row of boxes).
 - **`max_output_size`** : A scalar integer  `Tensor`  representing the maximum numberof boxes to be selected by non max suppression.
@@ -37,6 +37,6 @@ selected_boxes = tf.gather(boxes, selected_indices)
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`selected_indices`** : A 1-D integer  `Tensor`  of shape  `[M]`  representing theselected indices from the boxes tensor, where  `M <= max_output_size` .
 - **`valid_outputs`** : A scalar integer  `Tensor`  denoting how many elements in `selected_indices`  are valid.  Valid elements occur first, then padding.

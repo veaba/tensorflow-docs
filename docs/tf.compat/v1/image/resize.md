@@ -14,7 +14,7 @@ Resized images will be distorted if their original aspect ratio is notthe same a
 - **[ `ResizeMethod.AREA` ](/api_docs/python/tf/image/ResizeMethod#AREA)** : Area interpolation.
 The return value has the same type as  `images`  if  `method`  is[ `ResizeMethod.NEAREST_NEIGHBOR` ](/api_docs/python/tf/image/ResizeMethod#NEAREST_NEIGHBOR). It will also have the same type as  `images` if the size of  `images`  can be statically determined to be the same as  `size` ,because  `images`  is returned in this case. Otherwise, the return value hastype  `float32` .
 
-#### Args:
+#### 参数：
 - **`images`** : 4-D Tensor of shape  `[batch, height, width, channels]`  or 3-D Tensorof shape  `[height, width, channels]` .
 - **`size`** : A 1-D int32 Tensor of 2 elements:  `new_height, new_width` .  The newsize for the images.
 - **`method`** : ResizeMethod.  Defaults to [ `ResizeMethod.BILINEAR` ](/api_docs/python/tf/image/ResizeMethod#BILINEAR).
@@ -23,12 +23,12 @@ The return value has the same type as  `images`  if  `method`  is[ `ResizeMethod
 - **`name`** : A name for this operation (optional).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if the shape of  `images`  is incompatible with theshape arguments to this function
 - **`ValueError`** : if  `size`  has invalid shape or type.
 - **`ValueError`** : if an unsupported resize method is specified.
 
 
-#### Returns:
+#### 返回：
 If  `images`  was 4-D, a 4-D float Tensor of shape `[batch, new_height, new_width, channels]` .If  `images`  was 3-D, a 3-D float Tensor of shape `[new_height, new_width, channels]` .
 

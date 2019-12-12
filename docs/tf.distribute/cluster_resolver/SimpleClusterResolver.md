@@ -1,11 +1,11 @@
 
 
 ## Class  `SimpleClusterResolver` 
-Simple implementation of ClusterResolver that accepts a ClusterSpec.
+接受ClusterSpec的ClusterResolver的简单实现。
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.SimpleClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SimpleClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.SimpleClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SimpleClusterResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.SimpleClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SimpleClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.SimpleClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/SimpleClusterResolver)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/cluster_resolver.py#L185-L204)
@@ -23,13 +23,13 @@ Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/pytho
  
 ```
 
-Creates a SimpleClusterResolver from a ClusterSpec.
+从ClusterSpec创建SimpleClusterResolver。
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
 There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
@@ -46,7 +46,7 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
 ###  `task_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -57,7 +57,7 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
  
 ```
 
-Returns the ClusterSpec passed into the constructor.
+返回传入构造函数的ClusterSpec。
 
 ###  `master` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/cluster_resolver.py#L210-L229)
@@ -71,16 +71,16 @@ Returns the ClusterSpec passed into the constructor.
  
 ```
 
-Returns the master address to use when creating a session.
+返回创建会话时要使用的主地址。
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the master.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the master.
 - **`rpc_layer`** : (Optional) The RPC used by distributed TensorFlow.
 
 
-#### Returns:
-The name or URL of the session master.
+#### 返回：
+会话主机的名称或url。
 
 If a task_type and task_id is given, this will override the  `master` string passed into the initialization function.
 
@@ -96,11 +96,11 @@ If a task_type and task_id is given, this will override the  `master` string pas
  
 ```
 
-Returns the number of accelerator cores per worker.
+返回每个工作进程的加速器核心数。
 
 The SimpleClusterResolver does not do automatic detection of accelerators,so a TensorFlow session will never be created, and thus all arguments areunused and we simply assume that the type of accelerator is a GPU and returnthe value in provided to us in the constructor.
 
-#### Args:
+#### 参数：
 - **`task_type`** : Unused.
 - **`task_id`** : Unused.
 - **`config_proto`** : Unused.

@@ -3,13 +3,13 @@
 ## Class  `TensorArray` 
 Class wrapping dynamic-sized, per-time-step, write-once Tensor arrays.
 
-**Aliases** : [ `tf.compat.v1.TensorArray` ](/api_docs/python/tf/TensorArray), [ `tf.compat.v2.TensorArray` ](/api_docs/python/tf/TensorArray)
+**别名** : [ `tf.compat.v1.TensorArray` ](/api_docs/python/tf/TensorArray), [ `tf.compat.v2.TensorArray` ](/api_docs/python/tf/TensorArray)
 
-### Used in the guide:
+### 在指南中使用：
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 This class is meant to be used with dynamic iteration primitives such as `while_loop`  and  `map_fn` .  It supports gradient back-propagation via special"flow" control flow dependencies.
 
@@ -33,13 +33,13 @@ This class is meant to be used with dynamic iteration primitives such as `while_
  
 ```
 
-Construct a new TensorArray or wrap an existing TensorArray handle.
+构造新的tensorray或包装现有的tensorray句柄。
 
 A note about the parameter  `name` :
 
 The name of the  `TensorArray`  (even if passed in) is uniquified: each timea new  `TensorArray`  is created at runtime it is assigned its own name forthe duration of the run.  This avoids name collisions if a  `TensorArray` is created within a  `while_loop` .
 
-#### Args:
+#### 参数：
 - **`dtype`** : (required) data type of the TensorArray.
 - **`size`** : (optional) int32 scalar  `Tensor` : the size of the TensorArray.Required if handle is not provided.
 - **`dynamic_size`** : (optional) Python bool: If true, writes to the TensorArraycan grow the TensorArray past its initial size.  Default: False.
@@ -53,16 +53,16 @@ The name of the  `TensorArray`  (even if passed in) is uniquified: each timea ne
 - **`name`** : A name for the operation (optional).
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if both handle and tensor_array_name are provided.
 - **`TypeError`** : if handle is provided but is not a Tensor.
 
 
-## Properties
+## 属性
 
 
 ###  `dtype` 
-The data type of this TensorArray.
+张量阵列的数据类型。
 
 ###  `dynamic_size` 
 Python bool; if  `True`  the TensorArray can grow dynamically.
@@ -74,9 +74,9 @@ The [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorS
 The flow  `Tensor`  forcing ops leading to this TensorArray state.
 
 ###  `handle` 
-The reference to the TensorArray.
+对张量排列的引用。
 
-## Methods
+## 方法
 
 
 ###  `close` 
@@ -87,7 +87,7 @@ The reference to the TensorArray.
  
 ```
 
-Close the current TensorArray.
+关闭当前张力阵列。
 
 **NOTE**  The output of this function should be used.  If it is not, a warning will be logged.  To mark the output as used, call its .mark_used() method.
 
@@ -103,12 +103,12 @@ Return the values in the TensorArray as a concatenated  `Tensor` .
 
 All of the values must have been written, their ranks must match, andand their shapes must all match for all dimensions except the first.
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-All the tensors in the TensorArray concatenated into one tensor.
+#### 返回：
+张量数组中的所有张量连接成一个张量。
 
 ###  `gather` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/tensor_array_ops.py#L1100-L1115)
@@ -125,12 +125,12 @@ Return selected values in the TensorArray as a packed  `Tensor` .
 
 All of selected values must have been written and their shapesmust all match.
 
-#### Args:
+#### 参数：
 - **`indices`** : A  `1-D`   `Tensor`  taking values in  `[0, max_value)` .  Ifthe  `TensorArray`  is not dynamic,  `max_value=size()` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The tensors in the  `TensorArray`  selected by  `indices` , packed into onetensor.
 
 ###  `grad` 
@@ -153,9 +153,9 @@ The tensors in the  `TensorArray`  selected by  `indices` , packed into onetenso
  
 ```
 
-Returns a TensorArray with the same content and properties.
+返回具有相同内容和属性的Tensorarray。
 
-#### Returns:
+#### 返回：
 A new TensorArray object with flow that ensures the control dependenciesfrom the contexts will become control dependencies for writes, reads, etc.Use this object all for subsequent operations.
 
 ###  `read` 
@@ -171,12 +171,12 @@ A new TensorArray object with flow that ensures the control dependenciesfrom the
 
 Read the value at location  `index`  in the TensorArray.
 
-#### Args:
+#### 参数：
 - **`index`** : 0-D.  int32 tensor with the index to read from.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The tensor at index  `index` .
 
 ###  `scatter` 
@@ -209,7 +209,7 @@ Raises:    ValueError: if the shape inference fails.
  
 ```
 
-Return the size of the TensorArray.
+返回Tensorarray的大小。
 
 ###  `split` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/tensor_array_ops.py#L1170-L1187)
@@ -245,12 +245,12 @@ Return the values in the TensorArray as a stacked  `Tensor` .
 
 All of the values must have been written and their shapes must all match.If input shapes have rank- `R` , then output shape will have rank- `(R+1)` .
 
-#### Args:
+#### 参数：
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-All the tensors in the TensorArray stacked into one tensor.
+#### 返回：
+张量阵列中的所有张量叠加成一个张量。
 
 ###  `unstack` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/tensor_array_ops.py#L1131-L1149)
@@ -289,14 +289,14 @@ Raises:    ValueError: if the shape inference fails.
 
 Write  `value`  into index  `index`  of the TensorArray.
 
-#### Args:
+#### 参数：
 - **`index`** : 0-D.  int32 scalar with the index to write to.
 - **`value`** : N-D.  Tensor of type  `dtype` .  The Tensor to write to this index.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A new TensorArray object with flow that ensures the write occurs.Use this object all for subsequent operations.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if there are more writers than specified.

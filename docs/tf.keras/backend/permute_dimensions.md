@@ -1,6 +1,6 @@
-Permutes axes in a tensor.
+在张量中排列轴。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.permute_dimensions` ](/api_docs/python/tf/keras/backend/permute_dimensions), [ `tf.compat.v2.keras.backend.permute_dimensions` ](/api_docs/python/tf/keras/backend/permute_dimensions)
+**别名** : [ `tf.compat.v1.keras.backend.permute_dimensions` ](/api_docs/python/tf/keras/backend/permute_dimensions), [ `tf.compat.v2.keras.backend.permute_dimensions` ](/api_docs/python/tf/keras/backend/permute_dimensions)
 
 ```
  tf.keras.backend.permute_dimensions(
@@ -10,15 +10,15 @@ Permutes axes in a tensor.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`pattern`** : A tuple ofdimension indices, e.g.  `(0, 2, 1)` .
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Example:
+#### 示例：
 
 
 ```

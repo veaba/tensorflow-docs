@@ -1,4 +1,4 @@
-DepthToSpace for tensors of type T.
+t型张量的深度空间。
 
 ```
  tf.compat.v1.depth_to_space(    input,    block_size,    name=None,    data_format='NHWC') 
@@ -71,13 +71,13 @@ the operator will return the following tensor of shape  `[1 4 4 1]` :
  
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor` .
 - **`block_size`** : An  `int`  that is  `>= 2` .The size of the spatial block, same as in Space2Depth.
 - **`data_format`** : An optional  `string`  from:  `"NHWC", "NCHW", "NCHW_VECT_C"` . Defaults to  `"NHWC"` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `input` .
 

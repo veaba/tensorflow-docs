@@ -1,6 +1,6 @@
 Evaluation-related metrics.
 
-## Functions
+## 功能
 [ `accuracy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/metrics/accuracy): Calculates how often  `predictions`  matches  `labels` .
 
 [ `auc(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/metrics/auc): Computes the approximate AUC via a Riemann sum.

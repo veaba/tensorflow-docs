@@ -9,7 +9,7 @@ There are several delicate issues when running multiple threads that way:closing
 
 The  `QueueRunner` , combined with the  `Coordinator` , helps handle these issues.
 
-#### Eager Compatibility
+#### 迫切的兼容性
 QueueRunners are not compatible with eager execution. Instead, pleaseuse [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) to get data into your model.
 
 ##  `__init__` 
@@ -36,7 +36,7 @@ On construction the  `QueueRunner`  adds an op to close the queue.  That opwill 
 
 When you later call the  `create_threads()`  method, the  `QueueRunner`  willcreate one thread for each op in  `enqueue_ops` .  Each thread will run itsenqueue op in parallel with the other threads.  The enqueue ops do not haveto all be the same op, but it is expected that they all enqueue tensors in `queue` .
 
-#### Args:
+#### 参数：
 - **`queue`** : A  `Queue` .
 - **`enqueue_ops`** : List of enqueue ops to run in threads later.
 - **`close_op`** : Op to close the queue. Pending enqueue ops are preserved.
@@ -46,13 +46,13 @@ When you later call the  `create_threads()`  method, the  `QueueRunner`  willcre
 - **`import_scope`** : Optional  `string` . Name scope to add. Only used wheninitializing from protocol buffer.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both  `queue_runner_def`  and  `queue`  are both specified.
 - **`ValueError`** : If  `queue`  or  `enqueue_ops`  are not provided when notrestoring from  `queue_runner_def` .
 - **`RuntimeError`** : If eager execution is enabled.
 
 
-## Properties
+## 属性
 
 
 ###  `cancel_op` 
@@ -73,11 +73,11 @@ Exceptions raised in queue runner threads are handled in one of two waysdependin
 - Without a  `Coordinator` , exceptions are captured by the  `QueueRunner`  andmade available in this  `exceptions_raised`  property.
 
 
-#### Returns:
+#### 返回：
 A list of Python  `Exception`  objects.  The list is empty if no exceptionwas captured.  (No exceptions are captured when using a Coordinator.)
 
 ###  `name` 
-The string name of the underlying Queue.
+基础队列的字符串名称。
 
 ###  `queue` 
 
@@ -85,7 +85,7 @@ The string name of the underlying Queue.
 ###  `queue_closed_exception_types` 
 
 
-## Methods
+## 方法
 
 
 ###  `create_threads` 
@@ -101,7 +101,7 @@ The string name of the underlying Queue.
  
 ```
 
-Create threads to run the enqueue ops for the given session.
+创建线程以运行给定会话的排队操作。
 
 This method requires a session in which the graph was launched.  It createsa list of threads, optionally starting them.  There is one thread for eachop passed in  `enqueue_ops` .
 
@@ -109,15 +109,15 @@ The  `coord`  argument is an optional coordinator that the threads will useto te
 
 If previously created threads for the given session are still running, nonew threads will be created.
 
-#### Args:
+#### 参数：
 - **`sess`** : A  `Session` .
 - **`coord`** : Optional  `Coordinator`  object for reporting errors and checkingstop conditions.
 - **`daemon`** : Boolean.  If  `True`  make the threads daemon threads.
 - **`start`** : Boolean.  If  `True`  starts the threads.  If  `False`  thecaller must call the  `start()`  method of the returned threads.
 
 
-#### Returns:
-A list of threads.
+#### 返回：
+线程列表。
 
 ###  `from_proto` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/queue_runner_impl.py#L387-L391)
@@ -143,10 +143,10 @@ Returns a  `QueueRunner`  object created from  `queue_runner_def` .
 
 Converts this  `QueueRunner`  to a  `QueueRunnerDef`  protocol buffer.
 
-#### Args:
+#### 参数：
 - **`export_scope`** : Optional  `string` . Name scope to remove.
 
 
-#### Returns:
+#### 返回：
 A  `QueueRunnerDef`  protocol buffer, or  `None`  if the  `Variable`  is not inthe specified name scope.
 

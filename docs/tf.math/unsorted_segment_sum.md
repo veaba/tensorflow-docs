@@ -1,8 +1,8 @@
 
 
-Computes the sum along segments of a tensor.
+沿张量的段计算和。
 
-**Aliases** : [ `tf.compat.v1.math.unsorted_segment_sum` ](/api_docs/python/tf/math/unsorted_segment_sum), [ `tf.compat.v1.unsorted_segment_sum` ](/api_docs/python/tf/math/unsorted_segment_sum), [ `tf.compat.v2.math.unsorted_segment_sum` ](/api_docs/python/tf/math/unsorted_segment_sum)
+**别名** : [ `tf.compat.v1.math.unsorted_segment_sum` ](/api_docs/python/tf/math/unsorted_segment_sum), [ `tf.compat.v1.unsorted_segment_sum` ](/api_docs/python/tf/math/unsorted_segment_sum), [ `tf.compat.v2.math.unsorted_segment_sum` ](/api_docs/python/tf/math/unsorted_segment_sum)
 
 ```
  tf.math.unsorted_segment_sum(
@@ -32,13 +32,13 @@ tf.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
  
 ```
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor` . Must be one of the following types:  `float32` ,  `float64` ,  `int32` ,  `uint8` ,  `int16` ,  `int8` ,  `complex64` ,  `int64` ,  `qint8` ,  `quint8` ,  `qint32` ,  `bfloat16` ,  `uint16` ,  `complex128` ,  `half` ,  `uint32` ,  `uint64` .
 - **`segment_ids`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor whose shape is a prefix of  `data.shape` .
 - **`num_segments`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `data` .
 

@@ -1,6 +1,6 @@
-Experimental Distribution Strategy library.
+实验分发策略库。
 
-## Classes
+## Class 
 [ `class CentralStorageStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/distribute/experimental/CentralStorageStrategy): A one-machine strategy that puts all variables on a single device.
 
 [ `class CollectiveCommunication` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental/CollectiveCommunication): Communication choices for CollectiveOps.

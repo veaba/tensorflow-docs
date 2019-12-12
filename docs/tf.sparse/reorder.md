@@ -1,6 +1,6 @@
 Reorders a  `SparseTensor`  into the canonical, row-major ordering.
 
-**Aliases** : [ `tf.compat.v1.sparse.reorder` ](/api_docs/python/tf/sparse/reorder), [ `tf.compat.v1.sparse_reorder` ](/api_docs/python/tf/sparse/reorder), [ `tf.compat.v2.sparse.reorder` ](/api_docs/python/tf/sparse/reorder)
+**别名** : [ `tf.compat.v1.sparse.reorder` ](/api_docs/python/tf/sparse/reorder), [ `tf.compat.v1.sparse_reorder` ](/api_docs/python/tf/sparse/reorder), [ `tf.compat.v2.sparse.reorder` ](/api_docs/python/tf/sparse/reorder)
 
 ```
  tf.sparse.reorder(
@@ -34,13 +34,13 @@ then the output will be a  `SparseTensor`  of shape  `[4, 5]`  and `indices`  / 
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The input  `SparseTensor` .
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  with the same shape and non-empty values, but incanonical ordering.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .

@@ -10,13 +10,13 @@ Computes Relu(x * weight + biases).
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : a 2D tensor.  Dimensions typically: batch, in_units
 - **`weights`** : a 2D tensor.  Dimensions typically: in_units, out_units
 - **`biases`** : a 1D tensor.  Dimensions: out_units
 - **`name`** : A name for the operation (optional).  If not specified"nn_relu_layer" is used.
 
 
-#### Returns:
+#### 返回：
 A 2-D Tensor computing relu(matmul(x, weights) + biases).Dimensions typically: batch, out_units.
 

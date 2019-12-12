@@ -1,6 +1,6 @@
-Constraints: functions that impose constraints on weight values.
+约束：对权重值施加约束的函数。
 
-## Classes
+## Class 
 [ `class Constraint` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/Constraint)
 
 [ `class MaxNorm` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/MaxNorm): MaxNorm weight constraint.
@@ -23,7 +23,7 @@ Constraints: functions that impose constraints on weight values.
 
 [ `class unit_norm` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/UnitNorm): Constrains the weights incident to each hidden unit to have unit norm.
 
-## Functions
+## 功能
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/deserialize)
 
 [ `get(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/get)

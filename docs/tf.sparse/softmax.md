@@ -1,6 +1,6 @@
 Applies softmax to a batched N-D  `SparseTensor` .
 
-**Aliases** : [ `tf.compat.v1.sparse.softmax` ](/api_docs/python/tf/sparse/softmax), [ `tf.compat.v1.sparse_softmax` ](/api_docs/python/tf/sparse/softmax), [ `tf.compat.v2.sparse.softmax` ](/api_docs/python/tf/sparse/softmax)
+**别名** : [ `tf.compat.v1.sparse.softmax` ](/api_docs/python/tf/sparse/softmax), [ `tf.compat.v1.sparse_softmax` ](/api_docs/python/tf/sparse/softmax), [ `tf.compat.v2.sparse.softmax` ](/api_docs/python/tf/sparse/softmax)
 
 ```
  tf.sparse.softmax(
@@ -18,7 +18,7 @@ This op is equivalent to applying the normal [ `tf.nn.softmax()` ](https://tenso
 
 Hence, the  `SparseTensor`  result has exactly the same non-zero indices andshape.
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -40,10 +40,10 @@ result = tf.sparse.softmax(tf.SparseTensor(indices, values, shape))
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : N-D  `SparseTensor` , where  `N >= 2` .
 - **`name`** : optional name of the operation.
 
 
-#### Returns:
+#### 返回：
 - **`output`** : N-D  `SparseTensor`  representing the results.

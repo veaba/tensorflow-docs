@@ -1,6 +1,6 @@
 The transpose of  `convolution` .
 
-**Aliases** : [ `tf.compat.v1.nn.conv_transpose` ](/api_docs/python/tf/nn/conv_transpose), [ `tf.compat.v2.nn.conv_transpose` ](/api_docs/python/tf/nn/conv_transpose)
+**别名** : [ `tf.compat.v1.nn.conv_transpose` ](/api_docs/python/tf/nn/conv_transpose), [ `tf.compat.v2.nn.conv_transpose` ](/api_docs/python/tf/nn/conv_transpose)
 
 ```
  tf.nn.conv_transpose(
@@ -18,7 +18,7 @@ The transpose of  `convolution` .
 
 This operation is sometimes called "deconvolution" after [DeconvolutionalNetworks](http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf), but isactually the transpose (gradient) of  `convolution`  rather than an actualdeconvolution.
 
-#### Args:
+#### 参数：
 - **`input`** : An N+2 dimensional  `Tensor`  of shape `[batch_size] + input_spatial_shape + [in_channels]`  if data_format doesnot start with "NC" (default), or `[batch_size, in_channels] + input_spatial_shape`  if data_format startswith "NC". It must be one of the following types: `half` ,  `bfloat16` ,  `float32` ,  `float64` .
 - **`filters`** : An N+2 dimensional  `Tensor`  with the same type as  `input`  andshape  `spatial_filter_shape + [in_channels, out_channels]` .
 - **`output_shape`** : A 1-D  `Tensor`  representing the output shape of thedeconvolution op.
@@ -29,6 +29,6 @@ This operation is sometimes called "deconvolution" after [DeconvolutionalNetwork
 - **`name`** : A name for the operation (optional). If not specified "conv_transpose"is used.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same type as  `value` .
 

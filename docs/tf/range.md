@@ -1,6 +1,6 @@
-Creates a sequence of numbers.
+创建一个数字序列。
 
-**Aliases** : [ `tf.compat.v1.range` ](/api_docs/python/tf/range), [ `tf.compat.v2.range` ](/api_docs/python/tf/range)
+**别名** : [ `tf.compat.v1.range` ](/api_docs/python/tf/range), [ `tf.compat.v2.range` ](/api_docs/python/tf/range)
 
 ```
  tf.range(limit, delta=1, dtype=None, name='range')
@@ -8,12 +8,12 @@ tf.range(start, limit, delta=1, dtype=None, name='range')
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
@@ -23,7 +23,7 @@ The dtype of the resulting tensor is inferred from the inputs unlessit is provid
 
 Like the Python builtin  `range` ,  `start`  defaults to 0, so that `range(n) = range(0, n)` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -42,7 +42,7 @@ tf.range(limit)  # [0, 1, 2, 3, 4]
  
 ```
 
-#### Args:
+#### 参数：
 - **`start`** : A 0-D  `Tensor`  (scalar). Acts as first entry in the range if  `limit` is not None; otherwise, acts as range limit and first entry defaults to 0.
 - **`limit`** : A 0-D  `Tensor`  (scalar). Upper limit of sequence, exclusive. If None,defaults to the value of  `start`  while the first entry of the rangedefaults to 0.
 - **`delta`** : A 0-D  `Tensor`  (scalar). Number that increments  `start` . Defaults to1.
@@ -50,9 +50,9 @@ tf.range(limit)  # [0, 1, 2, 3, 4]
 - **`name`** : A name for the operation. Defaults to "range".
 
 
-#### Returns:
+#### 返回：
 An 1-D  `Tensor`  of type  `dtype` .
 
-#### Numpy Compatibility
-Equivalent to np.arange
+#### numpy兼容性
+相当于np.arange
 

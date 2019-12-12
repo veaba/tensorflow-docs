@@ -1,6 +1,6 @@
-ResNet models for Keras.
+路缘石的resnet模型。
 
-## Functions
+## 功能
 [ `ResNet101(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/ResNet101)
 
 [ `ResNet152(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/ResNet152)

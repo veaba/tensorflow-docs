@@ -37,7 +37,7 @@ elif mode == "eval":
 **Note:**  It would be useful to allow a variable number of target classes perexample.  We hope to provide this functionality in a future release.For now, if you have a variable number of target classes, you can pad themout to a constant number by either repeating them or by paddingwith an otherwise unused class.
 
 
-#### Args:
+#### 参数：
 - **`weights`** : A  `Tensor`  of shape  `[num_classes, dim]` , or a list of  `Tensor` objects whose concatenation along dimension 0 has shape [num_classes,dim].  The (possibly-partitioned) class embeddings.
 - **`biases`** : A  `Tensor`  of shape  `[num_classes]` .  The class biases.
 - **`labels`** : A  `Tensor`  of type  `int64`  and shape  `[batch_size, num_true]` . Thetarget classes.
@@ -50,6 +50,6 @@ elif mode == "eval":
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `batch_size`  1-D tensor of per-example NCE losses.
 

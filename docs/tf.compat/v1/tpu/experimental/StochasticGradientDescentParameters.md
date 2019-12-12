@@ -1,7 +1,7 @@
 
 
 ## Class  `StochasticGradientDescentParameters` 
-Optimization parameters for stochastic gradient descent for TPU embeddings.
+tpu嵌入随机梯度下降的优化参数。
 
 Pass this to  `tf.estimator.tpu.experimental.EmbeddingConfigSpec`  via the `optimization_parameters`  argument to set the optimizer and its parameters.See the documentation for  `tf.estimator.tpu.experimental.EmbeddingConfigSpec` for more details.
 
@@ -27,9 +27,9 @@ Pass this to  `tf.estimator.tpu.experimental.EmbeddingConfigSpec`  via the `opti
  
 ```
 
-Optimization parameters for stochastic gradient descent.
+随机梯度下降的优化参数。
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : a floating point value. The learning rate.
 - **`clip_weight_min`** : the minimum value to clip by; None means -infinity.
 - **`clip_weight_max`** : the maximum value to clip by; None means +infinity.

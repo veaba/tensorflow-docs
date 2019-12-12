@@ -1,7 +1,7 @@
 
 
 ## Class  `EnumClassFlag` 
-Basic enum flag; its value is an enum class's member.
+基本枚举标志；其值是枚举类的成员。
 
 Inherits From: [ `Flag` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Flag)
 
@@ -22,13 +22,13 @@ Inherits From: [ `Flag` ](https://tensorflow.google.cn/api_docs/python/tf/compat
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `value` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -88,7 +88,7 @@ Return a <= b.  Computed by @total_ordering from (a < b) or (a == b).
  
 ```
 
-Return self<value.
+返回self<value。
 
 ###  `flag_type` 
 
@@ -98,9 +98,9 @@ Return self<value.
  
 ```
 
-Returns a str that describes the type of the flag.
+返回描述标志类型的str。
 
-NOTE: we use strings, and not the types.*Type constants becauseour flags can have more exotic types, e.g., 'comma separated listof strings', 'whitespace separated list of strings', etc.
+注意：we use strings, and not the types.*Type constants becauseour flags can have more exotic types, e.g., 'comma separated listof strings', 'whitespace separated list of strings', etc.
 
 ###  `parse` 
 
@@ -110,9 +110,9 @@ NOTE: we use strings, and not the types.*Type constants becauseour flags can hav
  
 ```
 
-Parses string and sets flag value.
+分析字符串并设置标志值。
 
-#### Args:
+#### 参数：
 - **`argument`** : str or the correct flag value type, argument to be parsed.
 
 
@@ -124,7 +124,7 @@ Parses string and sets flag value.
  
 ```
 
-Serializes the flag.
+序列化标志。
 
 ###  `unparse` 
 

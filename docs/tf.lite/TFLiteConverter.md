@@ -1,9 +1,9 @@
 
 
 ## Class  `TFLiteConverter` 
-Converts a TensorFlow model into TensorFlow Lite model.
+将TensorFlow模型转换为TensorFlow Lite模型。
 
-#### Attributes:
+#### 属性：
 - **`allow_custom_ops`** : Boolean indicating whether to allow custom operations.When false any unknown operation is an error. When true, custom ops arecreated for any op that is unknown. The developer will need to providethese to the TensorFlow Lite runtime with a custom resolver.(default False)
 - **`target_spec`** : Experimental flag, subject to change. Specification of targetdevice.
 - **`optimizations`** : Experimental flag, subject to change. A list of optimizationsto apply when converting the model. E.g. `[Optimize.DEFAULT]
@@ -11,7 +11,7 @@ Converts a TensorFlow model into TensorFlow Lite model.
 - **`experimental_enable_mlir_converter`** : Experimental flag, subject to change.Enables the MLIR converter instead of the TOCO converter.
 
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -40,14 +40,14 @@ tflite_model = converter.convert()
  
 ```
 
-Constructor for TFLiteConverter.
+tflitecoverter的构造函数。
 
-#### Args:
+#### 参数：
 - **`funcs`** : List of TensorFlow ConcreteFunctions. The list should not containduplicate elements.
 - **`trackable_obj`** : tf.AutoTrackable object associated with  `funcs` . Areference to this object needs to be maintained so that Variables do notget garbage collected since functions have a weak reference toVariables. This is only required when the tf.AutoTrackable object is notmaintained by the user (e.g.  `from_saved_model` ).
 
 
-## Methods
+## 方法
 
 
 ###  `convert` 
@@ -58,12 +58,12 @@ Constructor for TFLiteConverter.
  
 ```
 
-Converts a TensorFlow GraphDef based on instance variables.
+基于实例变量转换tensorflow graphdef。
 
-#### Returns:
-The converted data in serialized format.
+#### 返回：
+以序列化格式转换的数据。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :   Multiple concrete functions are specified.Input shape is not specified.Invalid quantization parameters.
 
 
@@ -79,17 +79,17 @@ from_concrete_functions(
  
 ```
 
-Creates a TFLiteConverter object from ConcreteFunctions.
+从ConcreteFunctions创建TfliteConverter对象。
 
-#### Args:
+#### 参数：
 - **`funcs`** : List of TensorFlow ConcreteFunctions. The list should not containduplicate elements.
 
 
-#### Returns:
-TFLiteConverter object.
+#### 返回：
+TFLiteConverter对象。
 
-#### Raises:
-Invalid input type.
+#### 加薪：
+输入类型无效。
 
 ###  `from_keras_model` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L372-L384)
@@ -103,14 +103,14 @@ from_keras_model(
  
 ```
 
-Creates a TFLiteConverter object from a Keras model.
+从keras模型创建tflitecoverter对象。
 
-#### Args:
+#### 参数：
 - **`model`** : tf.Keras.Model
 
 
-#### Returns:
-TFLiteConverter object.
+#### 返回：
+TFLiteConverter对象。
 
 ###  `from_saved_model` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/lite/python/lite.py#L337-L370)
@@ -126,17 +126,17 @@ from_saved_model(
  
 ```
 
-Creates a TFLiteConverter object from a SavedModel directory.
+从savedModel目录创建tflitecoverter对象。
 
-#### Args:
+#### 参数：
 - **`saved_model_dir`** : SavedModel directory to convert.
 - **`signature_keys`** : List of keys identifying SignatureDef containing inputsand outputs. Elements should not be duplicated. By default the `signatures`  attribute of the MetaGraphdef is used. (defaultsaved_model.signatures)
 - **`tags`** : Set of tags identifying the MetaGraphDef within the SavedModel toanalyze. All tags in the tag set must be present. (default set(SERVING))
 
 
-#### Returns:
-TFLiteConverter object.
+#### 返回：
+TFLiteConverter对象。
 
-#### Raises:
-Invalid signature keys.
+#### 加薪：
+无效的签名密钥。
 

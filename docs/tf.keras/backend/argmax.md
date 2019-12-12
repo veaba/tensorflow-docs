@@ -1,6 +1,6 @@
-Returns the index of the maximum value along an axis.
+返回沿轴的最大值的索引。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax), [ `tf.compat.v2.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax)
+**别名** : [ `tf.compat.v1.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax), [ `tf.compat.v2.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax)
 
 ```
  tf.keras.backend.argmax(
@@ -10,11 +10,11 @@ Returns the index of the maximum value along an axis.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Tensor or variable.
 - **`axis`** : axis along which to perform the reduction.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 

@@ -4,7 +4,7 @@ Assert the condition  `x == y`  holds element-wise.
  tf.compat.v1.assert_equal(    x,    y,    data=None,    summarize=None,    message=None,    name=None) 
 ```
 
-Example of adding a dependency to an operation:
+向操作添加依赖项的示例：
 
 ```
  with tf.control_dependencies([tf.compat.v1.assert_equal(x, y)]):
@@ -14,7 +14,7 @@ Example of adding a dependency to an operation:
 
 This condition holds if for every pair of (possibly broadcast) elements `x[i]` ,  `y[i]` , we have  `x[i] == y[i]` .If both  `x`  and  `y`  are empty, this is trivially satisfied.
 
-#### Args:
+#### 参数：
 - **`x`** :  Numeric  `Tensor` .
 - **`y`** :  Numeric  `Tensor` , same dtype as and broadcastable to  `x` .
 - **`data`** :  The tensors to print out if the condition is False.  Defaults toerror message and first few entries of  `x` ,  `y` .
@@ -23,13 +23,13 @@ This condition holds if for every pair of (possibly broadcast) elements `x[i]` ,
 - **`name`** : A name for this operation (optional).  Defaults to "assert_equal".
 
 
-#### Returns:
+#### 返回：
 Op that raises  `InvalidArgumentError`  if  `x == y`  is False.
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : if the check can be performed immediately and `x == y`  is False. The check can be performed immediately during eagerexecution or if  `x`  and  `y`  are statically known.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 returns None
 

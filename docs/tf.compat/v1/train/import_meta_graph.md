@@ -54,9 +54,9 @@ Later we can continue training from this saved  `meta_graph`  without buildingth
  
 ```
 
-NOTE: Restarting training from saved  `meta_graph`  only works if thedevice assignments have not changed.
+注意：Restarting training from saved  `meta_graph`  only works if thedevice assignments have not changed.
 
-#### Example:
+#### 示例：
 Variables, placeholders, and independent operations can also be stored, asshown in the following example.
 
 ```
@@ -74,7 +74,7 @@ saver.save(sess, "./model_ex1")
  
 ```
 
-Later this model can be restored and contents loaded.
+稍后可以恢复此模型并加载内容。
 
 ```
  # Restoring variables and running operations.
@@ -86,22 +86,22 @@ print(result)
  
 ```
 
-#### Args:
+#### 参数：
 - **`meta_graph_or_file`** :  `MetaGraphDef`  protocol buffer or filename (includingthe path) containing a  `MetaGraphDef` .
 - **`clear_devices`** : Whether or not to clear the device field for an  `Operation` or  `Tensor`  during import.
 - **`import_scope`** : Optional  `string` . Name scope to add. Only used wheninitializing from protocol buffer.
 - **`**kwargs`** : Optional keyed arguments.
 
 
-#### Returns:
+#### 返回：
 A saver constructed from  `saver_def`  in  `MetaGraphDef`  or None.
 
 A None value is returned if no variables exist in the  `MetaGraphDef` (i.e., there are no variables to restore).
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If called with eager execution enabled.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Exporting/importing meta graphs is not supported. No graph exists when eagerexecution is enabled.
 

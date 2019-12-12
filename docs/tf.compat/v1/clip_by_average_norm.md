@@ -19,12 +19,12 @@ In this case, the average L2-norm of the output tensor is  `clip_norm` .
 
 This operation is typically used to clip gradients before applying them withan optimizer.
 
-#### Args:
+#### 参数：
 - **`t`** : A  `Tensor` .
 - **`clip_norm`** : A 0-D (scalar)  `Tensor`  > 0. A maximum clipping value.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A clipped  `Tensor` .
 

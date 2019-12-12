@@ -5,7 +5,7 @@ Creates a  `Head`  for multi-label classification.
 
 Inherits From: [ `Head` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Head)
 
-**Aliases** : [ `tf.compat.v1.estimator.MultiLabelHead` ](/api_docs/python/tf/estimator/MultiLabelHead), [ `tf.compat.v2.estimator.MultiLabelHead` ](/api_docs/python/tf/estimator/MultiLabelHead)
+**别名** : [ `tf.compat.v1.estimator.MultiLabelHead` ](/api_docs/python/tf/estimator/MultiLabelHead), [ `tf.compat.v2.estimator.MultiLabelHead` ](/api_docs/python/tf/estimator/MultiLabelHead)
 
 Multi-label classification handles the case where each example may have zeroor more associated labels, from a discrete set. This is distinct from `MultiClassHead`  which has exactly one label per example.
 
@@ -13,7 +13,7 @@ Uses  `sigmoid_cross_entropy`  loss average over classes and weighted sum overth
 
 The head expects  `logits`  with shape  `[D0, D1, ... DN, n_classes]` . In manyapplications, the shape is  `[batch_size, n_classes]` .
 
-#### Labels can be:
+#### 标签可以是：
 - A multi-hot tensor of shape  `[D0, D1, ... DN, n_classes]` 
 - An integer  `SparseTensor`  of class indices. The  `dense_shape`  must be `[D0, D1, ... DN, ?]`  and the values within  `[0, n_classes)` .
 - If  `label_vocabulary`  is given, a string  `SparseTensor` . The  `dense_shape` must be  `[D0, D1, ... DN, ?]`  and the values within  `label_vocabulary`  or amulti-hot tensor of shape  `[D0, D1, ... DN, n_classes]` .
@@ -21,7 +21,7 @@ If  `weight_column`  is specified, weights must be of shape `[D0, D1, ... DN]` ,
 
 Also supports custom  `loss_fn` .  `loss_fn`  takes  `(labels, logits)`  or `(labels, logits, features)`  as arguments and returns unreduced loss withshape  `[D0, D1, ... DN, 1]` .  `loss_fn`  must support indicator  `labels`  withshape  `[D0, D1, ... DN, n_classes]` . Namely, the head applies `label_vocabulary`  to the input labels before passing them to  `loss_fn` .
 
-The head can be used with a canned estimator. Example:
+头部可以与罐头估计器一起使用。例子：
 
 ```
  my_head = tf.estimator.MultiLabelHead(n_classes=3)
@@ -50,7 +50,7 @@ my_estimator = tf.estimator.Estimator(model_fn=_my_model_fn)
  
 ```
 
-#### Args:
+#### 参数：
 - **`n_classes`** : Number of classes, must be greater than 1 (for 1 class, use `BinaryClassHead` ).
 - **`weight_column`** : A string or a  `NumericColumn`  created by[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representingweights. It is used to down weight or boost examples during training. Itwill be multiplied by the loss of the example.  Per-class weighting isnot supported.
 - **`thresholds`** : Iterable of floats in the range  `(0, 1)` . Accuracy, precisionand recall metrics are evaluated for each threshold value. The thresholdis applied to the predicted probabilities, i.e. above the threshold is `true` , below is  `false` .
@@ -80,7 +80,7 @@ my_estimator = tf.estimator.Estimator(model_fn=_my_model_fn)
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `logits_dimension` 
@@ -92,7 +92,7 @@ See  `base_head.Head`  for details.
 ###  `name` 
 See  `base_head.Head`  for details.
 
-## Methods
+## 方法
 
 
 ###  `create_estimator_spec` 
@@ -115,9 +115,9 @@ See  `base_head.Head`  for details.
 
 Returns  `EstimatorSpec`  that a model_fn can return.
 
-It is recommended to pass all args via name.
+建议通过名称传递所有参数。
 
-#### Args:
+#### 参数：
 - **`features`** : Input  `dict`  mapping string feature names to  `Tensor`  or `SparseTensor`  objects containing the values for that feature in aminibatch. Often to be used to fetch example-weight tensor.
 - **`mode`** : Estimator's  `ModeKeys` .
 - **`logits`** : Logits  `Tensor`  to be used by the head.
@@ -129,7 +129,7 @@ It is recommended to pass all args via name.
 - **`regularization_losses`** : A list of additional scalar losses to be added tothe training loss, such as regularization losses.
 
 
-#### Returns:
+#### 返回：
  `EstimatorSpec` .
 
 ###  `loss` 
@@ -171,13 +171,13 @@ Creates metrics. See  `base_head.Head`  for details.
 
 Return predictions based on keys.  See  `base_head.Head`  for details.
 
-#### Args:
+#### 参数：
 - **`logits`** : logits  `Tensor`  with shape  `[D0, D1, ... DN, logits_dimension]` .For many applications, the shape is  `[batch_size, logits_dimension]` .
 - **`keys`** : a list of prediction keys. Key can be either the class variableof prediction_keys.PredictionKeys or its string value, such as:prediction_keys.PredictionKeys.LOGITS or 'logits'.
 
 
-#### Returns:
-A dict of predictions.
+#### 返回：
+预言的名言
 
 ###  `update_metrics` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/head/multi_label_head.py)

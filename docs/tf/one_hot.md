@@ -1,6 +1,6 @@
 Returns a one-hot tensor.
 
-**Aliases** : [ `tf.compat.v1.one_hot` ](/api_docs/python/tf/one_hot), [ `tf.compat.v2.one_hot` ](/api_docs/python/tf/one_hot)
+**别名** : [ `tf.compat.v1.one_hot` ](/api_docs/python/tf/one_hot), [ `tf.compat.v2.one_hot` ](/api_docs/python/tf/one_hot)
 
 ```
  tf.one_hot(
@@ -15,7 +15,7 @@ Returns a one-hot tensor.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Adversarial example using FGSM](https://tensorflow.google.cn/tutorials/generative/adversarial_fgsm)
 The locations represented by indices in  `indices`  take value  `on_value` ,while all other locations take value  `off_value` .
 
@@ -52,7 +52,7 @@ If  `dtype`  is not provided, it will attempt to assume the data type of `on_val
 **Note:**  If a non-numeric data type output is desired ([ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string), [ `tf.bool` ](https://tensorflow.google.cn/api_docs/python/tf#bool),etc.), both  `on_value`  and  `off_value`  *must* be provided to  `one_hot` .
 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -85,7 +85,7 @@ tf.one_hot(indices, depth,
  
 ```
 
-#### Args:
+#### 参数：
 - **`indices`** : A  `Tensor`  of indices.
 - **`depth`** : A scalar defining the depth of the one hot dimension.
 - **`on_value`** : A scalar defining the value to fill in output when  `indices[j]= i` . (default: 1)
@@ -95,10 +95,10 @@ tf.one_hot(indices, depth,
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 - **`output`** : The one-hot tensor.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If dtype of either  `on_value`  or  `off_value`  don't match  `dtype` 
 - **`TypeError`** : If dtype of  `on_value`  and  `off_value`  don't match one another

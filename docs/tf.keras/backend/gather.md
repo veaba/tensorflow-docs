@@ -1,6 +1,6 @@
 Retrieves the elements of indices  `indices`  in the tensor  `reference` .
 
-**Aliases** : [ `tf.compat.v1.keras.backend.gather` ](/api_docs/python/tf/keras/backend/gather), [ `tf.compat.v2.keras.backend.gather` ](/api_docs/python/tf/keras/backend/gather)
+**别名** : [ `tf.compat.v1.keras.backend.gather` ](/api_docs/python/tf/keras/backend/gather), [ `tf.compat.v2.keras.backend.gather` ](/api_docs/python/tf/keras/backend/gather)
 
 ```
  tf.keras.backend.gather(
@@ -10,11 +10,11 @@ Retrieves the elements of indices  `indices`  in the tensor  `reference` .
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`reference`** : A tensor.
 - **`indices`** : An integer tensor of indices.
 
 
-#### Returns:
+#### 返回：
 A tensor of same type as  `reference` .
 

@@ -1,6 +1,6 @@
-Returns the name of a GPU device if available or the empty string.
+返回GPU设备的名称（如果可用）或空字符串。
 
-**Aliases** : [ `tf.compat.v1.test.gpu_device_name` ](/api_docs/python/tf/test/gpu_device_name), [ `tf.compat.v2.test.gpu_device_name` ](/api_docs/python/tf/test/gpu_device_name)
+**别名** : [ `tf.compat.v1.test.gpu_device_name` ](/api_docs/python/tf/test/gpu_device_name), [ `tf.compat.v2.test.gpu_device_name` ](/api_docs/python/tf/test/gpu_device_name)
 
 ```
  tf.test.gpu_device_name()

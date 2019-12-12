@@ -1,6 +1,6 @@
 Transposes a  `SparseTensor` 
 
-**Aliases** : [ `tf.compat.v1.sparse.transpose` ](/api_docs/python/tf/sparse/transpose), [ `tf.compat.v1.sparse_transpose` ](/api_docs/python/tf/sparse/transpose), [ `tf.compat.v2.sparse.transpose` ](/api_docs/python/tf/sparse/transpose)
+**别名** : [ `tf.compat.v1.sparse.transpose` ](/api_docs/python/tf/sparse/transpose), [ `tf.compat.v1.sparse_transpose` ](/api_docs/python/tf/sparse/transpose), [ `tf.compat.v2.sparse.transpose` ](/api_docs/python/tf/sparse/transpose)
 
 ```
  tf.sparse.transpose(
@@ -33,14 +33,14 @@ then the output will be a  `SparseTensor`  of shape  `[5, 4]`  and `indices`  / 
  
 ```
 
-#### Args:
+#### 参数：
 - **`sp_input`** : The input  `SparseTensor` .
 - **`perm`** : A permutation of the dimensions of  `sp_input` .
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
+#### 返回：
 A transposed  `SparseTensor` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .

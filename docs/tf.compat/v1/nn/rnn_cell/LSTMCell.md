@@ -9,7 +9,7 @@ https://pdfs.semanticscholar.org/1154/0131eae85b2e11d53df7f1360eeb6476e7f4.pdf
 
 Felix Gers, Jurgen Schmidhuber, and Fred Cummins."Learning to forget: Continual prediction with LSTM." IET, 850-855, 1999.
 
-The peephole implementation is based on:
+窥视孔的实现基于：
 
 https://research.google.com/pubs/archive/43905.pdf
 
@@ -49,7 +49,7 @@ Initialize the parameters for an LSTM cell. (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
 
 
-#### Args:
+#### 参数：
 - **`num_units`** : int, The number of units in the LSTM cell.
 - **`use_peepholes`** : bool, set True to enable diagonal/peephole connections.
 - **`cell_clip`** : (optional) A float value, if provided the cell state is clippedby this value prior to the cell output activation.
@@ -67,28 +67,28 @@ Initialize the parameters for an LSTM cell. (deprecated)
 - **`**kwargs`** : Dict, keyword named properties for common layer attributes, like `trainable`  etc when constructing the cell from configs of get_config().When restoring from CudnnLSTM-trained checkpoints, use `CudnnCompatibleLSTMCell`  instead.
 
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
 
 
 ###  `output_size` 
-Integer or TensorShape: size of outputs produced by this cell.
+整数或张量形状：此单元格生成的输出大小。
 
 ###  `scope_name` 
 
 
 ###  `state_size` 
-size(s) of state(s) used by this cell.
+此单元格使用的状态大小。
 
 It can be represented by an Integer, a TensorShape or a tuple of Integersor TensorShapes.
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 
@@ -116,12 +116,12 @@ It can be represented by an Integer, a TensorShape or a tuple of Integersor Tens
 
 Return zero-filled state tensor(s).
 
-#### Args:
+#### 参数：
 - **`batch_size`** : int, float, or unit Tensor representing the batch size.
 - **`dtype`** : the data type to use for the state.
 
 
-#### Returns:
+#### 返回：
 If  `state_size`  is an int or TensorShape, then the return value is a `N-D`  tensor of shape  `[batch_size, state_size]`  filled with zeros.
 
 If  `state_size`  is a nested list or tuple, then the return value isa nested list or tuple (of the same structure) of  `2-D`  tensors withthe shapes  `[batch_size, s]`  for each s in  `state_size` .

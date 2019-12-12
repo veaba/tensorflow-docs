@@ -3,13 +3,13 @@
 ## Class  `RunConfig` 
 This class specifies the configurations for an  `Estimator`  run.
 
-**Aliases** : [ `tf.compat.v1.estimator.RunConfig` ](/api_docs/python/tf/estimator/RunConfig), [ `tf.compat.v2.estimator.RunConfig` ](/api_docs/python/tf/estimator/RunConfig)
+**别名** : [ `tf.compat.v1.estimator.RunConfig` ](/api_docs/python/tf/estimator/RunConfig), [ `tf.compat.v2.estimator.RunConfig` ](/api_docs/python/tf/estimator/RunConfig)
 
-### Used in the guide:
+### 在指南中使用：
 - [Distributed training with TensorFlow](https://tensorflow.google.cn/guide/distributed_training)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
 
 
@@ -38,7 +38,7 @@ This class specifies the configurations for an  `Estimator`  run.
  
 ```
 
-Constructs a RunConfig.
+构造runconfig。
 
 All distributed training related properties  `cluster_spec` ,  `is_chief` , `master`  ,  `num_worker_replicas` ,  `num_ps_replicas` ,  `task_id` , and `task_type`  are set based on the  `TF_CONFIG`  environment variable, if thepertinent information is present. The  `TF_CONFIG`  environment variable is aJSON object with attributes:  `cluster`  and  `task` .
 
@@ -75,7 +75,7 @@ Example of non-chief node:
  
 ```
 
-#### Example of chief node:
+#### 主节点示例：
 
 
 ```
@@ -96,7 +96,7 @@ Example of non-chief node:
  
 ```
 
-Example of evaluator node (evaluator is not part of training cluster):
+Evaluator节点示例（Evaluator不属于训练群集）：
 
 ```
    cluster = {'chief': ['host0:2222'],
@@ -119,7 +119,7 @@ Example of evaluator node (evaluator is not part of training cluster):
 
 N.B.: If  `save_checkpoints_steps`  or  `save_checkpoints_secs`  is set, `keep_checkpoint_max`  might need to be adjusted accordingly, especially indistributed training. For example, setting  `save_checkpoints_secs`  as 60without adjusting  `keep_checkpoint_max`  (defaults to 5) leads to situationthat checkpoint would be garbage collected after 5 minutes. In distributedtraining, the evaluation job starts asynchronously and might fail to load orfind the checkpoint due to race condition.
 
-#### Args:
+#### 参数：
 - **`model_dir`** : directory where model parameters, graph, etc are saved. If `PathLike`  object, the path will be resolved. If  `None` , will use adefault value set by the Estimator.
 - **`tf_random_seed`** : Random seed for TensorFlow initializers.Setting this value allows consistency between reruns.
 - **`save_summary_steps`** : Save summaries every this many steps.
@@ -138,11 +138,11 @@ N.B.: If  `save_checkpoints_steps`  or  `save_checkpoints_secs`  is set, `keep_c
 - **`session_creation_timeout_secs`** : Max time workers should wait for a sessionto become available (on initialization or when recovering a session)with MonitoredTrainingSession. Defaults to 7200 seconds, but users maywant to set a lower value to detect problems with variable / session(re)-initialization more quickly.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If both  `save_checkpoints_steps`  and  `save_checkpoints_secs` are set.
 
 
-## Properties
+## 属性
 
 
 ###  `cluster_spec` 
@@ -163,7 +163,7 @@ Optional [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/pyth
 
 
 ###  `global_id_in_cluster` 
-The global id in the training cluster.
+训练群集中的全局ID。
 
 All global ids in the training cluster are assigned from an increasingsequence of consecutive integers. The first id is 0.
 
@@ -194,8 +194,8 @@ Global id, i.e., this field, is tracking the index of the node among ALLnodes in
  
 ```
 
-#### Returns:
-An integer id.
+#### 返回：
+整数id。
 
 ###  `is_chief` 
 
@@ -222,7 +222,7 @@ An integer id.
 
 
 ###  `protocol` 
-Returns the optional protocol value.
+返回可选协议值。
 
 ###  `save_checkpoints_secs` 
 
@@ -254,7 +254,7 @@ Returns the platform defined (in TF_CONFIG) service dict.
 ###  `train_distribute` 
 Optional [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy) for training.
 
-## Methods
+## 方法
 
 
 ###  `replace` 
@@ -267,7 +267,7 @@ Optional [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/pyth
 
 Returns a new instance of  `RunConfig`  replacing specified properties.
 
-Only the properties in the following list are allowed to be replaced:
+仅允许替换以下列表中的属性：
 
 -  `model_dir` ,
 -  `tf_random_seed` ,
@@ -286,14 +286,14 @@ Only the properties in the following list are allowed to be replaced:
 -  `experimental_max_worker_delay_secs` ,
 In addition, either  `save_checkpoints_steps`  or  `save_checkpoints_secs` can be set (should not be both).
 
-#### Args:
+#### 参数：
 - **`**kwargs`** : keyword named properties with new values.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If any property name in  `kwargs`  does not exist or is notallowed to be replaced, or both  `save_checkpoints_steps`  and `save_checkpoints_secs`  are set.
 
 
-#### Returns:
+#### 返回：
 a new instance of  `RunConfig` .
 

@@ -1,6 +1,6 @@
 Stacks a list of rank  `R`  tensors into a rank  `R+1`  tensor.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.stack` ](/api_docs/python/tf/keras/backend/stack), [ `tf.compat.v2.keras.backend.stack` ](/api_docs/python/tf/keras/backend/stack)
+**别名** : [ `tf.compat.v1.keras.backend.stack` ](/api_docs/python/tf/keras/backend/stack), [ `tf.compat.v2.keras.backend.stack` ](/api_docs/python/tf/keras/backend/stack)
 
 ```
  tf.keras.backend.stack(
@@ -10,15 +10,15 @@ Stacks a list of rank  `R`  tensors into a rank  `R+1`  tensor.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : List of tensors.
 - **`axis`** : Axis along which to perform stacking.
 
 
-#### Returns:
-A tensor.
+#### 返回：
+张量
 
-#### Example:
+#### 示例：
 
 
 ```

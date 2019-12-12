@@ -1,6 +1,6 @@
 Computes cos of x element-wise.
 
-**Aliases** : [ `tf.compat.v1.cos` ](/api_docs/python/tf/math/cos), [ `tf.compat.v1.math.cos` ](/api_docs/python/tf/math/cos), [ `tf.compat.v2.cos` ](/api_docs/python/tf/math/cos), [ `tf.compat.v2.math.cos` ](/api_docs/python/tf/math/cos), [ `tf.cos` ](/api_docs/python/tf/math/cos)
+**别名** : [ `tf.compat.v1.cos` ](/api_docs/python/tf/math/cos), [ `tf.compat.v1.math.cos` ](/api_docs/python/tf/math/cos), [ `tf.compat.v2.cos` ](/api_docs/python/tf/math/cos), [ `tf.compat.v2.math.cos` ](/api_docs/python/tf/math/cos), [ `tf.cos` ](/api_docs/python/tf/math/cos)
 
 ```
  tf.math.cos(
@@ -18,11 +18,11 @@ tf.math.cos(x) ==> [nan -0.91113025 0.87758255 0.5403023 0.36235774 0.48718765 -
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

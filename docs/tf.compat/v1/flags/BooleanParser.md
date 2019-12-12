@@ -1,11 +1,11 @@
 
 
 ## Class  `BooleanParser` 
-Parser of boolean values.
+布尔值分析器。
 
 Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentParser)
 
-## Methods
+## 方法
 
 
 ###  `flag_type` 
@@ -16,7 +16,7 @@ Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python
  
 ```
 
-See base class.
+见基类。
 
 ###  `parse` 
 
@@ -26,5 +26,5 @@ See base class.
  
 ```
 
-See base class.
+见基类。
 

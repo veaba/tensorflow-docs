@@ -55,7 +55,7 @@ sess.run(g2)  # [array([[0., 0.]], dtype=float32)]
  
 ```
 
-#### Args:
+#### 参数：
 - **`ys`** : A  `Tensor`  or list of tensors to be differentiated.
 - **`xs`** : A  `Tensor`  or list of tensors to be used for differentiation.
 - **`grad_ys`** : Optional. A  `Tensor`  or list of tensors the same size as `ys`  and holding the gradients computed for each y in  `ys` .
@@ -66,10 +66,10 @@ sess.run(g2)  # [array([[0., 0.]], dtype=float32)]
 - **`unconnected_gradients`** : Optional. Specifies the gradient value returned whenthe given input tensors are unconnected. Accepted values are constantsdefined in the class [ `tf.UnconnectedGradients` ](https://tensorflow.google.cn/api_docs/python/tf/UnconnectedGradients) and the default value is `none` .
 
 
-#### Returns:
+#### 返回：
 A list of  `sum(dy/dx)`  for each x in  `xs` .
 
-#### Raises:
+#### 加薪：
 - **`LookupError`** : if one of the operations between  `x`  and  `y`  does nothave a registered gradient function.
 - **`ValueError`** : if the arguments are invalid.
 - **`RuntimeError`** : if called in Eager mode.

@@ -1,9 +1,9 @@
-Public API for tf.layers namespace.
+tf.layers命名空间的公共api。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/experimental) module: Public API for tf.layers.experimental namespace.
 
-## Classes
+## Class 
 [ `class AveragePooling1D` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/AveragePooling1D): Average Pooling layer for 1D inputs.
 
 [ `class AveragePooling2D` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/AveragePooling2D): Average pooling layer for 2D inputs (e.g. images).
@@ -42,7 +42,7 @@ Public API for tf.layers namespace.
 
 [ `class SeparableConv2D` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/SeparableConv2D): Depthwise separable 2D convolution.
 
-## Functions
+## 功能
 [ `average_pooling1d(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/average_pooling1d): Average Pooling layer for 1D inputs. (deprecated)
 
 [ `average_pooling2d(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/average_pooling2d): Average pooling layer for 2D inputs (e.g. images). (deprecated)

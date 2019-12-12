@@ -1,15 +1,15 @@
 
 
 ## Class  `TensorSpec` 
-Describes a tf.Tensor.
+描述一个tf.tensor。
 
-**Aliases** : [ `tf.compat.v1.TensorSpec` ](/api_docs/python/tf/TensorSpec), [ `tf.compat.v2.TensorSpec` ](/api_docs/python/tf/TensorSpec)
+**别名** : [ `tf.compat.v1.TensorSpec` ](/api_docs/python/tf/TensorSpec), [ `tf.compat.v2.TensorSpec` ](/api_docs/python/tf/TensorSpec)
 
-### Used in the guide:
+### 在指南中使用：
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Better performance with tf.function](https://tensorflow.google.cn/tutorials/customization/performance)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 Metadata for describing the [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor) objects accepted or returnedby some TensorFlow APIs.
@@ -26,26 +26,26 @@ Metadata for describing the [ `tf.Tensor` ](https://tensorflow.google.cn/api_doc
  
 ```
 
-Creates a TensorSpec.
+创建TensorSpec。
 
-#### Args:
+#### 参数：
 - **`shape`** : Value convertible to [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape). The shape of the tensor.
 - **`dtype`** : Value convertible to [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType). The type of the tensor values.
 - **`name`** : Optional name for the Tensor.
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If shape is not convertible to a [ `tf.TensorShape` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape), or dtype isnot convertible to a [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType).
 
 
-## Properties
+## 属性
 
 
 ###  `dtype` 
 Returns the  `dtype`  of elements in the tensor.
 
 ###  `name` 
-Returns the (optionally provided) name of the described tensor.
+返回描述的张量的名称（可选）。
 
 ###  `shape` 
 Returns the  `TensorShape`  that represents the shape of the tensor.
@@ -53,7 +53,7 @@ Returns the  `TensorShape`  that represents the shape of the tensor.
 ###  `value_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -114,11 +114,11 @@ Returns True if spec_or_tensor is compatible with this TensorSpec.
 
 Two tensors are considered compatible if they have the same dtypeand their shapes are compatible (see [ `tf.TensorShape.is_compatible_with` ](https://tensorflow.google.cn/api_docs/python/tf/TensorShape#is_compatible_with)).
 
-#### Args:
+#### 参数：
 - **`spec_or_tensor`** : A tf.TensorSpec or a tf.Tensor
 
 
-#### Returns:
+#### 返回：
 True if spec_or_tensor is compatible with self.
 
 ###  `most_specific_compatible_type` 
@@ -131,9 +131,9 @@ True if spec_or_tensor is compatible with self.
 
 Returns the most specific TypeSpec compatible with  `self`  and  `other` .
 
-#### Args:
+#### 参数：
 - **`other`** : A  `TypeSpec` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If there is no TypeSpec that is compatible with both  `self` and  `other` .

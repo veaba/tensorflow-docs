@@ -5,7 +5,7 @@ Kronecker product between two  `LinearOperators` .
 
 Inherits From: [ `LinearOperator` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperator)
 
-**Aliases** : [ `tf.compat.v1.linalg.LinearOperatorKronecker` ](/api_docs/python/tf/linalg/LinearOperatorKronecker), [ `tf.compat.v2.linalg.LinearOperatorKronecker` ](/api_docs/python/tf/linalg/LinearOperatorKronecker)
+**别名** : [ `tf.compat.v1.linalg.LinearOperatorKronecker` ](/api_docs/python/tf/linalg/LinearOperatorKronecker), [ `tf.compat.v2.linalg.LinearOperatorKronecker` ](/api_docs/python/tf/linalg/LinearOperatorKronecker)
 
 This operator composes one or more linear operators  `[op1,...,opJ]` ,building a new  `LinearOperator`  representing the Kronecker product: `op1 x op2 x .. opJ`  (we omit parentheses as the Kronecker product isassociative).
 
@@ -23,7 +23,7 @@ operator.to_dense()
      [2., 4., 1., 2.],
      [6., 8., 3., 4.]]
 
-operator.shape
+运算符.shape
 ==> [4, 4]
 
 operator.log_abs_determinant()
@@ -51,10 +51,10 @@ operator_large.matmul(x)
  
 ```
 
-#### Performance
+#### 性能
 The performance of  `LinearOperatorKronecker`  on any operation is equal tothe sum of the individual operators' operations.
 
-#### Matrix property hints
+#### 矩阵属性提示
 This  `LinearOperator`  is initialized with boolean flags of the form  `is_X` ,for  `X = non_singular, self_adjoint, positive_definite, square` .These have the following meaning:
 
 - If  `is_X == True` , callers should expect the operator to have theproperty  `X` .  This is a promise that should be fulfilled, but is *not* aruntime assert.  For example, finite floating point precision may resultin these promises being violated.
@@ -81,7 +81,7 @@ Initialize a  `LinearOperatorKronecker` .
 
  `LinearOperatorKronecker`  is initialized with a list of operators `[op_1,...,op_J]` .
 
-#### Args:
+#### 参数：
 - **`operators`** :  Iterable of  `LinearOperator`  objects, each withthe same  `dtype`  and composable shape, representing the Kroneckerfactors.
 - **`is_non_singular`** :  Expect that this operator is non-singular.
 - **`is_self_adjoint`** :  Expect that this operator is equal to its hermitiantranspose.
@@ -91,12 +91,12 @@ Initialize a  `LinearOperatorKronecker` .
 - **`name`** : A name for this  `LinearOperator` .  Default is the individualoperators names joined with  `_x_` .
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** :  If all operators do not have the same  `dtype` .
 - **`ValueError`** :  If  `operators`  is empty.
 
 
-## Properties
+## 属性
 
 
 ###  `H` 
@@ -104,11 +104,11 @@ Returns the adjoint of the current  `LinearOperator` .
 
 Given  `A`  representing this  `LinearOperator` , return  `A*` .Note that calling  `self.adjoint()`  and  `self.H`  are equivalent.
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `LinearOperator`  which represents the adjoint of this  `LinearOperator` .
 
 ###  `batch_shape` 
@@ -116,15 +116,15 @@ Given  `A`  representing this  `LinearOperator` , return  `A*` .Note that callin
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns `TensorShape([B1,...,Bb])` , equivalent to  `A.get_shape()[:-2]` 
 
-#### Returns:
+#### 返回：
  `TensorShape` , statically determined, may be undefined.
 
 ###  `domain_dimension` 
-Dimension (in the sense of vector spaces) of the domain of this operator.
+这个算子域的维数（在向量空间的意义上）。
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns  `N` .
 
-#### Returns:
+#### 返回：
  `Dimension`  object.
 
 ###  `dtype` 
@@ -149,11 +149,11 @@ Return  `True/False`  depending on if this operator is square.
 
 
 ###  `range_dimension` 
-Dimension (in the sense of vector spaces) of the range of this operator.
+此运算符范围的维数（在向量空间的意义上）。
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns  `M` .
 
-#### Returns:
+#### 返回：
  `Dimension`  object.
 
 ###  `shape` 
@@ -161,22 +161,22 @@ If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M,
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns `TensorShape([B1,...,Bb, M, N])` , equivalent to  `A.get_shape()` .
 
-#### Returns:
+#### 返回：
  `TensorShape` , statically determined, may be undefined.
 
 ###  `tensor_rank` 
-Rank (in the sense of tensors) of matrix corresponding to this operator.
+与此算子对应的矩阵的秩（在张量意义上）。
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns  `b + 2` .
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
 Python integer, or None if the tensor rank is undefined.
 
-## Methods
+## 方法
 
 
 ###  `add_to_tensor` 
@@ -192,12 +192,12 @@ Python integer, or None if the tensor rank is undefined.
 
 Add matrix represented by this operator to  `x` .  Equivalent to  `A + x` .
 
-#### Args:
+#### 参数：
 - **`x`** :   `Tensor`  with same  `dtype`  and shape broadcastable to  `self.shape` .
 - **`name`** :  A name to give this  `Op` .
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with broadcast shape and same  `dtype`  as  `self` .
 
 ###  `adjoint` 
@@ -212,11 +212,11 @@ Returns the adjoint of the current  `LinearOperator` .
 
 Given  `A`  representing this  `LinearOperator` , return  `A*` .Note that calling  `self.adjoint()`  and  `self.H`  are equivalent.
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `LinearOperator`  which represents the adjoint of this  `LinearOperator` .
 
 ###  `assert_non_singular` 
@@ -237,11 +237,11 @@ eps := np.finfo(self.dtype.as_numpy_dtype).eps
  
 ```
 
-#### Args:
+#### 参数：
 - **`name`** :  A string name to prepend to created ops.
 
 
-#### Returns:
+#### 返回：
 An  `Assert`   `Op` , that, when run, will raise an  `InvalidArgumentError`  if  the operator is singular.
 
 ###  `assert_positive_definite` 
@@ -256,11 +256,11 @@ Returns an  `Op`  that asserts this operator is positive definite.
 
 Here, positive definite means that the quadratic form  `x^H A x`  has positivereal part for all nonzero  `x` .  Note that we do not require the operator tobe self-adjoint to be positive definite.
 
-#### Args:
+#### 参数：
 - **`name`** :  A name to give this  `Op` .
 
 
-#### Returns:
+#### 返回：
 An  `Assert`   `Op` , that, when run, will raise an  `InvalidArgumentError`  if  the operator is not positive definite.
 
 ###  `assert_self_adjoint` 
@@ -275,11 +275,11 @@ Returns an  `Op`  that asserts this operator is self-adjoint.
 
 Here we check that this operator is *exactly* equal to its hermitiantranspose.
 
-#### Args:
+#### 参数：
 - **`name`** :  A string name to prepend to created ops.
 
 
-#### Returns:
+#### 返回：
 An  `Assert`   `Op` , that, when run, will raise an  `InvalidArgumentError`  if  the operator is not self-adjoint.
 
 ###  `batch_shape_tensor` 
@@ -294,11 +294,11 @@ Shape of batch dimensions of this operator, determined at runtime.
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns a  `Tensor`  holding `[B1,...,Bb]` .
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `int32`   `Tensor` 
 
 ###  `cholesky` 
@@ -313,14 +313,14 @@ Returns a Cholesky factor as a  `LinearOperator` .
 
 Given  `A`  representing this  `LinearOperator` , if  `A`  is positive definiteself-adjoint, return  `L` , where  `A = L L^T` , i.e. the choleskydecomposition.
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `LinearOperator`  which represents the lower triangular matrixin the Cholesky decomposition.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : When the  `LinearOperator`  is not hinted to be positivedefinite and self adjoint.
 
 
@@ -332,16 +332,16 @@ Given  `A`  representing this  `LinearOperator` , if  `A`  is positive definites
  
 ```
 
-Determinant for every batch member.
+每个批处理成员的行列式。
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `Tensor`  with shape  `self.batch_shape`  and same  `dtype`  as  `self` .
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** :  If  `self.is_square`  is  `False` .
 
 
@@ -353,7 +353,7 @@ Determinant for every batch member.
  
 ```
 
-Efficiently get the [batch] diagonal part of this operator.
+有效地得到该运算符的[批处理]对角线部分。
 
 If this operator has shape  `[B1,...,Bb, M, N]` , this returns a `Tensor`   `diagonal` , of shape  `[B1,...,Bb, min(M, N)]` , where `diagonal[b1,...,bb, i] = self.to_dense()[b1,...,bb, i, i]` .
 
@@ -370,11 +370,11 @@ tf.linalg.diag_part(my_operator.to_dense())
  
 ```
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
 - **`diag_part`** :  A  `Tensor`  of same  `dtype`  as self.
 
 
@@ -386,17 +386,17 @@ tf.linalg.diag_part(my_operator.to_dense())
  
 ```
 
-Dimension (in the sense of vector spaces) of the domain of this operator.
+这个算子域的维数（在向量空间的意义上）。
 
-Determined at runtime.
+在运行时确定。
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns  `N` .
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `int32`   `Tensor` 
 
 ###  `inverse` 
@@ -411,14 +411,14 @@ Returns the Inverse of this  `LinearOperator` .
 
 Given  `A`  representing this  `LinearOperator` , return a  `LinearOperator` representing  `A^-1` .
 
-#### Args:
+#### 参数：
 - **`name`** : A name scope to use for ops added by this method.
 
 
-#### Returns:
+#### 返回：
  `LinearOperator`  representing inverse of this matrix.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : When the  `LinearOperator`  is not hinted to be  `non_singular` .
 
 
@@ -430,16 +430,16 @@ Given  `A`  representing this  `LinearOperator` , return a  `LinearOperator` rep
  
 ```
 
-Log absolute value of determinant for every batch member.
+记录每个批处理成员的行列式的绝对值。
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `Tensor`  with shape  `self.batch_shape`  and same  `dtype`  as  `self` .
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** :  If  `self.is_square`  is  `False` .
 
 
@@ -466,21 +466,21 @@ operator.shape = [..., M, N]
 X = ... # shape [..., N, R], batch matrix, R > 0.
 
 Y = operator.matmul(X)
-Y.shape
+Y形
 ==> [..., M, R]
 
 Y[..., :, r] = sum_j A[..., :, j] X[j, r]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** :  `LinearOperator`  or  `Tensor`  with compatible shape and same  `dtype`  as `self` . See class docstring for definition of compatibility.
 - **`adjoint`** : Python  `bool` .  If  `True` , left multiply by the adjoint:  `A^H x` .
 - **`adjoint_arg`** :  Python  `bool` .  If  `True` , compute  `A x^H`  where  `x^H`  isthe hermitian transpose (transposition and complex conjugation).
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
 A  `LinearOperator`  or  `Tensor`  with shape  `[..., M, R]`  and same  `dtype`   as  `self` .
 
 ###  `matvec` 
@@ -504,20 +504,20 @@ operator = LinearOperator(...)
 X = ... # shape [..., N], batch vector
 
 Y = operator.matvec(X)
-Y.shape
+Y形
 ==> [..., M]
 
 Y[..., :] = sum_j A[..., :, j] X[..., j]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** :  `Tensor`  with compatible shape and same  `dtype`  as  `self` . `x`  is treated as a [batch] vector meaning for every set of leadingdimensions, the last dimension defines a vector.See class docstring for definition of compatibility.
 - **`adjoint`** : Python  `bool` .  If  `True` , left multiply by the adjoint:  `A^H x` .
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with shape  `[..., M]`  and same  `dtype`  as  `self` .
 
 ###  `range_dimension_tensor` 
@@ -528,17 +528,17 @@ A  `Tensor`  with shape  `[..., M]`  and same  `dtype`  as  `self` .
  
 ```
 
-Dimension (in the sense of vector spaces) of the range of this operator.
+此运算符范围的维数（在向量空间的意义上）。
 
-Determined at runtime.
+在运行时确定。
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns  `M` .
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `int32`   `Tensor` 
 
 ###  `shape_tensor` 
@@ -553,11 +553,11 @@ Shape of this  `LinearOperator` , determined at runtime.
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns a  `Tensor`  holding `[B1,...,Bb, M, N]` , equivalent to [ `tf.shape(A)` ](https://tensorflow.google.cn/api_docs/python/tf/shape).
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `int32`   `Tensor` 
 
 ###  `solve` 
@@ -577,7 +577,7 @@ Solve (exact or approx)  `R`  (batch) systems of equations:  `A X = rhs` .
 
 The returned  `Tensor`  will be close to an exact solution if  `A`  is wellconditioned. Otherwise closeness will vary. See class docstring for details.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -597,17 +597,17 @@ operator.matmul(X)
  
 ```
 
-#### Args:
+#### 参数：
 - **`rhs`** :  `Tensor`  with same  `dtype`  as this operator and compatible shape. `rhs`  is treated like a [batch] matrix meaning for every set of leadingdimensions, the last two dimensions defines a matrix.See class docstring for definition of compatibility.
 - **`adjoint`** : Python  `bool` .  If  `True` , solve the system involving the adjointof this  `LinearOperator` :   `A^H X = rhs` .
 - **`adjoint_arg`** :  Python  `bool` .  If  `True` , solve  `A X = rhs^H`  where  `rhs^H` is the hermitian transpose (transposition and complex conjugation).
 - **`name`** :  A name scope to use for ops added by this method.
 
 
-#### Returns:
+#### 返回：
  `Tensor`  with shape  `[...,N, R]`  and same  `dtype`  as  `rhs` .
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** :  If  `self.is_non_singular`  or  `is_square`  is False.
 
 
@@ -627,7 +627,7 @@ Solve single equation with best effort:  `A X = rhs` .
 
 The returned  `Tensor`  will be close to an exact solution if  `A`  is wellconditioned. Otherwise closeness will vary. See class docstring for details.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -647,16 +647,16 @@ operator.matvec(X)
  
 ```
 
-#### Args:
+#### 参数：
 - **`rhs`** :  `Tensor`  with same  `dtype`  as this operator. `rhs`  is treated like a [batch] vector meaning for every set of leadingdimensions, the last dimension defines a vector.  See class docstringfor definition of compatibility regarding batch dimensions.
 - **`adjoint`** : Python  `bool` .  If  `True` , solve the system involving the adjointof this  `LinearOperator` :   `A^H X = rhs` .
 - **`name`** :  A name scope to use for ops added by this method.
 
 
-#### Returns:
+#### 返回：
  `Tensor`  with shape  `[...,N]`  and same  `dtype`  as  `rhs` .
 
-#### Raises:
+#### 加薪：
 - **`NotImplementedError`** :  If  `self.is_non_singular`  or  `is_square`  is False.
 
 
@@ -668,15 +668,15 @@ operator.matvec(X)
  
 ```
 
-Rank (in the sense of tensors) of matrix corresponding to this operator.
+与此算子对应的矩阵的秩（在张量意义上）。
 
 If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M, N]` , then this returns  `b + 2` .
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
  `int32`   `Tensor` , determined at runtime.
 
 ###  `to_dense` 
@@ -687,7 +687,7 @@ If this operator acts like the batch matrix  `A`  with `A.shape = [B1,...,Bb, M,
  
 ```
 
-Return a dense (batch) matrix representing this operator.
+返回表示此运算符的密集（批处理）矩阵。
 
 ###  `trace` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/linalg/linear_operator.py#L996-L1008)
@@ -701,10 +701,10 @@ Trace of the linear operator, equal to sum of  `self.diag_part()` .
 
 If the operator is square, this is also the sum of the eigenvalues.
 
-#### Args:
+#### 参数：
 - **`name`** :  A name for this  `Op` .
 
 
-#### Returns:
+#### 返回：
 Shape  `[B1,...,Bb]`   `Tensor`  of same  `dtype`  as  `self` .
 

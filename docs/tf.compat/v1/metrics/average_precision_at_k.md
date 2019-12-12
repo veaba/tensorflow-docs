@@ -1,4 +1,4 @@
-Computes average precision@k of predictions with respect to sparse labels.
+计算与稀疏标签相关的预测的平均精度@k。
 
 ```
  tf.compat.v1.metrics.average_precision_at_k(
@@ -19,7 +19,7 @@ For estimation of the metric over a stream of data, the function creates an `upd
 
 If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask values.
 
-#### Args:
+#### 参数：
 - **`labels`** :  `int64`   `Tensor`  or  `SparseTensor`  with shape[D1, ... DN, num_labels] or [D1, ... DN], where the latter impliesnum_labels=1. N >= 1 and num_labels is the number of target classes forthe associated prediction. Commonly, N=1 and  `labels`  has shape[batch_size, num_labels]. [D1, ... DN] must match  `predictions` . Valuesshould be in range [0, num_classes), where num_classes is the lastdimension of  `predictions` . Values outside this range are ignored.
 - **`predictions`** : Float  `Tensor`  with shape [D1, ... DN, num_classes] whereN >= 1. Commonly, N=1 and  `predictions`  has shape[batch size, num_classes]. The final dimension contains the logit valuesfor each class. [D1, ... DN] must match  `labels` .
 - **`k`** : Integer, k for @k metric. This will calculate an average precision forrange  `[1,k]` , as documented above.
@@ -29,11 +29,11 @@ If  `weights`  is  `None` , weights default to 1. Use weights of 0 to mask value
 - **`name`** : Name of new update operation, and namespace for other dependent ops.
 
 
-#### Returns:
+#### 返回：
 - **`mean_average_precision`** : Scalar  `float64`   `Tensor`  with the mean averageprecision values.
 - **`update`** :  `Operation`  that increments variables appropriately, and whosevalue matches  `metric` .
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if k is invalid.
 - **`RuntimeError`** : If eager execution is enabled.

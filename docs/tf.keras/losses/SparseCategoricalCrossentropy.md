@@ -1,11 +1,11 @@
 
 
 ## Class  `SparseCategoricalCrossentropy` 
-Computes the crossentropy loss between the labels and predictions.
+计算标签和预测之间的交叉熵损失。
 
-**Aliases** : [ `tf.compat.v1.keras.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy), [ `tf.compat.v2.keras.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy), [ `tf.compat.v2.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy), [ `tf.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy)
+**别名** : [ `tf.compat.v1.keras.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy), [ `tf.compat.v2.keras.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy), [ `tf.compat.v2.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy), [ `tf.losses.SparseCategoricalCrossentropy` ](/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy)
 
-### Used in the guide:
+### 在指南中使用：
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
@@ -13,7 +13,7 @@ Computes the crossentropy loss between the labels and predictions.
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Custom training: walkthrough](https://tensorflow.google.cn/tutorials/customization/custom_training_walkthrough)
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
 - [Load NumPy data](https://tensorflow.google.cn/tutorials/load_data/numpy)
@@ -23,7 +23,7 @@ Use this crossentropy loss function when there are two or more label classes.We 
 
 In the snippet below, there is a single floating point value per example for `y_true`  and  `# classes`  floating pointing values per example for  `y_pred` .The shape of  `y_true`  is  `[batch_size]`  and the shape of  `y_pred`  is `[batch_size, num_classes]` .
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -43,8 +43,8 @@ model.compile('sgd', loss=tf.keras.losses.SparseCategoricalCrossentropy())
  
 ```
 
-#### Args:
-- **`from_logits`** : Whether  `y_pred`  is expected to be a logits tensor. By default,we assume that  `y_pred`  encodes a probability distribution.Note: Using from_logits=True may be more numerically stable.
+#### 参数：
+- **`from_logits`** : Whether  `y_pred`  is expected to be a logits tensor. By default,we assume that  `y_pred`  encodes a probability distribution.注意：Using from_logits=True may be more numerically stable.
 - **`reduction`** : (Optional) Type of [ `tf.keras.losses.Reduction` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/Reduction) to apply to loss.Default value is  `AUTO` .  `AUTO`  indicates that the reduction option willbe determined by the usage context. For almost all cases this defaults to `SUM_OVER_BATCH_SIZE` .When used with [ `tf.distribute.Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy), outside of built-in trainingloops such as [ `tf.keras` ](https://tensorflow.google.cn/api_docs/python/tf/keras)  `compile`  and  `fit` , using  `AUTO`  or `SUM_OVER_BATCH_SIZE`  will raise an error. Please seehttps://www.tensorflow.org/alpha/tutorials/distribute/training_loopsfor more details on this.
 - **`name`** : Optional name for the op.
 
@@ -63,7 +63,7 @@ model.compile('sgd', loss=tf.keras.losses.SparseCategoricalCrossentropy())
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -80,16 +80,16 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Invokes the  `Loss`  instance.
 
-#### Args:
+#### 参数：
 - **`y_true`** : Ground truth values. shape =  `[batch_size, d0, .. dN]` 
 - **`y_pred`** : The predicted values. shape =  `[batch_size, d0, .. dN]` 
 - **`sample_weight`** : Optional  `sample_weight`  acts as acoefficient for the loss. If a scalar is provided, then the loss issimply scaled by the given value. If  `sample_weight`  is a tensor of size `[batch_size]` , then the total loss for each sample of the batch isrescaled by the corresponding element in the  `sample_weight`  vector. Ifthe shape of  `sample_weight`  is  `[batch_size, d0, .. dN-1]`  (or can bebroadcasted to this shape), then each loss element of  `y_pred`  is scaledby the corresponding value of  `sample_weight` . (Note on `dN-1` : all lossfunctions reduce by 1 dimension, usually axis=-1.)
 
 
-#### Returns:
+#### 返回：
 Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has  shape  `[batch_size, d0, .. dN-1]` ; otherwise, it is scalar. (Note  `dN-1`   because all loss functions reduce by 1 dimension, usually axis=-1.)
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of  `sample_weight`  is invalid.
 
 
@@ -106,11 +106,11 @@ Weighted loss float  `Tensor` . If  `reduction`  is  `NONE` , this has  shape  `
 
 Instantiates a  `Loss`  from its config (output of  `get_config()` ).
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `Loss`  instance.
 
 ###  `get_config` 

@@ -6,7 +6,7 @@ Registers a flag whose value can be any string from enum_values.
 
 Instead of a string enum, prefer  `DEFINE_enum_class` , which allowsdefining enums from an  `enum.Enum`  class.
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : str|None, the default value of the flag.
 - **`enum_values`** : [str], a non-empty list of strings with the possible values forthe flag.

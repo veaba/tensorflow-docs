@@ -1,6 +1,6 @@
-Generates skipgram word pairs.
+生成skipgram词对。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams), [ `tf.compat.v2.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams)
+**别名** : [ `tf.compat.v1.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams), [ `tf.compat.v2.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams)
 
 ```
  tf.keras.preprocessing.sequence.skipgrams(
@@ -38,14 +38,14 @@ window_size: Int, size of sampling windows (technically half-window).
     `[i - window_size, i + window_size+1]`.
 negative_samples: Float >= 0. 0 for no negative (i.e. random) samples.
     1 for same number as positive samples.
-shuffle: Whether to shuffle the word couples before returning them.
+shuffle：在返回单词couples之前是否对其进行shuffle。
 categorical: bool. if False, labels will be
     integers (eg. `[0, 1, 1 .. ]`),
     if `True`, labels will be categorical, e.g.
     `[[1,0],[0,1],[0,1] .. ]`.
 sampling_table: 1D array of size `vocabulary_size` where the entry i
     encodes the probability to sample a word of rank i.
-seed: Random seed.
+种子：随机种子。
  
 ```
 

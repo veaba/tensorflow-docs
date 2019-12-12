@@ -26,7 +26,7 @@ This function can be useful when composing a new operation in Python(such as  `m
 **Note:**  This function diverges from default Numpy behavior for  `float`  and   `string`  types when  `None`  is present in a Python list or scalar. Rather  than silently converting  `None`  values, an error will be thrown.
 
 
-#### Args:
+#### 参数：
 - **`value`** : An object whose type has a registered  `Tensor`  conversion function.
 - **`dtype`** : Optional element type for the returned tensor. If missing, the typeis inferred from the type of  `value` .
 - **`name`** : Optional name to use if a new  `Tensor`  is created.
@@ -34,10 +34,10 @@ This function can be useful when composing a new operation in Python(such as  `m
 - **`dtype_hint`** : same meaning as preferred_dtype, and overrides it.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  based on  `value` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If no conversion function is registered for  `value`  to  `dtype` .
 - **`RuntimeError`** : If a registered conversion function returns an invalid value.
 - **`ValueError`** : If the  `value`  is a tensor not of given  `dtype`  in graph mode.

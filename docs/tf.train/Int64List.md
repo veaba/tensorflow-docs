@@ -1,15 +1,15 @@
 
 
 ## Class  `Int64List` 
-A ProtocolMessage
+原始信息
 
-**Aliases** : [ `tf.compat.v1.train.Int64List` ](/api_docs/python/tf/train/Int64List), [ `tf.compat.v2.train.Int64List` ](/api_docs/python/tf/train/Int64List)
+**别名** : [ `tf.compat.v1.train.Int64List` ](/api_docs/python/tf/train/Int64List), [ `tf.compat.v2.train.Int64List` ](/api_docs/python/tf/train/Int64List)
 
-### Used in the tutorials:
+### 在教程中使用：
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
 
 
-## Properties
+## 属性
 
 
 ###  `value` 

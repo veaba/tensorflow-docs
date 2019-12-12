@@ -1,6 +1,6 @@
-Transcode the input text from a source encoding to a destination encoding.
+将输入文本从源编码转换为目标编码。
 
-**Aliases** : [ `tf.compat.v1.strings.unicode_transcode` ](/api_docs/python/tf/strings/unicode_transcode), [ `tf.compat.v2.strings.unicode_transcode` ](/api_docs/python/tf/strings/unicode_transcode)
+**别名** : [ `tf.compat.v1.strings.unicode_transcode` ](/api_docs/python/tf/strings/unicode_transcode), [ `tf.compat.v2.strings.unicode_transcode` ](/api_docs/python/tf/strings/unicode_transcode)
 
 ```
  tf.strings.unicode_transcode(
@@ -15,7 +15,7 @@ Transcode the input text from a source encoding to a destination encoding.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Unicode strings](https://tensorflow.google.cn/tutorials/load_data/unicode)
 The input is a string tensor of any shape. The output is a string tensor ofthe same shape containing the transcoded strings. Output strings are alwaysvalid unicode. If the input contains invalid encoding positions, the `errors`  attribute sets the policy for how to deal with them. If the defaulterror-handling policy is used, invalid formatting will be substituted in theoutput by the  `replacement_char` . If the errors policy is to  `ignore` , anyinvalid encoding positions in the input are skipped and not included in theoutput. If it set to  `strict`  then any invalid formatting will result in anInvalidArgument error.
 
@@ -25,7 +25,7 @@ If the input is prefixed by a Byte Order Mark needed to determine encoding(e.g. 
 
 The end result is that if the input is marked as an explicit endianness thetranscoding is faithful to all codepoints in the source. If it is not markedwith an explicit endianness, the BOM is not considered part of the string itselfbut as metadata, and so is not preserved in the output.
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  of type  `string` .The text to be processed. Can have any shape.
 - **`input_encoding`** : A  `string` .Text encoding of the input strings. This is any of the encodings supportedby ICU ucnv algorithmic converters. Examples:  `"UTF-16", "US ASCII", "UTF-8"` .
 - **`output_encoding`** : A  `string`  from:  `"UTF-8", "UTF-16-BE", "UTF-32-BE"` .The unicode encoding to use in the output. Must be one of `"UTF-8", "UTF-16-BE", "UTF-32-BE"` . Multi-byte encodings will be big-endian.
@@ -41,6 +41,6 @@ Note that for UTF-8, passing a replacement character expressible in 1 byte, such
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `string` .
 

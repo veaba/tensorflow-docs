@@ -1,4 +1,4 @@
-Computes the sum along sparse segments of a tensor.
+计算张量稀疏段的和。
 
 ```
  tf.sparse.segment_sum(    data,    indices,    segment_ids,    num_segments=None,    name=None) 
@@ -8,7 +8,7 @@ Read [the section onsegmentation](https://tensorflow.org/api_docs/python/tf/math
 
 Like [ `tf.math.segment_sum` ](https://tensorflow.google.cn/api_docs/python/tf/math/segment_sum), but  `segment_ids`  can have rank less than  `data` 'sfirst dimension, selecting a subset of dimension 0, specified by  `indices` . `segment_ids`  is allowed to have missing ids, in which case the output willbe zeros at those indices. In those cases  `num_segments`  is used to determinethe size of the output.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -41,7 +41,7 @@ tf.math.segment_sum(c, tf.constant([0, 0, 1]))
  
 ```
 
-#### Args:
+#### 参数：
 - **`data`** : A  `Tensor`  with data that will be assembled in the output.
 - **`indices`** : A 1-D  `Tensor`  with indices into  `data` . Has same rank as `segment_ids` .
 - **`segment_ids`** : A 1-D  `Tensor`  with indices into the output  `Tensor` . Valuesshould be sorted and can be repeated.
@@ -49,6 +49,6 @@ tf.math.segment_sum(c, tf.constant([0, 0, 1]))
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `tensor`  of the shape as data, except for dimension 0 whichhas size  `k` , the number of segments specified via  `num_segments`  orinferred for the last element in  `segments_ids` .
 

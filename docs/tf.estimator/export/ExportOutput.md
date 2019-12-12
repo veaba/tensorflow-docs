@@ -1,13 +1,13 @@
 
 
 ## Class  `ExportOutput` 
-Represents an output of a model that can be served.
+表示可以提供服务的模型的输出。
 
-**Aliases** : [ `tf.compat.v1.estimator.export.ExportOutput` ](/api_docs/python/tf/estimator/export/ExportOutput), [ `tf.compat.v2.estimator.export.ExportOutput` ](/api_docs/python/tf/estimator/export/ExportOutput)
+**别名** : [ `tf.compat.v1.estimator.export.ExportOutput` ](/api_docs/python/tf/estimator/export/ExportOutput), [ `tf.compat.v2.estimator.export.ExportOutput` ](/api_docs/python/tf/estimator/export/ExportOutput)
 
-These typically correspond to model heads.
+这些通常对应于模型头。
 
-## Methods
+## 方法
 
 
 ###  `as_signature_def` 
@@ -18,9 +18,9 @@ These typically correspond to model heads.
  
 ```
 
-Generate a SignatureDef proto for inclusion in a MetaGraphDef.
+生成signaturedef proto以包含在metagraphdef中。
 
 The SignatureDef will specify outputs as described in this ExportOutput,and will use the provided receiver_tensors as inputs.
 
-#### Args:
+#### 参数：
 - **`receiver_tensors`** : a  `Tensor` , or a dict of string to  `Tensor` , specifyinginput nodes that will be fed.

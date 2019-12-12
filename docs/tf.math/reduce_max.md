@@ -1,6 +1,6 @@
-Computes the maximum of elements across dimensions of a tensor.
+计算张量维度上元素的最大值。
 
-**Aliases** : [ `tf.compat.v2.math.reduce_max` ](/api_docs/python/tf/math/reduce_max), [ `tf.compat.v2.reduce_max` ](/api_docs/python/tf/math/reduce_max), [ `tf.reduce_max` ](/api_docs/python/tf/math/reduce_max)
+**别名** : [ `tf.compat.v2.math.reduce_max` ](/api_docs/python/tf/math/reduce_max), [ `tf.compat.v2.reduce_max` ](/api_docs/python/tf/math/reduce_max), [ `tf.reduce_max` ](/api_docs/python/tf/math/reduce_max)
 
 ```
  tf.math.reduce_max(    input_tensor,    axis=None,    keepdims=False,    name=None) 
@@ -10,16 +10,16 @@ Reduces  `input_tensor`  along the dimensions given in  `axis` .Unless  `keepdim
 
 If  `axis`  is None, all dimensions are reduced, and atensor with a single element is returned.
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The tensor to reduce. Should have real numeric type.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The reduced tensor.
+#### 返回：
+简化张量。
 
-#### Numpy Compatibility
-Equivalent to np.max
+#### numpy兼容性
+相当于np.max
 

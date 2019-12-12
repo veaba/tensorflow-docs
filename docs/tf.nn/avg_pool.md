@@ -1,6 +1,6 @@
-Performs the avg pooling on the input.
+对输入执行平均池。
 
-**Aliases** : [ `tf.compat.v1.nn.avg_pool_v2` ](/api_docs/python/tf/nn/avg_pool), [ `tf.compat.v2.nn.avg_pool` ](/api_docs/python/tf/nn/avg_pool)
+**别名** : [ `tf.compat.v1.nn.avg_pool_v2` ](/api_docs/python/tf/nn/avg_pool), [ `tf.compat.v2.nn.avg_pool` ](/api_docs/python/tf/nn/avg_pool)
 
 ```
  tf.nn.avg_pool(    input,    ksize,    strides,    padding,    data_format=None,    name=None) 
@@ -8,7 +8,7 @@ Performs the avg pooling on the input.
 
 Each entry in  `output`  is the mean of the corresponding size  `ksize` window in  `value` .
 
-#### Args:
+#### 参数：
 - **`input`** :  Tensor of rank N+2, of shape  `[batch_size] + input_spatial_shape +[num_channels]`  if  `data_format`  does not start with "NC" (default), or `[batch_size, num_channels] + input_spatial_shape`  if data_format startswith "NC". Pooling happens over the spatial dimensions only.
 - **`ksize`** : An int or list of  `ints`  that has length  `1` ,  `N`  or  `N+2` . The sizeof the window for each dimension of the input tensor.
 - **`strides`** : An int or list of  `ints`  that has length  `1` ,  `N`  or  `N+2` . Thestride of the sliding window for each dimension of the input tensor.
@@ -17,6 +17,6 @@ Each entry in  `output`  is the mean of the corresponding size  `ksize` window i
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of format specified by  `data_format` .The average pooled output tensor.
 

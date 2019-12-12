@@ -5,7 +5,7 @@ A LearningRateSchedule that uses a cosine decay schedule.
 
 Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
 
-**Aliases** : [ `tf.compat.v1.keras.experimental.CosineDecay` ](/api_docs/python/tf/keras/experimental/CosineDecay), [ `tf.compat.v2.keras.experimental.CosineDecay` ](/api_docs/python/tf/keras/experimental/CosineDecay)
+**别名** : [ `tf.compat.v1.keras.experimental.CosineDecay` ](/api_docs/python/tf/keras/experimental/CosineDecay), [ `tf.compat.v2.keras.experimental.CosineDecay` ](/api_docs/python/tf/keras/experimental/CosineDecay)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L518-L578)
@@ -20,7 +20,7 @@ Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/
  
 ```
 
-Applies cosine decay to the learning rate.
+对学习率应用余弦衰减。
 
 See [Loshchilov &amp; Hutter, ICLR2016], SGDR: Stochastic Gradient Descentwith Warm Restarts. https://arxiv.org/abs/1608.03983
 
@@ -37,7 +37,7 @@ The schedule a 1-arg callable that produces a decayed learningrate when passed t
  
 ```
 
-#### Example usage:
+#### 示例用法：
 
 
 ```
@@ -49,17 +49,17 @@ lr_decayed_fn = tf.keras.experimental.CosineDecay(
 
 You can pass this schedule directly into a [ `tf.keras.optimizers.Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)as the learning rate. The learning rate schedule is also serializable anddeserializable using [ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
 
-#### Args:
+#### 参数：
 - **`initial_learning_rate`** : A scalar  `float32`  or  `float64`  Tensor or aPython number. The initial learning rate.
 - **`decay_steps`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number.Number of steps to decay over.
 - **`alpha`** : A scalar  `float32`  or  `float64`  Tensor or a Python number.Minimum learning rate value as a fraction of initial_learning_rate.
 - **`name`** : String. Optional name of the operation.  Defaults to 'CosineDecay'.
 
 
-#### Returns:
+#### 返回：
 A 1-arg callable learning rate schedule that takes the current optimizerstep and outputs the decayed learning rate, a scalar  `Tensor`  of the sametype as  `initial_learning_rate` .
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -70,7 +70,7 @@ A 1-arg callable learning rate schedule that takes the current optimizerstep and
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
@@ -85,11 +85,11 @@ Call self as a function.
 
 Instantiates a  `LearningRateSchedule`  from its config.
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `LearningRateSchedule`  instance.
 
 ###  `get_config` 

@@ -1,6 +1,6 @@
 Computes the [Short-time Fourier Transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) of  `signals` .
 
-**Aliases** : [ `tf.compat.v1.signal.stft` ](/api_docs/python/tf/signal/stft), [ `tf.compat.v2.signal.stft` ](/api_docs/python/tf/signal/stft)
+**别名** : [ `tf.compat.v1.signal.stft` ](/api_docs/python/tf/signal/stft), [ `tf.compat.v2.signal.stft` ](/api_docs/python/tf/signal/stft)
 
 ```
  tf.signal.stft(    signals,    frame_length,    frame_step,    fft_length=None,    window_fn=tf.signal.hann_window,    pad_end=False,    name=None) 
@@ -8,7 +8,7 @@ Computes the [Short-time Fourier Transform](https://en.wikipedia.org/wiki/Short-
 
 Implemented with GPU-compatible ops and supports gradients.
 
-#### Args:
+#### 参数：
 - **`signals`** : A  `[..., samples]`   `float32`   `Tensor`  of real-valued signals.
 - **`frame_length`** : An integer scalar  `Tensor` . The window length in samples.
 - **`frame_step`** : An integer scalar  `Tensor` . The number of samples to step.
@@ -18,8 +18,8 @@ Implemented with GPU-compatible ops and supports gradients.
 - **`name`** : An optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `[..., frames, fft_unique_bins]`   `Tensor`  of  `complex64`  STFT values where `fft_unique_bins`  is  `fft_length // 2 + 1`  (the unique components of theFFT).
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `signals`  is not at least rank 1,  `frame_length`  isnot scalar, or  `frame_step`  is not scalar.

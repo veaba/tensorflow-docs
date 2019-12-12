@@ -2,7 +2,7 @@
 
 Train and evaluate the  `estimator` .
 
-**Aliases** : [ `tf.compat.v1.estimator.train_and_evaluate` ](/api_docs/python/tf/estimator/train_and_evaluate), [ `tf.compat.v2.estimator.train_and_evaluate` ](/api_docs/python/tf/estimator/train_and_evaluate)
+**别名** : [ `tf.compat.v1.estimator.train_and_evaluate` ](/api_docs/python/tf/estimator/train_and_evaluate), [ `tf.compat.v2.estimator.train_and_evaluate` ](/api_docs/python/tf/estimator/train_and_evaluate)
 
 ```
  tf.estimator.train_and_evaluate(
@@ -13,11 +13,11 @@ Train and evaluate the  `estimator` .
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
 This utility function trains, evaluates, and (optionally) exports the model byusing the given  `estimator` . All training related specification is held in `train_spec` , including training  `input_fn`  and training max steps, etc. Allevaluation and export related specification is held in  `eval_spec` , includingevaluation  `input_fn` , steps, etc.
 
@@ -63,7 +63,7 @@ tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
 
 Note that in current implementation  `estimator.evaluate`  will be calledmultiple times. This means that evaluation graph (including eval_input_fn)will be re-created for each  `evaluate`  call.  `estimator.train`  will be calledonly once.
 
-Example of distributed training:
+分布式培训示例：
 
 Regarding the example of distributed training, the code above can be usedwithout a change (Please do make sure that the [ `RunConfig.model_dir` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/RunConfig#model_dir) for allworkers is set to the same directory, i.e., a shared file system all workerscan read and write). The only extra work to do is setting the environmentvariable  `TF_CONFIG`  properly for each worker correspondingly.
 
@@ -157,14 +157,14 @@ TF_CONFIG='{
 
 When  `distribute`  or  `experimental_distribute.train_distribute`  and `experimental_distribute.remote_cluster`  is set, this method will start aclient running on the current host which connects to the  `remote_cluster`  fortraining and evaluation.
 
-#### Args:
+#### 参数：
 - **`estimator`** : An  `Estimator`  instance to train and evaluate.
 - **`train_spec`** : A  `TrainSpec`  instance to specify the training specification.
 - **`eval_spec`** : A  `EvalSpec`  instance to specify the evaluation and exportspecification.
 
 
-#### Returns:
+#### 返回：
 A tuple of the result of the  `evaluate`  call to the  `Estimator`  and theexport results using the specified  `ExportStrategy` .Currently, the return value is undefined for distributed training mode.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if environment variable  `TF_CONFIG`  is incorrectly set.

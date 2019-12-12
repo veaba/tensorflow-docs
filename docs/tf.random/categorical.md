@@ -1,6 +1,6 @@
-Draws samples from a categorical distribution.
+从分类分布中提取样本。
 
-**Aliases** : [ `tf.compat.v1.random.categorical` ](/api_docs/python/tf/random/categorical), [ `tf.compat.v2.random.categorical` ](/api_docs/python/tf/random/categorical)
+**别名** : [ `tf.compat.v1.random.categorical` ](/api_docs/python/tf/random/categorical), [ `tf.compat.v2.random.categorical` ](/api_docs/python/tf/random/categorical)
 
 ```
  tf.random.categorical(
@@ -13,12 +13,12 @@ Draws samples from a categorical distribution.
  
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Text generation with an RNN](https://tensorflow.google.cn/tutorials/text/text_generation)
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -28,7 +28,7 @@ samples = tf.random.categorical(tf.math.log([[0.5, 0.5]]), 5)
  
 ```
 
-#### Args:
+#### 参数：
 - **`logits`** : 2-D Tensor with shape  `[batch_size, num_classes]` .  Each slice `[i, :]`  represents the unnormalized log-probabilities for all classes.
 - **`num_samples`** : 0-D.  Number of independent samples to draw for each row slice.
 - **`dtype`** : integer type to use for the output. Defaults to int64.
@@ -36,6 +36,6 @@ samples = tf.random.categorical(tf.math.log([[0.5, 0.5]]), 5)
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 The drawn samples of shape  `[batch_size, num_samples]` .
 

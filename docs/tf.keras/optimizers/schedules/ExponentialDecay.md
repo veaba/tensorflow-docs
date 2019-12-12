@@ -1,13 +1,13 @@
 
 
 ## Class  `ExponentialDecay` 
-A LearningRateSchedule that uses an exponential decay schedule.
+使用指数衰减计划的LearningRateSchedule。
 
 Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
 
-**Aliases** : [ `tf.compat.v1.keras.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay), [ `tf.compat.v2.keras.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay), [ `tf.compat.v2.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay), [ `tf.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay)
+**别名** : [ `tf.compat.v1.keras.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay), [ `tf.compat.v2.keras.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay), [ `tf.compat.v2.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay), [ `tf.optimizers.schedules.ExponentialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay)
 
-### Used in the guide:
+### 在指南中使用：
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 
 
@@ -25,7 +25,7 @@ Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/
  
 ```
 
-Applies exponential decay to the learning rate.
+对学习率应用指数衰减。
 
 When training a model, it is often recommended to lower the learning rate asthe training progresses. This schedule applies an exponential decay functionto an optimizer step, given a provided initial learning rate.
 
@@ -59,7 +59,7 @@ model.fit(data, labels, epochs=5)
 
 The learning rate schedule is also serializable and deserializable using[ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
 
-#### Args:
+#### 参数：
 - **`initial_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The initial learning rate.
 - **`decay_steps`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number.Must be positive.  See the decay computation above.
 - **`decay_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The decay rate.
@@ -67,10 +67,10 @@ The learning rate schedule is also serializable and deserializable using[ `tf.ke
 - **`name`** : String.  Optional name of the operation.  Defaults to'ExponentialDecay'.
 
 
-#### Returns:
+#### 返回：
 A 1-arg callable learning rate schedule that takes the current optimizerstep and outputs the decayed learning rate, a scalar  `Tensor`  of the sametype as  `initial_learning_rate` .
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -81,7 +81,7 @@ A 1-arg callable learning rate schedule that takes the current optimizerstep and
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
@@ -96,11 +96,11 @@ Call self as a function.
 
 Instantiates a  `LearningRateSchedule`  from its config.
 
-#### Args:
+#### 参数：
 - **`config`** : Output of  `get_config()` .
 
 
-#### Returns:
+#### 返回：
 A  `LearningRateSchedule`  instance.
 
 ###  `get_config` 

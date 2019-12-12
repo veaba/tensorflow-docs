@@ -1,6 +1,6 @@
-Creates a 1D tensor containing a sequence of integers.
+创建包含整数序列的一维张量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange), [ `tf.compat.v2.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange)
+**别名** : [ `tf.compat.v1.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange), [ `tf.compat.v2.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange)
 
 ```
  tf.keras.backend.arange(
@@ -16,17 +16,17 @@ The function arguments use the same convention asTheano's arange: if only one ar
 
 The default type of the returned tensor is  `'int32'`  tomatch TensorFlow's default.
 
-#### Arguments:
+#### 参数：
 - **`start`** : Start value.
 - **`stop`** : Stop value.
 - **`step`** : Difference between two successive values.
 - **`dtype`** : Integer dtype to use.
 
 
-#### Returns:
-An integer tensor.
+#### 返回：
+整数张量。
 
-#### Example:
+#### 示例：
 
 
 ```

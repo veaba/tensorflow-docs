@@ -1,6 +1,6 @@
-Sets the AutoGraph verbosity level.
+设置签名详细级别。
 
-**Aliases** : [ `tf.compat.v1.autograph.set_verbosity` ](/api_docs/python/tf/autograph/set_verbosity), [ `tf.compat.v2.autograph.set_verbosity` ](/api_docs/python/tf/autograph/set_verbosity)
+**别名** : [ `tf.compat.v1.autograph.set_verbosity` ](/api_docs/python/tf/autograph/set_verbosity), [ `tf.compat.v2.autograph.set_verbosity` ](/api_docs/python/tf/autograph/set_verbosity)
 
 ```
  tf.autograph.set_verbosity(
@@ -14,7 +14,7 @@ Sets the AutoGraph verbosity level.
 
 More verbose logging is useful to enable when filing bug reports or doingmore in-depth debugging.
 
-There are two means to control the logging verbosity:
+有两种方法可以控制日志记录的详细程度：
 
 - The  `set_verbosity`  function
 
@@ -24,7 +24,7 @@ There are two means to control the logging verbosity:
 
  `set_verbosity`  takes precedence over the environment variable.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -44,6 +44,6 @@ os.environ['AUTOGRAPH_VERBOSITY'] = 1
 
 Logs entries are output to [absl](https://abseil.io)'s [default output](https://abseil.io/docs/python/guides/logging),with  `INFO`  level.Logs can be mirrored to stdout by using the  `alsologtostdout`  argument.Mirroring is enabled by default when Python runs in interactive mode.
 
-#### Args:
+#### 参数：
 - **`level`** : int, the verbosity level; larger values specify increased verbosity;0 means no logging. When reporting bugs, it is recommended to set thisvalue to a larger number, like 10.
 - **`alsologtostdout`** : bool, whether to also output log messages to  `sys.stdout` .

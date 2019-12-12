@@ -1,6 +1,6 @@
 2D convolution with separable filters.
 
-**Aliases** : [ `tf.compat.v1.keras.backend.separable_conv2d` ](/api_docs/python/tf/keras/backend/separable_conv2d), [ `tf.compat.v2.keras.backend.separable_conv2d` ](/api_docs/python/tf/keras/backend/separable_conv2d)
+**别名** : [ `tf.compat.v1.keras.backend.separable_conv2d` ](/api_docs/python/tf/keras/backend/separable_conv2d), [ `tf.compat.v2.keras.backend.separable_conv2d` ](/api_docs/python/tf/keras/backend/separable_conv2d)
 
 ```
  tf.keras.backend.separable_conv2d(
@@ -15,7 +15,7 @@
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : input tensor
 - **`depthwise_kernel`** : convolution kernel for the depthwise convolution.
 - **`pointwise_kernel`** : kernel for the 1x1 convolution.
@@ -25,9 +25,9 @@
 - **`dilation_rate`** : tuple of integers,dilation rates for the separable convolution.
 
 
-#### Returns:
-Output tensor.
+#### 返回：
+输出张量。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if  `data_format`  is neither  `channels_last`  or `channels_first` .
 - **`ValueError`** : if  `strides`  is not a tuple of 2 integers.

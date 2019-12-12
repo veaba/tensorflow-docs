@@ -1,9 +1,9 @@
-Public API for tf.lookup namespace.
+tf.lookup命名空间的公共api。
 
-## Modules
+## 模块
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/lookup/experimental) module: Public API for tf.lookup.experimental namespace.
 
-## Classes
+## Class 
 [ `class KeyValueTensorInitializer` ](https://tensorflow.google.cn/api_docs/python/tf/lookup/KeyValueTensorInitializer): Table initializers given  `keys`  and  `values`  tensors.
 
 [ `class StaticHashTable` ](https://tensorflow.google.cn/api_docs/python/tf/lookup/StaticHashTable): A generic hash table that is immutable once initialized.

@@ -28,13 +28,13 @@ See the **doc**  for Flag for most behavior of this class.  Onlydifferences in b
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Properties
+## 属性
 
 
 ###  `value` 
 
 
-## Methods
+## 方法
 
 
 ###  `__eq__` 
@@ -94,7 +94,7 @@ Return a <= b.  Computed by @total_ordering from (a < b) or (a == b).
  
 ```
 
-Return self<value.
+返回self<value。
 
 ###  `flag_type` 
 
@@ -104,7 +104,7 @@ Return self<value.
  
 ```
 
-See base class.
+见基类。
 
 ###  `parse` 
 
@@ -114,9 +114,9 @@ See base class.
  
 ```
 
-Parses one or more arguments with the installed parser.
+使用安装的分析器分析一个或多个参数。
 
-#### Args:
+#### 参数：
 - **`arguments`** : a single argument or a list of arguments (typically alist of default values); a single argument is convertedinternally into a list containing one item.
 
 
@@ -128,7 +128,7 @@ Parses one or more arguments with the installed parser.
  
 ```
 
-Serializes the flag.
+序列化标志。
 
 ###  `unparse` 
 

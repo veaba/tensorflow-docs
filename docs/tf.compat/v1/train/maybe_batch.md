@@ -21,7 +21,7 @@ Conditionally creates batches of tensors based on  `keep_input` . (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Queue-based input pipelines have been replaced by [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data). Use  `tf.data.Dataset.filter(...).batch(batch_size)`  (or  `padded_batch(...)`  if  `dynamic_pad=True` ).
 See docstring in  `batch`  for more details.
 
-#### Args:
+#### 参数：
 - **`tensors`** : The list or dictionary of tensors to enqueue.
 - **`keep_input`** : A  `bool`  Tensor.  This tensor controls whether the input isadded to the queue or not.  If it is a scalar and evaluates  `True` , then `tensors`  are all added to the queue. If it is a vector and  `enqueue_many` is  `True` , then each example is added to the queue only if thecorresponding value in  `keep_input`  is  `True` . This tensor essentiallyacts as a filtering mechanism.
 - **`batch_size`** : The new batch size pulled from the queue.
@@ -35,8 +35,8 @@ See docstring in  `batch`  for more details.
 - **`name`** : (Optional) A name for the operations.
 
 
-#### Returns:
+#### 返回：
 A list or dictionary of tensors with the same types as  `tensors` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `shapes`  are not specified, and cannot beinferred from the elements of  `tensors` .

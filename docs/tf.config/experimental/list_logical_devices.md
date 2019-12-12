@@ -1,17 +1,17 @@
-Return a list of logical devices created by runtime.
+返回运行时创建的逻辑设备列表。
 
-**Aliases** : [ `tf.compat.v1.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices), [ `tf.compat.v2.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices)
+**别名** : [ `tf.compat.v1.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices), [ `tf.compat.v2.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices)
 
 ```
  tf.config.experimental.list_logical_devices(device_type=None)
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 Logical devices may correspond to physical devices or remote devices in thecluster. Operations and tensors may be placed on these devices by using the `name`  of the LogicalDevice.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -25,10 +25,10 @@ with tf.device(logical_devices[1].name):
  
 ```
 
-#### Args:
+#### 参数：
 - **`device_type`** : (optional) Device type to filter by such as "CPU" or "GPU"
 
 
-#### Returns:
-List of LogicalDevice objects
+#### 返回：
+逻辑设备对象列表
 

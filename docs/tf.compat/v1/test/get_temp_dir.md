@@ -1,12 +1,12 @@
-Returns a temporary directory for use during tests.
+返回测试期间使用的临时目录。
 
 ```
  tf.compat.v1.test.get_temp_dir()
  
 ```
 
-There is no need to delete the directory after the test.
+测试后不需要删除目录。
 
-#### Returns:
-The temporary directory.
+#### 返回：
+临时目录。
 

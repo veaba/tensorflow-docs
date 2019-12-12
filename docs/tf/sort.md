@@ -1,6 +1,6 @@
-Sorts a tensor.
+对张量排序。
 
-**Aliases** : [ `tf.compat.v1.sort` ](/api_docs/python/tf/sort), [ `tf.compat.v2.sort` ](/api_docs/python/tf/sort)
+**别名** : [ `tf.compat.v1.sort` ](/api_docs/python/tf/sort), [ `tf.compat.v2.sort` ](/api_docs/python/tf/sort)
 
 ```
  tf.sort(
@@ -12,7 +12,7 @@ Sorts a tensor.
  
 ```
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -24,15 +24,15 @@ c = tf.keras.backend.eval(b)
  
 ```
 
-#### Args:
+#### 参数：
 - **`values`** : 1-D or higher numeric  `Tensor` .
 - **`axis`** : The axis along which to sort. The default is -1, which sorts the lastaxis.
 - **`direction`** : The direction in which to sort the values ( `'ASCENDING'`  or `'DESCENDING'` ).
 - **`name`** : Optional name for the operation.
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  with the same dtype and shape as  `values` , with the elements    sorted along the given  `axis` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If axis is not a constant scalar, or the direction is invalid.

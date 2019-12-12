@@ -1,12 +1,12 @@
 
 
 ## Class  `GraphNodeProto` 
-A ProtocolMessage
+原始信息
 
-## Child Classes
+## 子类
 [ `class InputShapesEntry` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/GraphNodeProto/InputShapesEntry)
 
-## Properties
+## 属性
 
 
 ###  `accelerator_exec_micros` 

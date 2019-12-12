@@ -8,11 +8,11 @@ If  `x`  has a non-integer type,  `message` , as well as the dtype of  `x`  arep
 
 This can always be checked statically, so this method returns nothing.
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` .
 - **`message`** : A string to prefix to the default message.
 - **`name`** : A name for this operation (optional). Defaults to "assert_integer".
 
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** :  If  `x.dtype`  is not a non-quantized integer type.

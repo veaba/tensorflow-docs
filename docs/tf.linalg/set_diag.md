@@ -1,6 +1,6 @@
-Returns a batched matrix tensor with new batched diagonal values.
+返回具有新的批处理对角值的批处理矩阵张量。
 
-**Aliases** : [ `tf.compat.v1.linalg.set_diag` ](/api_docs/python/tf/linalg/set_diag), [ `tf.compat.v1.matrix_set_diag` ](/api_docs/python/tf/linalg/set_diag), [ `tf.compat.v2.linalg.set_diag` ](/api_docs/python/tf/linalg/set_diag)
+**别名** : [ `tf.compat.v1.linalg.set_diag` ](/api_docs/python/tf/linalg/set_diag), [ `tf.compat.v1.matrix_set_diag` ](/api_docs/python/tf/linalg/set_diag), [ `tf.compat.v2.linalg.set_diag` ](/api_docs/python/tf/linalg/set_diag)
 
 ```
  tf.linalg.set_diag(    input,    diagonal,    name='set_diag',    k=0) 
@@ -24,14 +24,14 @@ Otherwise,
 
 where  `d = n - m` 
 
-#### For example:
+#### 例如：
 
 
 ```
  # The main diagonal.input = np.array([[[7, 7, 7, 7],              # Input shape: (2, 3, 4)                   [7, 7, 7, 7],                   [7, 7, 7, 7]],                  [[7, 7, 7, 7],                   [7, 7, 7, 7],                   [7, 7, 7, 7]]])diagonal = np.array([[1, 2, 3],               # Diagonal shape: (2, 3)                     [4, 5, 6]])tf.matrix_diag(diagonal) ==> [[[1, 7, 7, 7],  # Output shape: (2, 3, 4)                               [7, 2, 7, 7],                               [7, 7, 3, 7]],                              [[4, 7, 7, 7],                               [7, 5, 7, 7],                               [7, 7, 6, 7]]]# A superdiagonal (per batch).tf.matrix_diag(diagonal, k = 1)  ==> [[[7, 1, 7, 7],  # Output shape: (2, 3, 4)        [7, 7, 2, 7],        [7, 7, 7, 3]],       [[7, 4, 7, 7],        [7, 7, 5, 7],        [7, 7, 7, 6]]]# A band of diagonals.diagonals = np.array([[[1, 2, 3],  # Diagonal shape: (2, 2, 3)                       [4, 5, 0]],                      [[6, 1, 2],                       [3, 4, 0]]])tf.matrix_diag(diagonals, k = (-1, 0))  ==> [[[1, 7, 7, 7],  # Output shape: (2, 3, 4)        [4, 2, 7, 7],        [0, 5, 3, 7]],       [[6, 7, 7, 7],        [3, 1, 7, 7],        [7, 4, 2, 7]]] 
 ```
 
-#### Args:
+#### 参数：
 - **`input`** : A  `Tensor`  with rank  `k + 1` , where  `k >= 1` .
 - **`diagonal`** :  A  `Tensor`  with rank  `k` , when  `d_lower == d_upper` , or  `k + 1` ,otherwise.  `k >= 1` .
 - **`name`** : A name for the operation (optional).

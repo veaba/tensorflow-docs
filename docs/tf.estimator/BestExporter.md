@@ -1,11 +1,11 @@
 
 
 ## Class  `BestExporter` 
-This class exports the serving graph and checkpoints of the best models.
+这个类导出最佳模型的服务图和检查点。
 
 Inherits From: [ `Exporter` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Exporter)
 
-**Aliases** : [ `tf.compat.v1.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter), [ `tf.compat.v2.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter)
+**别名** : [ `tf.compat.v1.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter), [ `tf.compat.v2.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter)
 
 This class performs a model export everytime the new model is better than anyexisting model.
 
@@ -27,7 +27,7 @@ This class performs a model export everytime the new model is better than anyexi
 
 Create an  `Exporter`  to use with [ `tf.estimator.EvalSpec` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/EvalSpec).
 
-Example of creating a BestExporter for training and evaluation:
+为培训和评估创建最佳导出程序的示例：
 
 ```
  def,
@@ -48,7 +48,7 @@ Example of creating a BestExporter for training and evaluation:
  
 ```
 
-#### Args:
+#### 参数：
 - **`name`** : unique name of this  `Exporter`  that is going to be used in theexport path.
 - **`serving_input_receiver_fn`** : a function that takes no arguments and returnsa  `ServingInputReceiver` .
 - **`event_file_pattern`** : event file name pattern relative to model_dir. IfNone, however, the exporter would not be preemption-safe. To bepreemption-safe, event_file_pattern must be specified.
@@ -62,19 +62,19 @@ Example of creating a BestExporter for training and evaluation:
     - Returns:True if current evaluation result is better; otherwise, False.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : if any argument is invalid.
 
 
-## Properties
+## 属性
 
 
 ###  `name` 
-Directory name.
+目录名。
 
 A directory name under the export base directory where exports ofthis type are written.  Should not be  `None`  nor empty.
 
-## Methods
+## 方法
 
 
 ###  `export` 
@@ -93,7 +93,7 @@ A directory name under the export base directory where exports ofthis type are w
 
 Exports the given  `Estimator`  to a specific format.
 
-#### Args:
+#### 参数：
 - **`estimator`** : the  `Estimator`  to export.
 - **`export_path`** : A string containing a directory where to write the export.
 - **`checkpoint_path`** : The checkpoint path to export.
@@ -101,6 +101,6 @@ Exports the given  `Estimator`  to a specific format.
 - **`is_the_final_export`** : This boolean is True when this is an export in theend of training.  It is False for the intermediate exports duringthe training.When passing  `Exporter`  to [ `tf.estimator.train_and_evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate) `is_the_final_export`  is always False if [ `TrainSpec.max_steps` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/TrainSpec#max_steps) is `None` .
 
 
-#### Returns:
+#### 返回：
 The string path to the exported directory or  `None`  if export is skipped.
 

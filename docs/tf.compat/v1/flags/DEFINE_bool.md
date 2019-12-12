@@ -1,6 +1,6 @@
-Registers a boolean flag.
+注册布尔标志。
 
-**Aliases** : [ `tf.compat.v1.app.flags.DEFINE_bool` ](/api_docs/python/tf/compat/v1/flags/DEFINE_bool), [ `tf.compat.v1.app.flags.DEFINE_boolean` ](/api_docs/python/tf/compat/v1/flags/DEFINE_bool), [ `tf.compat.v1.flags.DEFINE_boolean` ](/api_docs/python/tf/compat/v1/flags/DEFINE_bool)
+**别名** : [ `tf.compat.v1.app.flags.DEFINE_bool` ](/api_docs/python/tf/compat/v1/flags/DEFINE_bool), [ `tf.compat.v1.app.flags.DEFINE_boolean` ](/api_docs/python/tf/compat/v1/flags/DEFINE_bool), [ `tf.compat.v1.flags.DEFINE_boolean` ](/api_docs/python/tf/compat/v1/flags/DEFINE_bool)
 
 ```
  tf.compat.v1.flags.DEFINE_bool(
@@ -18,7 +18,7 @@ Such a boolean flag does not take an argument.  If a user wants tospecify a fals
 
 This flag will have a value of None, True or False.  None is possibleif default=None and the user does not specify the flag on the commandline.
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : bool|str|None, the default value of the flag.
 - **`help`** : str, the help message.

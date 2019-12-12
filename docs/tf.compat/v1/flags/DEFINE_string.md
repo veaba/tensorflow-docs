@@ -1,4 +1,4 @@
-Registers a flag whose value can be any string.
+注册一个标志，其值可以是任何字符串。
 
 ```
  tf.compat.v1.flags.DEFINE_string(

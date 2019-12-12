@@ -1,6 +1,6 @@
-Get if JIT compilation is enabled.
+如果启用了jit编译，则获取。
 
-**Aliases** : [ `tf.compat.v1.config.optimizer.get_jit` ](/api_docs/python/tf/config/optimizer/get_jit), [ `tf.compat.v2.config.optimizer.get_jit` ](/api_docs/python/tf/config/optimizer/get_jit)
+**别名** : [ `tf.compat.v1.config.optimizer.get_jit` ](/api_docs/python/tf/config/optimizer/get_jit), [ `tf.compat.v2.config.optimizer.get_jit` ](/api_docs/python/tf/config/optimizer/get_jit)
 
 ```
  tf.config.optimizer.get_jit()
@@ -9,6 +9,6 @@ Get if JIT compilation is enabled.
 
 Note that optimizations are only applied in graph mode, (within tf.function).
 
-#### Returns:
-If JIT compilation is enabled.
+#### 返回：
+如果启用了jit编译。
 

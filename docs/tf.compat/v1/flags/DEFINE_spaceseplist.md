@@ -12,9 +12,9 @@ Registers a flag whose value is a whitespace-separated list of strings.
  
 ```
 
-Any whitespace can be used as a separator.
+任何空格都可以用作分隔符。
 
-#### Args:
+#### 参数：
 - **`name`** : str, the flag name.
 - **`default`** : list|str|None, the default value of the flag.
 - **`help`** : str, the help message.

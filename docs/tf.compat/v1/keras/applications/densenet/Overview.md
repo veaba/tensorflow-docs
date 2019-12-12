@@ -1,6 +1,6 @@
-DenseNet models for Keras.
+Densenet Keras模型。
 
-## Functions
+## 功能
 [ `DenseNet121(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/DenseNet121)
 
 [ `DenseNet169(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/DenseNet169)

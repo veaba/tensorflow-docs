@@ -1,9 +1,9 @@
 
 
 ## Class  `Constraint` 
-**Aliases** : [ `tf.compat.v1.keras.constraints.Constraint` ](/api_docs/python/tf/keras/constraints/Constraint), [ `tf.compat.v2.keras.constraints.Constraint` ](/api_docs/python/tf/keras/constraints/Constraint)
+**别名** : [ `tf.compat.v1.keras.constraints.Constraint` ](/api_docs/python/tf/keras/constraints/Constraint), [ `tf.compat.v2.keras.constraints.Constraint` ](/api_docs/python/tf/keras/constraints/Constraint)
 
-## Methods
+## 方法
 
 
 ###  `__call__` 
@@ -14,7 +14,7 @@
  
 ```
 
-Call self as a function.
+作为函数调用self。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L40-L41)

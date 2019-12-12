@@ -1,17 +1,17 @@
 
 
 ## Class  `RNN` 
-Base class for recurrent layers.
+递归层的基类。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.RNN` ](/api_docs/python/tf/keras/layers/RNN), [ `tf.compat.v2.keras.layers.RNN` ](/api_docs/python/tf/keras/layers/RNN)
+**别名** : [ `tf.compat.v1.keras.layers.RNN` ](/api_docs/python/tf/keras/layers/RNN), [ `tf.compat.v2.keras.layers.RNN` ](/api_docs/python/tf/keras/layers/RNN)
 
-### Used in the guide:
+### 在指南中使用：
 - [Recurrent Neural Networks (RNN) with Keras](https://tensorflow.google.cn/guide/keras/rnn)
 
 
-#### Arguments:
+#### 参数：
 - **`cell`** : A RNN cell instance or a list of RNN cell instances.A RNN cell is a class that has:
 - **`return_sequences`** : Boolean. Whether to return the last outputin the output sequence, or the full sequence.
 - **`return_state`** : Boolean. Whether to return the last statein addition to the output.
@@ -25,7 +25,7 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
     - A  `get_initial_state(inputs=None, batch_size=None, dtype=None)` method that creates a tensor meant to be fed to  `call()`  as theinitial state, if the user didn't specify any initial state via othermeans. The returned initial state should have a shape of[batch_size, cell.state_size]. The cell might choose to create atensor full of zeros, or full of other values based on the cell'simplementation. `inputs`  is the input tensor to the RNN layer, which shouldcontain the batch size as its shape[0], and also dtype. Note thatthe shape[0] might be  `None`  during the graph construction. Eitherthe  `inputs`  or the pair of  `batch_size`  and  `dtype`  are provided. `batch_size`  is a scalar tensor that represents the batch sizeof the inputs.  `dtype`  is [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) that represents the dtype ofthe inputs.For backward compatible reason, if this method is not implementedby the cell, the RNN layer will create a zero filled tensor with thesize of [batch_size, cell.state_size].In the case that  `cell`  is a list of RNN cell instances, the cellswill be stacked on top of each other in the RNN, resulting in anefficient stacked RNN.
 
 
-#### Call arguments:
+#### 调用参数：
 - **`inputs`** : Input tensor.
 - **`mask`** : Binary tensor of shape  `(samples, timesteps)`  indicating whethera given timestep should be masked.
 - **`training`** : Python boolean indicating whether the layer should behave intraining mode or in inference mode. This argument is passed to the cellwhen calling it. This is for use with cells that use dropout.
@@ -33,16 +33,16 @@ Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras
 - **`constants`** : List of constant tensors to be passed to the cell at eachtimestep.
 
 
-#### Input shape:
+#### 输入形状：
 N-D tensor with shape  `(batch_size, timesteps, ...)`  or `(timesteps, batch_size, ...)`  when time_major is True.
 
-#### Output shape:
+#### 输出形状：
 - If  `return_state` : a list of tensors. The first tensor isthe output. The remaining tensors are the last states,each with shape  `(batch_size, state_size)` , where  `state_size`  couldbe a high dimension tensor shape.
 - If  `return_sequences` : N-D tensor with shape `(batch_size, timesteps, output_size)` , where  `output_size`  couldbe a high dimension tensor shape, or `(timesteps, batch_size, output_size)`  when  `time_major`  is True.
 - Else, N-D tensor with shape  `(batch_size, output_size)` , where `output_size`  could be a high dimension tensor shape.
 
 
-#### Masking:
+#### 掩蔽：
 This layer supports masking for input data with a variable numberof timesteps. To introduce masks to your data,use an [Embedding](/api_docs/python/tf/keras/layers/embeddings) layer with the  `mask_zero`  parameterset to  `True` .
 
 Note on using statefulness in RNNs:  You can set RNN layers to be 'stateful', which means that the states  computed for the samples in one batch will be reused as initial states  for the samples in the next batch. This assumes a one-to-one mapping  between samples in different successive batches.
@@ -57,7 +57,7 @@ You can specify the initial state of RNN layers numerically by  calling  `reset_
 
 Note on passing external constants to RNNs:  You can pass "external" constants to the cell using the  `constants`   keyword argument of [ `RNN.**call** ` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/RNN#__call__) (as well as [ `RNN.call` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/RNN#call)) method. This  requires that the  `cell.call`  method accepts the same keyword argument   `constants` . Such constants can be used to condition the cell  transformation on additional static inputs (not changing over time),  a.k.a. an attention mechanism.
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -119,13 +119,13 @@ y = layer(x)
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `states` 
 
 
-## Methods
+## 方法
 
 
 ###  `get_initial_state` 

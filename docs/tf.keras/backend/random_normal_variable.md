@@ -1,6 +1,6 @@
-Instantiates a variable with values drawn from a normal distribution.
+用从正态分布中提取的值实例化变量。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable), [ `tf.compat.v2.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable)
+**别名** : [ `tf.compat.v1.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable), [ `tf.compat.v2.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable)
 
 ```
  tf.keras.backend.random_normal_variable(
@@ -14,7 +14,7 @@ Instantiates a variable with values drawn from a normal distribution.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`shape`** : Tuple of integers, shape of returned Keras variable.
 - **`mean`** : Float, mean of the normal distribution.
 - **`scale`** : Float, standard deviation of the normal distribution.
@@ -23,10 +23,10 @@ Instantiates a variable with values drawn from a normal distribution.
 - **`seed`** : Integer, random seed.
 
 
-#### Returns:
+#### 返回：
 A Keras variable, filled with drawn samples.
 
-#### Example:
+#### 示例：
 
 
 ```

@@ -1,11 +1,11 @@
 
 
 ## Class  `Adamax` 
-Optimizer that implements the Adamax algorithm.
+实现adamax算法的优化器。
 
 Inherits From: [ `Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)
 
-**Aliases** : [ `tf.compat.v1.keras.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax), [ `tf.compat.v2.keras.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax), [ `tf.compat.v2.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax), [ `tf.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax)
+**别名** : [ `tf.compat.v1.keras.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax), [ `tf.compat.v2.keras.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax), [ `tf.compat.v2.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax), [ `tf.optimizers.Adamax` ](/api_docs/python/tf/keras/optimizers/Adamax)
 
 It is a variant of Adam based on the infinity norm.Default parameters follow those provided in the paper.Adamax is sometimes superior to adam, specially in models with embeddings.
 
@@ -26,9 +26,9 @@ References  see Section 7 of [Kingma et al., 2014](http://arxiv.org/abs/1412.698
  
 ```
 
-Construct a new Adamax optimizer.
+构造一个新的adamax优化器。
 
-#### Initialization:
+#### 初始化：
 
 
 ```
@@ -53,7 +53,7 @@ Similar to AdamOptimizer, the epsilon is added for numerical stability(especiall
 
 Contrast to AdamOptimizer, the sparse implementation of this algorithm(used when the gradient is an IndexedSlices object, typically because of[ `tf.gather` ](https://tensorflow.google.cn/api_docs/python/tf/gather) or an embedding lookup in the forward pass) only updatesvariable slices and corresponding  `m_t` ,  `v_t`  terms when that part ofthe variable was used in the forward pass. This means that the sparsebehavior is contrast to the dense behavior (similar to some momentumimplementations which ignore momentum unless a variable slice was actuallyused).
 
-#### Args:
+#### 参数：
 - **`learning_rate`** : A Tensor or a floating point value.  The learning rate.
 - **`beta_1`** : A float value or a constant float tensor. The exponential decayrate for the 1st moment estimates.
 - **`beta_2`** : A float value or a constant float tensor. The exponential decayrate for the exponentially weighted infinity norm.
@@ -62,16 +62,16 @@ Contrast to AdamOptimizer, the sparse implementation of this algorithm(used when
 - **`**kwargs`** : keyword arguments. Allowed to be { `clipnorm` ,  `clipvalue` ,  `lr` , `decay` }.  `clipnorm`  is clip gradients by norm;  `clipvalue`  is clipgradients by value,  `decay`  is included for backward compatibility toallow time inverse decay of learning rate.  `lr`  is included for backwardcompatibility, recommended to use  `learning_rate`  instead.
 
 
-## Properties
+## 属性
 
 
 ###  `iterations` 
-Variable. The number of training steps this Optimizer has run.
+变量。此优化器已运行的训练步骤数。
 
 ###  `weights` 
-Returns variables of this Optimizer based on the order created.
+根据创建的顺序返回此优化器的变量。
 
-## Methods
+## 方法
 
 
 ###  `add_slot` 
@@ -115,19 +115,19 @@ Add a new slot variable for  `var` .
  
 ```
 
-Apply gradients to variables.
+对变量应用渐变。
 
 This is the second part of  `minimize()` . It returns an  `Operation`  thatapplies gradients.
 
-#### Args:
+#### 参数：
 - **`grads_and_vars`** : List of (gradient, variable) pairs.
 - **`name`** : Optional name for the returned operation.  Default to the namepassed to the  `Optimizer`  constructor.
 
 
-#### Returns:
+#### 返回：
 An  `Operation`  that applies the specified gradients. If  `global_step` was not None, that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If  `grads_and_vars`  is malformed.
 - **`ValueError`** : If none of the variables have gradients.
 
@@ -144,17 +144,17 @@ An  `Operation`  that applies the specified gradients. If  `global_step` was not
  
 ```
 
-Creates an optimizer from its config.
+从其配置创建优化器。
 
 This method is the reverse of  `get_config` ,capable of instantiating the same optimizer from the configdictionary.
 
-#### Arguments:
+#### 参数：
 - **`config`** : A Python dictionary, typically the output of get_config.
 - **`custom_objects`** : A Python dictionary mapping names to additional Pythonobjects used to create this optimizer, such as a function used for ahyperparameter.
 
 
-#### Returns:
-An optimizer instance.
+#### 返回：
+优化器实例。
 
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/adamax.py#L180-L189)
@@ -164,12 +164,12 @@ An optimizer instance.
  
 ```
 
-Returns the config of the optimimizer.
+返回优化程序的配置。
 
 An optimizer config is a Python dictionary (serializable)containing the configuration of an optimizer.The same optimizer can be reinstantiated later(without any saved state) from this configuration.
 
-#### Returns:
-Python dictionary.
+#### 返回：
+python字典。
 
 ###  `get_gradients` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/optimizer_v2.py#L374-L406)
@@ -184,15 +184,15 @@ Python dictionary.
 
 Returns gradients of  `loss`  with respect to  `params` .
 
-#### Arguments:
+#### 参数：
 - **`loss`** : Loss tensor.
 - **`params`** : List of variables.
 
 
-#### Returns:
-List of gradient tensors.
+#### 返回：
+梯度张量列表。
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : In case any gradient cannot be computed (e.g. if gradientfunction not implemented).
 
 
@@ -215,7 +215,7 @@ List of gradient tensors.
  
 ```
 
-A list of names for this optimizer's slots.
+此优化器插槽的名称列表。
 
 ###  `get_updates` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/optimizer_v2.py#L499-L506)
@@ -253,17 +253,17 @@ Minimize  `loss`  by updating  `var_list` .
 
 This method simply computes gradient using [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) and calls `apply_gradients()` . If you want to process the gradient before applyingthen call [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape) and  `apply_gradients()`  explicitly insteadof using this function.
 
-#### Args:
+#### 参数：
 - **`loss`** : A callable taking no arguments which returns the value to minimize.
 - **`var_list`** : list or tuple of  `Variable`  objects to update to minimize `loss` , or a callable returning the list or tuple of  `Variable`  objects.Use callable when the variable list would otherwise be incomplete before `minimize`  since the variables are created at the first time  `loss`  iscalled.
 - **`grad_loss`** : Optional. A  `Tensor`  holding the gradient computed for  `loss` .
 - **`name`** : Optional name for the returned operation.
 
 
-#### Returns:
+#### 返回：
 An Operation that updates the variables in  `var_list` .  If  `global_step` was not  `None` , that operation also increments  `global_step` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If some of the variables are not  `Variable`  objects.
 
 
@@ -283,5 +283,5 @@ An Operation that updates the variables in  `var_list` .  If  `global_step` was 
  
 ```
 
-Returns variables of this Optimizer based on the order created.
+根据创建的顺序返回此优化器的变量。
 

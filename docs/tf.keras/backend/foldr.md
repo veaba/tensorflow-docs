@@ -1,6 +1,6 @@
-Reduce elems using fn to combine them from right to left.
+使用fn从右到左合并元素来减少元素。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.foldr` ](/api_docs/python/tf/keras/backend/foldr), [ `tf.compat.v2.keras.backend.foldr` ](/api_docs/python/tf/keras/backend/foldr)
+**别名** : [ `tf.compat.v1.keras.backend.foldr` ](/api_docs/python/tf/keras/backend/foldr), [ `tf.compat.v2.keras.backend.foldr` ](/api_docs/python/tf/keras/backend/foldr)
 
 ```
  tf.keras.backend.foldr(
@@ -12,13 +12,13 @@ Reduce elems using fn to combine them from right to left.
  
 ```
 
-#### Arguments:
+#### 参数：
 - **`fn`** : Callable that will be called upon each element in elems and anaccumulator, for instance  `lambda acc, x: acc + x` 
 - **`elems`** : tensor
 - **`initializer`** : The first value used ( `elems[-1]`  in case of None)
 - **`name`** : A string name for the foldr node in the graph
 
 
-#### Returns:
-Same type and shape as initializer
+#### 返回：
+与初始值设定项相同的类型和形状
 

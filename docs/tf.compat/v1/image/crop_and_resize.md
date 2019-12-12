@@ -1,4 +1,4 @@
-Extracts crops from the input image tensor and resizes them.
+从输入图像张量中提取作物并调整其大小。
 
 ```
  tf.compat.v1.image.crop_and_resize(    image,    boxes,    box_ind=None,    crop_size=None,    method='bilinear',    extrapolation_value=0,    name=None,    box_indices=None) 
@@ -8,7 +8,7 @@ Extracts crops from the input image tensor and resizes them using bilinearsampli
 
 Returns a tensor with  `crops`  from the input  `image`  at positions defined at thebounding box locations in  `boxes` . The cropped boxes are all resized (withbilinear or nearest neighbor interpolation) to a fixed `size = [crop_height, crop_width]` . The result is a 4-D tensor `[num_boxes, crop_height, crop_width, depth]` . The resizing is corner aligned.In particular, if  `boxes = [[0, 0, 1, 1]]` , the method will give identicalresults to using  `tf.image.resize_bilinear()`  or `tf.image.resize_nearest_neighbor()` (depends on the  `method`  argument) with `align_corners=True` .
 
-#### Args:
+#### 参数：
 - **`image`** : A  `Tensor` . Must be one of the following types:  `uint8` ,  `uint16` ,  `int8` ,  `int16` ,  `int32` ,  `int64` ,  `half` ,  `float32` ,  `float64` .A 4-D tensor of shape  `[batch, image_height, image_width, depth]` .Both  `image_height`  and  `image_width`  need to be positive.
 - **`boxes`** : A  `Tensor`  of type  `float32` .A 2-D tensor of shape  `[num_boxes, 4]` . The  `i` -th row of the tensorspecifies the coordinates of a box in the  `box_ind[i]`  image and is specifiedin normalized coordinates  `[y1, x1, y2, x2]` . A normalized coordinate value of `y`  is mapped to the image coordinate at  `y * (image_height - 1)` , so as the `[0, 1]`  interval of normalized image height is mapped to `[0, image_height - 1]`  in image height coordinates. We do allow  `y1`  >  `y2` , inwhich case the sampled crop is an up-down flipped version of the originalimage. The width dimension is treated similarly. Normalized coordinatesoutside the  `[0, 1]`  range are allowed, in which case we use `extrapolation_value`  to extrapolate the input image values.
 - **`box_ind`** : A  `Tensor`  of type  `int32` .A 1-D tensor of shape  `[num_boxes]`  with int32 values in  `[0, batch)` .The value of  `box_ind[i]`  specifies the image that the  `i` -th box refers to.
@@ -18,6 +18,6 @@ Returns a tensor with  `crops`  from the input  `image`  at positions defined at
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 

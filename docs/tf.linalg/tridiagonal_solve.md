@@ -1,6 +1,6 @@
-Solves tridiagonal systems of equations.
+解三对角方程组。
 
-**Aliases** : [ `tf.compat.v1.linalg.tridiagonal_solve` ](/api_docs/python/tf/linalg/tridiagonal_solve), [ `tf.compat.v2.linalg.tridiagonal_solve` ](/api_docs/python/tf/linalg/tridiagonal_solve)
+**别名** : [ `tf.compat.v1.linalg.tridiagonal_solve` ](/api_docs/python/tf/linalg/tridiagonal_solve), [ `tf.compat.v2.linalg.tridiagonal_solve` ](/api_docs/python/tf/linalg/tridiagonal_solve)
 
 ```
  tf.linalg.tridiagonal_solve(
@@ -50,7 +50,7 @@ The op isn't guaranteed to raise an error if the input matrix is notinvertible. 
 
 On CPU, solution is computed via Gaussian elimination with or without partialpivoting, depending on  `partial_pivoting`  parameter. On GPU, Nvidia's cuSPARSElibrary is used: https://docs.nvidia.com/cuda/cusparse/index.html#gtsv
 
-#### Args:
+#### 参数：
 - **`diagonals`** : A  `Tensor`  or tuple of  `Tensor` s describing left-hand sides. Theshape depends of  `diagonals_format` , see description above. Must be `float32` ,  `float64` ,  `complex64` , or  `complex128` .
 - **`rhs`** : A  `Tensor`  of shape [..., M] or [..., M, K] and with the same dtype as `diagonals` .
 - **`diagonals_format`** : one of  `matrix` ,  `sequence` , or  `compact` . Default is `compact` .
@@ -60,10 +60,10 @@ On CPU, solution is computed via Gaussian elimination with or without partialpiv
 - **`partial_pivoting`** : whether to perform partial pivoting.  `True`  by default.Partial pivoting makes the procedure more stable, but slower. Partialpivoting is unnecessary in some cases, including diagonally dominant andsymmetric positive definite matrices (see e.g. theorem 9.12 in [1]).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of shape [..., M] or [..., M, K] containing the solutions.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : An unsupported type is provided as input, or when the inputtensors have incorrect shapes.
 [1] Nicholas J. Higham (2002). Accuracy and Stability of Numerical Algorithms:Second Edition. SIAM. p. 175. ISBN 978-0-89871-802-7.
 

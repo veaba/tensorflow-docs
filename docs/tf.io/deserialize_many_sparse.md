@@ -1,6 +1,6 @@
 Deserialize and concatenate  `SparseTensors`  from a serialized minibatch.
 
-**Aliases** : [ `tf.compat.v1.deserialize_many_sparse` ](/api_docs/python/tf/io/deserialize_many_sparse), [ `tf.compat.v1.io.deserialize_many_sparse` ](/api_docs/python/tf/io/deserialize_many_sparse), [ `tf.compat.v2.io.deserialize_many_sparse` ](/api_docs/python/tf/io/deserialize_many_sparse)
+**别名** : [ `tf.compat.v1.deserialize_many_sparse` ](/api_docs/python/tf/io/deserialize_many_sparse), [ `tf.compat.v1.io.deserialize_many_sparse` ](/api_docs/python/tf/io/deserialize_many_sparse), [ `tf.compat.v2.io.deserialize_many_sparse` ](/api_docs/python/tf/io/deserialize_many_sparse)
 
 ```
  tf.io.deserialize_many_sparse(
@@ -52,14 +52,14 @@ shape = [2 50]
  
 ```
 
-#### Args:
+#### 参数：
 - **`serialized_sparse`** : 2-D  `Tensor`  of type  `string`  of shape  `[N, 3]` .The serialized and packed  `SparseTensor`  objects.
 - **`dtype`** : The  `dtype`  of the serialized  `SparseTensor`  objects.
 - **`rank`** : (optional) Python int, the rank of the  `SparseTensor`  objects.
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-#### Returns:
+#### 返回：
 A  `SparseTensor`  representing the deserialized  `SparseTensor` s,concatenated along the  `SparseTensor` s' first dimension.
 
 All of the serialized  `SparseTensor` s must have had the same rank and type.

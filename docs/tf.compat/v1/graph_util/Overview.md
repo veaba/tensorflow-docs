@@ -1,6 +1,6 @@
-Helpers to manipulate a tensor graph in python.
+在python中操作张量图的帮助程序。
 
-## Functions
+## 功能
 [ `convert_variables_to_constants(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/graph_util/convert_variables_to_constants): Replaces all the variables in a graph with constants of the same values. (deprecated)
 
 [ `extract_sub_graph(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/graph_util/extract_sub_graph): Extract the subgraph that can reach any of the nodes in 'dest_nodes'. (deprecated)

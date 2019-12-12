@@ -1,9 +1,9 @@
 
 
 ## Class  `failureException` 
-Assertion failed.
+断言失败。
 
-**Aliases** : [ `tf.compat.v1.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException), [ `tf.compat.v2.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException)
+**别名** : [ `tf.compat.v1.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException), [ `tf.compat.v2.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException)
 
 ##  `__init__` 
 

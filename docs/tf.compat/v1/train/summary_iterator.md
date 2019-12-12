@@ -6,7 +6,7 @@ An iterator for reading  `Event`  protocol buffers from an event file.
 
 You can use this function to read events written to an event file. It returnsa Python iterator that yields  `Event`  protocol buffers.
 
-Example: Print the contents of an events file.
+示例：打印事件文件的内容。
 
 ```
  for e in tf.compat.v1.train.summary_iterator(path to events file):
@@ -14,7 +14,7 @@ Example: Print the contents of an events file.
  
 ```
 
-Example: Print selected summary values.
+示例：打印选定的摘要值。
 
 ```
  # This example supposes that the events file contains summaries with a
@@ -30,10 +30,10 @@ for e in tf.compat.v1.train.summary_iterator(path to events file):
 
 See the protocol buffer definitions of[Event](https://tensorflow.google.cn/code/tensorflow/core/util/event.proto)and[Summary](https://tensorflow.google.cn/code/tensorflow/core/framework/summary.proto)for more information about their attributes.
 
-#### Args:
+#### 参数：
 - **`path`** : The path to an event file created by a  `SummaryWriter` .
 
 
-#### Yields:
+#### 收益率：
  `Event`  protocol buffers.
 

@@ -1,6 +1,6 @@
-Returns a batched diagonal tensor with given batched diagonal values.
+返回具有给定批处理对角值的批处理对角张量。
 
-**Aliases** : [ `tf.compat.v1.linalg.diag` ](/api_docs/python/tf/linalg/diag), [ `tf.compat.v1.matrix_diag` ](/api_docs/python/tf/linalg/diag), [ `tf.compat.v2.linalg.diag` ](/api_docs/python/tf/linalg/diag)
+**别名** : [ `tf.compat.v1.linalg.diag` ](/api_docs/python/tf/linalg/diag), [ `tf.compat.v1.matrix_diag` ](/api_docs/python/tf/linalg/diag), [ `tf.compat.v2.linalg.diag` ](/api_docs/python/tf/linalg/diag)
 
 ```
  tf.linalg.diag(
@@ -38,7 +38,7 @@ Otherwise,  `M`  is treated as the number of diagonals for the matrix in thesame
 
 where  `d = n - m` 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -95,7 +95,7 @@ tf.matrix_diag(diagonal, k = -1, num_rows = 3, padding = 9)
  
 ```
 
-#### Args:
+#### 参数：
 - **`diagonal`** : A  `Tensor`  with  `rank k >= 1` .
 - **`name`** : A name for the operation (optional).
 - **`k`** : Diagonal offset(s). Positive value means superdiagonal, 0 refers to themain diagonal, and negative value means subdiagonals.  `k`  can be a singleinteger (for a single diagonal) or a pair of integers specifying the lowand high ends of a matrix band.  `k[0]`  must not be larger than  `k[1]` .
@@ -104,6 +104,6 @@ tf.matrix_diag(diagonal, k = -1, num_rows = 3, padding = 9)
 - **`padding_value`** : The value to fill the area outside the specified diagonalband with. Default is 0.
 
 
-#### Returns:
+#### 返回：
 A Tensor. Has the same type as  `diagonal` .
 

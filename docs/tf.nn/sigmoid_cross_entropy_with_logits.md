@@ -4,7 +4,7 @@ Computes sigmoid cross entropy given  `logits` .
  tf.nn.sigmoid_cross_entropy_with_logits(    labels=None,    logits=None,    name=None) 
 ```
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
 Measures the probability error in discrete classification tasks in which eachclass is independent and not mutually exclusive.  For instance, one couldperform multilabel classification where a picture can contain both an elephantand a dog at the same time.
 
@@ -38,14 +38,14 @@ Hence, to ensure stability and avoid overflow, the implementation uses thisequiv
 
  `logits`  and  `labels`  must have the same type and shape.
 
-#### Args:
+#### 参数：
 - **`labels`** : A  `Tensor`  of the same type and shape as  `logits` .
 - **`logits`** : A  `Tensor`  of type  `float32`  or  `float64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same shape as  `logits`  with the componentwiselogistic losses.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If  `logits`  and  `labels`  do not have the same shape.

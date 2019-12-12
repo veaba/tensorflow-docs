@@ -1,6 +1,6 @@
 Multiplies matrix  `a`  by matrix  `b` , producing  `a`  *  `b` .
 
-**Aliases** : [ `tf.compat.v1.linalg.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.compat.v1.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.compat.v2.linalg.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.compat.v2.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.matmul` ](/api_docs/python/tf/linalg/matmul)
+**别名** : [ `tf.compat.v1.linalg.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.compat.v1.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.compat.v2.linalg.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.compat.v2.matmul` ](/api_docs/python/tf/linalg/matmul), [ `tf.matmul` ](/api_docs/python/tf/linalg/matmul)
 
 ```
  tf.linalg.matmul(
@@ -17,7 +17,7 @@ Multiplies matrix  `a`  by matrix  `b` , producing  `a`  *  `b` .
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
 - [Writing custom layers and models with Keras](https://tensorflow.google.cn/guide/keras/custom_layers_and_models)
@@ -25,7 +25,7 @@ Multiplies matrix  `a`  by matrix  `b` , producing  `a`  *  `b` .
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Customization basics: tensors and operations](https://tensorflow.google.cn/tutorials/customization/basics)
 - [Transformer model for language understanding](https://tensorflow.google.cn/tutorials/text/transformer)
 - [Custom layers](https://tensorflow.google.cn/tutorials/customization/custom_layers)
@@ -38,7 +38,7 @@ Either matrix can be transposed or adjointed (conjugated and transposed) onthe f
 
 If one or both of the matrices contain a lot of zeros, a more efficientmultiplication algorithm can be used by setting the corresponding `a_is_sparse`  or  `b_is_sparse`  flag to  `True` . These are  `False`  by default.This optimization is only available for plain matrices (rank-2 tensors) withdatatypes  `bfloat16`  or  `float32` .
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -92,7 +92,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
  
 ```
 
-#### Args:
+#### 参数：
 - **`a`** :  `Tensor`  of type  `float16` ,  `float32` ,  `float64` ,  `int32` ,  `complex64` , `complex128`  and rank > 1.
 - **`b`** :  `Tensor`  with same type and rank as  `a` .
 - **`transpose_a`** : If  `True` ,  `a`  is transposed before multiplication.
@@ -104,7 +104,7 @@ d = tf.matmul(tf.matmul(a, b), [[10.], [11.]])
 - **`name`** : Name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix isthe product of the corresponding matrices in  `a`  and  `b` , e.g. if alltranspose or adjoint attributes are  `False` :
 
  `output` [..., i, j] = sum_k ( `a` [..., i, k] *  `b` [..., k, j]),for all indices i, j.
@@ -112,5 +112,5 @@ A  `Tensor`  of the same type as  `a`  and  `b`  where each inner-most matrix is
 - **`Note`** : This is matrix product, not element-wise product.
 
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If transpose_a and adjoint_a, or transpose_b and adjoint_bare both set to True.

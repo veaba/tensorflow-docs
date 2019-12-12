@@ -1,6 +1,6 @@
-Computes the Euclidean norm of elements across dimensions of a tensor.
+计算元素在张量维度上的欧几里德范数。
 
-**Aliases** : [ `tf.compat.v1.math.reduce_euclidean_norm` ](/api_docs/python/tf/math/reduce_euclidean_norm), [ `tf.compat.v2.math.reduce_euclidean_norm` ](/api_docs/python/tf/math/reduce_euclidean_norm)
+**别名** : [ `tf.compat.v1.math.reduce_euclidean_norm` ](/api_docs/python/tf/math/reduce_euclidean_norm), [ `tf.compat.v2.math.reduce_euclidean_norm` ](/api_docs/python/tf/math/reduce_euclidean_norm)
 
 ```
  tf.math.reduce_euclidean_norm(    input_tensor,    axis=None,    keepdims=False,    name=None) 
@@ -10,7 +10,7 @@ Reduces  `input_tensor`  along the dimensions given in  `axis` .Unless  `keepdim
 
 If  `axis`  is None, all dimensions are reduced, and atensor with a single element is returned.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -23,13 +23,13 @@ tf.reduce_euclidean_norm(x, [0, 1])  # sqrt(17)
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The tensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 The reduced tensor, of the same dtype as the input_tensor.
 

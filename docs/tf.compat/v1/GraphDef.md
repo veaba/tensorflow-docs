@@ -1,13 +1,13 @@
 
 
 ## Class  `GraphDef` 
-A ProtocolMessage
+原始信息
 
-### Used in the guide:
+### 在指南中使用：
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-## Properties
+## 属性
 
 
 ###  `library` 

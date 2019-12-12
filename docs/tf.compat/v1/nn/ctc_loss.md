@@ -1,4 +1,4 @@
-Computes the CTC (Connectionist Temporal Classification) Loss.
+计算CTC（连接主义时间分类）损失。
 
 ```
  tf.compat.v1.nn.ctc_loss(
@@ -14,11 +14,11 @@ Computes the CTC (Connectionist Temporal Classification) Loss.
  
 ```
 
-This op implements the CTC loss as presented in the article:
+此操作实现了文章中所述的CTC损失：
 
 [A. Graves, S. Fernandez, F. Gomez, J. Schmidhuber.Connectionist Temporal Classification: Labeling Unsegmented Sequence Datawith Recurrent Neural Networks. ICML 2006, Pittsburgh, USA,pp. 369-376.](http://www.cs.toronto.edu/%7Egraves/icml_2006.pdf)
 
-#### Input requirements:
+#### 输入要求：
 
 
 ```
@@ -29,7 +29,7 @@ max(labels.indices(labels.indices[:, 1] == b, 2))
  
 ```
 
-#### Notes:
+#### 注：
 This class performs the softmax operation for you, so inputs shouldbe e.g. linear projections of outputs by an LSTM.
 
 The  `inputs`  Tensor's innermost dimension size,  `num_classes` , represents `num_labels + 1`  classes, where num_labels is the number of true labels, andthe largest value  `(num_classes - 1)`  is reserved for the blank label.
@@ -42,7 +42,7 @@ If  `preprocess_collapse_repeated`  is True, then a preprocessing step runsbefor
 
 If  `ctc_merge_repeated`  is set False, then deep within the CTC calculation,repeated non-blank labels will not be merged and are interpretedas individual labels.  This is a simplified (non-standard) version of CTC.
 
-Here is a table of the (roughly) expected first order behavior:
+下面是（大致）预期一阶行为的表：
 
 -  `preprocess_collapse_repeated=False` ,  `ctc_merge_repeated=True` 
 
@@ -66,7 +66,7 @@ Untested.  Very likely will not learn to output repeated classes.
 
 The  `ignore_longer_outputs_than_inputs`  option allows to specify the behaviorof the CTCLoss when dealing with sequences that have longer outputs thaninputs. If true, the CTCLoss will simply return zero gradient for thoseitems, otherwise an InvalidArgument error is returned, stopping training.
 
-#### Args:
+#### 参数：
 - **`labels`** : An  `int32`   `SparseTensor` . `labels.indices[i, :] == [b, t]`  means  `labels.values[i]`  stores the idfor (batch b, time t).  `labels.values[i]`  must take on values in  `[0,num_labels)` . See  `core/ops/ctc_ops.cc`  for more details.
 - **`inputs`** : 3-D  `float`   `Tensor` .If time_major == False, this will be a  `Tensor`  shaped:  `[batch_size,max_time, num_classes]` .If time_major == True (default), this will be a  `Tensor`  shaped: `[max_time, batch_size, num_classes]` . The logits.
 - **`sequence_length`** : 1-D  `int32`  vector, size  `[batch_size]` . The sequencelengths.
@@ -77,8 +77,8 @@ The  `ignore_longer_outputs_than_inputs`  option allows to specify the behavioro
 - **`logits`** : Alias for inputs.
 
 
-#### Returns:
+#### 返回：
 A 1-D  `float`   `Tensor` , size  `[batch]` , containing the negative log  probabilities.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : if labels is not a  `SparseTensor` .

@@ -1,6 +1,6 @@
-Converts a Keras model to dot format and save to a file.
+将路缘石模型转换为点格式并保存为文件。
 
-**Aliases** : [ `tf.compat.v1.keras.utils.plot_model` ](/api_docs/python/tf/keras/utils/plot_model), [ `tf.compat.v2.keras.utils.plot_model` ](/api_docs/python/tf/keras/utils/plot_model)
+**别名** : [ `tf.compat.v1.keras.utils.plot_model` ](/api_docs/python/tf/keras/utils/plot_model), [ `tf.compat.v2.keras.utils.plot_model` ](/api_docs/python/tf/keras/utils/plot_model)
 
 ```
  tf.keras.utils.plot_model(
@@ -15,17 +15,17 @@ Converts a Keras model to dot format and save to a file.
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
 - [Image segmentation](https://tensorflow.google.cn/tutorials/images/segmentation)
 
 
-#### Arguments:
+#### 参数：
 - **`model`** : A Keras model instance
 - **`to_file`** : File name of the plot image.
 - **`show_shapes`** : whether to display shape information.
@@ -35,6 +35,6 @@ Converts a Keras model to dot format and save to a file.
 - **`dpi`** : Dots per inch.
 
 
-#### Returns:
+#### 返回：
 A Jupyter notebook Image object if Jupyter is installed.This enables in-line display of the model plots in notebooks.
 

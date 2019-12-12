@@ -39,7 +39,7 @@ If  `dynamic_pad`  is  `True` , it is sufficient that the *rank* of thetensors i
 
 If  `allow_smaller_final_batch`  is  `True` , a smaller batch value than `batch_size`  is returned when the queue is closed and there are not enoughelements to fill the batch, otherwise the pending elements are discarded.In addition, all output tensors' static shapes, as accessed via the `shape`  property will have a first  `Dimension`  value of  `None` , andoperations that depend on fixed batch_size would fail.
 
-#### Args:
+#### 参数：
 - **`tensors_list`** : A list of tuples or dictionaries of tensors to enqueue.
 - **`batch_size`** : An integer. The new batch size pulled from the queue.
 - **`capacity`** : An integer. The maximum number of elements in the queue.
@@ -51,13 +51,13 @@ If  `allow_smaller_final_batch`  is  `True` , a smaller batch value than `batch_
 - **`name`** : (Optional) A name for the operations.
 
 
-#### Returns:
+#### 返回：
 A list or dictionary of tensors with the same number and types as `tensors_list[i]` .
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the  `shapes`  are not specified, and cannot beinferred from the elements of  `tensor_list_list` .
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Input pipelines based on Queues are not supported when eager execution isenabled. Please use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API to ingest data under eager execution.
 

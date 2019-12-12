@@ -5,7 +5,7 @@ Implementation of a ClusterResolver which reads the TF_CONFIG EnvVar.
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
-**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver)
+**别名** : [ `tf.compat.v1.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver)
 
 This is an implementation of cluster resolvers when using TF_CONFIG to setinformation about the cluster. The cluster spec returned will beinitialized from the TF_CONFIG environment variable.
 
@@ -22,20 +22,20 @@ This is an implementation of cluster resolvers when using TF_CONFIG to setinform
  
 ```
 
-Creates a new TFConfigClusterResolver.
+创建新的tfconfigclusterresolver。
 
-#### Args:
+#### 参数：
 - **`task_type`** : (String, optional) Overrides the task type specified in theTF_CONFIG environment variable.
 - **`task_id`** : (Integer, optional) Overrides the task index specified in theTF_CONFIG environment variable.
 - **`rpc_layer`** : (String, optional) Overrides the rpc layer TensorFlow uses.
 - **`environment`** : (String, optional) Overrides the environment TensorFlowoperates in.
 
 
-## Properties
+## 属性
 
 
 ###  `environment` 
-Returns the current environment which TensorFlow is running in.
+返回TensorFlow正在运行的当前环境。
 
 There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
@@ -52,7 +52,7 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
 ###  `task_type` 
 
 
-## Methods
+## 方法
 
 
 ###  `cluster_spec` 
@@ -65,7 +65,7 @@ Otherwise, if you are implementing a ClusterResolver that will only workin open-
 
 Returns a ClusterSpec based on the TF_CONFIG environment variable.
 
-#### Returns:
+#### 返回：
 A ClusterSpec with information from the TF_CONFIG environment variable.
 
 ###  `master` 
@@ -80,18 +80,18 @@ A ClusterSpec with information from the TF_CONFIG environment variable.
  
 ```
 
-Returns the master address to use when creating a TensorFlow session.
+返回创建tensorflow会话时要使用的主地址。
 
-#### Args:
+#### 参数：
 - **`task_type`** : (String, optional) Overrides and sets the task_type of themaster.
 - **`task_id`** : (Integer, optional) Overrides and sets the task id of themaster.
 - **`rpc_layer`** : (String, optional) Overrides and sets the protocol over whichTensorFlow nodes communicate with each other.
 
 
-#### Returns:
-The address of the master.
+#### 返回：
+主人的地址。
 
-#### Raises:
+#### 加薪：
 - **`RuntimeError`** : If the task_type or task_id is not specified and the `TF_CONFIG`  environment variable does not contain a task section.
 
 
@@ -107,18 +107,18 @@ The address of the master.
  
 ```
 
-Returns the number of accelerator cores per worker.
+返回每个工作进程的加速器核心数。
 
 This returns the number of accelerator cores (such as GPUs and TPUs)available per worker.
 
 Optionally, we allow callers to specify the task_type, and task_id, forif they want to target a specific TensorFlow process to querythe number of accelerators. This is to support heterogenous environments,where the number of accelerators cores per host is different.
 
-#### Args:
+#### 参数：
 - **`task_type`** : (Optional) The type of the TensorFlow task of the machine wewant to query.
 - **`task_id`** : (Optional) The index of the TensorFlow task of the machine wewant to query.
 - **`config_proto`** : (Optional) Configuration for starting a new session toquery how many accelerator cores it has.
 
 
-#### Returns:
-A map of accelerator types to number of cores.
+#### 返回：
+加速器类型与核心数的映射。
 

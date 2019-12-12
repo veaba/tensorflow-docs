@@ -46,7 +46,7 @@ builder.save()
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `add_meta_graph` 
@@ -66,11 +66,11 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-Adds the current meta graph to the SavedModel.
+将当前元图添加到savedModel。
 
 Creates a Saver in the current scope and uses the Saver to export the metagraph def. Invoking this API requires the  `add_meta_graph_and_variables()` API to have been invoked before.
 
-#### Args:
+#### 参数：
 - **`tags`** : The set of tags to annotate the meta graph def with.
 - **`signature_def_map`** : The map of signature defs to be added to the meta graphdef.
 - **`assets_collection`** : Assets to be saved with SavedModel. Notethat this list should be a subset of the assets saved as part ofthe first meta graph in the SavedModel.
@@ -80,7 +80,7 @@ Creates a Saver in the current scope and uses the Saver to export the metagraph 
 - **`saver`** : An instance of tf.compat.v1.train.Saver that will be used to exportthe metagraph. If None, a sharded Saver that restores all variables willbe used.
 
 
-#### Raises:
+#### 加薪：
 - **`AssertionError`** : If the variables for the SavedModel have not been savedyet, or if the graph already contains one or more legacy init ops.
 
 
@@ -102,11 +102,11 @@ Creates a Saver in the current scope and uses the Saver to export the metagraph 
  
 ```
 
-Adds the current meta graph to the SavedModel and saves variables.
+将当前元图添加到savedModel并保存变量。
 
 Creates a Saver to save the variables from the provided session. Exports thecorresponding meta graph def. This function assumes that the variables to besaved have been initialized. For a given  `SavedModelBuilder` , this API mustbe called exactly once and for the first meta graph to save. For subsequentmeta graph defs to be added, the  `add_meta_graph()`  API must be used.
 
-#### Args:
+#### 参数：
 - **`sess`** : The TensorFlow session from which to save the meta graph andvariables.
 - **`tags`** : The set of tags with which to save the meta graph.
 - **`signature_def_map`** : The map of signature def map to add to the meta graphdef.
@@ -130,10 +130,10 @@ Writes a  `SavedModel`  protocol buffer to disk.
 
 The function writes the SavedModel protocol buffer to the export directoryin serialized format.
 
-#### Args:
+#### 参数：
 - **`as_text`** : Writes the SavedModel protocol buffer in text format todisk. Protocol buffers in text format are useful for debugging, butparsing fails when it encounters an unknown field and so is not forwardcompatible. This means changes to TensorFlow may prevent deployment ofnew text format SavedModels to existing serving binaries. Do not deploy `as_text`  SavedModels to production.
 
 
-#### Returns:
-The path to which the SavedModel protocol buffer was written.
+#### 返回：
+savedModel协议缓冲区写入的路径。
 

@@ -12,7 +12,7 @@ Assert  `x`  has rank equal to  `rank`  or higher.
  
 ```
 
-Example of adding a dependency to an operation:
+向操作添加依赖项的示例：
 
 ```
  with tf.control_dependencies([tf.compat.v1.assert_rank_at_least(x, 2)]):
@@ -20,7 +20,7 @@ Example of adding a dependency to an operation:
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** :  Numeric  `Tensor` .
 - **`rank`** :  Scalar  `Tensor` .
 - **`data`** :  The tensors to print out if the condition is False.  Defaults toerror message and first few entries of  `x` .
@@ -29,8 +29,8 @@ Example of adding a dependency to an operation:
 - **`name`** : A name for this operation (optional).Defaults to "assert_rank_at_least".
 
 
-#### Returns:
+#### 返回：
 Op raising  `InvalidArgumentError`  unless  `x`  has specified rank or higher.If static checks determine  `x`  has correct rank, a  `no_op`  is returned.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** :  If static checks determine  `x`  has wrong rank.

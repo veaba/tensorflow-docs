@@ -1,6 +1,6 @@
-ResNet v2 models for Keras.
+用于Keras的Resnet v2模型。
 
-## Functions
+## 功能
 [ `ResNet101V2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/ResNet101V2)
 
 [ `ResNet152V2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/ResNet152V2)

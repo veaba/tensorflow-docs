@@ -1,17 +1,17 @@
 
 
 ## Class  `Mean` 
-Computes the (weighted) mean of the given values.
+计算给定值的（加权）平均值。
 
-**Aliases** : [ `tf.compat.v1.keras.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean), [ `tf.compat.v2.keras.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean), [ `tf.compat.v2.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean), [ `tf.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean)
+**别名** : [ `tf.compat.v1.keras.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean), [ `tf.compat.v2.keras.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean), [ `tf.compat.v2.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean), [ `tf.metrics.Mean` ](/api_docs/python/tf/keras/metrics/Mean)
 
-### Used in the guide:
+### 在指南中使用：
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
 - [Writing custom layers and models with Keras](https://tensorflow.google.cn/guide/keras/custom_layers_and_models)
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [TensorFlow 2 quickstart for experts](https://tensorflow.google.cn/tutorials/quickstart/advanced)
 - [Custom training: walkthrough](https://tensorflow.google.cn/tutorials/customization/custom_training_walkthrough)
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
@@ -22,7 +22,7 @@ This metric creates two variables,  `total`  and  `count`  that are used tocompu
 
 If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-#### Usage:
+#### 用法：
 
 
 ```
@@ -32,7 +32,7 @@ print('Final result: ', m.result().numpy())  # Final result: 4.0
  
 ```
 
-Usage with tf.keras API:
+与tf.keras api一起使用：
 
 ```
  model = tf.keras.Model(inputs, outputs)
@@ -54,7 +54,7 @@ model.compile('sgd', loss='mse')
 
 Creates a  `Mean`  instance.
 
-#### Args:
+#### 参数：
 - **`name`** : (Optional) string name of the metric instance.
 - **`dtype`** : (Optional) data type of the metric result.
 
@@ -73,7 +73,7 @@ Creates a  `Mean`  instance.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-## Methods
+## 方法
 
 
 ###  `reset_states` 
@@ -84,7 +84,7 @@ Create and return a new object.  See help(type) for accurate signature.
  
 ```
 
-Resets all of the metric state variables.
+重置所有度量状态变量。
 
 This function is called between epochs/steps,when a metric is evaluated during training.
 
@@ -96,7 +96,7 @@ This function is called between epochs/steps,when a metric is evaluated during t
  
 ```
 
-Computes and returns the metric value tensor.
+计算并返回度量值张量。
 
 Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
@@ -111,15 +111,15 @@ Result computation is an idempotent operation that simply calculates themetric v
  
 ```
 
-Accumulates statistics for computing the reduction metric.
+累积用于计算缩减度量的统计信息。
 
 For example, if  `values`  is [1, 3, 5, 7] and reduction=SUM_OVER_BATCH_SIZE,then the value of  `result()`  is 4. If the  `sample_weight`  is specified as[1, 1, 0, 0] then value of  `result()`  would be 2.
 
-#### Args:
+#### 参数：
 - **`values`** : Per-example value.
 - **`sample_weight`** : Optional weighting of each example. Defaults to 1.
 
 
-#### Returns:
-Update op.
+#### 返回：
+更新操作。
 

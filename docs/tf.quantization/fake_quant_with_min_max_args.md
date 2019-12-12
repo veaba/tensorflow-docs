@@ -1,6 +1,6 @@
 Fake-quantize the 'inputs' tensor, type float to 'outputs' tensor of same type.
 
-**Aliases** : [ `tf.compat.v1.fake_quant_with_min_max_args` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_args), [ `tf.compat.v1.quantization.fake_quant_with_min_max_args` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_args), [ `tf.compat.v2.quantization.fake_quant_with_min_max_args` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_args)
+**别名** : [ `tf.compat.v1.fake_quant_with_min_max_args` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_args), [ `tf.compat.v1.quantization.fake_quant_with_min_max_args` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_args), [ `tf.compat.v2.quantization.fake_quant_with_min_max_args` ](/api_docs/python/tf/quantization/fake_quant_with_min_max_args)
 
 ```
  tf.quantization.fake_quant_with_min_max_args(
@@ -18,9 +18,9 @@ Attributes  `[min; max]`  define the clamping range for the  `inputs`  data. `in
 
 Before quantization,  `min`  and  `max`  values are adjusted with the followinglogic.It is suggested to have  `min <= 0 <= max` . If  `0`  is not in the range of values,the behavior can be unexpected:If  `0 < min < max` :  `min_adj = 0`  and  `max_adj = max - min` .If  `min < max < 0` :  `min_adj = min - max`  and  `max_adj = 0` .If  `min <= 0 <= max` :  `scale = (max - min) / (2^num_bits - 1)` , `min_adj = scale * round(min / scale)`  and  `max_adj = max + min_adj - min` .
 
-Quantization is called fake since the output is still in floating point.
+量化称为假，因为输出仍在浮点。
 
-#### Args:
+#### 参数：
 - **`inputs`** : A  `Tensor`  of type  `float32` .
 - **`min`** : An optional  `float` . Defaults to  `-6` .
 - **`max`** : An optional  `float` . Defaults to  `6` .
@@ -29,6 +29,6 @@ Quantization is called fake since the output is still in floating point.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  of type  `float32` .
 

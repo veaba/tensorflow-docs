@@ -18,7 +18,7 @@ Reduces  `input_tensor`  along the dimensions given in  `axis` .Unless  `keepdim
 
 If  `axis`  is None, all dimensions are reduced, and atensor with a single element is returned.
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -31,7 +31,7 @@ tf.reduce_sum(x, [0, 1])  # 6
  
 ```
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The tensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
@@ -40,9 +40,9 @@ tf.reduce_sum(x, [0, 1])  # 6
 - **`keep_dims`** : Deprecated alias for  `keepdims` .
 
 
-#### Returns:
+#### 返回：
 The reduced tensor, of the same dtype as the input_tensor.
 
-#### Numpy Compatibility
+#### numpy兼容性
 Equivalent to np.sum apart the fact that numpy upcast uint8 and int32 toint64 while tensorflow returns the same dtype as the input.
 

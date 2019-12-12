@@ -1,6 +1,6 @@
-Computes the product of elements across dimensions of a tensor.
+计算元素在张量维度上的乘积。
 
-**Aliases** : [ `tf.compat.v2.math.reduce_prod` ](/api_docs/python/tf/math/reduce_prod), [ `tf.compat.v2.reduce_prod` ](/api_docs/python/tf/math/reduce_prod), [ `tf.reduce_prod` ](/api_docs/python/tf/math/reduce_prod)
+**别名** : [ `tf.compat.v2.math.reduce_prod` ](/api_docs/python/tf/math/reduce_prod), [ `tf.compat.v2.reduce_prod` ](/api_docs/python/tf/math/reduce_prod), [ `tf.reduce_prod` ](/api_docs/python/tf/math/reduce_prod)
 
 ```
  tf.math.reduce_prod(    input_tensor,    axis=None,    keepdims=False,    name=None) 
@@ -10,16 +10,16 @@ Reduces  `input_tensor`  along the dimensions given in  `axis` .Unless  `keepdim
 
 If  `axis`  is None, all dimensions are reduced, and atensor with a single element is returned.
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : The tensor to reduce. Should have numeric type.
 - **`axis`** : The dimensions to reduce. If  `None`  (the default), reduces alldimensions. Must be in the range  `[-rank(input_tensor),rank(input_tensor))` .
 - **`keepdims`** : If true, retains reduced dimensions with length 1.
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
-The reduced tensor.
+#### 返回：
+简化张量。
 
-#### Numpy Compatibility
-Equivalent to np.prod
+#### numpy兼容性
+相当于np.prod
 

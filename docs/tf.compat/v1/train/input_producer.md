@@ -22,7 +22,7 @@ Output the rows of  `input_tensor`  to a queue for an input pipeline. (deprecate
 **Note:**  if  `num_epochs`  is not  `None` , this function creates local counter `epochs` . Use  `local_variables_initializer()`  to initialize local variables.
 
 
-#### Args:
+#### 参数：
 - **`input_tensor`** : A tensor with the rows to produce. Must be at leastone-dimensional. Must either have a fully-defined shape, or `element_shape`  must be defined.
 - **`element_shape`** : (Optional.) A  `TensorShape`  representing the shape of arow of  `input_tensor` , if it cannot be inferred.
 - **`num_epochs`** : (Optional.) An integer. If specified  `input_producer`  produceseach row of  `input_tensor`   `num_epochs`  times before generating an `OutOfRange`  error. If not specified,  `input_producer`  can cycle throughthe rows of  `input_tensor`  an unlimited number of times.
@@ -35,14 +35,14 @@ Output the rows of  `input_tensor`  to a queue for an input pipeline. (deprecate
 - **`cancel_op`** : (Optional.) Cancel op for the queue
 
 
-#### Returns:
+#### 返回：
 A queue with the output rows.  A  `QueueRunner`  for the queue isadded to the current  `QUEUE_RUNNER`  collection of the currentgraph.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the shape of the input cannot be inferred from the arguments.
 - **`RuntimeError`** : If called with eager execution enabled.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Input pipelines based on Queues are not supported when eager execution isenabled. Please use the [ `tf.data` ](https://tensorflow.google.cn/api_docs/python/tf/data) API to ingest data under eager execution.
 

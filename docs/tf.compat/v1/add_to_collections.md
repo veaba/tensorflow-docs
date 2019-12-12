@@ -10,11 +10,11 @@ Wrapper for [ `Graph.add_to_collections()` ](/api_docs/python/tf/Graph#add_to_co
 
 See [ `tf.Graph.add_to_collections` ](https://tensorflow.google.cn/api_docs/python/tf/Graph#add_to_collections)for more details.
 
-#### Args:
+#### 参数：
 - **`names`** : The key for the collections. The  `GraphKeys`  class contains manystandard names for collections.
 - **`value`** : The value to add to the collections.
 
 
-#### Eager Compatibility
+#### 迫切的兼容性
 Collections are only supported in eager when variables are created insidean EagerVariableStore (e.g. as part of a layer or template).
 

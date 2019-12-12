@@ -2,7 +2,7 @@
 
 Computes exponential of x element-wise.  \(y = e^x\).
 
-**Aliases** : [ `tf.compat.v1.exp` ](/api_docs/python/tf/math/exp), [ `tf.compat.v1.math.exp` ](/api_docs/python/tf/math/exp), [ `tf.compat.v2.exp` ](/api_docs/python/tf/math/exp), [ `tf.compat.v2.math.exp` ](/api_docs/python/tf/math/exp), [ `tf.exp` ](/api_docs/python/tf/math/exp)
+**别名** : [ `tf.compat.v1.exp` ](/api_docs/python/tf/math/exp), [ `tf.compat.v1.math.exp` ](/api_docs/python/tf/math/exp), [ `tf.compat.v2.exp` ](/api_docs/python/tf/math/exp), [ `tf.compat.v2.math.exp` ](/api_docs/python/tf/math/exp), [ `tf.exp` ](/api_docs/python/tf/math/exp)
 
 ```
  tf.math.exp(
@@ -12,12 +12,12 @@ Computes exponential of x element-wise.  \(y = e^x\).
  
 ```
 
-### Used in the guide:
+### 在指南中使用：
 - [Writing custom layers and models with Keras](https://tensorflow.google.cn/guide/keras/custom_layers_and_models)
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
 
 This function computes the exponential of every element in the input tensor.i.e.  `exp(x)`  or  `e^(x)` , where  `x`  is the input tensor. `e`  denotes Euler's number and is approximately equal to 2.718281.Output is positive for any real input.
@@ -47,11 +47,11 @@ tf.math.exp(x) ==> 1.4686939399158851+2.2873552871788423j
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

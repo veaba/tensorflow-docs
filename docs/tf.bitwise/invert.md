@@ -1,6 +1,6 @@
 Invert (flip) each bit of supported types; for example, type  `uint8`  value 01010101 becomes 10101010.
 
-**Aliases** : [ `tf.compat.v1.bitwise.invert` ](/api_docs/python/tf/bitwise/invert), [ `tf.compat.v2.bitwise.invert` ](/api_docs/python/tf/bitwise/invert)
+**别名** : [ `tf.compat.v1.bitwise.invert` ](/api_docs/python/tf/bitwise/invert), [ `tf.compat.v2.bitwise.invert` ](/api_docs/python/tf/bitwise/invert)
 
 ```
  tf.bitwise.invert(
@@ -12,7 +12,7 @@ Invert (flip) each bit of supported types; for example, type  `uint8`  value 010
 
 Flip each bit of supported types.  For example, type  `int8`  (decimal 2) binary 00000010 becomes (decimal -3) binary 11111101.This operation is performed on each element of the tensor argument  `x` .
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -52,11 +52,11 @@ for dtype in dtype_list:
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int8` ,  `int16` ,  `int32` ,  `int64` ,  `uint8` ,  `uint16` ,  `uint32` ,  `uint64` .
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor` . Has the same type as  `x` .
 

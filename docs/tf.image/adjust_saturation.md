@@ -1,6 +1,6 @@
-Adjust saturation of RGB images.
+调整RGB图像的饱和度。
 
-**Aliases** : [ `tf.compat.v1.image.adjust_saturation` ](/api_docs/python/tf/image/adjust_saturation), [ `tf.compat.v2.image.adjust_saturation` ](/api_docs/python/tf/image/adjust_saturation)
+**别名** : [ `tf.compat.v1.image.adjust_saturation` ](/api_docs/python/tf/image/adjust_saturation), [ `tf.compat.v2.image.adjust_saturation` ](/api_docs/python/tf/image/adjust_saturation)
 
 ```
  tf.image.adjust_saturation(
@@ -15,16 +15,16 @@ This is a convenience method that converts RGB images to floatrepresentation, co
 
  `image`  is an RGB image or images.  The image saturation is adjusted byconverting the images to HSV and multiplying the saturation (S) channel by `saturation_factor`  and clipping. The images are then converted back to RGB.
 
-#### Args:
+#### 参数：
 - **`image`** : RGB image or images. Size of the last dimension must be 3.
 - **`saturation_factor`** : float. Factor to multiply the saturation by.
 - **`name`** : A name for this operation (optional).
 
 
-#### Returns:
+#### 返回：
 Adjusted image(s), same shape and DType as  `image` .
 
-#### Usage Example:
+#### 用法示例：
 
 
 ```
@@ -34,5 +34,5 @@ Adjusted image(s), same shape and DType as  `image` .
  
 ```
 
-#### Raises:
+#### 加薪：
 - **`InvalidArgumentError`** : input must have 3 channels

@@ -1,22 +1,22 @@
 
 
 ## Class  `UpSampling1D` 
-Upsampling layer for 1D inputs.
+1D输入的上采样层。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.UpSampling1D` ](/api_docs/python/tf/keras/layers/UpSampling1D), [ `tf.compat.v2.keras.layers.UpSampling1D` ](/api_docs/python/tf/keras/layers/UpSampling1D)
+**别名** : [ `tf.compat.v1.keras.layers.UpSampling1D` ](/api_docs/python/tf/keras/layers/UpSampling1D), [ `tf.compat.v2.keras.layers.UpSampling1D` ](/api_docs/python/tf/keras/layers/UpSampling1D)
 
 Repeats each temporal step  `size`  times along the time axis.
 
-#### Arguments:
+#### 参数：
 - **`size`** : Integer. Upsampling factor.
 
 
-#### Input shape:
+#### 输入形状：
 3D tensor with shape:  `(batch, steps, features)` .
 
-#### Output shape:
+#### 输出形状：
 3D tensor with shape:  `(batch, upsampled_steps, features)` .
 
 ##  `__init__` 

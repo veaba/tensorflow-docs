@@ -1,6 +1,6 @@
-Records the number of bytes produced by each element of the input dataset.
+记录输入数据集的每个元素生成的字节数。
 
-**Aliases** : [ `tf.compat.v1.data.experimental.bytes_produced_stats` ](/api_docs/python/tf/data/experimental/bytes_produced_stats), [ `tf.compat.v2.data.experimental.bytes_produced_stats` ](/api_docs/python/tf/data/experimental/bytes_produced_stats)
+**别名** : [ `tf.compat.v1.data.experimental.bytes_produced_stats` ](/api_docs/python/tf/data/experimental/bytes_produced_stats), [ `tf.compat.v2.data.experimental.bytes_produced_stats` ](/api_docs/python/tf/data/experimental/bytes_produced_stats)
 
 ```
  tf.data.experimental.bytes_produced_stats(tag)
@@ -9,10 +9,10 @@ Records the number of bytes produced by each element of the input dataset.
 
 To consume the statistics, associate a  `StatsAggregator`  with the outputdataset.
 
-#### Args:
+#### 参数：
 - **`tag`** : String. All statistics recorded by the returned transformation willbe associated with the given  `tag` .
 
 
-#### Returns:
+#### 返回：
 A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 

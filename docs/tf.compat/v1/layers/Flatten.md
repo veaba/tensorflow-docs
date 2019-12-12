@@ -5,11 +5,11 @@ Flattens an input tensor while preserving the batch axis (axis 0).
 
 Inherits From: [ `Flatten` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Flatten), [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/Layer)
 
-#### Arguments:
+#### 参数：
 - **`data_format`** : A string, one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, ..., channels)`  while  `channels_first`  corresponds toinputs with shape  `(batch, channels, ...)` .
 
 
-#### Examples:
+#### 示例：
 
 
 ```
@@ -34,11 +34,11 @@ Inherits From: [ `Flatten` ](https://tensorflow.google.cn/api_docs/python/tf/ker
  
 ```
 
-## Properties
+## 属性
 
 
 ###  `graph` 
-DEPRECATED FUNCTION
+不推荐的函数
 
 
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Stop using this property because tf.layers layers no longer track their graph.
@@ -60,16 +60,16 @@ Flattens an input tensor while preserving the batch axis (axis 0). (deprecated)
 **Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use keras.layers.flatten instead.
 
 
-#### Arguments:
+#### 参数：
 - **`inputs`** : Tensor input.
 - **`name`** : The name of the layer (string).
 - **`data_format`** : A string, one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, height, width, channels)`  while  `channels_first`  corresponds toinputs with shape  `(batch, channels, height, width)` .
 
 
-#### Returns:
+#### 返回：
 Reshaped tensor.
 
-#### Examples:
+#### 示例：
 
 
 ```

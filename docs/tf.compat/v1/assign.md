@@ -13,7 +13,7 @@ Update  `ref`  by assigning  `value`  to it.
 
 This operation outputs a Tensor that holds the new value of  `ref`  afterthe value has been assigned. This makes it easier to chain operations thatneed to use the reset value.
 
-#### Args:
+#### 参数：
 - **`ref`** : A mutable  `Tensor` . Should be from a  `Variable`  node. May beuninitialized.
 - **`value`** : A  `Tensor` . Must have the same shape and dtype as  `ref` . The value tobe assigned to the variable.
 - **`validate_shape`** : An optional  `bool` . Defaults to  `True` . If true, theoperation will validate that the shape of 'value' matches the shape of theTensor being assigned to.  If false, 'ref' will take on the shape of'value'.
@@ -21,6 +21,6 @@ This operation outputs a Tensor that holds the new value of  `ref`  afterthe val
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A  `Tensor`  that will hold the new value of  `ref`  after  the assignment has completed.
 

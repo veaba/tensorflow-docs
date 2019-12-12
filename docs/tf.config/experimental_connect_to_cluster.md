@@ -1,6 +1,6 @@
-Connects to the given cluster.
+连接到给定的群集。
 
-**Aliases** : [ `tf.compat.v1.config.experimental_connect_to_cluster` ](/api_docs/python/tf/config/experimental_connect_to_cluster), [ `tf.compat.v2.config.experimental_connect_to_cluster` ](/api_docs/python/tf/config/experimental_connect_to_cluster)
+**别名** : [ `tf.compat.v1.config.experimental_connect_to_cluster` ](/api_docs/python/tf/config/experimental_connect_to_cluster), [ `tf.compat.v2.config.experimental_connect_to_cluster` ](/api_docs/python/tf/config/experimental_connect_to_cluster)
 
 ```
  tf.config.experimental_connect_to_cluster(

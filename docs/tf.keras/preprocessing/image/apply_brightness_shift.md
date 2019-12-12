@@ -1,6 +1,6 @@
-Performs a brightness shift.
+执行亮度偏移。
 
-**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.apply_brightness_shift` ](/api_docs/python/tf/keras/preprocessing/image/apply_brightness_shift), [ `tf.compat.v2.keras.preprocessing.image.apply_brightness_shift` ](/api_docs/python/tf/keras/preprocessing/image/apply_brightness_shift)
+**别名** : [ `tf.compat.v1.keras.preprocessing.image.apply_brightness_shift` ](/api_docs/python/tf/keras/preprocessing/image/apply_brightness_shift), [ `tf.compat.v2.keras.preprocessing.image.apply_brightness_shift` ](/api_docs/python/tf/keras/preprocessing/image/apply_brightness_shift)
 
 ```
  tf.keras.preprocessing.image.apply_brightness_shift(
@@ -14,8 +14,8 @@ Performs a brightness shift.
 
 
 ```
- x: Input tensor. Must be 3D.
-brightness: Float. The new brightness value.
+x：输入张量。必须是三维的。
+亮度：浮动。新的亮度值。
 channel_axis: Index of axis for channels in the input tensor.
  
 ```
@@ -24,7 +24,7 @@ channel_axis: Index of axis for channels in the input tensor.
 
 
 ```
- Numpy image tensor.
+纽米图像张量。
  
 ```
 

@@ -1,4 +1,4 @@
-Returns an Op that initializes a list of variables.
+返回初始化变量列表的操作。
 
 ```
  tf.compat.v1.variables_initializer(    var_list,    name='init') 
@@ -10,11 +10,11 @@ Calling  `initialize_variables()`  is equivalent to passing the list ofinitializ
 
 If  `var_list`  is empty, however, the function still returns an Op that canbe run. That Op just has no effect.
 
-#### Args:
+#### 参数：
 - **`var_list`** : List of  `Variable`  objects to initialize.
 - **`name`** : Optional name for the returned operation.
 
 
-#### Returns:
-An Op that run the initializers of all the specified variables.
+#### 返回：
+运行所有指定变量的初始值设定项的操作。
 

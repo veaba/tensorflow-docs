@@ -1,19 +1,19 @@
-Returns the static number of elements in a variable or tensor.
+返回变量或张量中元素的静态数目。
 
-**Aliases** : [ `tf.compat.v1.keras.backend.count_params` ](/api_docs/python/tf/keras/backend/count_params), [ `tf.compat.v2.keras.backend.count_params` ](/api_docs/python/tf/keras/backend/count_params)
+**别名** : [ `tf.compat.v1.keras.backend.count_params` ](/api_docs/python/tf/keras/backend/count_params), [ `tf.compat.v2.keras.backend.count_params` ](/api_docs/python/tf/keras/backend/count_params)
 
 ```
  tf.keras.backend.count_params(x) 
 ```
 
-#### Arguments:
+#### 参数：
 - **`x`** : Variable or tensor.
 
 
-#### Returns:
+#### 返回：
 Integer, the number of scalars in  `x` .
 
-#### Example:
+#### 示例：
 
 
 ```

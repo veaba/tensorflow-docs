@@ -1,4 +1,4 @@
-Converts a Python entity into a TensorFlow graph.
+将python实体转换为tensorflow图。
 
 ```
  tf.autograph.to_graph(    entity,    recursive=True,    experimental_optional_features=None) 
@@ -28,20 +28,20 @@ Unlike [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/functio
 
 Supported Python entities include:  * functions  * classes  * object methods
 
-Functions are converted into new functions with converted code.
+使用转换后的代码将函数转换为新函数。
 
 Classes are converted by generating a new class whose methods use convertedcode.
 
 Methods are converted into unbound function that have an additional firstargument called  `self` .
 
-#### Args:
+#### 参数：
 - **`entity`** : Python callable or class to convert.
 - **`recursive`** : Whether to recursively convert any functions that the convertedfunction may call.
 - **`experimental_optional_features`** :  `None` , a tuple of, or a single[ `tf.autograph.experimental.Feature` ](https://tensorflow.google.cn/api_docs/python/tf/autograph/experimental/Feature) value. Controls the use of optionalfeatures in the conversion process.
 
 
-#### Returns:
+#### 返回：
 Same as  `entity` , the converted Python function or class.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the entity could not be converted.

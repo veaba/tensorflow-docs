@@ -1,6 +1,6 @@
-Return histogram of values.
+返回值的直方图。
 
-**Aliases** : [ `tf.compat.v1.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width), [ `tf.compat.v2.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width)
+**别名** : [ `tf.compat.v1.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width), [ `tf.compat.v2.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width)
 
 ```
  tf.histogram_fixed_width(
@@ -15,7 +15,7 @@ Return histogram of values.
 
 Given the tensor  `values` , this operation returns a rank 1 histogram countingthe number of entries in  `values`  that fell into every bin.  The bins areequal width and determined by the arguments  `value_range`  and  `nbins` .
 
-#### Args:
+#### 参数：
 - **`values`** :  Numeric  `Tensor` .
 - **`value_range`** :  Shape [2]  `Tensor`  of same  `dtype`  as  `values` .values <= value_range[0] will be mapped to hist[0],values >= value_range[1] will be mapped to hist[-1].
 - **`nbins`** :  Scalar  `int32 Tensor` .  Number of histogram bins.
@@ -23,15 +23,15 @@ Given the tensor  `values` , this operation returns a rank 1 histogram countingt
 - **`name`** :  A name for this operation (defaults to 'histogram_fixed_width').
 
 
-#### Returns:
+#### 返回：
 A 1-D  `Tensor`  holding histogram of values.
 
-#### Raises:
+#### 加薪：
 - **`TypeError`** : If any unsupported dtype is provided.
 - **[ `tf.errors.InvalidArgumentError` ](/api_docs/python/tf/errors/InvalidArgumentError)** : If value_range does notsatisfy value_range[0] < value_range[1].
 
 
-#### Examples:
+#### 示例：
 
 
 ```

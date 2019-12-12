@@ -1,6 +1,6 @@
-Computes the shape of a broadcast given known shapes.
+根据已知形状计算广播的形状。
 
-**Aliases** : [ `tf.compat.v1.broadcast_static_shape` ](/api_docs/python/tf/broadcast_static_shape), [ `tf.compat.v2.broadcast_static_shape` ](/api_docs/python/tf/broadcast_static_shape)
+**别名** : [ `tf.compat.v1.broadcast_static_shape` ](/api_docs/python/tf/broadcast_static_shape), [ `tf.compat.v2.broadcast_static_shape` ](/api_docs/python/tf/broadcast_static_shape)
 
 ```
  tf.broadcast_static_shape(
@@ -16,13 +16,13 @@ For example, if shape_x is [1, 2, 3] and shape_y is [5, 1, 3], the result is aTe
 
 This is useful when validating the result of a broadcasting operation when thetensors have statically known shapes.
 
-#### Args:
+#### 参数：
 - **`shape_x`** : A  `TensorShape` 
 - **`shape_y`** : A  `TensorShape` 
 
 
-#### Returns:
+#### 返回：
 A  `TensorShape`  representing the broadcasted shape.
 
-#### Raises:
+#### 加薪：
 - **`ValueError`** : If the two shapes can not be broadcasted.

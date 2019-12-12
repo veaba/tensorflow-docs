@@ -1,33 +1,33 @@
 
 
 ## Class  `Reshape` 
-Reshapes an output to a certain shape.
+将输出重塑为特定形状。
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-**Aliases** : [ `tf.compat.v1.keras.layers.Reshape` ](/api_docs/python/tf/keras/layers/Reshape), [ `tf.compat.v2.keras.layers.Reshape` ](/api_docs/python/tf/keras/layers/Reshape)
+**别名** : [ `tf.compat.v1.keras.layers.Reshape` ](/api_docs/python/tf/keras/layers/Reshape), [ `tf.compat.v2.keras.layers.Reshape` ](/api_docs/python/tf/keras/layers/Reshape)
 
-### Used in the guide:
+### 在指南中使用：
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 - [Better performance with tf.function and AutoGraph](https://tensorflow.google.cn/guide/function)
 
 
-### Used in the tutorials:
+### 在教程中使用：
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
 
 
-#### Arguments:
+#### 参数：
 - **`target_shape`** : Target shape. Tuple of integers,does not include the samples dimension (batch size).
 
 
-#### Input shape:
+#### 输入形状：
 Arbitrary, although all dimensions in the input shaped must be fixed.Use the keyword argument  `input_shape` (tuple of integers, does not include the samples axis)when using this layer as the first layer in a model.
 
-#### Output shape:
+#### 输出形状：
  `(batch_size,) + target_shape` 
 
-#### Example:
+#### 示例：
 
 
 ```
@@ -35,7 +35,7 @@ Arbitrary, although all dimensions in the input shaped must be fixed.Use the key
 model = Sequential()
 model.add(Reshape((3, 4), input_shape=(12,)))
 # now: model.output_shape == (None, 3, 4)
-# note: `None` is the batch dimension
+# 注意：`None` is the batch dimension
 
 # as intermediate layer in a Sequential model
 model.add(Reshape((6, 2)))

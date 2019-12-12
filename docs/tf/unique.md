@@ -1,6 +1,6 @@
 Finds unique elements in a 1-D tensor.
 
-**Aliases** : [ `tf.compat.v1.unique` ](/api_docs/python/tf/unique), [ `tf.compat.v2.unique` ](/api_docs/python/tf/unique)
+**别名** : [ `tf.compat.v1.unique` ](/api_docs/python/tf/unique), [ `tf.compat.v2.unique` ](/api_docs/python/tf/unique)
 
 ```
  tf.unique(
@@ -15,7 +15,7 @@ This operation returns a tensor  `y`  containing all of the unique elements of  
 
  `y[idx[i]] = x[i] for i in [0, 1,...,rank(x) - 1]` 
 
-#### For example:
+#### 例如：
 
 
 ```
@@ -26,13 +26,13 @@ idx ==> [0, 0, 1, 2, 2, 2, 3, 4, 4]
  
 ```
 
-#### Args:
+#### 参数：
 - **`x`** : A  `Tensor` . 1-D.
 - **`out_idx`** : An optional [ `tf.DType` ](https://tensorflow.google.cn/api_docs/python/tf/dtypes/DType) from:  `tf.int32, tf.int64` . Defaults to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32).
 - **`name`** : A name for the operation (optional).
 
 
-#### Returns:
+#### 返回：
 A tuple of  `Tensor`  objects (y, idx).
 
 - **`y`** : A  `Tensor` . Has the same type as  `x` .
