@@ -1,14 +1,6 @@
 Instantiates a variable with values drawn from a normal distribution.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable)
-
-- [ `tf.compat.v2.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable), [ `tf.compat.v2.keras.backend.random_normal_variable` ](/api_docs/python/tf/keras/backend/random_normal_variable)
 
 ```
  tf.keras.backend.random_normal_variable(
@@ -22,28 +14,17 @@ Instantiates a variable with values drawn from a normal distribution.
  
 ```
 
-
-
 #### Arguments:
-
 - **`shape`** : Tuple of integers, shape of returned Keras variable.
-
 - **`mean`** : Float, mean of the normal distribution.
-
 - **`scale`** : Float, standard deviation of the normal distribution.
-
 - **`dtype`** : String, dtype of returned Keras variable.
-
 - **`name`** : String, name of returned Keras variable.
-
 - **`seed`** : Integer, random seed.
-
 
 
 #### Returns:
 A Keras variable, filled with drawn samples.
-
-
 
 #### Example:
 

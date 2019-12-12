@@ -5,24 +5,10 @@ A LearningRateSchedule that uses a polynomial decay schedule.
 
 Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
-
-- Class [ `tf.compat.v2.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
-
-- Class [ `tf.compat.v2.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
-
-- Class [ `tf.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
-
-
+**Aliases** : [ `tf.compat.v1.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.compat.v2.keras.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.compat.v2.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay), [ `tf.optimizers.schedules.PolynomialDecay` ](/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay)
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L270-L367)
-
-
 
 ```
  __init__(
@@ -38,22 +24,11 @@ Inherits From: [ `LearningRateSchedule` ](https://tensorflow.google.cn/api_docs/
 
 Applies a polynomial decay to the learning rate.
 
-It is commonly observed that a monotonically decreasing learning rate, whose
-degree of change is carefully chosen, results in a better performing model.
-This schedule applies a polynomial decay function to an optimizer step,
-given a provided  `initial_learning_rate` , to reach an  `end_learning_rate` 
-in the given  `decay_steps` .
+It is commonly observed that a monotonically decreasing learning rate, whosedegree of change is carefully chosen, results in a better performing model.This schedule applies a polynomial decay function to an optimizer step,given a provided  `initial_learning_rate` , to reach an  `end_learning_rate` in the given  `decay_steps` .
 
-It requires a  `step`  value to compute the decayed learning rate. You
-can just pass a TensorFlow variable that you increment at each training
-step.
+It requires a  `step`  value to compute the decayed learning rate. Youcan just pass a TensorFlow variable that you increment at each trainingstep.
 
-The schedule is a 1-arg callable that produces a decayed learning rate
-when passed the current optimizer step. This can be useful for changing the
-learning rate value across different invocations of optimizer functions.
-It is computed as:
-
-
+The schedule is a 1-arg callable that produces a decayed learning ratewhen passed the current optimizer step. This can be useful for changing thelearning rate value across different invocations of optimizer functions.It is computed as:
 
 ```
  def decayed_learning_rate(step):
@@ -64,10 +39,7 @@ It is computed as:
  
 ```
 
-If  `cycle`  is True then a multiple of  `decay_steps`  is used, the first one
-that is bigger than  `step` .
-
-
+If  `cycle`  is True then a multiple of  `decay_steps`  is used, the first onethat is bigger than  `step` .
 
 ```
  def decayed_learning_rate(step):
@@ -78,12 +50,7 @@ that is bigger than  `step` .
  
 ```
 
-You can pass this schedule directly into a [ `tf.keras.optimizers.Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)
-as the learning rate.
-Example: Fit a model while decaying from 0.1 to 0.01 in 10000 steps using
-sqrt (i.e. power=0.5):
-
-
+You can pass this schedule directly into a [ `tf.keras.optimizers.Optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Optimizer)as the learning rate.Example: Fit a model while decaying from 0.1 to 0.01 in 10000 steps usingsqrt (i.e. power=0.5):
 
 ```
  ...
@@ -105,47 +72,25 @@ model.fit(data, labels, epochs=5)
  
 ```
 
-The learning rate schedule is also serializable and deserializable using
-[ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and
-[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
-
-
+The learning rate schedule is also serializable and deserializable using[ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
 
 #### Args:
-
-- **`initial_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or a
-Python number.  The initial learning rate.
-
-- **`decay_steps`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number.
-Must be positive.  See the decay computation above.
-
-- **`end_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or a
-Python number.  The minimal end learning rate.
-
-- **`power`** : A scalar  `float32`  or  `float64`   `Tensor`  or a
-Python number.  The power of the polynomial. Defaults to linear, 1.0.
-
+- **`initial_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The initial learning rate.
+- **`decay_steps`** : A scalar  `int32`  or  `int64`   `Tensor`  or a Python number.Must be positive.  See the decay computation above.
+- **`end_learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The minimal end learning rate.
+- **`power`** : A scalar  `float32`  or  `float64`   `Tensor`  or aPython number.  The power of the polynomial. Defaults to linear, 1.0.
 - **`cycle`** : A boolean, whether or not it should cycle beyond decay_steps.
-
-- **`name`** : String.  Optional name of the operation. Defaults to
-'PolynomialDecay'.
-
+- **`name`** : String.  Optional name of the operation. Defaults to'PolynomialDecay'.
 
 
 #### Returns:
-A 1-arg callable learning rate schedule that takes the current optimizer
-step and outputs the decayed learning rate, a scalar  `Tensor`  of the same
-type as  `initial_learning_rate` .
-
-
+A 1-arg callable learning rate schedule that takes the current optimizerstep and outputs the decayed learning rate, a scalar  `Tensor`  of the sametype as  `initial_learning_rate` .
 
 ## Methods
 
 
 ###  `__call__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L369-L396)
-
-
 
 ```
  __call__(step)
@@ -154,12 +99,8 @@ type as  `initial_learning_rate` .
 
 Call self as a function.
 
-
-
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
-
-
 
 ```
  from_config(
@@ -171,23 +112,15 @@ Call self as a function.
 
 Instantiates a  `LearningRateSchedule`  from its config.
 
-
-
 #### Args:
-
 - **`config`** : Output of  `get_config()` .
-
 
 
 #### Returns:
 A  `LearningRateSchedule`  instance.
 
-
-
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L398-L406)
-
-
 
 ```
  get_config()

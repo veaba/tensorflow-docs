@@ -1,16 +1,6 @@
-Defined in generated file:  `python/ops/gen_bitwise_ops.py` 
-
 Elementwise computes the bitwise OR of  `x`  and  `y` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.bitwise.bitwise_or` ](/api_docs/python/tf/bitwise/bitwise_or)
-
-- [ `tf.compat.v2.bitwise.bitwise_or` ](/api_docs/python/tf/bitwise/bitwise_or)
-
-
+**Aliases** : [ `tf.compat.v1.bitwise.bitwise_or` ](/api_docs/python/tf/bitwise/bitwise_or), [ `tf.compat.v2.bitwise.bitwise_or` ](/api_docs/python/tf/bitwise/bitwise_or)
 
 ```
  tf.bitwise.bitwise_or(
@@ -21,10 +11,7 @@ Elementwise computes the bitwise OR of  `x`  and  `y` .
  
 ```
 
-The result will have those bits set, that are set in  `x` ,  `y`  or both. The
-computation is performed on the underlying representations of  `x`  and  `y` .
-
-
+The result will have those bits set, that are set in  `x` ,  `y`  or both. Thecomputation is performed on the underlying representations of  `x`  and  `y` .
 
 #### For example:
 
@@ -45,16 +32,10 @@ for dtype in dtype_list:
  
 ```
 
-
-
 #### Args:
-
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int8` ,  `int16` ,  `int32` ,  `int64` ,  `uint8` ,  `uint16` ,  `uint32` ,  `uint64` .
-
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

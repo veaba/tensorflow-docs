@@ -1,7 +1,5 @@
 Tensorflow set operations.
 
-
-
 ## Functions
 [ `difference(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sets/difference): Compute set difference of elements in last dimension of  `a`  and  `b` .
 

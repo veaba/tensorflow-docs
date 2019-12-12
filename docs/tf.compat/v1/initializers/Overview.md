@@ -1,7 +1,5 @@
 Public API for tf.initializers namespace.
 
-
-
 ## Classes
 [ `class constant` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Constant): Initializer that generates tensors with constant values.
 
@@ -26,8 +24,6 @@ Public API for tf.initializers namespace.
 [ `class variance_scaling` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/VarianceScaling): Initializer capable of adapting its scale to the shape of weights tensors.
 
 [ `class zeros` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Zeros): Initializer that generates tensors initialized to 0.
-
-
 
 ## Functions
 [ `global_variables(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/global_variables_initializer): Returns an Op that initializes global variables.

@@ -1,7 +1,5 @@
 Keras built-in datasets.
 
-
-
 ## Modules
 [ `boston_housing` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/keras/datasets/boston_housing) module: Boston housing price regression dataset.
 

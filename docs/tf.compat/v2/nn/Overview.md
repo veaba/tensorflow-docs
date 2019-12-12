@@ -1,15 +1,11 @@
 Wrappers for primitive Neural Net (NN) Operations.
 
-
-
 ## Classes
 [ `class RNNCellDeviceWrapper` ](https://tensorflow.google.cn/api_docs/python/tf/nn/RNNCellDeviceWrapper): Operator that ensures an RNNCell runs on a particular device.
 
 [ `class RNNCellDropoutWrapper` ](https://tensorflow.google.cn/api_docs/python/tf/nn/RNNCellDropoutWrapper): Operator adding dropout to inputs and outputs of the given cell.
 
 [ `class RNNCellResidualWrapper` ](https://tensorflow.google.cn/api_docs/python/tf/nn/RNNCellResidualWrapper): RNNCell wrapper that ensures cell inputs are added to the outputs.
-
-
 
 ## Functions
 [ `all_candidate_sampler(...)` ](https://tensorflow.google.cn/api_docs/python/tf/random/all_candidate_sampler): Generate the set of all classes.
@@ -172,9 +168,5 @@ Wrappers for primitive Neural Net (NN) Operations.
 
 [ `zero_fraction(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zero_fraction): Returns the fraction of zeros in  `value` .
 
-
-
 ## Other Members
-
 -  `swish`  []()
-

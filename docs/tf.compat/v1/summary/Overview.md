@@ -1,9 +1,6 @@
 Operations for writing summary data, for use in analysis and visualization.
 
-See the <a href="https://tensorflow.google.cn/guide/summaries_and_tensorboard">Summaries and
-TensorBoard</a> guide.
-
-
+See the [Summaries andTensorBoard](https://tensorflow.google.cn/guide/summaries_and_tensorboard) guide.
 
 ## Classes
 [ `class Event` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/Event): A ProtocolMessage
@@ -19,8 +16,6 @@ TensorBoard</a> guide.
 [ `class SummaryDescription` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/SummaryDescription): A ProtocolMessage
 
 [ `class TaggedRunMetadata` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/TaggedRunMetadata): A ProtocolMessage
-
-
 
 ## Functions
 [ `all_v2_summary_ops(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/summary/all_v2_summary_ops): Returns all V2-style summary ops defined in the current default graph.

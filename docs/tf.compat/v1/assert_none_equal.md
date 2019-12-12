@@ -1,13 +1,5 @@
 Assert the condition  `x != y`  holds for all elements.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.debugging.assert_none_equal` ](/api_docs/python/tf/compat/v1/assert_none_equal)
-
-
-
 ```
  tf.compat.v1.assert_none_equal(
     x,
@@ -22,36 +14,21 @@ Assert the condition  `x != y`  holds for all elements.
 
 Example of adding a dependency to an operation:
 
-
-
 ```
  with tf.control_dependencies([tf.compat.v1.assert_none_equal(x, y)]):
   output = tf.reduce_sum(x)
  
 ```
 
-This condition holds if for every pair of (possibly broadcast) elements
- `x[i]` ,  `y[i]` , we have  `x[i] != y[i]` .
-If both  `x`  and  `y`  are empty, this is trivially satisfied.
-
-
+This condition holds if for every pair of (possibly broadcast) elements `x[i]` ,  `y[i]` , we have  `x[i] != y[i]` .If both  `x`  and  `y`  are empty, this is trivially satisfied.
 
 #### Args:
-
 - **`x`** :  Numeric  `Tensor` .
-
 - **`y`** :  Numeric  `Tensor` , same dtype as and broadcastable to  `x` .
-
-- **`data`** :  The tensors to print out if the condition is False.  Defaults to
-error message and first few entries of  `x` ,  `y` .
-
+- **`data`** :  The tensors to print out if the condition is False.  Defaults toerror message and first few entries of  `x` ,  `y` .
 - **`summarize`** : Print this many entries of each tensor.
-
 - **`message`** : A string to prefix to the default message.
-
-- **`name`** : A name for this operation (optional).
-Defaults to "assert_none_equal".
-
+- **`name`** : A name for this operation (optional).Defaults to "assert_none_equal".
 
 
 #### Returns:

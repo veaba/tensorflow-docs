@@ -1,18 +1,6 @@
 Transposes last two dimensions of tensor  `a` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.linalg.matrix_transpose` ](/api_docs/python/tf/linalg/matrix_transpose)
-
-- [ `tf.compat.v1.linalg.transpose` ](/api_docs/python/tf/linalg/matrix_transpose)
-
-- [ `tf.compat.v1.matrix_transpose` ](/api_docs/python/tf/linalg/matrix_transpose)
-
-- [ `tf.compat.v2.linalg.matrix_transpose` ](/api_docs/python/tf/linalg/matrix_transpose)
-
-
+**Aliases** : [ `tf.compat.v1.linalg.matrix_transpose` ](/api_docs/python/tf/linalg/matrix_transpose), [ `tf.compat.v1.linalg.transpose` ](/api_docs/python/tf/linalg/matrix_transpose), [ `tf.compat.v1.matrix_transpose` ](/api_docs/python/tf/linalg/matrix_transpose), [ `tf.compat.v2.linalg.matrix_transpose` ](/api_docs/python/tf/linalg/matrix_transpose)
 
 ```
  tf.linalg.matrix_transpose(
@@ -22,8 +10,6 @@ Transposes last two dimensions of tensor  `a` .
 )
  
 ```
-
-
 
 #### For example:
 
@@ -46,10 +32,7 @@ tf.linalg.matrix_transpose(x, conjugate=True)  # [[1 - 1j, 4 - 4j],
  
 ```
 
-Note that [ `tf.matmul` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/matmul) provides kwargs allowing for transpose of arguments.
-This is done with minimal cost, and is preferable to using this function. E.g.
-
-
+Note that [ `tf.matmul` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/matmul) provides kwargs allowing for transpose of arguments.This is done with minimal cost, and is preferable to using this function. E.g.
 
 ```
  # Good!  Transpose is taken at minimal additional cost.
@@ -60,34 +43,21 @@ tf.matmul(matrix, tf.linalg.matrix_transpose(b))
  
 ```
 
-
-
 #### Args:
-
 - **`a`** : A  `Tensor`  with  `rank >= 2` .
-
 - **`name`** : A name for the operation (optional).
-
-- **`conjugate`** : Optional bool. Setting it to  `True`  is mathematically equivalent
-to tf.math.conj(tf.linalg.matrix_transpose(input)).
-
+- **`conjugate`** : Optional bool. Setting it to  `True`  is mathematically equivalentto tf.math.conj(tf.linalg.matrix_transpose(input)).
 
 
 #### Returns:
 A transposed batch matrix  `Tensor` .
 
-
-
 #### Raises:
-
 - **`ValueError`** :  If  `a`  is determined statically to have  `rank < 2` .
 
 
-
 #### Numpy Compatibility
-In  `numpy`  transposes are memory-efficient constant time operations as they
-simply return a new view of the same data with adjusted  `strides` .
+In  `numpy`  transposes are memory-efficient constant time operations as theysimply return a new view of the same data with adjusted  `strides` .
 
-TensorFlow does not support strides, [ `linalg.matrix_transpose` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/matrix_transpose) returns a new
-tensor with the items permuted.
+TensorFlow does not support strides, [ `linalg.matrix_transpose` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/matrix_transpose) returns a newtensor with the items permuted.
 

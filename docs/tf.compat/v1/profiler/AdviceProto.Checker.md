@@ -3,8 +3,6 @@
 ## Class  `Checker` 
 A ProtocolMessage
 
-
-
 ## Properties
 
 

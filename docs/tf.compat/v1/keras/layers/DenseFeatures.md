@@ -3,19 +3,11 @@
 ## Class  `DenseFeatures` 
 A layer that produces a dense  `Tensor`  based on given  `feature_columns` .
 
-Generally a single example in training data is described with FeatureColumns.
-At the first layer of the model, this column oriented data should be converted
-to a single  `Tensor` .
+Generally a single example in training data is described with FeatureColumns.At the first layer of the model, this column oriented data should be convertedto a single  `Tensor` .
 
 This layer can be called multiple times with different features.
 
-This is the V1 version of this layer that uses variable_scope's to create
-variables which works well with PartitionedVariables. Variable scopes are
-deprecated in V2, so the V2 version uses name_scopes instead. But currently
-that lacks support for partitioned variables. Use this if you need
-partitioned variables.
-
-
+This is the V1 version of this layer that uses variable_scope's to createvariables which works well with PartitionedVariables. Variable scopes aredeprecated in V2, so the V2 version uses name_scopes instead. But currentlythat lacks support for partitioned variables. Use this if you needpartitioned variables.
 
 #### Example:
 
@@ -36,12 +28,8 @@ prediction = tf.compat.v1.keras.layers.Dense(1)(dense_tensor)
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/feature_column/dense_features.py#L63-L86)
-
-
 
 ```
  __init__(
@@ -55,27 +43,12 @@ prediction = tf.compat.v1.keras.layers.Dense(1)(dense_tensor)
 
 Constructs a DenseFeatures layer.
 
-
-
 #### Args:
-
-- **`feature_columns`** : An iterable containing the FeatureColumns to use as
-inputs to your model. All items should be instances of classes derived
-from  `DenseColumn`  such as  `numeric_column` ,  `embedding_column` ,
- `bucketized_column` ,  `indicator_column` . If you have categorical
-features, you can wrap them with an  `embedding_column`  or
- `indicator_column` .
-
-- **`trainable`** :  Boolean, whether the layer's variables will be updated via
-gradient descent during training.
-
+- **`feature_columns`** : An iterable containing the FeatureColumns to use asinputs to your model. All items should be instances of classes derivedfrom  `DenseColumn`  such as  `numeric_column` ,  `embedding_column` , `bucketized_column` ,  `indicator_column` . If you have categoricalfeatures, you can wrap them with an  `embedding_column`  or `indicator_column` .
+- **`trainable`** :  Boolean, whether the layer's variables will be updated viagradient descent during training.
 - **`name`** : Name to give to the DenseFeatures.
-
 - **`**kwargs`** : Keyword arguments to construct a layer.
 
 
-
 #### Raises:
-
 - **`ValueError`** : if an item in  `feature_columns`  is not a  `DenseColumn` .
-

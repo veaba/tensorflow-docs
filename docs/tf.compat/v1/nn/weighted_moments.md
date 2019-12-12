@@ -1,7 +1,7 @@
 Returns the frequency-weighted mean and variance of  `x` .
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.nn.weighted_moments(
+```
+ tf.compat.v1.nn.weighted_moments(
     x,
     axes,
     frequency_weights,
@@ -9,25 +9,16 @@ Returns the frequency-weighted mean and variance of  `x` .
     keep_dims=None,
     keepdims=None
 )
-</code></pre></devsite-code>
-
+ 
+```
 
 #### Args:
-
 - **`x`** : A tensor.
-
-- **`axes`** : 1-d tensor of int32 values; these are the axes along which
-to compute mean and variance.
-
-- **`frequency_weights`** : A tensor of positive weights which can be
-broadcast with x.
-
+- **`axes`** : 1-d tensor of int32 values; these are the axes along whichto compute mean and variance.
+- **`frequency_weights`** : A tensor of positive weights which can bebroadcast with x.
 - **`name`** : Name used to scope the operation.
-
 - **`keep_dims`** : Produce moments with the same dimensionality as the input.
-
 - **`keepdims`** : Alias of keep_dims.
-
 
 
 #### Returns:

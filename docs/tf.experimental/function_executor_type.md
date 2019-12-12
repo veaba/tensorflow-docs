@@ -1,14 +1,6 @@
 Context manager for setting the executor of eager defined functions.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.experimental.function_executor_type` ](/api_docs/python/tf/experimental/function_executor_type)
-
-- [ `tf.compat.v2.experimental.function_executor_type` ](/api_docs/python/tf/experimental/function_executor_type)
-
-
+**Aliases** : [ `tf.compat.v1.experimental.function_executor_type` ](/api_docs/python/tf/experimental/function_executor_type), [ `tf.compat.v2.experimental.function_executor_type` ](/api_docs/python/tf/experimental/function_executor_type)
 
 ```
  tf.experimental.function_executor_type(executor_type)
@@ -17,13 +9,8 @@ Context manager for setting the executor of eager defined functions.
 
 Eager defined functions are functions decorated by tf.contrib.eager.defun.
 
-
-
 #### Args:
-
-- **`executor_type`** : a string for the name of the executor to be used to execute
-functions defined by tf.contrib.eager.defun.
-
+- **`executor_type`** : a string for the name of the executor to be used to executefunctions defined by tf.contrib.eager.defun.
 
 
 #### Yields:

@@ -1,7 +1,5 @@
 Applies sparse updates to a variable reference.
 
-
-
 ```
  tf.compat.v1.scatter_update(
     ref,
@@ -15,8 +13,6 @@ Applies sparse updates to a variable reference.
 
 This operation computes
 
-
-
 ```
      # Scalar indices
     ref[indices, ...] = updates[...]
@@ -29,38 +25,22 @@ This operation computes
  
 ```
 
-This operation outputs  `ref`  after the update is done.
-This makes it easier to chain operations that need to use the reset value.
+This operation outputs  `ref`  after the update is done.This makes it easier to chain operations that need to use the reset value.
 
-If values in  `ref`  is to be updated more than once, because there are
-duplicate entries in  `indices` , the order at which the updates happen
-for each value is undefined.
+If values in  `ref`  is to be updated more than once, because there areduplicate entries in  `indices` , the order at which the updates happenfor each value is undefined.
 
 Requires  `updates.shape = indices.shape + ref.shape[1:]` .
 
-
 ![](https://tensorflow.google.cn/images/ScatterUpdate.png)
 
-
 #### Args:
-
 - **`ref`** : A  `Variable` .
-
-- **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .
-A tensor of indices into the first dimension of  `ref` .
-
-- **`updates`** : A  `Tensor` . Must have the same type as  `ref` .
-A tensor of updated values to store in  `ref` .
-
-- **`use_locking`** : An optional  `bool` . Defaults to  `True` .
-If True, the assignment will be protected by a lock;
-otherwise the behavior is undefined, but may exhibit less contention.
-
+- **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .A tensor of indices into the first dimension of  `ref` .
+- **`updates`** : A  `Tensor` . Must have the same type as  `ref` .A tensor of updated values to store in  `ref` .
+- **`use_locking`** : An optional  `bool` . Defaults to  `True` .If True, the assignment will be protected by a lock;otherwise the behavior is undefined, but may exhibit less contention.
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-Same as  `ref` .  Returned as a convenience for operations that want
-to use the updated values after the update is done.
+Same as  `ref` .  Returned as a convenience for operations that wantto use the updated values after the update is done.
 

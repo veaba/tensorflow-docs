@@ -1,14 +1,6 @@
 A sequence of categorical terms where ids use an in-memory list.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.feature_column.sequence_categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_list)
-
-- [ `tf.compat.v2.feature_column.sequence_categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_list)
-
-
+**Aliases** : [ `tf.compat.v1.feature_column.sequence_categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_list), [ `tf.compat.v2.feature_column.sequence_categorical_column_with_vocabulary_list` ](/api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_list)
 
 ```
  tf.feature_column.sequence_categorical_column_with_vocabulary_list(
@@ -21,11 +13,7 @@ A sequence of categorical terms where ids use an in-memory list.
  
 ```
 
-Pass this to  `embedding_column`  or  `indicator_column`  to convert sequence
-categorical data into dense representation for input to sequence NN, such as
-RNN.
-
-
+Pass this to  `embedding_column`  or  `indicator_column`  to convert sequencecategorical data into dense representation for input to sequence NN, such asRNN.
 
 #### Example:
 
@@ -48,43 +36,19 @@ outputs, state = rnn_layer(sequence_input, mask=sequence_length_mask)
  
 ```
 
-
-
 #### Args:
-
 - **`key`** : A unique string identifying the input feature.
-
-- **`vocabulary_list`** : An ordered iterable defining the vocabulary. Each feature
-is mapped to the index of its value (if present) in  `vocabulary_list` .
-Must be castable to  `dtype` .
-
-- **`dtype`** : The type of features. Only string and integer types are supported.
-If  `None` , it will be inferred from  `vocabulary_list` .
-
-- **`default_value`** : The integer ID value to return for out-of-vocabulary feature
-values, defaults to  `-1` . This can not be specified with a positive
- `num_oov_buckets` .
-
-- **`num_oov_buckets`** : Non-negative integer, the number of out-of-vocabulary
-buckets. All out-of-vocabulary inputs will be assigned IDs in the range
- `[len(vocabulary_list), len(vocabulary_list)+num_oov_buckets)`  based on a
-hash of the input value. A positive  `num_oov_buckets`  can not be specified
-with  `default_value` .
-
+- **`vocabulary_list`** : An ordered iterable defining the vocabulary. Each featureis mapped to the index of its value (if present) in  `vocabulary_list` .Must be castable to  `dtype` .
+- **`dtype`** : The type of features. Only string and integer types are supported.If  `None` , it will be inferred from  `vocabulary_list` .
+- **`default_value`** : The integer ID value to return for out-of-vocabulary featurevalues, defaults to  `-1` . This can not be specified with a positive `num_oov_buckets` .
+- **`num_oov_buckets`** : Non-negative integer, the number of out-of-vocabularybuckets. All out-of-vocabulary inputs will be assigned IDs in the range `[len(vocabulary_list), len(vocabulary_list)+num_oov_buckets)`  based on ahash of the input value. A positive  `num_oov_buckets`  can not be specifiedwith  `default_value` .
 
 
 #### Returns:
 A  `SequenceCategoricalColumn` .
 
-
-
 #### Raises:
-
 - **`ValueError`** : if  `vocabulary_list`  is empty, or contains duplicate keys.
-
 - **`ValueError`** :  `num_oov_buckets`  is a negative integer.
-
 - **`ValueError`** :  `num_oov_buckets`  and  `default_value`  are both specified.
-
 - **`ValueError`** : if  `dtype`  is not integer or string.
-

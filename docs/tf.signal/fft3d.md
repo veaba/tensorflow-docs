@@ -1,20 +1,6 @@
-Defined in generated file:  `python/ops/gen_spectral_ops.py` 
-
 3D fast Fourier transform.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.fft3d` ](/api_docs/python/tf/signal/fft3d)
-
-- [ `tf.compat.v1.signal.fft3d` ](/api_docs/python/tf/signal/fft3d)
-
-- [ `tf.compat.v1.spectral.fft3d` ](/api_docs/python/tf/signal/fft3d)
-
-- [ `tf.compat.v2.signal.fft3d` ](/api_docs/python/tf/signal/fft3d)
-
-
+**Aliases** : [ `tf.compat.v1.fft3d` ](/api_docs/python/tf/signal/fft3d), [ `tf.compat.v1.signal.fft3d` ](/api_docs/python/tf/signal/fft3d), [ `tf.compat.v1.spectral.fft3d` ](/api_docs/python/tf/signal/fft3d), [ `tf.compat.v2.signal.fft3d` ](/api_docs/python/tf/signal/fft3d)
 
 ```
  tf.signal.fft3d(
@@ -24,18 +10,11 @@ Defined in generated file:  `python/ops/gen_spectral_ops.py`
  
 ```
 
-Computes the 3-dimensional discrete Fourier transform over the inner-most 3
-dimensions of  `input` .
-
-
+Computes the 3-dimensional discrete Fourier transform over the inner-most 3dimensions of  `input` .
 
 #### Args:
-
-- **`input`** : A  `Tensor` . Must be one of the following types:  `complex64` ,  `complex128` .
-A complex64 tensor.
-
+- **`input`** : A  `Tensor` . Must be one of the following types:  `complex64` ,  `complex128` .A complex64 tensor.
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

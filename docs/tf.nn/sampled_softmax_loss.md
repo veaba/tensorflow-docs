@@ -1,13 +1,5 @@
 Computes and returns the sampled softmax training loss.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.nn.sampled_softmax_loss` ](/api_docs/python/tf/nn/sampled_softmax_loss)
-
-
-
 ```
  tf.nn.sampled_softmax_loss(
     weights,
@@ -25,16 +17,11 @@ Computes and returns the sampled softmax training loss.
  
 ```
 
-This is a faster way to train a softmax classifier over a huge number of
-classes.
+This is a faster way to train a softmax classifier over a huge number ofclasses.
 
-This operation is for training only.  It is generally an underestimate of
-the full softmax loss.
+This operation is for training only.  It is generally an underestimate ofthe full softmax loss.
 
-A common use case is to use this method for training, and calculate the full
-sigmoid loss for evaluation or inference as in the following example:
-
-
+A common use case is to use this method for training, and calculate the fullsigmoid loss for evaluation or inference as in the following example:
 
 ```
  if mode == "train":
@@ -56,48 +43,24 @@ elif mode == "eval":
 
 See our [Candidate Sampling Algorithms Reference](https://tensorflow.google.cn/extras/candidate_sampling.pdf)
 
-Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007)
-([pdf](http://arxiv.org/pdf/1412.2007.pdf)) for the math.
+Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007)([pdf](http://arxiv.org/pdf/1412.2007.pdf)) for the math.
 
 
-<aside class="note">**Note:**  when doing embedding lookup on  `weights`  and  `bias` , "div" partition
-strategy will be used. Support for other partition strategy will be added
-later.</aside>
+**Note:**  when doing embedding lookup on  `weights`  and  `bias` , "div" partitionstrategy will be used. Support for other partition strategy will be addedlater.
 
 
 #### Args:
-
-- **`weights`** : A  `Tensor`  of shape  `[num_classes, dim]` , or a list of  `Tensor` 
-objects whose concatenation along dimension 0 has shape [num_classes,
-dim].  The (possibly-sharded) class embeddings.
-
+- **`weights`** : A  `Tensor`  of shape  `[num_classes, dim]` , or a list of  `Tensor` objects whose concatenation along dimension 0 has shape [num_classes,dim].  The (possibly-sharded) class embeddings.
 - **`biases`** : A  `Tensor`  of shape  `[num_classes]` .  The class biases.
-
-- **`labels`** : A  `Tensor`  of type  `int64`  and shape  `[batch_size, num_true]` . The
-target classes.  Note that this format differs from the  `labels`  argument
-of [ `nn.softmax_cross_entropy_with_logits` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax_cross_entropy_with_logits).
-
-- **`inputs`** : A  `Tensor`  of shape  `[batch_size, dim]` .  The forward activations of
-the input network.
-
+- **`labels`** : A  `Tensor`  of type  `int64`  and shape  `[batch_size, num_true]` . Thetarget classes.  Note that this format differs from the  `labels`  argumentof [ `nn.softmax_cross_entropy_with_logits` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax_cross_entropy_with_logits).
+- **`inputs`** : A  `Tensor`  of shape  `[batch_size, dim]` .  The forward activations ofthe input network.
 - **`num_sampled`** : An  `int` .  The number of classes to randomly sample per batch.
-
 - **`num_classes`** : An  `int` . The number of possible classes.
-
 - **`num_true`** : An  `int` .  The number of target classes per training example.
-
-- **`sampled_values`** : a tuple of ( `sampled_candidates` ,  `true_expected_count` ,
- `sampled_expected_count` ) returned by a  `*_candidate_sampler`  function.
-(if None, we default to  `log_uniform_candidate_sampler` )
-
-- **`remove_accidental_hits`** :  A  `bool` .  whether to remove "accidental hits"
-where a sampled class equals one of the target classes.  Default is True.
-
-- **`seed`** : random seed for candidate sampling. Default to None, which doesn't set
-the op-level random seed for candidate sampling.
-
+- **`sampled_values`** : a tuple of ( `sampled_candidates` ,  `true_expected_count` , `sampled_expected_count` ) returned by a  `*_candidate_sampler`  function.(if None, we default to  `log_uniform_candidate_sampler` )
+- **`remove_accidental_hits`** :  A  `bool` .  whether to remove "accidental hits"where a sampled class equals one of the target classes.  Default is True.
+- **`seed`** : random seed for candidate sampling. Default to None, which doesn't setthe op-level random seed for candidate sampling.
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

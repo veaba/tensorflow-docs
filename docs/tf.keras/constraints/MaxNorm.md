@@ -5,47 +5,17 @@ MaxNorm weight constraint.
 
 Inherits From: [ `Constraint` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/Constraint)
 
+**Aliases** : [ `tf.compat.v1.keras.constraints.MaxNorm` ](/api_docs/python/tf/keras/constraints/MaxNorm), [ `tf.compat.v1.keras.constraints.max_norm` ](/api_docs/python/tf/keras/constraints/MaxNorm), [ `tf.compat.v2.keras.constraints.MaxNorm` ](/api_docs/python/tf/keras/constraints/MaxNorm), [ `tf.compat.v2.keras.constraints.max_norm` ](/api_docs/python/tf/keras/constraints/MaxNorm), [ `tf.keras.constraints.max_norm` ](/api_docs/python/tf/keras/constraints/MaxNorm)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.constraints.MaxNorm` ](/api_docs/python/tf/keras/constraints/MaxNorm)
-
-- Class [ `tf.compat.v1.keras.constraints.max_norm` ](/api_docs/python/tf/keras/constraints/MaxNorm)
-
-- Class [ `tf.compat.v2.keras.constraints.MaxNorm` ](/api_docs/python/tf/keras/constraints/MaxNorm)
-
-- Class [ `tf.compat.v2.keras.constraints.max_norm` ](/api_docs/python/tf/keras/constraints/MaxNorm)
-
-- Class [ `tf.keras.constraints.max_norm` ](/api_docs/python/tf/keras/constraints/MaxNorm)
-
-Constrains the weights incident to each hidden unit
-to have a norm less than or equal to a desired value.
-
-
+Constrains the weights incident to each hidden unitto have a norm less than or equal to a desired value.
 
 #### Arguments:
-
 - **`m`** : the maximum norm for the incoming weights.
-
-- **`axis`** : integer, axis along which to calculate weight norms.
-For instance, in a  `Dense`  layer the weight matrix
-has shape  `(input_dim, output_dim)` ,
-set  `axis`  to  `0`  to constrain each weight vector
-of length  `(input_dim,)` .
-In a  `Conv2D`  layer with  `data_format="channels_last"` ,
-the weight tensor has shape
- `(rows, cols, input_depth, output_depth)` ,
-set  `axis`  to  `[0, 1, 2]` 
-to constrain the weights of each filter tensor of size
- `(rows, cols, input_depth)` .
-
+- **`axis`** : integer, axis along which to calculate weight norms.For instance, in a  `Dense`  layer the weight matrixhas shape  `(input_dim, output_dim)` ,set  `axis`  to  `0`  to constrain each weight vectorof length  `(input_dim,)` .In a  `Conv2D`  layer with  `data_format="channels_last"` ,the weight tensor has shape `(rows, cols, input_depth, output_depth)` ,set  `axis`  to  `[0, 1, 2]` to constrain the weights of each filter tensor of size `(rows, cols, input_depth)` .
 
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L67-L69)
-
-
 
 ```
  __init__(
@@ -57,15 +27,11 @@ to constrain the weights of each filter tensor of size
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Methods
 
 
 ###  `__call__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L71-L75)
-
-
 
 ```
  __call__(w)
@@ -74,12 +40,8 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Call self as a function.
 
-
-
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/constraints.py#L77-L78)
-
-
 
 ```
  get_config()

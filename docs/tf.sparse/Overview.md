@@ -2,12 +2,8 @@ Sparse Tensor Representation.
 
 See also [ `tf.SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor).
 
-
-
 ## Classes
 [ `class SparseTensor` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/SparseTensor): Represents a sparse tensor.
-
-
 
 ## Functions
 [ `add(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/add): Adds two tensors, at least one of each is a  `SparseTensor` .

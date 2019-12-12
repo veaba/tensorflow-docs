@@ -1,7 +1,5 @@
 Returns input function that would feed Pandas DataFrame into the model.
 
-
-
 ```
  tf.compat.v1.estimator.inputs.pandas_input_fn(
     x,
@@ -17,43 +15,23 @@ Returns input function that would feed Pandas DataFrame into the model.
 ```
 
 
-<aside class="note">**Note:**   `y` 's index must match  `x` 's index.</aside>
+**Note:**   `y` 's index must match  `x` 's index.
 
 
 #### Args:
-
 - **`x`** : pandas  `DataFrame`  object.
-
 - **`y`** : pandas  `Series`  object or  `DataFrame` .  `None`  if absent.
-
 - **`batch_size`** : int, size of batches to return.
-
-- **`num_epochs`** : int, number of epochs to iterate over data. If not  `None` ,
-read attempts that would exceed this value will raise  `OutOfRangeError` .
-
+- **`num_epochs`** : int, number of epochs to iterate over data. If not  `None` ,read attempts that would exceed this value will raise  `OutOfRangeError` .
 - **`shuffle`** : bool, whether to read the records in random order.
-
-- **`queue_capacity`** : int, size of the read queue. If  `None` , it will be set
-roughly to the size of  `x` .
-
-- **`num_threads`** : Integer, number of threads used for reading and enqueueing. In
-order to have predicted and repeatable order of reading and enqueueing,
-such as in prediction and evaluation mode,  `num_threads`  should be 1.
-
-- **`target_column`** : str, name to give the target column  `y` . This parameter
-is not used when  `y`  is a  `DataFrame` .
-
+- **`queue_capacity`** : int, size of the read queue. If  `None` , it will be setroughly to the size of  `x` .
+- **`num_threads`** : Integer, number of threads used for reading and enqueueing. Inorder to have predicted and repeatable order of reading and enqueueing,such as in prediction and evaluation mode,  `num_threads`  should be 1.
+- **`target_column`** : str, name to give the target column  `y` . This parameteris not used when  `y`  is a  `DataFrame` .
 
 
 #### Returns:
 Function, that has signature of ()->(dict of  `features` ,  `target` )
 
-
-
 #### Raises:
-
-- **`ValueError`** : if  `x`  already contains a column with the same name as  `y` , or
-if the indexes of  `x`  and  `y`  don't match.
-
+- **`ValueError`** : if  `x`  already contains a column with the same name as  `y` , orif the indexes of  `x`  and  `y`  don't match.
 - **`ValueError`** : if 'shuffle' is not provided or a bool.
-

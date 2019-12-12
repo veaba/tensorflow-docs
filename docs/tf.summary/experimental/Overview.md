@@ -1,13 +1,5 @@
 Public API for tf.summary.experimental namespace.
 
-
-
-### Aliases:
-
-- Module [ `tf.compat.v2.summary.experimental` ](/api_docs/python/tf/summary/experimental)
-
-
-
 ## Functions
 [ `get_step(...)` ](https://tensorflow.google.cn/api_docs/python/tf/summary/experimental/get_step): Returns the default summary step for the current thread.
 

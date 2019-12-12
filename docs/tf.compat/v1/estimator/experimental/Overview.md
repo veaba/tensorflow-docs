@@ -1,15 +1,11 @@
 Public API for tf.estimator.experimental namespace.
 
-
-
 ## Classes
 [ `class InMemoryEvaluatorHook` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook): Hook to run evaluation in training without a checkpoint.
 
 [ `class KMeans` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/experimental/KMeans): An Estimator for K-Means clustering.
 
 [ `class LinearSDCA` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/LinearSDCA): Stochastic Dual Coordinate Ascent helper for linear estimators.
-
-
 
 ## Functions
 [ `build_raw_supervised_input_receiver_fn(...)` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/build_raw_supervised_input_receiver_fn): Build a supervised_input_receiver_fn for raw features and labels.

@@ -1,7 +1,5 @@
 VGG16 model for Keras.
 
-
-
 ## Functions
 [ `VGG16(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/VGG16)
 

@@ -1,81 +1,29 @@
 Parses  `Example`  protos into a  `dict`  of tensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.io.parse_example` ](/api_docs/python/tf/io/parse_example)
-
-
-
 ```
- tf.io.parse_example(
-    serialized,
-    features,
-    example_names=None,
-    name=None
-)
- 
+ tf.io.parse_example(    serialized,    features,    example_names=None,    name=None) 
 ```
-
-
 
 ### Used in the guide:
-
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
+Parses a number of serialized [ `Example` ](https://tensorflow.google.cn/code/tensorflow/core/example/example.proto)protos given in  `serialized` . We refer to  `serialized`  as a batch with `batch_size`  many entries of individual  `Example`  protos.
 
-Parses a number of serialized [ `Example` ](https://tensorflow.google.cn/code/tensorflow/core/example/example.proto)
-protos given in  `serialized` . We refer to  `serialized`  as a batch with
- `batch_size`  many entries of individual  `Example`  protos.
+ `example_names`  may contain descriptive names for the corresponding serializedprotos. These may be useful for debugging purposes, but they have no effect onthe output. If not  `None` ,  `example_names`  must be the same length as `serialized` .
 
- `example_names`  may contain descriptive names for the corresponding serialized
-protos. These may be useful for debugging purposes, but they have no effect on
-the output. If not  `None` ,  `example_names`  must be the same length as
- `serialized` .
+This op parses serialized examples into a dictionary mapping keys to  `Tensor` and  `SparseTensor`  objects.  `features`  is a dict from keys to  `VarLenFeature` , `SparseFeature` , and  `FixedLenFeature`  objects. Each  `VarLenFeature` and  `SparseFeature`  is mapped to a  `SparseTensor` , and each `FixedLenFeature`  is mapped to a  `Tensor` .
 
-This op parses serialized examples into a dictionary mapping keys to  `Tensor` 
-and  `SparseTensor`  objects.  `features`  is a dict from keys to  `VarLenFeature` ,
- `SparseFeature` , and  `FixedLenFeature`  objects. Each  `VarLenFeature` 
-and  `SparseFeature`  is mapped to a  `SparseTensor` , and each
- `FixedLenFeature`  is mapped to a  `Tensor` .
+Each  `VarLenFeature`  maps to a  `SparseTensor`  of the specified typerepresenting a ragged matrix. Its indices are  `[batch, index]`  where  `batch` identifies the example in  `serialized` , and  `index`  is the value's index inthe list of values associated with that feature and example.
 
-Each  `VarLenFeature`  maps to a  `SparseTensor`  of the specified type
-representing a ragged matrix. Its indices are  `[batch, index]`  where  `batch` 
-identifies the example in  `serialized` , and  `index`  is the value's index in
-the list of values associated with that feature and example.
+Each  `SparseFeature`  maps to a  `SparseTensor`  of the specified typerepresenting a Tensor of  `dense_shape`   `[batch_size] + SparseFeature.size` .Its  `values`  come from the feature in the examples with key  `value_key` .A  `values[i]`  comes from a position  `k`  in the feature of an example at batchentry  `batch` . This positional information is recorded in  `indices[i]`  as `[batch, index_0, index_1, ...]`  where  `index_j`  is the  `k-th`  value ofthe feature in the example at with key [ `SparseFeature.index_key[j]` ](https://tensorflow.google.cn/api_docs/python/tf/io/SparseFeature#index_key).In other words, we split the indices (except the first index indicating thebatch entry) of a  `SparseTensor`  by dimension into different features of the `Example` . Due to its complexity a  `VarLenFeature`  should be preferred over a `SparseFeature`  whenever possible.
 
-Each  `SparseFeature`  maps to a  `SparseTensor`  of the specified type
-representing a Tensor of  `dense_shape`   `[batch_size] + SparseFeature.size` .
-Its  `values`  come from the feature in the examples with key  `value_key` .
-A  `values[i]`  comes from a position  `k`  in the feature of an example at batch
-entry  `batch` . This positional information is recorded in  `indices[i]`  as
- `[batch, index_0, index_1, ...]`  where  `index_j`  is the  `k-th`  value of
-the feature in the example at with key [ `SparseFeature.index_key[j]` ](https://tensorflow.google.cn/api_docs/python/tf/io/SparseFeature#index_key).
-In other words, we split the indices (except the first index indicating the
-batch entry) of a  `SparseTensor`  by dimension into different features of the
- `Example` . Due to its complexity a  `VarLenFeature`  should be preferred over a
- `SparseFeature`  whenever possible.
+Each  `FixedLenFeature`   `df`  maps to a  `Tensor`  of the specified type (or[ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) if not specified) and shape  `(serialized.size(),) + df.shape` .
 
-Each  `FixedLenFeature`   `df`  maps to a  `Tensor`  of the specified type (or
-[ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) if not specified) and shape  `(serialized.size(),) + df.shape` .
+ `FixedLenFeature`  entries with a  `default_value`  are optional. With no defaultvalue, we will fail if that  `Feature`  is missing from any example in `serialized` .
 
- `FixedLenFeature`  entries with a  `default_value`  are optional. With no default
-value, we will fail if that  `Feature`  is missing from any example in
- `serialized` .
-
-Each  `FixedLenSequenceFeature`   `df`  maps to a  `Tensor`  of the specified type
-(or [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) if not specified) and shape
- `(serialized.size(), None) + df.shape` .
-All examples in  `serialized`  will be padded with  `default_value`  along the
-second dimension.
-
-
+Each  `FixedLenSequenceFeature`   `df`  maps to a  `Tensor`  of the specified type(or [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) if not specified) and shape `(serialized.size(), None) + df.shape` .All examples in  `serialized`  will be padded with  `default_value`  along thesecond dimension.
 
 #### Examples:
-For example, if one expects a [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32)  `VarLenFeature`   `ft`  and three
-serialized  `Example` s are provided:
-
-
+For example, if one expects a [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32)  `VarLenFeature`   `ft`  and threeserialized  `Example` s are provided:
 
 ```
  serialized = [
@@ -91,8 +39,6 @@ serialized  `Example` s are provided:
 
 then the output will look like:
 
-
-
 ```
  {"ft": SparseTensor(indices=[[0, 0], [0, 1], [2, 0]],
                     values=[1.0, 2.0, 3.0],
@@ -100,10 +46,7 @@ then the output will look like:
  
 ```
 
-If instead a  `FixedLenSequenceFeature`  with  `default_value = -1.0`  and
- `shape=[]`  is used then the output will look like:
-
-
+If instead a  `FixedLenSequenceFeature`  with  `default_value = -1.0`  and `shape=[]`  is used then the output will look like:
 
 ```
  {"ft": [[1.0, 2.0], [3.0, -1.0]]}
@@ -111,8 +54,6 @@ If instead a  `FixedLenSequenceFeature`  with  `default_value = -1.0`  and
 ```
 
 Given two  `Example`  input protos in  `serialized` :
-
-
 
 ```
  [
@@ -131,8 +72,6 @@ Given two  `Example`  input protos in  `serialized` :
 
 And arguments
 
-
-
 ```
  example_names: ["input0", "input1"],
 features: {
@@ -144,8 +83,6 @@ features: {
 ```
 
 Then the output is a dictionary:
-
-
 
 ```
  {
@@ -167,8 +104,6 @@ Then the output is a dictionary:
 
 For dense results in two serialized  `Example` s:
 
-
-
 ```
  [
   features {
@@ -182,8 +117,6 @@ For dense results in two serialized  `Example` s:
 ]
  
 ```
-
-
 
 #### We can use arguments:
 
@@ -199,8 +132,6 @@ features: {
 
 And the expected output is:
 
-
-
 ```
  {
   "age": [[0], [-1]],
@@ -209,11 +140,7 @@ And the expected output is:
  
 ```
 
-An alternative to  `VarLenFeature`  to obtain a  `SparseTensor`  is
- `SparseFeature` . For example, given two  `Example`  input protos in
- `serialized` :
-
-
+An alternative to  `VarLenFeature`  to obtain a  `SparseTensor`  is `SparseFeature` . For example, given two  `Example`  input protos in `serialized` :
 
 ```
  [
@@ -231,8 +158,6 @@ An alternative to  `VarLenFeature`  to obtain a  `SparseTensor`  is
 
 And arguments
 
-
-
 ```
  example_names:,, dtype=tf.float32, size=100),
 }
@@ -240,8 +165,6 @@ And arguments
 ```
 
 Then the output is a dictionary:
-
-
 
 ```
  {
@@ -253,29 +176,15 @@ Then the output is a dictionary:
  
 ```
 
-
-
 #### Args:
-
-- **`serialized`** : A vector (1-D Tensor) of strings, a batch of binary
-serialized  `Example`  protos.
-
-- **`features`** : A  `dict`  mapping feature keys to  `FixedLenFeature` ,
- `VarLenFeature` , and  `SparseFeature`  values.
-
-- **`example_names`** : A vector (1-D Tensor) of strings (optional), the names of
-the serialized protos in the batch.
-
+- **`serialized`** : A vector (1-D Tensor) of strings, a batch of binaryserialized  `Example`  protos.
+- **`features`** : A  `dict`  mapping feature keys to  `FixedLenFeature` , `VarLenFeature` , and  `SparseFeature`  values.
+- **`example_names`** : A vector (1-D Tensor) of strings (optional), the names ofthe serialized protos in the batch.
 - **`name`** : A name for this operation (optional).
-
 
 
 #### Returns:
 A  `dict`  mapping feature keys to  `Tensor`  and  `SparseTensor`  values.
 
-
-
 #### Raises:
-
 - **`ValueError`** : if any feature is invalid.
-

@@ -1,7 +1,5 @@
 Public API for tf.tpu.experimental namespace.
 
-
-
 ## Classes
 [ `class AdagradParameters` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/AdagradParameters): Optimization parameters for Adagrad with TPU embeddings.
 
@@ -10,8 +8,6 @@ Public API for tf.tpu.experimental namespace.
 [ `class DeviceAssignment` ](https://tensorflow.google.cn/api_docs/python/tf/tpu/experimental/DeviceAssignment): Mapping from logical cores in a computation to the physical TPU topology.
 
 [ `class StochasticGradientDescentParameters` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/StochasticGradientDescentParameters): Optimization parameters for stochastic gradient descent for TPU embeddings.
-
-
 
 ## Functions
 [ `embedding_column(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental/embedding_column): TPU version of [ `tf.compat.v1.feature_column.embedding_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/embedding_column).

@@ -1,14 +1,6 @@
 Formats a string template using a list of tensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.strings.format` ](/api_docs/python/tf/strings/format)
-
-- [ `tf.compat.v2.strings.format` ](/api_docs/python/tf/strings/format)
-
-
+**Aliases** : [ `tf.compat.v1.strings.format` ](/api_docs/python/tf/strings/format), [ `tf.compat.v2.strings.format` ](/api_docs/python/tf/strings/format)
 
 ```
  tf.strings.format(
@@ -21,17 +13,10 @@ Formats a string template using a list of tensors.
  
 ```
 
-Formats a string template using a list of tensors, abbreviating tensors by
-only printing the first and last  `summarize`  elements of each dimension
-(recursively). If formatting only one tensor into a template, the tensor does
-not have to be wrapped in a list.
-
-
+Formats a string template using a list of tensors, abbreviating tensors byonly printing the first and last  `summarize`  elements of each dimension(recursively). If formatting only one tensor into a template, the tensor doesnot have to be wrapped in a list.
 
 #### Example:
 Formatting a single-tensor template:
-
-
 
 ```
  sess = tf.compat.v1.Session()
@@ -46,8 +31,6 @@ with sess.as_default():
 ```
 
 Formatting a multi-tensor template:
-
-
 
 ```
  sess = tf.compat.v1.Session()
@@ -70,37 +53,16 @@ with sess.as_default():
  
 ```
 
-
-
 #### Args:
-
 - **`template`** : A string template to format tensor values into.
-
-- **`inputs`** : A list of  `Tensor`  objects, or a single Tensor.
-The list of tensors to format into the template string. If a solitary
-tensor is passed in, the input tensor will automatically be wrapped as a
-list.
-
-- **`placeholder`** : An optional  `string` . Defaults to  `{}` .
-At each placeholder occurring in the template, a subsequent tensor
-will be inserted.
-
-- **`summarize`** : An optional  `int` . Defaults to  `3` .
-When formatting the tensors, show the first and last  `summarize` 
-entries of each tensor dimension (recursively). If set to -1, all
-elements of the tensor will be shown.
-
+- **`inputs`** : A list of  `Tensor`  objects, or a single Tensor.The list of tensors to format into the template string. If a solitarytensor is passed in, the input tensor will automatically be wrapped as alist.
+- **`placeholder`** : An optional  `string` . Defaults to  `{}` .At each placeholder occurring in the template, a subsequent tensorwill be inserted.
+- **`summarize`** : An optional  `int` . Defaults to  `3` .When formatting the tensors, show the first and last  `summarize` entries of each tensor dimension (recursively). If set to -1, allelements of the tensor will be shown.
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:
 A scalar  `Tensor`  of type  `string` .
 
-
-
 #### Raises:
-
-- **`ValueError`** : if the number of placeholders does not match the number of
-inputs.
-
+- **`ValueError`** : if the number of placeholders does not match the number ofinputs.

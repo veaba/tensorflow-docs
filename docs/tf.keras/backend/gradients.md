@@ -1,14 +1,6 @@
 Returns the gradients of  `loss`  w.r.t.  `variables` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.gradients` ](/api_docs/python/tf/keras/backend/gradients)
-
-- [ `tf.compat.v2.keras.backend.gradients` ](/api_docs/python/tf/keras/backend/gradients)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.gradients` ](/api_docs/python/tf/keras/backend/gradients), [ `tf.compat.v2.keras.backend.gradients` ](/api_docs/python/tf/keras/backend/gradients)
 
 ```
  tf.keras.backend.gradients(
@@ -18,14 +10,9 @@ Returns the gradients of  `loss`  w.r.t.  `variables` .
  
 ```
 
-
-
 #### Arguments:
-
 - **`loss`** : Scalar tensor to minimize.
-
 - **`variables`** : List of variables.
-
 
 
 #### Returns:

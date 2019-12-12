@@ -3,14 +3,6 @@
 ## Class  `ArgumentSerializer` 
 Base class for generating string representations of a flag value.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.app.flags.ArgumentSerializer` ](/api_docs/python/tf/compat/v1/flags/ArgumentSerializer)
-
-
-
 ## Methods
 
 

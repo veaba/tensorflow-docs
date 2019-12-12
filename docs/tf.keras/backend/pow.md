@@ -1,14 +1,6 @@
 Element-wise exponentiation.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow)
-
-- [ `tf.compat.v2.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow), [ `tf.compat.v2.keras.backend.pow` ](/api_docs/python/tf/keras/backend/pow)
 
 ```
  tf.keras.backend.pow(
@@ -18,14 +10,9 @@ Element-wise exponentiation.
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : Tensor or variable.
-
 - **`a`** : Python integer.
-
 
 
 #### Returns:

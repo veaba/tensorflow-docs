@@ -1,13 +1,5 @@
 Public API for tf.estimator.experimental namespace.
 
-
-
-### Aliases:
-
-- Module [ `tf.compat.v2.estimator.experimental` ](/api_docs/python/tf/estimator/experimental)
-
-
-
 ## Classes
 [ `class InMemoryEvaluatorHook` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook): Hook to run evaluation in training without a checkpoint.
 
@@ -16,8 +8,6 @@ Public API for tf.estimator.experimental namespace.
 [ `class RNNClassifier` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/RNNClassifier): A classifier for TensorFlow RNN models.
 
 [ `class RNNEstimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/RNNEstimator): An Estimator for TensorFlow RNN models with user-specified head.
-
-
 
 ## Functions
 [ `build_raw_supervised_input_receiver_fn(...)` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental/build_raw_supervised_input_receiver_fn): Build a supervised_input_receiver_fn for raw features and labels.

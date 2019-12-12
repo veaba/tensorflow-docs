@@ -1,9 +1,6 @@
 Signal processing operations.
 
-See the [tf.signal](https://tensorflow.org/api_guides/python/contrib.signal)
-guide.
-
-
+See the [tf.signal](https://tensorflow.org/api_guides/python/contrib.signal)guide.
 
 ## Functions
 [ `dct(...)` ](https://tensorflow.google.cn/api_docs/python/tf/signal/dct): Computes the 1D [Discrete Cosine Transform (DCT)][dct] of  `input` .

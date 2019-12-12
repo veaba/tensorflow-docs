@@ -1,7 +1,5 @@
 Public API for tf.keras.experimental namespace.
 
-
-
 ## Classes
 [ `class CosineDecay` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/CosineDecay): A LearningRateSchedule that uses a cosine decay schedule.
 
@@ -18,8 +16,6 @@ Public API for tf.keras.experimental namespace.
 [ `class SequenceFeatures` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/SequenceFeatures): A layer for sequence input.
 
 [ `class WideDeepModel` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/WideDeepModel): Wide &amp; Deep Model for regression and classification problems.
-
-
 
 ## Functions
 [ `export_saved_model(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/experimental/export_saved_model): Exports a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model) as a Tensorflow SavedModel. (deprecated)

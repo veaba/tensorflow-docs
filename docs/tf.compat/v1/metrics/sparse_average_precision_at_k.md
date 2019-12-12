@@ -1,7 +1,5 @@
 Renamed to  `average_precision_at_k` , please use that method instead. (deprecated)
 
-
-
 ```
  tf.compat.v1.metrics.sparse_average_precision_at_k(
     labels,
@@ -16,6 +14,4 @@ Renamed to  `average_precision_at_k` , please use that method instead. (deprecat
 ```
 
 
-<aside class="warning">**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.
-Instructions for updating:
-Use average_precision_at_k instead</aside>
+**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use average_precision_at_k instead

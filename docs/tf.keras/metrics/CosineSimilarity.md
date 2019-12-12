@@ -3,28 +3,13 @@
 ## Class  `CosineSimilarity` 
 Computes the cosine similarity between the labels and predictions.
 
+**Aliases** : [ `tf.compat.v1.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.compat.v2.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.compat.v2.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity), [ `tf.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
 
+cosine similarity = (a . b) / ||a|| ||b||[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
 
-### Aliases:
+For example, if  `y_true`  is [0, 1, 1], and  `y_pred`  is [1, 0, 1], the cosinesimilarity is 0.5.
 
-- Class [ `tf.compat.v1.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
-
-- Class [ `tf.compat.v2.keras.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
-
-- Class [ `tf.compat.v2.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
-
-- Class [ `tf.metrics.CosineSimilarity` ](/api_docs/python/tf/keras/metrics/CosineSimilarity)
-
-cosine similarity = (a . b) / ||a|| ||b||
-[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
-
-For example, if  `y_true`  is [0, 1, 1], and  `y_pred`  is [1, 0, 1], the cosine
-similarity is 0.5.
-
-This metric keeps the average cosine similarity between  `predictions`  and
- `labels`  over a stream of data.
-
-
+This metric keeps the average cosine similarity between  `predictions`  and `labels`  over a stream of data.
 
 #### Usage:
 
@@ -44,8 +29,6 @@ print('Final result: ', m.result().numpy())  # Final result: 0.5
 
 Usage with tf.keras API:
 
-
-
 ```
  model = tf.keras.Model(inputs, outputs)
 model.compile(
@@ -55,12 +38,8 @@ model.compile(
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1908-L1918)
-
-
 
 ```
  __init__(
@@ -73,23 +52,14 @@ model.compile(
 
 Creates a  `CosineSimilarity`  instance.
 
-
-
 #### Args:
-
 - **`name`** : (Optional) string name of the metric instance.
-
 - **`dtype`** : (Optional) data type of the metric result.
-
-- **`axis`** : (Optional) Defaults to -1. The dimension along which the cosine
-similarity is computed.
-
+- **`axis`** : (Optional) Defaults to -1. The dimension along which the cosinesimilarity is computed.
 
 
 ##  `__new__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
-
 
 ```
  __new__(
@@ -102,15 +72,11 @@ similarity is computed.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-
-
 ## Methods
 
 
 ###  `reset_states` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L203-L209)
-
-
 
 ```
  reset_states()
@@ -119,15 +85,10 @@ Create and return a new object.  See help(type) for accurate signature.
 
 Resets all of the metric state variables.
 
-This function is called between epochs/steps,
-when a metric is evaluated during training.
-
-
+This function is called between epochs/steps,when a metric is evaluated during training.
 
 ###  `result` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L361-L371)
-
-
 
 ```
  result()
@@ -136,15 +97,10 @@ when a metric is evaluated during training.
 
 Computes and returns the metric value tensor.
 
-Result computation is an idempotent operation that simply calculates the
-metric value using the state variables.
-
-
+Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
 ###  `update_state` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L558-L583)
-
-
 
 ```
  update_state(
@@ -159,18 +115,10 @@ Accumulates metric statistics.
 
  `y_true`  and  `y_pred`  should have the same shape.
 
-
-
 #### Args:
-
 - **`y_true`** : The ground truth values.
-
 - **`y_pred`** : The predicted values.
-
-- **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be
-a  `Tensor`  whose rank is either 0, or the same rank as  `y_true` ,
-and must be broadcastable to  `y_true` .
-
+- **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can bea  `Tensor`  whose rank is either 0, or the same rank as  `y_true` ,and must be broadcastable to  `y_true` .
 
 
 #### Returns:

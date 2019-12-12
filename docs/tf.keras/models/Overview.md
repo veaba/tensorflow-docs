@@ -1,13 +1,9 @@
 Code for model cloning, plus model-related API entries.
 
-
-
 ## Classes
 [ `class Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model):  `Model`  groups layers into an object with training and inference features.
 
 [ `class Sequential` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Sequential): Linear stack of layers.
-
-
 
 ## Functions
 [ `clone_model(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/models/clone_model): Clone any  `Model`  instance.

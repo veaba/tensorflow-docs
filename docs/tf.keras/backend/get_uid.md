@@ -1,32 +1,18 @@
 Associates a string prefix with an integer counter in a TensorFlow graph.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid)
-
-- [ `tf.compat.v2.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid), [ `tf.compat.v2.keras.backend.get_uid` ](/api_docs/python/tf/keras/backend/get_uid)
 
 ```
  tf.keras.backend.get_uid(prefix='')
  
 ```
 
-
-
 #### Arguments:
-
 - **`prefix`** : String prefix to index.
-
 
 
 #### Returns:
 Unique integer ID.
-
-
 
 #### Example:
 

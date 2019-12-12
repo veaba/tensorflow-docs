@@ -1,11 +1,7 @@
 Wrappers for primitive Neural Net (NN) Operations.
 
-
-
 ## Modules
 [ `rnn_cell` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/nn/rnn_cell) module: Module for constructing RNN Cells.
-
-
 
 ## Functions
 [ `all_candidate_sampler(...)` ](https://tensorflow.google.cn/api_docs/python/tf/random/all_candidate_sampler): Generate the set of all classes.
@@ -222,9 +218,5 @@ Wrappers for primitive Neural Net (NN) Operations.
 
 [ `zero_fraction(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zero_fraction): Returns the fraction of zeros in  `value` .
 
-
-
 ## Other Members
-
 -  `swish`  []()
-

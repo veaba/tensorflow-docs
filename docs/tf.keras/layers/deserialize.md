@@ -1,14 +1,6 @@
 Instantiates a layer from a config dictionary.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.layers.deserialize` ](/api_docs/python/tf/keras/layers/deserialize)
-
-- [ `tf.compat.v2.keras.layers.deserialize` ](/api_docs/python/tf/keras/layers/deserialize)
-
-
+**Aliases** : [ `tf.compat.v1.keras.layers.deserialize` ](/api_docs/python/tf/keras/layers/deserialize), [ `tf.compat.v2.keras.layers.deserialize` ](/api_docs/python/tf/keras/layers/deserialize)
 
 ```
  tf.keras.layers.deserialize(
@@ -18,15 +10,9 @@ Instantiates a layer from a config dictionary.
  
 ```
 
-
-
 #### Arguments:
-
 - **`config`** : dict of the form {'class_name': str, 'config': dict}
-
-- **`custom_objects`** : dict mapping class names (or function names)
-of custom (non-Keras) objects to class/functions
-
+- **`custom_objects`** : dict mapping class names (or function names)of custom (non-Keras) objects to class/functions
 
 
 #### Returns:

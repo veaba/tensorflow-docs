@@ -1,11 +1,7 @@
 Keras backend API.
 
-
-
 ## Classes
 [ `class name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/backend/name_scope): A context manager for use when defining a Python op.
-
-
 
 ## Functions
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/abs): Element-wise absolute value.
@@ -72,7 +68,7 @@ Keras backend API.
 
 [ `cumsum(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/cumsum): Cumulative sum of the values in a tensor, alongside the specified axis.
 
-[ `dot(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/dot): Multiplies 2 tensors (and/or variables) and returns a <em>tensor</em>.
+[ `dot(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/dot): Multiplies 2 tensors (and/or variables) and returns a *tensor*.
 
 [ `dropout(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/backend/dropout): Sets entries in  `x`  to zero at random, while scaling the entire tensor.
 

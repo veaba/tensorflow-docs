@@ -1,14 +1,6 @@
 Generates hashed sparse cross from a list of sparse and dense tensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed)
-
-- [ `tf.compat.v2.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed), [ `tf.compat.v2.sparse.cross_hashed` ](/api_docs/python/tf/sparse/cross_hashed)
 
 ```
  tf.sparse.cross_hashed(
@@ -21,8 +13,6 @@ Generates hashed sparse cross from a list of sparse and dense tensors.
 ```
 
 For example, if the inputs are
-
-
 
 ```
  * inputs[0]: SparseTensor with shape = [2, 2]
@@ -38,8 +28,6 @@ For example, if the inputs are
 
 then the output will be:
 
-
-
 ```
  shape = [2, 2]
 [0, 0]: FingerprintCat64(
@@ -54,20 +42,11 @@ then the output will be:
  
 ```
 
-
-
 #### Args:
-
 - **`inputs`** : An iterable of  `Tensor`  or  `SparseTensor` .
-
-- **`num_buckets`** : An  `int`  that is  `>= 0` .
-output = hashed_value%num_buckets if num_buckets > 0 else hashed_value.
-
-- **`hash_key`** : Integer hash_key that will be used by the  `FingerprintCat64` 
-function. If not given, will use a default key.
-
+- **`num_buckets`** : An  `int`  that is  `>= 0` .output = hashed_value%num_buckets if num_buckets > 0 else hashed_value.
+- **`hash_key`** : Integer hash_key that will be used by the  `FingerprintCat64` function. If not given, will use a default key.
 - **`name`** : Optional name for the op.
-
 
 
 #### Returns:

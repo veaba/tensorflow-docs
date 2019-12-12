@@ -1,14 +1,6 @@
 Instantiates an all-zeros variable of the same shape as another tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.zeros_like` ](/api_docs/python/tf/keras/backend/zeros_like)
-
-- [ `tf.compat.v2.keras.backend.zeros_like` ](/api_docs/python/tf/keras/backend/zeros_like)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.zeros_like` ](/api_docs/python/tf/keras/backend/zeros_like), [ `tf.compat.v2.keras.backend.zeros_like` ](/api_docs/python/tf/keras/backend/zeros_like)
 
 ```
  tf.keras.backend.zeros_like(
@@ -19,23 +11,14 @@ Instantiates an all-zeros variable of the same shape as another tensor.
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : Keras variable or Keras tensor.
-
-- **`dtype`** : dtype of returned Keras variable.
-    `None`  uses the dtype of  `x` .
-
+- **`dtype`** : dtype of returned Keras variable.    `None`  uses the dtype of  `x` .
 - **`name`** : name for the variable to create.
-
 
 
 #### Returns:
 A Keras variable with the shape of  `x`  filled with zeros.
-
-
 
 #### Example:
 

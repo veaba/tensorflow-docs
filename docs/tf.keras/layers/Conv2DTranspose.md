@@ -5,154 +5,53 @@ Transposed convolution layer (sometimes called Deconvolution).
 
 Inherits From: [ `Conv2D` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv2D)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
-
-- Class [ `tf.compat.v1.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
-
-- Class [ `tf.compat.v2.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
-
-- Class [ `tf.compat.v2.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
-
-- Class [ `tf.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
-
-
+**Aliases** : [ `tf.compat.v1.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v1.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v2.keras.layers.Conv2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.compat.v2.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose), [ `tf.keras.layers.Convolution2DTranspose` ](/api_docs/python/tf/keras/layers/Conv2DTranspose)
 
 ### Used in the guide:
-
 - [The Keras functional API in TensorFlow](https://tensorflow.google.cn/guide/keras/functional)
 
 
-
 ### Used in the tutorials:
-
 - [Convolutional Variational Autoencoder](https://tensorflow.google.cn/tutorials/generative/cvae)
-
 - [Deep Convolutional Generative Adversarial Network](https://tensorflow.google.cn/tutorials/generative/dcgan)
-
 - [Pix2Pix](https://tensorflow.google.cn/tutorials/generative/pix2pix)
-
 - [Image segmentation](https://tensorflow.google.cn/tutorials/images/segmentation)
+The need for transposed convolutions generally arisesfrom the desire to use a transformation going in the opposite directionof a normal convolution, i.e., from something that has the shape of theoutput of some convolution to something that has the shape of its inputwhile maintaining a connectivity pattern that is compatible withsaid convolution.
 
-The need for transposed convolutions generally arises
-from the desire to use a transformation going in the opposite direction
-of a normal convolution, i.e., from something that has the shape of the
-output of some convolution to something that has the shape of its input
-while maintaining a connectivity pattern that is compatible with
-said convolution.
-
-When using this layer as the first layer in a model,
-provide the keyword argument  `input_shape` 
-(tuple of integers, does not include the sample axis),
-e.g.  `input_shape=(128, 128, 3)`  for 128x128 RGB pictures
-in  `data_format="channels_last"` .
-
-
+When using this layer as the first layer in a model,provide the keyword argument  `input_shape` (tuple of integers, does not include the sample axis),e.g.  `input_shape=(128, 128, 3)`  for 128x128 RGB picturesin  `data_format="channels_last"` .
 
 #### Arguments:
-
-- **`filters`** : Integer, the dimensionality of the output space
-(i.e. the number of output filters in the convolution).
-
-- **`kernel_size`** : An integer or tuple/list of 2 integers, specifying the
-height and width of the 2D convolution window.
-Can be a single integer to specify the same value for
-all spatial dimensions.
-
-- **`strides`** : An integer or tuple/list of 2 integers,
-specifying the strides of the convolution along the height and width.
-Can be a single integer to specify the same value for
-all spatial dimensions.
-Specifying any stride value != 1 is incompatible with specifying
-any  `dilation_rate`  value != 1.
-
+- **`filters`** : Integer, the dimensionality of the output space(i.e. the number of output filters in the convolution).
+- **`kernel_size`** : An integer or tuple/list of 2 integers, specifying theheight and width of the 2D convolution window.Can be a single integer to specify the same value forall spatial dimensions.
+- **`strides`** : An integer or tuple/list of 2 integers,specifying the strides of the convolution along the height and width.Can be a single integer to specify the same value forall spatial dimensions.Specifying any stride value != 1 is incompatible with specifyingany  `dilation_rate`  value != 1.
 - **`padding`** : one of  `"valid"`  or  `"same"`  (case-insensitive).
-
-- **`output_padding`** : An integer or tuple/list of 2 integers,
-specifying the amount of padding along the height and width
-of the output tensor.
-Can be a single integer to specify the same value for all
-spatial dimensions.
-The amount of output padding along a given dimension must be
-lower than the stride along that same dimension.
-If set to  `None`  (default), the output shape is inferred.
-
-- **`data_format`** : A string,
-one of  `channels_last`  (default) or  `channels_first` .
-The ordering of the dimensions in the inputs.
- `channels_last`  corresponds to inputs with shape
- `(batch, height, width, channels)`  while  `channels_first` 
-corresponds to inputs with shape
- `(batch, channels, height, width)` .
-It defaults to the  `image_data_format`  value found in your
-Keras config file at  `~/.keras/keras.json` .
-If you never set it, then it will be "channels_last".
-
-- **`dilation_rate`** : an integer or tuple/list of 2 integers, specifying
-the dilation rate to use for dilated convolution.
-Can be a single integer to specify the same value for
-all spatial dimensions.
-Currently, specifying any  `dilation_rate`  value != 1 is
-incompatible with specifying any stride value != 1.
-
-- **`activation`** : Activation function to use.
-If you don't specify anything, no activation is applied
-(ie. "linear" activation:  `a(x) = x` ).
-
+- **`output_padding`** : An integer or tuple/list of 2 integers,specifying the amount of padding along the height and widthof the output tensor.Can be a single integer to specify the same value for allspatial dimensions.The amount of output padding along a given dimension must belower than the stride along that same dimension.If set to  `None`  (default), the output shape is inferred.
+- **`data_format`** : A string,one of  `channels_last`  (default) or  `channels_first` .The ordering of the dimensions in the inputs. `channels_last`  corresponds to inputs with shape `(batch, height, width, channels)`  while  `channels_first` corresponds to inputs with shape `(batch, channels, height, width)` .It defaults to the  `image_data_format`  value found in yourKeras config file at  `~/.keras/keras.json` .If you never set it, then it will be "channels_last".
+- **`dilation_rate`** : an integer or tuple/list of 2 integers, specifyingthe dilation rate to use for dilated convolution.Can be a single integer to specify the same value forall spatial dimensions.Currently, specifying any  `dilation_rate`  value != 1 isincompatible with specifying any stride value != 1.
+- **`activation`** : Activation function to use.If you don't specify anything, no activation is applied(ie. "linear" activation:  `a(x) = x` ).
 - **`use_bias`** : Boolean, whether the layer uses a bias vector.
-
 - **`kernel_initializer`** : Initializer for the  `kernel`  weights matrix.
-
 - **`bias_initializer`** : Initializer for the bias vector.
-
-- **`kernel_regularizer`** : Regularizer function applied to
-the  `kernel`  weights matrix.
-
+- **`kernel_regularizer`** : Regularizer function applied tothe  `kernel`  weights matrix.
 - **`bias_regularizer`** : Regularizer function applied to the bias vector.
-
-- **`activity_regularizer`** : Regularizer function applied to
-the output of the layer (its "activation")..
-
+- **`activity_regularizer`** : Regularizer function applied tothe output of the layer (its "activation")..
 - **`kernel_constraint`** : Constraint function applied to the kernel matrix.
-
 - **`bias_constraint`** : Constraint function applied to the bias vector.
 
 
-
 #### Input shape:
-4D tensor with shape:
- `(batch, channels, rows, cols)`  if data_format='channels_first'
-or 4D tensor with shape:
- `(batch, rows, cols, channels)`  if data_format='channels_last'.
-
-
+4D tensor with shape: `(batch, channels, rows, cols)`  if data_format='channels_first'or 4D tensor with shape: `(batch, rows, cols, channels)`  if data_format='channels_last'.
 
 #### Output shape:
-4D tensor with shape:
- `(batch, filters, new_rows, new_cols)`  if data_format='channels_first'
-or 4D tensor with shape:
- `(batch, new_rows, new_cols, filters)`  if data_format='channels_last'.
- `rows`  and  `cols`  values might have changed due to padding.
-
-
+4D tensor with shape: `(batch, filters, new_rows, new_cols)`  if data_format='channels_first'or 4D tensor with shape: `(batch, new_rows, new_cols, filters)`  if data_format='channels_last'. `rows`  and  `cols`  values might have changed due to padding.
 
 #### References:
-
-- <a href="https://arxiv.org/abs/1603.07285v1">A guide to convolution arithmetic for deep
-learning</a>
-
-- <a href="https://www.matthewzeiler.com/mattzeiler/deconvolutionalnetworks.pdf">Deconvolutional
-Networks</a>
-
+- [A guide to convolution arithmetic for deeplearning](https://arxiv.org/abs/1603.07285v1)
+- [DeconvolutionalNetworks](https://www.matthewzeiler.com/mattzeiler/deconvolutionalnetworks.pdf)
 
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/convolutional.py#L709-L753)
-
-
 
 ```
  __init__(

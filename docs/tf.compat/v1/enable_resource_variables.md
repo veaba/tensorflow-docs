@@ -1,21 +1,11 @@
 Creates resource variables by default.
 
-
-
 ```
  tf.compat.v1.enable_resource_variables()
  
 ```
 
-Resource variables are improved versions of TensorFlow variables with a
-well-defined memory model. Accessing a resource variable reads its value, and
-all ops which access a specific read value of the variable are guaranteed to
-see the same value for that tensor. Writes which happen after a read (by
-having a control or data dependency on the read) are guaranteed not to affect
-the value of the read tensor, and similarly writes which happen before a read
-are guaranteed to affect the value. No guarantees are made about unordered
-read/write pairs.
+Resource variables are improved versions of TensorFlow variables with awell-defined memory model. Accessing a resource variable reads its value, andall ops which access a specific read value of the variable are guaranteed tosee the same value for that tensor. Writes which happen after a read (byhaving a control or data dependency on the read) are guaranteed not to affectthe value of the read tensor, and similarly writes which happen before a readare guaranteed to affect the value. No guarantees are made about unorderedread/write pairs.
 
-Calling tf.enable_resource_variables() lets you opt-in to this TensorFlow 2.0
-feature.
+Calling tf.enable_resource_variables() lets you opt-in to this TensorFlow 2.0feature.
 

@@ -1,14 +1,6 @@
 Returns the index of the maximum value along an axis.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax)
-
-- [ `tf.compat.v2.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax), [ `tf.compat.v2.keras.backend.argmax` ](/api_docs/python/tf/keras/backend/argmax)
 
 ```
  tf.keras.backend.argmax(
@@ -18,14 +10,9 @@ Returns the index of the maximum value along an axis.
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : Tensor or variable.
-
 - **`axis`** : axis along which to perform the reduction.
-
 
 
 #### Returns:

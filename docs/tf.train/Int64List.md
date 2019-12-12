@@ -3,20 +3,10 @@
 ## Class  `Int64List` 
 A ProtocolMessage
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.train.Int64List` ](/api_docs/python/tf/train/Int64List)
-
-- Class [ `tf.compat.v2.train.Int64List` ](/api_docs/python/tf/train/Int64List)
-
-
+**Aliases** : [ `tf.compat.v1.train.Int64List` ](/api_docs/python/tf/train/Int64List), [ `tf.compat.v2.train.Int64List` ](/api_docs/python/tf/train/Int64List)
 
 ### Used in the tutorials:
-
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
-
 
 
 ## Properties

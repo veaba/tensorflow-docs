@@ -1,11 +1,7 @@
 Public API for tf.layers namespace.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/experimental) module: Public API for tf.layers.experimental namespace.
-
-
 
 ## Classes
 [ `class AveragePooling1D` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/AveragePooling1D): Average Pooling layer for 1D inputs.
@@ -45,8 +41,6 @@ Public API for tf.layers namespace.
 [ `class SeparableConv1D` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/SeparableConv1D): Depthwise separable 1D convolution.
 
 [ `class SeparableConv2D` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/SeparableConv2D): Depthwise separable 2D convolution.
-
-
 
 ## Functions
 [ `average_pooling1d(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/layers/average_pooling1d): Average Pooling layer for 1D inputs. (deprecated)

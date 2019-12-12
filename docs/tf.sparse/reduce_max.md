@@ -1,47 +1,18 @@
 Computes the max of elements across dimensions of a SparseTensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.sparse.reduce_max` ](/api_docs/python/tf/sparse/reduce_max)
-
-
-
 ```
- tf.sparse.reduce_max(
-    sp_input,
-    axis=None,
-    keepdims=None,
-    output_is_sparse=False,
-    name=None
-)
- 
+ tf.sparse.reduce_max(    sp_input,    axis=None,    keepdims=None,    output_is_sparse=False,    name=None) 
 ```
 
-This Op takes a SparseTensor and is the sparse counterpart to
-[ `tf.reduce_max()` ](https://tensorflow.google.cn/api_docs/python/tf/math/reduce_max).  In particular, this Op also returns a dense  `Tensor` 
-if  `output_is_sparse`  is  `False` , or a  `SparseTensor`  if  `output_is_sparse` 
-is  `True` .
+This Op takes a SparseTensor and is the sparse counterpart to[ `tf.reduce_max()` ](https://tensorflow.google.cn/api_docs/python/tf/math/reduce_max).  In particular, this Op also returns a dense  `Tensor` if  `output_is_sparse`  is  `False` , or a  `SparseTensor`  if  `output_is_sparse` is  `True` .
 
 
-<aside class="note">**Note:**  A gradient is not defined for this function, so it can't be used
-in training models that need gradient descent.</aside>
-Reduces  `sp_input`  along the dimensions given in  `axis` .  Unless
- `keepdims`  is true, the rank of the tensor is reduced by 1 for each entry in
- `axis` . If  `keepdims`  is true, the reduced dimensions are retained
-with length 1.
+**Note:**  A gradient is not defined for this function, so it can't be usedin training models that need gradient descent.
+Reduces  `sp_input`  along the dimensions given in  `axis` .  Unless `keepdims`  is true, the rank of the tensor is reduced by 1 for each entry in `axis` . If  `keepdims`  is true, the reduced dimensions are retainedwith length 1.
 
-If  `axis`  has no entries, all dimensions are reduced, and a tensor
-with a single element is returned.  Additionally, the axes can be negative,
-similar to the indexing rules in Python.
+If  `axis`  has no entries, all dimensions are reduced, and a tensorwith a single element is returned.  Additionally, the axes can be negative,similar to the indexing rules in Python.
 
-The values not defined in  `sp_input`  don't participate in the reduce max,
-as opposed to be implicitly assumed 0 -- hence it can return negative values
-for sparse  `axis` . But, in case there are no values in
- `axis` , it will reduce to 0. See second example below.
-
-
+The values not defined in  `sp_input`  don't participate in the reduce max,as opposed to be implicitly assumed 0 -- hence it can return negative valuesfor sparse  `axis` . But, in case there are no values in `axis` , it will reduce to 0. See second example below.
 
 #### For example:
 
@@ -63,25 +34,14 @@ tf.sparse.reduce_max(x, 1) ==> [-7, 4, 0]
  
 ```
 
-
-
 #### Args:
-
 - **`sp_input`** : The SparseTensor to reduce. Should have numeric type.
-
-- **`axis`** : The dimensions to reduce; list or scalar. If  `None`  (the
-default), reduces all dimensions.
-
+- **`axis`** : The dimensions to reduce; list or scalar. If  `None`  (thedefault), reduces all dimensions.
 - **`keepdims`** : If true, retain reduced dimensions with length 1.
-
-- **`output_is_sparse`** : If true, returns a  `SparseTensor`  instead of a dense
- `Tensor`  (the default).
-
+- **`output_is_sparse`** : If true, returns a  `SparseTensor`  instead of a dense `Tensor`  (the default).
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-The reduced Tensor or the reduced SparseTensor if  `output_is_sparse`  is
-True.
+The reduced Tensor or the reduced SparseTensor if  `output_is_sparse`  isTrue.
 

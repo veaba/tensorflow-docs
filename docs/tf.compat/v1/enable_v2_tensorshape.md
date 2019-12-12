@@ -1,7 +1,5 @@
 In TensorFlow 2.0, iterating over a TensorShape instance returns values.
 
-
-
 ```
  tf.compat.v1.enable_v2_tensorshape()
  
@@ -9,10 +7,7 @@ In TensorFlow 2.0, iterating over a TensorShape instance returns values.
 
 This enables the new behavior.
 
-Concretely,  `tensor_shape[i]`  returned a Dimension instance in V1, but
-it V2 it returns either an integer, or None.
-
-
+Concretely,  `tensor_shape[i]`  returned a Dimension instance in V1, butit V2 it returns either an integer, or None.
 
 #### Examples:
 

@@ -1,18 +1,6 @@
-Defined in generated file:  `python/ops/gen_array_ops.py` 
-
 Subtracts sparse  `updates`  from an existing tensor according to  `indices` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.tensor_scatter_nd_sub` ](/api_docs/python/tf/tensor_scatter_nd_sub)
-
-- [ `tf.compat.v1.tensor_scatter_sub` ](/api_docs/python/tf/tensor_scatter_nd_sub)
-
-- [ `tf.compat.v2.tensor_scatter_nd_sub` ](/api_docs/python/tf/tensor_scatter_nd_sub)
-
-
+**Aliases** : [ `tf.compat.v1.tensor_scatter_nd_sub` ](/api_docs/python/tf/tensor_scatter_nd_sub), [ `tf.compat.v1.tensor_scatter_sub` ](/api_docs/python/tf/tensor_scatter_nd_sub), [ `tf.compat.v2.tensor_scatter_nd_sub` ](/api_docs/python/tf/tensor_scatter_nd_sub)
 
 ```
  tf.tensor_scatter_nd_sub(
@@ -24,41 +12,25 @@ Subtracts sparse  `updates`  from an existing tensor according to  `indices` .
  
 ```
 
-This operation creates a new tensor by subtracting sparse  `updates`  from the
-passed in  `tensor` .
-This operation is very similar to  `tf.scatter_nd_sub` , except that the updates
-are subtracted from an existing tensor (as opposed to a variable). If the memory
-for the existing tensor cannot be re-used, a copy is made and updated.
+This operation creates a new tensor by subtracting sparse  `updates`  from thepassed in  `tensor` .This operation is very similar to  `tf.scatter_nd_sub` , except that the updatesare subtracted from an existing tensor (as opposed to a variable). If the memoryfor the existing tensor cannot be re-used, a copy is made and updated.
 
- `indices`  is an integer tensor containing indices into a new tensor of shape
- `shape` .  The last dimension of  `indices`  can be at most the rank of  `shape` :
-
-
+ `indices`  is an integer tensor containing indices into a new tensor of shape `shape` .  The last dimension of  `indices`  can be at most the rank of  `shape` :
 
 ```
  indices.shape[-1] <= shape.rank
  
 ```
 
-The last dimension of  `indices`  corresponds to indices into elements
-(if  `indices.shape[-1] = shape.rank` ) or slices
-(if  `indices.shape[-1] < shape.rank` ) along dimension  `indices.shape[-1]`  of
- `shape` .   `updates`  is a tensor with shape
-
-
+The last dimension of  `indices`  corresponds to indices into elements(if  `indices.shape[-1] = shape.rank` ) or slices(if  `indices.shape[-1] < shape.rank` ) along dimension  `indices.shape[-1]`  of `shape` .   `updates`  is a tensor with shape
 
 ```
  indices.shape[:-1] + shape[indices.shape[-1]:]
  
 ```
 
-The simplest form of tensor_scatter_sub is to subtract individual elements
-from a tensor by index. For example, say we want to insert 4 scattered elements
-in a rank-1 tensor with 8 elements.
+The simplest form of tensor_scatter_sub is to subtract individual elementsfrom a tensor by index. For example, say we want to insert 4 scattered elementsin a rank-1 tensor with 8 elements.
 
 In Python, this scatter subtract operation would look like this:
-
-
 
 ```
      indices = tf.constant([[4], [3], [1], [7]])
@@ -72,20 +44,14 @@ In Python, this scatter subtract operation would look like this:
 
 The resulting tensor would look like this:
 
-
-
 ```
  [1, -10, 1, -9, -8, 1, 1, -11]
  
 ```
 
-We can also, insert entire slices of a higher rank tensor all at once. For
-example, if we wanted to insert two slices in the first dimension of a
-rank-3 tensor with two matrices of new values.
+We can also, insert entire slices of a higher rank tensor all at once. Forexample, if we wanted to insert two slices in the first dimension of arank-3 tensor with two matrices of new values.
 
 In Python, this scatter add operation would look like this:
-
-
 
 ```
      indices = tf.constant([[0], [2]])
@@ -102,8 +68,6 @@ In Python, this scatter add operation would look like this:
 
 The resulting tensor would look like this:
 
-
-
 ```
  [[[-4, -4, -4, -4], [-5, -5, -5, -5], [-6, -6, -6, -6], [-7, -7, -7, -7]],
  [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]],
@@ -112,23 +76,13 @@ The resulting tensor would look like this:
  
 ```
 
-Note that on CPU, if an out of bound index is found, an error is returned.
-On GPU, if an out of bound index is found, the index is ignored.
-
-
+Note that on CPU, if an out of bound index is found, an error is returned.On GPU, if an out of bound index is found, the index is ignored.
 
 #### Args:
-
 - **`tensor`** : A  `Tensor` . Tensor to copy/update.
-
-- **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .
-Index tensor.
-
-- **`updates`** : A  `Tensor` . Must have the same type as  `tensor` .
-Updates to scatter into output.
-
+- **`indices`** : A  `Tensor` . Must be one of the following types:  `int32` ,  `int64` .Index tensor.
+- **`updates`** : A  `Tensor` . Must have the same type as  `tensor` .Updates to scatter into output.
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

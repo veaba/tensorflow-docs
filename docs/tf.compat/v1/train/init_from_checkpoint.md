@@ -1,7 +1,5 @@
 Replaces [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable) initializers so they load from a checkpoint file.
 
-
-
 ```
  tf.compat.v1.train.init_from_checkpoint(
     ckpt_dir_or_file,
@@ -10,36 +8,18 @@ Replaces [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Varia
  
 ```
 
-Values are not loaded immediately, but when the initializer is run
-(typically by running a [ `tf.compat.v1.global_variables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/global_variables_initializer) op).
+Values are not loaded immediately, but when the initializer is run(typically by running a [ `tf.compat.v1.global_variables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/global_variables_initializer) op).
 
 
-<aside class="note">**Note:**  This overrides default initialization ops of specified variables and
-redefines dtype.</aside>
+**Note:**  This overrides default initialization ops of specified variables andredefines dtype.
 Assignment map supports following syntax:
 
-
--  `'checkpoint_scope_name/': 'scope_name/'`  - will load all variables in
-current  `scope_name`  from  `checkpoint_scope_name`  with matching tensor
-names.
-
--  `'checkpoint_scope_name/some_other_variable': 'scope_name/variable_name'`  -
-will initialize  `scope_name/variable_name`  variable
-from  `checkpoint_scope_name/some_other_variable` .
-
--  `'scope_variable_name': variable`  - will initialize given [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable)
-object with tensor 'scope_variable_name' from the checkpoint.
-
--  `'scope_variable_name': list(variable)`  - will initialize list of
-partitioned variables with tensor 'scope_variable_name' from the checkpoint.
-
--  `'/': 'scope_name/'`  - will load all variables in current  `scope_name`  from
-checkpoint's root (e.g. no scope).
-
-Supports loading into partitioned variables, which are represented as
- `'<variable>/part_'` .
-
-
+-  `'checkpoint_scope_name/': 'scope_name/'`  - will load all variables incurrent  `scope_name`  from  `checkpoint_scope_name`  with matching tensornames.
+-  `'checkpoint_scope_name/some_other_variable': 'scope_name/variable_name'`  -will initialize  `scope_name/variable_name`  variablefrom  `checkpoint_scope_name/some_other_variable` .
+-  `'scope_variable_name': variable`  - will initialize given [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable)object with tensor 'scope_variable_name' from the checkpoint.
+-  `'scope_variable_name': list(variable)`  - will initialize list ofpartitioned variables with tensor 'scope_variable_name' from the checkpoint.
+-  `'/': 'scope_name/'`  - will load all variables in current  `scope_name`  fromcheckpoint's root (e.g. no scope).
+Supports loading into partitioned variables, which are represented as `'<variable>/part_'` .
 
 #### Example:
 
@@ -87,20 +67,10 @@ init_from_checkpoint('/tmp/model.ckpt',
  
 ```
 
-
-
 #### Args:
-
 - **`ckpt_dir_or_file`** : Directory with checkpoints file or path to checkpoint.
-
-- **`assignment_map`** : Dict, where keys are names of the variables in the
-checkpoint and values are current variables or names of current variables
-(in default graph).
-
+- **`assignment_map`** : Dict, where keys are names of the variables in thecheckpoint and values are current variables or names of current variables(in default graph).
 
 
 #### Raises:
-
-- **`ValueError`** : If missing variables in current graph, or if missing
-checkpoints or tensors in checkpoints.
-
+- **`ValueError`** : If missing variables in current graph, or if missingcheckpoints or tensors in checkpoints.

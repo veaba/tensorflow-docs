@@ -1,13 +1,5 @@
 Concatenates a list of  `SparseTensor`  along the specified dimension. (deprecated arguments)
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.concat` ](/api_docs/python/tf/compat/v1/sparse_concat)
-
-
-
 ```
  tf.compat.v1.sparse_concat(
     axis,
@@ -21,37 +13,22 @@ Concatenates a list of  `SparseTensor`  along the specified dimension. (deprecat
 ```
 
 
-<aside class="warning">**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(concat_dim)` . They will be removed in a future version.
-Instructions for updating:
-concat_dim is deprecated, use axis instead</aside>
-Concatenation is with respect to the dense versions of each sparse input.
-It is assumed that each inputs is a  `SparseTensor`  whose elements are ordered
-along increasing dimension number.
+**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(concat_dim)` . They will be removed in a future version.Instructions for updating:concat_dim is deprecated, use axis instead
+Concatenation is with respect to the dense versions of each sparse input.It is assumed that each inputs is a  `SparseTensor`  whose elements are orderedalong increasing dimension number.
 
-If expand_nonconcat_dim is False, all inputs' shapes must match, except for
-the concat dimension. If expand_nonconcat_dim is True, then inputs' shapes are
-allowed to vary among all inputs.
+If expand_nonconcat_dim is False, all inputs' shapes must match, except forthe concat dimension. If expand_nonconcat_dim is True, then inputs' shapes areallowed to vary among all inputs.
 
 The  `indices` ,  `values` , and  `shapes`  lists must have the same length.
 
-If expand_nonconcat_dim is False, then the output shape is identical to the
-inputs', except along the concat dimension, where it is the sum of the inputs'
-sizes along that dimension.
+If expand_nonconcat_dim is False, then the output shape is identical to theinputs', except along the concat dimension, where it is the sum of the inputs'sizes along that dimension.
 
-If expand_nonconcat_dim is True, then the output shape along the non-concat
-dimensions will be expand to be the largest among all inputs, and it is the
-sum of the inputs sizes along the concat dimension.
+If expand_nonconcat_dim is True, then the output shape along the non-concatdimensions will be expand to be the largest among all inputs, and it is thesum of the inputs sizes along the concat dimension.
 
-The output elements will be resorted to preserve the sort order along
-increasing dimension number.
+The output elements will be resorted to preserve the sort order alongincreasing dimension number.
 
-This op runs in  `O(M log M)`  time, where  `M`  is the total number of non-empty
-values across all inputs. This is due to the need for an internal sort in
-order to concatenate efficiently across an arbitrary dimension.
+This op runs in  `O(M log M)`  time, where  `M`  is the total number of non-emptyvalues across all inputs. This is due to the need for an internal sort inorder to concatenate efficiently across an arbitrary dimension.
 
 For example, if  `axis = 1`  and the inputs are
-
-
 
 ```
  sp_inputs[0]: shape = [2, 3]
@@ -67,8 +44,6 @@ sp_inputs[1]: shape = [2, 4]
 
 then the output will be
 
-
-
 ```
  shape = [2, 7]
 [0, 2]: "a"
@@ -81,8 +56,6 @@ then the output will be
 
 Graphically this is equivalent to doing
 
-
-
 ```
  [    a] concat [  d e  ] = [    a   d e  ]
 [b c  ]        [       ]   [b c          ]
@@ -90,8 +63,6 @@ Graphically this is equivalent to doing
 ```
 
 Another example, if 'axis = 1' and the inputs are
-
-
 
 ```
  sp_inputs[0]: shape = [3, 3]
@@ -105,10 +76,7 @@ sp_inputs[1]: shape = [2, 4]
  
 ```
 
-if expand_nonconcat_dim = False, this will result in an error. But if
-expand_nonconcat_dim = True, this will result in:
-
-
+if expand_nonconcat_dim = False, this will result in an error. But ifexpand_nonconcat_dim = True, this will result in:
 
 ```
  shape = [3, 7]
@@ -122,8 +90,6 @@ expand_nonconcat_dim = True, this will result in:
 
 Graphically this is equivalent to doing
 
-
-
 ```
  [    a] concat [  d e  ] = [    a   d e  ]
 [b    ]        [       ]   [b            ]
@@ -131,32 +97,17 @@ Graphically this is equivalent to doing
  
 ```
 
-
-
 #### Args:
-
-- **`axis`** : Dimension to concatenate along. Must be in range [-rank, rank),
-where rank is the number of dimensions in each input  `SparseTensor` .
-
+- **`axis`** : Dimension to concatenate along. Must be in range [-rank, rank),where rank is the number of dimensions in each input  `SparseTensor` .
 - **`sp_inputs`** : List of  `SparseTensor`  to concatenate.
-
 - **`name`** : A name prefix for the returned tensors (optional).
-
-- **`expand_nonconcat_dim`** : Whether to allow the expansion in the non-concat
-dimensions. Defaulted to False.
-
+- **`expand_nonconcat_dim`** : Whether to allow the expansion in the non-concatdimensions. Defaulted to False.
 - **`concat_dim`** : The old (deprecated) name for axis.
-
 - **`expand_nonconcat_dims`** : alias for expand_nonconcat_dim
-
 
 
 #### Returns:
 A  `SparseTensor`  with the concatenated output.
 
-
-
 #### Raises:
-
 - **`TypeError`** : If  `sp_inputs`  is not a list of  `SparseTensor` .
-

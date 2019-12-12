@@ -1,15 +1,11 @@
 Public API for tf.config namespace.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental) module: Public API for tf.config.experimental namespace.
 
 [ `optimizer` ](https://tensorflow.google.cn/api_docs/python/tf/config/optimizer) module: Public API for tf.config.optimizer namespace.
 
 [ `threading` ](https://tensorflow.google.cn/api_docs/python/tf/config/threading) module: Public API for tf.config.threading namespace.
-
-
 
 ## Functions
 [ `experimental_connect_to_cluster(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental_connect_to_cluster): Connects to the given cluster.

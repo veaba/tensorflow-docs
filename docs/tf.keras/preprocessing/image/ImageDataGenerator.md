@@ -3,152 +3,58 @@
 ## Class  `ImageDataGenerator` 
 Generate batches of tensor image data with real-time data augmentation.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator)
-
-- Class [ `tf.compat.v2.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator), [ `tf.compat.v2.keras.preprocessing.image.ImageDataGenerator` ](/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator)
 
 ### Used in the guide:
-
 - [tf.data: Build TensorFlow input pipelines](https://tensorflow.google.cn/guide/data)
 
 
-
 ### Used in the tutorials:
-
 - [Transfer learning with TensorFlow Hub](https://tensorflow.google.cn/tutorials/images/transfer_learning_with_hub)
-
 - [Load images](https://tensorflow.google.cn/tutorials/load_data/images)
 
 The data will be looped over (in batches).
 
 
-
-
-
 #### Arguments:
-
-- **`featurewise_center`** : Boolean.
-Set input mean to 0 over the dataset, feature-wise.
-
+- **`featurewise_center`** : Boolean.Set input mean to 0 over the dataset, feature-wise.
 - **`samplewise_center`** : Boolean. Set each sample mean to 0.
-
-- **`featurewise_std_normalization`** : Boolean.
-Divide inputs by std of the dataset, feature-wise.
-
+- **`featurewise_std_normalization`** : Boolean.Divide inputs by std of the dataset, feature-wise.
 - **`samplewise_std_normalization`** : Boolean. Divide each input by its std.
-
 - **`zca_epsilon`** : epsilon for ZCA whitening. Default is 1e-6.
-
 - **`zca_whitening`** : Boolean. Apply ZCA whitening.
-
 - **`rotation_range`** : Int. Degree range for random rotations.
-
 - **`width_shift_range`** : Float, 1-D array-like or int
-
-
 - **`height_shift_range`** : Float, 1-D array-like or int
-
-
-- **`brightness_range`** : Tuple or list of two floats. Range for picking
-a brightness shift value from.
-
-- **`shear_range`** : Float. Shear Intensity
-(Shear angle in counter-clockwise direction in degrees)
-
-- **`zoom_range`** : Float or [lower, upper]. Range for random zoom.
-If a float,  `[lower, upper] = [1-zoom_range, 1+zoom_range]` .
-
+- **`brightness_range`** : Tuple or list of two floats. Range for pickinga brightness shift value from.
+- **`shear_range`** : Float. Shear Intensity(Shear angle in counter-clockwise direction in degrees)
+- **`zoom_range`** : Float or [lower, upper]. Range for random zoom.If a float,  `[lower, upper] = [1-zoom_range, 1+zoom_range]` .
 - **`channel_shift_range`** : Float. Range for random channel shifts.
-
-- **`fill_mode`** : One of {"constant", "nearest", "reflect" or "wrap"}.
-Default is 'nearest'.
-Points outside the boundaries of the input are filled
-according to the given mode:
-
-
-- **`cval`** : Float or Int.
-Value used for points outside the boundaries
-when  `fill_mode = "constant"` .
-
+- **`fill_mode`** : One of {"constant", "nearest", "reflect" or "wrap"}.Default is 'nearest'.Points outside the boundaries of the input are filledaccording to the given mode:
+- **`cval`** : Float or Int.Value used for points outside the boundarieswhen  `fill_mode = "constant"` .
 - **`horizontal_flip`** : Boolean. Randomly flip inputs horizontally.
-
 - **`vertical_flip`** : Boolean. Randomly flip inputs vertically.
-
-- **`rescale`** : rescaling factor. Defaults to None.
-If None or 0, no rescaling is applied,
-otherwise we multiply the data by the value provided
-(after applying all other transformations).
-
-- **`preprocessing_function`** : function that will be implied on each input.
-The function will run after the image is resized and augmented.
-The function should take one argument:
-one image (Numpy tensor with rank 3),
-and should output a Numpy tensor with the same shape.
-
-- **`data_format`** : Image data format,
-either "channels_first" or "channels_last".
-"channels_last" mode means that the images should have shape
- `(samples, height, width, channels)` ,
-"channels_first" mode means that the images should have shape
- `(samples, channels, height, width)` .
-It defaults to the  `image_data_format`  value found in your
-Keras config file at  `~/.keras/keras.json` .
-If you never set it, then it will be "channels_last".
-
-- **`validation_split`** : Float. Fraction of images reserved for validation
-(strictly between 0 and 1).
-
+- **`rescale`** : rescaling factor. Defaults to None.If None or 0, no rescaling is applied,otherwise we multiply the data by the value provided(after applying all other transformations).
+- **`preprocessing_function`** : function that will be implied on each input.The function will run after the image is resized and augmented.The function should take one argument:one image (Numpy tensor with rank 3),and should output a Numpy tensor with the same shape.
+- **`data_format`** : Image data format,either "channels_first" or "channels_last"."channels_last" mode means that the images should have shape `(samples, height, width, channels)` ,"channels_first" mode means that the images should have shape `(samples, channels, height, width)` .It defaults to the  `image_data_format`  value found in yourKeras config file at  `~/.keras/keras.json` .If you never set it, then it will be "channels_last".
+- **`validation_split`** : Float. Fraction of images reserved for validation(strictly between 0 and 1).
 - **`dtype`** : Dtype to use for the generated arrays.
-
-
     - float: fraction of total width, if < 1, or pixels if >= 1.
-
     - 1-D array-like: random elements from the array.
-
-    - int: integer number of pixels from interval
- `(-width_shift_range, +width_shift_range)` 
-
-    - With  `width_shift_range=2`  possible values
-are integers  `[-1, 0, +1]` ,
-same as with  `width_shift_range=[-1, 0, +1]` ,
-while with  `width_shift_range=1.0`  possible values are floats
-in the interval [-1.0, +1.0).
-
-
+    - int: integer number of pixels from interval `(-width_shift_range, +width_shift_range)` 
+    - With  `width_shift_range=2`  possible valuesare integers  `[-1, 0, +1]` ,same as with  `width_shift_range=[-1, 0, +1]` ,while with  `width_shift_range=1.0`  possible values are floatsin the interval [-1.0, +1.0).
     - float: fraction of total height, if < 1, or pixels if >= 1.
-
     - 1-D array-like: random elements from the array.
-
-    - int: integer number of pixels from interval
- `(-height_shift_range, +height_shift_range)` 
-
-    - With  `height_shift_range=2`  possible values
-are integers  `[-1, 0, +1]` ,
-same as with  `height_shift_range=[-1, 0, +1]` ,
-while with  `height_shift_range=1.0`  possible values are floats
-in the interval [-1.0, +1.0).
-
-
+    - int: integer number of pixels from interval `(-height_shift_range, +height_shift_range)` 
+    - With  `height_shift_range=2`  possible valuesare integers  `[-1, 0, +1]` ,same as with  `height_shift_range=[-1, 0, +1]` ,while with  `height_shift_range=1.0`  possible values are floatsin the interval [-1.0, +1.0).
     - 'constant': kkkkkkkk|abcd|kkkkkkkk (cval=k)
-
     - 'nearest':  aaaaaaaa|abcd|dddddddd
-
     - 'reflect':  abcddcba|abcd|dcbaabcd
-
     - 'wrap':  abcdabcd|abcd|abcdabcd
-
 
 
 #### Examples:
 Example of using  `.flow(x, y)` :
-
-
 
 ```
  (x_train, y_train), (x_test, y_test) = cifar10.load_data()
@@ -183,8 +89,6 @@ for e in range(epochs):
 
 Example of using  `.flow_from_directory(directory)` :
 
-
-
 ```
  train_datagen = ImageDataGenerator(
         rescale=1./255,
@@ -212,8 +116,6 @@ model.fit_generator(
 ```
 
 Example of transforming images and masks together.
-
-
 
 ```
  # we create two instances with the same arguments
@@ -246,12 +148,8 @@ model.fit_generator(
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/preprocessing/image.py#L466-L519)
-
-
 
 ```
  __init__(
@@ -283,8 +181,6 @@ model.fit_generator(
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Methods
 
 
@@ -300,8 +196,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 ```
 
 Applies a transformation to an image according to given parameters.
-
-
 
 # Arguments
 
@@ -325,8 +219,6 @@ transform_parameters: Dictionary with string - parameter pairs
  
 ```
 
-
-
 # Returns
 
 
@@ -334,8 +226,6 @@ transform_parameters: Dictionary with string - parameter pairs
  A transformed version of the input (same shape).
  
 ```
-
-
 
 ###  `fit` 
 
@@ -352,13 +242,9 @@ transform_parameters: Dictionary with string - parameter pairs
 
 Fits the data generator to some sample data.
 
-This computes the internal data stats related to the
-data-dependent transformations, based on an array of sample data.
+This computes the internal data stats related to thedata-dependent transformations, based on an array of sample data.
 
-Only required if  `featurewise_center`  or
- `featurewise_std_normalization`  or  `zca_whitening`  are set to True.
-
-
+Only required if  `featurewise_center`  or `featurewise_std_normalization`  or  `zca_whitening`  are set to True.
 
 # Arguments
 
@@ -377,8 +263,6 @@ rounds: Int (default: 1).
 seed: Int (default: None). Random seed.
  
 ```
-
-
 
 ###  `flow` 
 
@@ -400,8 +284,6 @@ seed: Int (default: None). Random seed.
 ```
 
 Takes data &amp; label arrays, generates batches of augmented data.
-
-
 
 # Arguments
 
@@ -438,8 +320,6 @@ subset: Subset of data (`"training"` or `"validation"`) if
  
 ```
 
-
-
 # Returns
 
 
@@ -454,8 +334,6 @@ subset: Subset of data (`"training"` or `"validation"`) if
     If `y` is None, only the numpy array `x` is returned.
  
 ```
-
-
 
 ###  `flow_from_dataframe` 
 
@@ -485,12 +363,9 @@ subset: Subset of data (`"training"` or `"validation"`) if
  
 ```
 
-Takes the dataframe and the path to a directory
- and generates batches of augmented/normalized data.
+Takes the dataframe and the path to a directory and generates batches of augmented/normalized data.
 
 **A simple tutorial can be found **[here](http://bit.ly/keras_flow_from_dataframe).
-
-
 
 # Arguments
 
@@ -568,8 +443,6 @@ validate_filenames: Boolean, whether to validate image filenames in
  
 ```
 
-
-
 # Returns
 
 
@@ -580,8 +453,6 @@ of images with shape `(batch_size, *target_size, channels)`
 and `y` is a numpy array of corresponding labels.
  
 ```
-
-
 
 ###  `flow_from_directory` 
 
@@ -607,8 +478,6 @@ and `y` is a numpy array of corresponding labels.
 ```
 
 Takes the path to a directory &amp; generates batches of augmented data.
-
-
 
 # Arguments
 
@@ -681,8 +550,6 @@ interpolation: Interpolation method used to
  
 ```
 
-
-
 # Returns
 
 
@@ -693,8 +560,6 @@ interpolation: Interpolation method used to
     and `y` is a numpy array of corresponding labels.
  
 ```
-
-
 
 ###  `get_random_transform` 
 
@@ -709,8 +574,6 @@ interpolation: Interpolation method used to
 
 Generates random parameters for a transformation.
 
-
-
 # Arguments
 
 
@@ -721,8 +584,6 @@ img_shape: Tuple of integers.
  
 ```
 
-
-
 # Returns
 
 
@@ -731,8 +592,6 @@ img_shape: Tuple of integers.
 transformation.
  
 ```
-
-
 
 ###  `random_transform` 
 
@@ -747,8 +606,6 @@ transformation.
 
 Applies a random transformation to an image.
 
-
-
 # Arguments
 
 
@@ -758,8 +615,6 @@ seed: Random seed.
  
 ```
 
-
-
 # Returns
 
 
@@ -767,8 +622,6 @@ seed: Random seed.
  A randomly transformed version of the input (same shape).
  
 ```
-
-
 
 ###  `standardize` 
 
@@ -780,15 +633,9 @@ seed: Random seed.
 
 Applies the normalization configuration in-place to a batch of inputs.
 
- `x`  is changed in-place since the function is mainly used internally
-to standarize images and feed them to your network. If a copy of  `x` 
-would be created instead it would have a significant performance cost.
-If you want to apply this method without changing the input in-place
-you can call the method creating a copy before:
+ `x`  is changed in-place since the function is mainly used internallyto standarize images and feed them to your network. If a copy of  `x` would be created instead it would have a significant performance cost.If you want to apply this method without changing the input in-placeyou can call the method creating a copy before:
 
 standarize(np.copy(x))
-
-
 
 # Arguments
 
@@ -797,8 +644,6 @@ standarize(np.copy(x))
  x: Batch of inputs to be normalized.
  
 ```
-
-
 
 # Returns
 

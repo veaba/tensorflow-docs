@@ -2,15 +2,7 @@
 
 Converts a text to a sequence of indexes in a fixed-size hashing space.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick)
-
-- [ `tf.compat.v2.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick), [ `tf.compat.v2.keras.preprocessing.text.hashing_trick` ](/api_docs/python/tf/keras/preprocessing/text/hashing_trick)
 
 ```
  tf.keras.preprocessing.text.hashing_trick(
@@ -23,8 +15,6 @@ Converts a text to a sequence of indexes in a fixed-size hashing space.
 )
  
 ```
-
-
 
 # Arguments
 
@@ -45,8 +35,6 @@ split: str. Separator for word splitting.
  
 ```
 
-
-
 # Returns
 
 
@@ -57,9 +45,5 @@ split: str. Separator for word splitting.
 
  `0`  is a reserved index that won't be assigned to any word.
 
-Two or more words may be assigned to the same index, due to possible
-collisions by the hashing function.
-The [probability](https://en.wikipedia.org/wiki/Birthday_problem#Probability_table)
-of a collision is in relation to the dimension of the hashing space and
-the number of distinct objects.
+Two or more words may be assigned to the same index, due to possiblecollisions by the hashing function.The [probability](https://en.wikipedia.org/wiki/Birthday_problem#Probability_table)of a collision is in relation to the dimension of the hashing space andthe number of distinct objects.
 

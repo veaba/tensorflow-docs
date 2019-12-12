@@ -1,7 +1,5 @@
 Built-in activation functions.
 
-
-
 ## Functions
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/activations/deserialize)
 

@@ -1,14 +1,6 @@
 Returns a  `RaggedTensor`  containing the specified sequences of numbers.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.ragged.range` ](/api_docs/python/tf/ragged/range)
-
-- [ `tf.compat.v2.ragged.range` ](/api_docs/python/tf/ragged/range)
-
-
+**Aliases** : [ `tf.compat.v1.ragged.range` ](/api_docs/python/tf/ragged/range), [ `tf.compat.v2.ragged.range` ](/api_docs/python/tf/ragged/range)
 
 ```
  tf.ragged.range(
@@ -24,21 +16,13 @@ Returns a  `RaggedTensor`  containing the specified sequences of numbers.
 
 Each row of the returned  `RaggedTensor`  contains a single sequence:
 
-
-
 ```
  ragged.range(starts, limits, deltas)[i] ==
     tf.range(starts[i], limits[i], deltas[i])
  
 ```
 
-If  `start[i] < limits[i] and deltas[i] > 0` , then  `output[i]`  will be an
-empty list.  Similarly, if  `start[i] > limits[i] and deltas[i] < 0` , then
- `output[i]`  will be an empty list.  This behavior is consistent with the
-Python  `range`  function, but differs from the [ `tf.range` ](https://tensorflow.google.cn/api_docs/python/tf/range) op, which returns
-an error for these cases.
-
-
+If  `start[i] < limits[i] and deltas[i] > 0` , then  `output[i]`  will be anempty list.  Similarly, if  `start[i] > limits[i] and deltas[i] < 0` , then `output[i]`  will be an empty list.  This behavior is consistent with thePython  `range`  function, but differs from the [ `tf.range` ](https://tensorflow.google.cn/api_docs/python/tf/range) op, which returnsan error for these cases.
 
 #### Examples:
 
@@ -53,32 +37,15 @@ an error for these cases.
 
 ```
 
-The input tensors  `starts` ,  `limits` , and  `deltas`  may be scalars or vectors.
-The vector inputs must all have the same size.  Scalar inputs are broadcast
-to match the size of the vector inputs.
-
-
+The input tensors  `starts` ,  `limits` , and  `deltas`  may be scalars or vectors.The vector inputs must all have the same size.  Scalar inputs are broadcastto match the size of the vector inputs.
 
 #### Args:
-
-- **`starts`** : Vector or scalar  `Tensor` .  Specifies the first entry for each range
-if  `limits`  is not  `None` ; otherwise, specifies the range limits, and the
-first entries default to  `0` .
-
-- **`limits`** : Vector or scalar  `Tensor` .  Specifies the exclusive upper limits for
-each range.
-
-- **`deltas`** : Vector or scalar  `Tensor` .  Specifies the increment for each range.
-Defaults to  `1` .
-
-- **`dtype`** : The type of the elements of the resulting tensor.  If not specified,
-then a value is chosen based on the other args.
-
+- **`starts`** : Vector or scalar  `Tensor` .  Specifies the first entry for each rangeif  `limits`  is not  `None` ; otherwise, specifies the range limits, and thefirst entries default to  `0` .
+- **`limits`** : Vector or scalar  `Tensor` .  Specifies the exclusive upper limits foreach range.
+- **`deltas`** : Vector or scalar  `Tensor` .  Specifies the increment for each range.Defaults to  `1` .
+- **`dtype`** : The type of the elements of the resulting tensor.  If not specified,then a value is chosen based on the other args.
 - **`name`** : A name for the operation.
-
-- **`row_splits_dtype`** :  `dtype`  for the returned  `RaggedTensor` 's  `row_splits` 
-tensor.  One of [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
-
+- **`row_splits_dtype`** :  `dtype`  for the returned  `RaggedTensor` 's  `row_splits` tensor.  One of [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
 
 
 #### Returns:

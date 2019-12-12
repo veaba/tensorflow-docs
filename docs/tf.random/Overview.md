@@ -1,11 +1,7 @@
 Public API for tf.random namespace.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/random/experimental) module: Public API for tf.random.experimental namespace.
-
-
 
 ## Functions
 [ `all_candidate_sampler(...)` ](https://tensorflow.google.cn/api_docs/python/tf/random/all_candidate_sampler): Generate the set of all classes.

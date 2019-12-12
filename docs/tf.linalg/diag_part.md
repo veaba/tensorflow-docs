@@ -1,16 +1,6 @@
 Returns the batched diagonal part of a batched tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part)
-
-- [ `tf.compat.v1.matrix_diag_part` ](/api_docs/python/tf/linalg/diag_part)
-
-- [ `tf.compat.v2.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part)
-
-
+**Aliases** : [ `tf.compat.v1.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part), [ `tf.compat.v1.matrix_diag_part` ](/api_docs/python/tf/linalg/diag_part), [ `tf.compat.v2.linalg.diag_part` ](/api_docs/python/tf/linalg/diag_part)
 
 ```
  tf.linalg.diag_part(
@@ -22,19 +12,11 @@ Returns the batched diagonal part of a batched tensor.
  
 ```
 
-Returns a tensor with the  `k[0]` -th to  `k[1]` -th diagonals of the batched
- `input` .
+Returns a tensor with the  `k[0]` -th to  `k[1]` -th diagonals of the batched `input` .
 
-Assume  `input`  has  `r`  dimensions  `[I, J, ..., L, M, N]` .
-Let  `max_diag_len`  be the maximum length among all diagonals to be extracted,
- `max_diag_len = min(M + min(k[1], 0), N + min(-k[0], 0))` 
-Let  `num_diags`  be the number of diagonals to extract,
- `num_diags = k[1] - k[0] + 1` .
+Assume  `input`  has  `r`  dimensions  `[I, J, ..., L, M, N]` .Let  `max_diag_len`  be the maximum length among all diagonals to be extracted, `max_diag_len = min(M + min(k[1], 0), N + min(-k[0], 0))` Let  `num_diags`  be the number of diagonals to extract, `num_diags = k[1] - k[0] + 1` .
 
-If  `num_diags == 1` , the output tensor is of rank  `r - 1`  with shape
- `[I, J, ..., L, max_diag_len]`  and values:
-
-
+If  `num_diags == 1` , the output tensor is of rank  `r - 1`  with shape `[I, J, ..., L, max_diag_len]`  and values:
 
 ```
  diagonal[i, j, ..., l, n]
@@ -45,10 +27,7 @@ If  `num_diags == 1` , the output tensor is of rank  `r - 1`  with shape
 
 where  `y = max(-k[1], 0)` ,  `x = max(k[1], 0)` .
 
-Otherwise, the output tensor has rank  `r`  with dimensions
- `[I, J, ..., L, num_diags, max_diag_len]`  with values:
-
-
+Otherwise, the output tensor has rank  `r`  with dimensions `[I, J, ..., L, num_diags, max_diag_len]`  with values:
 
 ```
  diagonal[i, j, ..., l, m, n]
@@ -60,8 +39,6 @@ Otherwise, the output tensor has rank  `r`  with dimensions
 where  `d = k[1] - m` ,  `y = max(-d, 0)` , and  `x = max(d, 0)` .
 
 The input must be at least a matrix.
-
-
 
 #### For example:
 
@@ -103,22 +80,11 @@ tf.matrix_diag_part(input, k = (1, 3), padding = 9)
  
 ```
 
-
-
 #### Args:
-
 - **`input`** : A  `Tensor`  with  `rank k >= 2` .
-
 - **`name`** : A name for the operation (optional).
-
-- **`k`** : Diagonal offset(s). Positive value means superdiagonal, 0 refers to the
-main diagonal, and negative value means subdiagonals.  `k`  can be a single
-integer (for a single diagonal) or a pair of integers specifying the low
-and high ends of a matrix band.  `k[0]`  must not be larger than  `k[1]` .
-
-- **`padding_value`** : The value to fill the area outside the specified diagonal
-band with. Default is 0.
-
+- **`k`** : Diagonal offset(s). Positive value means superdiagonal, 0 refers to themain diagonal, and negative value means subdiagonals.  `k`  can be a singleinteger (for a single diagonal) or a pair of integers specifying the lowand high ends of a matrix band.  `k[0]`  must not be larger than  `k[1]` .
+- **`padding_value`** : The value to fill the area outside the specified diagonalband with. Default is 0.
 
 
 #### Returns:

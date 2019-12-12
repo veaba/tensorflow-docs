@@ -1,7 +1,5 @@
 Public API for tf.train.experimental namespace.
 
-
-
 ## Classes
 [ `class DynamicLossScale` ](https://tensorflow.google.cn/api_docs/python/tf/train/experimental/DynamicLossScale): Loss scale that dynamically adjusts itself.
 
@@ -12,8 +10,6 @@ Public API for tf.train.experimental namespace.
 [ `class MixedPrecisionLossScaleOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/experimental/MixedPrecisionLossScaleOptimizer): An optimizer that applies loss scaling.
 
 [ `class PythonState` ](https://tensorflow.google.cn/api_docs/python/tf/train/experimental/PythonState): A mixin for putting Python state in an object-based checkpoint.
-
-
 
 ## Functions
 [ `disable_mixed_precision_graph_rewrite(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/experimental/disable_mixed_precision_graph_rewrite): Disables the mixed precision graph rewrite.

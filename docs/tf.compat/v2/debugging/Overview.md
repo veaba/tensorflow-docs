@@ -1,7 +1,5 @@
 Public API for tf.debugging namespace.
 
-
-
 ## Functions
 [ `Assert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert): Asserts that the given condition is true.
 

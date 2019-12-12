@@ -1,14 +1,6 @@
 Copies data from  `src`  to  `dst` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.io.gfile.copy` ](/api_docs/python/tf/io/gfile/copy)
-
-- [ `tf.compat.v2.io.gfile.copy` ](/api_docs/python/tf/io/gfile/copy)
-
-
+**Aliases** : [ `tf.compat.v1.io.gfile.copy` ](/api_docs/python/tf/io/gfile/copy), [ `tf.compat.v2.io.gfile.copy` ](/api_docs/python/tf/io/gfile/copy)
 
 ```
  tf.io.gfile.copy(
@@ -19,20 +11,11 @@ Copies data from  `src`  to  `dst` .
  
 ```
 
-
-
 #### Args:
-
 - **`src`** : string, name of the file whose contents need to be copied
-
 - **`dst`** : string, name of the file to which to copy to
-
-- **`overwrite`** : boolean, if false it's an error for  `dst`  to be occupied by an
-existing file.
-
+- **`overwrite`** : boolean, if false it's an error for  `dst`  to be occupied by anexisting file.
 
 
 #### Raises:
-
 - **[ `errors.OpError` ](/api_docs/python/tf/errors/OpError)** : If the operation fails.
-

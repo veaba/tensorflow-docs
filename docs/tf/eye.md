@@ -1,20 +1,6 @@
 Construct an identity matrix, or a batch of matrices.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.eye` ](/api_docs/python/tf/eye)
-
-- [ `tf.compat.v1.linalg.eye` ](/api_docs/python/tf/eye)
-
-- [ `tf.compat.v2.eye` ](/api_docs/python/tf/eye)
-
-- [ `tf.compat.v2.linalg.eye` ](/api_docs/python/tf/eye)
-
-- [ `tf.linalg.eye` ](/api_docs/python/tf/eye)
-
-
+**Aliases** : [ `tf.compat.v1.eye` ](/api_docs/python/tf/eye), [ `tf.compat.v1.linalg.eye` ](/api_docs/python/tf/eye), [ `tf.compat.v2.eye` ](/api_docs/python/tf/eye), [ `tf.compat.v2.linalg.eye` ](/api_docs/python/tf/eye), [ `tf.linalg.eye` ](/api_docs/python/tf/eye)
 
 ```
  tf.eye(
@@ -26,8 +12,6 @@ Construct an identity matrix, or a batch of matrices.
 )
  
 ```
-
-
 
 ```
  # Construct one identity matrix.
@@ -46,24 +30,12 @@ tf.eye(2, num_columns=3)
  
 ```
 
-
-
 #### Args:
-
-- **`num_rows`** : Non-negative  `int32`  scalar  `Tensor`  giving the number of rows
-in each batch matrix.
-
-- **`num_columns`** : Optional non-negative  `int32`  scalar  `Tensor`  giving the number
-of columns in each batch matrix.  Defaults to  `num_rows` .
-
-- **`batch_shape`** :  A list or tuple of Python integers or a 1-D  `int32`   `Tensor` .
-If provided, the returned  `Tensor`  will have leading batch dimensions of
-this shape.
-
+- **`num_rows`** : Non-negative  `int32`  scalar  `Tensor`  giving the number of rowsin each batch matrix.
+- **`num_columns`** : Optional non-negative  `int32`  scalar  `Tensor`  giving the numberof columns in each batch matrix.  Defaults to  `num_rows` .
+- **`batch_shape`** :  A list or tuple of Python integers or a 1-D  `int32`   `Tensor` .If provided, the returned  `Tensor`  will have leading batch dimensions ofthis shape.
 - **`dtype`** :  The type of an element in the resulting  `Tensor` 
-
 - **`name`** :  A name for this  `Op` .  Defaults to "eye".
-
 
 
 #### Returns:

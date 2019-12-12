@@ -1,27 +1,12 @@
 Transposes  `a` .
 
-
-
 ```
- tf.compat.v1.transpose(
-    a,
-    perm=None,
-    name='transpose',
-    conjugate=False
-)
- 
+ tf.compat.v1.transpose(    a,    perm=None,    name='transpose',    conjugate=False) 
 ```
 
 Permutes the dimensions according to  `perm` .
 
-The returned tensor's dimension i will correspond to the input dimension
- `perm[i]` . If  `perm`  is not given, it is set to (n-1...0), where n is
-the rank of the input tensor. Hence by default, this operation performs a
-regular matrix transpose on 2-D input Tensors. If conjugate is True and
- `a.dtype`  is either  `complex64`  or  `complex128`  then the values of  `a` 
-are conjugated and transposed.
-
-
+The returned tensor's dimension i will correspond to the input dimension `perm[i]` . If  `perm`  is not given, it is set to (n-1...0), where n isthe rank of the input tensor. Hence by default, this operation performs aregular matrix transpose on 2-D input Tensors. If conjugate is True and `a.dtype`  is either  `complex64`  or  `complex128`  then the values of  `a` are conjugated and transposed.
 
 #### For example:
 
@@ -61,30 +46,18 @@ tf.transpose(x, perm=[0, 2, 1])  # [[[1,  4],
  
 ```
 
-
-
 #### Args:
-
 - **`a`** : A  `Tensor` .
-
 - **`perm`** : A permutation of the dimensions of  `a` .
-
 - **`name`** : A name for the operation (optional).
-
-- **`conjugate`** : Optional bool. Setting it to  `True`  is mathematically equivalent
-to tf.math.conj(tf.transpose(input)).
-
+- **`conjugate`** : Optional bool. Setting it to  `True`  is mathematically equivalentto tf.math.conj(tf.transpose(input)).
 
 
 #### Returns:
 A transposed  `Tensor` .
 
-
-
 #### Numpy Compatibility
-In  `numpy`  transposes are memory-efficient constant time operations as they
-simply return a new view of the same data with adjusted  `strides` .
+In  `numpy`  transposes are memory-efficient constant time operations as theysimply return a new view of the same data with adjusted  `strides` .
 
-TensorFlow does not support strides, so  `transpose`  returns a new tensor with
-the items permuted.
+TensorFlow does not support strides, so  `transpose`  returns a new tensor withthe items permuted.
 

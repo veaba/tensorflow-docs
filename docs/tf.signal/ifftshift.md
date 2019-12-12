@@ -1,14 +1,6 @@
 The inverse of fftshift.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.signal.ifftshift` ](/api_docs/python/tf/signal/ifftshift)
-
-- [ `tf.compat.v2.signal.ifftshift` ](/api_docs/python/tf/signal/ifftshift)
-
-
+**Aliases** : [ `tf.compat.v1.signal.ifftshift` ](/api_docs/python/tf/signal/ifftshift), [ `tf.compat.v2.signal.ifftshift` ](/api_docs/python/tf/signal/ifftshift)
 
 ```
  tf.signal.ifftshift(
@@ -19,10 +11,7 @@ The inverse of fftshift.
  
 ```
 
-Although identical for even-length x,
-the functions differ by one sample for odd-length x.
-
-
+Although identical for even-length x,the functions differ by one sample for odd-length x.
 
 #### For example:
 
@@ -33,25 +22,15 @@ x.numpy() # array([[ 4., -4.,  3.],[-2., -1., -3.],[ 1.,  2.,  0.]])
  
 ```
 
-
-
 #### Args:
-
 - **`x`** :  `Tensor` , input tensor.
-
-- **`axes`** :  `int`  or shape  `tuple`  Axes over which to calculate. Defaults to None,
-which shifts all axes.
-
+- **`axes`** :  `int`  or shape  `tuple`  Axes over which to calculate. Defaults to None,which shifts all axes.
 - **`name`** : An optional name for the operation.
-
 
 
 #### Returns:
 A  `Tensor` , The shifted tensor.
 
-
-
 #### Numpy Compatibility
-Equivalent to numpy.fft.ifftshift.
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.fft.ifftshift.html
+Equivalent to numpy.fft.ifftshift.https://docs.scipy.org/doc/numpy/reference/generated/numpy.fft.ifftshift.html
 

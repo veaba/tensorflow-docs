@@ -2,17 +2,7 @@
 
 Returns the element-wise argument of a complex (or real) tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.angle` ](/api_docs/python/tf/math/angle)
-
-- [ `tf.compat.v1.math.angle` ](/api_docs/python/tf/math/angle)
-
-- [ `tf.compat.v2.math.angle` ](/api_docs/python/tf/math/angle)
-
-
+**Aliases** : [ `tf.compat.v1.angle` ](/api_docs/python/tf/math/angle), [ `tf.compat.v1.math.angle` ](/api_docs/python/tf/math/angle), [ `tf.compat.v2.math.angle` ](/api_docs/python/tf/math/angle)
 
 ```
  tf.math.angle(
@@ -22,17 +12,11 @@ Returns the element-wise argument of a complex (or real) tensor.
  
 ```
 
-Given a tensor  `input` , this operation returns a tensor of type  `float`  that
-is the argument of each element in  `input`  considered as a complex number.
+Given a tensor  `input` , this operation returns a tensor of type  `float`  thatis the argument of each element in  `input`  considered as a complex number.
 
-The elements in  `input`  are considered to be complex numbers of the form
-a+bj, where <em>a</em> is the real part and <em>b</em> is the imaginary part.
-If  `input`  is real then <em>b</em> is zero by definition.
+The elements in  `input`  are considered to be complex numbers of the form\(a + bj\), where *a* is the real part and *b* is the imaginary part.If  `input`  is real then *b* is zero by definition.
 
-The argument returned by this function is of the form atan2(b,a).
-If  `input`  is real, a tensor of all zeros is returned.
-
-
+The argument returned by this function is of the form atan2(b,a).If  `input`  is real, a tensor of all zeros is returned.
 
 #### For example:
 
@@ -44,15 +28,9 @@ tf.math.angle(input).numpy()
  
 ```
 
-
-
 #### Args:
-
-- **`input`** : A  `Tensor` . Must be one of the following types:  `float` ,  `double` ,
- `complex64` ,  `complex128` .
-
+- **`input`** : A  `Tensor` . Must be one of the following types:  `float` ,  `double` , `complex64` ,  `complex128` .
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

@@ -1,13 +1,5 @@
 Experimental context manager for use when defining a custom summary op.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.summary.experimental.summary_scope` ](/api_docs/python/tf/summary/experimental/summary_scope)
-
-
-
 ```
  tf.summary.experimental.summary_scope(
     name,
@@ -17,18 +9,11 @@ Experimental context manager for use when defining a custom summary op.
  
 ```
 
-This behaves similarly to [ `tf.name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/name_scope), except that it returns a generated
-summary tag in addition to the scope name. The tag is structurally similar to
-the scope name - derived from the user-provided name, prefixed with enclosing
-name scopes if any - but we relax the constraint that it be uniquified, as
-well as the character set limitation (so the user-provided name can contain
-characters not legal for scope names; in the scope name these are removed).
+This behaves similarly to [ `tf.name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/name_scope), except that it returns a generatedsummary tag in addition to the scope name. The tag is structurally similar tothe scope name - derived from the user-provided name, prefixed with enclosingname scopes if any - but we relax the constraint that it be uniquified, aswell as the character set limitation (so the user-provided name can containcharacters not legal for scope names; in the scope name these are removed).
 
 This makes the summary tag more predictable and consistent for the user.
 
 For example, to define a new summary op called  `my_op` :
-
-
 
 ```
  def my_op(name, my_value, step):
@@ -38,16 +23,10 @@ For example, to define a new summary op called  `my_op` :
  
 ```
 
-
-
 #### Args:
-
 - **`name`** : string name for the summary.
-
 - **`default_name`** : Optional; if provided, used as default name of the summary.
-
 - **`values`** : Optional; passed as  `values`  parameter to name_scope.
-
 
 
 #### Yields:

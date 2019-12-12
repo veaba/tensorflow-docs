@@ -1,11 +1,7 @@
 Public API for tf.lite.experimental namespace.
 
-
-
 ## Modules
 [ `nn` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/experimental/nn) module: Public API for tf.lite.experimental.nn namespace.
-
-
 
 ## Functions
 [ `convert_op_hints_to_stubs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/experimental/convert_op_hints_to_stubs): Converts a graphdef with LiteOp hints into stub operations.

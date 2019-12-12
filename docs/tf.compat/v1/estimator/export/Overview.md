@@ -2,8 +2,6 @@ All public utility methods for exporting Estimator to SavedModel.
 
 This file includes functions and constants from core (model_utils) and export.py
 
-
-
 ## Classes
 [ `class ClassificationOutput` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/ClassificationOutput): Represents the output of a classification head.
 
@@ -16,8 +14,6 @@ This file includes functions and constants from core (model_utils) and export.py
 [ `class ServingInputReceiver` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/ServingInputReceiver): A return type for a serving_input_receiver_fn.
 
 [ `class TensorServingInputReceiver` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/TensorServingInputReceiver): A return type for a serving_input_receiver_fn.
-
-
 
 ## Functions
 [ `build_parsing_serving_input_receiver_fn(...)` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export/build_parsing_serving_input_receiver_fn): Build a serving_input_receiver_fn expecting fed tf.Examples.

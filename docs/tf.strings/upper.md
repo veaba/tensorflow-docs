@@ -1,16 +1,6 @@
-Defined in generated file:  `python/ops/gen_string_ops.py` 
-
 TODO: add doc.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.strings.upper` ](/api_docs/python/tf/strings/upper)
-
-- [ `tf.compat.v2.strings.upper` ](/api_docs/python/tf/strings/upper)
-
-
+**Aliases** : [ `tf.compat.v1.strings.upper` ](/api_docs/python/tf/strings/upper), [ `tf.compat.v2.strings.upper` ](/api_docs/python/tf/strings/upper)
 
 ```
  tf.strings.upper(
@@ -21,16 +11,10 @@ TODO: add doc.
  
 ```
 
-
-
 #### Args:
-
 - **`input`** : A  `Tensor`  of type  `string` .
-
 - **`encoding`** : An optional  `string` . Defaults to  `""` .
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

@@ -1,22 +1,16 @@
 Use Keras-style variable management.
 
+```
+ tf.compat.v1.layers.experimental.set_keras_style() 
+```
 
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.layers.experimental.set_keras_style()
-</code></pre></devsite-code>
-All tf.layers and tf RNN cells created after keras style ha been enabled
-use Keras-style variable management.  Creating such layers with a
-scope= argument is disallowed, and reuse=True is disallowed.
+All tf.layers and tf RNN cells created after keras style ha been enableduse Keras-style variable management.  Creating such layers with ascope= argument is disallowed, and reuse=True is disallowed.
 
-The purpose of this function is to allow users of existing layers to
-slowly transition to Keras layers API without breaking existing
-functionality.
+The purpose of this function is to allow users of existing layers toslowly transition to Keras layers API without breaking existingfunctionality.
 
 For more details, see the documentation for  `keras_style_scope` .
 
-Note, once keras style has been set, it is set globally for the entire
-program and cannot be unset.
-
-
+Note, once keras style has been set, it is set globally for the entireprogram and cannot be unset.
 
 #### Example:
 

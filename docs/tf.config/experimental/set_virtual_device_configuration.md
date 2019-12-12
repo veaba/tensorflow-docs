@@ -1,14 +1,6 @@
 Set the virtual device configuration for a PhysicalDevice.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration)
-
-- [ `tf.compat.v2.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration)
-
-
+**Aliases** : [ `tf.compat.v1.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration), [ `tf.compat.v2.config.experimental.set_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/set_virtual_device_configuration)
 
 ```
  tf.config.experimental.set_virtual_device_configuration(
@@ -18,20 +10,11 @@ Set the virtual device configuration for a PhysicalDevice.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
-
-A PhysicalDevice marked as visible will by default have a single LogicalDevice
-allocated to it once the runtime is configured. Specifying a list of
-tf.config.experimental.VirtualDeviceConfiguration objects allows multiple
-devices to be configured that utilize the same PhysicalDevice.
+A PhysicalDevice marked as visible will by default have a single LogicalDeviceallocated to it once the runtime is configured. Specifying a list oftf.config.experimental.VirtualDeviceConfiguration objects allows multipledevices to be configured that utilize the same PhysicalDevice.
 
 The following example splits the CPU into 2 virtual devices:
-
-
 
 ```
  physical_devices = tf.config.experimental.list_physical_devices('CPU')
@@ -57,8 +40,6 @@ except:
 ```
 
 The following example splits the GPU into 2 virtual devices with 100 MB each:
-
-
 
 ```
  physical_devices = tf.config.experimental.list_physical_devices('GPU')
@@ -86,11 +67,6 @@ except:
  
 ```
 
-
-
 #### Args:
-
 - **`device`** : (optional) Need to update
-
 - **`virtual_devices`** : (optional) Need to update
-

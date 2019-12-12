@@ -1,14 +1,6 @@
-Multiplies 2 tensors (and/or variables) and returns a <em>tensor</em>.
+Multiplies 2 tensors (and/or variables) and returns a *tensor*.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot)
-
-- [ `tf.compat.v2.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot), [ `tf.compat.v2.keras.backend.dot` ](/api_docs/python/tf/keras/backend/dot)
 
 ```
  tf.keras.backend.dot(
@@ -18,24 +10,15 @@ Multiplies 2 tensors (and/or variables) and returns a <em>tensor</em>.
  
 ```
 
-When attempting to multiply a nD tensor
-with a nD tensor, it reproduces the Theano behavior.
-(e.g.  `(2, 3) * (4, 3, 5) -> (2, 4, 5)` )
-
-
+When attempting to multiply a nD tensorwith a nD tensor, it reproduces the Theano behavior.(e.g.  `(2, 3) * (4, 3, 5) -> (2, 4, 5)` )
 
 #### Arguments:
-
 - **`x`** : Tensor or variable.
-
 - **`y`** : Tensor or variable.
-
 
 
 #### Returns:
 A tensor, dot product of  `x`  and  `y` .
-
-
 
 #### Examples:
 
@@ -50,8 +33,6 @@ A tensor, dot product of  `x`  and  `y` .
  
 ```
 
-
-
 ```
      # dot product between tensors
     >>> x = K.placeholder(shape=(32, 28, 3))
@@ -61,8 +42,6 @@ A tensor, dot product of  `x`  and  `y` .
     <tf.Tensor 'MatMul_9:0' shape=(32, 28, 4) dtype=float32>
  
 ```
-
-
 
 ```
      # Theano-like behavior example

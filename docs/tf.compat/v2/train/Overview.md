@@ -2,12 +2,8 @@ Support for training models.
 
 See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/train/experimental) module: Public API for tf.train.experimental namespace.
-
-
 
 ## Classes
 [ `class BytesList` ](https://tensorflow.google.cn/api_docs/python/tf/train/BytesList): A ProtocolMessage
@@ -43,8 +39,6 @@ See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 [ `class SequenceExample` ](https://tensorflow.google.cn/api_docs/python/tf/train/SequenceExample): A ProtocolMessage
 
 [ `class ServerDef` ](https://tensorflow.google.cn/api_docs/python/tf/train/ServerDef): A ProtocolMessage
-
-
 
 ## Functions
 [ `checkpoints_iterator(...)` ](https://tensorflow.google.cn/api_docs/python/tf/train/checkpoints_iterator): Continuously yield new checkpoint files as they appear.

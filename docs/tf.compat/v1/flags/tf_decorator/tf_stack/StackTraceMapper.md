@@ -5,33 +5,19 @@ Allows remapping traceback information to different source code.
 
 Inherits From: [ `StackTraceTransform` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceTransform)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.app.flags.tf_decorator.tf_stack.StackTraceMapper` ](/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/StackTraceMapper)
-
-
-
 ## Methods
 
 
 ###  `__enter__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L59-L75)
 
-
-
 ```
  __enter__()
  
 ```
 
-
-
 ###  `__exit__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L77-L79)
-
-
 
 ```
  __exit__(
@@ -42,12 +28,8 @@ Inherits From: [ `StackTraceTransform` ](https://tensorflow.google.cn/api_docs/p
  
 ```
 
-
-
 ###  `get_effective_source_map` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L92-L94)
-
-
 
 ```
  get_effective_source_map()
@@ -56,12 +38,8 @@ Inherits From: [ `StackTraceTransform` ](https://tensorflow.google.cn/api_docs/p
 
 Returns a map (filename, lineno) -> (filename, lineno, function_name).
 
-
-
 ###  `reset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/util/tf_stack.py#L89-L90)
-
-
 
 ```
  reset()

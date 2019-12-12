@@ -1,14 +1,6 @@
 Return histogram of values.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width)
-
-- [ `tf.compat.v2.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width)
-
-
+**Aliases** : [ `tf.compat.v1.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width), [ `tf.compat.v2.histogram_fixed_width` ](/api_docs/python/tf/histogram_fixed_width)
 
 ```
  tf.histogram_fixed_width(
@@ -21,40 +13,22 @@ Return histogram of values.
  
 ```
 
-Given the tensor  `values` , this operation returns a rank 1 histogram counting
-the number of entries in  `values`  that fell into every bin.  The bins are
-equal width and determined by the arguments  `value_range`  and  `nbins` .
-
-
+Given the tensor  `values` , this operation returns a rank 1 histogram countingthe number of entries in  `values`  that fell into every bin.  The bins areequal width and determined by the arguments  `value_range`  and  `nbins` .
 
 #### Args:
-
 - **`values`** :  Numeric  `Tensor` .
-
-- **`value_range`** :  Shape [2]  `Tensor`  of same  `dtype`  as  `values` .
-values <= value_range[0] will be mapped to hist[0],
-values >= value_range[1] will be mapped to hist[-1].
-
+- **`value_range`** :  Shape [2]  `Tensor`  of same  `dtype`  as  `values` .values <= value_range[0] will be mapped to hist[0],values >= value_range[1] will be mapped to hist[-1].
 - **`nbins`** :  Scalar  `int32 Tensor` .  Number of histogram bins.
-
 - **`dtype`** :  dtype for returned histogram.
-
 - **`name`** :  A name for this operation (defaults to 'histogram_fixed_width').
-
 
 
 #### Returns:
 A 1-D  `Tensor`  holding histogram of values.
 
-
-
 #### Raises:
-
 - **`TypeError`** : If any unsupported dtype is provided.
-
-- **[ `tf.errors.InvalidArgumentError` ](/api_docs/python/tf/errors/InvalidArgumentError)** : If value_range does not
-satisfy value_range[0] < value_range[1].
-
+- **[ `tf.errors.InvalidArgumentError` ](/api_docs/python/tf/errors/InvalidArgumentError)** : If value_range does notsatisfy value_range[0] < value_range[1].
 
 
 #### Examples:

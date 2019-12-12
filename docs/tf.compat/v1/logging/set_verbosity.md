@@ -1,5 +1,6 @@
 Sets the threshold for what messages will be logged.
 
+```
+ tf.compat.v1.logging.set_verbosity(v) 
+```
 
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.logging.set_verbosity(v)
-</code></pre></devsite-code>

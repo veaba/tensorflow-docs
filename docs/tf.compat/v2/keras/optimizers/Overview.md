@@ -1,17 +1,7 @@
 Built-in optimizer classes.
 
-
-
-### Aliases:
-
-- Module [ `tf.compat.v2.optimizers` ](/api_docs/python/tf/compat/v2/keras/optimizers)
-
-
-
 ## Modules
 [ `schedules` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/keras/optimizers/schedules) module: Public API for tf.keras.optimizers.schedules namespace.
-
-
 
 ## Classes
 [ `class Adadelta` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adadelta): Optimizer that implements the Adadelta algorithm.
@@ -31,8 +21,6 @@ Built-in optimizer classes.
 [ `class RMSprop` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/RMSprop): Optimizer that implements the RMSprop algorithm.
 
 [ `class SGD` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/SGD): Stochastic gradient descent and momentum optimizer.
-
-
 
 ## Functions
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/deserialize): Inverse of the  `serialize`  function.

@@ -5,15 +5,7 @@ Hook to run evaluation in training without a checkpoint.
 
 Inherits From: [ `SessionRunHook` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/SessionRunHook)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook)
-
-- Class [ `tf.compat.v2.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook)
-
-
+**Aliases** : [ `tf.compat.v1.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook), [ `tf.compat.v2.estimator.experimental.InMemoryEvaluatorHook` ](/api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook)
 
 #### Example:
 
@@ -37,21 +29,13 @@ estimator.train(train_input_fn, hooks=[evaluator])
 
 Current limitations of this approach are:
 
-
 - It doesn't support multi-node distributed mode.
-
-- It doesn't support saveable objects other than variables (such as boosted
-tree support)
-
-- It doesn't support custom saver logic (such as ExponentialMovingAverage
-support)
-
+- It doesn't support saveable objects other than variables (such as boostedtree support)
+- It doesn't support custom saver logic (such as ExponentialMovingAveragesupport)
 
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
-
-
 
 ```
  __init__(
@@ -67,61 +51,29 @@ support)
 
 Initializes a  `InMemoryEvaluatorHook` .
 
-
-
 #### Args:
-
 - **`estimator`** : A [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) instance to call evaluate.
-
-- **`input_fn`** :  Equivalent to the  `input_fn`  arg to  `estimator.evaluate` . A
-function that constructs the input data for evaluation.
-See [Creating input functions](https://tensorflow.org/guide/premade_estimators#create_input_functions)
-for more information. The function should construct and return one of
-the following:
+- **`input_fn`** :  Equivalent to the  `input_fn`  arg to  `estimator.evaluate` . Afunction that constructs the input data for evaluation.See [Creating input functions](https://tensorflow.org/guide/premade_estimators#create_input_functions)for more information. The function should construct and return one ofthe following:
 
 
-
-- **`steps`** : Equivalent to the  `steps`  arg to  `estimator.evaluate` .  Number of
-steps for which to evaluate model. If  `None` , evaluates until  `input_fn` 
-raises an end-of-input exception.
+- **`steps`** : Equivalent to the  `steps`  arg to  `estimator.evaluate` .  Number ofsteps for which to evaluate model. If  `None` , evaluates until  `input_fn` raises an end-of-input exception.
 
 
-
-- **`hooks`** : Equivalent to the  `hooks`  arg to  `estimator.evaluate` . List of
- `SessionRunHook`  subclass instances. Used for callbacks inside the
-evaluation call.
+- **`hooks`** : Equivalent to the  `hooks`  arg to  `estimator.evaluate` . List of `SessionRunHook`  subclass instances. Used for callbacks inside theevaluation call.
 
 
-
-- **`name`** :  Equivalent to the  `name`  arg to  `estimator.evaluate` . Name of the
-evaluation if user needs to run multiple evaluations on different data
-sets, such as on training data vs test data. Metrics for different
-evaluations are saved in separate folders, and appear separately in
-tensorboard.
-
+- **`name`** :  Equivalent to the  `name`  arg to  `estimator.evaluate` . Name of theevaluation if user needs to run multiple evaluations on different datasets, such as on training data vs test data. Metrics for differentevaluations are saved in separate folders, and appear separately intensorboard.
 
 
 - **`every_n_iter`** :  `int` , runs the evaluator once every N training iteration.
 
 
-
-
-    - A 'tf.data.Dataset' object: Outputs of  `Dataset`  object must be a
-tuple (features, labels) with same constraints as below.
-
-    - A tuple (features, labels): Where  `features`  is a  `Tensor`  or a
-dictionary of string feature name to  `Tensor`  and  `labels`  is a
- `Tensor`  or a dictionary of string label name to  `Tensor` . Both
- `features`  and  `labels`  are consumed by  `model_fn` . They should
-satisfy the expectation of  `model_fn`  from inputs.
-
+    - A 'tf.data.Dataset' object: Outputs of  `Dataset`  object must be atuple (features, labels) with same constraints as below.
+    - A tuple (features, labels): Where  `features`  is a  `Tensor`  or adictionary of string feature name to  `Tensor`  and  `labels`  is a `Tensor`  or a dictionary of string label name to  `Tensor` . Both `features`  and  `labels`  are consumed by  `model_fn` . They shouldsatisfy the expectation of  `model_fn`  from inputs.
 
 
 #### Raises:
-
-- **`ValueError`** : if  `every_n_iter`  is non-positive or it's not a single machine
-training
-
+- **`ValueError`** : if  `every_n_iter`  is non-positive or it's not a single machinetraining
 
 
 ## Methods
@@ -129,8 +81,6 @@ training
 
 ###  `after_create_session` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
-
-
 
 ```
  after_create_session(
@@ -142,12 +92,8 @@ training
 
 Does first run which shows the eval metrics before training.
 
-
-
 ###  `after_run` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
-
-
 
 ```
  after_run(
@@ -159,12 +105,8 @@ Does first run which shows the eval metrics before training.
 
 Runs evaluator.
 
-
-
 ###  `before_run` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/session_run_hook.py#L129-L150)
-
-
 
 ```
  before_run(run_context)
@@ -173,35 +115,21 @@ Runs evaluator.
 
 Called before each call to run().
 
-You can return from this call a  `SessionRunArgs`  object indicating ops or
-tensors to add to the upcoming  `run()`  call.  These ops/tensors will be run
-together with the ops/tensors originally passed to the original run() call.
-The run args you return can also contain feeds to be added to the run()
-call.
+You can return from this call a  `SessionRunArgs`  object indicating ops ortensors to add to the upcoming  `run()`  call.  These ops/tensors will be runtogether with the ops/tensors originally passed to the original run() call.The run args you return can also contain feeds to be added to the run()call.
 
-The  `run_context`  argument is a  `SessionRunContext`  that provides
-information about the upcoming  `run()`  call: the originally requested
-op/tensors, the TensorFlow Session.
+The  `run_context`  argument is a  `SessionRunContext`  that providesinformation about the upcoming  `run()`  call: the originally requestedop/tensors, the TensorFlow Session.
 
 At this point graph is finalized and you can not add ops.
 
-
-
 #### Args:
-
 - **`run_context`** : A  `SessionRunContext`  object.
-
 
 
 #### Returns:
 None or a  `SessionRunArgs`  object.
 
-
-
 ###  `begin` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
-
-
 
 ```
  begin()
@@ -210,12 +138,8 @@ None or a  `SessionRunArgs`  object.
 
 Build eval graph and restoring op.
 
-
-
 ###  `end` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/hooks/hooks.py)
-
-
 
 ```
  end(session)

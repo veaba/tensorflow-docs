@@ -3,8 +3,6 @@
 ## Class  `VirtualDevices` 
 A ProtocolMessage
 
-
-
 ## Properties
 
 

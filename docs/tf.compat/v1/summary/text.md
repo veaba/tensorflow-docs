@@ -1,42 +1,24 @@
 Summarizes textual data.
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.summary.text(
+```
+ tf.compat.v1.summary.text(
     name,
     tensor,
     collections=None
 )
-</code></pre></devsite-code>
-Text data summarized via this plugin will be visible in the Text Dashboard
-in TensorBoard. The standard TensorBoard Text Dashboard will render markdown
-in the strings, and will automatically organize 1d and 2d tensors into tables.
-If a tensor with more than 2 dimensions is provided, a 2d subarray will be
-displayed along with a warning message. (Note that this behavior is not
-intrinsic to the text summary api, but rather to the default TensorBoard text
-plugin.)
+ 
+```
 
-
+Text data summarized via this plugin will be visible in the Text Dashboardin TensorBoard. The standard TensorBoard Text Dashboard will render markdownin the strings, and will automatically organize 1d and 2d tensors into tables.If a tensor with more than 2 dimensions is provided, a 2d subarray will bedisplayed along with a warning message. (Note that this behavior is notintrinsic to the text summary api, but rather to the default TensorBoard textplugin.)
 
 #### Args:
-
-- **`name`** : A name for the generated node. Will also serve as a series name in
-TensorBoard.
-
+- **`name`** : A name for the generated node. Will also serve as a series name inTensorBoard.
 - **`tensor`** : a string-type Tensor to summarize.
-
-- **`collections`** : Optional list of ops.GraphKeys.  The collections to add the
-summary to.  Defaults to [_ops.GraphKeys.SUMMARIES]
-
+- **`collections`** : Optional list of ops.GraphKeys.  The collections to add thesummary to.  Defaults to [_ops.GraphKeys.SUMMARIES]
 
 
 #### Returns:
-A TensorSummary op that is configured so that TensorBoard will recognize
-that it contains textual data. The TensorSummary is a scalar  `Tensor`  of
-type  `string`  which contains  `Summary`  protobufs.
-
-
+A TensorSummary op that is configured so that TensorBoard will recognizethat it contains textual data. The TensorSummary is a scalar  `Tensor`  oftype  `string`  which contains  `Summary`  protobufs.
 
 #### Raises:
-
 - **`ValueError`** : If tensor has the wrong type.
-

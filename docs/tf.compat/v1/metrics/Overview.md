@@ -1,7 +1,5 @@
 Evaluation-related metrics.
 
-
-
 ## Functions
 [ `accuracy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/metrics/accuracy): Calculates how often  `predictions`  matches  `labels` .
 

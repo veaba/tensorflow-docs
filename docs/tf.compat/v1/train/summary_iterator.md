@@ -1,14 +1,12 @@
 An iterator for reading  `Event`  protocol buffers from an event file.
 
+```
+ tf.compat.v1.train.summary_iterator(path) 
+```
 
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.train.summary_iterator(path)
-</code></pre></devsite-code>
-You can use this function to read events written to an event file. It returns
-a Python iterator that yields  `Event`  protocol buffers.
+You can use this function to read events written to an event file. It returnsa Python iterator that yields  `Event`  protocol buffers.
 
 Example: Print the contents of an events file.
-
-
 
 ```
  for e in tf.compat.v1.train.summary_iterator(path to events file):
@@ -17,8 +15,6 @@ Example: Print the contents of an events file.
 ```
 
 Example: Print selected summary values.
-
-
 
 ```
  # This example supposes that the events file contains summaries with a
@@ -32,18 +28,10 @@ for e in tf.compat.v1.train.summary_iterator(path to events file):
  
 ```
 
-See the protocol buffer definitions of
-[Event](https://tensorflow.google.cn/code/tensorflow/core/util/event.proto)
-and
-[Summary](https://tensorflow.google.cn/code/tensorflow/core/framework/summary.proto)
-for more information about their attributes.
-
-
+See the protocol buffer definitions of[Event](https://tensorflow.google.cn/code/tensorflow/core/util/event.proto)and[Summary](https://tensorflow.google.cn/code/tensorflow/core/framework/summary.proto)for more information about their attributes.
 
 #### Args:
-
 - **`path`** : The path to an event file created by a  `SummaryWriter` .
-
 
 
 #### Yields:

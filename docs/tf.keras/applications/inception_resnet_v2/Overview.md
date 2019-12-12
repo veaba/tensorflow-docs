@@ -1,7 +1,5 @@
 Inception-ResNet V2 model for Keras.
 
-
-
 ## Functions
 [ `InceptionResNetV2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/InceptionResNetV2)
 

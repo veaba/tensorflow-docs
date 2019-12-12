@@ -5,8 +5,6 @@ TensorFlow multi-step profiler.
 
 https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/README.md
 
-
-
 ```
  Typical use case:
   # Currently we are only allowed to create 1 profiler per process.
@@ -42,12 +40,8 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/RE
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L166-L184)
-
-
 
 ```
  __init__(
@@ -59,16 +53,9 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/profiler/RE
 
 Constructor.
 
-
-
 #### Args:
-
-- **`graph`** : tf.Graph. If None and eager execution is not enabled, use
-default graph.
-
-- **`op_log`** : optional. tensorflow::tfprof::OpLogProto proto. Used to define
-extra op types.
-
+- **`graph`** : tf.Graph. If None and eager execution is not enabled, usedefault graph.
+- **`op_log`** : optional. tensorflow::tfprof::OpLogProto proto. Used to defineextra op types.
 
 
 ## Methods
@@ -76,8 +63,6 @@ extra op types.
 
 ###  `add_step` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L189-L205)
-
-
 
 ```
  add_step(
@@ -89,22 +74,13 @@ extra op types.
 
 Add statistics of a step.
 
-
-
 #### Args:
-
-- **`step`** : int, An id used to group one or more different  `run_meta`  together.
-When profiling with the profile_xxx APIs, user can use the  `step` 
-id in the  `options`  to profile these  `run_meta`  together.
-
+- **`step`** : int, An id used to group one or more different  `run_meta`  together.When profiling with the profile_xxx APIs, user can use the  `step` id in the  `options`  to profile these  `run_meta`  together.
 - **`run_meta`** : RunMetadata proto that contains statistics of a session run.
-
 
 
 ###  `advise` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L279-L291)
-
-
 
 ```
  advise(options)
@@ -113,23 +89,15 @@ id in the  `options`  to profile these  `run_meta`  together.
 
 Automatically detect problems and generate reports.
 
-
-
 #### Args:
-
 - **`options`** : A dict of options. See ALL_ADVICE example above.
-
 
 
 #### Returns:
 A Advise proto that conains the reports from all checkers.
 
-
-
 ###  `profile_graph` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L262-L277)
-
-
 
 ```
  profile_graph(options)
@@ -138,23 +106,15 @@ A Advise proto that conains the reports from all checkers.
 
 Profile the statistics of graph nodes, organized by dataflow graph.
 
-
-
 #### Args:
-
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
-
 
 
 #### Returns:
 a GraphNodeProto that records the results.
 
-
-
 ###  `profile_name_scope` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L245-L260)
-
-
 
 ```
  profile_name_scope(options)
@@ -163,23 +123,15 @@ a GraphNodeProto that records the results.
 
 Profile the statistics of graph nodes, organized by name scope.
 
-
-
 #### Args:
-
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
-
 
 
 #### Returns:
 a GraphNodeProto that records the results.
 
-
-
 ###  `profile_operations` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L228-L243)
-
-
 
 ```
  profile_operations(options)
@@ -188,23 +140,15 @@ a GraphNodeProto that records the results.
 
 Profile the statistics of the Operation types (e.g. MatMul, Conv2D).
 
-
-
 #### Args:
-
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
-
 
 
 #### Returns:
 a MultiGraphNodeProto that records the results.
 
-
-
 ###  `profile_python` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L207-L226)
-
-
 
 ```
  profile_python(options)
@@ -213,27 +157,17 @@ a MultiGraphNodeProto that records the results.
 
 Profile the statistics of the Python codes.
 
-By default, it shows the call stack from root. To avoid
-  redundant output, you may use options to filter as below
-    options['show_name_regexes'] = ['.<em>my_code.py.</em>']
-
-
+By default, it shows the call stack from root. To avoid  redundant output, you may use options to filter as below    options['show_name_regexes'] = ['.*my_code.py.*']
 
 #### Args:
-
 - **`options`** : A dict of options. See core/profiler/g3doc/options.md.
-
 
 
 #### Returns:
 a MultiGraphNodeProto that records the results.
 
-
-
 ###  `serialize_to_string` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/profiler/model_analyzer.py#L293-L302)
-
-
 
 ```
  serialize_to_string()
@@ -242,10 +176,7 @@ a MultiGraphNodeProto that records the results.
 
 Serialize the ProfileProto to a binary string.
 
-Users can write it to file for offline analysis by tfprof commandline
-  or graphical interface.
-
-
+Users can write it to file for offline analysis by tfprof commandline  or graphical interface.
 
 #### Returns:
 ProfileProto binary string.

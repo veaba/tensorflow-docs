@@ -1,14 +1,6 @@
 Return a tensor with the same shape and contents as input.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.identity` ](/api_docs/python/tf/identity)
-
-- [ `tf.compat.v2.identity` ](/api_docs/python/tf/identity)
-
-
+**Aliases** : [ `tf.compat.v1.identity` ](/api_docs/python/tf/identity), [ `tf.compat.v2.identity` ](/api_docs/python/tf/identity)
 
 ```
  tf.identity(
@@ -18,12 +10,8 @@ Return a tensor with the same shape and contents as input.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Eager execution](https://tensorflow.google.cn/guide/eager)
-
 
 
 #### For example:
@@ -39,14 +27,9 @@ print(a_identity.numpy()) #[0.7853982]
  
 ```
 
-
-
 #### Args:
-
 - **`input`** : A  `Tensor` .
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

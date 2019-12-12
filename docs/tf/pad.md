@@ -1,13 +1,5 @@
 Pads a tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.pad` ](/api_docs/python/tf/pad)
-
-
-
 ```
  tf.pad(
     tensor,
@@ -19,21 +11,11 @@ Pads a tensor.
  
 ```
 
-This operation pads a  `tensor`  according to the  `paddings`  you specify.
- `paddings`  is an integer tensor with shape  `[n, 2]` , where n is the rank of
- `tensor` . For each dimension D of  `input` ,  `paddings[D, 0]`  indicates how
-many values to add before the contents of  `tensor`  in that dimension, and
- `paddings[D, 1]`  indicates how many values to add after the contents of
- `tensor`  in that dimension. If  `mode`  is "REFLECT" then both  `paddings[D, 0]` 
-and  `paddings[D, 1]`  must be no greater than  `tensor.dim_size(D) - 1` . If
- `mode`  is "SYMMETRIC" then both  `paddings[D, 0]`  and  `paddings[D, 1]`  must be
-no greater than  `tensor.dim_size(D)` .
+This operation pads a  `tensor`  according to the  `paddings`  you specify. `paddings`  is an integer tensor with shape  `[n, 2]` , where n is the rank of `tensor` . For each dimension D of  `input` ,  `paddings[D, 0]`  indicates howmany values to add before the contents of  `tensor`  in that dimension, and `paddings[D, 1]`  indicates how many values to add after the contents of `tensor`  in that dimension. If  `mode`  is "REFLECT" then both  `paddings[D, 0]` and  `paddings[D, 1]`  must be no greater than  `tensor.dim_size(D) - 1` . If `mode`  is "SYMMETRIC" then both  `paddings[D, 0]`  and  `paddings[D, 1]`  must beno greater than  `tensor.dim_size(D)` .
 
 The padded size of each dimension D of the output is:
 
  `paddings[D, 0] + tensor.dim_size(D) + paddings[D, 1]` 
-
-
 
 #### For example:
 
@@ -60,29 +42,16 @@ tf.pad(t, paddings, "SYMMETRIC")  # [[2, 1, 1, 2, 3, 3, 2],
  
 ```
 
-
-
 #### Args:
-
 - **`tensor`** : A  `Tensor` .
-
 - **`paddings`** : A  `Tensor`  of type  `int32` .
-
 - **`mode`** : One of "CONSTANT", "REFLECT", or "SYMMETRIC" (case-insensitive)
-
-- **`constant_values`** : In "CONSTANT" mode, the scalar pad value to use. Must be
-same type as  `tensor` .
-
+- **`constant_values`** : In "CONSTANT" mode, the scalar pad value to use. Must besame type as  `tensor` .
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:
 A  `Tensor` . Has the same type as  `tensor` .
 
-
-
 #### Raises:
-
 - **`ValueError`** : When mode is not one of "CONSTANT", "REFLECT", or "SYMMETRIC".
-

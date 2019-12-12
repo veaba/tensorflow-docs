@@ -1,7 +1,5 @@
 Returns a linear prediction  `Tensor`  based on given  `feature_columns` .
 
-
-
 ```
  tf.compat.v1.feature_column.linear_model(
     features,
@@ -15,15 +13,9 @@ Returns a linear prediction  `Tensor`  based on given  `feature_columns` .
  
 ```
 
-This function generates a weighted sum based on output dimension  `units` .
-Weighted sum refers to logits in classification problems. It refers to the
-prediction itself for linear regression problems.
+This function generates a weighted sum based on output dimension  `units` .Weighted sum refers to logits in classification problems. It refers to theprediction itself for linear regression problems.
 
-Note on supported columns:  `linear_model`  treats categorical columns as
- `indicator_column` s. To be specific, assume the input as  `SparseTensor`  looks
-like:
-
-
+Note on supported columns:  `linear_model`  treats categorical columns as `indicator_column` s. To be specific, assume the input as  `SparseTensor`  lookslike:
 
 ```
    shape = [2, 2]
@@ -35,12 +27,7 @@ like:
  
 ```
 
- `linear_model`  assigns weights for the presence of "a", "b", "c' implicitly,
-just like  `indicator_column` , while  `input_layer`  explicitly requires wrapping
-each of categorical columns with an  `embedding_column`  or an
- `indicator_column` .
-
-
+ `linear_model`  assigns weights for the presence of "a", "b", "c' implicitly,just like  `indicator_column` , while  `input_layer`  explicitly requires wrappingeach of categorical columns with an  `embedding_column`  or an `indicator_column` .
 
 #### Example of usage:
 
@@ -56,10 +43,7 @@ prediction = linear_model(features, columns)
  
 ```
 
-The  `sparse_combiner`  argument works as follows
-For example, for two features represented as the categorical columns:
-
-
+The  `sparse_combiner`  argument works as followsFor example, for two features represented as the categorical columns:
 
 ```
    # Feature 1
@@ -83,10 +67,7 @@ For example, for two features represented as the categorical columns:
  
 ```
 
-with  `sparse_combiner`  as "mean", the linear model outputs consequently
-are:
-
-
+with  `sparse_combiner`  as "mean", the linear model outputs consequentlyare:
 
 ```
    y_0 = 1.0 / 2.0 * ( w_a + w_b ) + w_d + b
@@ -94,70 +75,23 @@ are:
  
 ```
 
-where  `y_i`  is the output,  `b`  is the bias, and  `w_x`  is the weight
-assigned to the presence of  `x`  in the input features.
-
-
+where  `y_i`  is the output,  `b`  is the bias, and  `w_x`  is the weightassigned to the presence of  `x`  in the input features.
 
 #### Args:
-
-- **`features`** : A mapping from key to tensors.  `_FeatureColumn` s look up via these
-keys. For example  `numeric_column('price')`  will look at 'price' key in
-this dict. Values are  `Tensor`  or  `SparseTensor`  depending on
-corresponding  `_FeatureColumn` .
-
-- **`feature_columns`** : An iterable containing the FeatureColumns to use as inputs
-to your model. All items should be instances of classes derived from
- `_FeatureColumn` s.
-
+- **`features`** : A mapping from key to tensors.  `_FeatureColumn` s look up via thesekeys. For example  `numeric_column('price')`  will look at 'price' key inthis dict. Values are  `Tensor`  or  `SparseTensor`  depending oncorresponding  `_FeatureColumn` .
+- **`feature_columns`** : An iterable containing the FeatureColumns to use as inputsto your model. All items should be instances of classes derived from `_FeatureColumn` s.
 - **`units`** : An integer, dimensionality of the output space. Default value is 1.
-
-- **`sparse_combiner`** : A string specifying how to reduce if a categorical column
-is multivalent. Except  `numeric_column` , almost all columns passed to
- `linear_model`  are considered as categorical columns.  It combines each
-categorical column independently. Currently "mean", "sqrtn" and "sum" are
-supported, with "sum" the default for linear model. "sqrtn" often achieves
-good accuracy, in particular with bag-of-words columns.
-
-
-- **`weight_collections`** : A list of collection names to which the Variable will be
-added. Note that, variables will also be added to collections
- `tf.GraphKeys.GLOBAL_VARIABLES`  and  `ops.GraphKeys.MODEL_VARIABLES` .
-
-- **`trainable`** : If  `True`  also add the variable to the graph collection
- `GraphKeys.TRAINABLE_VARIABLES`  (see [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable)).
-
-- **`cols_to_vars`** : If not  `None` , must be a dictionary that will be filled with a
-mapping from  `_FeatureColumn`  to associated list of  `Variable` s.  For
-example, after the call, we might have cols_to_vars = {
-_NumericColumn(
-  key='numeric_feature1', shape=(1,):
-[<tf.variable 'linear_model="" price2="" weights:0'="" shape="(1," 1)="">],
-'bias': [<tf.variable 'linear_model="" bias_weights:0'="" shape="(1,)">],
-_NumericColumn(
-  key='numeric_feature2', shape=(2,)):
-[<tf.variable 'linear_model="" price1="" weights:0'="" shape="(2," 1)="">]}
-If a column creates no variables, its value will be an empty list. Note
-that cols_to_vars will also contain a string key 'bias' that maps to a
-list of Variables.</tf.variable></tf.variable></tf.variable>
-
-
+- **`sparse_combiner`** : A string specifying how to reduce if a categorical columnis multivalent. Except  `numeric_column` , almost all columns passed to `linear_model`  are considered as categorical columns.  It combines eachcategorical column independently. Currently "mean", "sqrtn" and "sum" aresupported, with "sum" the default for linear model. "sqrtn" often achievesgood accuracy, in particular with bag-of-words columns.
+- **`weight_collections`** : A list of collection names to which the Variable will beadded. Note that, variables will also be added to collections `tf.GraphKeys.GLOBAL_VARIABLES`  and  `ops.GraphKeys.MODEL_VARIABLES` .
+- **`trainable`** : If  `True`  also add the variable to the graph collection `GraphKeys.TRAINABLE_VARIABLES`  (see [ `tf.Variable` ](https://tensorflow.google.cn/api_docs/python/tf/Variable)).
+- **`cols_to_vars`** : If not  `None` , must be a dictionary that will be filled with amapping from  `_FeatureColumn`  to associated list of  `Variable` s.  Forexample, after the call, we might have cols_to_vars = {_NumericColumn(  key='numeric_feature1', shape=(1,):[<tf.variable 'linear_model="" price2="" weights:0'="" shape="(1," 1)="">],'bias': [<tf.variable 'linear_model="" bias_weights:0'="" shape="(1,)">],_NumericColumn(  key='numeric_feature2', shape=(2,)):[<tf.variable 'linear_model="" price1="" weights:0'="" shape="(2," 1)="">]}If a column creates no variables, its value will be an empty list. Notethat cols_to_vars will also contain a string key 'bias' that maps to alist of Variables.</tf.variable></tf.variable></tf.variable>
     - "sum": do not normalize features in the column
-
     - "mean": do l1 normalization on features in the column
-
     - "sqrtn": do l2 normalization on features in the column
 
 
-
 #### Returns:
-A  `Tensor`  which represents predictions/logits of a linear model. Its shape
-is (batch_size, units) and its dtype is  `float32` .
-
-
+A  `Tensor`  which represents predictions/logits of a linear model. Its shapeis (batch_size, units) and its dtype is  `float32` .
 
 #### Raises:
-
-- **`ValueError`** : if an item in  `feature_columns`  is neither a  `_DenseColumn` 
-nor  `_CategoricalColumn` .
-
+- **`ValueError`** : if an item in  `feature_columns`  is neither a  `_DenseColumn` nor  `_CategoricalColumn` .

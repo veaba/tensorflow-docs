@@ -1,16 +1,6 @@
 Reshapes a  `SparseTensor`  to represent values in a new dense shape.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.reshape` ](/api_docs/python/tf/sparse/reshape)
-
-- [ `tf.compat.v1.sparse_reshape` ](/api_docs/python/tf/sparse/reshape)
-
-- [ `tf.compat.v2.sparse.reshape` ](/api_docs/python/tf/sparse/reshape)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.reshape` ](/api_docs/python/tf/sparse/reshape), [ `tf.compat.v1.sparse_reshape` ](/api_docs/python/tf/sparse/reshape), [ `tf.compat.v2.sparse.reshape` ](/api_docs/python/tf/sparse/reshape)
 
 ```
  tf.sparse.reshape(
@@ -21,21 +11,11 @@ Reshapes a  `SparseTensor`  to represent values in a new dense shape.
  
 ```
 
-This operation has the same semantics as  `reshape`  on the represented dense
-tensor.  The indices of non-empty values in  `sp_input`  are recomputed based
-on the new dense shape, and a new  `SparseTensor`  is returned containing the
-new indices and new shape.  The order of non-empty values in  `sp_input`  is
-unchanged.
+This operation has the same semantics as  `reshape`  on the represented densetensor.  The indices of non-empty values in  `sp_input`  are recomputed basedon the new dense shape, and a new  `SparseTensor`  is returned containing thenew indices and new shape.  The order of non-empty values in  `sp_input`  isunchanged.
 
-If one component of  `shape`  is the special value -1, the size of that
-dimension is computed so that the total dense size remains constant.  At
-most one component of  `shape`  can be -1.  The number of dense elements
-implied by  `shape`  must be the same as the number of dense elements
-originally represented by  `sp_input` .
+If one component of  `shape`  is the special value -1, the size of thatdimension is computed so that the total dense size remains constant.  Atmost one component of  `shape`  can be -1.  The number of dense elementsimplied by  `shape`  must be the same as the number of dense elementsoriginally represented by  `sp_input` .
 
 For example, if  `sp_input`  has shape  `[2, 3, 6]`  and  `indices`  /  `values` :
-
-
 
 ```
  [0, 0, 0]: a
@@ -46,10 +26,7 @@ For example, if  `sp_input`  has shape  `[2, 3, 6]`  and  `indices`  /  `values`
  
 ```
 
-and  `shape`  is  `[9, -1]` , then the output will be a  `SparseTensor`  of
-shape  `[9, 4]`  and  `indices`  /  `values` :
-
-
+and  `shape`  is  `[9, -1]` , then the output will be a  `SparseTensor`  ofshape  `[9, 4]`  and  `indices`  /  `values` :
 
 ```
  [0, 0]: a
@@ -60,31 +37,16 @@ shape  `[9, 4]`  and  `indices`  /  `values` :
  
 ```
 
-
-
 #### Args:
-
 - **`sp_input`** : The input  `SparseTensor` .
-
-- **`shape`** : A 1-D (vector) int64  `Tensor`  specifying the new dense shape of the
-represented  `SparseTensor` .
-
+- **`shape`** : A 1-D (vector) int64  `Tensor`  specifying the new dense shape of therepresented  `SparseTensor` .
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-
 #### Returns:
-A  `SparseTensor`  with the same non-empty values but with indices calculated
-by the new dense shape.
-
-
+A  `SparseTensor`  with the same non-empty values but with indices calculatedby the new dense shape.
 
 #### Raises:
-
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
-
-- **`ValueError`** :  If argument  `shape`  requests a  `SparseTensor`  with a different
-number of elements than  `sp_input` .
-
+- **`ValueError`** :  If argument  `shape`  requests a  `SparseTensor`  with a differentnumber of elements than  `sp_input` .
 - **`ValueError`** :  If  `shape`  has more than one inferred (== -1) dimension.
-

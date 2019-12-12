@@ -3,14 +3,6 @@
 ## Class  `StaticHashTable` 
 A generic hash table that is immutable once initialized.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v2.lookup.StaticHashTable` ](/api_docs/python/tf/lookup/StaticHashTable)
-
-
-
 #### Example usage:
 
 
@@ -24,12 +16,8 @@ print(table.lookup(input_tensor))
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/lookup_ops.py#L262-L291)
-
-
 
 ```
  __init__(
@@ -42,28 +30,16 @@ print(table.lookup(input_tensor))
 
 Creates a non-initialized  `HashTable`  object.
 
-Creates a table, the type of its keys and values are specified by the
-initializer.
-Before using the table you will have to initialize it. After initialization
-the table will be immutable.
-
-
+Creates a table, the type of its keys and values are specified by theinitializer.Before using the table you will have to initialize it. After initializationthe table will be immutable.
 
 #### Args:
-
-- **`initializer`** : The table initializer to use. See  `HashTable`  kernel for
-supported key and value types.
-
+- **`initializer`** : The table initializer to use. See  `HashTable`  kernel forsupported key and value types.
 - **`default_value`** : The value to use if a key is missing in the table.
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:
 A  `HashTable`  object.
-
-
 
 ## Properties
 
@@ -71,35 +47,23 @@ A  `HashTable`  object.
 ###  `default_value` 
 The default value of the table.
 
-
-
 ###  `key_dtype` 
 The table key dtype.
-
-
 
 ###  `name` 
 The name of the table.
 
-
-
 ###  `resource_handle` 
 Returns the resource handle associated with this Resource.
 
-
-
 ###  `value_dtype` 
 The table value dtype.
-
-
 
 ## Methods
 
 
 ###  `export` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/lookup_ops.py#L309-L325)
-
-
 
 ```
  export(name=None)
@@ -108,24 +72,15 @@ The table value dtype.
 
 Returns tensors of all keys and values in the table.
 
-
-
 #### Args:
-
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-A pair of tensors with the first tensor containing all keys and the
-  second tensors containing all values in the table.
-
-
+A pair of tensors with the first tensor containing all keys and the  second tensors containing all values in the table.
 
 ###  `lookup` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/lookup_ops.py#L201-L236)
-
-
 
 ```
  lookup(
@@ -139,32 +94,20 @@ Looks up  `keys`  in a table, outputs the corresponding values.
 
 The  `default_value`  is used for keys not present in the table.
 
-
-
 #### Args:
-
 - **`keys`** : Keys to look up. May be either a  `SparseTensor`  or dense  `Tensor` .
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:
 A  `SparseTensor`  if keys are sparse, otherwise a dense  `Tensor` .
 
-
-
 #### Raises:
-
-- **`TypeError`** : when  `keys`  or  `default_value`  doesn't match the table data
-types.
-
+- **`TypeError`** : when  `keys`  or  `default_value`  doesn't match the table datatypes.
 
 
 ###  `size` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/lookup_ops.py#L189-L199)
-
-
 
 ```
  size(name=None)
@@ -173,12 +116,8 @@ types.
 
 Compute the number of elements in this table.
 
-
-
 #### Args:
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

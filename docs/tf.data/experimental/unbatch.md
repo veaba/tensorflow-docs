@@ -1,14 +1,6 @@
 Splits elements of a dataset into multiple elements on the batch dimension. (deprecated)
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch)
-
-- [ `tf.compat.v2.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch)
-
-
+**Aliases** : [ `tf.compat.v1.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch), [ `tf.compat.v2.data.experimental.unbatch` ](/api_docs/python/tf/data/experimental/unbatch)
 
 ```
  tf.data.experimental.unbatch()
@@ -16,15 +8,8 @@ Splits elements of a dataset into multiple elements on the batch dimension. (dep
 ```
 
 
-<aside class="warning">**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.
-Instructions for updating:
-Use [ `tf.data.Dataset.unbatch()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#unbatch).</aside>
-For example, if elements of the dataset are shaped  `[B, a0, a1, ...]` ,
-where  `B`  may vary for each input element, then for each element in the
-dataset, the unbatched dataset will contain  `B`  consecutive elements
-of shape  `[a0, a1, ...]` .
-
-
+**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use [ `tf.data.Dataset.unbatch()` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#unbatch).
+For example, if elements of the dataset are shaped  `[B, a0, a1, ...]` ,where  `B`  may vary for each input element, then for each element in thedataset, the unbatched dataset will contain  `B`  consecutive elementsof shape  `[a0, a1, ...]` .
 
 ```
  # NOTE: The following example uses `{ ... }` to represent the contents
@@ -36,9 +21,6 @@ a.apply(tf.data.experimental.unbatch()) == {
  
 ```
 
-
-
 #### Returns:
-A  `Dataset`  transformation function, which can be passed to
-[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
+A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 

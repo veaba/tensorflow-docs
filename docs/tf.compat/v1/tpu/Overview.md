@@ -1,16 +1,10 @@
 Ops related to Tensor Processing Units.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/experimental) module: Public API for tf.tpu.experimental namespace.
 
-
-
 ## Classes
 [ `class CrossShardOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/CrossShardOptimizer): An optimizer that averages gradients across TPU shards.
-
-
 
 ## Functions
 [ `batch_parallel(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tpu/batch_parallel): Shards  `computation`  along the batch dimension for parallel execution.

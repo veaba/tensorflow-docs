@@ -1,7 +1,5 @@
 Public API for tf.profiler namespace.
 
-
-
 ## Classes
 [ `class AdviceProto` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/AdviceProto): A ProtocolMessage
 
@@ -14,8 +12,6 @@ Public API for tf.profiler namespace.
 [ `class ProfileOptionBuilder` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/ProfileOptionBuilder): Option Builder for Profiling API.
 
 [ `class Profiler` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/Profiler): TensorFlow multi-step profiler.
-
-
 
 ## Functions
 [ `advise(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/profiler/advise): Auto profile and advise.

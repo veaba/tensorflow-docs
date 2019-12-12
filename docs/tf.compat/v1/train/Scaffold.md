@@ -3,69 +3,30 @@
 ## Class  `Scaffold` 
 Structure to create or gather pieces commonly needed to train a model.
 
-
-
 ### Used in the guide:
-
 - [Training checkpoints](https://tensorflow.google.cn/guide/checkpoint)
+When you build a model for training you usually need ops to initializevariables, a  `Saver`  to checkpoint them, an op to collect summaries forthe visualizer, and so on.
 
-When you build a model for training you usually need ops to initialize
-variables, a  `Saver`  to checkpoint them, an op to collect summaries for
-the visualizer, and so on.
+Various libraries built on top of the core TensorFlow library take care ofcreating some or all of these pieces and storing them in well knowncollections in the graph.  The  `Scaffold`  class helps pick these pieces fromthe graph collections, creating and adding them to the collections if needed.
 
-Various libraries built on top of the core TensorFlow library take care of
-creating some or all of these pieces and storing them in well known
-collections in the graph.  The  `Scaffold`  class helps pick these pieces from
-the graph collections, creating and adding them to the collections if needed.
+If you call the scaffold constructor without any arguments, it will pickpieces from the collections, creating default ones if needed when `scaffold.finalize()`  is called.  You can pass arguments to the constructor toprovide your own pieces.  Pieces that you pass to the constructor are notadded to the graph collections.
 
-If you call the scaffold constructor without any arguments, it will pick
-pieces from the collections, creating default ones if needed when
- `scaffold.finalize()`  is called.  You can pass arguments to the constructor to
-provide your own pieces.  Pieces that you pass to the constructor are not
-added to the graph collections.
+The following pieces are directly accessible as attributes of the  `Scaffold` object:
 
-The following pieces are directly accessible as attributes of the  `Scaffold` 
-object:
-
-
--  `saver` : A [ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver) object taking care of saving the
-variables.
-Picked from and stored into the  `SAVERS`  collection in the graph by default.
-
--  `init_op` : An op to run to initialize the variables.  Picked from and
-stored into the  `INIT_OP`  collection in the graph by default.
-
--  `ready_op` : An op to verify that the variables are initialized.  Picked
-from and stored into the  `READY_OP`  collection in the graph by default.
-
--  `ready_for_local_init_op` : An op to verify that global state has been
-initialized and it is alright to run  `local_init_op` .  Picked from and
-stored into the  `READY_FOR_LOCAL_INIT_OP`  collection in the graph by
-default. This is needed when the initialization of local variables depends
-on the values of global variables.
-
--  `local_init_op` : An op to initialize the local variables.  Picked
-from and stored into the  `LOCAL_INIT_OP`  collection in the graph by default.
-
--  `summary_op` : An op to run and merge the summaries in the graph.  Picked
-from and stored into the  `SUMMARY_OP`  collection in the graph by default.
-
+-  `saver` : A [ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver) object taking care of saving thevariables.Picked from and stored into the  `SAVERS`  collection in the graph by default.
+-  `init_op` : An op to run to initialize the variables.  Picked from andstored into the  `INIT_OP`  collection in the graph by default.
+-  `ready_op` : An op to verify that the variables are initialized.  Pickedfrom and stored into the  `READY_OP`  collection in the graph by default.
+-  `ready_for_local_init_op` : An op to verify that global state has beeninitialized and it is alright to run  `local_init_op` .  Picked from andstored into the  `READY_FOR_LOCAL_INIT_OP`  collection in the graph bydefault. This is needed when the initialization of local variables dependson the values of global variables.
+-  `local_init_op` : An op to initialize the local variables.  Pickedfrom and stored into the  `LOCAL_INIT_OP`  collection in the graph by default.
+-  `summary_op` : An op to run and merge the summaries in the graph.  Pickedfrom and stored into the  `SUMMARY_OP`  collection in the graph by default.
 You can also pass the following additional pieces to the constructor:
 
-
--  `init_feed_dict` : A session feed dictionary that should be used when
-running the init op.
-
--  `init_fn` : A callable to run after the init op to perform additional
-initializations.  The callable will be called as
- `init_fn(scaffold, session)` .
-
+-  `init_feed_dict` : A session feed dictionary that should be used whenrunning the init op.
+-  `init_fn` : A callable to run after the init op to perform additionalinitializations.  The callable will be called as `init_fn(scaffold, session)` .
 
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L107-L182)
-
-
 
 ```
  __init__(
@@ -84,48 +45,16 @@ initializations.  The callable will be called as
 
 Create a scaffold.
 
-
-
 #### Args:
-
 - **`init_op`** : Optional op for initializing variables.
-
-- **`init_feed_dict`** : Optional session feed dictionary to use when running the
-init_op.
-
-- **`init_fn`** : Optional function to use to initialize the model after running
-the init_op.  Will be called as  `init_fn(scaffold, session)` .
-
-- **`ready_op`** : Optional op to verify that the variables are initialized.  Must
-return an empty 1D string tensor when the variables are initialized, or
-a non-empty 1D string tensor listing the names of the non-initialized
-variables.
-
-- **`ready_for_local_init_op`** : Optional op to verify that the global variables
-are initialized and  `local_init_op`  can be run. Must return an empty 1D
-string tensor when the global variables are initialized, or a non-empty
-1D string tensor listing the names of the non-initialized global
-variables.
-
+- **`init_feed_dict`** : Optional session feed dictionary to use when running theinit_op.
+- **`init_fn`** : Optional function to use to initialize the model after runningthe init_op.  Will be called as  `init_fn(scaffold, session)` .
+- **`ready_op`** : Optional op to verify that the variables are initialized.  Mustreturn an empty 1D string tensor when the variables are initialized, ora non-empty 1D string tensor listing the names of the non-initializedvariables.
+- **`ready_for_local_init_op`** : Optional op to verify that the global variablesare initialized and  `local_init_op`  can be run. Must return an empty 1Dstring tensor when the global variables are initialized, or a non-empty1D string tensor listing the names of the non-initialized globalvariables.
 - **`local_init_op`** : Optional op to initialize local variables.
-
-- **`summary_op`** : Optional op to gather all summaries.  Must return a scalar
-string tensor containing a serialized  `Summary`  proto.
-
-- **`saver`** : Optional [ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver) object to use to save and
-restore variables.  May also be a [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint) object, in which
-case object-based checkpoints are saved. This will also load some
-object-based checkpoints saved from elsewhere, but that loading may be
-fragile since it uses fixed keys rather than performing a full
-graph-based match. For example if a variable has two paths from the
- `Checkpoint`  object because two  `Model`  objects share the  `Layer`  object
-that owns it, removing one  `Model`  may change the keys and break
-checkpoint loading through this API, whereas a graph-based match would
-match the variable through the other  `Model` .
-
-- **`copy_from_scaffold`** : Optional scaffold object to copy fields from. Its
-fields will be overwritten by the provided fields in this function.
-
+- **`summary_op`** : Optional op to gather all summaries.  Must return a scalarstring tensor containing a serialized  `Summary`  proto.
+- **`saver`** : Optional [ `tf.compat.v1.train.Saver` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/Saver) object to use to save andrestore variables.  May also be a [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint) object, in whichcase object-based checkpoints are saved. This will also load someobject-based checkpoints saved from elsewhere, but that loading may befragile since it uses fixed keys rather than performing a fullgraph-based match. For example if a variable has two paths from the `Checkpoint`  object because two  `Model`  objects share the  `Layer`  objectthat owns it, removing one  `Model`  may change the keys and breakcheckpoint loading through this API, whereas a graph-based match wouldmatch the variable through the other  `Model` .
+- **`copy_from_scaffold`** : Optional scaffold object to copy fields from. Itsfields will be overwritten by the provided fields in this function.
 
 
 ## Properties
@@ -161,8 +90,6 @@ fields will be overwritten by the provided fields in this function.
 ###  `default_local_init_op` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L292-L308)
 
-
-
 ```
  @staticmethod
 default_local_init_op()
@@ -171,23 +98,13 @@ default_local_init_op()
 
 Returns an op that groups the default local init ops.
 
-This op is used during session initialization when a Scaffold is
-initialized without specifying the local_init_op arg. It includes
-[ `tf.compat.v1.local_variables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/local_variables_initializer),
-[ `tf.compat.v1.tables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tables_initializer), and also
-initializes local session resources.
-
-
+This op is used during session initialization when a Scaffold isinitialized without specifying the local_init_op arg. It includes[ `tf.compat.v1.local_variables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/local_variables_initializer),[ `tf.compat.v1.tables_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/tables_initializer), and alsoinitializes local session resources.
 
 #### Returns:
 The default Scaffold local init op.
 
-
-
 ###  `finalize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L184-L241)
-
-
 
 ```
  finalize()
@@ -196,12 +113,8 @@ The default Scaffold local init op.
 
 Creates operations if needed and finalizes the graph.
 
-
-
 ###  `get_or_default` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/monitored_session.py#L275-L290)
-
-
 
 ```
  @staticmethod

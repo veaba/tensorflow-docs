@@ -1,22 +1,6 @@
-Defined in generated file:  `python/ops/gen_math_ops.py` 
-
 Computes the trignometric inverse tangent of x element-wise.
 
-
-
-### Aliases:
-
-- [ `tf.atan` ](/api_docs/python/tf/math/atan)
-
-- [ `tf.compat.v1.atan` ](/api_docs/python/tf/math/atan)
-
-- [ `tf.compat.v1.math.atan` ](/api_docs/python/tf/math/atan)
-
-- [ `tf.compat.v2.atan` ](/api_docs/python/tf/math/atan)
-
-- [ `tf.compat.v2.math.atan` ](/api_docs/python/tf/math/atan)
-
-
+**Aliases** : [ `tf.atan` ](/api_docs/python/tf/math/atan), [ `tf.compat.v1.atan` ](/api_docs/python/tf/math/atan), [ `tf.compat.v1.math.atan` ](/api_docs/python/tf/math/atan), [ `tf.compat.v2.atan` ](/api_docs/python/tf/math/atan), [ `tf.compat.v2.math.atan` ](/api_docs/python/tf/math/atan)
 
 ```
  tf.math.atan(
@@ -26,13 +10,9 @@ Computes the trignometric inverse tangent of x element-wise.
  
 ```
 
-The [ `tf.math.atan` ](https://tensorflow.google.cn/api_docs/python/tf/math/atan) operation returns the inverse of [ `tf.math.tan` ](https://tensorflow.google.cn/api_docs/python/tf/math/tan), such that
-if  `y = tf.math.tan(x)`  then,  `x = tf.math.atan(y)` .
+The [ `tf.math.atan` ](https://tensorflow.google.cn/api_docs/python/tf/math/atan) operation returns the inverse of [ `tf.math.tan` ](https://tensorflow.google.cn/api_docs/python/tf/math/tan), such thatif  `y = tf.math.tan(x)`  then,  `x = tf.math.atan(y)` .
 
-**Note** : The output of [ `tf.math.atan` ](https://tensorflow.google.cn/api_docs/python/tf/math/atan) will lie within the invertible range 
-of tan, i.e (-pi/2, pi/2).
-
-
+**Note** : The output of [ `tf.math.atan` ](https://tensorflow.google.cn/api_docs/python/tf/math/atan) will lie within the invertible range of tan, i.e (-pi/2, pi/2).
 
 #### For example:
 
@@ -46,14 +26,9 @@ tf.math.atan(y) # [1.047, 0.785] = x
  
 ```
 
-
-
 #### Args:
-
 - **`x`** : A  `Tensor` . Must be one of the following types:  `bfloat16` ,  `half` ,  `float32` ,  `float64` ,  `int32` ,  `int64` ,  `complex64` ,  `complex128` .
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

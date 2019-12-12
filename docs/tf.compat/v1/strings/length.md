@@ -1,30 +1,15 @@
 String lengths of  `input` .
 
+```
+ tf.compat.v1.strings.length(    input,    name=None,    unit='BYTE') 
+```
 
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.strings.length(
-    input,
-    name=None,
-    unit='BYTE'
-)
-</code></pre></devsite-code>
 Computes the length of each string given in the input tensor.
 
-
-
 #### Args:
-
-- **`input`** : A  `Tensor`  of type  `string` .
-The string for which to compute the length.
-
-- **`unit`** : An optional  `string`  from:  `"BYTE", "UTF8_CHAR"` . Defaults to  `"BYTE"` .
-The unit that is counted to compute string length.  One of:  `"BYTE"`  (for
-the number of bytes in each string) or  `"UTF8_CHAR"`  (for the number of UTF-8
-encoded Unicode code points in each string).  Results are undefined
-if  `unit=UTF8_CHAR`  and the  `input`  strings do not contain structurally
-valid UTF-8.
-
+- **`input`** : A  `Tensor`  of type  `string` .The string for which to compute the length.
+- **`unit`** : An optional  `string`  from:  `"BYTE", "UTF8_CHAR"` . Defaults to  `"BYTE"` .The unit that is counted to compute string length.  One of:  `"BYTE"`  (forthe number of bytes in each string) or  `"UTF8_CHAR"`  (for the number of UTF-8encoded Unicode code points in each string).  Results are undefinedif  `unit=UTF8_CHAR`  and the  `input`  strings do not contain structurallyvalid UTF-8.
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

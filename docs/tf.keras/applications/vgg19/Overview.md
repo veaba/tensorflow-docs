@@ -1,7 +1,5 @@
 VGG19 model for Keras.
 
-
-
 ## Functions
 [ `VGG19(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/VGG19)
 

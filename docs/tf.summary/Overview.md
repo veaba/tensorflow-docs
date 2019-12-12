@@ -1,19 +1,8 @@
 Operations for writing summary data, for use in analysis and visualization.
 
-
-
-### Aliases:
-
-- Module [ `tf.compat.v2.summary` ](/api_docs/python/tf/summary)
-
-The [ `tf.summary` ](https://tensorflow.google.cn/api_docs/python/tf/summary) module provides APIs for writing summary data. This data can be
-visualized in TensorBoard, the visualization toolkit that comes with TensorFlow.
-See the [TensorBoard website](https://tensorflow.google.cn/tensorboard) for more
-detailed tutorials about how to use these APIs, or some quick examples below.
+The [ `tf.summary` ](https://tensorflow.google.cn/api_docs/python/tf/summary) module provides APIs for writing summary data. This data can bevisualized in TensorBoard, the visualization toolkit that comes with TensorFlow.See the [TensorBoard website](https://tensorflow.google.cn/tensorboard) for moredetailed tutorials about how to use these APIs, or some quick examples below.
 
 Example usage with eager execution, the default in TF 2.0:
-
-
 
 ```
  writer = tf.summary.create_file_writer("/tmp/mylogs")
@@ -26,8 +15,6 @@ with writer.as_default():
 ```
 
 Example usage with [ `tf.function` ](https://tensorflow.google.cn/api_docs/python/tf/function) graph execution:
-
-
 
 ```
  writer = tf.summary.create_file_writer("/tmp/mylogs")
@@ -45,8 +32,6 @@ for step in range(100):
 ```
 
 Example usage with legacy TF 1.x graph execution:
-
-
 
 ```
  with tf.compat.v1.Graph().as_default():
@@ -67,17 +52,11 @@ Example usage with legacy TF 1.x graph execution:
  
 ```
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/summary/experimental) module: Public API for tf.summary.experimental namespace.
 
-
-
 ## Classes
 [ `class SummaryWriter` ](https://tensorflow.google.cn/api_docs/python/tf/summary/SummaryWriter): Interface representing a stateful summary writer object.
-
-
 
 ## Functions
 [ `audio(...)` ](https://tensorflow.google.cn/api_docs/python/tf/summary/audio): Write an audio summary.

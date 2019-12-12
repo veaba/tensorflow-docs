@@ -1,14 +1,6 @@
 Constructs a constant RaggedTensor from a nested Python list.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.ragged.constant` ](/api_docs/python/tf/ragged/constant)
-
-- [ `tf.compat.v2.ragged.constant` ](/api_docs/python/tf/ragged/constant)
-
-
+**Aliases** : [ `tf.compat.v1.ragged.constant` ](/api_docs/python/tf/ragged/constant), [ `tf.compat.v2.ragged.constant` ](/api_docs/python/tf/ragged/constant)
 
 ```
  tf.ragged.constant(
@@ -22,12 +14,8 @@ Constructs a constant RaggedTensor from a nested Python list.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
-
 
 
 #### Example:
@@ -39,51 +27,20 @@ Constructs a constant RaggedTensor from a nested Python list.
 
 ```
 
-All scalar values in  `pylist`  must have the same nesting depth  `K` , and the
-returned  `RaggedTensor`  will have rank  `K` .  If  `pylist`  contains no scalar
-values, then  `K`  is one greater than the maximum depth of empty lists in
- `pylist` .  All scalar values in  `pylist`  must be compatible with  `dtype` .
-
-
+All scalar values in  `pylist`  must have the same nesting depth  `K` , and thereturned  `RaggedTensor`  will have rank  `K` .  If  `pylist`  contains no scalarvalues, then  `K`  is one greater than the maximum depth of empty lists in `pylist` .  All scalar values in  `pylist`  must be compatible with  `dtype` .
 
 #### Args:
-
-- **`pylist`** : A nested  `list` ,  `tuple`  or  `np.ndarray` .  Any nested element that
-is not a  `list` ,  `tuple`  or  `np.ndarray`  must be a scalar value
-compatible with  `dtype` .
-
-- **`dtype`** : The type of elements for the returned  `RaggedTensor` .  If not
-specified, then a default is chosen based on the scalar values in
- `pylist` .
-
-- **`ragged_rank`** : An integer specifying the ragged rank of the returned
- `RaggedTensor` .  Must be nonnegative and less than  `K` . Defaults to
- `max(0, K - 1)`  if  `inner_shape`  is not specified.  Defaults to `max(0, K
-
-
-- **`inner_shape`** : A tuple of integers specifying the shape for individual inner
-values in the returned  `RaggedTensor` .  Defaults to  `()`  if  `ragged_rank` 
-is not specified.  If  `ragged_rank`  is specified, then a default is chosen
-based on the contents of  `pylist` .
-
+- **`pylist`** : A nested  `list` ,  `tuple`  or  `np.ndarray` .  Any nested element thatis not a  `list` ,  `tuple`  or  `np.ndarray`  must be a scalar valuecompatible with  `dtype` .
+- **`dtype`** : The type of elements for the returned  `RaggedTensor` .  If notspecified, then a default is chosen based on the scalar values in `pylist` .
+- **`ragged_rank`** : An integer specifying the ragged rank of the returned `RaggedTensor` .  Must be nonnegative and less than  `K` . Defaults to `max(0, K - 1)`  if  `inner_shape`  is not specified.  Defaults to `max(0, K
+- **`inner_shape`** : A tuple of integers specifying the shape for individual innervalues in the returned  `RaggedTensor` .  Defaults to  `()`  if  `ragged_rank` is not specified.  If  `ragged_rank`  is specified, then a default is chosenbased on the contents of  `pylist` .
 - **`name`** : A name prefix for the returned tensor (optional).
-
-- **`row_splits_dtype`** : data type for the constructed  `RaggedTensor` 's row_splits.
-One of [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
-
-
+- **`row_splits_dtype`** : data type for the constructed  `RaggedTensor` 's row_splits.One of [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32) or [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64).
     - 1 - len(inner_shape)) `if` inner_shape` is specified.
 
 
-
 #### Returns:
-A potentially ragged tensor with rank  `K`  and the specified  `ragged_rank` ,
-containing the values from  `pylist` .
-
-
+A potentially ragged tensor with rank  `K`  and the specified  `ragged_rank` ,containing the values from  `pylist` .
 
 #### Raises:
-
-- **`ValueError`** : If the scalar values in  `pylist`  have inconsistent nesting
-depth; or if ragged_rank or inner_shape are incompatible with  `pylist` .
-
+- **`ValueError`** : If the scalar values in  `pylist`  have inconsistent nestingdepth; or if ragged_rank or inner_shape are incompatible with  `pylist` .

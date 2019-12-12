@@ -3,8 +3,6 @@
 ## Class  `SummaryDescription` 
 A ProtocolMessage
 
-
-
 ## Properties
 
 

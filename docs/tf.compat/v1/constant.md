@@ -1,7 +1,5 @@
 Creates a constant tensor.
 
-
-
 ```
  tf.compat.v1.constant(
     value,
@@ -13,24 +11,13 @@ Creates a constant tensor.
  
 ```
 
-The resulting tensor is populated with values of type  `dtype` , as
-specified by arguments  `value`  and (optionally)  `shape`  (see examples
-below).
+The resulting tensor is populated with values of type  `dtype` , asspecified by arguments  `value`  and (optionally)  `shape`  (see examplesbelow).
 
-The argument  `value`  can be a constant value, or a list of values of type
- `dtype` . If  `value`  is a list, then the length of the list must be less
-than or equal to the number of elements implied by the  `shape`  argument (if
-specified). In the case where the list length is less than the number of
-elements specified by  `shape` , the last element in the list will be used
-to fill the remaining entries.
+The argument  `value`  can be a constant value, or a list of values of type `dtype` . If  `value`  is a list, then the length of the list must be lessthan or equal to the number of elements implied by the  `shape`  argument (ifspecified). In the case where the list length is less than the number ofelements specified by  `shape` , the last element in the list will be usedto fill the remaining entries.
 
-The argument  `shape`  is optional. If present, it specifies the dimensions of
-the resulting tensor. If not present, the shape of  `value`  is used.
+The argument  `shape`  is optional. If present, it specifies the dimensions ofthe resulting tensor. If not present, the shape of  `value`  is used.
 
-If the argument  `dtype`  is not specified, then the type is inferred from
-the type of  `value` .
-
-
+If the argument  `dtype`  is not specified, then the type is inferred fromthe type of  `value` .
 
 #### For example:
 
@@ -47,50 +34,29 @@ tensor = tf.constant(-1.0, shape=[2, 3]) => [[-1. -1. -1.]
 
 [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) differs from [ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill) in a few ways:
 
-
-- [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) supports arbitrary constants, not just uniform scalar
-Tensors like [ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill).
-
-- [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) creates a  `Const`  node in the computation graph with the
-exact value at graph construction time. On the other hand, [ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill)
-creates an Op in the graph that is expanded at runtime.
-
-- Because [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) only embeds constant values in the graph, it does
-not support dynamic shapes based on other runtime Tensors, whereas
-[ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill) does.
-
+- [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) supports arbitrary constants, not just uniform scalarTensors like [ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill).
+- [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) creates a  `Const`  node in the computation graph with theexact value at graph construction time. On the other hand, [ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill)creates an Op in the graph that is expanded at runtime.
+- Because [ `tf.constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant) only embeds constant values in the graph, it doesnot support dynamic shapes based on other runtime Tensors, whereas[ `tf.fill` ](https://tensorflow.google.cn/api_docs/python/tf/fill) does.
 
 
 #### Args:
-
 - **`value`** :          A constant value (or list) of output type  `dtype` .
-
 
 
 - **`dtype`** :          The type of the elements of the resulting tensor.
 
 
-
 - **`shape`** :          Optional dimensions of resulting tensor.
-
 
 
 - **`name`** :           Optional name for the tensor.
 
 
-
 - **`verify_shape`** :   Boolean that enables verification of a shape of values.
-
-
-
 
 
 #### Returns:
 A Constant Tensor.
 
-
-
 #### Raises:
-
 - **`TypeError`** : if shape is incorrectly specified or unsupported.
-

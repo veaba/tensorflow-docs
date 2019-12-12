@@ -5,23 +5,9 @@ A one-machine strategy that puts all variables on a single device.
 
 Inherits From: [ `Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v2.distribute.experimental.CentralStorageStrategy` ](/api_docs/python/tf/distribute/experimental/CentralStorageStrategy)
-
-
-
 ### Used in the guide:
-
 - [Distributed training with TensorFlow](https://tensorflow.google.cn/guide/distributed_training)
-
-Variables are assigned to local CPU or the only GPU. If there is more
-than one GPU, compute operations (other than variable update operations)
-will be replicated across all GPUs.
-
-
+Variables are assigned to local CPU or the only GPU. If there is morethan one GPU, compute operations (other than variable update operations)will be replicated across all GPUs.
 
 #### For Example:
 
@@ -45,12 +31,8 @@ with strategy.scope():
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/central_storage_strategy.py#L55-L69)
-
-
 
 ```
  __init__(
@@ -62,28 +44,20 @@ with strategy.scope():
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Properties
 
 
 ###  `extended` 
 [ `tf.distribute.StrategyExtended` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/StrategyExtended) with additional methods.
 
-
-
 ###  `num_replicas_in_sync` 
 Returns number of replicas over which gradients are aggregated.
-
-
 
 ## Methods
 
 
 ###  `experimental_distribute_dataset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/central_storage_strategy.py#L75-L102)
-
-
 
 ```
  experimental_distribute_dataset(dataset)
@@ -92,15 +66,9 @@ Returns number of replicas over which gradients are aggregated.
 
 Distributes a tf.data.Dataset instance provided via dataset.
 
-The returned dataset is a wrapped strategy dataset which creates a
-multidevice iterator under the hood. It prefetches the input data to the
-specified devices on the worker. The returned distributed dataset can be
-iterated over similar to how regular datasets can.
+The returned dataset is a wrapped strategy dataset which creates amultidevice iterator under the hood. It prefetches the input data to thespecified devices on the worker. The returned distributed dataset can beiterated over similar to how regular datasets can.
 
-NOTE: Currently, the user cannot add any more transformations to a
-distributed dataset.
-
-
+NOTE: Currently, the user cannot add any more transformations to adistributed dataset.
 
 #### For Example:
 
@@ -115,20 +83,13 @@ for x in dist_dataset:
  
 ```
 
-Args:
-  dataset: [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) to be prefetched to device.
-
-
+Args:  dataset: [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) to be prefetched to device.
 
 #### Returns:
 A "distributed  `Dataset` " that the caller can iterate over.
 
-
-
 ###  `experimental_distribute_datasets_from_function` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/central_storage_strategy.py#L104-L144)
-
-
 
 ```
  experimental_distribute_datasets_from_function(dataset_fn)
@@ -137,15 +98,9 @@ A "distributed  `Dataset` " that the caller can iterate over.
 
 Distributes [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) instances created by calls to  `dataset_fn` .
 
- `dataset_fn`  will be called once for each worker in the strategy. In this
-case, we only have one worker so  `dataset_fn`  is called once. Each replica
-on this worker will then dequeue a batch of elements from this local
-dataset.
+ `dataset_fn`  will be called once for each worker in the strategy. In thiscase, we only have one worker so  `dataset_fn`  is called once. Each replicaon this worker will then dequeue a batch of elements from this localdataset.
 
-The  `dataset_fn`  should take an [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance where
-information about batching and input replication can be accessed.
-
-
+The  `dataset_fn`  should take an [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance whereinformation about batching and input replication can be accessed.
 
 #### For Example:
 
@@ -164,30 +119,17 @@ for batch in inputs:
  
 ```
 
-IMPORTANT: The [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) returned by  `dataset_fn`  should have a
-per-replica batch size, unlike  `experimental_distribute_dataset` , which uses
-the global batch size.  This may be computed using
- `input_context.get_per_replica_batch_size` .
-
-
+IMPORTANT: The [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) returned by  `dataset_fn`  should have aper-replica batch size, unlike  `experimental_distribute_dataset` , which usesthe global batch size.  This may be computed using `input_context.get_per_replica_batch_size` .
 
 #### Args:
-
-- **`dataset_fn`** : A function taking a [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance and
-returning a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
-
+- **`dataset_fn`** : A function taking a [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance andreturning a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
 
 
 #### Returns:
-A "distributed  `Dataset` ", which the caller can iterate over like regular
-datasets.
-
-
+A "distributed  `Dataset` ", which the caller can iterate over like regulardatasets.
 
 ###  `experimental_local_results` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/central_storage_strategy.py#L146-L160)
-
-
 
 ```
  experimental_local_results(value)
@@ -196,28 +138,17 @@ datasets.
 
 Returns the list of all local per-replica values contained in  `value` .
 
-In  `CentralStorageStrategy`  there is a single worker so the value returned
-will be all the values on that worker.
-
-
+In  `CentralStorageStrategy`  there is a single worker so the value returnedwill be all the values on that worker.
 
 #### Args:
-
-- **`value`** : A value returned by  `experimental_run()` ,  `experimental_run_v2()` ,
- `extended.call_for_each_replica()` , or a variable created in  `scope` .
-
+- **`value`** : A value returned by  `experimental_run()` ,  `experimental_run_v2()` , `extended.call_for_each_replica()` , or a variable created in  `scope` .
 
 
 #### Returns:
-A tuple of values contained in  `value` . If  `value`  represents a single
-value, this returns  `(value,).` 
-
-
+A tuple of values contained in  `value` . If  `value`  represents a singlevalue, this returns  `(value,).` 
 
 ###  `experimental_make_numpy_dataset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L575-L601)
-
-
 
 ```
  experimental_make_numpy_dataset(numpy_input)
@@ -226,14 +157,9 @@ value, this returns  `(value,).`
 
 Makes a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) for input provided via a numpy array.
 
-This avoids adding  `numpy_input`  as a large constant in the graph,
-and copies the data to the machine or machines that will be processing
-the input.
+This avoids adding  `numpy_input`  as a large constant in the graph,and copies the data to the machine or machines that will be processingthe input.
 
-Note that you will likely need to use  `experimental_distribute_dataset` 
-with the returned dataset to further distribute it with the strategy.
-
-
+Note that you will likely need to use  `experimental_distribute_dataset` with the returned dataset to further distribute it with the strategy.
 
 #### Example:
 
@@ -245,25 +171,15 @@ dist_dataset = strategy.experimental_distribute_dataset(dataset)
  
 ```
 
-
-
 #### Args:
-
-- **`numpy_input`** : A nest of NumPy input arrays that will be converted into a
-dataset. Note that lists of Numpy arrays are stacked, as that is normal
-[ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) behavior.
-
+- **`numpy_input`** : A nest of NumPy input arrays that will be converted into adataset. Note that lists of Numpy arrays are stacked, as that is normal[ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) behavior.
 
 
 #### Returns:
 A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) representing  `numpy_input` .
 
-
-
 ###  `experimental_run_v2` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/central_storage_strategy.py#L162-L177)
-
-
 
 ```
  experimental_run_v2(
@@ -276,30 +192,19 @@ A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dat
 
 Run  `fn`  on each replica, with the given arguments.
 
-In  `CentralStorageStrategy` ,  `fn`  is  called on each of the compute
-replicas, with the provided "per replica" arguments specific to that device.
-
-
+In  `CentralStorageStrategy` ,  `fn`  is  called on each of the computereplicas, with the provided "per replica" arguments specific to that device.
 
 #### Args:
-
 - **`fn`** : The function to run. The output must be a [ `tf.nest` ](https://tensorflow.google.cn/api_docs/python/tf/nest) of  `Tensor` s.
-
 - **`args`** : (Optional) Positional arguments to  `fn` .
-
 - **`kwargs`** : (Optional) Keyword arguments to  `fn` .
-
 
 
 #### Returns:
 Return value from running  `fn` .
 
-
-
 ###  `reduce` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/central_storage_strategy.py#L179-L243)
-
-
 
 ```
  reduce(
@@ -312,29 +217,9 @@ Return value from running  `fn` .
 
 Reduce  `value`  across replicas.
 
-Given a per-replica value returned by  `experimental_run_v2` , say a
-per-example loss, the batch will be divided across all the replicas. This
-function allows you to aggregate across replicas and optionally also across
-batch elements.  For example, if you have a global batch size of 8 and 2
-replicas, values for examples  `[0, 1, 2, 3]`  will be on replica 0 and
- `[4, 5, 6, 7]`  will be on replica 1. By default,  `reduce`  will just
-aggregate across replicas, returning  `[0+4, 1+5, 2+6, 3+7]` . This is useful
-when each replica is computing a scalar or some other value that doesn't
-have a "batch" dimension (like a gradient). More often you will want to
-aggregate across the global batch, which you can get by specifying the batch
-dimension as the  `axis` , typically  `axis=0` . In this case it would return a
-scalar  `0+1+2+3+4+5+6+7` .
+Given a per-replica value returned by  `experimental_run_v2` , say aper-example loss, the batch will be divided across all the replicas. Thisfunction allows you to aggregate across replicas and optionally also acrossbatch elements.  For example, if you have a global batch size of 8 and 2replicas, values for examples  `[0, 1, 2, 3]`  will be on replica 0 and `[4, 5, 6, 7]`  will be on replica 1. By default,  `reduce`  will justaggregate across replicas, returning  `[0+4, 1+5, 2+6, 3+7]` . This is usefulwhen each replica is computing a scalar or some other value that doesn'thave a "batch" dimension (like a gradient). More often you will want toaggregate across the global batch, which you can get by specifying the batchdimension as the  `axis` , typically  `axis=0` . In this case it would return ascalar  `0+1+2+3+4+5+6+7` .
 
-If there is a last partial batch, you will need to specify an axis so
-that the resulting shape is consistent across replicas. So if the last
-batch has size 6 and it is divided into [0, 1, 2, 3] and [4, 5], you
-would get a shape mismatch unless you specify  `axis=0` . If you specify
-[ `tf.distribute.ReduceOp.MEAN` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp#MEAN), using  `axis=0`  will use the correct
-denominator of 6. Contrast this with computing  `reduce_mean`  to get a
-scalar value on each replica and this function to average those means,
-which will weigh some values  `1/8`  and others  `1/4` .
-
-
+If there is a last partial batch, you will need to specify an axis sothat the resulting shape is consistent across replicas. So if the lastbatch has size 6 and it is divided into [0, 1, 2, 3] and [4, 5], youwould get a shape mismatch unless you specify  `axis=0` . If you specify[ `tf.distribute.ReduceOp.MEAN` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp#MEAN), using  `axis=0`  will use the correctdenominator of 6. Contrast this with computing  `reduce_mean`  to get ascalar value on each replica and this function to average those means,which will weigh some values  `1/8`  and others  `1/4` .
 
 #### For Example:
 
@@ -365,32 +250,17 @@ result = strategy.reduce(tf.distribute.ReduceOp.SUM, result, axis=0).numpy()
  
 ```
 
-
-
 #### Args:
-
-- **`reduce_op`** : A [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) value specifying how values should
-be combined.
-
-- **`value`** : A "per replica" value, e.g. returned by  `experimental_run_v2`  to
-be combined into a single tensor.
-
-- **`axis`** : Specifies the dimension to reduce along within each
-replica's tensor. Should typically be set to the batch dimension, or
- `None`  to only reduce across replicas (e.g. if the tensor has no batch
-dimension).
-
+- **`reduce_op`** : A [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) value specifying how values shouldbe combined.
+- **`value`** : A "per replica" value, e.g. returned by  `experimental_run_v2`  tobe combined into a single tensor.
+- **`axis`** : Specifies the dimension to reduce along within eachreplica's tensor. Should typically be set to the batch dimension, or `None`  to only reduce across replicas (e.g. if the tensor has no batchdimension).
 
 
 #### Returns:
 A  `Tensor` .
 
-
-
 ###  `scope` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L541-L551)
-
-
 
 ```
  scope()
@@ -399,11 +269,7 @@ A  `Tensor` .
 
 Returns a context manager selecting this Strategy as current.
 
-Inside a  `with strategy.scope():`  code block, this thread
-will use a variable creator set by  `strategy` , and will
-enter its "cross-replica context".
-
-
+Inside a  `with strategy.scope():`  code block, this threadwill use a variable creator set by  `strategy` , and willenter its "cross-replica context".
 
 #### Returns:
 A context manager.

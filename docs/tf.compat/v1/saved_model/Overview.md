@@ -1,7 +1,5 @@
 Public API for tf.saved_model namespace.
 
-
-
 ## Modules
 [ `builder` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/builder) module: SavedModel builder.
 
@@ -21,16 +19,12 @@ Public API for tf.saved_model namespace.
 
 [ `utils` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/utils) module: SavedModel utility functions.
 
-
-
 ## Classes
 [ `class Asset` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/Asset): Represents a file asset to hermetically include in a SavedModel.
 
 [ `class Builder` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/Builder): Builds the  `SavedModel`  protocol buffer and saves variables and assets.
 
 [ `class SaveOptions` ](https://tensorflow.google.cn/api_docs/python/tf/saved_model/SaveOptions): Options for saving to SavedModel.
-
-
 
 ## Functions
 [ `build_signature_def(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/build_signature_def): Utility function to build a SignatureDef protocol buffer.
@@ -61,55 +55,28 @@ Public API for tf.saved_model namespace.
 
 [ `simple_save(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/simple_save): Convenience function to build a SavedModel suitable for serving. (deprecated)
 
-
-
 ## Other Members
-
 -  `ASSETS_DIRECTORY = 'assets'`  []()
-
 -  `ASSETS_KEY = 'saved_model_assets'`  []()
-
 -  `CLASSIFY_INPUTS = 'inputs'`  []()
-
 -  `CLASSIFY_METHOD_NAME = 'tensorflow/serving/classify'`  []()
-
 -  `CLASSIFY_OUTPUT_CLASSES = 'classes'`  []()
-
 -  `CLASSIFY_OUTPUT_SCORES = 'scores'`  []()
-
 -  `DEFAULT_SERVING_SIGNATURE_DEF_KEY = 'serving_default'`  []()
-
 -  `GPU = 'gpu'`  []()
-
 -  `LEGACY_INIT_OP_KEY = 'legacy_init_op'`  []()
-
 -  `MAIN_OP_KEY = 'saved_model_main_op'`  []()
-
 -  `PREDICT_INPUTS = 'inputs'`  []()
-
 -  `PREDICT_METHOD_NAME = 'tensorflow/serving/predict'`  []()
-
 -  `PREDICT_OUTPUTS = 'outputs'`  []()
-
 -  `REGRESS_INPUTS = 'inputs'`  []()
-
 -  `REGRESS_METHOD_NAME = 'tensorflow/serving/regress'`  []()
-
 -  `REGRESS_OUTPUTS = 'outputs'`  []()
-
 -  `SAVED_MODEL_FILENAME_PB = 'saved_model.pb'`  []()
-
 -  `SAVED_MODEL_FILENAME_PBTXT = 'saved_model.pbtxt'`  []()
-
 -  `SAVED_MODEL_SCHEMA_VERSION = 1`  []()
-
 -  `SERVING = 'serve'`  []()
-
 -  `TPU = 'tpu'`  []()
-
 -  `TRAINING = 'train'`  []()
-
 -  `VARIABLES_DIRECTORY = 'variables'`  []()
-
 -  `VARIABLES_FILENAME = 'variables'`  []()
-

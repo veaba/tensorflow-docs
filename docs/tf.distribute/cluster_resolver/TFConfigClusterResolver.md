@@ -5,24 +5,12 @@ Implementation of a ClusterResolver which reads the TF_CONFIG EnvVar.
 
 Inherits From: [ `ClusterResolver` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/cluster_resolver/ClusterResolver)
 
+**Aliases** : [ `tf.compat.v1.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver), [ `tf.compat.v2.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver)
-
-- Class [ `tf.compat.v2.distribute.cluster_resolver.TFConfigClusterResolver` ](/api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver)
-
-This is an implementation of cluster resolvers when using TF_CONFIG to set
-information about the cluster. The cluster spec returned will be
-initialized from the TF_CONFIG environment variable.
-
-
+This is an implementation of cluster resolvers when using TF_CONFIG to setinformation about the cluster. The cluster spec returned will beinitialized from the TF_CONFIG environment variable.
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/tfconfig_cluster_resolver.py#L60-L79)
-
-
 
 ```
  __init__(
@@ -36,21 +24,11 @@ initialized from the TF_CONFIG environment variable.
 
 Creates a new TFConfigClusterResolver.
 
-
-
 #### Args:
-
-- **`task_type`** : (String, optional) Overrides the task type specified in the
-TF_CONFIG environment variable.
-
-- **`task_id`** : (Integer, optional) Overrides the task index specified in the
-TF_CONFIG environment variable.
-
+- **`task_type`** : (String, optional) Overrides the task type specified in theTF_CONFIG environment variable.
+- **`task_id`** : (Integer, optional) Overrides the task index specified in theTF_CONFIG environment variable.
 - **`rpc_layer`** : (String, optional) Overrides the rpc layer TensorFlow uses.
-
-- **`environment`** : (String, optional) Overrides the environment TensorFlow
-operates in.
-
+- **`environment`** : (String, optional) Overrides the environment TensorFlowoperates in.
 
 
 ## Properties
@@ -59,19 +37,11 @@ operates in.
 ###  `environment` 
 Returns the current environment which TensorFlow is running in.
 
-There are two possible return values, "google" (when TensorFlow is running
-in a Google-internal environment) or an empty string (when TensorFlow is
-running elsewhere).
+There are two possible return values, "google" (when TensorFlow is runningin a Google-internal environment) or an empty string (when TensorFlow isrunning elsewhere).
 
-If you are implementing a ClusterResolver that works in both the Google
-environment and the open-source world (for instance, a TPU ClusterResolver
-or similar), you will have to return the appropriate string depending on the
-environment, which you will have to detect.
+If you are implementing a ClusterResolver that works in both the Googleenvironment and the open-source world (for instance, a TPU ClusterResolveror similar), you will have to return the appropriate string depending on theenvironment, which you will have to detect.
 
-Otherwise, if you are implementing a ClusterResolver that will only work
-in open-source TensorFlow, you do not need to implement this property.
-
-
+Otherwise, if you are implementing a ClusterResolver that will only workin open-source TensorFlow, you do not need to implement this property.
 
 ###  `rpc_layer` 
 
@@ -88,8 +58,6 @@ in open-source TensorFlow, you do not need to implement this property.
 ###  `cluster_spec` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/tfconfig_cluster_resolver.py#L129-L138)
 
-
-
 ```
  cluster_spec()
  
@@ -97,17 +65,11 @@ in open-source TensorFlow, you do not need to implement this property.
 
 Returns a ClusterSpec based on the TF_CONFIG environment variable.
 
-
-
 #### Returns:
 A ClusterSpec with information from the TF_CONFIG environment variable.
 
-
-
 ###  `master` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/tfconfig_cluster_resolver.py#L140-L177)
-
-
 
 ```
  master(
@@ -120,37 +82,21 @@ A ClusterSpec with information from the TF_CONFIG environment variable.
 
 Returns the master address to use when creating a TensorFlow session.
 
-
-
 #### Args:
-
-- **`task_type`** : (String, optional) Overrides and sets the task_type of the
-master.
-
-- **`task_id`** : (Integer, optional) Overrides and sets the task id of the
-master.
-
-- **`rpc_layer`** : (String, optional) Overrides and sets the protocol over which
-TensorFlow nodes communicate with each other.
-
+- **`task_type`** : (String, optional) Overrides and sets the task_type of themaster.
+- **`task_id`** : (Integer, optional) Overrides and sets the task id of themaster.
+- **`rpc_layer`** : (String, optional) Overrides and sets the protocol over whichTensorFlow nodes communicate with each other.
 
 
 #### Returns:
 The address of the master.
 
-
-
 #### Raises:
-
-- **`RuntimeError`** : If the task_type or task_id is not specified and the
- `TF_CONFIG`  environment variable does not contain a task section.
-
+- **`RuntimeError`** : If the task_type or task_id is not specified and the `TF_CONFIG`  environment variable does not contain a task section.
 
 
 ###  `num_accelerators` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/cluster_resolver/tfconfig_cluster_resolver.py#L120-L127)
-
-
 
 ```
  num_accelerators(
@@ -163,27 +109,14 @@ The address of the master.
 
 Returns the number of accelerator cores per worker.
 
-This returns the number of accelerator cores (such as GPUs and TPUs)
-available per worker.
+This returns the number of accelerator cores (such as GPUs and TPUs)available per worker.
 
-Optionally, we allow callers to specify the task_type, and task_id, for
-if they want to target a specific TensorFlow process to query
-the number of accelerators. This is to support heterogenous environments,
-where the number of accelerators cores per host is different.
-
-
+Optionally, we allow callers to specify the task_type, and task_id, forif they want to target a specific TensorFlow process to querythe number of accelerators. This is to support heterogenous environments,where the number of accelerators cores per host is different.
 
 #### Args:
-
-- **`task_type`** : (Optional) The type of the TensorFlow task of the machine we
-want to query.
-
-- **`task_id`** : (Optional) The index of the TensorFlow task of the machine we
-want to query.
-
-- **`config_proto`** : (Optional) Configuration for starting a new session to
-query how many accelerator cores it has.
-
+- **`task_type`** : (Optional) The type of the TensorFlow task of the machine wewant to query.
+- **`task_id`** : (Optional) The index of the TensorFlow task of the machine wewant to query.
+- **`config_proto`** : (Optional) Configuration for starting a new session toquery how many accelerator cores it has.
 
 
 #### Returns:

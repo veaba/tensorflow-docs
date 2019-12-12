@@ -1,27 +1,15 @@
 Get the list of visible physical devices.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.config.experimental.get_visible_devices` ](/api_docs/python/tf/config/experimental/get_visible_devices)
-
-- [ `tf.compat.v2.config.experimental.get_visible_devices` ](/api_docs/python/tf/config/experimental/get_visible_devices)
-
-
+**Aliases** : [ `tf.compat.v1.config.experimental.get_visible_devices` ](/api_docs/python/tf/config/experimental/get_visible_devices), [ `tf.compat.v2.config.experimental.get_visible_devices` ](/api_docs/python/tf/config/experimental/get_visible_devices)
 
 ```
  tf.config.experimental.get_visible_devices(device_type=None)
  
 ```
 
-Returns a list of PhysicalDevice objects that are current marked as visible to
-the runtime. Any visible devices will have LogicalDevices assigned to them
-once the runtime is initialized.
+Returns a list of PhysicalDevice objects that are current marked as visible tothe runtime. Any visible devices will have LogicalDevices assigned to themonce the runtime is initialized.
 
 The following example verifies all visible GPUs have been disabled:
-
-
 
 ```
  physical_devices = config.experimental.list_physical_devices('GPU')
@@ -34,12 +22,8 @@ for device in visible_devices:
  
 ```
 
-
-
 #### Args:
-
 - **`device_type`** : (optional) Device types to limit query to.
-
 
 
 #### Returns:

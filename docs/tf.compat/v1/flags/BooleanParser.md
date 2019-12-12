@@ -5,14 +5,6 @@ Parser of boolean values.
 
 Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentParser)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.app.flags.BooleanParser` ](/api_docs/python/tf/compat/v1/flags/BooleanParser)
-
-
-
 ## Methods
 
 
@@ -25,8 +17,6 @@ Inherits From: [ `ArgumentParser` ](https://tensorflow.google.cn/api_docs/python
 ```
 
 See base class.
-
-
 
 ###  `parse` 
 

@@ -1,14 +1,6 @@
 Generates sparse cross from a list of sparse and dense tensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.cross` ](/api_docs/python/tf/sparse/cross)
-
-- [ `tf.compat.v2.sparse.cross` ](/api_docs/python/tf/sparse/cross)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.cross` ](/api_docs/python/tf/sparse/cross), [ `tf.compat.v2.sparse.cross` ](/api_docs/python/tf/sparse/cross)
 
 ```
  tf.sparse.cross(
@@ -19,8 +11,6 @@ Generates sparse cross from a list of sparse and dense tensors.
 ```
 
 For example, if the inputs are
-
-
 
 ```
  * inputs[0]: SparseTensor with shape = [2, 2]
@@ -36,8 +26,6 @@ For example, if the inputs are
 
 then the output will be:
 
-
-
 ```
  shape = [2, 2]
 [0, 0]: "a_X_d_X_f"
@@ -46,14 +34,9 @@ then the output will be:
  
 ```
 
-
-
 #### Args:
-
 - **`inputs`** : An iterable of  `Tensor`  or  `SparseTensor` .
-
 - **`name`** : Optional name for the op.
-
 
 
 #### Returns:

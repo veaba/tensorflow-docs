@@ -1,39 +1,14 @@
 Generates parsing spec for tf.parse_example to be used with classifiers.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.estimator.classifier_parse_example_spec` ](/api_docs/python/tf/estimator/classifier_parse_example_spec)
-
-
-
 ```
- tf.estimator.classifier_parse_example_spec(
-    feature_columns,
-    label_key,
-    label_dtype=tf.dtypes.int64,
-    label_default=None,
-    weight_column=None
-)
- 
+ tf.estimator.classifier_parse_example_spec(    feature_columns,    label_key,    label_dtype=tf.dtypes.int64,    label_default=None,    weight_column=None) 
 ```
 
-If users keep data in tf.Example format, they need to call tf.parse_example
-with a proper feature spec. There are two main things that this utility helps:
+If users keep data in tf.Example format, they need to call tf.parse_examplewith a proper feature spec. There are two main things that this utility helps:
 
-
-- Users need to combine parsing spec of features with labels and weights
-(if any) since they are all parsed from same tf.Example instance. This
-utility combines these specs.
-
-- It is difficult to map expected label by a classifier such as
- `DNNClassifier`  to corresponding tf.parse_example spec. This utility encodes
-it by getting related information from users (key, dtype).
-
+- Users need to combine parsing spec of features with labels and weights(if any) since they are all parsed from same tf.Example instance. Thisutility combines these specs.
+- It is difficult to map expected label by a classifier such as `DNNClassifier`  to corresponding tf.parse_example spec. This utility encodesit by getting related information from users (key, dtype).
 Example output of parsing spec:
-
-
 
 ```
  # Define features and transformations
@@ -58,8 +33,6 @@ assert parsing_spec == {
 ```
 
 Example usage with a classifier:
-
-
 
 ```
  feature_columns = # define features via tf.feature_column
@@ -94,55 +67,20 @@ estimator.train(input_fn=input_fn_train)
  
 ```
 
-
-
 #### Args:
-
-- **`feature_columns`** : An iterable containing all feature columns. All items
-should be instances of classes derived from  `FeatureColumn` .
-
-- **`label_key`** : A string identifying the label. It means tf.Example stores labels
-with this key.
-
-- **`label_dtype`** : A  `tf.dtype`  identifies the type of labels. By default it is
-[ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64). If user defines a  `label_vocabulary` , this should be set as
-[ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string). [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) labels are only supported for binary
-classification.
-
-- **`label_default`** : used as label if label_key does not exist in given
-tf.Example. An example usage: let's say  `label_key`  is 'clicked' and
-tf.Example contains clicked data only for positive examples in following
-format  `key:clicked, value:1` . This means that if there is no data with
-key 'clicked' it should count as negative example by setting
- `label_deafault=0` . Type of this value should be compatible with
- `label_dtype` .
-
-- **`weight_column`** : A string or a  `NumericColumn`  created by
-[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representing
-weights. It is used to down weight or boost examples during training. It
-will be multiplied by the loss of the example. If it is a string, it is
-used as a key to fetch weight tensor from the  `features` . If it is a
- `NumericColumn` , raw tensor is fetched by key  `weight_column.key` ,
-then weight_column.normalizer_fn is applied on it to get weight tensor.
-
+- **`feature_columns`** : An iterable containing all feature columns. All itemsshould be instances of classes derived from  `FeatureColumn` .
+- **`label_key`** : A string identifying the label. It means tf.Example stores labelswith this key.
+- **`label_dtype`** : A  `tf.dtype`  identifies the type of labels. By default it is[ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64). If user defines a  `label_vocabulary` , this should be set as[ `tf.string` ](https://tensorflow.google.cn/api_docs/python/tf#string). [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32) labels are only supported for binaryclassification.
+- **`label_default`** : used as label if label_key does not exist in giventf.Example. An example usage: let's say  `label_key`  is 'clicked' andtf.Example contains clicked data only for positive examples in followingformat  `key:clicked, value:1` . This means that if there is no data withkey 'clicked' it should count as negative example by setting `label_deafault=0` . Type of this value should be compatible with `label_dtype` .
+- **`weight_column`** : A string or a  `NumericColumn`  created by[ `tf.feature_column.numeric_column` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/numeric_column) defining feature column representingweights. It is used to down weight or boost examples during training. Itwill be multiplied by the loss of the example. If it is a string, it isused as a key to fetch weight tensor from the  `features` . If it is a `NumericColumn` , raw tensor is fetched by key  `weight_column.key` ,then weight_column.normalizer_fn is applied on it to get weight tensor.
 
 
 #### Returns:
-A dict mapping each feature key to a  `FixedLenFeature`  or  `VarLenFeature` 
-value.
-
-
+A dict mapping each feature key to a  `FixedLenFeature`  or  `VarLenFeature` value.
 
 #### Raises:
-
 - **`ValueError`** : If label is used in  `feature_columns` .
-
 - **`ValueError`** : If weight_column is used in  `feature_columns` .
-
-- **`ValueError`** : If any of the given  `feature_columns`  is not a  `_FeatureColumn` 
-instance.
-
+- **`ValueError`** : If any of the given  `feature_columns`  is not a  `_FeatureColumn` instance.
 - **`ValueError`** : If  `weight_column`  is not a  `NumericColumn`  instance.
-
 - **`ValueError`** : if label_key is None.
-

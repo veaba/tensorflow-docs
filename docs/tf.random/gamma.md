@@ -1,16 +1,6 @@
 Draws  `shape`  samples from each of the given Gamma distribution(s).
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.random.gamma` ](/api_docs/python/tf/random/gamma)
-
-- [ `tf.compat.v1.random_gamma` ](/api_docs/python/tf/random/gamma)
-
-- [ `tf.compat.v2.random.gamma` ](/api_docs/python/tf/random/gamma)
-
-
+**Aliases** : [ `tf.compat.v1.random.gamma` ](/api_docs/python/tf/random/gamma), [ `tf.compat.v1.random_gamma` ](/api_docs/python/tf/random/gamma), [ `tf.compat.v2.random.gamma` ](/api_docs/python/tf/random/gamma)
 
 ```
  tf.random.gamma(
@@ -24,23 +14,13 @@ Draws  `shape`  samples from each of the given Gamma distribution(s).
  
 ```
 
- `alpha`  is the shape parameter describing the distribution(s), and  `beta`  is
-the inverse scale parameter(s).
+ `alpha`  is the shape parameter describing the distribution(s), and  `beta`  isthe inverse scale parameter(s).
 
 
-<aside class="note">**Note:**  Because internal calculations are done using  `float64`  and casting has
- `floor`  semantics, we must manually map zero outcomes to the smallest
-possible positive floating-point value, i.e.,  `np.finfo(dtype).tiny` .  This
-means that  `np.finfo(dtype).tiny`  occurs more frequently than it otherwise
-should.  This bias can only happen for small values of  `alpha` , i.e.,
- `alpha << 1`  or large values of  `beta` , i.e.,  `beta >> 1` .</aside>
-The samples are differentiable w.r.t. alpha and beta.
-The derivatives are computed using the approach described in the paper
+**Note:**  Because internal calculations are done using  `float64`  and casting has `floor`  semantics, we must manually map zero outcomes to the smallestpossible positive floating-point value, i.e.,  `np.finfo(dtype).tiny` .  Thismeans that  `np.finfo(dtype).tiny`  occurs more frequently than it otherwiseshould.  This bias can only happen for small values of  `alpha` , i.e., `alpha << 1`  or large values of  `beta` , i.e.,  `beta >> 1` .
+The samples are differentiable w.r.t. alpha and beta.The derivatives are computed using the approach described in the paper
 
-<a href="https://arxiv.org/abs/1805.08498">Michael Figurnov, Shakir Mohamed, Andriy Mnih.
-Implicit Reparameterization Gradients, 2018</a>
-
-
+[Michael Figurnov, Shakir Mohamed, Andriy Mnih.Implicit Reparameterization Gradients, 2018](https://arxiv.org/abs/1805.08498)
 
 #### Example:
 
@@ -67,36 +47,14 @@ beta.shape == dloss_dbeta.shape  # True
  
 ```
 
-
-
 #### Args:
-
-- **`shape`** : A 1-D integer Tensor or Python array. The shape of the output samples
-to be drawn per alpha/beta-parameterized distribution.
-
-- **`alpha`** : A Tensor or Python value or N-D array of type  `dtype` .  `alpha` 
-provides the shape parameter(s) describing the gamma distribution(s) to
-sample. Must be broadcastable with  `beta` .
-
-- **`beta`** : A Tensor or Python value or N-D array of type  `dtype` . Defaults to 1.
- `beta`  provides the inverse scale parameter(s) of the gamma
-distribution(s) to sample. Must be broadcastable with  `alpha` .
-
-- **`dtype`** : The type of alpha, beta, and the output:  `float16` ,  `float32` , or
- `float64` .
-
-- **`seed`** : A Python integer. Used to create a random seed for the distributions.
-See
-[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed)
-for behavior.
-
+- **`shape`** : A 1-D integer Tensor or Python array. The shape of the output samplesto be drawn per alpha/beta-parameterized distribution.
+- **`alpha`** : A Tensor or Python value or N-D array of type  `dtype` .  `alpha` provides the shape parameter(s) describing the gamma distribution(s) tosample. Must be broadcastable with  `beta` .
+- **`beta`** : A Tensor or Python value or N-D array of type  `dtype` . Defaults to 1. `beta`  provides the inverse scale parameter(s) of the gammadistribution(s) to sample. Must be broadcastable with  `alpha` .
+- **`dtype`** : The type of alpha, beta, and the output:  `float16` ,  `float32` , or `float64` .
+- **`seed`** : A Python integer. Used to create a random seed for the distributions.See[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed)for behavior.
 - **`name`** : Optional name for the operation.
 
 
-
 #### Returns:
-
-- **`samples`** : a  `Tensor`  of shape
- `tf.concat([shape, tf.shape(alpha + beta)], axis=0)`  with values of type
- `dtype` .
-
+- **`samples`** : a  `Tensor`  of shape `tf.concat([shape, tf.shape(alpha + beta)], axis=0)`  with values of type `dtype` .

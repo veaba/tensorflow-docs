@@ -1,14 +1,6 @@
 Generates skipgram word pairs.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams)
-
-- [ `tf.compat.v2.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams), [ `tf.compat.v2.keras.preprocessing.sequence.skipgrams` ](/api_docs/python/tf/keras/preprocessing/sequence/skipgrams)
 
 ```
  tf.keras.preprocessing.sequence.skipgrams(
@@ -24,19 +16,11 @@ Generates skipgram word pairs.
  
 ```
 
-This function transforms a sequence of word indexes (list of integers)
-into tuples of words of the form:
-
+This function transforms a sequence of word indexes (list of integers)into tuples of words of the form:
 
 - (word, word in the same window), with label 1 (positive samples).
-
 - (word, random word from the vocabulary), with label 0 (negative samples).
-
-Read more about Skipgram in this gnomic paper by Mikolov et al.:
-<a href="http://arxiv.org/pdf/1301.3781v3.pdf">Efficient Estimation of Word Representations in
-Vector Space</a>
-
-
+Read more about Skipgram in this gnomic paper by Mikolov et al.:[Efficient Estimation of Word Representations inVector Space](http://arxiv.org/pdf/1301.3781v3.pdf)
 
 # Arguments
 
@@ -65,8 +49,6 @@ seed: Random seed.
  
 ```
 
-
-
 # Returns
 
 
@@ -75,8 +57,6 @@ seed: Random seed.
     `labels` are either 0 or 1.
  
 ```
-
-
 
 # Note
 

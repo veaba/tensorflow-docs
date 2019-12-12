@@ -5,20 +5,11 @@ Abstract object representing an RNN cell.
 
 Inherits From: [ `Layer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Layer)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell)
-
-- Class [ `tf.compat.v2.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell)
+**Aliases** : [ `tf.compat.v1.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell), [ `tf.compat.v2.keras.layers.AbstractRNNCell` ](/api_docs/python/tf/keras/layers/AbstractRNNCell)
 
 This is the base class for implementing RNN cells with custom behavior.
 
-Every  `RNNCell`  must have the properties below and implement  `call`  with
-the signature  `(output, next_state) = call(input, state)` .
-
-
+Every  `RNNCell`  must have the properties below and implement  `call`  withthe signature  `(output, next_state) = call(input, state)` .
 
 #### Examples:
 
@@ -52,25 +43,12 @@ the signature  `(output, next_state) = call(input, state)` .
  
 ```
 
-This definition of cell differs from the definition used in the literature.
-In the literature, 'cell' refers to an object with a single scalar output.
-This definition refers to a horizontal array of such units.
+This definition of cell differs from the definition used in the literature.In the literature, 'cell' refers to an object with a single scalar output.This definition refers to a horizontal array of such units.
 
-An RNN cell, in the most abstract setting, is anything that has
-a state and performs some operation that takes a matrix of inputs.
-This operation results in an output matrix with  `self.output_size`  columns.
-If  `self.state_size`  is an integer, this operation also results in a new
-state matrix with  `self.state_size`  columns.  If  `self.state_size`  is a
-(possibly nested tuple of) TensorShape object(s), then it should return a
-matching structure of Tensors having shape  `[batch_size].concatenate(s)` 
-for each  `s`  in  `self.batch_size` .
-
-
+An RNN cell, in the most abstract setting, is anything that hasa state and performs some operation that takes a matrix of inputs.This operation results in an output matrix with  `self.output_size`  columns.If  `self.state_size`  is an integer, this operation also results in a newstate matrix with  `self.state_size`  columns.  If  `self.state_size`  is a(possibly nested tuple of) TensorShape object(s), then it should return amatching structure of Tensors having shape  `[batch_size].concatenate(s)` for each  `s`  in  `self.batch_size` .
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/engine/base_layer.py#L277-L363)
-
-
 
 ```
  __init__(
@@ -83,31 +61,22 @@ for each  `s`  in  `self.batch_size` .
  
 ```
 
-
-
 ## Properties
 
 
 ###  `output_size` 
 Integer or TensorShape: size of outputs produced by this cell.
 
-
-
 ###  `state_size` 
 size(s) of state(s) used by this cell.
 
-It can be represented by an Integer, a TensorShape or a tuple of Integers
-or TensorShapes.
-
-
+It can be represented by an Integer, a TensorShape or a tuple of Integersor TensorShapes.
 
 ## Methods
 
 
 ###  `get_initial_state` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/recurrent.py#L976-L977)
-
-
 
 ```
  get_initial_state(

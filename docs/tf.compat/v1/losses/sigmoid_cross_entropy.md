@@ -1,7 +1,7 @@
 Creates a cross-entropy loss using tf.nn.sigmoid_cross_entropy_with_logits.
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.losses.sigmoid_cross_entropy(
+```
+ tf.compat.v1.losses.sigmoid_cross_entropy(
     multi_class_labels,
     logits,
     weights=1.0,
@@ -10,15 +10,12 @@ Creates a cross-entropy loss using tf.nn.sigmoid_cross_entropy_with_logits.
     loss_collection=tf.GraphKeys.LOSSES,
     reduction=Reduction.SUM_BY_NONZERO_WEIGHTS
 )
-</code></pre></devsite-code>
- `weights`  acts as a coefficient for the loss. If a scalar is provided,
-then the loss is simply scaled by the given value. If  `weights`  is a
-tensor of shape  `[batch_size]` , then the loss weights apply to each
-corresponding sample.
+ 
+```
+
+ `weights`  acts as a coefficient for the loss. If a scalar is provided,then the loss is simply scaled by the given value. If  `weights`  is atensor of shape  `[batch_size]` , then the loss weights apply to eachcorresponding sample.
 
 If  `label_smoothing`  is nonzero, smooth the labels towards 1/2:
-
-
 
 ```
  new_multiclass_labels = multiclass_labels * (1 - label_smoothing)
@@ -26,44 +23,23 @@ If  `label_smoothing`  is nonzero, smooth the labels towards 1/2:
  
 ```
 
-
-
 #### Args:
-
-- **`multi_class_labels`** :  `[batch_size, num_classes]`  target integer labels in
- `{0, 1}` .
-
+- **`multi_class_labels`** :  `[batch_size, num_classes]`  target integer labels in `{0, 1}` .
 - **`logits`** : Float  `[batch_size, num_classes]`  logits outputs of the network.
-
-- **`weights`** : Optional  `Tensor`  whose rank is either 0, or the same rank as
- `labels` , and must be broadcastable to  `labels`  (i.e., all dimensions must
-be either  `1` , or the same as the corresponding  `losses`  dimension).
-
+- **`weights`** : Optional  `Tensor`  whose rank is either 0, or the same rank as `labels` , and must be broadcastable to  `labels`  (i.e., all dimensions mustbe either  `1` , or the same as the corresponding  `losses`  dimension).
 - **`label_smoothing`** : If greater than  `0`  then smooth the labels.
-
 - **`scope`** : The scope for the operations performed in computing the loss.
-
 - **`loss_collection`** : collection to which the loss will be added.
-
 - **`reduction`** : Type of reduction to apply to loss.
 
 
-
 #### Returns:
-Weighted loss  `Tensor`  of the same type as  `logits` . If  `reduction`  is
- `NONE` , this has the same shape as  `logits` ; otherwise, it is scalar.
-
-
+Weighted loss  `Tensor`  of the same type as  `logits` . If  `reduction`  is `NONE` , this has the same shape as  `logits` ; otherwise, it is scalar.
 
 #### Raises:
-
-- **`ValueError`** : If the shape of  `logits`  doesn't match that of
- `multi_class_labels`  or if the shape of  `weights`  is invalid, or if
- `weights`  is None.  Also if  `multi_class_labels`  or  `logits`  is None.
-
+- **`ValueError`** : If the shape of  `logits`  doesn't match that of `multi_class_labels`  or if the shape of  `weights`  is invalid, or if `weights`  is None.  Also if  `multi_class_labels`  or  `logits`  is None.
 
 
 #### Eager Compatibility
-The  `loss_collection`  argument is ignored when executing eagerly. Consider
-holding on to the return value or collecting losses via a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model).
+The  `loss_collection`  argument is ignored when executing eagerly. Considerholding on to the return value or collecting losses via a [ `tf.keras.Model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Model).
 

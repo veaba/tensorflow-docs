@@ -1,7 +1,5 @@
 Public API for tf.config.threading namespace.
 
-
-
 ## Functions
 [ `get_inter_op_parallelism_threads(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/threading/get_inter_op_parallelism_threads): Get number of threads used for parallelism between independent operations.
 

@@ -1,37 +1,21 @@
 Returns a SaveableObject for saving/restoring iterator state using Saver.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator)
-
-- [ `tf.compat.v2.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator)
-
-
+**Aliases** : [ `tf.compat.v1.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator), [ `tf.compat.v2.data.experimental.make_saveable_from_iterator` ](/api_docs/python/tf/data/experimental/make_saveable_from_iterator)
 
 ```
  tf.data.experimental.make_saveable_from_iterator(iterator)
  
 ```
 
-
-
 #### Args:
-
 - **`iterator`** : Iterator.
-
 
 
 #### Returns:
 A SaveableObject for saving/restoring iterator state using Saver.
 
-
-
 #### Raises:
-
 - **`ValueError`** : If iterator does not support checkpointing.
-
 
 
 #### For example:
@@ -56,12 +40,6 @@ A SaveableObject for saving/restoring iterator state using Saver.
 ```
 
 
-<aside class="note">**Note:**  When restoring the iterator, the existing iterator state is completely
-discarded. This means that any changes you may have made to the Dataset
-graph will be discarded as well! This includes the new Dataset graph
-that you may have built during validation. So, while running validation,
-make sure to run the initializer for the validation input pipeline after
-restoring the checkpoint.</aside>
+**Note:**  When restoring the iterator, the existing iterator state is completelydiscarded. This means that any changes you may have made to the Datasetgraph will be discarded as well! This includes the new Dataset graphthat you may have built during validation. So, while running validation,make sure to run the initializer for the validation input pipeline afterrestoring the checkpoint.
 
-<aside class="note">**Note:**  Not all iterators support checkpointing yet. Attempting to save the
-state of an unsupported iterator will throw an error.</aside>
+**Note:**  Not all iterators support checkpointing yet. Attempting to save thestate of an unsupported iterator will throw an error.

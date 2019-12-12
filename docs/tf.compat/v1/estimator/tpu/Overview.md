@@ -1,11 +1,7 @@
 Public API for tf.estimator.tpu namespace.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/tpu/experimental) module: Public API for tf.estimator.tpu.experimental namespace.
-
-
 
 ## Classes
 [ `class InputPipelineConfig` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/tpu/InputPipelineConfig): Please see the definition of these values in TPUConfig.

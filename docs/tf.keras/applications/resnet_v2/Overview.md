@@ -1,7 +1,5 @@
 ResNet v2 models for Keras.
 
-
-
 ## Functions
 [ `ResNet101V2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/ResNet101V2)
 

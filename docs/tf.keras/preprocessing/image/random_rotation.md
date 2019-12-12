@@ -1,14 +1,6 @@
 Performs a random rotation of a Numpy image tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.image.random_rotation` ](/api_docs/python/tf/keras/preprocessing/image/random_rotation)
-
-- [ `tf.compat.v2.keras.preprocessing.image.random_rotation` ](/api_docs/python/tf/keras/preprocessing/image/random_rotation)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_rotation` ](/api_docs/python/tf/keras/preprocessing/image/random_rotation), [ `tf.compat.v2.keras.preprocessing.image.random_rotation` ](/api_docs/python/tf/keras/preprocessing/image/random_rotation)
 
 ```
  tf.keras.preprocessing.image.random_rotation(
@@ -23,8 +15,6 @@ Performs a random rotation of a Numpy image tensor.
 )
  
 ```
-
-
 
 # Arguments
 
@@ -44,8 +34,6 @@ interpolation_order: int, order of spline interpolation.
     see `ndimage.interpolation.affine_transform`
  
 ```
-
-
 
 # Returns
 

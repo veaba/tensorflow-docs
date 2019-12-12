@@ -2,17 +2,7 @@
 
 Computes the singular value decompositions of one or more matrices.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.linalg.svd` ](/api_docs/python/tf/linalg/svd)
-
-- [ `tf.compat.v1.svd` ](/api_docs/python/tf/linalg/svd)
-
-- [ `tf.compat.v2.linalg.svd` ](/api_docs/python/tf/linalg/svd)
-
-
+**Aliases** : [ `tf.compat.v1.linalg.svd` ](/api_docs/python/tf/linalg/svd), [ `tf.compat.v1.svd` ](/api_docs/python/tf/linalg/svd), [ `tf.compat.v2.linalg.svd` ](/api_docs/python/tf/linalg/svd)
 
 ```
  tf.linalg.svd(
@@ -24,11 +14,7 @@ Computes the singular value decompositions of one or more matrices.
  
 ```
 
-Computes the SVD of each inner matrix in  `tensor`  such that
-<code translate="no" dir="ltr">tensor[..., :, :] = u[..., :, :] * diag(s[..., :, :]) *
- transpose(conj(v[..., :, :]))</code>
-
-
+Computes the SVD of each inner matrix in  `tensor`  such that `tensor[..., :, :] = u[..., :, :] * diag(s[..., :, :]) * transpose(conj(v[..., :, :]))` 
 
 ```
  # a is a tensor.
@@ -40,54 +26,21 @@ s = svd(a, compute_uv=False)
  
 ```
 
-
-
 #### Args:
-
-- **`tensor`** :  `Tensor`  of shape  `[..., M, N]` . Let  `P`  be the minimum of  `M`  and
- `N` .
-
-- **`full_matrices`** : If true, compute full-sized  `u`  and  `v` . If false
-(the default), compute only the leading  `P`  singular vectors.
-Ignored if  `compute_uv`  is  `False` .
-
-- **`compute_uv`** : If  `True`  then left and right singular vectors will be
-computed and returned in  `u`  and  `v` , respectively. Otherwise, only the
-singular values will be computed, which can be significantly faster.
-
+- **`tensor`** :  `Tensor`  of shape  `[..., M, N]` . Let  `P`  be the minimum of  `M`  and `N` .
+- **`full_matrices`** : If true, compute full-sized  `u`  and  `v` . If false(the default), compute only the leading  `P`  singular vectors.Ignored if  `compute_uv`  is  `False` .
+- **`compute_uv`** : If  `True`  then left and right singular vectors will becomputed and returned in  `u`  and  `v` , respectively. Otherwise, only thesingular values will be computed, which can be significantly faster.
 - **`name`** : string, optional name of the operation.
 
 
-
 #### Returns:
-
-- **`s`** : Singular values. Shape is  `[..., P]` . The values are sorted in reverse
-order of magnitude, so s[..., 0] is the largest value, s[..., 1] is the
-second largest, etc.
-
-- **`u`** : Left singular vectors. If  `full_matrices`  is  `False`  (default) then
-shape is  `[..., M, P]` ; if  `full_matrices`  is  `True`  then shape is
- `[..., M, M]` . Not returned if  `compute_uv`  is  `False` .
-
-- **`v`** : Right singular vectors. If  `full_matrices`  is  `False`  (default) then
-shape is  `[..., N, P]` . If  `full_matrices`  is  `True`  then shape is
- `[..., N, N]` . Not returned if  `compute_uv`  is  `False` .
-
+- **`s`** : Singular values. Shape is  `[..., P]` . The values are sorted in reverseorder of magnitude, so s[..., 0] is the largest value, s[..., 1] is thesecond largest, etc.
+- **`u`** : Left singular vectors. If  `full_matrices`  is  `False`  (default) thenshape is  `[..., M, P]` ; if  `full_matrices`  is  `True`  then shape is `[..., M, M]` . Not returned if  `compute_uv`  is  `False` .
+- **`v`** : Right singular vectors. If  `full_matrices`  is  `False`  (default) thenshape is  `[..., N, P]` . If  `full_matrices`  is  `True`  then shape is `[..., N, N]` . Not returned if  `compute_uv`  is  `False` .
 
 
 #### Numpy Compatibility
-Mostly equivalent to numpy.linalg.svd, except that
-  * The order of output  arguments here is  `s` ,  `u` ,  `v`  when  `compute_uv`  is
-     `True` , as opposed to  `u` ,  `s` ,  `v`  for numpy.linalg.svd.
-  * full_matrices is  `False`  by default as opposed to  `True`  for
-     numpy.linalg.svd.
-  * tf.linalg.svd uses the standard definition of the SVD
-    A=UΣVH, such that the left singular vectors of  `a`  are
-    the columns of  `u` , while the right singular vectors of  `a`  are the
-    columns of  `v` . On the other hand, numpy.linalg.svd returns the adjoint
-    VH as the third output argument.
-
-
+Mostly equivalent to numpy.linalg.svd, except that  * The order of output  arguments here is  `s` ,  `u` ,  `v`  when  `compute_uv`  is     `True` , as opposed to  `u` ,  `s` ,  `v`  for numpy.linalg.svd.  * full_matrices is  `False`  by default as opposed to  `True`  for     numpy.linalg.svd.  * tf.linalg.svd uses the standard definition of the SVD    ![](./svd.md_0.png), such that the left singular vectors of  `a`  are    the columns of  `u` , while the right singular vectors of  `a`  are the    columns of  `v` . On the other hand, numpy.linalg.svd returns the adjoint    ![](./svd.md_1.png) as the third output argument.
 
 ```
  import tensorflow as tf

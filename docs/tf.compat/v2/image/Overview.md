@@ -2,12 +2,8 @@ Image processing and decoding ops.
 
 See the [Images](https://tensorflow.org/api_guides/python/image) guide.
 
-
-
 ## Classes
 [ `class ResizeMethod` ](https://tensorflow.google.cn/api_docs/python/tf/image/ResizeMethod)
-
-
 
 ## Functions
 [ `adjust_brightness(...)` ](https://tensorflow.google.cn/api_docs/python/tf/image/adjust_brightness): Adjust the brightness of RGB or Grayscale images.

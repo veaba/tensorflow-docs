@@ -1,7 +1,5 @@
 Helpers to manipulate a tensor graph in python.
 
-
-
 ## Functions
 [ `convert_variables_to_constants(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/graph_util/convert_variables_to_constants): Replaces all the variables in a graph with constants of the same values. (deprecated)
 

@@ -1,25 +1,21 @@
 Computes a weighted cross entropy. (deprecated arguments)
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.nn.weighted_cross_entropy_with_logits(
+```
+ tf.compat.v1.nn.weighted_cross_entropy_with_logits(
     labels=None,
     logits=None,
     pos_weight=None,
     name=None,
     targets=None
 )
-</code></pre></devsite-code>
+ 
+```
 
-<aside class="warning">**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(targets)` . They will be removed in a future version.
-Instructions for updating:
-targets is deprecated, use labels instead</aside>
-This is like  `sigmoid_cross_entropy_with_logits()`  except that  `pos_weight` ,
-allows one to trade off recall and precision by up- or down-weighting the
-cost of a positive error relative to a negative error.
+
+**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(targets)` . They will be removed in a future version.Instructions for updating:targets is deprecated, use labels instead
+This is like  `sigmoid_cross_entropy_with_logits()`  except that  `pos_weight` ,allows one to trade off recall and precision by up- or down-weighting thecost of a positive error relative to a negative error.
 
 The usual cross-entropy cost is defined as:
-
-
 
 ```
  labels * -log(sigmoid(logits)) +
@@ -27,15 +23,7 @@ The usual cross-entropy cost is defined as:
  
 ```
 
-A value  `pos_weight > 1`  decreases the false negative count, hence increasing
-the recall.
-Conversely setting  `pos_weight < 1`  decreases the false positive count and
-increases the precision.
-This can be seen from the fact that  `pos_weight`  is introduced as a
-multiplicative coefficient for the positive labels term
-in the loss expression:
-
-
+A value  `pos_weight > 1`  decreases the false negative count, hence increasingthe recall.Conversely setting  `pos_weight < 1`  decreases the false positive count andincreases the precision.This can be seen from the fact that  `pos_weight`  is introduced as amultiplicative coefficient for the positive labels termin the loss expression:
 
 ```
  labels * -log(sigmoid(logits)) * pos_weight +
@@ -43,10 +31,7 @@ in the loss expression:
  
 ```
 
-For brevity, let  `x = logits` ,  `z = labels` ,  `q = pos_weight` .
-The loss is:
-
-
+For brevity, let  `x = logits` ,  `z = labels` ,  `q = pos_weight` .The loss is:
 
 ```
    qz * -log(sigmoid(x)) + (1 - z) * -log(1 - sigmoid(x))
@@ -58,10 +43,7 @@ The loss is:
  
 ```
 
-Setting  `l = (1 + (q - 1) * z)` , to ensure stability and avoid overflow,
-the implementation uses
-
-
+Setting  `l = (1 + (q - 1) * z)` , to ensure stability and avoid overflow,the implementation uses
 
 ```
  (1 - z) * x + l * (log(1 + exp(-abs(x))) + max(-x, 0))
@@ -70,29 +52,16 @@ the implementation uses
 
  `logits`  and  `labels`  must have the same type and shape.
 
-
-
 #### Args:
-
 - **`labels`** : A  `Tensor`  of the same type and shape as  `logits` .
-
 - **`logits`** : A  `Tensor`  of type  `float32`  or  `float64` .
-
 - **`pos_weight`** : A coefficient to use on the positive examples.
-
 - **`name`** : A name for the operation (optional).
-
 - **`targets`** : Deprecated alias for labels.
 
 
-
 #### Returns:
-A  `Tensor`  of the same shape as  `logits`  with the componentwise
-weighted logistic losses.
-
-
+A  `Tensor`  of the same shape as  `logits`  with the componentwiseweighted logistic losses.
 
 #### Raises:
-
 - **`ValueError`** : If  `logits`  and  `labels`  do not have the same shape.
-

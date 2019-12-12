@@ -3,37 +3,18 @@
 ## Class  `EvalSpec` 
 Configuration for the "eval" part for the  `train_and_evaluate`  call.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.estimator.EvalSpec` ](/api_docs/python/tf/estimator/EvalSpec)
-
-- Class [ `tf.compat.v2.estimator.EvalSpec` ](/api_docs/python/tf/estimator/EvalSpec)
-
-
+**Aliases** : [ `tf.compat.v1.estimator.EvalSpec` ](/api_docs/python/tf/estimator/EvalSpec), [ `tf.compat.v2.estimator.EvalSpec` ](/api_docs/python/tf/estimator/EvalSpec)
 
 ### Used in the guide:
-
 - [Migrate your TensorFlow 1 code to TensorFlow 2](https://tensorflow.google.cn/guide/migrate)
 
 
-
 ### Used in the tutorials:
-
 - [Multi-worker training with Estimator](https://tensorflow.google.cn/tutorials/distribute/multi_worker_with_estimator)
-
- `EvalSpec`  combines details of evaluation of the trained model as well as its
-export. Evaluation consists of computing metrics to judge the performance of
-the trained model.  Export writes out the trained model on to external
-storage.
-
-
+ `EvalSpec`  combines details of evaluation of the trained model as well as itsexport. Evaluation consists of computing metrics to judge the performance ofthe trained model.  Export writes out the trained model on to externalstorage.
 
 ##  `__new__` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/training.py)
-
-
 
 ```
  @staticmethod
@@ -52,71 +33,38 @@ __new__(
 
 Creates a validated  `EvalSpec`  instance.
 
-
-
 #### Args:
-
-- **`input_fn`** : A function that constructs the input data for evaluation.
-See [Premade Estimators](https://tensorflow.org/guide/premade_estimators#create_input_functions)
-for more information. The function should construct and return one of
-the following:
+- **`input_fn`** : A function that constructs the input data for evaluation.See [Premade Estimators](https://tensorflow.org/guide/premade_estimators#create_input_functions)for more information. The function should construct and return one ofthe following:
 
 
-
-- **`steps`** : Int. Positive number of steps for which to evaluate model. If
- `None` , evaluates until  `input_fn`  raises an end-of-input exception.
-See [ `Estimator.evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator#evaluate) for details.
+- **`steps`** : Int. Positive number of steps for which to evaluate model. If `None` , evaluates until  `input_fn`  raises an end-of-input exception.See [ `Estimator.evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator#evaluate) for details.
 
 
-
-- **`name`** : String. Name of the evaluation if user needs to run multiple
-evaluations on different data sets. Metrics for different evaluations
-are saved in separate folders, and appear separately in tensorboard.
+- **`name`** : String. Name of the evaluation if user needs to run multipleevaluations on different data sets. Metrics for different evaluationsare saved in separate folders, and appear separately in tensorboard.
 
 
-
-- **`hooks`** : Iterable of  `tf.train.SessionRunHook`  objects to run
-during evaluation.
+- **`hooks`** : Iterable of  `tf.train.SessionRunHook`  objects to runduring evaluation.
 
 
-
-- **`exporters`** : Iterable of  `Exporter` s, or a single one, or  `None` .
- `exporters`  will be invoked after each evaluation.
+- **`exporters`** : Iterable of  `Exporter` s, or a single one, or  `None` . `exporters`  will be invoked after each evaluation.
 
 
-
-- **`start_delay_secs`** : Int. Start evaluating after waiting for this many
-seconds.
+- **`start_delay_secs`** : Int. Start evaluating after waiting for this manyseconds.
 
 
-
-- **`throttle_secs`** : Int. Do not re-evaluate unless the last evaluation was
-started at least this many seconds ago. Of course, evaluation does not
-occur if no new checkpoints are available, hence, this is the minimum.
+- **`throttle_secs`** : Int. Do not re-evaluate unless the last evaluation wasstarted at least this many seconds ago. Of course, evaluation does notoccur if no new checkpoints are available, hence, this is the minimum.
 
 
-
-
-    - A 'tf.data.Dataset' object: Outputs of  `Dataset`  object must be a
-tuple (features, labels) with same constraints as below.
-
-    - A tuple (features, labels): Where features is a  `Tensor`  or a
-dictionary of string feature name to  `Tensor`  and labels is a
- `Tensor`  or a dictionary of string label name to  `Tensor` .
-
+    - A 'tf.data.Dataset' object: Outputs of  `Dataset`  object must be atuple (features, labels) with same constraints as below.
+    - A tuple (features, labels): Where features is a  `Tensor`  or adictionary of string feature name to  `Tensor`  and labels is a `Tensor`  or a dictionary of string label name to  `Tensor` .
 
 
 #### Returns:
 A validated  `EvalSpec`  object.
 
-
-
 #### Raises:
-
 - **`ValueError`** : If any of the input arguments is invalid.
-
 - **`TypeError`** : If any of the arguments is not of the expected type.
-
 
 
 ## Properties

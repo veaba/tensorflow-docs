@@ -1,7 +1,5 @@
 Operations for manipulating the binary representations of integers.
 
-
-
 ## Functions
 [ `bitwise_and(...)` ](https://tensorflow.google.cn/api_docs/python/tf/bitwise/bitwise_and): Elementwise computes the bitwise AND of  `x`  and  `y` .
 

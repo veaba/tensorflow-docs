@@ -3,81 +3,36 @@
 ## Class  `Attention` 
 Dot-product attention layer, a.k.a. Luong-style attention.
 
+**Aliases** : [ `tf.compat.v1.keras.layers.Attention` ](/api_docs/python/tf/keras/layers/Attention), [ `tf.compat.v2.keras.layers.Attention` ](/api_docs/python/tf/keras/layers/Attention)
 
+Inputs are  `query`  tensor of shape  `[batch_size, Tq, dim]` ,  `value`  tensor ofshape  `[batch_size, Tv, dim]`  and  `key`  tensor of shape `[batch_size, Tv, dim]` . The calculation follows the steps:
 
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.layers.Attention` ](/api_docs/python/tf/keras/layers/Attention)
-
-- Class [ `tf.compat.v2.keras.layers.Attention` ](/api_docs/python/tf/keras/layers/Attention)
-
-Inputs are  `query`  tensor of shape  `[batch_size, Tq, dim]` ,  `value`  tensor of
-shape  `[batch_size, Tv, dim]`  and  `key`  tensor of shape
- `[batch_size, Tv, dim]` . The calculation follows the steps:
-
-
-1. Calculate scores with shape  `[batch_size, Tq, Tv]`  as a  `query` - `key`  dot
-product:  `scores = tf.matmul(query, key, transpose_b=True)` .
-
-2. Use scores to calculate a distribution with shape
- `[batch_size, Tq, Tv]` :  `distribution = tf.nn.softmax(scores)` .
-
-3. Use  `distribution`  to create a linear combination of  `value`  with
-shape  `batch_size, Tq, dim]` :
- `return tf.matmul(distribution, value)` .
-
+1. Calculate scores with shape  `[batch_size, Tq, Tv]`  as a  `query` - `key`  dotproduct:  `scores = tf.matmul(query, key, transpose_b=True)` .
+2. Use scores to calculate a distribution with shape `[batch_size, Tq, Tv]` :  `distribution = tf.nn.softmax(scores)` .
+3. Use  `distribution`  to create a linear combination of  `value`  withshape  `batch_size, Tq, dim]` : `return tf.matmul(distribution, value)` .
 
 
 #### Args:
-
-- **`use_scale`** : If  `True` , will create a scalar variable to scale the attention
-scores.
-
-- **`causal`** : Boolean. Set to  `True`  for decoder self-attention. Adds a mask such
-that position  `i`  cannot attend to positions  `j > i` . This prevents the
-flow of information from the future towards the past.
-
+- **`use_scale`** : If  `True` , will create a scalar variable to scale the attentionscores.
+- **`causal`** : Boolean. Set to  `True`  for decoder self-attention. Adds a mask suchthat position  `i`  cannot attend to positions  `j > i` . This prevents theflow of information from the future towards the past.
 
 
 #### Call Arguments:
-
 - **`inputs`** : List of the following tensors:
-
-
 - **`mask`** : List of the following tensors:
-
-
-
     - query: Query  `Tensor`  of shape  `[batch_size, Tq, dim]` .
-
     - value: Value  `Tensor`  of shape  `[batch_size, Tv, dim]` .
-
-    - key: Optional key  `Tensor`  of shape  `[batch_size, Tv, dim]` . If not
-given, will use  `value`  for both  `key`  and  `value` , which is the
-most common case.
-
-
-    - query_mask: A boolean mask  `Tensor`  of shape  `[batch_size, Tq]` .
-If given, the output will be zero at the positions where
- `mask==False` .
-
-    - value_mask: A boolean mask  `Tensor`  of shape  `[batch_size, Tv]` .
-If given, will apply the mask such that values at positions where
- `mask==False`  do not contribute to the result.
-
+    - key: Optional key  `Tensor`  of shape  `[batch_size, Tv, dim]` . If notgiven, will use  `value`  for both  `key`  and  `value` , which is themost common case.
+    - query_mask: A boolean mask  `Tensor`  of shape  `[batch_size, Tq]` .If given, the output will be zero at the positions where `mask==False` .
+    - value_mask: A boolean mask  `Tensor`  of shape  `[batch_size, Tv]` .If given, will apply the mask such that values at positions where `mask==False`  do not contribute to the result.
 
 
 #### Output shape:
 Attention outputs of shape  `[batch_size, Tq, dim]` .
 
-The meaning of  `query` ,  `value`  and  `key`  depend on the application. In the
-case of text similarity, for example,  `query`  is the sequence embeddings of
-the first piece of text and  `value`  is the sequence embeddings of the second
-piece of text.  `key`  is usually the same tensor as  `value` .
+The meaning of  `query` ,  `value`  and  `key`  depend on the application. In thecase of text similarity, for example,  `query`  is the sequence embeddings ofthe first piece of text and  `value`  is the sequence embeddings of the secondpiece of text.  `key`  is usually the same tensor as  `value` .
 
 Here is a code example for using  `Attention`  in a CNN+Attention network:
-
-
 
 ```
  # Variable-length int sequences.
@@ -122,12 +77,8 @@ input_layer = tf.keras.layers.Concatenate()(
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/dense_attention.py#L274-L276)
-
-
 
 ```
  __init__(

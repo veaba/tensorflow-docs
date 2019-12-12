@@ -1,14 +1,6 @@
 Build a serving_input_receiver_fn expecting feature Tensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.estimator.export.build_raw_serving_input_receiver_fn` ](/api_docs/python/tf/estimator/export/build_raw_serving_input_receiver_fn)
-
-- [ `tf.compat.v2.estimator.export.build_raw_serving_input_receiver_fn` ](/api_docs/python/tf/estimator/export/build_raw_serving_input_receiver_fn)
-
-
+**Aliases** : [ `tf.compat.v1.estimator.export.build_raw_serving_input_receiver_fn` ](/api_docs/python/tf/estimator/export/build_raw_serving_input_receiver_fn), [ `tf.compat.v2.estimator.export.build_raw_serving_input_receiver_fn` ](/api_docs/python/tf/estimator/export/build_raw_serving_input_receiver_fn)
 
 ```
  tf.estimator.export.build_raw_serving_input_receiver_fn(
@@ -18,18 +10,11 @@ Build a serving_input_receiver_fn expecting feature Tensors.
  
 ```
 
-Creates an serving_input_receiver_fn that expects all features to be fed
-directly.
-
-
+Creates an serving_input_receiver_fn that expects all features to be feddirectly.
 
 #### Args:
-
 - **`features`** : a dict of string to  `Tensor` .
-
-- **`default_batch_size`** : the number of query examples expected per batch.
-Leave unset for variable batch size (recommended).
-
+- **`default_batch_size`** : the number of query examples expected per batch.Leave unset for variable batch size (recommended).
 
 
 #### Returns:

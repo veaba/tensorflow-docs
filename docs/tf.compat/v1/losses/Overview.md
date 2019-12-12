@@ -1,13 +1,11 @@
 Loss operations for use in neural networks.
 
 
-<aside class="note">**Note:**  All the losses are added to the  `GraphKeys.LOSSES`  collection by default.</aside>
+**Note:**  All the losses are added to the  `GraphKeys.LOSSES`  collection by default.
 
 
 ## Classes
 [ `class Reduction` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/losses/Reduction): Types of loss reduction.
-
-
 
 ## Functions
 [ `absolute_difference(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/losses/absolute_difference): Adds an Absolute Difference loss to the training procedure.

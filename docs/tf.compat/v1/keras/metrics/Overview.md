@@ -1,7 +1,5 @@
 Built-in metrics.
 
-
-
 ## Classes
 [ `class AUC` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/AUC): Computes the approximate AUC (Area under the curve) via a Riemann sum.
 
@@ -74,8 +72,6 @@ Built-in metrics.
 [ `class TrueNegatives` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/TrueNegatives): Calculates the number of true negatives.
 
 [ `class TruePositives` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/TruePositives): Calculates the number of true positives.
-
-
 
 ## Functions
 [ `KLD(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/KLD): Computes Kullback-Leibler divergence loss between  `y_true`  and  `y_pred` .

@@ -1,11 +1,7 @@
 Public API for tf.io.gfile namespace.
 
-
-
 ## Classes
 [ `class GFile` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/GFile): File I/O wrappers without thread locking.
-
-
 
 ## Functions
 [ `copy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/io/gfile/copy): Copies data from  `src`  to  `dst` .

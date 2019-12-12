@@ -1,7 +1,5 @@
 DenseNet models for Keras.
 
-
-
 ## Functions
 [ `DenseNet121(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/DenseNet121)
 

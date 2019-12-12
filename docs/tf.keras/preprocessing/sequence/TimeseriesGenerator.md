@@ -5,20 +5,9 @@ Utility class for generating batches of temporal data.
 
 Inherits From: [ `Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)
 
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator), [ `tf.compat.v2.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator)
-
-- Class [ `tf.compat.v2.keras.preprocessing.sequence.TimeseriesGenerator` ](/api_docs/python/tf/keras/preprocessing/sequence/TimeseriesGenerator)
-
-This class takes in a sequence of data-points gathered at
-equal intervals, along with time series parameters such as
-stride, length of history, etc., to produce batches for
-training/validation.
-
-
+This class takes in a sequence of data-points gathered atequal intervals, along with time series parameters such asstride, length of history, etc., to produce batches fortraining/validation.
 
 # Arguments
 
@@ -53,8 +42,6 @@ batch_size: Number of timeseries samples in each batch
  
 ```
 
-
-
 # Returns
 
 
@@ -62,8 +49,6 @@ batch_size: Number of timeseries samples in each batch
  A [Sequence](/utils/#sequence) instance.
  
 ```
-
-
 
 # Examples
 
@@ -87,8 +72,6 @@ assert np.array_equal(y,
  
 ```
 
-
-
 ##  `__init__` 
 
 
@@ -110,8 +93,6 @@ assert np.array_equal(y,
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Methods
 
 
@@ -123,12 +104,8 @@ Initialize self.  See help(type(self)) for accurate signature.
  
 ```
 
-
-
 ###  `__iter__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L403-L406)
-
-
 
 ```
  __iter__()
@@ -137,8 +114,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Create a generator that iterate over the Sequence.
 
-
-
 ###  `__len__` 
 
 
@@ -146,8 +121,6 @@ Create a generator that iterate over the Sequence.
  __len__()
  
 ```
-
-
 
 ###  `get_config` 
 
@@ -159,8 +132,6 @@ Create a generator that iterate over the Sequence.
 
 Returns the TimeseriesGenerator configuration as Python dictionary.
 
-
-
 # Returns
 
 
@@ -169,12 +140,8 @@ Returns the TimeseriesGenerator configuration as Python dictionary.
  
 ```
 
-
-
 ###  `on_epoch_end` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/utils/data_utils.py#L398-L401)
-
-
 
 ```
  on_epoch_end()
@@ -182,8 +149,6 @@ Returns the TimeseriesGenerator configuration as Python dictionary.
 ```
 
 Method called at the end of every epoch.
-
-
 
 ###  `to_json` 
 
@@ -193,11 +158,7 @@ Method called at the end of every epoch.
  
 ```
 
-Returns a JSON string containing the timeseries generator
-configuration. To load a generator from a JSON string, use
- `keras.preprocessing.sequence.timeseries_generator_from_json(json_string)` .
-
-
+Returns a JSON string containing the timeseries generatorconfiguration. To load a generator from a JSON string, use `keras.preprocessing.sequence.timeseries_generator_from_json(json_string)` .
 
 # Arguments
 
@@ -207,8 +168,6 @@ configuration. To load a generator from a JSON string, use
     to be passed to `json.dumps()`.
  
 ```
-
-
 
 # Returns
 

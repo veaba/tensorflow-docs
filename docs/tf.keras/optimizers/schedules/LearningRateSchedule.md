@@ -3,32 +3,15 @@
 ## Class  `LearningRateSchedule` 
 A serializable learning rate decay schedule.
 
+**Aliases** : [ `tf.compat.v1.keras.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule), [ `tf.compat.v2.keras.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule), [ `tf.compat.v2.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule), [ `tf.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
-
-- Class [ `tf.compat.v2.keras.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
-
-- Class [ `tf.compat.v2.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
-
-- Class [ `tf.optimizers.schedules.LearningRateSchedule` ](/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
-
- `LearningRateSchedule` s can be passed in as the learning rate of optimizers in
-[ `tf.keras.optimizers` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers). They can be serialized and deserialized using
-[ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and
-[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
-
-
+ `LearningRateSchedule` s can be passed in as the learning rate of optimizers in[ `tf.keras.optimizers` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers). They can be serialized and deserialized using[ `tf.keras.optimizers.schedules.serialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/serialize) and[ `tf.keras.optimizers.schedules.deserialize` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/schedules/deserialize).
 
 ## Methods
 
 
 ###  `__call__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L42-L44)
-
-
 
 ```
  __call__(step)
@@ -37,12 +20,8 @@ A serializable learning rate decay schedule.
 
 Call self as a function.
 
-
-
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L50-L60)
-
-
 
 ```
  @classmethod
@@ -55,23 +34,15 @@ from_config(
 
 Instantiates a  `LearningRateSchedule`  from its config.
 
-
-
 #### Args:
-
 - **`config`** : Output of  `get_config()` .
-
 
 
 #### Returns:
 A  `LearningRateSchedule`  instance.
 
-
-
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/optimizer_v2/learning_rate_schedule.py#L46-L48)
-
-
 
 ```
  get_config()

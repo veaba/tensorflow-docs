@@ -3,23 +3,9 @@
 ## Class  `Optimizer` 
 Updated base class for optimizers.
 
+**Aliases** : [ `tf.compat.v1.keras.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer), [ `tf.compat.v2.keras.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer), [ `tf.compat.v2.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer), [ `tf.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer)
-
-- Class [ `tf.compat.v2.keras.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer)
-
-- Class [ `tf.compat.v2.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer)
-
-- Class [ `tf.optimizers.Optimizer` ](/api_docs/python/tf/keras/optimizers/Optimizer)
-
-This class defines the API to add Ops to train a model.  You never use this
-class directly, but instead instantiate one of its subclasses such as
-[ `tf.keras.optimizers.SGD` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/SGD), [ `tf.keras.optimizers.Adam` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adam).
-
-
+This class defines the API to add Ops to train a model.  You never use thisclass directly, but instead instantiate one of its subclasses such as[ `tf.keras.optimizers.SGD` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/SGD), [ `tf.keras.optimizers.Adam` ](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adam).
 
 ### Usage
 
@@ -39,15 +25,8 @@ opt.minimize(loss, var_list=[var1, var2])
  
 ```
 
-
-
 ### Custom training loop with Keras models
-In Keras models, sometimes variables are created when the model is first
-called, instead of construction time. Examples include 1) sequential models
-without input shape pre-defined, or 2) subclassed models. Pass var_list as
-callable in these cases.
-
-
+In Keras models, sometimes variables are created when the model is firstcalled, instead of construction time. Examples include 1) sequential modelswithout input shape pre-defined, or 2) subclassed models. Pass var_list ascallable in these cases.
 
 #### Example:
 
@@ -64,20 +43,12 @@ for input, output in data:
  
 ```
 
-
-
 ### Processing gradients before applying them.
-Calling  `minimize()`  takes care of both computing the gradients and
-applying them to the variables.  If you want to process the gradients
-before applying them you can instead use the optimizer in three steps:
-
+Calling  `minimize()`  takes care of both computing the gradients andapplying them to the variables.  If you want to process the gradientsbefore applying them you can instead use the optimizer in three steps:
 
 1. Compute the gradients with [ `tf.GradientTape` ](https://tensorflow.google.cn/api_docs/python/tf/GradientTape).
-
 2. Process the gradients as you wish.
-
 3. Apply the processed gradients with  `apply_gradients()` .
-
 
 
 #### Example:

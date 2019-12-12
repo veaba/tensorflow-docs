@@ -1,16 +1,6 @@
 Converts a  `SparseTensor`  of ids into a dense bool indicator tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator)
-
-- [ `tf.compat.v1.sparse_to_indicator` ](/api_docs/python/tf/sparse/to_indicator)
-
-- [ `tf.compat.v2.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator), [ `tf.compat.v1.sparse_to_indicator` ](/api_docs/python/tf/sparse/to_indicator), [ `tf.compat.v2.sparse.to_indicator` ](/api_docs/python/tf/sparse/to_indicator)
 
 ```
  tf.sparse.to_indicator(
@@ -21,11 +11,7 @@ Converts a  `SparseTensor`  of ids into a dense bool indicator tensor.
  
 ```
 
-The last dimension of  `sp_input.indices`  is discarded and replaced with
-the values of  `sp_input` .  If  `sp_input.dense_shape = [D0, D1, ..., Dn, K]` ,
-then  `output.shape = [D0, D1, ..., Dn, vocab_size]` , where
-
-
+The last dimension of  `sp_input.indices`  is discarded and replaced withthe values of  `sp_input` .  If  `sp_input.dense_shape = [D0, D1, ..., Dn, K]` ,then  `output.shape = [D0, D1, ..., Dn, vocab_size]` , where
 
 ```
  output[d_0, d_1, ..., d_n, sp_input[d_0, d_1, ..., d_n, k]] = True
@@ -35,8 +21,6 @@ then  `output.shape = [D0, D1, ..., Dn, vocab_size]` , where
 and False elsewhere in  `output` .
 
 For example, if  `sp_input.dense_shape = [2, 3, 4]`  with non-empty values:
-
-
 
 ```
  [0, 0, 0]: 0
@@ -49,10 +33,7 @@ For example, if  `sp_input.dense_shape = [2, 3, 4]`  with non-empty values:
  
 ```
 
-and  `vocab_size = 200` , then the output will be a  `[2, 3, 200]`  dense bool
-tensor with False everywhere except at positions
-
-
+and  `vocab_size = 200` , then the output will be a  `[2, 3, 200]`  dense booltensor with False everywhere except at positions
 
 ```
  (0, 0, 0), (0, 1, 10), (1, 0, 103), (1, 1, 149), (1, 1, 150),
@@ -60,32 +41,18 @@ tensor with False everywhere except at positions
  
 ```
 
-Note that repeats are allowed in the input SparseTensor.
-This op is useful for converting  `SparseTensor` s into dense formats for
-compatibility with ops that expect dense tensors.
+Note that repeats are allowed in the input SparseTensor.This op is useful for converting  `SparseTensor` s into dense formats forcompatibility with ops that expect dense tensors.
 
 The input  `SparseTensor`  must be in row-major order.
 
-
-
 #### Args:
-
-- **`sp_input`** : A  `SparseTensor`  with  `values`  property of type  `int32`  or
- `int64` .
-
-- **`vocab_size`** : A scalar int64 Tensor (or Python int) containing the new size
-of the last dimension,  `all(0 <= sp_input.values < vocab_size)` .
-
+- **`sp_input`** : A  `SparseTensor`  with  `values`  property of type  `int32`  or `int64` .
+- **`vocab_size`** : A scalar int64 Tensor (or Python int) containing the new sizeof the last dimension,  `all(0 <= sp_input.values < vocab_size)` .
 - **`name`** : A name prefix for the returned tensors (optional)
-
 
 
 #### Returns:
 A dense bool indicator tensor representing the indices with specified value.
 
-
-
 #### Raises:
-
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
-

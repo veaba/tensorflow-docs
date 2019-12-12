@@ -1,27 +1,10 @@
 Draws  `shape`  samples from each of the given Poisson distribution(s).
 
-
-
-### Aliases:
-
-- [ `tf.compat.v2.random.poisson` ](/api_docs/python/tf/random/poisson)
-
-
-
 ```
- tf.random.poisson(
-    shape,
-    lam,
-    dtype=tf.dtypes.float32,
-    seed=None,
-    name=None
-)
- 
+ tf.random.poisson(    shape,    lam,    dtype=tf.dtypes.float32,    seed=None,    name=None) 
 ```
 
  `lam`  is the rate parameter describing the distribution(s).
-
-
 
 #### Example:
 
@@ -37,31 +20,13 @@ samples = tf.random.poisson([7, 5], [12.2, 3.3])
  
 ```
 
-
-
 #### Args:
-
-- **`shape`** : A 1-D integer Tensor or Python array. The shape of the output samples
-to be drawn per "rate"-parameterized distribution.
-
-- **`lam`** : A Tensor or Python value or N-D array of type  `dtype` .
- `lam`  provides the rate parameter(s) describing the poisson
-distribution(s) to sample.
-
-- **`dtype`** : The type of the output:  `float16` ,  `float32` ,  `float64` ,  `int32`  or
- `int64` .
-
-- **`seed`** : A Python integer. Used to create a random seed for the distributions.
-See
-[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed)
-for behavior.
-
+- **`shape`** : A 1-D integer Tensor or Python array. The shape of the output samplesto be drawn per "rate"-parameterized distribution.
+- **`lam`** : A Tensor or Python value or N-D array of type  `dtype` . `lam`  provides the rate parameter(s) describing the poissondistribution(s) to sample.
+- **`dtype`** : The type of the output:  `float16` ,  `float32` ,  `float64` ,  `int32`  or `int64` .
+- **`seed`** : A Python integer. Used to create a random seed for the distributions.See[ `tf.compat.v1.set_random_seed` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/set_random_seed)for behavior.
 - **`name`** : Optional name for the operation.
 
 
-
 #### Returns:
-
-- **`samples`** : a  `Tensor`  of shape  `tf.concat([shape, tf.shape(lam)], axis=0)` 
-with values of type  `dtype` .
-
+- **`samples`** : a  `Tensor`  of shape  `tf.concat([shape, tf.shape(lam)], axis=0)` with values of type  `dtype` .

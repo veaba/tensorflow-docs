@@ -1,37 +1,18 @@
 Element-wise maximum of two tensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.maximum` ](/api_docs/python/tf/keras/backend/maximum)
-
-- [ `tf.compat.v2.keras.backend.maximum` ](/api_docs/python/tf/keras/backend/maximum)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.maximum` ](/api_docs/python/tf/keras/backend/maximum), [ `tf.compat.v2.keras.backend.maximum` ](/api_docs/python/tf/keras/backend/maximum)
 
 ```
- tf.keras.backend.maximum(
-    x,
-    y
-)
- 
+ tf.keras.backend.maximum(    x,    y) 
 ```
-
-
 
 #### Arguments:
-
 - **`x`** : Tensor or variable.
-
 - **`y`** : Tensor or variable.
-
 
 
 #### Returns:
 A tensor with the element wise maximum value(s) of  `x`  and  `y` .
-
-
 
 #### Examples:
 

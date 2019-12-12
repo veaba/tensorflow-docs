@@ -2,8 +2,6 @@
 
 Bring in all of the public TensorFlow interface into this module.
 
-
-
 ## Modules
 [ `app` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/app) module: Generic entry point script.
 
@@ -114,8 +112,6 @@ Bring in all of the public TensorFlow interface into this module.
 [ `version` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/version) module: Public API for tf.version namespace.
 
 [ `xla` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/xla) module: Public API for tf.xla namespace.
-
-
 
 ## Classes
 [ `class AggregationMethod` ](https://tensorflow.google.cn/api_docs/python/tf/AggregationMethod): A class listing aggregation methods used to combine gradients.
@@ -283,8 +279,6 @@ Bring in all of the public TensorFlow interface into this module.
 [ `class variance_scaling_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/VarianceScaling): Initializer capable of adapting its scale to the shape of weights tensors.
 
 [ `class zeros_initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Zeros): Initializer that generates tensors initialized to 0.
-
-
 
 ## Functions
 [ `Assert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/debugging/Assert): Asserts that the given condition is true.
@@ -615,7 +609,7 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `get_default_session(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/get_default_session): Returns the default session for the current thread.
 
-[ `get_local_variable(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/get_local_variable): Gets an existing <em>local</em> variable or creates a new one.
+[ `get_local_variable(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/get_local_variable): Gets an existing *local* variable or creates a new one.
 
 [ `get_logger(...)` ](https://tensorflow.google.cn/api_docs/python/tf/get_logger): Return TF logger instance.
 
@@ -1195,79 +1189,40 @@ Bring in all of the public TensorFlow interface into this module.
 
 [ `zeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta): Compute the Hurwitz zeta function ![](./Overview.md_0.png).
 
-
-
 ## Other Members
-
 -  `AUTO_REUSE`  []()
-
 -  `COMPILER_VERSION = '7.3.1 20180303'`  []()
-
 -  `CXX11_ABI_FLAG = 0`  []()
-
 -  `GIT_VERSION = 'v2.0.0-rc2-26-g64c3d38'`  []()
-
 -  `GRAPH_DEF_VERSION = 119`  []()
-
 -  `GRAPH_DEF_VERSION_MIN_CONSUMER = 0`  []()
-
 -  `GRAPH_DEF_VERSION_MIN_PRODUCER = 0`  []()
-
 -  `MONOLITHIC_BUILD = 0`  []()
-
 -  `QUANTIZED_DTYPES`  []()
-
 -  `VERSION = '2.0.0'`  []()
-
 -  `__version__ = '2.0.0'`  []()
-
 -  `bfloat16`  []()
-
 -  `bool`  []()
-
 -  `complex128`  []()
-
 -  `complex64`  []()
-
 -  `double`  []()
-
 -  `float16`  []()
-
 -  `float32`  []()
-
 -  `float64`  []()
-
 -  `half`  []()
-
 -  `int16`  []()
-
 -  `int32`  []()
-
 -  `int64`  []()
-
 -  `int8`  []()
-
 -  `qint16`  []()
-
 -  `qint32`  []()
-
 -  `qint8`  []()
-
 -  `quint16`  []()
-
 -  `quint8`  []()
-
 -  `resource`  []()
-
 -  `string`  []()
-
 -  `uint16`  []()
-
 -  `uint32`  []()
-
 -  `uint64`  []()
-
 -  `uint8`  []()
-
 -  `variant`  []()
-

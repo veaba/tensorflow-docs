@@ -1,32 +1,17 @@
 Flatten a tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten)
-
-- [ `tf.compat.v2.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten), [ `tf.compat.v2.keras.backend.flatten` ](/api_docs/python/tf/keras/backend/flatten)
 
 ```
- tf.keras.backend.flatten(x)
- 
+ tf.keras.backend.flatten(x) 
 ```
-
-
 
 #### Arguments:
-
 - **`x`** : A tensor or variable.
-
 
 
 #### Returns:
 A tensor, reshaped into 1-D
-
-
 
 #### Example:
 

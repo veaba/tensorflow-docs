@@ -1,7 +1,5 @@
 Keras utilities.
 
-
-
 ## Classes
 [ `class CustomObjectScope` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/CustomObjectScope): Provides a scope that changes to  `_GLOBAL_CUSTOM_OBJECTS`  cannot escape.
 
@@ -16,8 +14,6 @@ Keras utilities.
 [ `class Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence): Base object for fitting to a sequence of data, such as a dataset.
 
 [ `class SequenceEnqueuer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/SequenceEnqueuer): Base class to enqueue inputs.
-
-
 
 ## Functions
 [ `convert_all_kernels_in_model(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/convert_all_kernels_in_model): Converts all convolution kernels in a model from Theano to TensorFlow.

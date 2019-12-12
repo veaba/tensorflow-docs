@@ -1,7 +1,5 @@
 Public API for tf.config.optimizer namespace.
 
-
-
 ## Functions
 [ `get_experimental_options(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/optimizer/get_experimental_options): Get experimental optimizer options.
 

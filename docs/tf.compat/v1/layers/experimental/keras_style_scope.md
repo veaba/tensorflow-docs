@@ -1,26 +1,14 @@
 Use Keras-style variable management.
 
-
-
 ```
- tf.compat.v1.layers.experimental.keras_style_scope()
- 
+ tf.compat.v1.layers.experimental.keras_style_scope() 
 ```
 
-All tf.layers and tf RNN cells created in this scope use Keras-style
-variable management.  Creating such layers with a scope= argument is
-disallowed, and reuse=True is disallowed.
+All tf.layers and tf RNN cells created in this scope use Keras-stylevariable management.  Creating such layers with a scope= argument isdisallowed, and reuse=True is disallowed.
 
-The purpose of this scope is to allow users of existing layers to
-slowly transition to a Keras layers API without breaking existing
-functionality.
+The purpose of this scope is to allow users of existing layers toslowly transition to a Keras layers API without breaking existingfunctionality.
 
-One example of this is when using TensorFlow's RNN classes with Keras
-Models or Networks.  Because Keras models do not properly set variable
-scopes, users of RNNs may either accidentally share scopes between two
-different models, or get errors about variables that already exist.
-
-
+One example of this is when using TensorFlow's RNN classes with KerasModels or Networks.  Because Keras models do not properly set variablescopes, users of RNNs may either accidentally share scopes between twodifferent models, or get errors about variables that already exist.
 
 #### Example:
 
@@ -46,10 +34,7 @@ output_2, next_state_2 = model_2(input, state)
  
 ```
 
-The solution is to wrap the model construction and execution in a keras-style
-scope:
-
-
+The solution is to wrap the model construction and execution in a keras-stylescope:
 
 ```
  with keras_style_scope():
@@ -65,8 +50,6 @@ scope:
   assert(model_1.weights != model_2.weights)
  
 ```
-
-
 
 #### Yields:
 A keras layer style scope.

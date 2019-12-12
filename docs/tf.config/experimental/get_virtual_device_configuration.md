@@ -1,20 +1,13 @@
 Get the virtual device configuration for a PhysicalDevice.
 
+**Aliases** : [ `tf.compat.v1.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration), [ `tf.compat.v2.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration)
 
+```
+ tf.config.experimental.get_virtual_device_configuration(device)
+ 
+```
 
-### Aliases:
-
-- [ `tf.compat.v1.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration)
-
-- [ `tf.compat.v2.config.experimental.get_virtual_device_configuration` ](/api_docs/python/tf/config/experimental/get_virtual_device_configuration)
-
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.config.experimental.get_virtual_device_configuration(device)
-</code></pre></devsite-code>
-Returns the list of VirtualDeviceConfiguration objects previously configured
-by a call to [ `tf.config.experimental.set_virtual_device_configuration()` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/set_virtual_device_configuration).
-
-
+Returns the list of VirtualDeviceConfiguration objects previously configuredby a call to [ `tf.config.experimental.set_virtual_device_configuration()` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/set_virtual_device_configuration).
 
 #### For example:
 
@@ -35,16 +28,10 @@ assert len(configs) == 2
  
 ```
 
-
-
 #### Args:
-
 - **`device`** : PhysicalDevice to query
 
 
-
 #### Returns:
-List of [ `tf.config.experimental.VirtualDeviceConfiguration` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration) objects or
- `None`  if no virtual device configuration has been set for this physical
-device.
+List of [ `tf.config.experimental.VirtualDeviceConfiguration` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration) objects or `None`  if no virtual device configuration has been set for this physicaldevice.
 

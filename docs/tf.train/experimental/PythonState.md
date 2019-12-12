@@ -3,19 +3,9 @@
 ## Class  `PythonState` 
 A mixin for putting Python state in an object-based checkpoint.
 
+**Aliases** : [ `tf.compat.v1.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState), [ `tf.compat.v2.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState)
-
-- Class [ `tf.compat.v2.train.experimental.PythonState` ](/api_docs/python/tf/train/experimental/PythonState)
-
-This is an abstract class which allows extensions to TensorFlow's object-based
-checkpointing (see [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint)). For example a wrapper for NumPy
-arrays:
-
-
+This is an abstract class which allows extensions to TensorFlow's object-basedcheckpointing (see [ `tf.train.Checkpoint` ](https://tensorflow.google.cn/api_docs/python/tf/train/Checkpoint)). For example a wrapper for NumPyarrays:
 
 ```
  import io
@@ -44,10 +34,7 @@ class NumpyWrapper(tf.train.experimental.PythonState):
  
 ```
 
-Instances of  `NumpyWrapper`  are checkpointable objects, and will be saved and
-restored from checkpoints along with TensorFlow state like variables.
-
-
+Instances of  `NumpyWrapper`  are checkpointable objects, and will be saved andrestored from checkpoints along with TensorFlow state like variables.
 
 ```
  root = tf.train.Checkpoint(numpy=NumpyWrapper(numpy.array([1.])))
@@ -59,15 +46,11 @@ assert [1.] == root.numpy.array
  
 ```
 
-
-
 ## Methods
 
 
 ###  `deserialize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/tracking/python_state.py#L81-L83)
-
-
 
 ```
  deserialize(string_value)
@@ -76,12 +59,8 @@ assert [1.] == root.numpy.array
 
 Callback to deserialize the object.
 
-
-
 ###  `serialize` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/training/tracking/python_state.py#L77-L79)
-
-
 
 ```
  serialize()

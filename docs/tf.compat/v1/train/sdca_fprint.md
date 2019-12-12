@@ -1,8 +1,4 @@
-Defined in generated file:  `python/ops/gen_sdca_ops.py` 
-
 Computes fingerprints of the input strings.
-
-
 
 ```
  tf.compat.v1.train.sdca_fprint(
@@ -12,15 +8,9 @@ Computes fingerprints of the input strings.
  
 ```
 
-
-
 #### Args:
-
-- **`input`** : A  `Tensor`  of type  `string` .
-vector of strings to compute fingerprints on.
-
+- **`input`** : A  `Tensor`  of type  `string` .vector of strings to compute fingerprints on.
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

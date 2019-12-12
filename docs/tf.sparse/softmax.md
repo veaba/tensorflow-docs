@@ -1,16 +1,6 @@
 Applies softmax to a batched N-D  `SparseTensor` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.softmax` ](/api_docs/python/tf/sparse/softmax)
-
-- [ `tf.compat.v1.sparse_softmax` ](/api_docs/python/tf/sparse/softmax)
-
-- [ `tf.compat.v2.sparse.softmax` ](/api_docs/python/tf/sparse/softmax)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.softmax` ](/api_docs/python/tf/sparse/softmax), [ `tf.compat.v1.sparse_softmax` ](/api_docs/python/tf/sparse/softmax), [ `tf.compat.v2.sparse.softmax` ](/api_docs/python/tf/sparse/softmax)
 
 ```
  tf.sparse.softmax(
@@ -20,24 +10,13 @@ Applies softmax to a batched N-D  `SparseTensor` .
  
 ```
 
-The inputs represent an N-D SparseTensor with logical shape  `[..., B, C]` 
-(where  `N >= 2` ), and with indices sorted in the canonical lexicographic
-order.
+The inputs represent an N-D SparseTensor with logical shape  `[..., B, C]` (where  `N >= 2` ), and with indices sorted in the canonical lexicographicorder.
 
-This op is equivalent to applying the normal [ `tf.nn.softmax()` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax) to each
-innermost logical submatrix with shape  `[B, C]` , but with the catch that <em>the
-implicitly zero elements do not participate</em>.  Specifically, the algorithm is
-equivalent to:
+This op is equivalent to applying the normal [ `tf.nn.softmax()` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax) to eachinnermost logical submatrix with shape  `[B, C]` , but with the catch that *theimplicitly zero elements do not participate*.  Specifically, the algorithm isequivalent to:
 
-(1) Applies [ `tf.nn.softmax()` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax) to a densified view of each innermost
-      submatrix with shape  `[B, C]` , along the size-C dimension;
-  (2) Masks out the original implicitly-zero locations;
-  (3) Renormalizes the remaining elements.
+(1) Applies [ `tf.nn.softmax()` ](https://tensorflow.google.cn/api_docs/python/tf/nn/softmax) to a densified view of each innermost      submatrix with shape  `[B, C]` , along the size-C dimension;  (2) Masks out the original implicitly-zero locations;  (3) Renormalizes the remaining elements.
 
-Hence, the  `SparseTensor`  result has exactly the same non-zero indices and
-shape.
-
-
+Hence, the  `SparseTensor`  result has exactly the same non-zero indices andshape.
 
 #### Example:
 
@@ -61,17 +40,10 @@ result = tf.sparse.softmax(tf.SparseTensor(indices, values, shape))
  
 ```
 
-
-
 #### Args:
-
 - **`sp_input`** : N-D  `SparseTensor` , where  `N >= 2` .
-
 - **`name`** : optional name of the operation.
 
 
-
 #### Returns:
-
 - **`output`** : N-D  `SparseTensor`  representing the results.
-

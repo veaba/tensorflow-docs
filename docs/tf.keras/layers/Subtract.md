@@ -3,19 +3,9 @@
 ## Class  `Subtract` 
 Layer that subtracts two inputs.
 
+**Aliases** : [ `tf.compat.v1.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract), [ `tf.compat.v2.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
-
-- Class [ `tf.compat.v2.keras.layers.Subtract` ](/api_docs/python/tf/keras/layers/Subtract)
-
-It takes as input a list of tensors of size 2,
-both of the same shape, and returns a single tensor, (inputs[0] - inputs[1]),
-also of the same shape.
-
-
+It takes as input a list of tensors of size 2,both of the same shape, and returns a single tensor, (inputs[0] - inputs[1]),also of the same shape.
 
 #### Examples:
 
@@ -35,12 +25,8 @@ also of the same shape.
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/merge.py#L41-L43)
-
-
 
 ```
  __init__(**kwargs)
@@ -49,15 +35,7 @@ also of the same shape.
 
 Functional interface to the  `Subtract`  layer.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
-
-- [ `tf.compat.v2.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
-
-
+**Aliases** : [ `tf.compat.v1.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract), [ `tf.compat.v2.keras.layers.subtract` ](/api_docs/python/tf/keras/layers/subtract)
 
 ```
  tf.keras.layers.subtract(
@@ -67,20 +45,13 @@ Functional interface to the  `Subtract`  layer.
  
 ```
 
-
-
 #### Arguments:
-
 - **`inputs`** : A list of input tensors (exactly 2).
-
 - **`**kwargs`** : Standard layer keyword arguments.
-
 
 
 #### Returns:
 A tensor, the difference of the inputs.
-
-
 
 #### Examples:
 

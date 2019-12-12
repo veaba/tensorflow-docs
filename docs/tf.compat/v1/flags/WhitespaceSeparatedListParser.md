@@ -5,14 +5,6 @@ Parser for a whitespace-separated list of strings.
 
 Inherits From: [ `BaseListParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/BaseListParser)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.app.flags.WhitespaceSeparatedListParser` ](/api_docs/python/tf/compat/v1/flags/WhitespaceSeparatedListParser)
-
-
-
 ##  `__init__` 
 
 
@@ -23,14 +15,8 @@ Inherits From: [ `BaseListParser` ](https://tensorflow.google.cn/api_docs/python
 
 Initializer.
 
-
-
 #### Args:
-
-- **`comma_compat`** : bool, whether to support comma as an additional separator.
-If False then only whitespace is supported.  This is intended only for
-backwards compatibility with flags that used to be comma-separated.
-
+- **`comma_compat`** : bool, whether to support comma as an additional separator.If False then only whitespace is supported.  This is intended only forbackwards compatibility with flags that used to be comma-separated.
 
 
 ## Methods
@@ -46,8 +32,6 @@ backwards compatibility with flags that used to be comma-separated.
 
 See base class.
 
-
-
 ###  `parse` 
 
 
@@ -60,12 +44,8 @@ Parses argument as whitespace-separated list of strings.
 
 It also parses argument as comma-separated list of strings if requested.
 
-
-
 #### Args:
-
 - **`argument`** : string argument passed in the commandline.
-
 
 
 #### Returns:

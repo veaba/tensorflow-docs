@@ -1,14 +1,6 @@
 Scales the sum of the given regularization losses by number of replicas.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss)
-
-- [ `tf.compat.v2.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss)
-
-
+**Aliases** : [ `tf.compat.v1.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss), [ `tf.compat.v2.nn.scale_regularization_loss` ](/api_docs/python/tf/nn/scale_regularization_loss)
 
 ```
  tf.nn.scale_regularization_loss(regularization_loss)
@@ -16,8 +8,6 @@ Scales the sum of the given regularization losses by number of replicas.
 ```
 
 Usage with distribution strategy and custom training loop:
-
-
 
 ```
  with strategy.scope():
@@ -37,12 +27,8 @@ Usage with distribution strategy and custom training loop:
  
 ```
 
-
-
 #### Args:
-
 - **`regularization_loss`** : Regularization loss.
-
 
 
 #### Returns:

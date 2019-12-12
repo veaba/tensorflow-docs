@@ -1,14 +1,6 @@
 Creates a tensor by tiling  `x`  by  `n` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.tile` ](/api_docs/python/tf/keras/backend/tile)
-
-- [ `tf.compat.v2.keras.backend.tile` ](/api_docs/python/tf/keras/backend/tile)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.tile` ](/api_docs/python/tf/keras/backend/tile), [ `tf.compat.v2.keras.backend.tile` ](/api_docs/python/tf/keras/backend/tile)
 
 ```
  tf.keras.backend.tile(
@@ -18,15 +10,9 @@ Creates a tensor by tiling  `x`  by  `n` .
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : A tensor or variable
-
-- **`n`** : A list of integer. The length must be the same as the number of
-dimensions in  `x` .
-
+- **`n`** : A list of integer. The length must be the same as the number ofdimensions in  `x` .
 
 
 #### Returns:

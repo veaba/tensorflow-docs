@@ -1,14 +1,6 @@
 Adjust contrast of RGB or grayscale images.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast)
-
-- [ `tf.compat.v2.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast)
-
-
+**Aliases** : [ `tf.compat.v1.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast), [ `tf.compat.v2.image.adjust_contrast` ](/api_docs/python/tf/image/adjust_contrast)
 
 ```
  tf.image.adjust_contrast(
@@ -18,35 +10,21 @@ Adjust contrast of RGB or grayscale images.
  
 ```
 
-This is a convenience method that converts RGB images to float
-representation, adjusts their contrast, and then converts them back to the
-original data type. If several adjustments are chained, it is advisable to
-minimize the number of redundant conversions.
+This is a convenience method that converts RGB images to floatrepresentation, adjusts their contrast, and then converts them back to theoriginal data type. If several adjustments are chained, it is advisable tominimize the number of redundant conversions.
 
- `images`  is a tensor of at least 3 dimensions.  The last 3 dimensions are
-interpreted as  `[height, width, channels]` .  The other dimensions only
-represent a collection of images, such as  `[batch, height, width, channels].` 
+ `images`  is a tensor of at least 3 dimensions.  The last 3 dimensions areinterpreted as  `[height, width, channels]` .  The other dimensions onlyrepresent a collection of images, such as  `[batch, height, width, channels].` 
 
 Contrast is adjusted independently for each channel of each image.
 
-For each channel, this Op computes the mean of the image pixels in the
-channel and then adjusts each component  `x`  of each pixel to
- `(x - mean) * contrast_factor + mean` .
-
-
+For each channel, this Op computes the mean of the image pixels in thechannel and then adjusts each component  `x`  of each pixel to `(x - mean) * contrast_factor + mean` .
 
 #### Args:
-
 - **`images`** : Images to adjust.  At least 3-D.
-
 - **`contrast_factor`** : A float multiplier for adjusting contrast.
-
 
 
 #### Returns:
 The contrast-adjusted image or images.
-
-
 
 #### Usage Example:
 

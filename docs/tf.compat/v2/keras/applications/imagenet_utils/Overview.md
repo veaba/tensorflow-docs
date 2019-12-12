@@ -1,7 +1,5 @@
 Utilities for ImageNet data preprocessing &amp; prediction decoding.
 
-
-
 ## Functions
 [ `decode_predictions(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/imagenet_utils/decode_predictions)
 

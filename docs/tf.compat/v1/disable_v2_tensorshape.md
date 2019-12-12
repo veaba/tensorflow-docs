@@ -1,7 +1,5 @@
 Disables the V2 TensorShape behavior and reverts to V1 behavior.
 
-
-
 ```
  tf.compat.v1.disable_v2_tensorshape()
  

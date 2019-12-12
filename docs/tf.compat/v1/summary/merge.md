@@ -1,47 +1,26 @@
 Merges summaries.
 
+```
+ tf.compat.v1.summary.merge(    inputs,    collections=None,    name=None) 
+```
 
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.summary.merge(
-    inputs,
-    collections=None,
-    name=None
-)
-</code></pre></devsite-code>
-This op creates a
-[ `Summary` ](https://tensorflow.google.cn/code/tensorflow/core/framework/summary.proto)
-protocol buffer that contains the union of all the values in the input
-summaries.
+This op creates a[ `Summary` ](https://tensorflow.google.cn/code/tensorflow/core/framework/summary.proto)protocol buffer that contains the union of all the values in the inputsummaries.
 
-When the Op is run, it reports an  `InvalidArgument`  error if multiple values
-in the summaries to merge use the same tag.
-
-
+When the Op is run, it reports an  `InvalidArgument`  error if multiple valuesin the summaries to merge use the same tag.
 
 #### Args:
-
-- **`inputs`** : A list of  `string`   `Tensor`  objects containing serialized  `Summary` 
-protocol buffers.
-
-- **`collections`** : Optional list of graph collections keys. The new summary op is
-added to these collections. Defaults to  `[]` .
-
+- **`inputs`** : A list of  `string`   `Tensor`  objects containing serialized  `Summary` protocol buffers.
+- **`collections`** : Optional list of graph collections keys. The new summary op isadded to these collections. Defaults to  `[]` .
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-A scalar  `Tensor`  of type  `string` . The serialized  `Summary`  protocol
-buffer resulting from the merging.
-
-
+A scalar  `Tensor`  of type  `string` . The serialized  `Summary`  protocolbuffer resulting from the merging.
 
 #### Raises:
-
 - **`RuntimeError`** : If called with eager mode enabled.
 
 
-
 #### Eager Compatibility
-Not compatible with eager execution. To write TensorBoard
-summaries under eager execution, use  `tf.contrib.summary`  instead.
+Not compatible with eager execution. To write TensorBoardsummaries under eager execution, use  `tf.contrib.summary`  instead.
 

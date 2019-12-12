@@ -5,23 +5,12 @@ This class exports the serving graph and checkpoints of the best models.
 
 Inherits From: [ `Exporter` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Exporter)
 
+**Aliases** : [ `tf.compat.v1.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter), [ `tf.compat.v2.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter)
-
-- Class [ `tf.compat.v2.estimator.BestExporter` ](/api_docs/python/tf/estimator/BestExporter)
-
-This class performs a model export everytime the new model is better than any
-existing model.
-
-
+This class performs a model export everytime the new model is better than anyexisting model.
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/exporter.py)
-
-
 
 ```
  __init__(
@@ -39,8 +28,6 @@ existing model.
 Create an  `Exporter`  to use with [ `tf.estimator.EvalSpec` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/EvalSpec).
 
 Example of creating a BestExporter for training and evaluation:
-
-
 
 ```
  def,
@@ -61,56 +48,22 @@ Example of creating a BestExporter for training and evaluation:
  
 ```
 
-
-
 #### Args:
-
-- **`name`** : unique name of this  `Exporter`  that is going to be used in the
-export path.
-
-- **`serving_input_receiver_fn`** : a function that takes no arguments and returns
-a  `ServingInputReceiver` .
-
-- **`event_file_pattern`** : event file name pattern relative to model_dir. If
-None, however, the exporter would not be preemption-safe. To be
-preemption-safe, event_file_pattern must be specified.
-
-- **`compare_fn`** : a function that compares two evaluation results and returns
-true if current evaluation result is better. Follows the signature:
-
-
-- **`assets_extra`** : An optional dict specifying how to populate the assets.extra
-directory within the exported SavedModel.  Each key should give the
-destination path (including the filename) relative to the assets.extra
-directory.  The corresponding value gives the full path of the source
-file to be copied.  For example, the simple case of copying a single
-file without renaming it is specified as <code translate="no" dir="ltr">{'my_asset_file.txt':
-'/path/to/my_asset_file.txt'}</code>.
-
-- **`as_text`** : whether to write the SavedModel proto in text format. Defaults to
- `False` .
-
-- **`exports_to_keep`** : Number of exports to keep.  Older exports will be
-garbage-collected.  Defaults to 5.  Set to  `None`  to disable garbage
-collection.
-
-
+- **`name`** : unique name of this  `Exporter`  that is going to be used in theexport path.
+- **`serving_input_receiver_fn`** : a function that takes no arguments and returnsa  `ServingInputReceiver` .
+- **`event_file_pattern`** : event file name pattern relative to model_dir. IfNone, however, the exporter would not be preemption-safe. To bepreemption-safe, event_file_pattern must be specified.
+- **`compare_fn`** : a function that compares two evaluation results and returnstrue if current evaluation result is better. Follows the signature:
+- **`assets_extra`** : An optional dict specifying how to populate the assets.extradirectory within the exported SavedModel.  Each key should give thedestination path (including the filename) relative to the assets.extradirectory.  The corresponding value gives the full path of the sourcefile to be copied.  For example, the simple case of copying a singlefile without renaming it is specified as  `{'my_asset_file.txt':'/path/to/my_asset_file.txt'}` .
+- **`as_text`** : whether to write the SavedModel proto in text format. Defaults to `False` .
+- **`exports_to_keep`** : Number of exports to keep.  Older exports will begarbage-collected.  Defaults to 5.  Set to  `None`  to disable garbagecollection.
     - Args:
-
     -  `best_eval_result` : This is the evaluation result of the best model.
-
-    -  `current_eval_result` : This is the evaluation result of current
-   candidate model.
-
-    - Returns:
-True if current evaluation result is better; otherwise, False.
-
+    -  `current_eval_result` : This is the evaluation result of current   candidate model.
+    - Returns:True if current evaluation result is better; otherwise, False.
 
 
 #### Raises:
-
 - **`ValueError`** : if any argument is invalid.
-
 
 
 ## Properties
@@ -119,18 +72,13 @@ True if current evaluation result is better; otherwise, False.
 ###  `name` 
 Directory name.
 
-A directory name under the export base directory where exports of
-this type are written.  Should not be  `None`  nor empty.
-
-
+A directory name under the export base directory where exports ofthis type are written.  Should not be  `None`  nor empty.
 
 ## Methods
 
 
 ###  `export` 
 [View source](https://github.com/tensorflow/estimator/tree/master/tensorflow_estimator/python/estimator/exporter.py)
-
-
 
 ```
  export(
@@ -145,25 +93,12 @@ this type are written.  Should not be  `None`  nor empty.
 
 Exports the given  `Estimator`  to a specific format.
 
-
-
 #### Args:
-
 - **`estimator`** : the  `Estimator`  to export.
-
 - **`export_path`** : A string containing a directory where to write the export.
-
 - **`checkpoint_path`** : The checkpoint path to export.
-
 - **`eval_result`** : The output of [ `Estimator.evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/estimator/Estimator#evaluate) on this checkpoint.
-
-- **`is_the_final_export`** : This boolean is True when this is an export in the
-end of training.  It is False for the intermediate exports during
-the training.
-When passing  `Exporter`  to [ `tf.estimator.train_and_evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate)
- `is_the_final_export`  is always False if [ `TrainSpec.max_steps` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/TrainSpec#max_steps) is
- `None` .
-
+- **`is_the_final_export`** : This boolean is True when this is an export in theend of training.  It is False for the intermediate exports duringthe training.When passing  `Exporter`  to [ `tf.estimator.train_and_evaluate` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/train_and_evaluate) `is_the_final_export`  is always False if [ `TrainSpec.max_steps` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/TrainSpec#max_steps) is `None` .
 
 
 #### Returns:

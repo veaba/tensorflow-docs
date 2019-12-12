@@ -1,26 +1,13 @@
 Linear activation function.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.activations.linear` ](/api_docs/python/tf/keras/activations/linear)
-
-- [ `tf.compat.v2.keras.activations.linear` ](/api_docs/python/tf/keras/activations/linear)
-
-
+**Aliases** : [ `tf.compat.v1.keras.activations.linear` ](/api_docs/python/tf/keras/activations/linear), [ `tf.compat.v2.keras.activations.linear` ](/api_docs/python/tf/keras/activations/linear)
 
 ```
- tf.keras.activations.linear(x)
- 
+ tf.keras.activations.linear(x) 
 ```
-
-
 
 #### Arguments:
-
 - **`x`** : Input tensor.
-
 
 
 #### Returns:

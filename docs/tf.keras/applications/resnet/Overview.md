@@ -1,7 +1,5 @@
 ResNet models for Keras.
 
-
-
 ## Functions
 [ `ResNet101(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/ResNet101)
 

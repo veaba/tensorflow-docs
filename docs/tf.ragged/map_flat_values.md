@@ -1,14 +1,6 @@
 Applies  `op`  to the values of one or more RaggedTensors.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.ragged.map_flat_values` ](/api_docs/python/tf/ragged/map_flat_values)
-
-- [ `tf.compat.v2.ragged.map_flat_values` ](/api_docs/python/tf/ragged/map_flat_values)
-
-
+**Aliases** : [ `tf.compat.v1.ragged.map_flat_values` ](/api_docs/python/tf/ragged/map_flat_values), [ `tf.compat.v2.ragged.map_flat_values` ](/api_docs/python/tf/ragged/map_flat_values)
 
 ```
  tf.ragged.map_flat_values(
@@ -19,21 +11,11 @@ Applies  `op`  to the values of one or more RaggedTensors.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Ragged tensors](https://tensorflow.google.cn/guide/ragged_tensor)
+Replaces any  `RaggedTensor`  in  `args`  or  `kwargs`  with its  `flat_values` tensor, and then calls  `op` .  Returns a  `RaggedTensor`  that is constructedfrom the input  `RaggedTensor` s'  `nested_row_splits`  and the value returned bythe  `op` .
 
-Replaces any  `RaggedTensor`  in  `args`  or  `kwargs`  with its  `flat_values` 
-tensor, and then calls  `op` .  Returns a  `RaggedTensor`  that is constructed
-from the input  `RaggedTensor` s'  `nested_row_splits`  and the value returned by
-the  `op` .
-
-If the input arguments contain multiple  `RaggedTensor` s, then they must have
-identical  `nested_row_splits` .
-
-
+If the input arguments contain multiple  `RaggedTensor` s, then they must haveidentical  `nested_row_splits` .
 
 #### Examples:
 
@@ -49,30 +31,14 @@ identical  `nested_row_splits` .
 
 ```
 
-
-
 #### Args:
-
-- **`op`** : The operation that should be applied to the RaggedTensor  `flat_values` .
- `op`  is typically an element-wise operation (such as math_ops.add), but
-any operation that preserves the size of the outermost dimension can be
-used.  I.e.,  `shape[0]`  of the value returned by  `op`  must match
- `shape[0]`  of the  `RaggedTensor` s'  `flat_values`  tensors.
-
+- **`op`** : The operation that should be applied to the RaggedTensor  `flat_values` . `op`  is typically an element-wise operation (such as math_ops.add), butany operation that preserves the size of the outermost dimension can beused.  I.e.,  `shape[0]`  of the value returned by  `op`  must match `shape[0]`  of the  `RaggedTensor` s'  `flat_values`  tensors.
 - **`*args`** : Arguments for  `op` .
-
 - **`**kwargs`** : Keyword arguments for  `op` .
 
 
-
 #### Returns:
-A  `RaggedTensor`  whose  `ragged_rank`  matches the  `ragged_rank`  of all
-input  `RaggedTensor` s.
-
-
+A  `RaggedTensor`  whose  `ragged_rank`  matches the  `ragged_rank`  of allinput  `RaggedTensor` s.
 
 #### Raises:
-
-- **`ValueError`** : If args contains no  `RaggedTensors` , or if the  `nested_splits` 
-of the input  `RaggedTensor` s are not identical.
-
+- **`ValueError`** : If args contains no  `RaggedTensors` , or if the  `nested_splits` of the input  `RaggedTensor` s are not identical.

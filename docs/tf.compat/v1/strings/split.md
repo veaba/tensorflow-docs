@@ -1,20 +1,10 @@
 Split elements of  `input`  based on  `sep` .
 
+```
+ tf.compat.v1.strings.split(    input=None,    sep=None,    maxsplit=-1,    result_type='SparseTensor',    source=None,    name=None) 
+```
 
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.strings.split(
-    input=None,
-    sep=None,
-    maxsplit=-1,
-    result_type='SparseTensor',
-    source=None,
-    name=None
-)
-</code></pre></devsite-code>
-Let N be the size of  `input`  (typically N will be the batch size). Split each
-element of  `input`  based on  `sep`  and return a  `SparseTensor`  or
- `RaggedTensor`  containing the split tokens. Empty tokens are ignored.
-
-
+Let N be the size of  `input`  (typically N will be the batch size). Split eachelement of  `input`  based on  `sep`  and return a  `SparseTensor`  or `RaggedTensor`  containing the split tokens. Empty tokens are ignored.
 
 #### Examples:
 
@@ -32,8 +22,6 @@ element of  `input`  based on  `sep`  and return a  `SparseTensor`  or
 
 ```
 
-
-
 ```
  
 If `sep` is given, consecutive delimiters are not grouped together and are
@@ -48,20 +36,20 @@ Note that the above mentioned behavior matches python's str.split.
 #### Args:
 
 
-* <b>`input`</b>: A string `Tensor` of rank `N`, the strings to split.  If
+* **`input`**: A string `Tensor` of rank `N`, the strings to split.  If
   `rank(input)` is not known statically, then it is assumed to be `1`.
-* <b>`sep`</b>: `0-D` string `Tensor`, the delimiter character.
-* <b>`maxsplit`</b>: An `int`. If `maxsplit > 0`, limit of the split of the result.
-* <b>`result_type`</b>: The tensor type for the result: one of `"RaggedTensor"` or
+* **`sep`**: `0-D` string `Tensor`, the delimiter character.
+* **`maxsplit`**: An `int`. If `maxsplit > 0`, limit of the split of the result.
+* **`result_type`**: The tensor type for the result: one of `"RaggedTensor"` or
   `"SparseTensor"`.
-* <b>`source`</b>: alias for "input" argument.
-* <b>`name`</b>: A name for the operation (optional).
+* **`source`**: alias for "input" argument.
+* **`name`**: A name for the operation (optional).
 
 
 #### Raises:
 
 
-* <b>`ValueError`</b>: If sep is not a string.
+* **`ValueError`**: If sep is not a string.
 
 
 #### Returns:

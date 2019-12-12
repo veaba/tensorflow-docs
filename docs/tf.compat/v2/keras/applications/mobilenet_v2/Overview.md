@@ -1,7 +1,5 @@
 MobileNet v2 models for Keras.
 
-
-
 ## Functions
 [ `MobileNetV2(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/MobileNetV2)
 

@@ -1,7 +1,5 @@
 Public API for tf.quantization namespace.
 
-
-
 ## Functions
 [ `dequantize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/quantization/dequantize): Dequantize the 'input' tensor into a float Tensor.
 

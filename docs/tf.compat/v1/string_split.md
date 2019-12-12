@@ -1,7 +1,5 @@
 Split elements of  `source`  based on  `delimiter` . (deprecated arguments)
 
-
-
 ```
  tf.compat.v1.string_split(
     source,
@@ -15,19 +13,10 @@ Split elements of  `source`  based on  `delimiter` . (deprecated arguments)
 ```
 
 
-<aside class="warning">**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(delimiter)` . They will be removed in a future version.
-Instructions for updating:
-delimiter is deprecated, please use sep instead.</aside>
-Let N be the size of  `source`  (typically N will be the batch size). Split each
-element of  `source`  based on  `delimiter`  and return a  `SparseTensor` 
-or  `RaggedTensor`  containing the split tokens. Empty tokens are ignored.
+**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(delimiter)` . They will be removed in a future version.Instructions for updating:delimiter is deprecated, please use sep instead.
+Let N be the size of  `source`  (typically N will be the batch size). Split eachelement of  `source`  based on  `delimiter`  and return a  `SparseTensor` or  `RaggedTensor`  containing the split tokens. Empty tokens are ignored.
 
-If  `sep`  is an empty string, each element of the  `source`  is split
-into individual strings, each containing one byte. (This includes splitting
-multibyte sequences of UTF-8.) If delimiter contains multiple bytes, it is
-treated as a set of delimiters with each considered a potential split point.
-
-
+If  `sep`  is an empty string, each element of the  `source`  is splitinto individual strings, each containing one byte. (This includes splittingmultibyte sequences of UTF-8.) If delimiter contains multiple bytes, it istreated as a set of delimiters with each considered a potential split point.
 
 #### Examples:
 
@@ -45,27 +34,25 @@ treated as a set of delimiters with each considered a potential split point.
 
 ```
 
-
-
 ```
  
 #### Args:
 
 
-* <b>`source`</b>: `1-D` string `Tensor`, the strings to split.
-* <b>`sep`</b>: `0-D` string `Tensor`, the delimiter character, the string should
+* **`source`**: `1-D` string `Tensor`, the strings to split.
+* **`sep`**: `0-D` string `Tensor`, the delimiter character, the string should
   be length 0 or 1. Default is ' '.
-* <b>`skip_empty`</b>: A `bool`. If `True`, skip the empty strings from the result.
-* <b>`delimiter`</b>: deprecated alias for `sep`.
-* <b>`result_type`</b>: The tensor type for the result: one of `"RaggedTensor"` or
+* **`skip_empty`**: A `bool`. If `True`, skip the empty strings from the result.
+* **`delimiter`**: deprecated alias for `sep`.
+* **`result_type`**: The tensor type for the result: one of `"RaggedTensor"` or
   `"SparseTensor"`.
-* <b>`name`</b>: A name for the operation (optional).
+* **`name`**: A name for the operation (optional).
 
 
 #### Raises:
 
 
-* <b>`ValueError`</b>: If delimiter is not a string.
+* **`ValueError`**: If delimiter is not a string.
 
 
 #### Returns:

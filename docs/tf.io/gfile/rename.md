@@ -1,14 +1,6 @@
 Rename or move a file / directory.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.io.gfile.rename` ](/api_docs/python/tf/io/gfile/rename)
-
-- [ `tf.compat.v2.io.gfile.rename` ](/api_docs/python/tf/io/gfile/rename)
-
-
+**Aliases** : [ `tf.compat.v1.io.gfile.rename` ](/api_docs/python/tf/io/gfile/rename), [ `tf.compat.v2.io.gfile.rename` ](/api_docs/python/tf/io/gfile/rename)
 
 ```
  tf.io.gfile.rename(
@@ -19,20 +11,11 @@ Rename or move a file / directory.
  
 ```
 
-
-
 #### Args:
-
 - **`src`** : string, pathname for a file
-
 - **`dst`** : string, pathname to which the file needs to be moved
-
-- **`overwrite`** : boolean, if false it's an error for  `dst`  to be occupied by an
-existing file.
-
+- **`overwrite`** : boolean, if false it's an error for  `dst`  to be occupied by anexisting file.
 
 
 #### Raises:
-
 - **[ `errors.OpError` ](/api_docs/python/tf/errors/OpError)** : If the operation fails.
-

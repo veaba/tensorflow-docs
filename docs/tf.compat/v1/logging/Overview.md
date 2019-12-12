@@ -1,7 +1,5 @@
 Logging and Summary Operations.
 
-
-
 ## Functions
 [ `TaskLevelStatusMessage(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging/TaskLevelStatusMessage)
 
@@ -33,17 +31,9 @@ Logging and Summary Operations.
 
 [ `warning(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging/warning)
 
-
-
 ## Other Members
-
 -  `DEBUG = 10`  []()
-
 -  `ERROR = 40`  []()
-
 -  `FATAL = 50`  []()
-
 -  `INFO = 20`  []()
-
 -  `WARN = 30`  []()
-

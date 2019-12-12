@@ -1,7 +1,5 @@
 System configuration library.
 
-
-
 ## Functions
 [ `get_compile_flags(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sysconfig/get_compile_flags): Get the compilation flags for custom operators.
 
@@ -11,11 +9,6 @@ System configuration library.
 
 [ `get_link_flags(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sysconfig/get_link_flags): Get the link flags for custom operators.
 
-
-
 ## Other Members
-
 -  `CXX11_ABI_FLAG = 0`  []()
-
 -  `MONOLITHIC_BUILD = 0`  []()
-

@@ -1,25 +1,13 @@
 Creates a grad-pass-through op with the forward behavior provided in f.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.grad_pass_through` ](/api_docs/python/tf/grad_pass_through)
-
-- [ `tf.compat.v2.grad_pass_through` ](/api_docs/python/tf/grad_pass_through)
-
-
+**Aliases** : [ `tf.compat.v1.grad_pass_through` ](/api_docs/python/tf/grad_pass_through), [ `tf.compat.v2.grad_pass_through` ](/api_docs/python/tf/grad_pass_through)
 
 ```
  tf.grad_pass_through(f)
  
 ```
 
-Use this function to wrap any op, maintaining its behavior in the forward
-pass, but replacing the original op in the backward graph with an identity.
-For example:
-
-
+Use this function to wrap any op, maintaining its behavior in the forwardpass, but replacing the original op in the backward graph with an identity.For example:
 
 ```
  x)
@@ -33,11 +21,7 @@ grads = tape.gradient(y, z)
  
 ```
 
-Another example is a 'differentiable' moving average approximation, where
-gradients are allowed to flow into the last value fed to the moving average,
-but the moving average is still used for the forward pass:
-
-
+Another example is a 'differentiable' moving average approximation, wheregradients are allowed to flow into the last value fed to the moving average,but the moving average is still used for the forward pass:
 
 ```
  x = ... # Some scalar value
@@ -50,16 +34,10 @@ grads = tape.gradient(mavg_x, x) # grads will evaluate to 1.0
  
 ```
 
-
-
 #### Args:
-
-- **`f`** : function  `f(*x)`  that returns a  `Tensor`  or nested structure of  `Tensor` 
-outputs.
-
+- **`f`** : function  `f(*x)`  that returns a  `Tensor`  or nested structure of  `Tensor` outputs.
 
 
 #### Returns:
-A function  `h(x)`  which returns the same values as  `f(x)`  and whose
-gradients are the same as those of an identity function.
+A function  `h(x)`  which returns the same values as  `f(x)`  and whosegradients are the same as those of an identity function.
 

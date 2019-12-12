@@ -1,7 +1,5 @@
 Inception V3 model for Keras.
 
-
-
 ## Functions
 [ `InceptionV3(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/InceptionV3)
 

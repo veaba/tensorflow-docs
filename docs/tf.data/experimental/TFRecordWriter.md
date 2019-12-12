@@ -3,23 +3,11 @@
 ## Class  `TFRecordWriter` 
 Writes data to a TFRecord file.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter)
-
-- Class [ `tf.compat.v2.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter)
-
-
+**Aliases** : [ `tf.compat.v1.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter), [ `tf.compat.v2.data.experimental.TFRecordWriter` ](/api_docs/python/tf/data/experimental/TFRecordWriter)
 
 ### Used in the tutorials:
-
 - [TFRecord and tf.Example](https://tensorflow.google.cn/tutorials/load_data/tfrecord)
-
 To write a  `dataset`  to a single TFRecord file:
-
-
 
 ```
  dataset = ... # dataset to be written
@@ -29,8 +17,6 @@ writer.write(dataset)
 ```
 
 To shard a  `dataset`  across multiple TFRecord files:
-
-
 
 ```
  dataset = ... # dataset to be written
@@ -48,12 +34,8 @@ dataset = dataset.apply(tf.data.experimental.group_by_window(
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/writers.py#L59-L66)
-
-
 
 ```
  __init__(
@@ -65,15 +47,11 @@ dataset = dataset.apply(tf.data.experimental.group_by_window(
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Methods
 
 
 ###  `write` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/writers.py#L68-L87)
-
-
 
 ```
  write(dataset)
@@ -82,12 +60,8 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Returns a [ `tf.Operation` ](https://tensorflow.google.cn/api_docs/python/tf/Operation) to write a dataset to a file.
 
-
-
 #### Args:
-
 - **`dataset`** : a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) whose elements are to be written to a file
-
 
 
 #### Returns:

@@ -3,17 +3,7 @@
 ## Class  `NanLossDuringTrainingError` 
 Unspecified run-time error.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.estimator.NanLossDuringTrainingError` ](/api_docs/python/tf/estimator/NanLossDuringTrainingError)
-
-- Class [ `tf.compat.v1.train.NanLossDuringTrainingError` ](/api_docs/python/tf/estimator/NanLossDuringTrainingError)
-
-- Class [ `tf.compat.v2.estimator.NanLossDuringTrainingError` ](/api_docs/python/tf/estimator/NanLossDuringTrainingError)
-
-
+**Aliases** : [ `tf.compat.v1.estimator.NanLossDuringTrainingError` ](/api_docs/python/tf/estimator/NanLossDuringTrainingError), [ `tf.compat.v1.train.NanLossDuringTrainingError` ](/api_docs/python/tf/estimator/NanLossDuringTrainingError), [ `tf.compat.v2.estimator.NanLossDuringTrainingError` ](/api_docs/python/tf/estimator/NanLossDuringTrainingError)
 
 ##  `__init__` 
 
@@ -25,8 +15,6 @@ Unspecified run-time error.
 )
  
 ```
-
-
 
 ##  `__new__` 
 

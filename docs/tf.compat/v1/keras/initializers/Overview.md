@@ -1,7 +1,5 @@
 Keras initializer serialization / deserialization.
 
-
-
 ## Classes
 [ `class Constant` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Constant): Initializer that generates tensors with constant values.
 
@@ -46,8 +44,6 @@ Keras initializer serialization / deserialization.
 [ `class uniform` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/RandomUniform): Initializer that generates tensors with a uniform distribution.
 
 [ `class zeros` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Zeros): Initializer that generates tensors initialized to 0.
-
-
 
 ## Functions
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/deserialize): Return an  `Initializer`  object from its config.

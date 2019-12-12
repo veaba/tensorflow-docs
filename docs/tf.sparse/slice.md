@@ -1,26 +1,18 @@
 Slice a  `SparseTensor`  based on the  `start`  and `size.
 
+**Aliases** : [ `tf.compat.v1.sparse.slice` ](/api_docs/python/tf/sparse/slice), [ `tf.compat.v1.sparse_slice` ](/api_docs/python/tf/sparse/slice), [ `tf.compat.v2.sparse.slice` ](/api_docs/python/tf/sparse/slice)
 
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.slice` ](/api_docs/python/tf/sparse/slice)
-
-- [ `tf.compat.v1.sparse_slice` ](/api_docs/python/tf/sparse/slice)
-
-- [ `tf.compat.v2.sparse.slice` ](/api_docs/python/tf/sparse/slice)
-
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.sparse.slice(
+```
+ tf.sparse.slice(
     sp_input,
     start,
     size,
     name=None
 )
-</code></pre></devsite-code>
+ 
+```
+
 For example, if the input is
-
-
 
 ```
  input_tensor = shape = [2, 7]
@@ -30,8 +22,6 @@ For example, if the input is
 ```
 
 Graphically the output tensors are:
-
-
 
 ```
  sparse.slice([0, 0], [2, 4]) = shape = [2, 4]
@@ -44,26 +34,15 @@ sparse.slice([0, 4], [2, 3]) = shape = [2, 3]
  
 ```
 
-
-
 #### Args:
-
 - **`sp_input`** : The  `SparseTensor`  to split.
-
 - **`start`** : 1-D. tensor represents the start of the slice.
-
 - **`size`** : 1-D. tensor represents the size of the slice.
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:
 A  `SparseTensor`  objects resulting from splicing.
 
-
-
 #### Raises:
-
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
-

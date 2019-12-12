@@ -29,12 +29,14 @@ url = "https://tensorflow.google.cn/api_docs/python/"
 # 全局存储实例数组，Chrome driver的实例，TODO ，后续需要做重置掉
 DRIVER_INSTANCE_LIST = []
 
+
 # list 转字符
 def list_to_str(str_list, code=""):
     if isinstance(str_list, list):
         return code.join(str_list)
     else:
         return ''
+
 
 # 过滤忽略掉的标签,是无效标签则移除
 def ignore_tag(node):
@@ -51,6 +53,7 @@ def ignore_tag(node):
         return True
     else:
         return False
+
 
 # 返回 正则的字段函数，因为会重复替换，所以这个replace 不能够完全解决问题
 # list_str 数组
@@ -90,6 +93,7 @@ def fn_parse_code(list_str=None, text=""):
         reg_text = text
     return reg_text
 
+
 # 入参base64，然后裁剪后，出来base64
 # cartesian(左、上、右、下、）
 # 返回的byte
@@ -111,6 +115,7 @@ def crop_base64_img(base64_str, cartesian):
     img_byte_array = img_byte_array.getvalue()
     base64_str = base64.b64encode(img_byte_array)
     return str(base64_str, 'utf-8')
+
 
 # 解析 svg，有些情况下，比如这个页面：https://tensorflow.google.cn/api_docs/python/tf  exp(...): Computes exponential of x
 def cover_svg_to_img(html, driver, file_markdown_path, svg_list=[], top=200, ):
@@ -144,10 +149,12 @@ def cover_svg_to_img(html, driver, file_markdown_path, svg_list=[], top=200, ):
                           '<img src="./' + image_path + '">', html, count=1)
     return html
 
+
 # 窗口滚动
 # h 高度，threshold 阈值，一般为200
 def window_scroll(h, threshold):
     return '' + 'window.scroll(0,' + str(h - threshold) + ')'
+
 
 # 去解析node节点,返回markdown
 def node_level(driver, file_markdown_path="", url_path=""):
@@ -178,6 +185,7 @@ def node_level(driver, file_markdown_path="", url_path=""):
     # 手动关闭
     driver.quit()
 
+
 def go_webdriver(url_path, file_path=""):
     if file_path:
         if not can_write(file_path):
@@ -192,6 +200,7 @@ def go_webdriver(url_path, file_path=""):
     node_level(driver, file_markdown_path=file_path, url_path=url_path)
     end_time1 = time.time()
     print('===> 爬虫所需时间：', end_time1 - start_time1, file_path + '\n')
+
 
 start_time = time.time()
 # handle_async(category, "../docs/", parent_path)

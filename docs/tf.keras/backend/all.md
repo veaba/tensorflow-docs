@@ -1,14 +1,6 @@
 Bitwise reduction (logical AND).
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.all` ](/api_docs/python/tf/keras/backend/all)
-
-- [ `tf.compat.v2.keras.backend.all` ](/api_docs/python/tf/keras/backend/all)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.all` ](/api_docs/python/tf/keras/backend/all), [ `tf.compat.v2.keras.backend.all` ](/api_docs/python/tf/keras/backend/all)
 
 ```
  tf.keras.backend.all(
@@ -19,16 +11,10 @@ Bitwise reduction (logical AND).
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : Tensor or variable.
-
 - **`axis`** : axis along which to perform the reduction.
-
 - **`keepdims`** : whether the drop or broadcast the reduction axes.
-
 
 
 #### Returns:

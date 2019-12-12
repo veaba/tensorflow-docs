@@ -1,24 +1,13 @@
 Get if memory growth is enabled for a PhysicalDevice.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth)
-
-- [ `tf.compat.v2.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth)
-
-
+**Aliases** : [ `tf.compat.v1.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth), [ `tf.compat.v2.config.experimental.get_memory_growth` ](/api_docs/python/tf/config/experimental/get_memory_growth)
 
 ```
  tf.config.experimental.get_memory_growth(device)
  
 ```
 
-A PhysicalDevice with memory growth set will not allocate all memory on the
-device upfront.
-
-
+A PhysicalDevice with memory growth set will not allocate all memory on thedevice upfront.
 
 #### For example:
 
@@ -31,12 +20,8 @@ assert tf.config.experimental.get_memory_growth(physical_devices[0]) == True
  
 ```
 
-
-
 #### Args:
-
 - **`device`** : PhysicalDevice to query
-
 
 
 #### Returns:

@@ -1,14 +1,6 @@
 Returns a column for performing crosses of categorical features.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column)
-
-- [ `tf.compat.v2.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column)
-
-
+**Aliases** : [ `tf.compat.v1.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column), [ `tf.compat.v2.feature_column.crossed_column` ](/api_docs/python/tf/feature_column/crossed_column)
 
 ```
  tf.feature_column.crossed_column(
@@ -19,35 +11,39 @@ Returns a column for performing crosses of categorical features.
  
 ```
 
-
-
 ### Used in the tutorials:
-
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
-
 - [Build a linear model with Estimators](https://tensorflow.google.cn/tutorials/estimator/linear)
-
-Crossed features will be hashed according to  `hash_bucket_size` . Conceptually,
-the transformation can be thought of as:
-  Hash(cartesian product of features) %  `hash_bucket_size` 
+Crossed features will be hashed according to  `hash_bucket_size` . Conceptually,the transformation can be thought of as:  Hash(cartesian product of features) %  `hash_bucket_size` 
 
 For example, if the input features are:
-
 
 - SparseTensor referred by first key:
 
 
->
-<devsite-code><pre class="" translate="no" dir="ltr" is-upgraded=""> `shape = [2, 2]<br>{<br>&nbsp; &nbsp; [0, 0]: "a"<br>&nbsp; &nbsp; [1, 0]: "b"<br>&nbsp; &nbsp; [1, 1]: "c"<br>}<br>` </pre></devsite-code>
+```
+ shape = [2, 2]
+{
+    [0, 0]: "a"
+    [1, 0]: "b"
+    [1, 1]: "c"
+}
+ 
+```
 
 - SparseTensor referred by second key:
 
 
->
-<devsite-code><pre class="" translate="no" dir="ltr" is-upgraded=""> `shape = [2, 1]<br>{<br>&nbsp; &nbsp; [0, 0]: "d"<br>&nbsp; &nbsp; [1, 0]: "e"<br>}<br>` </pre></devsite-code>
+```
+ shape = [2, 1]
+{
+    [0, 0]: "d"
+    [1, 0]: "e"
+}
+ 
+```
+
 then crossed feature will look like:
-
-
 
 ```
   shape = [2, 2]
@@ -61,8 +57,6 @@ then crossed feature will look like:
 
 Here is an example to create a linear model with crosses of string features:
 
-
-
 ```
  keywords_x_doc_terms = crossed_column(['keywords', 'doc_terms'], 50K)
 columns = [keywords_x_doc_terms, ...]
@@ -72,8 +66,6 @@ linear_prediction = linear_model(features, columns)
 ```
 
 You could also use vocabulary lookup before crossing:
-
-
 
 ```
  keywords = categorical_column_with_vocabulary_file(
@@ -85,10 +77,7 @@ linear_prediction = linear_model(features, columns)
  
 ```
 
-If an input feature is of numeric type, you can use
- `categorical_column_with_identity` , or  `bucketized_column` , as in the example:
-
-
+If an input feature is of numeric type, you can use `categorical_column_with_identity` , or  `bucketized_column` , as in the example:
 
 ```
  # vertical_id is an integer categorical feature.
@@ -103,10 +92,7 @@ linear_prediction = linear_model(features, columns)
  
 ```
 
-To use crossed column in DNN model, you need to add it in an embedding column
-as in this example:
-
-
+To use crossed column in DNN model, you need to add it in an embedding columnas in this example:
 
 ```
  vertical_id_x_price = crossed_column([vertical_id, bucketized_price], 50K)
@@ -115,39 +101,19 @@ dense_tensor = input_layer(features, [vertical_id_x_price_embedded, ...])
  
 ```
 
-
-
 #### Args:
-
-- **`keys`** : An iterable identifying the features to be crossed. Each element can
-be either:
-
-
+- **`keys`** : An iterable identifying the features to be crossed. Each element canbe either:
 - **`hash_bucket_size`** : An int > 1. The number of buckets.
-
-- **`hash_key`** : Specify the hash_key that will be used by the  `FingerprintCat64` 
-function to combine the crosses fingerprints on SparseCrossOp (optional).
-
-
+- **`hash_key`** : Specify the hash_key that will be used by the  `FingerprintCat64` function to combine the crosses fingerprints on SparseCrossOp (optional).
     - string: Will use the corresponding feature which must be of string type.
-
-    -  `CategoricalColumn` : Will use the transformed tensor produced by this
-column. Does not support hashed categorical column.
-
+    -  `CategoricalColumn` : Will use the transformed tensor produced by thiscolumn. Does not support hashed categorical column.
 
 
 #### Returns:
 A  `CrossedColumn` .
 
-
-
 #### Raises:
-
 - **`ValueError`** : If  `len(keys) < 2` .
-
 - **`ValueError`** : If any of the keys is neither a string nor  `CategoricalColumn` .
-
 - **`ValueError`** : If any of the keys is  `HashedCategoricalColumn` .
-
 - **`ValueError`** : If  `hash_bucket_size < 1` .
-

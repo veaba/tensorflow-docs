@@ -1,34 +1,24 @@
 A context manager for use when defining a Python op.
 
+```
+ tf.keras.backend.name_scope(name) 
+```
 
-
-### Aliases:
-
-- [ `tf.compat.v2.keras.backend.name_scope` ](/api_docs/python/tf/keras/backend/name_scope)
-
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.keras.backend.name_scope(name)
-</code></pre></devsite-code>
-This context manager pushes a name scope, which will make the name of all
-operations added within it have a prefix.
+This context manager pushes a name scope, which will make the name of alloperations added within it have a prefix.
 
 For example, to define a new Python op called  `my_op` :
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">def my_op(a):
-  with tf.name_scope("MyOp") as scope:
-    a = tf.convert_to_tensor(a, name="a")
+```
+ def)
     # Define some computation that uses `a`.
     return foo_op(..., name=scope)
-</code></pre></devsite-code>
+ 
+```
+
 When executed, the Tensor  `a`  will have the name  `MyOp/a` .
 
-
-
 #### Args:
-
 - **`name`** : The prefix to use on all names created within the name scope.
-
 
 
 #### Returns:

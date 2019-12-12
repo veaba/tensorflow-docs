@@ -1,16 +1,6 @@
 Compute set union of elements in last dimension of  `a`  and  `b` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sets.set_union` ](/api_docs/python/tf/sets/union)
-
-- [ `tf.compat.v1.sets.union` ](/api_docs/python/tf/sets/union)
-
-- [ `tf.compat.v2.sets.union` ](/api_docs/python/tf/sets/union)
-
-
+**Aliases** : [ `tf.compat.v1.sets.set_union` ](/api_docs/python/tf/sets/union), [ `tf.compat.v1.sets.union` ](/api_docs/python/tf/sets/union), [ `tf.compat.v2.sets.union` ](/api_docs/python/tf/sets/union)
 
 ```
  tf.sets.union(
@@ -22,8 +12,6 @@ Compute set union of elements in last dimension of  `a`  and  `b` .
 ```
 
 All but the last dimension of  `a`  and  `b`  must match.
-
-
 
 #### Example:
 
@@ -80,23 +68,12 @@ All but the last dimension of  `a`  and  `b`  must match.
  
 ```
 
-
-
 #### Args:
-
-- **`a`** :  `Tensor`  or  `SparseTensor`  of the same type as  `b` . If sparse, indices
-must be sorted in row-major order.
-
-- **`b`** :  `Tensor`  or  `SparseTensor`  of the same type as  `a` . If sparse, indices
-must be sorted in row-major order.
-
-- **`validate_indices`** : Whether to validate the order and range of sparse indices
-in  `a`  and  `b` .
-
+- **`a`** :  `Tensor`  or  `SparseTensor`  of the same type as  `b` . If sparse, indicesmust be sorted in row-major order.
+- **`b`** :  `Tensor`  or  `SparseTensor`  of the same type as  `a` . If sparse, indicesmust be sorted in row-major order.
+- **`validate_indices`** : Whether to validate the order and range of sparse indicesin  `a`  and  `b` .
 
 
 #### Returns:
-A  `SparseTensor`  whose shape is the same rank as  `a`  and  `b` , and all but
-the last dimension the same. Elements along the last dimension contain the
-unions.
+A  `SparseTensor`  whose shape is the same rank as  `a`  and  `b` , and all butthe last dimension the same. Elements along the last dimension contain theunions.
 

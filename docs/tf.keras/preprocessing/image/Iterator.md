@@ -5,18 +5,9 @@ Base class for image data iterators.
 
 Inherits From: [ `Sequence` ](https://tensorflow.google.cn/api_docs/python/tf/keras/utils/Sequence)
 
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator), [ `tf.compat.v2.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator)
-
-- Class [ `tf.compat.v2.keras.preprocessing.image.Iterator` ](/api_docs/python/tf/keras/preprocessing/image/Iterator)
-
-Every  `Iterator`  must implement the  `_get_batches_of_transformed_samples` 
-method.
-
-
+Every  `Iterator`  must implement the  `_get_batches_of_transformed_samples` method.
 
 # Arguments
 
@@ -28,8 +19,6 @@ shuffle: Boolean, whether to shuffle the data between epochs.
 seed: Random seeding for data shuffling.
  
 ```
-
-
 
 ##  `__init__` 
 
@@ -46,8 +35,6 @@ seed: Random seeding for data shuffling.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Methods
 
 
@@ -61,18 +48,12 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Gets batch at position  `index` .
 
-
-
 #### Arguments:
-
 - **`index`** : position of the batch in the Sequence.
-
 
 
 #### Returns:
 A batch
-
-
 
 ###  `__iter__` 
 
@@ -84,8 +65,6 @@ A batch
 
 Create a generator that iterate over the Sequence.
 
-
-
 ###  `__len__` 
 
 
@@ -96,12 +75,8 @@ Create a generator that iterate over the Sequence.
 
 Number of batch in the Sequence.
 
-
-
 #### Returns:
 The number of batches in the Sequence.
-
-
 
 ###  `next` 
 
@@ -113,8 +88,6 @@ The number of batches in the Sequence.
 
 For python 2.x.
 
-
-
 # Returns
 
 
@@ -122,8 +95,6 @@ For python 2.x.
  The next batch.
  
 ```
-
-
 
 ###  `on_epoch_end` 
 
@@ -135,8 +106,6 @@ For python 2.x.
 
 Method called at the end of every epoch.
 
-
-
 ###  `reset` 
 
 
@@ -145,9 +114,5 @@ Method called at the end of every epoch.
  
 ```
 
-
-
 ## Class Members
-
 -  `white_list_formats`  []()
-

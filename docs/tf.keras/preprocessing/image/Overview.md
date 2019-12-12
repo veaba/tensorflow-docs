@@ -1,7 +1,5 @@
 Set of tools for real-time data augmentation on image data.
 
-
-
 ## Classes
 [ `class DirectoryIterator` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image/DirectoryIterator): Iterator capable of reading images from a directory on disk.
 
@@ -10,8 +8,6 @@ Set of tools for real-time data augmentation on image data.
 [ `class Iterator` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image/Iterator): Base class for image data iterators.
 
 [ `class NumpyArrayIterator` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image/NumpyArrayIterator): Iterator yielding data from a Numpy array.
-
-
 
 ## Functions
 [ `apply_affine_transform(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/image/apply_affine_transform): Applies an affine transformation specified by the parameters given.

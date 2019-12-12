@@ -1,13 +1,5 @@
 Assert that  `x`  is of integer dtype.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.debugging.assert_integer` ](/api_docs/python/tf/compat/v1/assert_integer)
-
-
-
 ```
  tf.compat.v1.assert_integer(
     x,
@@ -19,30 +11,20 @@ Assert that  `x`  is of integer dtype.
 
 Example of adding a dependency to an operation:
 
-
-
 ```
  with tf.control_dependencies([tf.compat.v1.assert_integer(x)]):
   output = tf.reduce_sum(x)
  
 ```
 
-
-
 #### Args:
-
 - **`x`** :  `Tensor`  whose basetype is integer and is not quantized.
-
 - **`message`** : A string to prefix to the default message.
-
 - **`name`** : A name for this operation (optional).  Defaults to "assert_integer".
 
 
-
 #### Raises:
-
 - **`TypeError`** :  If  `x.dtype`  is anything other than non-quantized integer.
-
 
 
 #### Returns:

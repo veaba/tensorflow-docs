@@ -1,14 +1,6 @@
 Creates a 1D tensor containing a sequence of integers.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange)
-
-- [ `tf.compat.v2.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange), [ `tf.compat.v2.keras.backend.arange` ](/api_docs/python/tf/keras/backend/arange)
 
 ```
  tf.keras.backend.arange(
@@ -20,31 +12,19 @@ Creates a 1D tensor containing a sequence of integers.
  
 ```
 
-The function arguments use the same convention as
-Theano's arange: if only one argument is provided,
-it is in fact the "stop" argument and "start" is 0.
+The function arguments use the same convention asTheano's arange: if only one argument is provided,it is in fact the "stop" argument and "start" is 0.
 
-The default type of the returned tensor is  `'int32'`  to
-match TensorFlow's default.
-
-
+The default type of the returned tensor is  `'int32'`  tomatch TensorFlow's default.
 
 #### Arguments:
-
 - **`start`** : Start value.
-
 - **`stop`** : Stop value.
-
 - **`step`** : Difference between two successive values.
-
 - **`dtype`** : Integer dtype to use.
-
 
 
 #### Returns:
 An integer tensor.
-
-
 
 #### Example:
 

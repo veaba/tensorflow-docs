@@ -1,7 +1,5 @@
 Repeat  `body`  while the condition  `cond`  is true.
 
-
-
 ```
  tf.compat.v1.while_loop(
     cond,
@@ -18,112 +16,41 @@ Repeat  `body`  while the condition  `cond`  is true.
  
 ```
 
- `cond`  is a callable returning a boolean scalar tensor.  `body`  is a callable
-returning a (possibly nested) tuple, namedtuple or list of tensors of the same
-arity (length and structure) and types as  `loop_vars` .  `loop_vars`  is a
-(possibly nested) tuple, namedtuple or list of tensors that is passed to both
- `cond`  and  `body` .  `cond`  and  `body`  both take as many arguments as there are
- `loop_vars` .
+ `cond`  is a callable returning a boolean scalar tensor.  `body`  is a callablereturning a (possibly nested) tuple, namedtuple or list of tensors of the samearity (length and structure) and types as  `loop_vars` .  `loop_vars`  is a(possibly nested) tuple, namedtuple or list of tensors that is passed to both `cond`  and  `body` .  `cond`  and  `body`  both take as many arguments as there are `loop_vars` .
 
-In addition to regular Tensors or IndexedSlices, the body may accept and
-return TensorArray objects.  The flows of the TensorArray objects will
-be appropriately forwarded between loops and during gradient calculations.
+In addition to regular Tensors or IndexedSlices, the body may accept andreturn TensorArray objects.  The flows of the TensorArray objects willbe appropriately forwarded between loops and during gradient calculations.
 
-Note that  `while_loop`  calls  `cond`  and  `body`  <em>exactly once</em> (inside the
-call to  `while_loop` , and not at all during  `Session.run()` ).  `while_loop` 
-stitches together the graph fragments created during the  `cond`  and  `body` 
-calls with some additional graph nodes to create the graph flow that
-repeats  `body`  until  `cond`  returns false.
+Note that  `while_loop`  calls  `cond`  and  `body`  *exactly once* (inside thecall to  `while_loop` , and not at all during  `Session.run()` ).  `while_loop` stitches together the graph fragments created during the  `cond`  and  `body` calls with some additional graph nodes to create the graph flow thatrepeats  `body`  until  `cond`  returns false.
 
-For correctness, [ `tf.while_loop()` ](https://tensorflow.google.cn/api_docs/python/tf/while_loop) strictly enforces shape invariants for
-the loop variables. A shape invariant is a (possibly partial) shape that
-is unchanged across the iterations of the loop. An error will be raised
-if the shape of a loop variable after an iteration is determined to be more
-general than or incompatible with its shape invariant. For example, a shape
-of [11, None] is more general than a shape of [11, 17], and [11, 21] is not
-compatible with [11, 17]. By default (if the argument  `shape_invariants`  is
-not specified), it is assumed that the initial shape of each tensor in
- `loop_vars`  is the same in every iteration. The  `shape_invariants`  argument
-allows the caller to specify a less specific shape invariant for each loop
-variable, which is needed if the shape varies between iterations. The
-[ `tf.Tensor.set_shape` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#set_shape)
-function may also be used in the  `body`  function to indicate that
-the output loop variable has a particular shape. The shape invariant for
-SparseTensor and IndexedSlices are treated specially as follows:
+For correctness, [ `tf.while_loop()` ](https://tensorflow.google.cn/api_docs/python/tf/while_loop) strictly enforces shape invariants forthe loop variables. A shape invariant is a (possibly partial) shape thatis unchanged across the iterations of the loop. An error will be raisedif the shape of a loop variable after an iteration is determined to be moregeneral than or incompatible with its shape invariant. For example, a shapeof [11, None] is more general than a shape of [11, 17], and [11, 21] is notcompatible with [11, 17]. By default (if the argument  `shape_invariants`  isnot specified), it is assumed that the initial shape of each tensor in `loop_vars`  is the same in every iteration. The  `shape_invariants`  argumentallows the caller to specify a less specific shape invariant for each loopvariable, which is needed if the shape varies between iterations. The[ `tf.Tensor.set_shape` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor#set_shape)function may also be used in the  `body`  function to indicate thatthe output loop variable has a particular shape. The shape invariant forSparseTensor and IndexedSlices are treated specially as follows:
 
-a) If a loop variable is a SparseTensor, the shape invariant must be
-TensorShape([r]) where r is the rank of the dense tensor represented
-by the sparse tensor. It means the shapes of the three tensors of the
-SparseTensor are ([None], [None, r], [r]). NOTE: The shape invariant here
-is the shape of the SparseTensor.dense_shape property. It must be the shape of
-a vector.
+a) If a loop variable is a SparseTensor, the shape invariant must beTensorShape([r]) where r is the rank of the dense tensor representedby the sparse tensor. It means the shapes of the three tensors of theSparseTensor are ([None], [None, r], [r]). NOTE: The shape invariant hereis the shape of the SparseTensor.dense_shape property. It must be the shape ofa vector.
 
-b) If a loop variable is an IndexedSlices, the shape invariant must be
-a shape invariant of the values tensor of the IndexedSlices. It means
-the shapes of the three tensors of the IndexedSlices are (shape, [shape[0]],
-[shape.ndims]).
+b) If a loop variable is an IndexedSlices, the shape invariant must bea shape invariant of the values tensor of the IndexedSlices. It meansthe shapes of the three tensors of the IndexedSlices are (shape, [shape[0]],[shape.ndims]).
 
- `while_loop`  implements non-strict semantics, enabling multiple iterations
-to run in parallel. The maximum number of parallel iterations can be
-controlled by  `parallel_iterations` , which gives users some control over
-memory consumption and execution order. For correct programs,  `while_loop` 
-should return the same result for any parallel_iterations > 0.
+ `while_loop`  implements non-strict semantics, enabling multiple iterationsto run in parallel. The maximum number of parallel iterations can becontrolled by  `parallel_iterations` , which gives users some control overmemory consumption and execution order. For correct programs,  `while_loop` should return the same result for any parallel_iterations > 0.
 
-For training, TensorFlow stores the tensors that are produced in the
-forward inference and are needed in back propagation. These tensors are a
-main source of memory consumption and often cause OOM errors when training
-on GPUs. When the flag swap_memory is true, we swap out these tensors from
-GPU to CPU. This for example allows us to train RNN models with very long
-sequences and large batches.
-
-
+For training, TensorFlow stores the tensors that are produced in theforward inference and are needed in back propagation. These tensors are amain source of memory consumption and often cause OOM errors when trainingon GPUs. When the flag swap_memory is true, we swap out these tensors fromGPU to CPU. This for example allows us to train RNN models with very longsequences and large batches.
 
 #### Args:
-
 - **`cond`** : A callable that represents the termination condition of the loop.
-
 - **`body`** : A callable that represents the loop body.
-
-- **`loop_vars`** : A (possibly nested) tuple, namedtuple or list of numpy array,
- `Tensor` , and  `TensorArray`  objects.
-
+- **`loop_vars`** : A (possibly nested) tuple, namedtuple or list of numpy array, `Tensor` , and  `TensorArray`  objects.
 - **`shape_invariants`** : The shape invariants for the loop variables.
-
-- **`parallel_iterations`** : The number of iterations allowed to run in parallel. It
-must be a positive integer.
-
+- **`parallel_iterations`** : The number of iterations allowed to run in parallel. Itmust be a positive integer.
 - **`back_prop`** : Whether backprop is enabled for this while loop.
-
 - **`swap_memory`** : Whether GPU-CPU memory swap is enabled for this loop.
-
 - **`name`** : Optional name prefix for the returned tensors.
-
-- **`maximum_iterations`** : Optional maximum number of iterations of the while loop
-to run.  If provided, the  `cond`  output is AND-ed with an additional
-condition ensuring the number of iterations executed is no greater than
- `maximum_iterations` .
-
-- **`return_same_structure`** : If True, output has same structure as  `loop_vars` . If
-eager execution is enabled, this is ignored (and always treated as True).
-
+- **`maximum_iterations`** : Optional maximum number of iterations of the while loopto run.  If provided, the  `cond`  output is AND-ed with an additionalcondition ensuring the number of iterations executed is no greater than `maximum_iterations` .
+- **`return_same_structure`** : If True, output has same structure as  `loop_vars` . Ifeager execution is enabled, this is ignored (and always treated as True).
 
 
 #### Returns:
-The output tensors for the loop variables after the loop.
- If  `return_same_structure`  is True, the return value has the same
- structure as  `loop_vars` .
- If  `return_same_structure`  is False, the return value is a Tensor,
- TensorArray or IndexedSlice if the length of  `loop_vars`  is 1, or a list
- otherwise.
-
-
+The output tensors for the loop variables after the loop. If  `return_same_structure`  is True, the return value has the same structure as  `loop_vars` . If  `return_same_structure`  is False, the return value is a Tensor, TensorArray or IndexedSlice if the length of  `loop_vars`  is 1, or a list otherwise.
 
 #### Raises:
-
 - **`TypeError`** : if  `cond`  or  `body`  is not callable.
-
 - **`ValueError`** : if  `loop_vars`  is empty.
-
 
 
 #### Example:
@@ -139,8 +66,6 @@ r = tf.while_loop(c, b, [i])
 
 Example with nesting and a namedtuple:
 
-
-
 ```
  import collections
 Pair = collections.namedtuple('Pair', 'j, k')
@@ -153,8 +78,6 @@ ijk_final = tf.while_loop(c, b, ijk_0)
 
 Example using shape_invariants:
 
-
-
 ```
  i0 = tf.constant(0)
 m0 = tf.ones([2, 2])
@@ -166,25 +89,7 @@ tf.while_loop(
  
 ```
 
-Example which demonstrates non-strict semantics: In the following
-example, the final value of the counter  `i`  does not depend on  `x` . So
-the  `while_loop`  can increment the counter parallel to updates of  `x` .
-However, because the loop counter at one loop iteration depends
-on the value at the previous iteration, the loop counter itself cannot
-be incremented in parallel. Hence if we just want the final value of the
-counter (which we print on the line  `print(sess.run(i))` ), then
- `x`  will never be incremented, but the counter will be updated on a
-single thread. Conversely, if we want the value of the output (which we
-print on the line  `print(sess.run(out).shape)` ), then the counter may be
-incremented on its own thread, while  `x`  can be incremented in
-parallel on a separate thread. In the extreme case, it is conceivable
-that the thread incrementing the counter runs until completion before
- `x`  is incremented even a single time. The only thing that can never
-happen is that the thread updating  `x`  can never get ahead of the
-counter thread because the thread incrementing  `x`  depends on the value
-of the counter.
-
-
+Example which demonstrates non-strict semantics: In the followingexample, the final value of the counter  `i`  does not depend on  `x` . Sothe  `while_loop`  can increment the counter parallel to updates of  `x` .However, because the loop counter at one loop iteration dependson the value at the previous iteration, the loop counter itself cannotbe incremented in parallel. Hence if we just want the final value of thecounter (which we print on the line  `print(sess.run(i))` ), then `x`  will never be incremented, but the counter will be updated on asingle thread. Conversely, if we want the value of the output (which weprint on the line  `print(sess.run(out).shape)` ), then the counter may beincremented on its own thread, while  `x`  can be incremented inparallel on a separate thread. In the extreme case, it is conceivablethat the thread incrementing the counter runs until completion before `x`  is incremented even a single time. The only thing that can neverhappen is that the thread updating  `x`  can never get ahead of thecounter thread because the thread incrementing  `x`  depends on the valueof the counter.
 
 ```
  import tensorflow as tf

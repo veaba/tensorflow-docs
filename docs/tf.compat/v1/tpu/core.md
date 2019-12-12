@@ -1,15 +1,11 @@
 Returns the device name for a core in a replicated TPU computation.
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.tpu.core(num)
-</code></pre></devsite-code>
-
+```
+ tf.compat.v1.tpu.core(num) 
+```
 
 #### Args:
-
-- **`num`** : the virtual core number within each replica to which operators should
-be assigned.
-
+- **`num`** : the virtual core number within each replica to which operators shouldbe assigned.
 
 
 #### Returns:

@@ -3,15 +3,7 @@
 ## Class  `failureException` 
 Assertion failed.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException)
-
-- Class [ `tf.compat.v2.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException)
-
-
+**Aliases** : [ `tf.compat.v1.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException), [ `tf.compat.v2.test.TestCase.failureException` ](/api_docs/python/tf/test/TestCase/failureException)
 
 ##  `__init__` 
 
@@ -23,8 +15,6 @@ Assertion failed.
 )
  
 ```
-
-
 
 ##  `__new__` 
 

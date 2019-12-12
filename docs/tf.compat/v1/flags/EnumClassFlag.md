@@ -5,14 +5,6 @@ Basic enum flag; its value is an enum class's member.
 
 Inherits From: [ `Flag` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/Flag)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.app.flags.EnumClassFlag` ](/api_docs/python/tf/compat/v1/flags/EnumClassFlag)
-
-
-
 ##  `__init__` 
 
 
@@ -29,8 +21,6 @@ Inherits From: [ `Flag` ](https://tensorflow.google.cn/api_docs/python/tf/compat
 ```
 
 Initialize self.  See help(type(self)) for accurate signature.
-
-
 
 ## Properties
 
@@ -51,8 +41,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Return self==value.
 
-
-
 ###  `__ge__` 
 
 
@@ -65,8 +53,6 @@ Return self==value.
 ```
 
 Return a >= b.  Computed by @total_ordering from (not a < b).
-
-
 
 ###  `__gt__` 
 
@@ -81,8 +67,6 @@ Return a >= b.  Computed by @total_ordering from (not a < b).
 
 Return a > b.  Computed by @total_ordering from (not a < b) and (a != b).
 
-
-
 ###  `__le__` 
 
 
@@ -96,8 +80,6 @@ Return a > b.  Computed by @total_ordering from (not a < b) and (a != b).
 
 Return a <= b.  Computed by @total_ordering from (a < b) or (a == b).
 
-
-
 ###  `__lt__` 
 
 
@@ -107,8 +89,6 @@ Return a <= b.  Computed by @total_ordering from (a < b) or (a == b).
 ```
 
 Return self<value.
-
-
 
 ###  `flag_type` 
 
@@ -120,11 +100,7 @@ Return self<value.
 
 Returns a str that describes the type of the flag.
 
-NOTE: we use strings, and not the types.*Type constants because
-our flags can have more exotic types, e.g., 'comma separated list
-of strings', 'whitespace separated list of strings', etc.
-
-
+NOTE: we use strings, and not the types.*Type constants becauseour flags can have more exotic types, e.g., 'comma separated listof strings', 'whitespace separated list of strings', etc.
 
 ###  `parse` 
 
@@ -136,12 +112,8 @@ of strings', 'whitespace separated list of strings', etc.
 
 Parses string and sets flag value.
 
-
-
 #### Args:
-
 - **`argument`** : str or the correct flag value type, argument to be parsed.
-
 
 
 ###  `serialize` 
@@ -153,8 +125,6 @@ Parses string and sets flag value.
 ```
 
 Serializes the flag.
-
-
 
 ###  `unparse` 
 

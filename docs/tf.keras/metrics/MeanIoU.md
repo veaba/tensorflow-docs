@@ -5,29 +5,11 @@ Computes the mean Intersection-Over-Union metric.
 
 Inherits From: [ `Metric` ](https://tensorflow.google.cn/api_docs/python/tf/keras/metrics/Metric)
 
+**Aliases** : [ `tf.compat.v1.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.compat.v2.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.compat.v2.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU), [ `tf.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
 
+Mean Intersection-Over-Union is a common evaluation metric for semantic imagesegmentation, which first computes the IOU for each semantic class and thencomputes the average over classes. IOU is defined as follows:  IOU = true_positive / (true_positive + false_positive + false_negative).The predictions are accumulated in a confusion matrix, weighted by `sample_weight`  and the metric is then calculated from it.
 
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
-
-- Class [ `tf.compat.v2.keras.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
-
-- Class [ `tf.compat.v2.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
-
-- Class [ `tf.metrics.MeanIoU` ](/api_docs/python/tf/keras/metrics/MeanIoU)
-
-Mean Intersection-Over-Union is a common evaluation metric for semantic image
-segmentation, which first computes the IOU for each semantic class and then
-computes the average over classes. IOU is defined as follows:
-  IOU = true_positive / (true_positive + false_positive + false_negative).
-The predictions are accumulated in a confusion matrix, weighted by
- `sample_weight`  and the metric is then calculated from it.
-
-If  `sample_weight`  is  `None` , weights default to 1.
-Use  `sample_weight`  of 0 to mask values.
-
-
+If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
 #### Usage:
 
@@ -47,8 +29,6 @@ print('Final result: ', m.result().numpy())  # Final result: 0.33
 
 Usage with tf.keras API:
 
-
-
 ```
  model = tf.keras.Model(inputs, outputs)
 model.compile(
@@ -58,12 +38,8 @@ model.compile(
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2291-L2310)
-
-
 
 ```
  __init__(
@@ -76,24 +52,14 @@ model.compile(
 
 Creates a  `MeanIoU`  instance.
 
-
-
 #### Args:
-
-- **`num_classes`** : The possible number of labels the prediction task can have.
-This value must be provided, since a confusion matrix of dimension =
-[num_classes, num_classes] will be allocated.
-
+- **`num_classes`** : The possible number of labels the prediction task can have.This value must be provided, since a confusion matrix of dimension =[num_classes, num_classes] will be allocated.
 - **`name`** : (Optional) string name of the metric instance.
-
 - **`dtype`** : (Optional) data type of the metric result.
-
 
 
 ##  `__new__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
-
 
 ```
  __new__(
@@ -106,15 +72,11 @@ This value must be provided, since a confusion matrix of dimension =
 
 Create and return a new object.  See help(type) for accurate signature.
 
-
-
 ## Methods
 
 
 ###  `reset_states` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2372-L2373)
-
-
 
 ```
  reset_states()
@@ -123,15 +85,10 @@ Create and return a new object.  See help(type) for accurate signature.
 
 Resets all of the metric state variables.
 
-This function is called between epochs/steps,
-when a metric is evaluated during training.
-
-
+This function is called between epochs/steps,when a metric is evaluated during training.
 
 ###  `result` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2348-L2370)
-
-
 
 ```
  result()
@@ -140,12 +97,8 @@ when a metric is evaluated during training.
 
 Compute the mean intersection-over-union via the confusion matrix.
 
-
-
 ###  `update_state` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L2312-L2346)
-
-
 
 ```
  update_state(
@@ -158,18 +111,10 @@ Compute the mean intersection-over-union via the confusion matrix.
 
 Accumulates the confusion matrix statistics.
 
-
-
 #### Args:
-
 - **`y_true`** : The ground truth values.
-
 - **`y_pred`** : The predicted values.
-
-- **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a
- `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and must
-be broadcastable to  `y_true` .
-
+- **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
 #### Returns:

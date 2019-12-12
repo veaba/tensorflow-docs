@@ -1,7 +1,5 @@
 Public API for tf.nest namespace.
 
-
-
 ## Functions
 [ `assert_same_structure(...)` ](https://tensorflow.google.cn/api_docs/python/tf/nest/assert_same_structure): Asserts that two structures are nested in the same way.
 

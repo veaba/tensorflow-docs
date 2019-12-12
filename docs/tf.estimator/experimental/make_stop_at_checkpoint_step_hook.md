@@ -1,14 +1,6 @@
 Creates a proper StopAtCheckpointStepHook based on chief status.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.estimator.experimental.make_stop_at_checkpoint_step_hook` ](/api_docs/python/tf/estimator/experimental/make_stop_at_checkpoint_step_hook)
-
-- [ `tf.compat.v2.estimator.experimental.make_stop_at_checkpoint_step_hook` ](/api_docs/python/tf/estimator/experimental/make_stop_at_checkpoint_step_hook)
-
-
+**Aliases** : [ `tf.compat.v1.estimator.experimental.make_stop_at_checkpoint_step_hook` ](/api_docs/python/tf/estimator/experimental/make_stop_at_checkpoint_step_hook), [ `tf.compat.v2.estimator.experimental.make_stop_at_checkpoint_step_hook` ](/api_docs/python/tf/estimator/experimental/make_stop_at_checkpoint_step_hook)
 
 ```
  tf.estimator.experimental.make_stop_at_checkpoint_step_hook(

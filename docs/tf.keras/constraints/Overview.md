@@ -1,7 +1,5 @@
 Constraints: functions that impose constraints on weight values.
 
-
-
 ## Classes
 [ `class Constraint` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/Constraint)
 
@@ -24,8 +22,6 @@ Constraints: functions that impose constraints on weight values.
 [ `class radial_constraint` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/RadialConstraint): Constrains  `Conv2D`  kernel weights to be the same for each radius.
 
 [ `class unit_norm` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/UnitNorm): Constrains the weights incident to each hidden unit to have unit norm.
-
-
 
 ## Functions
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/constraints/deserialize)

@@ -3,21 +3,11 @@
 ## Class  `SummaryWriter` 
 Interface representing a stateful summary writer object.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v2.summary.SummaryWriter` ](/api_docs/python/tf/summary/SummaryWriter)
-
-
-
 ## Methods
 
 
 ###  `as_default` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L186-L190)
-
-
 
 ```
  as_default()
@@ -26,12 +16,8 @@ Interface representing a stateful summary writer object.
 
 Returns a context manager that enables summary writing.
 
-
-
 ###  `close` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L200-L202)
-
-
 
 ```
  close()
@@ -40,12 +26,8 @@ Returns a context manager that enables summary writing.
 
 Flushes and closes the summary writer.
 
-
-
 ###  `flush` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L196-L198)
-
-
 
 ```
  flush()
@@ -54,12 +36,8 @@ Flushes and closes the summary writer.
 
 Flushes any buffered data.
 
-
-
 ###  `init` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L192-L194)
-
-
 
 ```
  init()
@@ -68,12 +46,8 @@ Flushes any buffered data.
 
 Initializes the summary writer.
 
-
-
 ###  `set_as_default` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/summary_ops_v2.py#L181-L184)
-
-
 
 ```
  set_as_default()

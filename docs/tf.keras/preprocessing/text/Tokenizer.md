@@ -1,32 +1,14 @@
 
 
-
-
 ## Class  `Tokenizer` 
 Text tokenization utility class.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer)
-
-- Class [ `tf.compat.v2.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer), [ `tf.compat.v2.keras.preprocessing.text.Tokenizer` ](/api_docs/python/tf/keras/preprocessing/text/Tokenizer)
 
 ### Used in the tutorials:
-
 - [Image captioning with visual attention](https://tensorflow.google.cn/tutorials/text/image_captioning)
-
 - [Neural machine translation with attention](https://tensorflow.google.cn/tutorials/text/nmt_with_attention)
-
-This class allows to vectorize a text corpus, by turning each
-text into either a sequence of integers (each integer being the index
-of a token in a dictionary) or into a vector where the coefficient
-for each token could be binary, based on word count, based on tf-idf...
-
-
+This class allows to vectorize a text corpus, by turning eachtext into either a sequence of integers (each integer being the indexof a token in a dictionary) or into a vector where the coefficientfor each token could be binary, based on word count, based on tf-idf...
 
 # Arguments
 
@@ -46,14 +28,9 @@ oov_token: if given, it will be added to word_index and used to
  
 ```
 
-By default, all punctuation is removed, turning the texts into
-space-separated sequences of words
-(words maybe include the  `'`  character). These sequences are then
-split into lists of tokens. They will then be indexed or vectorized.
+By default, all punctuation is removed, turning the texts intospace-separated sequences of words(words maybe include the  `'`  character). These sequences are thensplit into lists of tokens. They will then be indexed or vectorized.
 
  `0`  is a reserved index that won't be assigned to any word.
-
-
 
 ##  `__init__` 
 
@@ -74,8 +51,6 @@ split into lists of tokens. They will then be indexed or vectorized.
 
 Initialize self.  See help(type(self)) for accurate signature.
 
-
-
 ## Methods
 
 
@@ -89,10 +64,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Updates internal vocabulary based on a list of sequences.
 
-Required before using  `sequences_to_matrix` 
-(if  `fit_on_texts`  was never called).
-
-
+Required before using  `sequences_to_matrix` (if  `fit_on_texts`  was never called).
 
 # Arguments
 
@@ -102,8 +74,6 @@ Required before using  `sequences_to_matrix`
     A "sequence" is a list of integer word indices.
  
 ```
-
-
 
 ###  `fit_on_texts` 
 
@@ -115,12 +85,9 @@ Required before using  `sequences_to_matrix`
 
 Updates internal vocabulary based on a list of texts.
 
-In the case where texts contains lists,
-we assume each entry of the lists to be a token.
+In the case where texts contains lists,we assume each entry of the lists to be a token.
 
 Required before using  `texts_to_sequences`  or  `texts_to_matrix` .
-
-
 
 # Arguments
 
@@ -132,8 +99,6 @@ Required before using  `texts_to_sequences`  or  `texts_to_matrix` .
  
 ```
 
-
-
 ###  `get_config` 
 
 
@@ -142,12 +107,7 @@ Required before using  `texts_to_sequences`  or  `texts_to_matrix` .
  
 ```
 
-Returns the tokenizer configuration as Python dictionary.
-The word count dictionaries used by the tokenizer get serialized
-into plain JSON, so that the configuration can be read by other
-projects.
-
-
+Returns the tokenizer configuration as Python dictionary.The word count dictionaries used by the tokenizer get serializedinto plain JSON, so that the configuration can be read by otherprojects.
 
 # Returns
 
@@ -156,8 +116,6 @@ projects.
  A Python dictionary with the tokenizer configuration.
  
 ```
-
-
 
 ###  `sequences_to_matrix` 
 
@@ -172,8 +130,6 @@ projects.
 
 Converts a list of sequences into a Numpy matrix.
 
-
-
 # Arguments
 
 
@@ -184,8 +140,6 @@ mode: one of "binary", "count", "tfidf", "freq"
  
 ```
 
-
-
 # Returns
 
 
@@ -193,8 +147,6 @@ mode: one of "binary", "count", "tfidf", "freq"
  A Numpy matrix.
  
 ```
-
-
 
 # Raises
 
@@ -204,8 +156,6 @@ mode: one of "binary", "count", "tfidf", "freq"
     or if the Tokenizer requires to be fit to sample data.
  
 ```
-
-
 
 ###  `sequences_to_texts` 
 
@@ -217,10 +167,7 @@ mode: one of "binary", "count", "tfidf", "freq"
 
 Transforms each sequence into a list of text.
 
-Only top  `num_words-1`  most frequent words will be taken into account.
-Only words known by the tokenizer will be taken into account.
-
-
+Only top  `num_words-1`  most frequent words will be taken into account.Only words known by the tokenizer will be taken into account.
 
 # Arguments
 
@@ -230,8 +177,6 @@ Only words known by the tokenizer will be taken into account.
  
 ```
 
-
-
 # Returns
 
 
@@ -239,8 +184,6 @@ Only words known by the tokenizer will be taken into account.
  A list of texts (strings)
  
 ```
-
-
 
 ###  `sequences_to_texts_generator` 
 
@@ -252,13 +195,9 @@ Only words known by the tokenizer will be taken into account.
 
 Transforms each sequence in  `sequences`  to a list of texts(strings).
 
-Each sequence has to a list of integers.
-In other words, sequences should be a list of sequences
+Each sequence has to a list of integers.In other words, sequences should be a list of sequences
 
-Only top  `num_words-1`  most frequent words will be taken into account.
-Only words known by the tokenizer will be taken into account.
-
-
+Only top  `num_words-1`  most frequent words will be taken into account.Only words known by the tokenizer will be taken into account.
 
 # Arguments
 
@@ -268,8 +207,6 @@ Only words known by the tokenizer will be taken into account.
  
 ```
 
-
-
 # Yields
 
 
@@ -277,8 +214,6 @@ Only words known by the tokenizer will be taken into account.
  Yields individual texts.
  
 ```
-
-
 
 ###  `texts_to_matrix` 
 
@@ -293,8 +228,6 @@ Only words known by the tokenizer will be taken into account.
 
 Convert a list of texts to a Numpy matrix.
 
-
-
 # Arguments
 
 
@@ -304,8 +237,6 @@ mode: one of "binary", "count", "tfidf", "freq".
  
 ```
 
-
-
 # Returns
 
 
@@ -313,8 +244,6 @@ mode: one of "binary", "count", "tfidf", "freq".
  A Numpy matrix.
  
 ```
-
-
 
 ###  `texts_to_sequences` 
 
@@ -326,10 +255,7 @@ mode: one of "binary", "count", "tfidf", "freq".
 
 Transforms each text in texts to a sequence of integers.
 
-Only top  `num_words-1`  most frequent words will be taken into account.
-Only words known by the tokenizer will be taken into account.
-
-
+Only top  `num_words-1`  most frequent words will be taken into account.Only words known by the tokenizer will be taken into account.
 
 # Arguments
 
@@ -339,8 +265,6 @@ Only words known by the tokenizer will be taken into account.
  
 ```
 
-
-
 # Returns
 
 
@@ -348,8 +272,6 @@ Only words known by the tokenizer will be taken into account.
  A list of sequences.
  
 ```
-
-
 
 ###  `texts_to_sequences_generator` 
 
@@ -361,13 +283,9 @@ Only words known by the tokenizer will be taken into account.
 
 Transforms each text in  `texts`  to a sequence of integers.
 
-Each item in texts can also be a list,
-in which case we assume each item of that list to be a token.
+Each item in texts can also be a list,in which case we assume each item of that list to be a token.
 
-Only top  `num_words-1`  most frequent words will be taken into account.
-Only words known by the tokenizer will be taken into account.
-
-
+Only top  `num_words-1`  most frequent words will be taken into account.Only words known by the tokenizer will be taken into account.
 
 # Arguments
 
@@ -377,8 +295,6 @@ Only words known by the tokenizer will be taken into account.
  
 ```
 
-
-
 # Yields
 
 
@@ -386,8 +302,6 @@ Only words known by the tokenizer will be taken into account.
  Yields individual sequences.
  
 ```
-
-
 
 ###  `to_json` 
 
@@ -397,11 +311,7 @@ Only words known by the tokenizer will be taken into account.
  
 ```
 
-Returns a JSON string containing the tokenizer configuration.
-To load a tokenizer from a JSON string, use
- `keras.preprocessing.text.tokenizer_from_json(json_string)` .
-
-
+Returns a JSON string containing the tokenizer configuration.To load a tokenizer from a JSON string, use `keras.preprocessing.text.tokenizer_from_json(json_string)` .
 
 # Arguments
 
@@ -411,8 +321,6 @@ To load a tokenizer from a JSON string, use
     to be passed to `json.dumps()`.
  
 ```
-
-
 
 # Returns
 

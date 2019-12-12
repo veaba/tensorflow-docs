@@ -1,7 +1,5 @@
 Inserts a dimension of 1 into a tensor's shape. (deprecated arguments)
 
-
-
 ```
  tf.compat.v1.expand_dims(
     input,
@@ -13,20 +11,10 @@ Inserts a dimension of 1 into a tensor's shape. (deprecated arguments)
 ```
 
 
-<aside class="warning">**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(dim)` . They will be removed in a future version.
-Instructions for updating:
-Use the  `axis`  argument instead</aside>
-Given a tensor  `input` , this operation inserts a dimension of 1 at the
-dimension index  `axis`  of  `input` 's shape. The dimension index  `axis`  starts
-at zero; if you specify a negative number for  `axis`  it is counted backward
-from the end.
+**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(dim)` . They will be removed in a future version.Instructions for updating:Use the  `axis`  argument instead
+Given a tensor  `input` , this operation inserts a dimension of 1 at thedimension index  `axis`  of  `input` 's shape. The dimension index  `axis`  startsat zero; if you specify a negative number for  `axis`  it is counted backwardfrom the end.
 
-This operation is useful if you want to add a batch dimension to a single
-element. For example, if you have a single image of shape <code translate="no" dir="ltr">[height, width,
-channels]</code>, you can make it a batch of 1 image with  `expand_dims(image, 0)` ,
-which will make the shape  `[1, height, width, channels]` .
-
-
+This operation is useful if you want to add a batch dimension to a singleelement. For example, if you have a single image of shape  `[height, width,channels]` , you can make it a batch of 1 image with  `expand_dims(image, 0)` ,which will make the shape  `[1, height, width, channels]` .
 
 #### Other examples:
 
@@ -48,31 +36,17 @@ This operation requires that:
 
  `-1-input.dims() <= dim <= input.dims()` 
 
-This operation is related to  `squeeze()` , which removes dimensions of
-size 1.
-
-
+This operation is related to  `squeeze()` , which removes dimensions ofsize 1.
 
 #### Args:
-
 - **`input`** : A  `Tensor` .
-
-- **`axis`** : 0-D (scalar). Specifies the dimension index at which to expand the
-shape of  `input` . Must be in the range  `[-rank(input) - 1, rank(input)]` .
-
+- **`axis`** : 0-D (scalar). Specifies the dimension index at which to expand theshape of  `input` . Must be in the range  `[-rank(input) - 1, rank(input)]` .
 - **`name`** : The name of the output  `Tensor`  (optional).
-
 - **`dim`** : 0-D (scalar). Equivalent to  `axis` , to be deprecated.
 
 
-
 #### Returns:
-A  `Tensor`  with the same data as  `input` , but its shape has an additional
-dimension of size 1 added.
-
-
+A  `Tensor`  with the same data as  `input` , but its shape has an additionaldimension of size 1 added.
 
 #### Raises:
-
 - **`ValueError`** : if either both or neither of  `dim`  and  `axis`  are specified.
-

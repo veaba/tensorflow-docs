@@ -1,32 +1,18 @@
 Returns whether a tensor is a sparse tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse)
-
-- [ `tf.compat.v2.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse), [ `tf.compat.v2.keras.backend.is_sparse` ](/api_docs/python/tf/keras/backend/is_sparse)
 
 ```
  tf.keras.backend.is_sparse(tensor)
  
 ```
 
-
-
 #### Arguments:
-
 - **`tensor`** : A tensor instance.
-
 
 
 #### Returns:
 A boolean.
-
-
 
 #### Example:
 

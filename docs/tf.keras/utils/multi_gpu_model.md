@@ -1,14 +1,6 @@
 Replicates a model on different GPUs. (deprecated)
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model)
-
-- [ `tf.compat.v2.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model)
-
-
+**Aliases** : [ `tf.compat.v1.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model), [ `tf.compat.v2.keras.utils.multi_gpu_model` ](/api_docs/python/tf/keras/utils/multi_gpu_model)
 
 ```
  tf.keras.utils.multi_gpu_model(
@@ -21,58 +13,29 @@ Replicates a model on different GPUs. (deprecated)
 ```
 
 
-<aside class="warning">**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed after 2020-04-01.
-Instructions for updating:
-Use [ `tf.distribute.MirroredStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/MirroredStrategy) instead.</aside>
-Specifically, this function implements single-machine
-multi-GPU data parallelism. It works in the following way:
-
+**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed after 2020-04-01.Instructions for updating:Use [ `tf.distribute.MirroredStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/MirroredStrategy) instead.
+Specifically, this function implements single-machinemulti-GPU data parallelism. It works in the following way:
 
 - Divide the model's input(s) into multiple sub-batches.
-
-- Apply a model copy on each sub-batch. Every model copy
-is executed on a dedicated GPU.
-
+- Apply a model copy on each sub-batch. Every model copyis executed on a dedicated GPU.
 - Concatenate the results (on CPU) into one big batch.
-
-E.g. if your  `batch_size`  is 64 and you use  `gpus=2` ,
-then we will divide the input into 2 sub-batches of 32 samples,
-process each sub-batch on one GPU, then return the full
-batch of 64 processed samples.
+E.g. if your  `batch_size`  is 64 and you use  `gpus=2` ,then we will divide the input into 2 sub-batches of 32 samples,process each sub-batch on one GPU, then return the fullbatch of 64 processed samples.
 
 This induces quasi-linear speedup on up to 8 GPUs.
 
-This function is only available with the TensorFlow backend
-for the time being.
-
-
+This function is only available with the TensorFlow backendfor the time being.
 
 #### Arguments:
-
-- **`model`** : A Keras model instance. To avoid OOM errors,
-this model could have been built on CPU, for instance
-(see usage example below).
-
-- **`gpus`** : Integer >= 2, number of on GPUs on which to create
-model replicas.
-
-- **`cpu_merge`** : A boolean value to identify whether to force
-merging model weights under the scope of the CPU or not.
-
-- **`cpu_relocation`** : A boolean value to identify whether to
-create the model's weights under the scope of the CPU.
-If the model is not defined under any preceding device
-scope, you can still rescue it by activating this option.
-
+- **`model`** : A Keras model instance. To avoid OOM errors,this model could have been built on CPU, for instance(see usage example below).
+- **`gpus`** : Integer >= 2, number of on GPUs on which to createmodel replicas.
+- **`cpu_merge`** : A boolean value to identify whether to forcemerging model weights under the scope of the CPU or not.
+- **`cpu_relocation`** : A boolean value to identify whether tocreate the model's weights under the scope of the CPU.If the model is not defined under any preceding devicescope, you can still rescue it by activating this option.
 
 
 #### Returns:
-A Keras  `Model`  instance which can be used just like the initial
- `model`  argument, but which distributes its workload on multiple GPUs.
+A Keras  `Model`  instance which can be used just like the initial `model`  argument, but which distributes its workload on multiple GPUs.
 
 Example 1: Training models with weights merge on CPU
-
-
 
 ```
      import tensorflow as tf
@@ -116,8 +79,6 @@ Example 1: Training models with weights merge on CPU
 
 Example 2: Training models with weights merge on CPU using cpu_relocation
 
-
-
 ```
       ..
      # Not needed to change the device scope for model definition:
@@ -136,8 +97,6 @@ Example 2: Training models with weights merge on CPU using cpu_relocation
 
 Example 3: Training models with weights merge on GPU (recommended for NV-link)
 
-
-
 ```
       ..
      # Not needed to change the device scope for model definition:
@@ -153,9 +112,5 @@ Example 3: Training models with weights merge on GPU (recommended for NV-link)
  
 ```
 
-
-
 #### Raises:
-
 - **`ValueError`** : if the  `gpus`  argument does not match available devices.
-

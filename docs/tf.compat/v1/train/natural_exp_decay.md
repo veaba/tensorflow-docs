@@ -1,28 +1,12 @@
 Applies natural exponential decay to the initial learning rate.
 
-
-
 ```
- tf.compat.v1.train.natural_exp_decay(
-    learning_rate,
-    global_step,
-    decay_steps,
-    decay_rate,
-    staircase=False,
-    name=None
-)
- 
+ tf.compat.v1.train.natural_exp_decay(    learning_rate,    global_step,    decay_steps,    decay_rate,    staircase=False,    name=None) 
 ```
 
-When training a model, it is often recommended to lower the learning rate as
-the training progresses.  This function applies an exponential decay function
-to a provided initial learning rate.  It requires an  `global_step`  value to
-compute the decayed learning rate.  You can just pass a TensorFlow variable
-that you increment at each training step.
+When training a model, it is often recommended to lower the learning rate asthe training progresses.  This function applies an exponential decay functionto a provided initial learning rate.  It requires an  `global_step`  value tocompute the decayed learning rate.  You can just pass a TensorFlow variablethat you increment at each training step.
 
 The function returns the decayed learning rate.  It is computed as:
-
-
 
 ```
  decayed_learning_rate = learning_rate * exp(-decay_rate * global_step /
@@ -32,8 +16,6 @@ decay_step)
 
 or, if  `staircase`  is  `True` , as:
 
-
-
 ```
  decayed_learning_rate = learning_rate * exp(-decay_rate * floor(global_step /
 decay_step))
@@ -41,8 +23,6 @@ decay_step))
 ```
 
 Example: decay exponentially with a base of 0.96:
-
-
 
 ```
  ...
@@ -62,42 +42,22 @@ learning_step = (
  
 ```
 
-
-
 #### Args:
-
-- **`learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or a Python number.
-The initial learning rate.
-
-- **`global_step`** : A Python number. Global step to use for the decay computation.
-Must not be negative.
-
+- **`learning_rate`** : A scalar  `float32`  or  `float64`   `Tensor`  or a Python number.The initial learning rate.
+- **`global_step`** : A Python number. Global step to use for the decay computation.Must not be negative.
 - **`decay_steps`** : How often to apply decay.
-
 - **`decay_rate`** : A Python number.  The decay rate.
-
-- **`staircase`** : Whether to apply decay in a discrete staircase, as opposed to
-continuous, fashion.
-
-- **`name`** : String.  Optional name of the operation.  Defaults to
-'ExponentialTimeDecay'.
-
+- **`staircase`** : Whether to apply decay in a discrete staircase, as opposed tocontinuous, fashion.
+- **`name`** : String.  Optional name of the operation.  Defaults to'ExponentialTimeDecay'.
 
 
 #### Returns:
-A scalar  `Tensor`  of the same type as  `learning_rate` .  The decayed
-learning rate.
-
-
+A scalar  `Tensor`  of the same type as  `learning_rate` .  The decayedlearning rate.
 
 #### Raises:
-
 - **`ValueError`** : if  `global_step`  is not supplied.
 
 
-
 #### Eager Compatibility
-When eager execution is enabled, this function returns a function which in
-turn returns the decayed learning rate Tensor. This can be useful for changing
-the learning rate value across different invocations of optimizer functions.
+When eager execution is enabled, this function returns a function which inturn returns the decayed learning rate Tensor. This can be useful for changingthe learning rate value across different invocations of optimizer functions.
 

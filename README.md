@@ -1,6 +1,36 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API  
 
+### 导致解析出错的地址：
+- √ docs\tf.compat\v1\estimator\tpu\experimental\EmbeddingConfigSpec.md
+- √ docs\tf.compat\v1\keras\initializers\Constant.md
+- √ docs\tf.distribute\experimental\ParameterServerStrategy.md
+- √ docs\tf.estimator\VocabInfo.md
+- √ docs\tf.linalg\LinearOperatorHouseholder.md
+- √ docs\tf.linalg\LinearOperatorToeplitz.md
+- √ docs\tf.ragged\stack.md
+- √ docs\tf.keras\backend\transpose.md
+- √ docs\tf.compat\v1\flags\tf_decorator\rewrap.md
+- √ docs\tf.compat\v1\estimator\BaselineClassifier.md
+- √ docs\tf.compat\v1\estimator\BaselineEstimator.md
+- √ docs\tf.compat\v1\estimator\BaselineRegressor.md
+- √ docs\tf.compat\v1\estimator\DNNClassifier.md
+- √ docs\tf.compat\v1\estimator\DNNEstimator.md
+- √ docs\tf.compat\v1\estimator\DNNLinearCombinedClassifier.md
+- √ docs\tf.compat\v1\estimator\DNNLinearCombinedEstimator.md
+- √ docs\tf.compat\v1\estimator\DNNLinearCombinedRegressor.md
+- √ docs\tf.compat\v1\estimator\DNNRegressor.md
+- √ docs\tf.compat\v1\estimator\Estimator.md
+- √ docs\tf.compat\v1\estimator\LinearClassifier.md
+- √ docs\tf.compat\v1\estimator\LinearRegressor.md
+- √ docs\tf.compat\v1\space_to_batch.md
+- √ docs\tf.estimator\Estimator.md
+- √ docs\tf.compat\v1\DeviceSpec.md
+- √ docs\tf.compat\v1\gradients.md
+- docs\tf.compat\v1\queue\Overview.md
+- docs\tf.keras\backend\floatx.md
+- docs\tf.math\log.md
+
 ### TODO
 - 增加丢弃的模块标注或者移除
 - 发现tf目录文档重复，需要重爬这个目录 2019年10月11日16:29:15

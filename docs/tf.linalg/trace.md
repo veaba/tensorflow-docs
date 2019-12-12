@@ -1,16 +1,6 @@
 Compute the trace of a tensor  `x` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.linalg.trace` ](/api_docs/python/tf/linalg/trace)
-
-- [ `tf.compat.v1.trace` ](/api_docs/python/tf/linalg/trace)
-
-- [ `tf.compat.v2.linalg.trace` ](/api_docs/python/tf/linalg/trace)
-
-
+**Aliases** : [ `tf.compat.v1.linalg.trace` ](/api_docs/python/tf/linalg/trace), [ `tf.compat.v1.trace` ](/api_docs/python/tf/linalg/trace), [ `tf.compat.v2.linalg.trace` ](/api_docs/python/tf/linalg/trace)
 
 ```
  tf.linalg.trace(
@@ -20,13 +10,9 @@ Compute the trace of a tensor  `x` .
  
 ```
 
- `trace(x)`  returns the sum along the main diagonal of each inner-most matrix
-in x. If x is of rank  `k`  with shape  `[I, J, K, ..., L, M, N]` , then output
-is a tensor of rank  `k-2`  with dimensions  `[I, J, K, ..., L]`  where
+ `trace(x)`  returns the sum along the main diagonal of each inner-most matrixin x. If x is of rank  `k`  with shape  `[I, J, K, ..., L, M, N]` , then outputis a tensor of rank  `k-2`  with dimensions  `[I, J, K, ..., L]`  where
 
  `output[i, j, k, ..., l] = trace(x[i, j, i, ..., l, :, :])` 
-
-
 
 #### For example:
 
@@ -50,14 +36,9 @@ tf.linalg.trace(x)  # [15, -15]
  
 ```
 
-
-
 #### Args:
-
 - **`x`** : tensor.
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

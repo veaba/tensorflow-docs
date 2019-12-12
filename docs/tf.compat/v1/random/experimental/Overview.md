@@ -1,11 +1,7 @@
 Public API for tf.random.experimental namespace.
 
-
-
 ## Classes
 [ `class Generator` ](https://tensorflow.google.cn/api_docs/python/tf/random/experimental/Generator): Random-number generator.
-
-
 
 ## Functions
 [ `create_rng_state(...)` ](https://tensorflow.google.cn/api_docs/python/tf/random/experimental/create_rng_state): Creates a RNG state.

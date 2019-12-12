@@ -3,35 +3,15 @@
 ## Class  `SensitivityAtSpecificity` 
 Computes the sensitivity at a given specificity.
 
+**Aliases** : [ `tf.compat.v1.keras.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity), [ `tf.compat.v2.keras.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity), [ `tf.compat.v2.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity), [ `tf.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity)
 
+ `Sensitivity`  measures the proportion of actual positives that are correctlyidentified as such (tp / (tp + fn)). `Specificity`  measures the proportion of actual negatives that are correctlyidentified as such (tn / (tn + fp)).
 
-### Aliases:
+This metric creates four local variables,  `true_positives` ,  `true_negatives` , `false_positives`  and  `false_negatives`  that are used to compute thesensitivity at the given specificity. The threshold for the given specificityvalue is computed and used to evaluate the corresponding sensitivity.
 
-- Class [ `tf.compat.v1.keras.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity)
+If  `sample_weight`  is  `None` , weights default to 1.Use  `sample_weight`  of 0 to mask values.
 
-- Class [ `tf.compat.v2.keras.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity)
-
-- Class [ `tf.compat.v2.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity)
-
-- Class [ `tf.metrics.SensitivityAtSpecificity` ](/api_docs/python/tf/keras/metrics/SensitivityAtSpecificity)
-
- `Sensitivity`  measures the proportion of actual positives that are correctly
-identified as such (tp / (tp + fn)).
- `Specificity`  measures the proportion of actual negatives that are correctly
-identified as such (tn / (tn + fp)).
-
-This metric creates four local variables,  `true_positives` ,  `true_negatives` ,
- `false_positives`  and  `false_negatives`  that are used to compute the
-sensitivity at the given specificity. The threshold for the given specificity
-value is computed and used to evaluate the corresponding sensitivity.
-
-If  `sample_weight`  is  `None` , weights default to 1.
-Use  `sample_weight`  of 0 to mask values.
-
-For additional information about specificity and sensitivity, see the
-following: https://en.wikipedia.org/wiki/Sensitivity_and_specificity
-
-
+For additional information about specificity and sensitivity, see thefollowing: https://en.wikipedia.org/wiki/Sensitivity_and_specificity
 
 #### Usage:
 
@@ -45,8 +25,6 @@ print('Final result: ', m.result().numpy())  # Final result: 0.5
 
 Usage with tf.keras API:
 
-
-
 ```
  model = tf.keras.Model(inputs, outputs)
 model.compile(
@@ -56,12 +34,8 @@ model.compile(
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1464-L1479)
-
-
 
 ```
  __init__(
@@ -75,25 +49,15 @@ model.compile(
 
 Creates a  `SensitivityAtSpecificity`  instance.
 
-
-
 #### Args:
-
 - **`specificity`** : A scalar value in range  `[0, 1]` .
-
-- **`num_thresholds`** : (Optional) Defaults to 200. The number of thresholds to
-use for matching the given specificity.
-
+- **`num_thresholds`** : (Optional) Defaults to 200. The number of thresholds touse for matching the given specificity.
 - **`name`** : (Optional) string name of the metric instance.
-
 - **`dtype`** : (Optional) data type of the metric result.
-
 
 
 ##  `__new__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L144-L160)
-
-
 
 ```
  __new__(
@@ -106,15 +70,11 @@ use for matching the given specificity.
 
 Create and return a new object.  See help(type) for accurate signature.
 
-
-
 ## Methods
 
 
 ###  `reset_states` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1419-L1422)
-
-
 
 ```
  reset_states()
@@ -123,15 +83,10 @@ Create and return a new object.  See help(type) for accurate signature.
 
 Resets all of the metric state variables.
 
-This function is called between epochs/steps,
-when a metric is evaluated during training.
-
-
+This function is called between epochs/steps,when a metric is evaluated during training.
 
 ###  `result` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1481-L1495)
-
-
 
 ```
  result()
@@ -140,15 +95,10 @@ when a metric is evaluated during training.
 
 Computes and returns the metric value tensor.
 
-Result computation is an idempotent operation that simply calculates the
-metric value using the state variables.
-
-
+Result computation is an idempotent operation that simply calculates themetric value using the state variables.
 
 ###  `update_state` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/metrics.py#L1394-L1417)
-
-
 
 ```
  update_state(
@@ -161,18 +111,10 @@ metric value using the state variables.
 
 Accumulates confusion matrix statistics.
 
-
-
 #### Args:
-
 - **`y_true`** : The ground truth values.
-
 - **`y_pred`** : The predicted values.
-
-- **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a
- `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and must
-be broadcastable to  `y_true` .
-
+- **`sample_weight`** : Optional weighting of each example. Defaults to 1. Can be a `Tensor`  whose rank is either 0, or the same rank as  `y_true` , and mustbe broadcastable to  `y_true` .
 
 
 #### Returns:

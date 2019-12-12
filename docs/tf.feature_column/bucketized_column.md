@@ -1,14 +1,6 @@
 Represents discretized dense input.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column)
-
-- [ `tf.compat.v2.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column)
-
-
+**Aliases** : [ `tf.compat.v1.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column), [ `tf.compat.v2.feature_column.bucketized_column` ](/api_docs/python/tf/feature_column/bucketized_column)
 
 ```
  tf.feature_column.bucketized_column(
@@ -18,19 +10,11 @@ Represents discretized dense input.
  
 ```
 
-
-
 ### Used in the tutorials:
-
 - [Classify structured data with feature columns](https://tensorflow.google.cn/tutorials/structured_data/feature_columns)
-
-Buckets include the left boundary, and exclude the right boundary. Namely,
- `boundaries=[0., 1., 2.]`  generates buckets  `(-inf, 0.)` ,  `[0., 1.)` ,
- `[1., 2.)` , and  `[2., +inf)` .
+Buckets include the left boundary, and exclude the right boundary. Namely, `boundaries=[0., 1., 2.]`  generates buckets  `(-inf, 0.)` ,  `[0., 1.)` , `[1., 2.)` , and  `[2., +inf)` .
 
 For example, if the inputs are
-
-
 
 ```
  boundaries = [0, 10, 100]
@@ -42,16 +26,12 @@ input tensor = [[-5, 10000]
 
 then the output will be
 
-
-
 ```
  output = [[0, 3]
           [3, 2]
           [1, 3]]
  
 ```
-
-
 
 #### Example:
 
@@ -70,10 +50,7 @@ dense_tensor = input_layer(features, columns)
  
 ```
 
- `bucketized_column`  can also be crossed with another categorical column using
- `crossed_column` :
-
-
+ `bucketized_column`  can also be crossed with another categorical column using `crossed_column` :
 
 ```
  price = numeric_column('price')
@@ -87,26 +64,14 @@ linear_prediction = linear_model(features, columns)
  
 ```
 
-
-
 #### Args:
-
-- **`source_column`** : A one-dimensional dense column which is generated with
- `numeric_column` .
-
+- **`source_column`** : A one-dimensional dense column which is generated with `numeric_column` .
 - **`boundaries`** : A sorted list or tuple of floats specifying the boundaries.
-
 
 
 #### Returns:
 A  `BucketizedColumn` .
 
-
-
 #### Raises:
-
-- **`ValueError`** : If  `source_column`  is not a numeric column, or if it is not
-one-dimensional.
-
+- **`ValueError`** : If  `source_column`  is not a numeric column, or if it is notone-dimensional.
 - **`ValueError`** : If  `boundaries`  is not a sorted list or tuple.
-

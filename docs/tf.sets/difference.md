@@ -1,16 +1,6 @@
 Compute set difference of elements in last dimension of  `a`  and  `b` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sets.difference` ](/api_docs/python/tf/sets/difference)
-
-- [ `tf.compat.v1.sets.set_difference` ](/api_docs/python/tf/sets/difference)
-
-- [ `tf.compat.v2.sets.difference` ](/api_docs/python/tf/sets/difference)
-
-
+**Aliases** : [ `tf.compat.v1.sets.difference` ](/api_docs/python/tf/sets/difference), [ `tf.compat.v1.sets.set_difference` ](/api_docs/python/tf/sets/difference), [ `tf.compat.v2.sets.difference` ](/api_docs/python/tf/sets/difference)
 
 ```
  tf.sets.difference(
@@ -23,8 +13,6 @@ Compute set difference of elements in last dimension of  `a`  and  `b` .
 ```
 
 All but the last dimension of  `a`  and  `b`  must match.
-
-
 
 #### Example:
 
@@ -73,37 +61,17 @@ All but the last dimension of  `a`  and  `b`  must match.
  
 ```
 
-
-
 #### Args:
-
-- **`a`** :  `Tensor`  or  `SparseTensor`  of the same type as  `b` . If sparse, indices
-must be sorted in row-major order.
-
-- **`b`** :  `Tensor`  or  `SparseTensor`  of the same type as  `a` . If sparse, indices
-must be sorted in row-major order.
-
+- **`a`** :  `Tensor`  or  `SparseTensor`  of the same type as  `b` . If sparse, indicesmust be sorted in row-major order.
+- **`b`** :  `Tensor`  or  `SparseTensor`  of the same type as  `a` . If sparse, indicesmust be sorted in row-major order.
 - **`aminusb`** : Whether to subtract  `b`  from  `a` , vs vice versa.
-
-- **`validate_indices`** : Whether to validate the order and range of sparse indices
-in  `a`  and  `b` .
-
+- **`validate_indices`** : Whether to validate the order and range of sparse indicesin  `a`  and  `b` .
 
 
 #### Returns:
-A  `SparseTensor`  whose shape is the same rank as  `a`  and  `b` , and all but
-the last dimension the same. Elements along the last dimension contain the
-differences.
-
-
+A  `SparseTensor`  whose shape is the same rank as  `a`  and  `b` , and all butthe last dimension the same. Elements along the last dimension contain thedifferences.
 
 #### Raises:
-
-- **`TypeError`** : If inputs are invalid types, or if  `a`  and  `b`  have
-different types.
-
+- **`TypeError`** : If inputs are invalid types, or if  `a`  and  `b`  havedifferent types.
 - **`ValueError`** : If  `a`  is sparse and  `b`  is dense.
-
-- **`errors_impl.InvalidArgumentError`** : If the shapes of  `a`  and  `b`  do not
-match in any dimension other than the last dimension.
-
+- **`errors_impl.InvalidArgumentError`** : If the shapes of  `a`  and  `b`  do notmatch in any dimension other than the last dimension.

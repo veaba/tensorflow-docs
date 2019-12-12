@@ -1,14 +1,6 @@
 Performs a random brightness shift.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
-
-- [ `tf.compat.v2.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness), [ `tf.compat.v2.keras.preprocessing.image.random_brightness` ](/api_docs/python/tf/keras/preprocessing/image/random_brightness)
 
 ```
  tf.keras.preprocessing.image.random_brightness(
@@ -17,8 +9,6 @@ Performs a random brightness shift.
 )
  
 ```
-
-
 
 # Arguments
 
@@ -30,8 +20,6 @@ channel_axis: Index of axis for channels in the input tensor.
  
 ```
 
-
-
 # Returns
 
 
@@ -39,8 +27,6 @@ channel_axis: Index of axis for channels in the input tensor.
  Numpy image tensor.
  
 ```
-
-
 
 # Raises
 

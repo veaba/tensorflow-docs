@@ -1,13 +1,9 @@
 Public API for tf.lite namespace.
 
-
-
 ## Modules
 [ `constants` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/constants) module: Public API for tf.lite.constants namespace.
 
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/experimental) module: Public API for tf.lite.experimental namespace.
-
-
 
 ## Classes
 [ `class Interpreter` ](https://tensorflow.google.cn/api_docs/python/tf/lite/Interpreter): Interpreter interface for TensorFlow Lite Models.
@@ -25,8 +21,6 @@ Public API for tf.lite namespace.
 [ `class TargetSpec` ](https://tensorflow.google.cn/api_docs/python/tf/lite/TargetSpec): Specification of target device.
 
 [ `class TocoConverter` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/TocoConverter): Convert a TensorFlow model into  `output_format`  using TOCO.
-
-
 
 ## Functions
 [ `toco_convert(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lite/toco_convert): Convert a model using TOCO. (deprecated)

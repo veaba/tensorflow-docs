@@ -1,12 +1,8 @@
 Small helper to get the global step.
 
-
-<devsite-code><pre class="prettyprint lang-python" translate="no" dir="ltr" is-upgraded=""><code translate="no" dir="ltr">tf.compat.v1.train.global_step(
-    sess,
-    global_step_tensor
-)
-</code></pre></devsite-code>
-
+```
+ tf.compat.v1.train.global_step(    sess,    global_step_tensor) 
+```
 
 ```
  # Create a variable to hold the global_step.
@@ -23,15 +19,9 @@ global_step: 10
  
 ```
 
-
-
 #### Args:
-
 - **`sess`** : A TensorFlow  `Session`  object.
-
-- **`global_step_tensor`** :   `Tensor`  or the  `name`  of the operation that contains
-the global step.
-
+- **`global_step_tensor`** :   `Tensor`  or the  `name`  of the operation that containsthe global step.
 
 
 #### Returns:

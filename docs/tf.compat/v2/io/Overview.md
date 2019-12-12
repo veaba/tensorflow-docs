@@ -1,11 +1,7 @@
 Public API for tf.io namespace.
 
-
-
 ## Modules
 [ `gfile` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v2/io/gfile) module: Public API for tf.io.gfile namespace.
-
-
 
 ## Classes
 [ `class FixedLenFeature` ](https://tensorflow.google.cn/api_docs/python/tf/io/FixedLenFeature): Configuration for parsing a fixed-length input feature.
@@ -19,8 +15,6 @@ Public API for tf.io namespace.
 [ `class TFRecordWriter` ](https://tensorflow.google.cn/api_docs/python/tf/io/TFRecordWriter): A class to write records to a TFRecords file.
 
 [ `class VarLenFeature` ](https://tensorflow.google.cn/api_docs/python/tf/io/VarLenFeature): Configuration for parsing a variable-length input feature.
-
-
 
 ## Functions
 [ `decode_and_crop_jpeg(...)` ](https://tensorflow.google.cn/api_docs/python/tf/io/decode_and_crop_jpeg): Decode and Crop a JPEG-encoded image to a uint8 tensor.

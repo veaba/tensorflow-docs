@@ -1,14 +1,6 @@
 Returns the Peak Signal-to-Noise Ratio between a and b.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.image.psnr` ](/api_docs/python/tf/image/psnr)
-
-- [ `tf.compat.v2.image.psnr` ](/api_docs/python/tf/image/psnr)
-
-
+**Aliases** : [ `tf.compat.v1.image.psnr` ](/api_docs/python/tf/image/psnr), [ `tf.compat.v2.image.psnr` ](/api_docs/python/tf/image/psnr)
 
 ```
  tf.image.psnr(
@@ -20,12 +12,9 @@ Returns the Peak Signal-to-Noise Ratio between a and b.
  
 ```
 
-This is intended to be used on signals (or images). Produces a PSNR value for
-each image in batch.
+This is intended to be used on signals (or images). Produces a PSNR value foreach image in batch.
 
 The last three dimensions of input are expected to be [height, width, depth].
-
-
 
 #### Example:
 
@@ -45,22 +34,13 @@ The last three dimensions of input are expected to be [height, width, depth].
  
 ```
 
-
-
 #### Arguments:
-
 - **`a`** : First set of images.
-
 - **`b`** : Second set of images.
-
-- **`max_val`** : The dynamic range of the images (i.e., the difference between the
-maximum the and minimum allowed values).
-
+- **`max_val`** : The dynamic range of the images (i.e., the difference between themaximum the and minimum allowed values).
 - **`name`** : Namespace to embed the computation in.
 
 
-
 #### Returns:
-The scalar PSNR between a and b. The returned tensor has type [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32)
-and shape [batch_size, 1].
+The scalar PSNR between a and b. The returned tensor has type [ `tf.float32` ](https://tensorflow.google.cn/api_docs/python/tf#float32)and shape [batch_size, 1].
 

@@ -5,23 +5,9 @@ A distribution strategy for running on a single device.
 
 Inherits From: [ `Strategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/Strategy)
 
+Using this strategy will place any variables created in its scope on thespecified device. Input distributed through this strategy will beprefetched to the specified device. Moreover, any functions called via `strategy.experimental_run_v2`  will also be placed on the specified deviceas well.
 
-
-### Aliases:
-
-- Class [ `tf.compat.v2.distribute.OneDeviceStrategy` ](/api_docs/python/tf/distribute/OneDeviceStrategy)
-
-Using this strategy will place any variables created in its scope on the
-specified device. Input distributed through this strategy will be
-prefetched to the specified device. Moreover, any functions called via
- `strategy.experimental_run_v2`  will also be placed on the specified device
-as well.
-
-Typical usage of this strategy could be testing your code with the
-tf.distribute.Strategy API before switching to other strategies which
-actually distribute to multiple devices/machines.
-
-
+Typical usage of this strategy could be testing your code with thetf.distribute.Strategy API before switching to other strategies whichactually distribute to multiple devices/machines.
 
 #### For example:
 
@@ -43,12 +29,8 @@ print(result)  # 90
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L72-L80)
-
-
 
 ```
  __init__(device)
@@ -57,14 +39,8 @@ print(result)  # 90
 
 Creates a  `OneDeviceStrategy` .
 
-
-
 #### Args:
-
-- **`device`** : Device string identifier for the device on which the variables
-should be placed. See class docs for more details on how the device is
-used. Examples: "/cpu:0", "/gpu:0", "/device:CPU:0", "/device:GPU:0"
-
+- **`device`** : Device string identifier for the device on which the variablesshould be placed. See class docs for more details on how the device isused. Examples: "/cpu:0", "/gpu:0", "/device:CPU:0", "/device:GPU:0"
 
 
 ## Properties
@@ -73,20 +49,14 @@ used. Examples: "/cpu:0", "/gpu:0", "/device:CPU:0", "/device:GPU:0"
 ###  `extended` 
 [ `tf.distribute.StrategyExtended` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/StrategyExtended) with additional methods.
 
-
-
 ###  `num_replicas_in_sync` 
 Returns number of replicas over which gradients are aggregated.
-
-
 
 ## Methods
 
 
 ###  `experimental_distribute_dataset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L82-L108)
-
-
 
 ```
  experimental_distribute_dataset(dataset)
@@ -95,15 +65,9 @@ Returns number of replicas over which gradients are aggregated.
 
 Distributes a tf.data.Dataset instance provided via dataset.
 
-In this case, there is only one device, so this is only a thin wrapper
-around the input dataset. It will, however, prefetch the input data to the
-specified device. The returned distributed dataset can be iterated over
-similar to how regular datasets can.
+In this case, there is only one device, so this is only a thin wrapperaround the input dataset. It will, however, prefetch the input data to thespecified device. The returned distributed dataset can be iterated oversimilar to how regular datasets can.
 
-NOTE: Currently, the user cannot add any more transformations to a
-distributed dataset.
-
-
+NOTE: Currently, the user cannot add any more transformations to adistributed dataset.
 
 #### Example:
 
@@ -117,20 +81,13 @@ for x in dist_dataset:
  
 ```
 
-Args:
-  dataset: [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) to be prefetched to device.
-
-
+Args:  dataset: [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) to be prefetched to device.
 
 #### Returns:
 A "distributed  `Dataset` " that the caller can iterate over.
 
-
-
 ###  `experimental_distribute_datasets_from_function` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L110-L148)
-
-
 
 ```
  experimental_distribute_datasets_from_function(dataset_fn)
@@ -139,14 +96,9 @@ A "distributed  `Dataset` " that the caller can iterate over.
 
 Distributes [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) instances created by calls to  `dataset_fn` .
 
- `dataset_fn`  will be called once for each worker in the strategy. In this
-case, we only have one worker and one device so  `dataset_fn`  is called
-once.
+ `dataset_fn`  will be called once for each worker in the strategy. In thiscase, we only have one worker and one device so  `dataset_fn`  is calledonce.
 
-The  `dataset_fn`  should take an [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance where
-information about batching and input replication can be accessed:
-
-
+The  `dataset_fn`  should take an [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance whereinformation about batching and input replication can be accessed:
 
 ```
  def dataset_fn(input_context):
@@ -162,30 +114,17 @@ for batch in inputs:
  
 ```
 
-IMPORTANT: The [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) returned by  `dataset_fn`  should have a
-per-replica batch size, unlike  `experimental_distribute_dataset` , which uses
-the global batch size.  This may be computed using
- `input_context.get_per_replica_batch_size` .
-
-
+IMPORTANT: The [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) returned by  `dataset_fn`  should have aper-replica batch size, unlike  `experimental_distribute_dataset` , which usesthe global batch size.  This may be computed using `input_context.get_per_replica_batch_size` .
 
 #### Args:
-
-- **`dataset_fn`** : A function taking a [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance and
-returning a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
-
+- **`dataset_fn`** : A function taking a [ `tf.distribute.InputContext` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/InputContext) instance andreturning a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
 
 
 #### Returns:
-A "distributed  `Dataset` ", which the caller can iterate over like regular
-datasets.
-
-
+A "distributed  `Dataset` ", which the caller can iterate over like regulardatasets.
 
 ###  `experimental_local_results` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L150-L164)
-
-
 
 ```
  experimental_local_results(value)
@@ -194,28 +133,17 @@ datasets.
 
 Returns the list of all local per-replica values contained in  `value` .
 
-In  `OneDeviceStrategy` , the  `value`  is always expected to be a single
-value, so the result is just the value in a tuple.
-
-
+In  `OneDeviceStrategy` , the  `value`  is always expected to be a singlevalue, so the result is just the value in a tuple.
 
 #### Args:
-
-- **`value`** : A value returned by  `experimental_run()` ,  `experimental_run_v2()` ,
- `extended.call_for_each_replica()` , or a variable created in  `scope` .
-
+- **`value`** : A value returned by  `experimental_run()` ,  `experimental_run_v2()` , `extended.call_for_each_replica()` , or a variable created in  `scope` .
 
 
 #### Returns:
-A tuple of values contained in  `value` . If  `value`  represents a single
-value, this returns  `(value,).` 
-
-
+A tuple of values contained in  `value` . If  `value`  represents a singlevalue, this returns  `(value,).` 
 
 ###  `experimental_make_numpy_dataset` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L575-L601)
-
-
 
 ```
  experimental_make_numpy_dataset(numpy_input)
@@ -224,14 +152,9 @@ value, this returns  `(value,).`
 
 Makes a [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) for input provided via a numpy array.
 
-This avoids adding  `numpy_input`  as a large constant in the graph,
-and copies the data to the machine or machines that will be processing
-the input.
+This avoids adding  `numpy_input`  as a large constant in the graph,and copies the data to the machine or machines that will be processingthe input.
 
-Note that you will likely need to use  `experimental_distribute_dataset` 
-with the returned dataset to further distribute it with the strategy.
-
-
+Note that you will likely need to use  `experimental_distribute_dataset` with the returned dataset to further distribute it with the strategy.
 
 #### Example:
 
@@ -243,25 +166,15 @@ dist_dataset = strategy.experimental_distribute_dataset(dataset)
  
 ```
 
-
-
 #### Args:
-
-- **`numpy_input`** : A nest of NumPy input arrays that will be converted into a
-dataset. Note that lists of Numpy arrays are stacked, as that is normal
-[ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) behavior.
-
+- **`numpy_input`** : A nest of NumPy input arrays that will be converted into adataset. Note that lists of Numpy arrays are stacked, as that is normal[ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) behavior.
 
 
 #### Returns:
 A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset) representing  `numpy_input` .
 
-
-
 ###  `experimental_run_v2` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L166-L180)
-
-
 
 ```
  experimental_run_v2(
@@ -274,30 +187,19 @@ A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dat
 
 Run  `fn`  on each replica, with the given arguments.
 
-In  `OneDeviceStrategy` ,  `fn`  is simply called within a device scope for the
-given device, with the provided arguments.
-
-
+In  `OneDeviceStrategy` ,  `fn`  is simply called within a device scope for thegiven device, with the provided arguments.
 
 #### Args:
-
 - **`fn`** : The function to run. The output must be a [ `tf.nest` ](https://tensorflow.google.cn/api_docs/python/tf/nest) of  `Tensor` s.
-
 - **`args`** : (Optional) Positional arguments to  `fn` .
-
 - **`kwargs`** : (Optional) Keyword arguments to  `fn` .
-
 
 
 #### Returns:
 Return value from running  `fn` .
 
-
-
 ###  `reduce` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L182-L213)
-
-
 
 ```
  reduce(
@@ -310,11 +212,7 @@ Return value from running  `fn` .
 
 Reduce  `value`  across replicas.
 
-In  `OneDeviceStrategy` , there is only one replica, so if axis=None, value
-is simply returned. If axis is specified as something other than None,
-such as axis=0, value is reduced along that axis and returned.
-
-
+In  `OneDeviceStrategy` , there is only one replica, so if axis=None, valueis simply returned. If axis is specified as something other than None,such as axis=0, value is reduced along that axis and returned.
 
 #### Example:
 
@@ -330,32 +228,17 @@ result = strategy.reduce(tf.distribute.ReduceOp.SUM, t, axis=0).numpy()
  
 ```
 
-
-
 #### Args:
-
-- **`reduce_op`** : A [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) value specifying how values should
-be combined.
-
-- **`value`** : A "per replica" value, e.g. returned by  `experimental_run_v2`  to
-be combined into a single tensor.
-
-- **`axis`** : Specifies the dimension to reduce along within each
-replica's tensor. Should typically be set to the batch dimension, or
- `None`  to only reduce across replicas (e.g. if the tensor has no batch
-dimension).
-
+- **`reduce_op`** : A [ `tf.distribute.ReduceOp` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/ReduceOp) value specifying how values shouldbe combined.
+- **`value`** : A "per replica" value, e.g. returned by  `experimental_run_v2`  tobe combined into a single tensor.
+- **`axis`** : Specifies the dimension to reduce along within eachreplica's tensor. Should typically be set to the batch dimension, or `None`  to only reduce across replicas (e.g. if the tensor has no batchdimension).
 
 
 #### Returns:
 A  `Tensor` .
 
-
-
 ###  `scope` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/one_device_strategy.py#L215-L229)
-
-
 
 ```
  scope()
@@ -364,15 +247,9 @@ A  `Tensor` .
 
 Returns a context manager selecting this Strategy as current.
 
-Inside a  `with strategy.scope():`  code block, this thread
-will use a variable creator set by  `strategy` , and will
-enter its "cross-replica context".
+Inside a  `with strategy.scope():`  code block, this threadwill use a variable creator set by  `strategy` , and willenter its "cross-replica context".
 
-In  `OneDeviceStrategy` , all variables created inside  `strategy.scope()` 
-will be on  `device`  specified at strategy construction time.
-See example in the docs for this class.
-
-
+In  `OneDeviceStrategy` , all variables created inside  `strategy.scope()` will be on  `device`  specified at strategy construction time.See example in the docs for this class.
 
 #### Returns:
 A context manager to use for creating variables with this strategy.

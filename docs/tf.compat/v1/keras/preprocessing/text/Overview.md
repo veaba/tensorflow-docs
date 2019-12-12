@@ -1,11 +1,7 @@
 Utilities for text input preprocessing.
 
-
-
 ## Classes
 [ `class Tokenizer` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/text/Tokenizer): Text tokenization utility class.
-
-
 
 ## Functions
 [ `hashing_trick(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/preprocessing/text/hashing_trick): Converts a text to a sequence of indexes in a fixed-size hashing space.

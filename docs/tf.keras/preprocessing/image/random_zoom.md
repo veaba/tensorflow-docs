@@ -1,14 +1,6 @@
 Performs a random spatial zoom of a Numpy image tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
-
-- [ `tf.compat.v2.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom), [ `tf.compat.v2.keras.preprocessing.image.random_zoom` ](/api_docs/python/tf/keras/preprocessing/image/random_zoom)
 
 ```
  tf.keras.preprocessing.image.random_zoom(
@@ -23,8 +15,6 @@ Performs a random spatial zoom of a Numpy image tensor.
 )
  
 ```
-
-
 
 # Arguments
 
@@ -45,8 +35,6 @@ interpolation_order: int, order of spline interpolation.
  
 ```
 
-
-
 # Returns
 
 
@@ -54,8 +42,6 @@ interpolation_order: int, order of spline interpolation.
  Zoomed Numpy image tensor.
  
 ```
-
-
 
 # Raises
 

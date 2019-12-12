@@ -1,16 +1,6 @@
-Defined in generated file:  `python/ops/gen_data_flow_ops.py` 
-
 Interleave the values from the  `data`  tensors into a single tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch)
-
-- [ `tf.compat.v2.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch)
-
-
+**Aliases** : [ `tf.compat.v1.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch), [ `tf.compat.v2.dynamic_stitch` ](/api_docs/python/tf/dynamic_stitch)
 
 ```
  tf.dynamic_stitch(
@@ -23,16 +13,12 @@ Interleave the values from the  `data`  tensors into a single tensor.
 
 Builds a merged tensor such that
 
-
-
 ```
      merged[indices[m][i, ..., j], ...] = data[m][i, ..., j, ...]
  
 ```
 
 For example, if each  `indices[m]`  is scalar or vector, we have
-
-
 
 ```
      # Scalar indices:
@@ -43,24 +29,14 @@ For example, if each  `indices[m]`  is scalar or vector, we have
  
 ```
 
-Each  `data[i].shape`  must start with the corresponding  `indices[i].shape` ,
-and the rest of  `data[i].shape`  must be constant w.r.t.  `i` .  That is, we
-must have  `data[i].shape = indices[i].shape + constant` .  In terms of this
- `constant` , the output shape is
-
-
+Each  `data[i].shape`  must start with the corresponding  `indices[i].shape` ,and the rest of  `data[i].shape`  must be constant w.r.t.  `i` .  That is, wemust have  `data[i].shape = indices[i].shape + constant` .  In terms of this `constant` , the output shape is
 
 ```
  merged.shape = [max(indices)] + constant
  
 ```
 
-Values are merged in order, so if an index appears in both  `indices[m][i]`  and
- `indices[n][j]`  for  `(m,i) < (n,j)`  the slice  `data[n][j]`  will appear in the
-merged result. If you do not need this guarantee, ParallelDynamicStitch might
-perform better on some devices.
-
-
+Values are merged in order, so if an index appears in both  `indices[m][i]`  and `indices[n][j]`  for  `(m,i) < (n,j)`  the slice  `data[n][j]`  will appear in themerged result. If you do not need this guarantee, ParallelDynamicStitch mightperform better on some devices.
 
 #### For example:
 
@@ -77,10 +53,7 @@ perform better on some devices.
  
 ```
 
-This method can be used to merge partitions created by  `dynamic_partition` 
-as illustrated on the following example:
-
-
+This method can be used to merge partitions created by  `dynamic_partition` as illustrated on the following example:
 
 ```
      # Apply function (increments x_i) on elements for which a certain condition
@@ -98,18 +71,12 @@ as illustrated on the following example:
  
 ```
 
-
 ![](https://tensorflow.google.cn/images/DynamicStitch.png)
 
-
 #### Args:
-
 - **`indices`** : A list of at least 1  `Tensor`  objects with type  `int32` .
-
 - **`data`** : A list with the same length as  `indices`  of  `Tensor`  objects with the same type.
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

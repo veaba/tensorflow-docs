@@ -1,7 +1,5 @@
 Operations for working with string Tensors.
 
-
-
 ## Functions
 [ `as_string(...)` ](https://tensorflow.google.cn/api_docs/python/tf/strings/as_string): Converts each entry in the given tensor to strings.
 

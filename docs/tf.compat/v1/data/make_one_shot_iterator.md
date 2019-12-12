@@ -1,21 +1,15 @@
 Creates a [ `tf.compat.v1.data.Iterator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/data/Iterator) for enumerating the elements of a dataset.
 
-
-
 ```
- tf.compat.v1.data.make_one_shot_iterator(dataset)
- 
+ tf.compat.v1.data.make_one_shot_iterator(dataset) 
 ```
 
 
-<aside class="note">**Note:**  The returned iterator will be initialized automatically.
-A "one-shot" iterator does not support re-initialization.</aside>
+**Note:**  The returned iterator will be initialized automatically.A "one-shot" iterator does not support re-initialization.
 
 
 #### Args:
-
 - **`dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
-
 
 
 #### Returns:

@@ -1,16 +1,6 @@
 Save the list of files matching pattern, so it is only computed once.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once)
-
-- [ `tf.compat.v1.train.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once)
-
-- [ `tf.compat.v2.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once)
-
-
+**Aliases** : [ `tf.compat.v1.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once), [ `tf.compat.v1.train.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once), [ `tf.compat.v2.io.match_filenames_once` ](/api_docs/python/tf/io/match_filenames_once)
 
 ```
  tf.io.match_filenames_once(
@@ -22,14 +12,9 @@ Save the list of files matching pattern, so it is only computed once.
 
 NOTE: The order of the files returned is deterministic.
 
-
-
 #### Args:
-
 - **`pattern`** : A file pattern (glob), or 1D tensor of file patterns.
-
 - **`name`** : A name for the operations (optional).
-
 
 
 #### Returns:

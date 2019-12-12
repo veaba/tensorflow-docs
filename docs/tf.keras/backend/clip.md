@@ -1,14 +1,6 @@
 Element-wise value clipping.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.clip` ](/api_docs/python/tf/keras/backend/clip)
-
-- [ `tf.compat.v2.keras.backend.clip` ](/api_docs/python/tf/keras/backend/clip)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.clip` ](/api_docs/python/tf/keras/backend/clip), [ `tf.compat.v2.keras.backend.clip` ](/api_docs/python/tf/keras/backend/clip)
 
 ```
  tf.keras.backend.clip(
@@ -19,16 +11,10 @@ Element-wise value clipping.
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : Tensor or variable.
-
 - **`min_value`** : Python float or integer.
-
 - **`max_value`** : Python float or integer.
-
 
 
 #### Returns:

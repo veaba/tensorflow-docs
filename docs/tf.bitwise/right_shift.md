@@ -1,16 +1,6 @@
-Defined in generated file:  `python/ops/gen_bitwise_ops.py` 
-
 Elementwise computes the bitwise right-shift of  `x`  and  `y` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.bitwise.right_shift` ](/api_docs/python/tf/bitwise/right_shift)
-
-- [ `tf.compat.v2.bitwise.right_shift` ](/api_docs/python/tf/bitwise/right_shift)
-
-
+**Aliases** : [ `tf.compat.v1.bitwise.right_shift` ](/api_docs/python/tf/bitwise/right_shift), [ `tf.compat.v2.bitwise.right_shift` ](/api_docs/python/tf/bitwise/right_shift)
 
 ```
  tf.bitwise.right_shift(
@@ -21,13 +11,9 @@ Elementwise computes the bitwise right-shift of  `x`  and  `y` .
  
 ```
 
-Performs a logical shift for unsigned integer types, and an arithmetic shift
-for signed integer types.
+Performs a logical shift for unsigned integer types, and an arithmetic shiftfor signed integer types.
 
-If  `y`  is negative, or greater than or equal to than the width of  `x`  in bits
-the result is implementation defined.
-
-
+If  `y`  is negative, or greater than or equal to than the width of  `x`  in bitsthe result is implementation defined.
 
 #### Example:
 
@@ -59,16 +45,10 @@ bitwise_ops.right_shift(lhs, rhs)
  
 ```
 
-
-
 #### Args:
-
 - **`x`** : A  `Tensor` . Must be one of the following types:  `int8` ,  `int16` ,  `int32` ,  `int64` ,  `uint8` ,  `uint16` ,  `uint32` ,  `uint64` .
-
 - **`y`** : A  `Tensor` . Must have the same type as  `x` .
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

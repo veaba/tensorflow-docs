@@ -1,16 +1,6 @@
 Retains specified non-empty values within a  `SparseTensor` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.retain` ](/api_docs/python/tf/sparse/retain)
-
-- [ `tf.compat.v1.sparse_retain` ](/api_docs/python/tf/sparse/retain)
-
-- [ `tf.compat.v2.sparse.retain` ](/api_docs/python/tf/sparse/retain)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.retain` ](/api_docs/python/tf/sparse/retain), [ `tf.compat.v1.sparse_retain` ](/api_docs/python/tf/sparse/retain), [ `tf.compat.v2.sparse.retain` ](/api_docs/python/tf/sparse/retain)
 
 ```
  tf.sparse.retain(
@@ -22,8 +12,6 @@ Retains specified non-empty values within a  `SparseTensor` .
 
 For example, if  `sp_input`  has shape  `[4, 5]`  and 4 non-empty string values:
 
-
-
 ```
  [0, 1]: a
 [0, 3]: b
@@ -32,10 +20,7 @@ For example, if  `sp_input`  has shape  `[4, 5]`  and 4 non-empty string values:
  
 ```
 
-and  `to_retain = [True, False, False, True]` , then the output will
-be a  `SparseTensor`  of shape  `[4, 5]`  with 2 non-empty values:
-
-
+and  `to_retain = [True, False, False, True]` , then the output willbe a  `SparseTensor`  of shape  `[4, 5]`  with 2 non-empty values:
 
 ```
  [0, 1]: a
@@ -43,23 +28,13 @@ be a  `SparseTensor`  of shape  `[4, 5]`  with 2 non-empty values:
  
 ```
 
-
-
 #### Args:
-
 - **`sp_input`** : The input  `SparseTensor`  with  `N`  non-empty elements.
-
 - **`to_retain`** : A bool vector of length  `N`  with  `M`  true values.
 
 
-
 #### Returns:
-A  `SparseTensor`  with the same shape as the input and  `M`  non-empty
-elements corresponding to the true positions in  `to_retain` .
-
-
+A  `SparseTensor`  with the same shape as the input and  `M`  non-emptyelements corresponding to the true positions in  `to_retain` .
 
 #### Raises:
-
 - **`TypeError`** : If  `sp_input`  is not a  `SparseTensor` .
-

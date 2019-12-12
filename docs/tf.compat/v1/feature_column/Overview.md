@@ -1,7 +1,5 @@
 Public API for tf.feature_column namespace.
 
-
-
 ## Functions
 [ `bucketized_column(...)` ](https://tensorflow.google.cn/api_docs/python/tf/feature_column/bucketized_column): Represents discretized dense input.
 

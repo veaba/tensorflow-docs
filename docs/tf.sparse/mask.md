@@ -1,16 +1,6 @@
 Masks elements of  `IndexedSlices` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.mask` ](/api_docs/python/tf/sparse/mask)
-
-- [ `tf.compat.v1.sparse_mask` ](/api_docs/python/tf/sparse/mask)
-
-- [ `tf.compat.v2.sparse.mask` ](/api_docs/python/tf/sparse/mask)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.mask` ](/api_docs/python/tf/sparse/mask), [ `tf.compat.v1.sparse_mask` ](/api_docs/python/tf/sparse/mask), [ `tf.compat.v2.sparse.mask` ](/api_docs/python/tf/sparse/mask)
 
 ```
  tf.sparse.mask(
@@ -21,14 +11,9 @@ Masks elements of  `IndexedSlices` .
  
 ```
 
-Given an  `IndexedSlices`  instance  `a` , returns another  `IndexedSlices`  that
-contains a subset of the slices of  `a` . Only the slices at indices not
-specified in  `mask_indices`  are returned.
+Given an  `IndexedSlices`  instance  `a` , returns another  `IndexedSlices`  thatcontains a subset of the slices of  `a` . Only the slices at indices notspecified in  `mask_indices`  are returned.
 
-This is useful when you need to extract a subset of slices in an
- `IndexedSlices`  object.
-
-
+This is useful when you need to extract a subset of slices in an `IndexedSlices`  object.
 
 #### For example:
 
@@ -49,16 +34,10 @@ tf.shape(b.values)  # [2, 10]
  
 ```
 
-
-
 #### Args:
-
 - **`a`** : An  `IndexedSlices`  instance.
-
 - **`mask_indices`** : Indices of elements to mask.
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

@@ -1,14 +1,6 @@
 Computes [MFCCs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum) of  `log_mel_spectrograms` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.signal.mfccs_from_log_mel_spectrograms` ](/api_docs/python/tf/signal/mfccs_from_log_mel_spectrograms)
-
-- [ `tf.compat.v2.signal.mfccs_from_log_mel_spectrograms` ](/api_docs/python/tf/signal/mfccs_from_log_mel_spectrograms)
-
-
+**Aliases** : [ `tf.compat.v1.signal.mfccs_from_log_mel_spectrograms` ](/api_docs/python/tf/signal/mfccs_from_log_mel_spectrograms), [ `tf.compat.v2.signal.mfccs_from_log_mel_spectrograms` ](/api_docs/python/tf/signal/mfccs_from_log_mel_spectrograms)
 
 ```
  tf.signal.mfccs_from_log_mel_spectrograms(
@@ -20,17 +12,9 @@ Computes [MFCCs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum) of  `log_
 
 Implemented with GPU-compatible ops and supports gradients.
 
-[Mel-Frequency Cepstral Coefficient (MFCC)](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum) calculation consists of
-taking the DCT-II of a log-magnitude mel-scale spectrogram. [HTK](https://en.wikipedia.org/wiki/HTK_(software))'s MFCCs
-use a particular scaling of the DCT-II which is almost orthogonal
-normalization. We follow this convention.
+[Mel-Frequency Cepstral Coefficient (MFCC)](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum) calculation consists oftaking the DCT-II of a log-magnitude mel-scale spectrogram. [HTK](https://en.wikipedia.org/wiki/HTK_(software))'s MFCCsuse a particular scaling of the DCT-II which is almost orthogonalnormalization. We follow this convention.
 
-All  `num_mel_bins`  MFCCs are returned and it is up to the caller to select
-a subset of the MFCCs based on their application. For example, it is typical
-to only use the first few for speech recognition, as this results in
-an approximately pitch-invariant representation of the signal.
-
-
+All  `num_mel_bins`  MFCCs are returned and it is up to the caller to selecta subset of the MFCCs based on their application. For example, it is typicalto only use the first few for speech recognition, as this results inan approximately pitch-invariant representation of the signal.
 
 #### For example:
 
@@ -65,24 +49,13 @@ mfccs = tf.signal.mfccs_from_log_mel_spectrograms(
  
 ```
 
-
-
 #### Args:
-
-- **`log_mel_spectrograms`** : A  `[..., num_mel_bins]`   `float32`   `Tensor`  of
-log-magnitude mel-scale spectrograms.
-
+- **`log_mel_spectrograms`** : A  `[..., num_mel_bins]`   `float32`   `Tensor`  oflog-magnitude mel-scale spectrograms.
 - **`name`** : An optional name for the operation.
 
 
-
 #### Returns:
-A  `[..., num_mel_bins]`   `float32`   `Tensor`  of the MFCCs of
- `log_mel_spectrograms` .
-
-
+A  `[..., num_mel_bins]`   `float32`   `Tensor`  of the MFCCs of `log_mel_spectrograms` .
 
 #### Raises:
-
 - **`ValueError`** : If  `num_mel_bins`  is not positive.
-

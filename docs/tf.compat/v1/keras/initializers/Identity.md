@@ -5,31 +5,17 @@ Initializer that generates the identity matrix.
 
 Inherits From: [ `Initializer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/keras/initializers/Initializer)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.initializers.identity` ](/api_docs/python/tf/compat/v1/keras/initializers/Identity)
-
-- Class [ `tf.compat.v1.keras.initializers.identity` ](/api_docs/python/tf/compat/v1/keras/initializers/Identity)
+**Aliases** : [ `tf.compat.v1.initializers.identity` ](/api_docs/python/tf/compat/v1/keras/initializers/Identity), [ `tf.compat.v1.keras.initializers.identity` ](/api_docs/python/tf/compat/v1/keras/initializers/Identity)
 
 Only use for 2D matrices.
 
-
-
 #### Args:
-
 - **`gain`** : Multiplicative factor to apply to the identity matrix.
-
-- **`dtype`** : Default data type, used if no  `dtype`  argument is provided when
-calling the initializer. Only floating point types are supported.
-
+- **`dtype`** : Default data type, used if no  `dtype`  argument is provided whencalling the initializer. Only floating point types are supported.
 
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L1195-L1200)
-
-
 
 ```
  __init__(
@@ -42,9 +28,7 @@ calling the initializer. Only floating point types are supported.
 DEPRECATED FUNCTION ARGUMENTS
 
 
-<aside class="warning">**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(dtype)` . They will be removed in a future version.
-Instructions for updating:
-Call initializer instance with the dtype argument instead of passing it to the constructor</aside>
+**Warning:**  SOME ARGUMENTS ARE DEPRECATED:  `(dtype)` . They will be removed in a future version.Instructions for updating:Call initializer instance with the dtype argument instead of passing it to the constructor
 
 
 ## Methods
@@ -52,8 +36,6 @@ Call initializer instance with the dtype argument instead of passing it to the c
 
 ###  `__call__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L1202-L1215)
-
-
 
 ```
  __call__(
@@ -66,24 +48,14 @@ Call initializer instance with the dtype argument instead of passing it to the c
 
 Returns a tensor object initialized as specified by the initializer.
 
-
-
 #### Args:
-
 - **`shape`** : Shape of the tensor.
-
-- **`dtype`** : Optional dtype of the tensor. If not provided use the initializer
-dtype.
-
-- **`partition_info`** : Optional information about the possible partitioning of a
-tensor.
-
+- **`dtype`** : Optional dtype of the tensor. If not provided use the initializerdtype.
+- **`partition_info`** : Optional information about the possible partitioning of atensor.
 
 
 ###  `from_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L78-L97)
-
-
 
 ```
  from_config(
@@ -95,8 +67,6 @@ tensor.
 
 Instantiates an initializer from a configuration dictionary.
 
-
-
 #### Example:
 
 
@@ -107,24 +77,15 @@ initializer = RandomUniform.from_config(config)
  
 ```
 
-
-
 #### Args:
-
-- **`config`** : A Python dictionary. It will typically be the output of
- `get_config` .
-
+- **`config`** : A Python dictionary. It will typically be the output of `get_config` .
 
 
 #### Returns:
 An Initializer instance.
 
-
-
 ###  `get_config` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/init_ops.py#L1217-L1218)
-
-
 
 ```
  get_config()
@@ -132,8 +93,6 @@ An Initializer instance.
 ```
 
 Returns the configuration of the initializer as a JSON-serializable dict.
-
-
 
 #### Returns:
 A JSON-serializable Python dict.

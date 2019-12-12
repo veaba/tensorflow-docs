@@ -2,8 +2,6 @@ SignatureDef utility functions.
 
 Utility functions for building and inspecting SignatureDef protos.
 
-
-
 ## Functions
 [ `build_signature_def(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/saved_model/build_signature_def): Utility function to build a SignatureDef protocol buffer.
 

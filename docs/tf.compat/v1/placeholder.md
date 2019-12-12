@@ -1,7 +1,5 @@
 Inserts a placeholder for a tensor that will be always fed.
 
-
-
 ```
  tf.compat.v1.placeholder(
     dtype,
@@ -11,11 +9,7 @@ Inserts a placeholder for a tensor that will be always fed.
  
 ```
 
-**Important** : This tensor will produce an error if evaluated. Its value must
-be fed using the  `feed_dict`  optional argument to  `Session.run()` ,
-[ `Tensor.eval()` ](/api_docs/python/tf/Tensor#eval), or [ `Operation.run()` ](/api_docs/python/tf/Operation#run).
-
-
+**Important** : This tensor will produce an error if evaluated. Its value mustbe fed using the  `feed_dict`  optional argument to  `Session.run()` ,[ `Tensor.eval()` ](/api_docs/python/tf/Tensor#eval), or [ `Operation.run()` ](/api_docs/python/tf/Operation#run).
 
 #### For example:
 
@@ -32,29 +26,17 @@ with tf.compat.v1.Session() as sess:
  
 ```
 
-
-
 #### Args:
-
 - **`dtype`** : The type of elements in the tensor to be fed.
-
-- **`shape`** : The shape of the tensor to be fed (optional). If the shape is not
-specified, you can feed a tensor of any shape.
-
+- **`shape`** : The shape of the tensor to be fed (optional). If the shape is notspecified, you can feed a tensor of any shape.
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-A  `Tensor`  that may be used as a handle for feeding a value, but not
-evaluated directly.
-
-
+A  `Tensor`  that may be used as a handle for feeding a value, but notevaluated directly.
 
 #### Raises:
-
 - **`RuntimeError`** : if eager execution is enabled
-
 
 
 #### Eager Compatibility

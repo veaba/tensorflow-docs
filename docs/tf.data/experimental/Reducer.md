@@ -3,25 +3,12 @@
 ## Class  `Reducer` 
 A reducer is used for reducing a set of elements.
 
+**Aliases** : [ `tf.compat.v1.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer), [ `tf.compat.v2.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer)
-
-- Class [ `tf.compat.v2.data.experimental.Reducer` ](/api_docs/python/tf/data/experimental/Reducer)
-
-A reducer is represented as a tuple of the three functions:
-  1) initialization function: key => initial state
-  2) reduce function: (old state, input) => new state
-  3) finalization function: state => result
-
-
+A reducer is represented as a tuple of the three functions:  1) initialization function: key => initial state  2) reduce function: (old state, input) => new state  3) finalization function: state => result
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/data/experimental/ops/grouping.py#L452-L455)
-
-
 
 ```
  __init__(
@@ -33,8 +20,6 @@ A reducer is represented as a tuple of the three functions:
 ```
 
 Initialize self.  See help(type(self)) for accurate signature.
-
-
 
 ## Properties
 

@@ -1,14 +1,6 @@
 Casts a tensor to a different dtype and returns it.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast)
-
-- [ `tf.compat.v2.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast), [ `tf.compat.v2.keras.backend.cast` ](/api_docs/python/tf/keras/backend/cast)
 
 ```
  tf.keras.backend.cast(
@@ -20,25 +12,16 @@ Casts a tensor to a different dtype and returns it.
 
 You can cast a Keras variable but it still returns a Keras tensor.
 
-
-
 #### Arguments:
-
 - **`x`** : Keras tensor (or variable).
-
 - **`dtype`** : String, either ( `'float16'` ,  `'float32'` , or  `'float64'` ).
-
 
 
 #### Returns:
 Keras tensor with dtype  `dtype` .
 
-
-
 #### Examples:
 Cast a float32 variable to a float64 tensor
-
-
 
 ```
      >>> import tensorflow as tf

@@ -1,7 +1,5 @@
 Xception V1 model for Keras.
 
-
-
 ## Functions
 [ `Xception(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/applications/Xception)
 

@@ -1,11 +1,7 @@
 Public API for tf.lookup namespace.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/lookup/experimental) module: Public API for tf.lookup.experimental namespace.
-
-
 
 ## Classes
 [ `class KeyValueTensorInitializer` ](https://tensorflow.google.cn/api_docs/python/tf/lookup/KeyValueTensorInitializer): Table initializers given  `keys`  and  `values`  tensors.

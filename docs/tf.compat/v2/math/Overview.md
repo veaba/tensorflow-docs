@@ -3,42 +3,22 @@
 Math Operations.
 
 
-<aside class="note">**Note:**  Functions taking  `Tensor`  arguments can also take anything accepted by
-[ `tf.convert_to_tensor` ](https://tensorflow.google.cn/api_docs/python/tf/convert_to_tensor).</aside>
+**Note:**  Functions taking  `Tensor`  arguments can also take anything accepted by[ `tf.convert_to_tensor` ](https://tensorflow.google.cn/api_docs/python/tf/convert_to_tensor).
 
-<aside class="note">**Note:**  Elementwise binary operations in TensorFlow follow <a href="http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html">numpy-style
-broadcasting</a>.</aside>
+**Note:**  Elementwise binary operations in TensorFlow follow [numpy-stylebroadcasting](http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html).
 TensorFlow provides a variety of math functions including:
 
-
 - Basic arithmetic operators and trigonometric functions.
-
 - Special math functions (like: [ `tf.math.igamma` ](https://tensorflow.google.cn/api_docs/python/tf/math/igamma) and [ `tf.math.zeta` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta))
-
 - Complex number functions (like: [ `tf.math.imag` ](https://tensorflow.google.cn/api_docs/python/tf/math/imag) and [ `tf.math.angle` ](https://tensorflow.google.cn/api_docs/python/tf/math/angle))
-
 - Reductions and scans (like: [ `tf.math.reduce_mean` ](https://tensorflow.google.cn/api_docs/python/tf/math/reduce_mean) and [ `tf.math.cumsum` ](https://tensorflow.google.cn/api_docs/python/tf/math/cumsum))
-
 - Segment functions (like: [ `tf.math.segment_sum` ](https://tensorflow.google.cn/api_docs/python/tf/math/segment_sum))
-
 See: [ `tf.linalg` ](https://tensorflow.google.cn/api_docs/python/tf/linalg) for matrix and tensor functions.
 
 []()
 
-
-
 ## About Segmentation
-TensorFlow provides several operations that you can use to perform common
-math computations on tensor segments.
-Here a segmentation is a partitioning of a tensor along
-the first dimension, i.e. it  defines a mapping from the first dimension onto
- `segment_ids` . The  `segment_ids`  tensor should be the size of
-the first dimension,  `d0` , with consecutive IDs in the range  `0`  to  `k` ,
-where  `k<d0` .
-In particular, a segmentation of a matrix tensor is a mapping of rows to
-segments.
-
-
+TensorFlow provides several operations that you can use to perform commonmath computations on tensor segments.Here a segmentation is a partitioning of a tensor alongthe first dimension, i.e. it  defines a mapping from the first dimension onto `segment_ids` . The  `segment_ids`  tensor should be the size ofthe first dimension,  `d0` , with consecutive IDs in the range  `0`  to  `k` ,where  `k<d0` .In particular, a segmentation of a matrix tensor is a mapping of rows tosegments.
 
 #### For example:
 
@@ -51,12 +31,7 @@ tf.math.segment_sum(c, tf.constant([0, 0, 1]))
  
 ```
 
-The standard  `segment_*`  functions assert that the segment indices are sorted.
-If you have unsorted indices use the equivalent  `unsorted_segment_`  function.
-Thses functions take an additional argument  `num_segments`  so that the output
-tensor can be efficiently allocated.
-
-
+The standard  `segment_*`  functions assert that the segment indices are sorted.If you have unsorted indices use the equivalent  `unsorted_segment_`  function.Thses functions take an additional argument  `num_segments`  so that the outputtensor can be efficiently allocated.
 
 ```
  c = tf.constant([[1,2,3,4], [-1,-2,-3,-4], [5,6,7,8]])
@@ -65,8 +40,6 @@ tf.math.unsorted_segment_sum(c, tf.constant([0, 1, 0]), num_segments=2)
 #       [-1, -2, -3, -4]]
  
 ```
-
-
 
 ## Functions
 [ `abs(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/abs): Computes the absolute value of a tensor.

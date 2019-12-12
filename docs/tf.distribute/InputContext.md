@@ -3,28 +3,12 @@
 ## Class  `InputContext` 
 A class wrapping information needed by an input function.
 
+**Aliases** : [ `tf.compat.v1.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext), [ `tf.compat.v2.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext)
-
-- Class [ `tf.compat.v2.distribute.InputContext` ](/api_docs/python/tf/distribute/InputContext)
-
-This is a context class that is passed to the user's input function and
-contains information about the compute replicas and input pipelines. The
-number of compute replicas (in sync training) helps compute the local batch
-size from the desired global batch size for each replica. The input pipeline
-information can be used to return a different subset of the input in each
-replica (for e.g. shard the input pipeline, use a different input
-source etc).
-
-
+This is a context class that is passed to the user's input function andcontains information about the compute replicas and input pipelines. Thenumber of compute replicas (in sync training) helps compute the local batchsize from the desired global batch size for each replica. The input pipelineinformation can be used to return a different subset of the input in eachreplica (for e.g. shard the input pipeline, use a different inputsource etc).
 
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L355-L369)
-
-
 
 ```
  __init__(
@@ -37,17 +21,10 @@ source etc).
 
 Initializes an InputContext object.
 
-
-
 #### Args:
-
 - **`num_input_pipelines`** : the number of input pipelines in a cluster.
-
-- **`input_pipeline_id`** : the current input pipeline id, should be an int in
-[0, `num_input_pipelines` ).
-
+- **`input_pipeline_id`** : the current input pipeline id, should be an int in[0, `num_input_pipelines` ).
 - **`num_replicas_in_sync`** : the number of replicas that are in sync.
-
 
 
 ## Properties
@@ -56,25 +33,17 @@ Initializes an InputContext object.
 ###  `input_pipeline_id` 
 Returns the input pipeline ID.
 
-
-
 ###  `num_input_pipelines` 
 Returns the number of input pipelines.
 
-
-
 ###  `num_replicas_in_sync` 
 Returns the number of compute replicas in sync.
-
-
 
 ## Methods
 
 
 ###  `get_per_replica_batch_size` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/distribute/distribute_lib.py#L386-L404)
-
-
 
 ```
  get_per_replica_batch_size(global_batch_size)
@@ -83,22 +52,12 @@ Returns the number of compute replicas in sync.
 
 Returns the per-replica batch size.
 
-
-
 #### Args:
-
-- **`global_batch_size`** : the global batch size which should be divisible by
- `num_replicas_in_sync` .
-
+- **`global_batch_size`** : the global batch size which should be divisible by `num_replicas_in_sync` .
 
 
 #### Returns:
 the per-replica batch size.
 
-
-
 #### Raises:
-
-- **`ValueError`** : if  `global_batch_size`  not divisible by
- `num_replicas_in_sync` .
-
+- **`ValueError`** : if  `global_batch_size`  not divisible by `num_replicas_in_sync` .

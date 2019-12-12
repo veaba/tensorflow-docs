@@ -1,18 +1,6 @@
 Multiply SparseTensor (of rank 2) "A" by dense matrix "B".
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.sparse.matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
-
-- [ `tf.compat.v1.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
-
-- [ `tf.compat.v1.sparse_tensor_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
-
-- [ `tf.compat.v2.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
-
-
+**Aliases** : [ `tf.compat.v1.sparse.matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v1.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v1.sparse_tensor_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul), [ `tf.compat.v2.sparse.sparse_dense_matmul` ](/api_docs/python/tf/sparse/sparse_dense_matmul)
 
 ```
  tf.sparse.sparse_dense_matmul(
@@ -25,32 +13,17 @@ Multiply SparseTensor (of rank 2) "A" by dense matrix "B".
  
 ```
 
-No validity checking is performed on the indices of  `A` .  However, the
-following input format is recommended for optimal behavior:
+No validity checking is performed on the indices of  `A` .  However, thefollowing input format is recommended for optimal behavior:
 
-
-- If  `adjoint_a == false` :  `A`  should be sorted in lexicographically
-increasing order.  Use [ `sparse.reorder` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/reorder) if you're not sure.
-
-- If  `adjoint_a == true` :  `A`  should be sorted in order of increasing
-dimension 1 (i.e., "column major" order instead of "row major" order).
-
+- If  `adjoint_a == false` :  `A`  should be sorted in lexicographicallyincreasing order.  Use [ `sparse.reorder` ](https://tensorflow.google.cn/api_docs/python/tf/sparse/reorder) if you're not sure.
+- If  `adjoint_a == true` :  `A`  should be sorted in order of increasingdimension 1 (i.e., "column major" order instead of "row major" order).
 Using [ `tf.nn.embedding_lookup_sparse` ](https://tensorflow.google.cn/api_docs/python/tf/nn/embedding_lookup_sparse) for sparse multiplication:
 
-It's not obvious but you can consider  `embedding_lookup_sparse`  as another
-sparse and dense multiplication. In some situations, you may prefer to use
- `embedding_lookup_sparse`  even though you're not dealing with embeddings.
+It's not obvious but you can consider  `embedding_lookup_sparse`  as anothersparse and dense multiplication. In some situations, you may prefer to use `embedding_lookup_sparse`  even though you're not dealing with embeddings.
 
-There are two questions to ask in the decision process: Do you need gradients
-computed as sparse too? Is your sparse data represented as two
- `SparseTensor` s: ids and values? There is more explanation about data format
-below. If you answer any of these questions as yes, consider using
-[ `tf.nn.embedding_lookup_sparse` ](https://tensorflow.google.cn/api_docs/python/tf/nn/embedding_lookup_sparse).
+There are two questions to ask in the decision process: Do you need gradientscomputed as sparse too? Is your sparse data represented as two `SparseTensor` s: ids and values? There is more explanation about data formatbelow. If you answer any of these questions as yes, consider using[ `tf.nn.embedding_lookup_sparse` ](https://tensorflow.google.cn/api_docs/python/tf/nn/embedding_lookup_sparse).
 
-Following explains differences between the expected SparseTensors:
-For example if dense form of your sparse data has shape  `[3, 5]`  and values:
-
-
+Following explains differences between the expected SparseTensors:For example if dense form of your sparse data has shape  `[3, 5]`  and values:
 
 ```
  [[  a      ]
@@ -59,10 +32,7 @@ For example if dense form of your sparse data has shape  `[3, 5]`  and values:
  
 ```
 
- `SparseTensor`  format expected by  `sparse_tensor_dense_matmul` :
-  `sp_a`  (indices, values):
-
-
+ `SparseTensor`  format expected by  `sparse_tensor_dense_matmul` :  `sp_a`  (indices, values):
 
 ```
  [0, 1]: a
@@ -72,10 +42,7 @@ For example if dense form of your sparse data has shape  `[3, 5]`  and values:
  
 ```
 
- `SparseTensor`  format expected by  `embedding_lookup_sparse` :
-  `sp_ids`                   `sp_weights` 
-
-
+ `SparseTensor`  format expected by  `embedding_lookup_sparse` :  `sp_ids`                   `sp_weights` 
 
 ```
  [0, 0]: 1                [0, 0]: a
@@ -85,44 +52,24 @@ For example if dense form of your sparse data has shape  `[3, 5]`  and values:
  
 ```
 
-Deciding when to use  `sparse_tensor_dense_matmul`  vs.
- `matmul` (a_is_sparse=True):
+Deciding when to use  `sparse_tensor_dense_matmul`  vs. `matmul` (a_is_sparse=True):
 
 There are a number of questions to ask in the decision process, including:
 
-
 - Will the SparseTensor  `A`  fit in memory if densified?
-
 - Is the column count of the product large (>> 1)?
-
 - Is the density of  `A`  larger than approximately 15%?
+If the answer to several of these questions is yes, considerconverting the  `SparseTensor`  to a dense one and using [ `tf.matmul` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/matmul) with `a_is_sparse=True` .
 
-If the answer to several of these questions is yes, consider
-converting the  `SparseTensor`  to a dense one and using [ `tf.matmul` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/matmul) with
- `a_is_sparse=True` .
+This operation tends to perform well when  `A`  is more sparse, if the columnsize of the product is small (e.g. matrix-vector multiplication), if `sp_a.dense_shape`  takes on large values.
 
-This operation tends to perform well when  `A`  is more sparse, if the column
-size of the product is small (e.g. matrix-vector multiplication), if
- `sp_a.dense_shape`  takes on large values.
-
-Below is a rough speed comparison between  `sparse_tensor_dense_matmul` ,
-labeled 'sparse', and  `matmul` (a_is_sparse=True), labeled 'dense'.  For
-purposes of the comparison, the time spent converting from a  `SparseTensor`  to
-a dense  `Tensor`  is not included, so it is overly conservative with respect to
-the time ratio.
-
-
+Below is a rough speed comparison between  `sparse_tensor_dense_matmul` ,labeled 'sparse', and  `matmul` (a_is_sparse=True), labeled 'dense'.  Forpurposes of the comparison, the time spent converting from a  `SparseTensor`  toa dense  `Tensor`  is not included, so it is overly conservative with respect tothe time ratio.
 
 #### Benchmark system:
-CPU: Intel Ivybridge with HyperThreading (6 cores) dL1:32KB dL2:256KB dL3:12MB
-GPU: NVidia Tesla k40c
-
-
+CPU: Intel Ivybridge with HyperThreading (6 cores) dL1:32KB dL2:256KB dL3:12MBGPU: NVidia Tesla k40c
 
 #### Compiled with:
  `-c opt --config=cuda --copt=-mavx` 
-
-
 
 ```
  tensorflow/python/sparse_tensor_dense_matmul_op_test --benchmarks
@@ -229,27 +176,14 @@ B dense [k, n]
  
 ```
 
-
-
 #### Args:
-
 - **`sp_a`** : SparseTensor A, of rank 2.
-
 - **`b`** : A dense Matrix with the same dtype as sp_a.
-
-- **`adjoint_a`** : Use the adjoint of A in the matrix multiply.  If A is complex,
-this is transpose(conj(A)).  Otherwise it's transpose(A).
-
-- **`adjoint_b`** : Use the adjoint of B in the matrix multiply.  If B is complex,
-this is transpose(conj(B)).  Otherwise it's transpose(B).
-
+- **`adjoint_a`** : Use the adjoint of A in the matrix multiply.  If A is complex,this is transpose(conj(A)).  Otherwise it's transpose(A).
+- **`adjoint_b`** : Use the adjoint of B in the matrix multiply.  If B is complex,this is transpose(conj(B)).  Otherwise it's transpose(B).
 - **`name`** : A name prefix for the returned tensors (optional)
 
 
-
 #### Returns:
-A dense matrix (pseudo-code in dense np.matrix notation):
-   `A = A.H if adjoint_a else A` 
-   `B = B.H if adjoint_b else B` 
-   `return A*B` 
+A dense matrix (pseudo-code in dense np.matrix notation):   `A = A.H if adjoint_a else A`    `B = B.H if adjoint_b else B`    `return A*B` 
 

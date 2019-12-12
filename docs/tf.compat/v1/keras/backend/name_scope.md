@@ -3,21 +3,9 @@
 ## Class  `name_scope` 
 A context manager for use when defining a Python op.
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.name_scope` ](/api_docs/python/tf/compat/v1/keras/backend/name_scope)
-
-This context manager validates that the given  `values`  are from the
-same graph, makes that graph the default graph, and pushes a
-name scope in that graph (see
-[ `tf.Graph.name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/Graph#name_scope)
-for more details on that).
+This context manager validates that the given  `values`  are from thesame graph, makes that graph the default graph, and pushes aname scope in that graph (see[ `tf.Graph.name_scope` ](https://tensorflow.google.cn/api_docs/python/tf/Graph#name_scope)for more details on that).
 
 For example, to define a new Python op called  `my_op` :
-
-
 
 ```
  def)
@@ -28,12 +16,8 @@ For example, to define a new Python op called  `my_op` :
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6280-L6306)
-
-
 
 ```
  __init__(
@@ -46,22 +30,14 @@ For example, to define a new Python op called  `my_op` :
 
 Initialize the context manager.
 
-
-
 #### Args:
-
 - **`name`** : The name argument that is passed to the op function.
-
 - **`default_name`** : The default name to use if the  `name`  argument is  `None` .
-
 - **`values`** : The list of  `Tensor`  arguments that are passed to the op function.
 
 
-
 #### Raises:
-
 - **`TypeError`** : if  `default_name`  is passed in but not a string.
-
 
 
 ## Properties
@@ -76,8 +52,6 @@ Initialize the context manager.
 ###  `__enter__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6308-L6353)
 
-
-
 ```
  __enter__()
  
@@ -85,24 +59,15 @@ Initialize the context manager.
 
 Start the scope block.
 
-
-
 #### Returns:
 The scope name.
 
-
-
 #### Raises:
-
-- **`ValueError`** : if neither  `name`  nor  `default_name`  is provided
-but  `values`  are.
-
+- **`ValueError`** : if neither  `name`  nor  `default_name`  is providedbut  `values`  are.
 
 
 ###  `__exit__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/framework/ops.py#L6355-L6364)
-
-
 
 ```
  __exit__(

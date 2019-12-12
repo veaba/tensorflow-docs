@@ -1,7 +1,5 @@
 Experimental Distribution Strategy library.
 
-
-
 ## Classes
 [ `class CentralStorageStrategy` ](https://tensorflow.google.cn/api_docs/python/tf/distribute/experimental/CentralStorageStrategy): A one-machine strategy that puts all variables on a single device.
 

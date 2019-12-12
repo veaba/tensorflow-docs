@@ -1,14 +1,6 @@
 Generates a word rank-based probabilistic sampling table.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table)
-
-- [ `tf.compat.v2.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table), [ `tf.compat.v2.keras.preprocessing.sequence.make_sampling_table` ](/api_docs/python/tf/keras/preprocessing/sequence/make_sampling_table)
 
 ```
  tf.keras.preprocessing.sequence.make_sampling_table(
@@ -18,15 +10,9 @@ Generates a word rank-based probabilistic sampling table.
  
 ```
 
-Used for generating the  `sampling_table`  argument for  `skipgrams` .
- `sampling_table[i]`  is the probability of sampling
-the word i-th most common word in a dataset
-(more common words should be sampled less frequently, for balance).
+Used for generating the  `sampling_table`  argument for  `skipgrams` . `sampling_table[i]`  is the probability of samplingthe word i-th most common word in a dataset(more common words should be sampled less frequently, for balance).
 
-The sampling probabilities are generated according
-to the sampling distribution used in word2vec:
-
-
+The sampling probabilities are generated accordingto the sampling distribution used in word2vec:
 
 ```
  p(word) = (min(1, sqrt(word_frequency / sampling_factor) /
@@ -34,13 +20,9 @@ to the sampling distribution used in word2vec:
  
 ```
 
-We assume that the word frequencies follow Zipf's law (s=1) to derive
-a numerical approximation of frequency(rank):
+We assume that the word frequencies follow Zipf's law (s=1) to derivea numerical approximation of frequency(rank):
 
- `frequency(rank) ~ 1/(rank * (log(rank) + gamma) + 1/2 - 1/(12*rank))` 
-where  `gamma`  is the Euler-Mascheroni constant.
-
-
+ `frequency(rank) ~ 1/(rank * (log(rank) + gamma) + 1/2 - 1/(12*rank))` where  `gamma`  is the Euler-Mascheroni constant.
 
 # Arguments
 
@@ -50,8 +32,6 @@ where  `gamma`  is the Euler-Mascheroni constant.
 sampling_factor: The sampling factor in the word2vec formula.
  
 ```
-
-
 
 # Returns
 

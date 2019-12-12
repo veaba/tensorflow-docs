@@ -1,7 +1,5 @@
 Public API for tf.spectral namespace.
 
-
-
 ## Functions
 [ `dct(...)` ](https://tensorflow.google.cn/api_docs/python/tf/signal/dct): Computes the 1D [Discrete Cosine Transform (DCT)][dct] of  `input` .
 

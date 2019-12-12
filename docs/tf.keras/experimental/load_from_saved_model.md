@@ -1,14 +1,6 @@
 Loads a keras Model from a SavedModel created by  `export_saved_model()` . (deprecated)
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.experimental.load_from_saved_model` ](/api_docs/python/tf/keras/experimental/load_from_saved_model)
-
-- [ `tf.compat.v2.keras.experimental.load_from_saved_model` ](/api_docs/python/tf/keras/experimental/load_from_saved_model)
-
-
+**Aliases** : [ `tf.compat.v1.keras.experimental.load_from_saved_model` ](/api_docs/python/tf/keras/experimental/load_from_saved_model), [ `tf.compat.v2.keras.experimental.load_from_saved_model` ](/api_docs/python/tf/keras/experimental/load_from_saved_model)
 
 ```
  tf.keras.experimental.load_from_saved_model(
@@ -19,15 +11,8 @@ Loads a keras Model from a SavedModel created by  `export_saved_model()` . (depr
 ```
 
 
-<aside class="warning">**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.
-Instructions for updating:
-The experimental save and load functions have been  deprecated. Please switch to [ `tf.keras.models.load_model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/models/load_model).</aside>
-This function reinstantiates model state by:
-1) loading model topology from json (this will eventually come
-   from metagraph).
-2) loading model weights from checkpoint.
-
-
+**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:The experimental save and load functions have been  deprecated. Please switch to [ `tf.keras.models.load_model` ](https://tensorflow.google.cn/api_docs/python/tf/keras/models/load_model).
+This function reinstantiates model state by:1) loading model topology from json (this will eventually come   from metagraph).2) loading model weights from checkpoint.
 
 #### Example:
 
@@ -50,16 +35,9 @@ new_model.summary()
  
 ```
 
-
-
 #### Args:
-
 - **`saved_model_path`** : a string specifying the path to an existing SavedModel.
-
-- **`custom_objects`** : Optional dictionary mapping names
-(strings) to custom classes or functions to be
-considered during deserialization.
-
+- **`custom_objects`** : Optional dictionary mapping names(strings) to custom classes or functions to beconsidered during deserialization.
 
 
 #### Returns:

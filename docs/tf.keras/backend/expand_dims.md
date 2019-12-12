@@ -1,14 +1,6 @@
 Adds a 1-sized dimension at index "axis".
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.expand_dims` ](/api_docs/python/tf/keras/backend/expand_dims)
-
-- [ `tf.compat.v2.keras.backend.expand_dims` ](/api_docs/python/tf/keras/backend/expand_dims)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.expand_dims` ](/api_docs/python/tf/keras/backend/expand_dims), [ `tf.compat.v2.keras.backend.expand_dims` ](/api_docs/python/tf/keras/backend/expand_dims)
 
 ```
  tf.keras.backend.expand_dims(
@@ -18,14 +10,9 @@ Adds a 1-sized dimension at index "axis".
  
 ```
 
-
-
 #### Arguments:
-
 - **`x`** : A tensor or variable.
-
 - **`axis`** : Position where to add a new axis.
-
 
 
 #### Returns:

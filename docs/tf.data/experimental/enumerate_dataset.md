@@ -1,14 +1,6 @@
 A transformation that enumerates the elements of a dataset. (deprecated)
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset)
-
-- [ `tf.compat.v2.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset)
-
-
+**Aliases** : [ `tf.compat.v1.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset), [ `tf.compat.v2.data.experimental.enumerate_dataset` ](/api_docs/python/tf/data/experimental/enumerate_dataset)
 
 ```
  tf.data.experimental.enumerate_dataset(start=0)
@@ -16,13 +8,8 @@ A transformation that enumerates the elements of a dataset. (deprecated)
 ```
 
 
-<aside class="warning">**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.
-Instructions for updating:
-Use `tf.data.Dataset.enumerate()</aside>
-It is similar to python's  `enumerate` .
-For example:
-
-
+**Warning:**  THIS FUNCTION IS DEPRECATED. It will be removed in a future version.Instructions for updating:Use `tf.data.Dataset.enumerate()
+It is similar to python's  `enumerate` .For example:
 
 ```
  # NOTE: The following examples use `{ ... }` to represent the
@@ -39,16 +26,10 @@ b.apply(tf.data.experimental.enumerate_dataset())
  
 ```
 
-
-
 #### Args:
-
-- **`start`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the start value for
-enumeration.
-
+- **`start`** : A [ `tf.int64` ](https://tensorflow.google.cn/api_docs/python/tf#int64) scalar [ `tf.Tensor` ](https://tensorflow.google.cn/api_docs/python/tf/Tensor), representing the start value forenumeration.
 
 
 #### Returns:
-A  `Dataset`  transformation function, which can be passed to
-[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
+A  `Dataset`  transformation function, which can be passed to[ `tf.data.Dataset.apply` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset#apply).
 

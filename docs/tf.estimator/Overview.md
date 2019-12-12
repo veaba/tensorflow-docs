@@ -1,13 +1,9 @@
 Estimator: High level tools for working with models.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/experimental) module: Public API for tf.estimator.experimental namespace.
 
 [ `export` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/export) module: All public utility methods for exporting Estimator to SavedModel.
-
-
 
 ## Classes
 [ `class BaselineClassifier` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/BaselineClassifier): A classifier that can establish a simple baseline.
@@ -113,8 +109,6 @@ Estimator: High level tools for working with models.
 [ `class VocabInfo` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/VocabInfo): Vocabulary information for warm-starting.
 
 [ `class WarmStartSettings` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/WarmStartSettings): Settings for warm-starting in  `tf.estimator.Estimators` .
-
-
 
 ## Functions
 [ `add_metrics(...)` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/add_metrics): Creates a new [ `tf.estimator.Estimator` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator) which has given metrics.

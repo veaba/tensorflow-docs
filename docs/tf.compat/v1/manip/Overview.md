@@ -1,7 +1,5 @@
 Operators for manipulating tensors.
 
-
-
 ## Functions
 [ `batch_to_space_nd(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/batch_to_space_nd): BatchToSpace for N-D tensors of type T.
 

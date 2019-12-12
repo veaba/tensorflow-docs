@@ -1,14 +1,6 @@
 Loads an image into PIL format.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.image.load_img` ](/api_docs/python/tf/keras/preprocessing/image/load_img)
-
-- [ `tf.compat.v2.keras.preprocessing.image.load_img` ](/api_docs/python/tf/keras/preprocessing/image/load_img)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.load_img` ](/api_docs/python/tf/keras/preprocessing/image/load_img), [ `tf.compat.v2.keras.preprocessing.image.load_img` ](/api_docs/python/tf/keras/preprocessing/image/load_img)
 
 ```
  tf.keras.preprocessing.image.load_img(
@@ -21,18 +13,12 @@ Loads an image into PIL format.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Using the SavedModel format](https://tensorflow.google.cn/guide/saved_model)
 
 
-
 ### Used in the tutorials:
-
 - [DeepDream](https://tensorflow.google.cn/tutorials/generative/deepdream)
-
 
 
 # Arguments
@@ -53,8 +39,6 @@ interpolation: Interpolation method used to resample the image if the
  
 ```
 
-
-
 # Returns
 
 
@@ -62,8 +46,6 @@ interpolation: Interpolation method used to resample the image if the
  A PIL Image instance.
  
 ```
-
-
 
 # Raises
 

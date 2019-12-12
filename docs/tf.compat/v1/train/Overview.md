@@ -2,14 +2,10 @@ Support for training models.
 
 See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/experimental) module: Public API for tf.train.experimental namespace.
 
 [ `queue_runner` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/queue_runner) module: Public API for tf.train.queue_runner namespace.
-
-
 
 ## Classes
 [ `class AdadeltaOptimizer` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/AdadeltaOptimizer): Optimizer that implements the Adadelta algorithm.
@@ -131,8 +127,6 @@ See the [Training](https://tensorflow.org/api_guides/python/train) guide.
 [ `class VocabInfo` ](https://tensorflow.google.cn/api_docs/python/tf/estimator/VocabInfo): Vocabulary information for warm-starting.
 
 [ `class WorkerSessionCreator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/WorkerSessionCreator): Creates a tf.compat.v1.Session for a worker.
-
-
 
 ## Functions
 [ `MonitoredTrainingSession(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/train/MonitoredTrainingSession): Creates a  `MonitoredSession`  for training.

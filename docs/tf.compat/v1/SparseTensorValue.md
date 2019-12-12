@@ -3,8 +3,6 @@
 ## Class  `SparseTensorValue` 
 SparseTensorValue(indices, values, dense_shape)
 
-
-
 ##  `__new__` 
 
 
@@ -20,8 +18,6 @@ __new__(
 ```
 
 Create new instance of SparseTensorValue(indices, values, dense_shape)
-
-
 
 ## Properties
 

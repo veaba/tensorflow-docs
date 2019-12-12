@@ -1,31 +1,15 @@
 Return a list of logical devices created by runtime.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices)
-
-- [ `tf.compat.v2.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices)
-
-
+**Aliases** : [ `tf.compat.v1.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices), [ `tf.compat.v2.config.experimental.list_logical_devices` ](/api_docs/python/tf/config/experimental/list_logical_devices)
 
 ```
  tf.config.experimental.list_logical_devices(device_type=None)
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Use a GPU](https://tensorflow.google.cn/guide/gpu)
-
-Logical devices may correspond to physical devices or remote devices in the
-cluster. Operations and tensors may be placed on these devices by using the
- `name`  of the LogicalDevice.
-
-
+Logical devices may correspond to physical devices or remote devices in thecluster. Operations and tensors may be placed on these devices by using the `name`  of the LogicalDevice.
 
 #### For example:
 
@@ -41,12 +25,8 @@ with tf.device(logical_devices[1].name):
  
 ```
 
-
-
 #### Args:
-
 - **`device_type`** : (optional) Device type to filter by such as "CPU" or "GPU"
-
 
 
 #### Returns:

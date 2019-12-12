@@ -1,14 +1,6 @@
 Extract  `patches`  from  `images` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.image.extract_patches` ](/api_docs/python/tf/image/extract_patches)
-
-- [ `tf.compat.v2.image.extract_patches` ](/api_docs/python/tf/image/extract_patches)
-
-
+**Aliases** : [ `tf.compat.v1.image.extract_patches` ](/api_docs/python/tf/image/extract_patches), [ `tf.compat.v2.image.extract_patches` ](/api_docs/python/tf/image/extract_patches)
 
 ```
  tf.image.extract_patches(
@@ -22,32 +14,17 @@ Extract  `patches`  from  `images` .
  
 ```
 
-This op collects patches from the input image, as if applying a
-convolution. All extracted patches are stacked in the depth (last) dimension
-of the output.
+This op collects patches from the input image, as if applying aconvolution. All extracted patches are stacked in the depth (last) dimensionof the output.
 
-Specifically, the op extracts patches of shape  `sizes`  which are  `strides` 
-apart in the input image. The output is subsampled using the  `rates`  argument,
-in the same manner as "atrous" or "dilated" convolutions.
+Specifically, the op extracts patches of shape  `sizes`  which are  `strides` apart in the input image. The output is subsampled using the  `rates`  argument,in the same manner as "atrous" or "dilated" convolutions.
 
-The result is a 4D tensor which is indexed by batch, row, and column.
- `output[i, x, y]`  contains a flattened patch of size  `sizes[1], sizes[2]` 
-which is taken from the input starting at
- `images[i, x*strides[1], y*strides[2]]` .
+The result is a 4D tensor which is indexed by batch, row, and column. `output[i, x, y]`  contains a flattened patch of size  `sizes[1], sizes[2]` which is taken from the input starting at `images[i, x*strides[1], y*strides[2]]` .
 
-Each output patch can be reshaped to  `sizes[1], sizes[2], depth` , where
- `depth`  is  `images.shape[3]` .
+Each output patch can be reshaped to  `sizes[1], sizes[2], depth` , where `depth`  is  `images.shape[3]` .
 
-The output elements are taken from the input at intervals given by the  `rate` 
-argument, as in dilated convolutions.
+The output elements are taken from the input at intervals given by the  `rate` argument, as in dilated convolutions.
 
-The  `padding`  argument has no effect on the size of each patch, it determines
-how many patches are extracted. If  `VALID` , only patches which are fully
-contained in the input image are included. If  `SAME` , all patches whose
-starting point is inside the input are included, and areas outside the input
-default to zero.
-
-
+The  `padding`  argument has no effect on the size of each patch, it determineshow many patches are extracted. If  `VALID` , only patches which are fullycontained in the input image are included. If  `SAME` , all patches whosestarting point is inside the input are included, and areas outside the inputdefault to zero.
 
 #### Example:
 
@@ -74,10 +51,7 @@ default to zero.
  
 ```
 
-If we mark the pixels in the input image which are taken for the output with
- `*` , we see the pattern:
-
-
+If we mark the pixels in the input image which are taken for the output with `*` , we see the pattern:
 
 ```
     *  *  *  4  5  *  *  *  9 10
@@ -92,8 +66,6 @@ If we mark the pixels in the input image which are taken for the output with
   91 92 93 94 95 96 97 98 99 100
  
 ```
-
-
 
 ```
    tf.extract_image_patches(images=images,
@@ -111,10 +83,7 @@ If we mark the pixels in the input image which are taken for the output with
  
 ```
 
-We can again draw the effect, this time using the symbols  `*` ,  `x` ,  `+`  and
- `o`  to distinguish the patches:
-
-
+We can again draw the effect, this time using the symbols  `*` ,  `x` ,  `+`  and `o`  to distinguish the patches:
 
 ```
     *  2  *  4  *  x  7  x  9  x
@@ -130,29 +99,13 @@ We can again draw the effect, this time using the symbols  `*` ,  `x` ,  `+`  an
  
 ```
 
-
-
 #### Args:
-
 - **`images`** : A 4-D Tensor with shape `[batch, in_rows, in_cols, depth]
-
-- **`sizes`** : The size of the extracted patches. Must
-be [1, size_rows, size_cols, 1].
-
-- **`strides`** : A 1-D Tensor of length 4. How far the centers of two consecutive
-patches are in the images. Must be:  `[1, stride_rows, stride_cols, 1]` .
-
-- **`rates`** : A 1-D Tensor of length 4. Must be:  `[1, rate_rows, rate_cols, 1]` .
-This is the input stride, specifying how far two consecutive patch samples
-are in the input. Equivalent to extracting patches with <code translate="no" dir="ltr">patch_sizes_eff =
-patch_sizes + (patch_sizes - 1) * (rates - 1)</code>, followed by subsampling
-them spatially by a factor of  `rates` . This is equivalent to  `rate`  in
-dilated (a.k.a. Atrous) convolutions.
-
+- **`sizes`** : The size of the extracted patches. Mustbe [1, size_rows, size_cols, 1].
+- **`strides`** : A 1-D Tensor of length 4. How far the centers of two consecutivepatches are in the images. Must be:  `[1, stride_rows, stride_cols, 1]` .
+- **`rates`** : A 1-D Tensor of length 4. Must be:  `[1, rate_rows, rate_cols, 1]` .This is the input stride, specifying how far two consecutive patch samplesare in the input. Equivalent to extracting patches with  `patch_sizes_eff =patch_sizes + (patch_sizes - 1) * (rates - 1)` , followed by subsamplingthem spatially by a factor of  `rates` . This is equivalent to  `rate`  indilated (a.k.a. Atrous) convolutions.
 - **`padding`** : The type of padding algorithm to use.
-
 - **`name`** : A name for the operation (optional).
-
 
 
 #### Returns:

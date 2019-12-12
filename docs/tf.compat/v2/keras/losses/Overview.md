@@ -1,13 +1,5 @@
 Built-in loss functions.
 
-
-
-### Aliases:
-
-- Module [ `tf.compat.v2.losses` ](/api_docs/python/tf/compat/v2/keras/losses)
-
-
-
 ## Classes
 [ `class BinaryCrossentropy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/BinaryCrossentropy): Computes the cross-entropy loss between true labels and predicted labels.
 
@@ -42,8 +34,6 @@ Built-in loss functions.
 [ `class SparseCategoricalCrossentropy` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy): Computes the crossentropy loss between the labels and predictions.
 
 [ `class SquaredHinge` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/SquaredHinge): Computes the squared hinge loss between  `y_true`  and  `y_pred` .
-
-
 
 ## Functions
 [ `KLD(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/losses/KLD): Computes Kullback-Leibler divergence loss between  `y_true`  and  `y_pred` .

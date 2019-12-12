@@ -1,14 +1,6 @@
 Computes log Poisson loss given  `log_input` .
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss)
-
-- [ `tf.compat.v2.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss)
-
-
+**Aliases** : [ `tf.compat.v1.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss), [ `tf.compat.v2.nn.log_poisson_loss` ](/api_docs/python/tf/nn/log_poisson_loss)
 
 ```
  tf.nn.log_poisson_loss(
@@ -20,18 +12,9 @@ Computes log Poisson loss given  `log_input` .
  
 ```
 
-Gives the log-likelihood loss between the prediction and the target under the
-assumption that the target has a Poisson distribution.
-Caveat: By default, this is not the exact loss, but the loss minus a
-  constant term [log(z!)]. That has no effect for optimization, but
-  does not play well with relative loss comparisons. To compute an
-  approximation of the log factorial term, specify
-  compute_full_loss=True to enable Stirling's Approximation.
+Gives the log-likelihood loss between the prediction and the target under theassumption that the target has a Poisson distribution.Caveat: By default, this is not the exact loss, but the loss minus a  constant term [log(z!)]. That has no effect for optimization, but  does not play well with relative loss comparisons. To compute an  approximation of the log factorial term, specify  compute_full_loss=True to enable Stirling's Approximation.
 
-For brevity, let  `c = log(x) = log_input` ,  `z = targets` .  The log Poisson
-loss is
-
-
+For brevity, let  `c = log(x) = log_input` ,  `z = targets` .  The log Poissonloss is
 
 ```
    -log(exp(-x) * (x^z) / z!)
@@ -46,28 +29,15 @@ loss is
  
 ```
 
-
-
 #### Args:
-
 - **`targets`** : A  `Tensor`  of the same type and shape as  `log_input` .
-
 - **`log_input`** : A  `Tensor`  of type  `float32`  or  `float64` .
-
-- **`compute_full_loss`** : whether to compute the full loss. If false, a constant
-term is dropped in favor of more efficient optimization.
-
+- **`compute_full_loss`** : whether to compute the full loss. If false, a constantterm is dropped in favor of more efficient optimization.
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-A  `Tensor`  of the same shape as  `log_input`  with the componentwise
-logistic losses.
-
-
+A  `Tensor`  of the same shape as  `log_input`  with the componentwiselogistic losses.
 
 #### Raises:
-
 - **`ValueError`** : If  `log_input`  and  `targets`  do not have the same shape.
-

@@ -1,20 +1,6 @@
 Generate the set of all classes.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.nn.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler)
-
-- [ `tf.compat.v1.random.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler)
-
-- [ `tf.compat.v2.nn.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler)
-
-- [ `tf.compat.v2.random.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler)
-
-- [ `tf.nn.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler)
-
-
+**Aliases** : [ `tf.compat.v1.nn.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler), [ `tf.compat.v1.random.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler), [ `tf.compat.v2.nn.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler), [ `tf.compat.v2.random.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler), [ `tf.nn.all_candidate_sampler` ](/api_docs/python/tf/random/all_candidate_sampler)
 
 ```
  tf.random.all_candidate_sampler(
@@ -28,41 +14,18 @@ Generate the set of all classes.
  
 ```
 
-Deterministically generates and returns the set of all possible classes.
-For testing purposes.  There is no need to use this, since you might as
-well use full softmax or full logistic regression.
-
-
+Deterministically generates and returns the set of all possible classes.For testing purposes.  There is no need to use this, since you might aswell use full softmax or full logistic regression.
 
 #### Args:
-
-- **`true_classes`** : A  `Tensor`  of type  `int64`  and shape <code translate="no" dir="ltr">[batch_size,
-num_true]</code>. The target classes.
-
+- **`true_classes`** : A  `Tensor`  of type  `int64`  and shape  `[batch_size,num_true]` . The target classes.
 - **`num_true`** : An  `int` .  The number of target classes per training example.
-
 - **`num_sampled`** : An  `int` .  The number of possible classes.
-
-- **`unique`** : A  `bool` . Ignored.
-unique.
-
+- **`unique`** : A  `bool` . Ignored.unique.
 - **`seed`** : An  `int` . An operation-specific seed. Default is 0.
-
 - **`name`** : A name for the operation (optional).
 
 
-
 #### Returns:
-
-- **`sampled_candidates`** : A tensor of type  `int64`  and shape  `[num_sampled]` .
-This operation deterministically returns the entire range
- `[0, num_sampled]` .
-
-- **`true_expected_count`** : A tensor of type  `float` .  Same shape as
- `true_classes` . The expected counts under the sampling distribution
-of each of  `true_classes` . All returned values are 1.0.
-
-- **`sampled_expected_count`** : A tensor of type  `float` . Same shape as
- `sampled_candidates` . The expected counts under the sampling distribution
-of each of  `sampled_candidates` . All returned values are 1.0.
-
+- **`sampled_candidates`** : A tensor of type  `int64`  and shape  `[num_sampled]` .This operation deterministically returns the entire range `[0, num_sampled]` .
+- **`true_expected_count`** : A tensor of type  `float` .  Same shape as `true_classes` . The expected counts under the sampling distributionof each of  `true_classes` . All returned values are 1.0.
+- **`sampled_expected_count`** : A tensor of type  `float` . Same shape as `sampled_candidates` . The expected counts under the sampling distributionof each of  `sampled_candidates` . All returned values are 1.0.

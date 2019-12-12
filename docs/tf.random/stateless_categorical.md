@@ -1,14 +1,6 @@
 Draws deterministic pseudorandom samples from a categorical distribution.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.random.stateless_categorical` ](/api_docs/python/tf/random/stateless_categorical)
-
-- [ `tf.compat.v2.random.stateless_categorical` ](/api_docs/python/tf/random/stateless_categorical)
-
-
+**Aliases** : [ `tf.compat.v1.random.stateless_categorical` ](/api_docs/python/tf/random/stateless_categorical), [ `tf.compat.v2.random.stateless_categorical` ](/api_docs/python/tf/random/stateless_categorical)
 
 ```
  tf.random.stateless_categorical(
@@ -21,13 +13,7 @@ Draws deterministic pseudorandom samples from a categorical distribution.
  
 ```
 
-This is a stateless version of  `tf.categorical` : if run twice with the
-same seeds, it will produce the same pseudorandom numbers.  The output is
-consistent across multiple runs on the same hardware (and between CPU
-and GPU), but may change between versions of TensorFlow or on non-CPU/GPU
-hardware.
-
-
+This is a stateless version of  `tf.categorical` : if run twice with thesame seeds, it will produce the same pseudorandom numbers.  The output isconsistent across multiple runs on the same hardware (and between CPUand GPU), but may change between versions of TensorFlow or on non-CPU/GPUhardware.
 
 #### Example:
 
@@ -40,21 +26,12 @@ samples = tf.random.stateless_categorical(
  
 ```
 
-
-
 #### Args:
-
-- **`logits`** : 2-D Tensor with shape  `[batch_size, num_classes]` .  Each slice
- `[i, :]`  represents the unnormalized log-probabilities for all classes.
-
+- **`logits`** : 2-D Tensor with shape  `[batch_size, num_classes]` .  Each slice `[i, :]`  represents the unnormalized log-probabilities for all classes.
 - **`num_samples`** : 0-D.  Number of independent samples to draw for each row slice.
-
 - **`seed`** : A shape [2] integer Tensor of seeds to the random number generator.
-
 - **`dtype`** : integer type to use for the output. Defaults to int64.
-
 - **`name`** : Optional name for the operation.
-
 
 
 #### Returns:

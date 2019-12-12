@@ -1,7 +1,5 @@
 Operations for linear algebra.
 
-
-
 ## Classes
 [ `class LinearOperator` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperator): Base class defining a [batch of] linear operator[s].
 
@@ -38,8 +36,6 @@ Operations for linear algebra.
 [ `class LinearOperatorToeplitz` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperatorToeplitz):  `LinearOperator`  acting like a [batch] of toeplitz matrices.
 
 [ `class LinearOperatorZeros` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/LinearOperatorZeros):  `LinearOperator`  acting like a [batch] zero matrix.
-
-
 
 ## Functions
 [ `adjoint(...)` ](https://tensorflow.google.cn/api_docs/python/tf/linalg/adjoint): Transposes the last two dimensions of and conjugates tensor  `matrix` .

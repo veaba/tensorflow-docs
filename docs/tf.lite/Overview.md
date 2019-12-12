@@ -1,11 +1,7 @@
 Public API for tf.lite namespace.
 
-
-
 ## Modules
 [ `experimental` ](https://tensorflow.google.cn/api_docs/python/tf/lite/experimental) module: Public API for tf.lite.experimental namespace.
-
-
 
 ## Classes
 [ `class Interpreter` ](https://tensorflow.google.cn/api_docs/python/tf/lite/Interpreter): Interpreter interface for TensorFlow Lite Models.

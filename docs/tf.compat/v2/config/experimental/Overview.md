@@ -1,11 +1,7 @@
 Public API for tf.config.experimental namespace.
 
-
-
 ## Classes
 [ `class VirtualDeviceConfiguration` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/VirtualDeviceConfiguration): Configuration class for virtual devices for a PhysicalDevice.
-
-
 
 ## Functions
 [ `get_device_policy(...)` ](https://tensorflow.google.cn/api_docs/python/tf/config/experimental/get_device_policy): Gets the current device policy.

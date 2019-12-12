@@ -3,19 +3,9 @@
 ## Class  `CriticalSection` 
 Critical section.
 
+**Aliases** : [ `tf.compat.v1.CriticalSection` ](/api_docs/python/tf/CriticalSection), [ `tf.compat.v2.CriticalSection` ](/api_docs/python/tf/CriticalSection)
 
-
-### Aliases:
-
-- Class [ `tf.compat.v1.CriticalSection` ](/api_docs/python/tf/CriticalSection)
-
-- Class [ `tf.compat.v2.CriticalSection` ](/api_docs/python/tf/CriticalSection)
-
-A  `CriticalSection`  object is a resource in the graph which executes subgraphs
-in **serial**  order.  A common example of a subgraph one may wish to run
-exclusively is the one given by the following function:
-
-
+A  `CriticalSection`  object is a resource in the graph which executes subgraphsin **serial**  order.  A common example of a subgraph one may wish to runexclusively is the one given by the following function:
 
 ```
  v)
@@ -28,19 +18,11 @@ def count():
  
 ```
 
-Here, a snapshot of  `v`  is captured in  `value` ; and then  `v`  is updated.
-The snapshot value is returned.
+Here, a snapshot of  `v`  is captured in  `value` ; and then  `v`  is updated.The snapshot value is returned.
 
-If multiple workers or threads all execute  `count`  in parallel, there is no
-guarantee that access to the variable  `v`  is atomic at any point within
-any thread's calculation of  `count` .  In fact, even implementing an atomic
-counter that guarantees that the user will see each value  `0, 1, ...,`  is
-currently impossible.
+If multiple workers or threads all execute  `count`  in parallel, there is noguarantee that access to the variable  `v`  is atomic at any point withinany thread's calculation of  `count` .  In fact, even implementing an atomiccounter that guarantees that the user will see each value  `0, 1, ...,`  iscurrently impossible.
 
-The solution is to ensure any access to the underlying resource  `v`  is
-only processed through a critical section:
-
-
+The solution is to ensure any access to the underlying resource  `v`  isonly processed through a critical section:
 
 ```
  cs = CriticalSection()
@@ -51,23 +33,15 @@ session.run(output)
  
 ```
 
-The functions  `f1`  and  `f2`  will be executed serially, and updates to  `v` 
-will be atomic.
+The functions  `f1`  and  `f2`  will be executed serially, and updates to  `v` will be atomic.
 
 **NOTES** 
 
-All resource objects, including the critical section and any captured
-variables of functions executed on that critical section, will be
-colocated to the same device (host and cpu/gpu).
+All resource objects, including the critical section and any capturedvariables of functions executed on that critical section, will becolocated to the same device (host and cpu/gpu).
 
-When using multiple critical sections on the same resources, there is no
-guarantee of exclusive access to those resources.  This behavior is disallowed
-by default (but see the kwarg  `exclusive_resource_access` ).
+When using multiple critical sections on the same resources, there is noguarantee of exclusive access to those resources.  This behavior is disallowedby default (but see the kwarg  `exclusive_resource_access` ).
 
-For example, running the same function in two separate critical sections
-will not ensure serial execution:
-
-
+For example, running the same function in two separate critical sectionswill not ensure serial execution:
 
 ```
  v = tf.compat.v1.get_variable("v", initializer=0.0, use_resource=True)
@@ -86,12 +60,8 @@ sess.run(bad_sum)  # May return 0.0
  
 ```
 
-
-
 ##  `__init__` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/critical_section_ops.py#L144-L154)
-
-
 
 ```
  __init__(
@@ -105,8 +75,6 @@ sess.run(bad_sum)  # May return 0.0
 
 Creates a critical section.
 
-
-
 ## Properties
 
 
@@ -119,8 +87,6 @@ Creates a critical section.
 ###  `execute` 
 [View source](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/ops/critical_section_ops.py#L189-L292)
 
-
-
 ```
  execute(
     fn,
@@ -132,43 +98,22 @@ Creates a critical section.
 
 Execute function  `fn()`  inside the critical section.
 
- `fn`  should not accept any arguments.  To add extra arguments to when
-calling  `fn`  in the critical section, create a lambda:
-
-
+ `fn`  should not accept any arguments.  To add extra arguments to whencalling  `fn`  in the critical section, create a lambda:
 
 ```
  critical_section.execute(lambda: fn(*my_args, **my_kwargs))
  
 ```
 
-
-
 #### Args:
-
 - **`fn`** : The function to execute.  Must return at least one tensor.
-
-- **`exclusive_resource_access`** : Whether the resources required by
- `fn`  should be exclusive to this  `CriticalSection` .  Default:  `True` .
-You may want to set this to  `False`  if you will be accessing a
-resource in read-only mode in two different CriticalSections.
-
+- **`exclusive_resource_access`** : Whether the resources required by `fn`  should be exclusive to this  `CriticalSection` .  Default:  `True` .You may want to set this to  `False`  if you will be accessing aresource in read-only mode in two different CriticalSections.
 - **`name`** : The name to use when creating the execute operation.
-
 
 
 #### Returns:
 The tensors returned from  `fn()` .
 
-
-
 #### Raises:
-
-- **`ValueError`** : If  `fn`  attempts to lock this  `CriticalSection`  in any nested
-or lazy way that may cause a deadlock.
-
-- **`ValueError`** : If  `exclusive_resource_access == True`  and
-another  `CriticalSection`  has an execution requesting the same
-resources as  `fn`  `.  Note, even if` exclusive_resource_access `is` True `, if another execution in another` CriticalSection<code translate="no" dir="ltr">was created
-without</code>exclusive_resource_access=True `, a` ValueError` will be raised.
-
+- **`ValueError`** : If  `fn`  attempts to lock this  `CriticalSection`  in any nestedor lazy way that may cause a deadlock.
+- **`ValueError`** : If  `exclusive_resource_access == True`  andanother  `CriticalSection`  has an execution requesting the sameresources as  `fn`  `.  Note, even if` exclusive_resource_access `is` True `, if another execution in another` CriticalSection `was createdwithout` exclusive_resource_access=True `, a` ValueError` will be raised.

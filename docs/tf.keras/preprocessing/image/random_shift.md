@@ -1,14 +1,6 @@
 Performs a random spatial shift of a Numpy image tensor.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift)
-
-- [ `tf.compat.v2.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift)
-
-
+**Aliases** : [ `tf.compat.v1.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift), [ `tf.compat.v2.keras.preprocessing.image.random_shift` ](/api_docs/python/tf/keras/preprocessing/image/random_shift)
 
 ```
  tf.keras.preprocessing.image.random_shift(
@@ -24,8 +16,6 @@ Performs a random spatial shift of a Numpy image tensor.
 )
  
 ```
-
-
 
 # Arguments
 
@@ -46,8 +36,6 @@ interpolation_order: int, order of spline interpolation.
     see `ndimage.interpolation.affine_transform`
  
 ```
-
-
 
 # Returns
 

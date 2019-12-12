@@ -1,14 +1,6 @@
 Shift the zero-frequency component to the center of the spectrum.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.signal.fftshift` ](/api_docs/python/tf/signal/fftshift)
-
-- [ `tf.compat.v2.signal.fftshift` ](/api_docs/python/tf/signal/fftshift)
-
-
+**Aliases** : [ `tf.compat.v1.signal.fftshift` ](/api_docs/python/tf/signal/fftshift), [ `tf.compat.v2.signal.fftshift` ](/api_docs/python/tf/signal/fftshift)
 
 ```
  tf.signal.fftshift(
@@ -19,10 +11,7 @@ Shift the zero-frequency component to the center of the spectrum.
  
 ```
 
-This function swaps half-spaces for all axes listed (defaults to all).
-Note that  `y[0]`  is the Nyquist component only if  `len(x)`  is even.
-
-
+This function swaps half-spaces for all axes listed (defaults to all).Note that  `y[0]`  is the Nyquist component only if  `len(x)`  is even.
 
 #### For example:
 
@@ -33,25 +22,15 @@ x.numpy() # array([-5., -4., -3., -2., -1.,  0.,  1.,  2.,  3.,  4.])
  
 ```
 
-
-
 #### Args:
-
 - **`x`** :  `Tensor` , input tensor.
-
-- **`axes`** :  `int`  or shape  `tuple` , optional Axes over which to shift.  Default is
-None, which shifts all axes.
-
+- **`axes`** :  `int`  or shape  `tuple` , optional Axes over which to shift.  Default isNone, which shifts all axes.
 - **`name`** : An optional name for the operation.
-
 
 
 #### Returns:
 A  `Tensor` , The shifted tensor.
 
-
-
 #### Numpy Compatibility
-Equivalent to numpy.fft.fftshift.
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.fft.fftshift.html
+Equivalent to numpy.fft.fftshift.https://docs.scipy.org/doc/numpy/reference/generated/numpy.fft.fftshift.html
 

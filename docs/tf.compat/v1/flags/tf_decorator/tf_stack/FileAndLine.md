@@ -3,14 +3,6 @@
 ## Class  `FileAndLine` 
 FileAndLine(file, line)
 
-
-
-### Aliases:
-
-- Class [ `tf.compat.v1.app.flags.tf_decorator.tf_stack.FileAndLine` ](/api_docs/python/tf/compat/v1/flags/tf_decorator/tf_stack/FileAndLine)
-
-
-
 ##  `__new__` 
 
 
@@ -25,8 +17,6 @@ __new__(
 ```
 
 Create new instance of FileAndLine(file, line)
-
-
 
 ## Properties
 

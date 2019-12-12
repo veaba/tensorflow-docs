@@ -1,14 +1,6 @@
 Standard deviation of a tensor, alongside the specified axis.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.backend.std` ](/api_docs/python/tf/keras/backend/std)
-
-- [ `tf.compat.v2.keras.backend.std` ](/api_docs/python/tf/keras/backend/std)
-
-
+**Aliases** : [ `tf.compat.v1.keras.backend.std` ](/api_docs/python/tf/keras/backend/std), [ `tf.compat.v2.keras.backend.std` ](/api_docs/python/tf/keras/backend/std)
 
 ```
  tf.keras.backend.std(
@@ -19,25 +11,14 @@ Standard deviation of a tensor, alongside the specified axis.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Train and evaluate with Keras](https://tensorflow.google.cn/guide/keras/train_and_evaluate)
 
 
-
 #### Arguments:
-
 - **`x`** : A tensor or variable.
-
 - **`axis`** : An integer, the axis to compute the standard deviation.
-
-- **`keepdims`** : A boolean, whether to keep the dimensions or not.
-If  `keepdims`  is  `False` , the rank of the tensor is reduced
-by 1. If  `keepdims`  is  `True` ,
-the reduced dimension is retained with length 1.
-
+- **`keepdims`** : A boolean, whether to keep the dimensions or not.If  `keepdims`  is  `False` , the rank of the tensor is reducedby 1. If  `keepdims`  is  `True` ,the reduced dimension is retained with length 1.
 
 
 #### Returns:

@@ -1,7 +1,5 @@
 Keras initializer serialization / deserialization.
 
-
-
 ## Classes
 [ `class Constant` ](https://tensorflow.google.cn/api_docs/python/tf/constant_initializer): Initializer that generates tensors with constant values.
 
@@ -40,8 +38,6 @@ Keras initializer serialization / deserialization.
 [ `class orthogonal` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/Orthogonal): Initializer that generates an orthogonal matrix.
 
 [ `class zeros` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_initializer): Initializer that generates tensors initialized to 0.
-
-
 
 ## Functions
 [ `deserialize(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/initializers/deserialize): Return an  `Initializer`  object from its config.

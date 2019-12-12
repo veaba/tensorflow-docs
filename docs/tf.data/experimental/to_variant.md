@@ -1,26 +1,14 @@
 Returns a variant representing the given dataset.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.data.experimental.to_variant` ](/api_docs/python/tf/data/experimental/to_variant)
-
-- [ `tf.compat.v2.data.experimental.to_variant` ](/api_docs/python/tf/data/experimental/to_variant)
-
-
+**Aliases** : [ `tf.compat.v1.data.experimental.to_variant` ](/api_docs/python/tf/data/experimental/to_variant), [ `tf.compat.v2.data.experimental.to_variant` ](/api_docs/python/tf/data/experimental/to_variant)
 
 ```
  tf.data.experimental.to_variant(dataset)
  
 ```
 
-
-
 #### Args:
-
 - **`dataset`** : A [ `tf.data.Dataset` ](https://tensorflow.google.cn/api_docs/python/tf/data/Dataset).
-
 
 
 #### Returns:

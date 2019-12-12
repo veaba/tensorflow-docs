@@ -1,7 +1,5 @@
 Returns the shape of a tensor.
 
-
-
 ```
  tf.compat.v1.shape(
     input,
@@ -13,8 +11,6 @@ Returns the shape of a tensor.
 
 This operation returns a 1-D integer tensor representing the shape of  `input` .
 
-
-
 #### For example:
 
 
@@ -24,17 +20,10 @@ tf.shape(t)  # [2, 2, 3]
  
 ```
 
-
-
 #### Args:
-
 - **`input`** : A  `Tensor`  or  `SparseTensor` .
-
 - **`name`** : A name for the operation (optional).
-
-- **`out_type`** : (Optional) The specified output type of the operation ( `int32`  or
- `int64` ). Defaults to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32).
-
+- **`out_type`** : (Optional) The specified output type of the operation ( `int32`  or `int64` ). Defaults to [ `tf.int32` ](https://tensorflow.google.cn/api_docs/python/tf#int32).
 
 
 #### Returns:

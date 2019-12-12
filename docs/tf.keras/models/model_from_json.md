@@ -1,14 +1,6 @@
 Parses a JSON model configuration file and returns a model instance.
 
-
-
-### Aliases:
-
-- [ `tf.compat.v1.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json)
-
-- [ `tf.compat.v2.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json)
-
-
+**Aliases** : [ `tf.compat.v1.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json), [ `tf.compat.v2.keras.models.model_from_json` ](/api_docs/python/tf/keras/models/model_from_json)
 
 ```
  tf.keras.models.model_from_json(
@@ -18,24 +10,14 @@ Parses a JSON model configuration file and returns a model instance.
  
 ```
 
-
-
 ### Used in the guide:
-
 - [Save and serialize models with Keras](https://tensorflow.google.cn/guide/keras/save_and_serialize)
-
 - [Keras overview](https://tensorflow.google.cn/guide/keras/overview)
 
 
-
 #### Arguments:
-
 - **`json_string`** : JSON string encoding a model configuration.
-
-- **`custom_objects`** : Optional dictionary mapping names
-(strings) to custom classes or functions to be
-considered during deserialization.
-
+- **`custom_objects`** : Optional dictionary mapping names(strings) to custom classes or functions to beconsidered during deserialization.
 
 
 #### Returns:

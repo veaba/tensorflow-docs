@@ -1,17 +1,7 @@
 Import router for absl.flags. See https://github.com/abseil/abseil-py.
 
-
-
-### Aliases:
-
-- Module [ `tf.compat.v1.app.flags` ](/api_docs/python/tf/compat/v1/flags)
-
-
-
 ## Modules
 [ `tf_decorator` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/tf_decorator) module: Base TFDecorator class and utility functions for working with decorators.
-
-
 
 ## Classes
 [ `class ArgumentParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ArgumentParser): Base class used to parse and convert arguments.
@@ -67,8 +57,6 @@ Import router for absl.flags. See https://github.com/abseil/abseil-py.
 [ `class ValidationError` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/ValidationError): Raised when flag validator constraint is not satisfied.
 
 [ `class WhitespaceSeparatedListParser` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/WhitespaceSeparatedListParser): Parser for a whitespace-separated list of strings.
-
-
 
 ## Functions
 [ `DEFINE(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/DEFINE): Registers a generic Flag object.
@@ -137,9 +125,5 @@ Import router for absl.flags. See https://github.com/abseil/abseil-py.
 
 [ `validator(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/flags/validator): A function decorator for defining a flag validator.
 
-
-
 ## Other Members
-
 -  `FLAGS`  []()
-

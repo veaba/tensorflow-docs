@@ -1,7 +1,5 @@
 Public API for tf.queue namespace.
 
-
-
 ## Classes
 [ `class FIFOQueue` ](https://tensorflow.google.cn/api_docs/python/tf/queue/FIFOQueue): A queue implementation that dequeues elements in first-in first-out order.
 
