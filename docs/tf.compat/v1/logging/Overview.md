@@ -32,8 +32,8 @@
 [ `warning(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/v1/logging/warning)
 
 ## 其他成员
--  `DEBUG = 10`  []()
--  `ERROR = 40`  []()
--  `FATAL = 50`  []()
--  `INFO = 20`  []()
--  `WARN = 30`  []()
+-  `DEBUG = 10`  
+-  `ERROR = 40`  
+-  `FATAL = 50`  
+-  `INFO = 20`  
+-  `WARN = 30`  

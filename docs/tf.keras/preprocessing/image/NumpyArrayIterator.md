@@ -127,4 +127,4 @@ Gets batch at position  `index` .
 ```
 
 ## Class 成员
--  `white_list_formats`  []()
+-  `white_list_formats`  

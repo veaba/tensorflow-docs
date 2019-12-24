@@ -1,5 +1,3 @@
-
-
 ## Class  `AggregationMethod` 
 列出用于组合渐变的聚合方法的类。
 
@@ -20,7 +18,7 @@ The following aggregation methods are experimental and may notbe supported in fu
 
 
 ## Class 成员
--  `ADD_N = 0`  []()
--  `DEFAULT = 0`  []()
--  `EXPERIMENTAL_ACCUMULATE_N = 2`  []()
--  `EXPERIMENTAL_TREE = 1`  []()
+-  `ADD_N = 0`  
+-  `DEFAULT = 0`  
+-  `EXPERIMENTAL_ACCUMULATE_N = 2`  
+-  `EXPERIMENTAL_TREE = 1`  

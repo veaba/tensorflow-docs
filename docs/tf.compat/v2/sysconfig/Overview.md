@@ -10,5 +10,5 @@
 [ `get_link_flags(...)` ](https://tensorflow.google.cn/api_docs/python/tf/sysconfig/get_link_flags): Get the link flags for custom operators.
 
 ## 其他成员
--  `CXX11_ABI_FLAG = 0`  []()
--  `MONOLITHIC_BUILD = 0`  []()
+-  `CXX11_ABI_FLAG = 0`  
+-  `MONOLITHIC_BUILD = 0`  

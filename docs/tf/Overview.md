@@ -520,29 +520,29 @@
 [ `zeros_like(...)` ](https://tensorflow.google.cn/api_docs/python/tf/zeros_like): Creates a tensor with all elements set to zero.
 
 ## 其他成员
--  `__version__ = '2.0.0'`  []()
--  `bfloat16`  []()
--  `bool`  []()
--  `complex128`  []()
--  `complex64`  []()
--  `double`  []()
--  `float16`  []()
--  `float32`  []()
--  `float64`  []()
--  `half`  []()
--  `int16`  []()
--  `int32`  []()
--  `int64`  []()
--  `int8`  []()
--  `qint16`  []()
--  `qint32`  []()
--  `qint8`  []()
--  `quint16`  []()
--  `quint8`  []()
--  `resource`  []()
--  `string`  []()
--  `uint16`  []()
--  `uint32`  []()
--  `uint64`  []()
--  `uint8`  []()
--  `variant`  []()
+-  `__version__ = '2.0.0'`  
+-  `bfloat16`  
+-  `bool`  
+-  `complex128`  
+-  `complex64`  
+-  `double`  
+-  `float16`  
+-  `float32`  
+-  `float64`  
+-  `half`  
+-  `int16`  
+-  `int32`  
+-  `int64`  
+-  `int8`  
+-  `qint16`  
+-  `qint32`  
+-  `qint8`  
+-  `quint16`  
+-  `quint8`  
+-  `resource`  
+-  `string`  
+-  `uint16`  
+-  `uint32`  
+-  `uint64`  
+-  `uint8`  
+-  `variant`  

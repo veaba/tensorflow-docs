@@ -199,6 +199,6 @@ When eager execution is enabled,  `loss`  should be a Python function thattakes 
 从底层优化器转发变量。
 
 ## Class 成员
--  `GATE_GRAPH = 2`  []()
--  `GATE_NONE = 0`  []()
--  `GATE_OP = 1`  []()
+-  `GATE_GRAPH = 2`  
+-  `GATE_NONE = 0`  
+-  `GATE_OP = 1`  

@@ -510,11 +510,11 @@ Note that if  `distance_metric=KMeansClustering.SQUARED_EUCLIDEAN_DISTANCE` ,thi
 从每个输入点到每个簇中心的距离。
 
 ## Class 成员
--  `ALL_DISTANCES = 'all_distances'`  []()
--  `CLUSTER_CENTERS_VAR_NAME = 'clusters'`  []()
--  `CLUSTER_INDEX = 'cluster_index'`  []()
--  `COSINE_DISTANCE = 'cosine'`  []()
--  `KMEANS_PLUS_PLUS_INIT = 'kmeans_plus_plus'`  []()
--  `RANDOM_INIT = 'random'`  []()
--  `SCORE = 'score'`  []()
--  `SQUARED_EUCLIDEAN_DISTANCE = 'squared_euclidean'`  []()
+-  `ALL_DISTANCES = 'all_distances'`  
+-  `CLUSTER_CENTERS_VAR_NAME = 'clusters'`  
+-  `CLUSTER_INDEX = 'cluster_index'`  
+-  `COSINE_DISTANCE = 'cosine'`  
+-  `KMEANS_PLUS_PLUS_INIT = 'kmeans_plus_plus'`  
+-  `RANDOM_INIT = 'random'`  
+-  `SCORE = 'score'`  
+-  `SQUARED_EUCLIDEAN_DISTANCE = 'squared_euclidean'`  

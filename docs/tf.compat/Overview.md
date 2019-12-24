@@ -37,7 +37,7 @@ In addition to the functions below,  `as_str`  converts an object to a  `str` .
 [ `path_to_str(...)` ](https://tensorflow.google.cn/api_docs/python/tf/compat/path_to_str): Converts input which is a  `PathLike`  object to  `str`  type.
 
 ## 其他成员
--  `bytes_or_text_types`  []()
--  `complex_types`  []()
--  `integral_types`  []()
--  `real_types`  []()
+-  `bytes_or_text_types`  
+-  `complex_types`  
+-  `integral_types`  
+-  `real_types`  

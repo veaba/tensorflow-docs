@@ -31,8 +31,8 @@
  `TraceLevel trace_level` 
 
 ## Class 成员
--  `FULL_TRACE = 3`  []()
--  `HARDWARE_TRACE = 2`  []()
--  `NO_TRACE = 0`  []()
--  `SOFTWARE_TRACE = 1`  []()
--  `TraceLevel`  []()
+-  `FULL_TRACE = 3`  
+-  `HARDWARE_TRACE = 2`  
+-  `NO_TRACE = 0`  
+-  `SOFTWARE_TRACE = 1`  
+-  `TraceLevel`  

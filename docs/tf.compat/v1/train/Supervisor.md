@@ -771,4 +771,4 @@ See [ `Coordinator.stop_on_exception()` ](/api_docs/python/tf/train/Coordinator#
 阻止等待协调员停止。
 
 ## Class 成员
--  `USE_DEFAULT = 0`  []()
+-  `USE_DEFAULT = 0`  

@@ -1190,39 +1190,39 @@
 [ `zeta(...)` ](https://tensorflow.google.cn/api_docs/python/tf/math/zeta): Compute the Hurwitz zeta function ![](./Overview.md_0.png).
 
 ## 其他成员
--  `AUTO_REUSE`  []()
--  `COMPILER_VERSION = '7.3.1 20180303'`  []()
--  `CXX11_ABI_FLAG = 0`  []()
--  `GIT_VERSION = 'v2.0.0-rc2-26-g64c3d38'`  []()
--  `GRAPH_DEF_VERSION = 119`  []()
--  `GRAPH_DEF_VERSION_MIN_CONSUMER = 0`  []()
--  `GRAPH_DEF_VERSION_MIN_PRODUCER = 0`  []()
--  `MONOLITHIC_BUILD = 0`  []()
--  `QUANTIZED_DTYPES`  []()
--  `VERSION = '2.0.0'`  []()
--  `__version__ = '2.0.0'`  []()
--  `bfloat16`  []()
--  `bool`  []()
--  `complex128`  []()
--  `complex64`  []()
--  `double`  []()
--  `float16`  []()
--  `float32`  []()
--  `float64`  []()
--  `half`  []()
--  `int16`  []()
--  `int32`  []()
--  `int64`  []()
--  `int8`  []()
--  `qint16`  []()
--  `qint32`  []()
--  `qint8`  []()
--  `quint16`  []()
--  `quint8`  []()
--  `resource`  []()
--  `string`  []()
--  `uint16`  []()
--  `uint32`  []()
--  `uint64`  []()
--  `uint8`  []()
--  `variant`  []()
+-  `AUTO_REUSE`  
+-  `COMPILER_VERSION = '7.3.1 20180303'`  
+-  `CXX11_ABI_FLAG = 0`  
+-  `GIT_VERSION = 'v2.0.0-rc2-26-g64c3d38'`  
+-  `GRAPH_DEF_VERSION = 119`  
+-  `GRAPH_DEF_VERSION_MIN_CONSUMER = 0`  
+-  `GRAPH_DEF_VERSION_MIN_PRODUCER = 0`  
+-  `MONOLITHIC_BUILD = 0`  
+-  `QUANTIZED_DTYPES`  
+-  `VERSION = '2.0.0'`  
+-  `__version__ = '2.0.0'`  
+-  `bfloat16`  
+-  `bool`  
+-  `complex128`  
+-  `complex64`  
+-  `double`  
+-  `float16`  
+-  `float32`  
+-  `float64`  
+-  `half`  
+-  `int16`  
+-  `int32`  
+-  `int64`  
+-  `int8`  
+-  `qint16`  
+-  `qint32`  
+-  `qint8`  
+-  `quint16`  
+-  `quint8`  
+-  `resource`  
+-  `string`  
+-  `uint16`  
+-  `uint32`  
+-  `uint64`  
+-  `uint8`  
+-  `variant`  

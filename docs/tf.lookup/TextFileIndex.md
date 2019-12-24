@@ -14,5 +14,5 @@ The key and value content to get from each line is specified eitherby the follow
 A value  `>=0`  means use the index (starting at zero) of the split line based    on  `delimiter` .
 
 ## Class 成员
--  `LINE_NUMBER = -1`  []()
--  `WHOLE_LINE = -2`  []()
+-  `LINE_NUMBER = -1`  
+-  `WHOLE_LINE = -2`  

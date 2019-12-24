@@ -13,7 +13,7 @@
 
 
 ## Class 成员
--  `MEAN`  []()
--  `NONE`  []()
--  `ONLY_FIRST_REPLICA`  []()
--  `SUM`  []()
+-  `MEAN`  
+-  `NONE`  
+-  `ONLY_FIRST_REPLICA`  
+-  `SUM`  

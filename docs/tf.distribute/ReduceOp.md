@@ -10,5 +10,5 @@
 
 
 ## Class 成员
--  `MEAN`  []()
--  `SUM`  []()
+-  `MEAN`  
+-  `SUM`  

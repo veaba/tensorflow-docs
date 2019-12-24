@@ -28,7 +28,7 @@
  `CheckpointFormatVersion version` 
 
 ## Class 成员
--  `CheckpointFormatVersion`  []()
--  `LEGACY = 0`  []()
--  `V1 = 1`  []()
--  `V2 = 2`  []()
+-  `CheckpointFormatVersion`  
+-  `LEGACY = 0`  
+-  `V1 = 1`  
+-  `V2 = 2`  

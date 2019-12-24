@@ -15,7 +15,7 @@ TensorFlow提供多种数学函数，包括：
 - Segment functions (like: [ `tf.math.segment_sum` ](https://tensorflow.google.cn/api_docs/python/tf/math/segment_sum))
 See: [ `tf.linalg` ](https://tensorflow.google.cn/api_docs/python/tf/linalg) for matrix and tensor functions.
 
-[]()
+
 
 ## 关于分段
 TensorFlow provides several operations that you can use to perform commonmath computations on tensor segments.Here a segmentation is a partitioning of a tensor alongthe first dimension, i.e. it  defines a mapping from the first dimension onto `segment_ids` . The  `segment_ids`  tensor should be the size ofthe first dimension,  `d0` , with consecutive IDs in the range  `0`  to  `k` ,where  `k<d0` .In particular, a segmentation of a matrix tensor is a mapping of rows tosegments.

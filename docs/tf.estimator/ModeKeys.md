@@ -13,6 +13,6 @@ Standard names for Estimator model modes.
 
 
 ## Class 成员
--  `EVAL = 'eval'`  []()
--  `PREDICT = 'infer'`  []()
--  `TRAIN = 'train'`  []()
+-  `EVAL = 'eval'`  
+-  `PREDICT = 'infer'`  
+-  `TRAIN = 'train'`  

@@ -38,9 +38,9 @@ validate(
 ```
 
 ## Class 成员
--  `MEAN = 'weighted_mean'`  []()
--  `NONE = 'none'`  []()
--  `SUM = 'weighted_sum'`  []()
--  `SUM_BY_NONZERO_WEIGHTS = 'weighted_sum_by_nonzero_weights'`  []()
--  `SUM_OVER_BATCH_SIZE = 'weighted_sum_over_batch_size'`  []()
--  `SUM_OVER_NONZERO_WEIGHTS = 'weighted_sum_by_nonzero_weights'`  []()
+-  `MEAN = 'weighted_mean'`  
+-  `NONE = 'none'`  
+-  `SUM = 'weighted_sum'`  
+-  `SUM_BY_NONZERO_WEIGHTS = 'weighted_sum_by_nonzero_weights'`  
+-  `SUM_OVER_BATCH_SIZE = 'weighted_sum_over_batch_size'`  
+-  `SUM_OVER_NONZERO_WEIGHTS = 'weighted_sum_by_nonzero_weights'`  

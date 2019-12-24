@@ -50,4 +50,4 @@ Detailed documentation and user guides are available at[keras.io](https://keras.
 [ `Input(...)` ](https://tensorflow.google.cn/api_docs/python/tf/keras/Input):  `Input()`  is used to instantiate a Keras tensor.
 
 ## 其他成员
--  `__version__ = '2.2.4-tf'`  []()
+-  `__version__ = '2.2.4-tf'`  

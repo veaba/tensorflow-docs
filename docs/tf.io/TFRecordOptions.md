@@ -75,4 +75,4 @@ Compression type as string (e.g.  `'ZLIB'` ,  `'GZIP'` , or  `''` ).
 
 
 ## Class 成员
--  `compression_type_map`  []()
+-  `compression_type_map`  

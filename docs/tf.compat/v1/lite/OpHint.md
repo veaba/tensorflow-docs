@@ -120,15 +120,15 @@ Wrapped inputs (identity standins that have additional metadata). Theseare also 
 Wrapped outputs (identity standins that have additional metadata). Theseare also tf.Tensor's.
 
 ## Class 成员
--  `AGGREGATE_FIRST = 'first'`  []()
--  `AGGREGATE_LAST = 'last'`  []()
--  `AGGREGATE_STACK = 'stack'`  []()
--  `CHILDREN_INPUTS_MAPPINGS = '_tflite_children_ophint_inputs_mapping'`  []()
--  `FUNCTION_AGGREGATE_ATTR = '_tflite_function_aggregate'`  []()
--  `FUNCTION_INPUT_INDEX_ATTR = '_tflite_function_input_index'`  []()
--  `FUNCTION_LEVEL_ATTR = '_tflite_ophint_level'`  []()
--  `FUNCTION_NAME_ATTR = '_tflite_function_name'`  []()
--  `FUNCTION_OUTPUT_INDEX_ATTR = '_tflite_function_output_index'`  []()
--  `FUNCTION_SORT_INDEX_ATTR = '_tflite_function_sort_index'`  []()
--  `FUNCTION_UUID_ATTR = '_tflite_function_uuid'`  []()
--  `TFLITE_INPUT_INDICES = '_tflite_input_indices'`  []()
+-  `AGGREGATE_FIRST = 'first'`  
+-  `AGGREGATE_LAST = 'last'`  
+-  `AGGREGATE_STACK = 'stack'`  
+-  `CHILDREN_INPUTS_MAPPINGS = '_tflite_children_ophint_inputs_mapping'`  
+-  `FUNCTION_AGGREGATE_ATTR = '_tflite_function_aggregate'`  
+-  `FUNCTION_INPUT_INDEX_ATTR = '_tflite_function_input_index'`  
+-  `FUNCTION_LEVEL_ATTR = '_tflite_ophint_level'`  
+-  `FUNCTION_NAME_ATTR = '_tflite_function_name'`  
+-  `FUNCTION_OUTPUT_INDEX_ATTR = '_tflite_function_output_index'`  
+-  `FUNCTION_SORT_INDEX_ATTR = '_tflite_function_sort_index'`  
+-  `FUNCTION_UUID_ATTR = '_tflite_function_uuid'`  
+-  `TFLITE_INPUT_INDICES = '_tflite_input_indices'`  

@@ -62,6 +62,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 见基类。
 
 ## Class 成员
--  `number_article = 'an'`  []()
--  `number_name = 'integer'`  []()
--  `syntactic_help = 'an integer'`  []()
+-  `number_article = 'an'`  
+-  `number_name = 'integer'`  
+-  `syntactic_help = 'an integer'`  

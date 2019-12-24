@@ -52,7 +52,7 @@ validate(
 ```
 
 ## Class 成员
--  `AUTO = 'auto'`  []()
--  `NONE = 'none'`  []()
--  `SUM = 'sum'`  []()
--  `SUM_OVER_BATCH_SIZE = 'sum_over_batch_size'`  []()
+-  `AUTO = 'auto'`  
+-  `NONE = 'none'`  
+-  `SUM = 'sum'`  
+-  `SUM_OVER_BATCH_SIZE = 'sum_over_batch_size'`  

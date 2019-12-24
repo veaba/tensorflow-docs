@@ -12,5 +12,5 @@ The gradient of y with respect to x can be zero in two different ways: therecoul
 
 
 ## Class 成员
--  `NONE`  []()
--  `ZERO`  []()
+-  `NONE`  
+-  `ZERO`  
