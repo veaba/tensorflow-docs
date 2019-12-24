@@ -2,8 +2,11 @@
   <main class="page">
     <slot name="top"/>
 
+    <div class="content-layout">
     <Content class="theme-default-content"/>
-
+      
+      <slot name="right"></slot>
+    </div>
     <footer class="page-edit">
       <div
         class="edit-link"

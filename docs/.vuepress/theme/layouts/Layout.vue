@@ -40,6 +40,10 @@
         slot="top"
       />
       <slot
+        name="page-right"
+        slot="right"
+      ></slot>
+      <slot
         name="page-bottom"
         slot="bottom"
       />
