@@ -62,6 +62,7 @@ module.exports = {
 			before: title => `<div class="danger custom-block"> <p class="title">${title}</p>`,
 			after: '</div>'
 		}],
+		// require('./vuepress-plugin-tensoflow')
 	],
 	extraWatchFiles: [
 		'.vuepress/nav/en.js',

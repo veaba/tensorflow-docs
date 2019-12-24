@@ -65,7 +65,7 @@ module.exports = {
 		{'title': 'tf.dtypes', 'collapsabel': false, 'children': tfDtypesLinks},
 		{'title': 'tf.errors', 'collapsabel': false, 'children': tfErrorsLinks},
 		{'title': 'tf.estimator', 'collapsabel': false, 'children': tfEstimatorLinks},
-		{'title': 'tf.experimental', 'collapsabel': false, 'children': tfExperimentalLinks},
+		{'title': 'tf.experimental', 'collapsabel': false, 'children': tfExperimentalLinks,'isExperiment': true},
 		{'title': 'tf.feature_column', 'collapsabel': false, 'children': tfFeatureColumnLinks},
 		{'title': 'tf.graph_util', 'collapsabel': false, 'children': tfGraphUtilLinks},
 		{'title': 'tf.image', 'collapsabel': false, 'children': tfImageLinks},

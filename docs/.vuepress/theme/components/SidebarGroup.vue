@@ -25,6 +25,7 @@
 						<!--TODO 判断是不是外链-->
 						<router-link v-if="item.link" :to="($localePath+item.link).replace('//','/')" >{{ item.title }}</router-link>
 						<span v-else>{{ item.title }}</span>
+						<span class="icon-experiment" title="实验！" v-show="item.isExperiment"></span>
 						<span
 										class="arrow"
 										v-if="collapsable&&item.children&&item.children.length"
@@ -129,4 +130,31 @@
 				transition height .1s ease-out
 				font-size 0.95em
 				overflow hidden
+		
+		/*icon-experiment,添加实验性icon*/
+		.icon-experiment
+				position relative;
+				top -16px;
+				width 10px;
+				height 10px;
+				border-radius 4px;
+				border-left 10px solid transparent;
+				border-right 10px solid transparent;
+				border-bottom 15px solid #3eaf7c;
+				&:before
+						content "";
+						position absolute
+						left -5px
+						top 21px
+						background #3eaf7c;
+						width 10px;
+						height 3px;
+				&:after
+						content: "";
+						position absolute;
+						background: #3eaf7c;
+						width 6px;
+						height 6px;
+						left -3px;
+						top 21px;
 </style>
