@@ -1,9 +1,10 @@
 ---
 home: true
-heroImage: /hero.png
 actionText: Get Started →
 actionLink: /tf/Overview/
-footer: MIT Licensed | Copyright © 2019-present Veaba
+icpText: ICP xxxx
+icpLink: beian.miit.gov.cn
+footer: Copyright © 2019-present Veaba
 ---
 
 <div style="text-align: center">
@@ -11,36 +12,43 @@ footer: MIT Licensed | Copyright © 2019-present Veaba
 
 <div class="features">
   <div class="feature">
-    <h2>Simplicity First</h2>
-    <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
+    <h2>Python</h2>
+    <p>自动化爬取官方文档</p>
   </div>
   <div class="feature">
-    <h2>Vue-Powered</h2>
-    <p>Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.</p>
+    <h2>VuePress</h2>
+    <p>VupPress 提供驱动</p>
   </div>
   <div class="feature">
-    <h2>Performant</h2>
-    <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
+    <h2>Translate</h2>
+    <p>通过自动化翻译文档</p>
   </div>
 </div>
 
-### As Easy as 1, 2, 3
+### 安装TensorFlow
 
 ``` bash
 # install
-yarn global add vuepress
-# OR npm install -g vuepress
+pip install tensorflow
 
-# create a markdown file
-echo '# Hello VuePress' > README.md
+# or docker install
+docker pull tensorflow/tensorflow                   # Download latest image
+docker run -it -p 8888:8888 tensorflow/tensorflow   # Start a Jupyter notebook server
 
-# start writing
-vuepress dev
-
-# build to static files
-vuepress build
 ```
 
-::: warning COMPATIBILITY NOTE
-VuePress requires Node.js >= 8.6.
-:::
+
+<div class="features">
+  <div class="feature">
+    <h2><a href="https://tensorflow.google.cn/js">TensorFlow.js</a></h2>
+    <p>JavaScript 版本的 TensorFlow</p>
+  </div>
+  <div class="feature">
+    <h2><a href="https://tensorflow.google.cn/">官网</a></h2>
+    <p>TensorFlow Google官网</p>
+  </div>
+  <div class="feature">
+    <h2><a href="https://github.com/veaba/tensorflow-docs">About</a></h2>
+    <p>关于本项目</p>
+  </div>
+</div>

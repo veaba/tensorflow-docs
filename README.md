@@ -1,6 +1,12 @@
 # tensorflow-docs
 python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API  
 
+## 主题定制
+
+[x] 增加国内ICP备案号位置
+[x] sidebar hover
+[x] 增加个性化icon在目录旁边
+
 ## 关于本项目
 - 基于python+vuepress搭建 Google Tensorflow 最新版本 2.0 API 中文文档
 - 直接copy 自己用过的vuepress theme

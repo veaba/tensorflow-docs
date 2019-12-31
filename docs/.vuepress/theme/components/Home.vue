@@ -45,6 +45,7 @@
       v-if="data.footer"
     >
       {{ data.footer }}
+      <a v-if="data.icpLink" :href="data.icpLink">{{data.icpText}}</a>
     </div>
   </main>
 </template>
@@ -62,6 +63,8 @@ export default {
 
     actionLink () {
       return {
+        icpText:this.data.icpText,
+        icpLink:this.data.icpLink,
         link: this.data.actionLink,
         text: this.data.actionText
       }
