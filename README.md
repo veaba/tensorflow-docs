@@ -1,5 +1,5 @@
 # tensorflow-docs
-python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API  
+python 的 RC 2.1 版本 中文API文档,进行中，基于vuepress 作为静态驱动器主题、python作为项目脚本通过自动化Selenium爬取内容、百度翻译API  
 
 ## 主题定制
 
@@ -184,3 +184,9 @@ python 的 RC 2.0 版本 中文API文档,进行中，基于vuepress 作为静态
 ### 新增分支
 - 新增dev分支，保留原始docs en 文档，用来生成中文文档
 - 新增tag origin-bookmark ，保留原始文档  
+- 提升文档版本为2.0 -> rc2.1版本
+
+
+### 版本升级
+    - 解析ul 为docs/.vuepress/sidebar/links.js
+    - 然后生成category_array.py 扁平化
