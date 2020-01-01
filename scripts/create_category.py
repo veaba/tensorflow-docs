@@ -45,8 +45,9 @@ def go_category(spider=None):
                     # 有children
                     if '[]' in line:
                         text = re.sub(r'^.*\)', '', line)
-                        # 有children
-                        print('有children：', text)
+                        text = text.replace('\n', '')
+                        level_key = 'tf' + text[3:].capitalize() + 'Links'
+                        python_json[level_key] = []
                     else:
                         line_str = line.replace('\n', '')
                         # 外链
@@ -59,7 +60,24 @@ def go_category(spider=None):
                             'type': 'group',
                             'link': '/' + text.replace(' ', '_')
                         }
-                        print('11', text)
+                elif the_level(line) == 2:
+                    pass
+                    # print('level-2', line)
+                elif the_level(line) == 3:
+                    pass
+                    # print('level-3', line)
+                elif the_level(line) == 4:
+                    pass
+                    # print('level-4', line)
+                elif the_level(line) == 5:
+                    pass
+                    # print('level-5', line)
+                elif the_level(line) == 6:
+                    pass
+                    # print('level-6', line)
+                else:
+                    # todo
+                    print('level-other', line)
 
             # todo 二级
 
